@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; פרק 3– תהליכים ומשתני תהליך – שם הספר החדש</title>
+<title>5&nbsp; פרק 3– תהליכים ומשתני תהליך – מבוא להנדסת תהליכים</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -130,7 +130,7 @@ window.Quarto = {
       <img src="./assets/logo.png" alt="הלוגו של הספר" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">שם הספר החדש</a> 
+      <a href="./">מבוא להנדסת תהליכים</a> 
         <div class="sidebar-tools-main">
     <a href="./index.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
@@ -146,7 +146,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">שם הספר החדש</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא להנדסת תהליכים</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -217,6 +217,15 @@ window.Quarto = {
   <li><a href="#מנומטרים" id="toc-מנומטרים" class="nav-link" data-scroll-target="#מנומטרים"><span class="header-section-number">5.7.4</span> <span dir="rtl">מנומטרים</span></a></li>
   <li><a href="#סיכום-2" id="toc-סיכום-2" class="nav-link" data-scroll-target="#סיכום-2"><span class="header-section-number">5.7.5</span> <span dir="rtl">סיכום</span></a></li>
   </ul></li>
+  <li><a href="#פרק-4-מאזן-מסה" id="toc-פרק-4-מאזן-מסה" class="nav-link" data-scroll-target="#פרק-4-מאזן-מסה"><span class="header-section-number">6</span> <span dir="rtl">פרק 4 – מאזן מסה</span></a>
+  <ul class="collapse">
+  <li><a href="#מה-נלמד-בפרק-הזה-1" id="toc-מה-נלמד-בפרק-הזה-1" class="nav-link" data-scroll-target="#מה-נלמד-בפרק-הזה-1"><span class="header-section-number">6.1</span> <span dir="rtl">מה נלמד בפרק הזה</span>?</a></li>
+  <li><a href="#מאזן-מסה-כללי" id="toc-מאזן-מסה-כללי" class="nav-link" data-scroll-target="#מאזן-מסה-כללי"><span class="header-section-number">6.2</span> <span dir="rtl">מאזן מסה כללי</span></a></li>
+  </ul></li>
+  <li><a href="#פרק-5-מערכות-חד-פאזיות" id="toc-פרק-5-מערכות-חד-פאזיות" class="nav-link" data-scroll-target="#פרק-5-מערכות-חד-פאזיות"><span class="header-section-number">7</span> <span dir="rtl">פרק 5 – מערכות חד פאזיות</span></a>
+  <ul class="collapse">
+  <li><a href="#מה-נלמד-בפרק-הזה-2" id="toc-מה-נלמד-בפרק-הזה-2" class="nav-link" data-scroll-target="#מה-נלמד-בפרק-הזה-2"><span class="header-section-number">7.1</span> <span dir="rtl">מה נלמד בפרק הזה</span>?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -255,35 +264,40 @@ window.Quarto = {
 </section>
 <section id="מהו-תהליך-הנדסי" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="מהו-תהליך-הנדסי"><span class="header-section-number">5.2</span> <span dir="rtl">מהו תהליך הנדסי?</span></h2>
-<div class="definition">
 <p><span dir="rtl">תהליך הוא רצף של פעולות פיזיקליות או כימיות שבמהלכן חומרי גלם עוברים שינוי</span> <span dir="rtl">בהרכבם, בצורתם או באנרגיה שלהם.</span></p>
-</div>
 <p><span dir="rtl">לעבודתם של מהנדסי ומהנדסות התהליך שלושה היבטים: תכנון, תפעול ואופטימיזציה של תהליכים במפעלי הייצור השונים, כך שהתהליכים יהיו יציבים, בטוחים, רווחיים ויעילים לאורך זמן.</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><strong><span dir="rtl">תכנון התהליך</span> (Process Design)</strong> – <span dir="rtl">הגדרה של יחידות הפעולה, תנאי ההפעלה והציוד הדרוש כך שהתהליך יעמוד במטרות הייצור ובדרישות הבטיחות</span>.</p>
-<p><strong><span dir="rtl">תפעול התהליך</span> (Process Operation)</strong> – <span dir="rtl">פיקוח יומיומי על תהליך קיים, ניטור נתונים בזמן אמת, וזיהוי חריגות או תקלות בתפקוד המערכת</span>.</p>
-<p><strong><span dir="rtl">אופטימיזציה של התהליך</span> (Process Optimization)</strong> – <span dir="rtl">ניתוח ביצועים וחיפוש מתמיד אחר דרכים לשפר יעילות, להפחית צריכת אנרגיה ולהגדיל תפוקה</span>.</p>
-<p><span dir="rtl">שלושת השלבים הללו משקפים את עיקר העשייה של מהנדס ומהנדסת תהליך: לא רק להבין מה קורה במערכת, אלא גם <strong>לדעת לשלוט בה ולכוון אותה</strong></span>.</p>
-<div class="definition">
-<p><span dir="rtl">כל תהליך בנוי מיחידות פעולה</span> (Unit Operations)</p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><strong><span dir="rtl">תפעול התהליך</span> (Process Operation)</strong> – <span dir="rtl">פיקוח יומיומי על תהליך קיים, ניטור נתונים בזמן אמת, וזיהוי חריגות או תקלות בתפקוד המערכת</span>.</p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><strong><span dir="rtl">אופטימיזציה של התהליך</span> (Process Optimization)</strong> – <span dir="rtl">ניתוח ביצועים וחיפוש מתמיד אחר דרכים לשפר יעילות, להפחית צריכת אנרגיה ולהגדיל תפוקה</span>.</p>
+</div>
+<p><span dir="rtl">שלושת השלבים הללו משקפים את עיקר העשייה של מהנדס ומהנדסת תהליך: לא רק להבין מה קורה במערכת, אלא גם <strong>לדעת לשלוט בה ולכוון אותה</strong></span>.</p>
+<p><span dir="rtl">כל תהליך בנוי מיחידות פעולה</span> (Unit Operations)</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">יחידות פעולה</span>- (Unit Operations) <span dir="rtl">רכיבים נפרדים שכל אחד מהם מבצע שינוי מסוים בחומר</span>:</p>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image19.png" style="width:6.5in;height:1.22153in" class="figure-img"></p>
+<p><img src="assets/images/media/image19.png" style="width:6.5in;height:1.22153in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">16- תיאור כללי של תהליך בדיאגרמת בלוקים</span></figcaption>
 </figure>
 </div>
 <p><span dir="rtl">יש סוגים רבים של יחידות פעולה, אך הבסיסיות ביותר, בהן נשתמש בספר זה, הן –</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img src="media/media/image20.png" style="width:6.5in;height:2.7375in" alt="A diagram of a mixture AI-generated content may be incorrect." class="figure-img">
-<figcaption>
-<p>
-Figure <span dir="rtl">17 - יחידות פעולה בסיסיות בתהליך הכימי/ביולוגי</span>
-</p>
-</figcaption>
+<p><img src="assets/images/media/image20.png" style="width:6.5in;height:2.7375in" class="figure-img"></p>
+<figcaption>A diagram of a mixture AI-generated content may be incorrect.</figcaption>
 </figure>
+</div>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p>Figure <span dir="rtl">17 - יחידות פעולה בסיסיות בתהליך הכימי/ביולוגי</span></p>
+</div>
 <section id="דיאגרמות-לתכנון-תהליך" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="דיאגרמות-לתכנון-תהליך"><span class="header-section-number">5.2.1</span> <span dir="rtl">דיאגרמות לתכנון תהליך</span></h3>
 <p><span dir="rtl">מהנדסים משתמשים בתרשימים שונים כדי לתאר תהליכים – כל תרשים מתאים לרמת פירוט אחרת של התכנון</span>.</p>
@@ -293,7 +307,7 @@ Figure <span dir="rtl">17 - יחידות פעולה בסיסיות בתהליך 
 <p><span dir="rtl">התרשים הפשוט ביותר</span>. <span dir="rtl">כל יחידת פעולה מיוצגת כמלבן אחד, והחצים מראים את כיווני זרימת החומרים</span>. <span dir="rtl">משמש להמחשה כללית של מבנה התהליך ושל הקשרים בין היחידות</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image21.jpeg" style="width:5.35385in;height:2.83594in" class="figure-img"></p>
+<p><img src="assets/images/media/image21.jpeg" style="width:5.35385in;height:2.83594in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">18</span> <span dir="rtl">-</span> Block flow process diagram for the production of benzene (Turton et al., 2012)</figcaption>
 </figure>
 </div>
@@ -303,14 +317,14 @@ Figure <span dir="rtl">17 - יחידות פעולה בסיסיות בתהליך 
 <p><span dir="rtl">תרשים מפורט יותר, המשמש לתכנון הנדסי</span>. <span dir="rtl">כולל את כל יחידות הפעולה העיקריות, קווים לכל זרם חומר ואנרגיה, נתוני פעולה בסיסיים</span> <span dir="rtl">(</span>T, P<span dir="rtl">,</span> <span dir="rtl">ספיקות), לעיתים גם ציוד עזר חשוב</span>. <span dir="rtl">תרשימי</span> PFD <span dir="rtl">משמשים לחישובי מאזן חומר ואנרגיה ולתכנון ראשוני של תהליך תעשייתי</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image22.jpeg" style="width:6.5in;height:3.36111in" class="figure-img"></p>
+<p><img src="assets/images/media/image22.jpeg" style="width:6.5in;height:3.36111in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">19-</span> Process Flow Diagram Detailing the Nitric Acid Process (Towler and Sinnott, 2013)</figcaption>
 </figure>
 </div>
 <p><strong>Piping and Instrumentation Diagram (P&amp;ID)</strong></p>
 <p><span dir="rtl">התרשים המפורט ביותר</span>. <span dir="rtl">מכיל את כל הצנרת, השסתומים, החיישנים, מכשירי המדידה, יחידות הבקרה והאזעקות</span>. <span dir="rtl">משמש למהנדסי מכשור ובקרה בעת בנייה והפעלה של מתקנים בפועל</span>.</p>
 <figure class="figure">
-<img src="media/media/image23.png" style="width:6.45578in;height:3.91319in" alt="Plant PID" class="figure-img">
+<img src="assets/images/media/image23.png" style="width:6.45578in;height:3.91319in" alt="Plant PID" class="figure-img">
 <figcaption>
 <p>
 Figure <span dir="rtl">20 - תזרים צנרת ומכשור.</span> Copyright © 2025 Edrawsoft
@@ -319,29 +333,25 @@ Figure <span dir="rtl">20 - תזרים צנרת ומכשור.</span> Copyright �
 </figure>
 <p><span dir="rtl"><u>כיצד נצייר תהליך?</u></span></p>
 <p><span dir="rtl">כדי לנתח תהליך, נייצג אותו באופן סכמטי כ-תרשים בלוקים</span> (Block Flow Diagram – BFD)<span dir="rtl">. כל בלוק מייצג יחידת פעולה אחת</span>. <span dir="rtl">חצים מייצגים זרמי חומר או אנרגיה הנכנסים ויוצאים מהבלוקים</span>. <span dir="rtl">ליד כל חץ נציין את שם הזרם ואת המשתנים הפיזיקליים החשובים</span>: <span dir="rtl">טמפרטורה</span> (T), <span dir="rtl">לחץ</span> (P), <span dir="rtl">ספיקת מסה</span> (ṁ), <span dir="rtl">והרכב</span> (xᵢ).<span dir="rtl">לעיתים מסמנים גם מסגרת גבולות מערכת</span> (System Boundary), <span dir="rtl">המגדירה מה נכלל בתהליך ומה לא</span>. <span dir="rtl">כך נוצר ייצוג גרפי של תהליך מורכב, שממנו נוכל בהמשך לגזור משוואות מאזן חומר ואנרגיה</span>.</p>
-<p><span dir="rtl">דוגמה: תהליך תסיסה</span> (Fermentation Process)</p>
-<p><span dir="rtl">כדי להמחיש את רעיון התרשים, נבחן תהליך פשוט של ייצור בירה</span>.</p>
-<p><span dir="rtl">בתהליך זה מוזרמים שני חומרים למיכל תסיסה</span> (Fermentation Reactor):</p>
-<p><span dir="rtl">תמיסת סוכר</span> (Substrate Feed) – <span dir="rtl">מהווה את מקור האנרגיה לשמרים</span>.</p>
-<p><span dir="rtl">תמיסת שמרים</span> (Cell Suspension) – <span dir="rtl">מכילה תאים חיים המבצעים את התגובה הביולוגית</span>.</p>
-<p><span dir="rtl">בתוך המיכל מתרחשת תגובה ביוכימית</span>:<br>
-<span dir="rtl">השמרים ממירים את הסוכרים ל-אתנול (מוצר רצוי) ו-פחמן דו-חמצני (תוצר לוואי)</span><br>
-<span dir="rtl">הזרם היוצא מהמיכל הוא תערובת של מים, אתנול ותאים מתים</span>.</p>
+<p><span dir="rtl">תהליך תסיסה</span> (Fermentation Process)</p>
+<p><span dir="rtl">כדי להמחיש את רעיון התרשים, נבחן תהליך פשוט של ייצור בירה</span>. <span dir="rtl">בתהליך זה מוזרמים שני חומרים למיכל תסיסה</span> (Fermentation Reactor):<span dir="rtl"><br>
+- תמיסת סוכר</span> (Substrate Feed) <span dir="rtl">מהווה את מקור האנרגיה לשמרים</span>.<span dir="rtl"><br>
+- תמיסת שמרים</span> (Cell Suspension) <span dir="rtl">מכילה תאים חיים המבצעים את התגובה הביולוגית</span>.</p>
+<p><span dir="rtl">בתוך המיכל מתרחשת תגובה ביוכימית</span>: <span dir="rtl">השמרים ממירים את הסוכרים ל-אתנול (מוצר רצוי) ו-פחמן דו-חמצני (תוצר לוואי) מהמיכל יוצא זרם אחד ובו תערובת של מים, אתנול ותאים מתים</span>. <span dir="rtl">וזרם נוסף של פחמן דו חמצני במצב גזי</span></p>
 <p><span dir="rtl">תרשים התהליך ייראה כך</span>:</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img src="media/media/image24.png" style="width:5.9375in;height:2.60417in" alt="A diagram of fermentation reactor AI-generated content may be incorrect." class="figure-img">
-<figcaption>
-<p>
-Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</span>
-</p>
-</figcaption>
+<p><img src="assets/images/media/image24.png" style="width:5.9375in;height:2.60417in" class="figure-img"></p>
+<figcaption>A diagram of fermentation reactor AI-generated content may be incorrect.</figcaption>
 </figure>
+</div>
+<p>Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</span></p>
 </section>
 </section>
 <section id="משתני-תהליך" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="משתני-תהליך"><span class="header-section-number">5.3</span> <span dir="rtl">משתני תהליך</span></h2>
 <p><span dir="rtl">אחר שזיהינו את שלבי התהליך ואת יחידות הפעולה המרכיבות אותו, נוכל להתחיל לבחון אותו לעומק. כל אחת מהיחידות בתהליך – בין אם מדובר במיכל ערבוב, במחליף חום או במגדל ספיגה – מאופיינת על-ידי משתני תהליך</span> (process variables)<span dir="rtl">.</span></p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><strong><span dir="rtl">משתני תהליך</span> (Process Variables)</strong> <span dir="rtl">הם גדלים פיזיקליים או כימיים הנמדדים או נשלטים במהלך פעולה של מערכת תהליכית, ומשמשים לתיאור מצבה בזמן נתון.</span></p>
 </div>
 <p><span dir="rtl">משתנים אלה כוללים גדלים כמו טמפרטורה, לחץ, ספיקה, ריכוז והרכב כימי</span>, <span dir="rtl">והם אלה שמאפשרים לנו לכמת את מה שקורה בכל שלב של התהליך. במילים אחרות, אם תרשים הבלוקים מציג לנו את “מה קורה” בתהליך, משתני התהליך הם <strong>השפה הכמותית</strong> שבאמצעותה מהנדסים ומהנדסות מתארים מה מתרחש בתוך כל יחידת פעולה, וכיצד שינוי באחד מהם משפיע על שאר מרכיבי המערכת</span>.</p>
@@ -384,39 +394,49 @@ Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</spa
 </span></p>
 <section id="צפיפות-density-ונפח-סגולי-specific-volume." class="level3" data-number="5.4.1">
 <h3 data-number="5.4.1" class="anchored" data-anchor-id="צפיפות-density-ונפח-סגולי-specific-volume."><span class="header-section-number">5.4.1</span> <span dir="rtl">צפיפות</span> <span dir="rtl"></span>(Density) <span dir="rtl">ונפח סגולי</span> (Specific Volume)<span dir="rtl">.</span></h3>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">היחס בין מסה לנפח נקרא <strong>צפיפות</strong> ומסומן באות היוונית</span> ρ (rho):</p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[\rho = \frac{m}{V}\ \ \ \ \ \ ;\ \ \ \ \lbrack\rho\rbrack\ :\ \ \ \frac{\lbrack M\rbrack}{\lbrack L\rbrack^{3}} \Longrightarrow \frac{kg}{m^{3}}\ ,\ \frac{g}{cm^{3}},\frac{lb_{m}}{{ft}^{3}}\]</span></p>
 </div>
 <p><span dir="rtl">הצפיפות היא בעצם המסה של יחידת נפח אחת של חומר. זהו גודל <strong>אינטנסיבי,</strong> מפני שהוא אינו תלוי בגודל המערכת אלא באופי החומר ובתנאים שהוא נמצא בהם (למשל בטמפרטורה ובלחץ)</span>. <span dir="rtl">במילים אחרות – בין אם ניקח גרם אחד של מים או קילוגרם שלם, הצפיפות שלהם תישאר זהה, כל עוד התנאים זהים</span>. <span dir="rtl">למשל, הצפיפות של מים בטמפרטורה של</span> <span class="math inline">\(4℃\)</span> <span dir="rtl">היא</span></p>
-<p><span class="math display">\[\rho_{H_{2}O} = 1.000\frac{g}{cm^{3}} = 1000\frac{kg}{m^{3}} = 0.0624\frac{lb_{m}}{ft^{3}}\]</span> <span dir="rtl">באותו אופן הנפח הסגולי (</span>specific Volume<span dir="rtl">) מגדיר מהו הנפח ליחידת מסה - ההיפוך של הצפיפות</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span class="math display">\[\rho_{H_{2}O} = 1.000\frac{g}{cm^{3}} = 1000\frac{kg}{m^{3}} = 0.0624\frac{lb_{m}}{ft^{3}}\]</span> <span dir="rtl">הנפח הסגולי (</span>specific Volume<span dir="rtl">) מגדיר מהו הנפח ליחידת מסה - ההיפוך של הצפיפות</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[v = \frac{V}{m} = \frac{1}{\rho}\]</span></p>
+</div>
 <p><span dir="rtl">תכונות פיזיקליות כמו צפיפות</span>, <span dir="rtl">נקודת רתיחה</span>, <span dir="rtl">טמפרטורת התכה</span>, <span dir="rtl">מקדם שבירה ועוד – אינן נמדדות בכל פעם מחדש, אלא נלקחות לרוב ממקורות אמינים של נתונים ניסיוניים</span>. <span dir="rtl">כמו</span> <a href="https://hbcp-chemnetbase-com.bengurionu.idm.oclc.org/contents/ContentsSearch.xhtml?dswid=-9306">CRC Handbook of Chemistry and Physics,</a> <span dir="rtl">ו-</span> <a href="https://primo.bgu.ac.il/discovery/fulldisplay?docid=alma990020411320204361&amp;context=L&amp;vid=972BGU_INST:972BGU&amp;lang=he&amp;search_scope=MyInst_and_CI&amp;adaptor=Local%20Search%20Engine&amp;tab=Everything&amp;query=any,contains,Perry%E2%80%99s%20Chemical%20Engineers%E2%80%99%20Handbook&amp;facet=tlevel,include,online_resources&amp;mode=basic&amp;offset=0"><em>Perry’s Chemical Engineers’ Handbook</em></a>.<span dir="rtl">, בהם מופיעים ערכים מדויקים של תכונות עבור אלפי חומרים – אורגניים ואי-אורגניים כאחד. הספרים כולל טבלאות של צפיפויות בטמפרטורות שונות, מקדמי התפשטות תרמית, צמיגויות, חום סגולי ותכונות נוספות החיוניות לחישובים הנדסיים</span>. <span dir="rtl"></span></p>
-<p><span dir="rtl">בעזרת</span> CRC Handbook of Chemistry and Physics <span dir="rtl">או</span> <em>Perry’s Chemical Engineers’ Handbook</em>. <span dir="rtl">מצאו את ערכי הצפיפות</span> (ρ) <span dir="rtl">בטמפרטורת החדר עבור החומרים הבאים</span>:</p>
-<p><strong><span dir="rtl">אתנול</span> (Ethanol)</strong></p>
-<p><strong><span dir="rtl">בנזן</span> (Benzene)</strong></p>
-<p><strong><span dir="rtl">כלורופורם</span> (Chloroform)</strong></p>
-<p><strong><span dir="rtl">גליצרול</span> (Glycerol)</strong></p>
-<p><strong><span dir="rtl">א</span>.</strong> <span dir="rtl">ציינו את יחידות הצפיפות כפי שהן מופיעות בטבלה</span>.<br>
-<strong><span dir="rtl">ב</span>.</strong> <span dir="rtl">המירו את הערכים ליחידות מערכת</span> SI (kg/m³).<br>
-<strong><span dir="rtl">ג</span>.</strong> <span dir="rtl">השוו בין החומרים: מי מהחומרים צפוף יותר ממי, ומה ניתן להסיק על כך מבחינת הציפה במים</span>?</p>
+<p><span dir="rtl">בעזרת</span> CRC Handbook of Chemistry and Physics <span dir="rtl">או</span> <em>Perry’s Chemical Engineers’ Handbook</em><span dir="rtl">. מצאו את ערכי הצפיפות (</span>ρ<span dir="rtl">) בטמפרטורת החדר עבור החומרים הבאים:</span></p>
+<p><strong><span dir="rtl">אתנול (</span>Ethanol<span dir="rtl">)</span></strong></p>
+<p><strong><span dir="rtl">בנזן (</span>Benzene<span dir="rtl">)</span></strong></p>
+<p><strong><span dir="rtl">כלורופורם (</span>Chloroform<span dir="rtl">)</span></strong></p>
+<p><strong><span dir="rtl">גליצרול (</span>Glycerol<span dir="rtl">)</span></strong></p>
+<p><span dir="rtl"><strong>א.</strong> ציינו את יחידות הצפיפות כפי שהן מופיעות בטבלה.</span><br>
+<span dir="rtl"><strong>ב.</strong> המירו את הערכים ליחידות מערכת</span> SI (kg/m³)<span dir="rtl">.</span><br>
+<span dir="rtl"><strong>ג.</strong> השוו בין החומרים: מי מהחומרים צפוף יותר ממי, ומה ניתן להסיק על כך מבחינת הציפה במים?</span></p>
 </section>
 <section id="משקל-סגולי-specific-gravity" class="level3" data-number="5.4.2">
 <h3 data-number="5.4.2" class="anchored" data-anchor-id="משקל-סגולי-specific-gravity"><span class="header-section-number">5.4.2</span> <span dir="rtl">משקל סגולי</span> (Specific Gravity)</h3>
-<p><span dir="rtl">לעיתים קרובות נוח להשוות את צפיפותו של חומר לצפיפות של חומר ייחוס</span>, <span dir="rtl">במקום להשתמש בערכים מוחלטים</span>. <span dir="rtl">לצורך כך משתמשים בגודל חסר-ממדים הנקרא משקל סגולי (</span>Specific gravity<span dir="rtl">)</span> <span dir="rtl">המסומן</span> <span class="math inline">\(SG\)</span>:</p>
+<p><span dir="rtl">לעיתים קרובות נוח להשוות את צפיפותו של חומר לצפיפות של חומר ייחוס</span>, <span dir="rtl">במקום להשתמש בערכים מוחלטים</span>. <span dir="rtl">לצורך כך משתמשים בגודל חסר-ממדים משקל סגולי (</span>Specific gravity<span dir="rtl">)</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl"><strong>משקל סגולי</strong> (</span>Specific gravity, SG<span dir="rtl">) – היחס בין צפיפות של חומר לצפיפות של חומר ייחוס ידוע</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[SG = \frac{\rho_{\text{חומר}}}{\rho_{\text{ייחוס}}}\]</span></p>
+</div>
 <p><span dir="rtl">ברוב המקרים, החומר המשמש כייחוס הוא מים נוזליים בטמפרטורה של</span> <span class="math inline">\(4℃\)</span> <span dir="rtl">ולץ של</span> 1atm <span dir="rtl">אשר הצפיפות שלהם במערכת</span> SI <span dir="rtl">היא</span></p>
 <p><span class="math display">\[\rho_{H}^{2}O = 1.000\frac{g}{cm^{3}} = 1000\frac{kg}{m^{3}} = 62.43\frac{lb_{m}}{ft^{3}}\]</span></p>
-<p><span dir="rtl">היות ו-</span>SG <span dir="rtl"></span> <span dir="rtl">הוא <strong>יחס בין שתי צפיפויות</strong></span>, <span dir="rtl">הוא חסר יחידות</span>. <span dir="rtl">ואפשר לראות שבעת חישוב צפיפות באמצעות הצפיפות הסגולית ב</span>SI <span dir="rtl">או</span> GCS <span dir="rtl">הערך הנומרי של צפיפות החומר שווה לערך המשקל הסגולי שלו</span>. <span dir="rtl">לדוגמא עבור</span> <span class="math inline">\(SG = 0.85\)</span>.</p>
+<p><span dir="rtl">היות ו-</span>SG <span dir="rtl"></span> <span dir="rtl">הוא <strong>יחס בין שתי צפיפויות</strong></span>, <span dir="rtl">הוא חסר יחידות</span>. <span dir="rtl">ואפשר לראות שבעת חישוב צפיפות באמצעות הצפיפות הסגולית ב</span>SI <span dir="rtl">או</span> GCS <span dir="rtl">הערך הנומרי של צפיפות החומר שווה לערך המשקל הסגולי שלו</span>. <span dir="rtl"></span></p>
+<p><span dir="rtl">עבור</span> <span class="math inline">\(SG = 0.85\)</span>.</p>
 <p><span class="math display">\[SG = 0.85 = \frac{\rho_{\text{חומר}}}{\rho_{\text{ייחוס}}}\  = &lt; \ \ \rho_{חומר} = 0.85*\rho_{\text{ייחוס}}\  = 0.85*1.000\frac{g}{cm^{3}}\]</span></p>
 <p><span class="math display">\[\ \rho_{חומר} = 0.85\frac{g}{cm^{3}}\]</span></p>
 <p><span dir="rtl">עם זאת, במערכת היחידות האמריקאית</span> (AES), <span dir="rtl">הצפיפות של מים נמדדת שווה ל</span> <span class="math inline">\(62.43\frac{lb_{m}}{ft^{3}}\)</span> <span dir="rtl">ולכן במקרה זה הערך המספרי של הצפיפות אינו שווה לערך ה</span> SG<span dir="rtl">. מאחר וערך הייחוס שונה</span><br>
 <span dir="rtl">לכן יש להמיר תחילה את הצפיפות ליחידות המתאימות לפני שמחשבים את ה-</span>SG <span dir="rtl"></span> <span dir="rtl">לפי</span>:</p>
-<p><span class="math display">\[SG = \frac{\rho_{חומר}}{62.43\frac{lb_{m}}{ft^{3}}}\]</span> <span dir="rtl">לדוגמא אם הצפיפות של נוזל מסויים היא</span> <span class="math inline">\(78.0\frac{lb_{m}}{ft^{3}}\)</span> <span dir="rtl">המשקל הסגולי שלו יהיה</span></p>
+<p><span class="math display">\[SG = \frac{\rho_{חומר}}{62.43\frac{lb_{m}}{ft^{3}}}\]</span> <span dir="rtl">אם הצפיפות של נוזל מסויים היא</span> <span class="math inline">\(78.0\frac{lb_{m}}{ft^{3}}\)</span> <span dir="rtl">המשקל הסגולי שלו יהיה</span></p>
 <p><span class="math display">\[SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25\]</span></p>
-<p><span dir="rtl">תרגיל: ערכי צפיפות של חומר מסויים הן</span> <span class="math inline">\(\rho = 800\frac{kg}{m^{3}}\)</span> <span dir="rtl">(ב</span> SI<span dir="rtl">)ו-</span> <span class="math inline">\(\rho = 49.9\frac{lb_{m}}{ft^{3}}\)</span> <span dir="rtl">(ב</span> AES<span dir="rtl">). חשבו את</span> SG <span dir="rtl">על פי כל אחד מהנתונים בנפרד, מה ניתן להגיד על התוצאות?</span></p>
+<p><span dir="rtl">ערכי צפיפות של חומר מסויים הן</span> <span class="math inline">\(\rho = 800\frac{kg}{m^{3}}\)</span> <span dir="rtl">(ב</span> SI<span dir="rtl">)ו-</span> <span class="math inline">\(\rho = 49.9\frac{lb_{m}}{ft^{3}}\)</span> <span dir="rtl">(ב</span> AES<span dir="rtl">). חשבו את</span> SG <span dir="rtl">על פי כל אחד מהנתונים בנפרד, מה ניתן להגיד על התוצאות?</span></p>
 <p><span dir="rtl">מכיוון שהמשקל הסגולי</span> (Specific Gravity) <span dir="rtl">מוגדר כיחס בין שתי צפיפויות – צפיפות החומר וצפיפות חומר הייחוס – הוא אינו תלוי ביחידות המדידה</span>. <span dir="rtl">כל שינוי ביחידות ישפיע באותו יחס על המונה והמחנה, ולכן הערך הנומרי של</span> <span class="math inline">\(SG\)</span> <span dir="rtl">יישאר זהה בכל מערכת יחידות</span>. <span dir="rtl">במילים אחרות, מדובר בגודל חסר ממדים</span> (dimensionless) <span dir="rtl">המבטא השוואה טהורה בין צפיפויות וניתן להשתמש באותו הערך ללא תלות במערכת היחידות עימה אנו עובדים.</span></p>
 <p><span dir="rtl">כמו כן מאחר וה-</span>SG <span dir="rtl">מבוסס על יחס, הוא מאפשר להעריך בקלות את התנהגות החומר ביחס לחומר הייחוס</span>. <span dir="rtl">כאשר ערך ה-</span>SG <span dir="rtl">קטן מ-1, המשמעות היא שהחומר קל יותר מהייחוס (לרוב מים) והוא ייטה לצוף</span>; <span dir="rtl">כאשר הוא גדול מ-1, החומר צפוף יותר וייטה לשקוע</span>. <span dir="rtl">תכונה זו הופכת את המשקל הסגולי לכלי שימושי ומהיר לזיהוי חומרים ולהבנה אינטואיטיבית של התנהגותם</span>, <span dir="rtl">מבלי להזדקק לחישובי צפיפות מפורטים בכל מערכת יחידות</span>.</p>
 <p><span dir="rtl">בכל טבלה של תכונות פיזיקליות חשוב לשים לב לתנאי המדידה של הנתונים</span>. <span dir="rtl">בעמודות המציינות משקל סגולי</span> (SG) <span dir="rtl">מופיעה לעיתים הכותרת</span> SG (20°/4°) <span dir="rtl"></span> <span dir="rtl">שפירושה הוא</span>: <span dir="rtl"><br>
@@ -429,29 +449,31 @@ Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</spa
 </section>
 <section id="ספיקות-flow-rate" class="level3" data-number="5.4.3">
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="ספיקות-flow-rate"><span class="header-section-number">5.4.3</span> <span dir="rtl">ספיקות</span> (Flow rate)</h3>
-<div class="definition">
-<p><span dir="rtl">כאשר נתחיל לדבר על מערכות יהיו מקרים בהם תהיה לנו תנועה קבועה של חומר לתוך ומחוץ למערכת. על מנת לאפיין את התהליך נצטרך לדעת באיזה קצב חומרים נכנסים ויוצאים מהמערכת</span>. <span dir="rtl">הגודל המתאר זאת נקרא ספיקה</span> (Flow rate)<span dir="rtl">. ובהתאם:</span><br>
-<strong><span dir="rtl">ספיקה מסה</span> (Mass flow rate)</strong> – <span dir="rtl">כמות המסה העוברת בנקודה מסוימת ליחידת זמן</span>.</p>
+<p><span dir="rtl">כאשר נתחיל לדבר על מערכות יהיו מקרים בהם תהיה לנו תנועה קבועה של חומר לתוך ומחוץ למערכת. על מנת לאפיין את התהליך נצטרך לדעת באיזה קצב חומרים נכנסים ויוצאים מהמערכת</span>. <span dir="rtl">הגודל המתאר זאת נקרא ספיקה</span> (Flow rate)<span dir="rtl">. ובהתאם:</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><strong><span dir="rtl">ספיקה מסה</span> (Mass flow rate)</strong> – <span dir="rtl">כמות המסה העוברת בנקודה מסוימת ליחידת זמן</span>.</p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">מסומנת בדרך כלל</span> <span class="math inline">\(\dot{m}\)</span>(m-dot), <span dir="rtl">ומוגדרת כ-</span> <span class="math inline">\(\dot{m} = \frac{dm}{dt}\)</span></p>
 </div>
-<div class="definition">
-<p><strong><span dir="rtl">ספיקה נפחית</span> (Volumetric flow rate)</strong> – <span dir="rtl">הנפח העובר ליחידת זמן</span>,</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">ספיקה נפחית</span> (Volumetric flow rate) – <span dir="rtl">הנפח העובר ליחידת זמן</span>,</p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">מסומנת</span> <span class="math inline">\(\dot{V}\)</span>, <span dir="rtl">ומוגדרת כ</span> <span class="math inline">\(\dot{V} = \frac{dV}{dt}\)</span></p>
 </div>
 <blockquote class="blockquote">
 <p><span dir="rtl">שני סוגי הספיקה קשורים זה לזה דרך הצפיפות</span>: <span dir="rtl"></span><span class="math inline">\(\rho = \frac{m}{V} = \frac{\overset{.}{m}}{\overset{.}{V}}\)</span> <span dir="rtl"></span></p>
 <p><span dir="rtl">כמו כן, כאשר נדבר על מולים נוכל להגדיר גם ספיקה מולרית</span></p>
-<p><strong><span dir="rtl">ספיקה נפחית -</span> (Molar flow rate)</strong> <span dir="rtl">כמות המולים העוברת יחידת זמן</span></p>
 </blockquote>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><strong><span dir="rtl">ספיקה מולרית -</span> (Molar flow rate)</strong> <span dir="rtl">כמות המולים העוברת יחידת זמן</span> <span class="math inline">\(\dot{n} = \frac{dn}{dt}\)</span></p>
+</div>
 <p><span dir="rtl">בצינור זורמים מים בטמפרטורה של</span> <span class="math inline">\(25℃\)</span><br>
 <span dir="rtl">הספיקה הנפחית הנמדדת היא</span> <span class="math inline">\(\dot{V} = 2.0 \times 10^{- 3}\text{ m³/s}\)</span><br>
 <span dir="rtl">וצפיפות המים בטמפרטורה זו היא</span> <span class="math inline">\(\rho = 997\text{ kg/m³}\)</span><br>
 <span dir="rtl">א. חשבו את <strong>ספיקת המסה</strong> של הזרימה.</span></p>
-<p><span dir="rtl">ב.</span> <span dir="rtl">כמה זמן יידרש למלא מיכל בנפח של</span> <span class="math inline">\(0.5m^{3}\)</span></p>
+<p><span dir="rtl">ב. כמה זמן יידרש למלא מיכל בנפח של</span> <span class="math inline">\(0.5m^{3}\)</span></p>
 </section>
 </section>
 <section id="הרכב-כימי" class="level2" data-number="5.5">
@@ -462,32 +484,35 @@ Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</spa
 <p><span dir="rtl">כאשר אנו מאפיינים חומר הכי קל להתחיל מהמאפיין המוחשי ביותר שלו – המסה. המסה מספרת לנו כמה “חומר” יש במערכת אבל היא אינה אומרת לנו כמה צורונים שונים יש בתוך המערכת. בדיוק כמו שאם יגידו לנו שבכיתה מסויימת יש 1,000 ק"ג של תלמידים, לא נוכל לדעת כמה תלמידים יש לנו בפועל. מאחר וכמות הצורונים (אטומים/מולקולות/יונים/אלקטרונים/וכו...) היא עצומה, היה צריך להגדיר יחידת מידה שתאפשר לנו לספור את כמות הצורונים בנוחות.</span></p>
 <p><span dir="rtl">מול</span> (mol) <span dir="rtl">הוא יחידת מידה לכמות חומר. זוהי דרך לספור צורונים במספרים עצומים שאי אפשר לספור ישירות</span>. <span dir="rtl">במערכת ה-</span> SI <span dir="rtl">יחידת כמות החומר היא <strong>מול</strong></span><strong>(mol)</strong><span dir="rtl">,</span> <span dir="rtl">המוגדרת כך שמול אחד מכיל בדיוק</span></p>
 <p><span class="math display">\[N_{A} = 6.02214076 \times 10^{23}\frac{particles}{mol}\]</span> <span dir="rtl">צורונים. המספר הזה נקרא מס' אבוגדרו.</span></p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">לכל מערכת יחידות יש יחידת כמות המותאמת לשאר היחידות במערכת.</span></p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">במערכת</span> cgs <span dir="rtl">היחידות נקראות</span> g-mol <span dir="rtl">והן שוות ל</span><span class="math inline">\(1g - mol = 1mol\)</span> <span dir="rtl">(זו למעשה ההגדרה המקבילה ל</span>mol <span dir="rtl">המוכר מכימיה)</span></p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">במערכת</span> SI <span dir="rtl">היחידות נקראות</span> kg-mol <span dir="rtl">והן שוות ל</span><span class="math inline">\(Kg - mol = kmol = 1000kmol\)</span></p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">במערכת</span> AES <span dir="rtl">היחידות הן</span> lb-mol <span dir="rtl">והן שוות</span> <span class="math inline">\(1lb_{m} - mol = lbmol = 453.592mol\)</span></p>
 </div>
-<p>.</p>
 <p><span dir="rtl">כדי להשוות בין חומרים שונים ומערכות שונות, עלינו למצוא את התכונה אשר נשארת זהה עבור אותו החומר במערכות שונות<em>.</em></span> <span dir="rtl">תכונה זו נקראת משקל אטומי (לאטומים) או משקל מולקולרי (למולקולות), והיא מייצגת את המסה של מול אחד של אותם צורונים. זוהי תכונה אינטנסיבית, כלומר קבועה לחומר מסוים ואינה משתנה עם גודל המערכת.</span></p>
 <p><span dir="rtl">שימו לב- למרות שבספרות נהוג לדבר על משקל או</span> weight <span dir="rtl">הכוונה היא למסת החומר ולא להגדרה הפיזיקלית של משקל - הכח המופעל על גוף באמצעות שדה הכבידה. נוכל לדעת בודאות האם מדובר במסה או במשקל על ידי היחידות.</span></p>
-<p><span dir="rtl">על מנת להפוך מס' מולים למסה אנו משתמשים במשקל מולקולרי. את המשקלים האטומיים ניתן למצוא בטבלה המחזורית. באופן פורמלי, המספרים המופיעים בטבלה המחזורית מוגדרים כ<strong>מסות אטומיות יחסיות</strong> -</span> <span dir="rtl">כלומר, יחסים חסרי ממד בין המסה של אטום אחד של היסוד לבין 1/12 מהמסה של אטום פחמן-12. לכן, מבחינה פורמלית, הם אינם בעלי יחידות.</span> <span dir="rtl">עבור כל מערכת יחידות המשקל המולקולרי מוגדר כמסה האטומים היחסית עם יחידות התואמות למערכת בה אנחנו משתמשים</span></p>
+<p><span dir="rtl">על מנת להפוך מס' מולים למסה אנו משתמשים במשקל מולקולרי. את המשקלים האטומיים ניתן למצוא בטבלה המחזורית. באופן פורמלי, המספרים המופיעים בטבלה המחזורית מוגדרים כ<strong>מסות אטומיות יחסיות</strong> -</span> <span dir="rtl">כלומר, יחסים חסרי ממד בין המסה של אטום אחד של היסוד לבין 1/12 מהמסה של אטום פחמן-12. לכן, מבחינה פורמלית, הם אינם בעלי יחידות.</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">עבור כל מערכת יחידות המשקל המולקולרי מוגדר כמסה האטומים היחסית עם יחידות התואמות למערכת בה אנחנו משתמשים</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[Mw\left\lbrack \frac{g}{gmol} \right\rbrack = Mw\left\lbrack \frac{kg}{kgmol} \right\rbrack = Mw\left\lbrack \frac{lb_{m}}{lbmol} \right\rbrack\]</span></p>
-<div class="definition">
-<p><span dir="rtl">המסה המולקולרית של תרכובת מתקבלת כסכום המסות האטומיות של האטומים שמרכיבים אותה</span>, <span dir="rtl">והיא מייצגת את המסה של מול אחד של מולקולות מהתרכובת.</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">מסה מולרית של תרכובת - כסכום המסות האטומיות של האטומים שמרכיבים אותה</span>, <span dir="rtl">והיא מייצגת את המסה של מול אחד של מולקולות מהתרכובת.</span></p>
 </div>
 <p><span dir="rtl">כך לדוגמא, המסה המולקולרית של גלוקוז</span></p>
 <p><span dir="rtl"></span><span class="math inline">\(Mw\left( C_{6}H_{12}O_{6} \right) = 6*Mw(C) + 12*Mw(H) + 6*Mw(O)\)</span></p>
 <p><span class="math display">\[Mw\left( C_{6}H_{12}O_{6} \right) = 6*Mw(12.01) + 12*Mw(H1.01) + 6*Mw(15.99) = 180.18\]</span></p>
 <p><span dir="rtl">והיחידות תלויות במערכת היחידות בה אנו משתמשים</span></p>
 <p><span class="math display">\[Mw\left( C_{6}H_{12}O_{6} \right) = 180.18\left\lbrack \frac{g}{gmol} \right\rbrack = 180.18\left\lbrack \frac{kg}{kgmol} \right\rbrack = 180.18\left\lbrack \frac{lb_{m}}{lbmol} \right\rbrack\]</span></p>
-<p><span dir="rtl">תרגיל</span></p>
 <p><span dir="rtl">מהי המסה המולרית של אלומינים ביחידות</span> SI<span dir="rtl">? מהי המסה המולרית של אלומיניום ביחידות</span> AES<span dir="rtl">?</span></p>
 <p><span dir="rtl">כמה מול אטומי אלומיניום יש ב100 גרם של אלומיניום? כמה פאונדמול</span> lb-mol <span dir="rtl">יש ב100 גרם של אלומיניום?</span></p>
 </section>
@@ -496,29 +521,37 @@ Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</spa
 <p><span dir="rtl">רוב החומרים בטבע ובמערכות תהליך אינם טהורים, אלא מורכבים ממספר חומרים שונים</span>. <span dir="rtl">כאשר שני חומרים או יותר מצויים יחד במצב פיזיקלי אחיד (גז, נוזל או מוצק), אנו מכנים את המערכת תערובת</span> (mixture)<span dir="rtl">. לדוגמה, אוויר הוא תערובת של גזים (חנקן, חמצן, ארגון ועוד), ומיץ פטל הוא תערובת נוזלית</span>. <span dir="rtl">על מנת לתאר הרכב כימי של תערובתף לא מספיק להגדיר את כמות החומר הכוללת, אלא לתאר <em>כמה יש מכל מרכיב</em> יחסית לאחרים</span>. <span dir="rtl">תיאור זה יכול להיעשות בדרכים שונות, בהתאם למה שנוח למדידה או לחישוב</span>.</p>
 <section id="שבר-מסתימולי-massmole-fraction-ואחוז-מסתימולי-massmole-percentage" class="level4" data-number="5.5.2.1">
 <h4 data-number="5.5.2.1" class="anchored" data-anchor-id="שבר-מסתימולי-massmole-fraction-ואחוז-מסתימולי-massmole-percentage"><span class="header-section-number">5.5.2.1</span> <span dir="rtl">שבר מסתי/מולי (</span>Mass/Mole Fraction<span dir="rtl">) ואחוז מסתי/מולי (</span>Mass/Mole Percentage<span dir="rtl">)</span></h4>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">שבר מסתי (</span>Mass Fraction<span dir="rtl">)- היחס בין מסת רכיב מסוים למסה הכוללת של התערובת</span>:</p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[x_{A} = \frac{m_{A}}{\sum m_{i}}\]</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">שבר מול</span> (Mole Fraction)<span dir="rtl">- היחס בין מספר המולים של רכיב למספר הכולל של מולים בתערובת</span>:</p>
-<p><span class="math display">\[y_{A} = \frac{n_{A}}{\sum n_{i}}\]</span> <span dir="rtl">בשני המקרים נקבל ערך הנע בין 0-1 (1 מייצג את התערובת המלואה). אם נעדיף להציג את הערך באחוזים, ניתן לכפול את השבר ב100%. אין הבדל עקרוני בין הצגה של הרכב התערובת כשבר (ערך בין 0 ל־1) לבין הצגה באחוזים (ערך בין 0 ל־100%). שתי הדרכים <strong>אקוויולנטיות לחלוטין מבחינה חישובית</strong></span>, <span dir="rtl">אך חשוב להקפיד על עקביות לאורך כל החישוב – כלומר, לא לערבב בין אחוזים לשברים באותה משוואה</span>. <span dir="rtl">שני סוגי השברים — מסה ומול — הם גדלים חסרי מימד ויחסיים בלבד, ומאפשרים לתאר בדיוק את הרכב התערובת בלי קשר לגודלה</span>.</p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span class="math display">\[y_{A} = \frac{n_{A}}{\sum n_{i}}\]</span></p>
+</div>
+<p><span dir="rtl">בשני המקרים נקבל ערך הנע בין 0-1 (1 מייצג את התערובת המלואה). אם נעדיף להציג את הערך באחוזים, ניתן לכפול את השבר ב100%. אין הבדל עקרוני בין הצגה של הרכב התערובת כשבר (ערך בין 0 ל־1) לבין הצגה באחוזים (ערך בין 0 ל־100%). שתי הדרכים <strong>אקוויולנטיות לחלוטין מבחינה חישובית</strong></span>, <span dir="rtl">אך חשוב להקפיד על עקביות לאורך כל החישוב – כלומר, לא לערבב בין אחוזים לשברים באותה משוואה</span>. <span dir="rtl">שני סוגי השברים — מסה ומול — הם גדלים חסרי מימד ויחסיים בלבד, ומאפשרים לתאר בדיוק את הרכב התערובת בלי קשר לגודלה</span>.</p>
 </section>
 <section id="משקל-מולקולרי-ממוצע-של-תערובת" class="level4" data-number="5.5.2.2">
 <h4 data-number="5.5.2.2" class="anchored" data-anchor-id="משקל-מולקולרי-ממוצע-של-תערובת"><span class="header-section-number">5.5.2.2</span> <span dir="rtl">משקל מולקולרי ממוצע של תערובת</span></h4>
 <p><span dir="rtl">כאשר תערובת מורכבת ממספר חומרים שונים, לכל אחד מהם יש <strong>משקל מולקולרי שונה</strong></span>.<br>
 <span dir="rtl">אם נרצה לתאר את התערובת כולה בעזרת גודל יחיד, שיהיה אפשר להשתמש בו לחישובים עבור כלל המערכת, נשתמש ב־<strong>משקל מולקולרי ממוצע</strong></span></p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><strong><span dir="rtl">משקל מולקולרי ממוצע-</span></strong> <span dir="rtl">גודל שמייצג את המסה הממוצעת של מול אחד של תערובת החומרים</span>.</p>
 </div>
 <p><span dir="rtl">ניתן לחשב את את המשקל המולקולרי הממוצע במספר אופנים. אם אנו יודעים מהו <strong>שבר המול</strong> של כל רכיב</span> (<span class="math inline">\(y_{i}\)</span>) — <span dir="rtl">כלומר, איזה חלק מהמולים בתערובת שייך לכל חומר — נסכום את מכפלת השברים המוליים עם המסות המולריות של כל רכיב.</span></p>
 <p><span class="math display">\[\overset{ˉ}{M} = \sum_{i}^{}{y_{i}{Mw}_{i}}\]</span></p>
 <p><span dir="rtl">אם במקום זאת נתון <strong>שבר המסה</strong> של כל רכיב (</span><span class="math inline">\(x_{i}\)</span><span dir="rtl">), כלומר איזה חלק מהמסה הכוללת שייך לכל חומר נוכל לחשב את הממוצע המשוקלל לפי המסות של הרכיבים.</span></p>
 <p><span class="math display">\[\frac{1}{\overset{ˉ}{M}} = \sum_{i}^{}\frac{x_{i}}{M_{i}}\]</span> <span dir="rtl">שתי הדרכים נותנות את אותו ערך בסופו של דבר – רק נקודת המוצא שונה (מולית או מסתית)</span>.</p>
-<p><strong><span dir="rtl">דוגמה</span>:</strong><br>
-<span dir="rtl">אוויר יבש הוא תערובת של בערך 79% חנקן</span> (N₂) <span dir="rtl">ו־21% חמצן</span> (O₂) <span dir="rtl">לפי שברי מול</span>.<br>
+<p><span dir="rtl">אוויר יבש הוא תערובת של בערך 79% חנקן</span> (N₂) <span dir="rtl">ו־21% חמצן</span> (O₂) <span dir="rtl">לפי שברי מול</span>.<br>
 <span dir="rtl">המשקלים המולקולריים הם 28 ו־32 בהתאמה, ולכן</span>:</p>
 <p><span class="math display">\[\overset{ˉ}{M} = (0.79)\left( 28\frac{g}{mol} \right) + (0.21)\left( 32\frac{g}{mol} \right) = 29\frac{g}{mol}\]</span></p>
 <p><span dir="rtl">כלומר, נוכל להתייחס אל האוויר כולו כאילו "מול אחד" שלו שוקל בממוצע 29 גרם</span>.</p>
 <p><span dir="rtl">מה יהיה המשקל המולקולרי הממוצע של אויר ביחידות</span> AES<span dir="rtl">?</span></p>
-<p><span dir="rtl">כיצד חושבה הנוסחה לחישוב מסה מולרית של תערובת באמצעות שברים מסתיים?</span></p>
+<p><span dir="rtl"><u>כיצד חושבה הנוסחה לחישוב מסה מולרית של תערובת באמצעות שברים מסתיים?</u></span></p>
 <p><span dir="rtl">מאחר ואנו מחפשים תכונה שאינה תלויה בכמות, נשתמש בבסיס חישוב</span></p>
 <p><span dir="rtl">בסיס חישוב – מאחר ואנחנו מחפשים יחס בין ערכים, נוכל לבצע את הניתוח על כל כמות של חומר, ולכן נבחר את הכמות שהכי נוחה לנו לחישוב</span></p>
 <p><span dir="rtl">נניח שבחרנו בסיס נוח של 1 ק"ג תערובת</span>. <span dir="rtl">אז</span>:</p>
@@ -540,19 +573,19 @@ Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</spa
 <li><p><span dir="rtl">תכנון זרימה דורש לדעת כמה קילוגרמים או מולים זורמים לשנייה דרך צינור נתון</span>.</p></li>
 </ul>
 <p><span dir="rtl">על כן, במקרים מקרים אנחנו נעדיף להשתמש ביחידות של ריכוז לתיאור כמותי של חומר ביחס למרחב הפיזי</span>.</p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><u><span dir="rtl">ריכוז מסתי</span> (Mass Concentration)<span dir="rtl">-</span></u> <span dir="rtl">הריכוז המסתי של רכיב בתערובת מתאר את כמות המסה של אותו רכיב ביחס לנפח הכולל של המערכת</span>.</p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[c_{A} = \frac{m_{A}}{V}\ \ \ \ \ ;\ \ \ \left\lbrack c_{A} \right\rbrack:\ \ \ \frac{kg}{m^{3}}\ \ ,\ \frac{g}{L}\ \ ,\ \ \ \frac{lb_{m}}{ft^{3}}\ \]</span> <span dir="rtl">כאשר</span> <span class="math inline">\(m_{A}\)</span> <span dir="rtl">היא המסה של רכיב</span> <span class="math inline">\(A\)</span> <span dir="rtl">ו</span><span class="math inline">\(V\)</span> <span dir="rtl">הוא הנפח הכולל של התערובת.</span></p>
 </div>
 <p><span dir="rtl">לדוגמה, בתמיסה שבה 10 גרם מלח מומסים ב</span>,<span dir="rtl">תמיסה בנפח 200 מ"ל, הריכוז המסתי של המלח הוא</span>:</p>
 <p><span class="math display">\[c_{salt} = \frac{10g}{0.2L} = 50\frac{g}{L}\]</span></p>
 <p><span dir="rtl">כלומר, בכל ליטר תמיסה יש 50 גרם מלח</span>.</p>
-<div class="definition">
-<p><u><span dir="rtl">ריכוז מולרי</span> (Molar Concentration) <span dir="rtl">-</span></u> <span dir="rtl">מספר המולים של רכיב ביחס לנפח</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">ריכוז מולרי</span> (Molar Concentration) <span dir="rtl">- מספר המולים של רכיב ביחס לנפח</span></p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[C_{A} = \frac{n_{A}}{V}\ \ \ \ ;\ \ \ \ \ \ \left\lbrack C_{A} \right\rbrack:\ \ \ \frac{kmol}{m^{3}}\ \ ;\ \ \frac{mol}{L}\ \ \ ;\ \frac{lbmol}{ft^{3}}\]</span> <span dir="rtl">כלומר אם אנו יודעים שתמיסה מסויימת מכילה</span> 0.5 <span dir="rtl">מול של</span> NaOH <span dir="rtl">על כל ליטר תמיסה הריכוז המולרי יהיה</span> <span class="math inline">\(C_{NaOH} = \frac{0.5mol}{1L} = 0.5\frac{mol}{L} = 0.5M\)</span></p>
 </div>
 <p><span dir="rtl">דרך נוספת לתאר את התמיסה היא באמצעות מולר (</span><span class="math inline">\(M = \frac{mol}{L}\)</span>(<span dir="rtl">. במקרה זה נגיד שהריכוז בתמיסה הוא</span> 0.5 <span dir="rtl">מולר.</span></p>
@@ -560,16 +593,18 @@ Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</spa
 <section id="תמיסות-מהולות-מאוד-dilute-solutions" class="level4" data-number="5.5.2.4">
 <h4 data-number="5.5.2.4" class="anchored" data-anchor-id="תמיסות-מהולות-מאוד-dilute-solutions"><span class="header-section-number">5.5.2.4</span> <span dir="rtl">תמיסות מהולות מאוד</span> (Dilute Solutions)</h4>
 <p><span dir="rtl">במקרים רבים בהרבה, אחד הרכיבים בתערובת נמצא בריכוז נמוך מאוד ביחס לאחרים — למשל מזהמים באוויר, מלחים במי שתייה או חלבונים בתמיסות ביולוגיות</span>. <span dir="rtl">בתערובות כאלה, שבהן הרכיב המבוקש מהווה חלק קטן מאוד מהמערכת, נוח להשתמש ביחידות ייחודיות המתאימות לתיאור ריכוזים קטנים במיוחד</span>. <span dir="rtl"></span></p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">יחידות</span> <strong>ppm (parts per million) <span dir="rtl"></span></strong><span dir="rtl">ו-</span><strong>ppb (parts per billion)</strong> <span dir="rtl">מבטאות כמה חלקים מהרכיב קיימים לכל מיליון או לכל מיליארד חלקים של התערובת</span>.<br>
 <span dir="rtl">הן ניתנות להגדרה על בסיס מסה או על בסיס מולים — בהתאם לסוג המערכת</span>:</p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[{\text{ppm}_{A} = y_{A} \times 10^{6\ \ }\text{או}{\ \ \ \ \ x}_{A} \times 10^{6}
 }{\text{ppb}_{A} = y_{A} \times 10^{9}\text{       או}{\ \ \ \ x}_{A} \times 10^{9}
 }\]</span></p>
 </div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">כאשר</span> <span class="math inline">\(y_{A}\)</span><span dir="rtl">הוא שבר מולרי ו</span>-<span class="math inline">\(x_{A}\)</span> <span dir="rtl">הוא שבר מסתי</span>.</p>
+</div>
 <p><span dir="rtl">לדוגמה, אם באוויר נמדדו</span> ‎15 ppm‎ <span dir="rtl">של</span> <span class="math inline">\(SO_{2}\)</span><span dir="rtl">,</span> <span dir="rtl">המשמעות היא בכל מיליון מולים של אוויר יש 15 מולים של</span> <span class="math inline">\(SO_{2}\)</span>. <span dir="rtl">באופן דומה, אם דם מכיל</span> ‎68 ppm‎ <span dir="rtl">של קריאטינין על בסיס מסה, המשמעות היא שבכל קילוגרם דם יש</span> ‎68 <span dir="rtl">מיליגרם</span>‎ <span dir="rtl">של קריאטינין</span>.</p>
 <p><span dir="rtl">יחידות</span> ppm <span dir="rtl">ו־</span>ppb <span dir="rtl"></span> <span dir="rtl">נפוצות במיוחד בתחומים שבהם יש חשיבות רבה גם לכמויות זעירות של חומר</span>:</p>
 <ul>
@@ -582,31 +617,39 @@ Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</spa
 </section>
 <section id="סיכום" class="level3" data-number="5.5.3">
 <h3 data-number="5.5.3" class="anchored" data-anchor-id="סיכום"><span class="header-section-number">5.5.3</span> <span dir="rtl">סיכום</span></h3>
-<p><span dir="rtl">בפרק זה עברנו מהתיאורים הפשוטים של “כמה יש” (מסה ונפח) לתיאורים שמאפשרים להשוות מערכות שונות – מול, משקל מולקולרי וריכוזים</span>.</p>
+<p><span dir="rtl">בפרק זה עברנו מהתיאורים הפשוטים של “כמה יש” (מסה ונפח) לתיאורים שמאפשרים להשוות מערכות שונות – מול, משקל מולקולרי וריכוזים.</span></p>
 <p><strong><span dir="rtl"><u>גדלים בסיסיים</u> -</span></strong></p>
-<p><strong><span dir="rtl">מסה</span> (m)</strong> – <span dir="rtl">כמה חומר יש במערכת שלנו</span></p>
-<p><strong><span dir="rtl">נפח</span> (V)</strong> – <span dir="rtl">כמה מקום הוא תופס</span>.</p>
-<p><strong><span dir="rtl">צפיפות</span> (ρ = m/V)</strong> – <span dir="rtl">כמה חומר ביחידת נפח; תכונה של החומר עצמו.</span></p>
-<p><strong><span dir="rtl">צפיפות יחסית</span> (SG)</strong> – <span dir="rtl">יחס בין צפיפות החומר לצפיפות המים; חסרת מימד</span>.</p>
+<ul>
+<li><p><strong><span dir="rtl">מסה (</span>m<span dir="rtl">)</span></strong> <span dir="rtl">– כמה חומר יש במערכת שלנו</span></p></li>
+<li><p><strong><span dir="rtl">נפח (</span>V<span dir="rtl">)</span></strong> <span dir="rtl">– כמה מקום הוא תופס.</span></p></li>
+<li><p><strong><span dir="rtl">צפיפות (</span>ρ = m/V<span dir="rtl">)</span></strong> <span dir="rtl">– כמה חומר ביחידת נפח; תכונה של החומר עצמו.</span></p></li>
+<li><p><strong><span dir="rtl">צפיפות יחסית (</span>SG<span dir="rtl">)</span></strong> <span dir="rtl">– יחס בין צפיפות החומר לצפיפות המים; חסרת מימד.</span></p></li>
+</ul>
 <p><strong><span dir="rtl"><u>כמות חומר ברמת חלקיקים</u></span></strong></p>
-<p><strong><span dir="rtl">מול</span> (mol)</strong> – <span dir="rtl">יחידת “ספירה” של</span> <span class="math inline">\(6.022 \times 10^{23}\)</span><span dir="rtl">חלקיקים</span>.</p>
-<p><strong><span dir="rtl">יחידות מותאמות למערכת</span>: <span dir="rtl"></span></strong><span class="math inline">\(\mathbf{kmol\ }\left( \mathbf{SI} \right)\mathbf{,\ gmol\ }\left( \mathbf{gcs} \right)\mathbf{,\ lbmol\ (AES)}\)</span></p>
-<p><strong><span dir="rtl">משקל מולקולרי</span> (M)</strong> – <span dir="rtl">המסה של מול אחד של חומר</span> (g/mol, kg/kmol, lbm/lb-mol).</p>
+<ul>
+<li><p><strong><span dir="rtl">מול (</span>mol<span dir="rtl">)</span></strong> <span dir="rtl">– יחידת “ספירה” של</span> <span class="math inline">\(6.022 \times 10^{23}\)</span><span dir="rtl">חלקיקים.</span></p></li>
+<li><p><strong><span dir="rtl">יחידות מותאמות למערכת:</span></strong> <span class="math inline">\(\mathbf{kmol\ }\left( \mathbf{SI} \right)\mathbf{,\ gmol\ }\left( \mathbf{gcs} \right)\mathbf{,\ lbmol\ (AES)}\)</span></p></li>
+<li><p><strong><span dir="rtl">משקל מולקולרי (</span>M<span dir="rtl">)</span></strong> <span dir="rtl">– המסה של מול אחד של חומר (</span>g/mol, kg/kmol, lbm/lb-mol<span dir="rtl">).</span></p></li>
+</ul>
 <p><strong><span dir="rtl"><u>תערובות והרכב</u></span></strong></p>
-<p><strong><span dir="rtl">שבר מסתי</span> (x):</strong> <span dir="rtl">חלקו של רכיב לפי מסה</span>.</p>
-<p><strong><span dir="rtl">שבר מולרי</span> (y):</strong> <span dir="rtl">חלקו של רכיב לפי מולים</span>.</p>
-<p><strong><span dir="rtl">משקל מולקולרי ממוצע</span>:</strong> <span dir="rtl">מייצג את המסה של מול אחד של תערובת</span>.</p>
+<ul>
+<li><p><strong><span dir="rtl">שבר מסתי (</span>x<span dir="rtl">):</span></strong> <span dir="rtl">חלקו של רכיב לפי מסה.</span></p></li>
+<li><p><strong><span dir="rtl">שבר מולרי (</span>y<span dir="rtl">):</span></strong> <span dir="rtl">חלקו של רכיב לפי מולים.</span></p></li>
+<li><p><span dir="rtl"><strong>משקל מולקולרי ממוצע:</strong> מייצג את המסה של מול אחד של תערובת.</span></p></li>
+</ul>
 <p><strong><span dir="rtl"><u>ריכוזים</u></span></strong></p>
-<p><strong><span dir="rtl">ריכוז מסתי</span>:</strong> <span dir="rtl">מסה של רכיב ביחידת נפח</span>.</p>
-<p><strong><span dir="rtl">ריכוז מולרי</span>:</strong> <span dir="rtl">מולים של רכיב ביחידת נפח</span>.</p>
-<p><strong>ppm / ppb<span dir="rtl">:</span></strong><span dir="rtl">יחידות לריכוזים קטנים מאוד (חלקים למיליון / מיליארד)</span>.</p>
+<ul>
+<li><p><span dir="rtl"><strong>ריכוז מסתי:</strong> מסה של רכיב ביחידת נפח.</span></p></li>
+<li><p><span dir="rtl"><strong>ריכוז מולרי:</strong> מולים של רכיב ביחידת נפח.</span></p></li>
+<li><p><strong>ppm / ppb<span dir="rtl">:</span></strong><span dir="rtl">יחידות לריכוזים קטנים מאוד (חלקים למיליון / מיליארד).</span></p></li>
+</ul>
 </section>
 </section>
 <section id="טמפרטורה" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="טמפרטורה"><span class="header-section-number">5.6</span> <span dir="rtl">טמפרטורה</span></h2>
 <p><span dir="rtl">ביומיום אנחנו משתמשים במילים <em>חום</em> ו־<em>טמפרטורה</em> כמעט באותו מובן אומרים "היום חם" או "המרק איבד חום". אבל מבחינה פיזיקלית, אלו שני מושגים שונים לגמרי</span>. <span dir="rtl">טמפרטורה היא מדד למצב האנרגיה של הגוף - כמה אנרגיה קינטית יש <em>בממוצע</em> לחלקיקיו</span>. <span dir="rtl">חום,</span> <span dir="rtl">לעומת זאת, הוא אנרגיה בתנועה -</span> <span dir="rtl">הכמות הכוללת של אנרגיה תרמית שעוברת מגוף אחד לאחר בגלל הפרש טמפרטורות</span>. <span dir="rtl">כאשר אנו מחממים מים, אנחנו <em>מעבירים חום</em> מהגז/חשמל למים, כתוצאה מכך הטמפרטורה של המים עולה</span>.</p>
 <p><span dir="rtl">מבחינה מיקרוסקופית, כל חומר מורכב מחלקיקים, אטומים או מולקולות, הנמצאים בתנועה מתמדת</span>. <span dir="rtl">בגז הם נעים בחופשיות ומתנגשים זה בזה; בנוזל הם רוטטים ומחליקים זה לצד זה; ובמוצק הם רוטטים סביב מיקומם הקבוע בסריג</span>. <span dir="rtl">המהירות והעוצמה של תנועות אלה קובעות את <strong>האנרגיה הקינטית</strong> של החלקיקים, וזו בדיוק מה שהטמפרטורה מודדת</span>. <span dir="rtl">כאשר אנו אומרים שחומר “חם יותר”, המשמעות היא שחלקיקיו נעים מהר יותר, כלומר האנרגיה הקינטית הממוצעת שלהם גבוהה יותר</span>. <span dir="rtl">כאשר הוא “קר יותר”, תנועת החלקיקים מואטת והאנרגיה קטנה</span>. <span dir="rtl">במילים אחרות</span>:</p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">הטמפרטורה היא מדד לרמת התנועה המולקולרית במערכת – ככל שהתנועה מהירה יותר, כך הטמפרטורה גבוהה יותר</span>.</p>
 </div>
 <p><span dir="rtl">לאורך ההיסטוריה, בני האדם רצו למדוד “כמה חם” או “כמה קר” – אבל לא הייתה דרך מוחלטת לעשות זאת</span>. <span dir="rtl">החוויה האנושית של חום וקור היא יחסית: מה שנעים לנו בקיץ עשוי להיראות קפוא בחורף</span>.<br>
@@ -691,7 +734,7 @@ Figure <span dir="rtl">21 - תרשים בלוקים - מערכת תסיסה</spa
 </tbody>
 </table>
 <figure class="figure">
-<img src="media/media/image25.jpeg" style="width:5.03476in;height:2.67068in" alt="Three temperature scales—Fahrenheit, Celsius, and Kelvin—are oriented horizontally, one below the other, and aligned to show how they relate to each other. Absolute zero is at negative four hundred fifty nine point six seven degrees F, negative two hundred seventy three point one five degrees C, and 0 K. Water freezes at thirty two degrees F, 0 degrees C, and two hundred seventy three point one five K. Water boils at two hundred twelve degrees F, one hundred degrees C, and three hundred seventy three point one five K. A temperature difference of 9 degrees F is the same as a temperature difference of 5 degrees C and 5 K." class="figure-img">
+<img src="assets/images/media/image25.jpeg" style="width:5.03476in;height:2.67068in" alt="Three temperature scales—Fahrenheit, Celsius, and Kelvin—are oriented horizontally, one below the other, and aligned to show how they relate to each other. Absolute zero is at negative four hundred fifty nine point six seven degrees F, negative two hundred seventy three point one five degrees C, and 0 K. Water freezes at thirty two degrees F, 0 degrees C, and two hundred seventy three point one five K. Water boils at two hundred twelve degrees F, one hundred degrees C, and three hundred seventy three point one five K. A temperature difference of 9 degrees F is the same as a temperature difference of 5 degrees C and 5 K." class="figure-img">
 <figcaption>
 <p>
 Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת סרגלי טמפרטורה - פרנהייט, צלזיוס וקלווין<br> מתוך</span> LibreTexts Physics<span dir="rtl">,</span> <span dir="rtl">לפי רישיון</span> Creative Commons BY-NC-SA 4.0.
@@ -699,12 +742,10 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 </figcaption>
 </figure>
 <p><span dir="rtl">כאשר מדברים על טמפרטורה עצמה – למשל “הטמפרטורה בחדר היא</span> <span class="math inline">\(25℃\)</span><span dir="rtl">" המשמעות תלויה בסולם שנבחר</span>. <span dir="rtl">אותו מצב פיזיקלי יתואר בערכים שונים בכל סולם, למשל</span>:</p>
-<p><span class="math display">\[25{^\circ}C = 298.15K = 77{^\circ}F = 536.7{^\circ}R\]</span> <span dir="rtl">אבל כאשר מדברים על <strong>שינוי טמפרטורה</strong> (למשל עלייה של</span> <span class="math inline">\(10℃\)</span><span dir="rtl">, או ירידה של</span> <span class="math inline">\(5\ ℉\)</span><span dir="rtl">) חשוב לזכור</span>:</p>
-<p><span dir="rtl">המרווחים בסולמות קלווין וצלזיוס זהים, ולכן</span> <span class="math inline">\(\Delta T(K) = \Delta T({^\circ}C)\)</span></p>
-<p><span dir="rtl">המרווחים בסולמות ראנקין ופרנהייט זהים, ולכן</span> <span class="math inline">\(\Delta T({^\circ}R) = \Delta T({^\circ}F)\)</span></p>
+<p><span class="math display">\[25{^\circ}C = 298.15K = 77{^\circ}F = 536.7{^\circ}R\]</span> <span dir="rtl">אבל כאשר מדברים על <strong>שינוי טמפרטורה</strong> (למשל עלייה של</span> <span class="math inline">\(10℃\)</span><span dir="rtl">, או ירידה של</span> <span class="math inline">\(5\ ℉\)</span><span dir="rtl">) המרווחים בסולמות קלווין וצלזיוס זהים, ולכן</span> <span class="math inline">\(\Delta T(K) = \Delta T({^\circ}C)\)</span> <span dir="rtl">,</span> <span class="math inline">\(\Delta T({^\circ}R) = \Delta T({^\circ}F)\)</span></p>
 <p><span dir="rtl">כלומר, אם חומר מתחמם</span> <span class="math inline">\(10℃\)</span> <span dir="rtl">זה שקול לעלייה של</span> <span class="math inline">\(10\ K\)</span><span dir="rtl">, ואם הוא יורד</span> <span class="math inline">\(5\ ℉\)</span> <span dir="rtl">זה שווה ערך לירידה של</span> <span class="math inline">\(5\ {^\circ}R\)</span> <span dir="rtl">. על כן, חשוב להבחין בין <strong>ערך מוחלט של טמפרטורה</strong>, המשפיע על חישובי אנרגיה או נפח, לבין <strong>שינוי טמפרטורה,</strong></span> <span dir="rtl">הקובע זרימת חום, העברת אנרגיה או קצב תגובה</span>.<br>
 <span dir="rtl">רוב המשוואות התרמודינמיות דורשות שימוש בסולמות אבסולוטיים כמו</span> K <span dir="rtl">או</span> <span class="math inline">\({^\circ}R\)</span> <span dir="rtl">בעוד שבחישובים יחסיים או במדידות שדה מקומיות ניתן להשתמש גם בצלזיוס או פרנהייט, כל עוד מבצעים את ההמרות הנכונות</span>.</p>
-<p><span dir="rtl">תרגיל: נתונה טמפ' של</span> <span class="math inline">\(200{^\circ}R\)</span><span dir="rtl">. מה יהיה ערכה של הטמפרטורה בצלזיוס? פרנהייט? קלוין?</span></p>
+<p><span dir="rtl">נתונה טמפ' של</span> <span class="math inline">\(200{^\circ}R\)</span><span dir="rtl">. מה יהיה ערכה של הטמפרטורה בצלזיוס? פרנהייט? קלוין?</span></p>
 </section>
 <section id="שיטות-שונות-למדידת-וחישוב-טמפרטורה" class="level3" data-number="5.6.4">
 <h3 data-number="5.6.4" class="anchored" data-anchor-id="שיטות-שונות-למדידת-וחישוב-טמפרטורה"><span class="header-section-number">5.6.4</span> <span dir="rtl">שיטות שונות למדידת וחישוב טמפרטורה</span></h3>
@@ -784,60 +825,67 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 </section>
 <section id="סיכום-1" class="level3" data-number="5.6.5">
 <h3 data-number="5.6.5" class="anchored" data-anchor-id="סיכום-1"><span class="header-section-number">5.6.5</span> <span dir="rtl">סיכום</span></h3>
-<p><span dir="rtl">טמפרטורה היא <strong>מדד לאנרגיה הקינטית הממוצעת</strong> של חלקיקי החומר, והיא מתארת את מידת החום או הקור של גוף</span>. <span dir="rtl">יש להבחין בין <strong>טמפרטורה</strong> (מצב של מערכת) לבין <strong>חום</strong> (אנרגיה העוברת בין גופים עקב הפרש טמפרטורות).</span></p>
-<p><span dir="rtl">קיימים ארבעה סולמות מרכזיים למדידת טמפרטורה</span>:</p>
-<p><span dir="rtl">צלזיוס</span> (°C) <span dir="rtl">ופרנהייט</span>(°F) <span dir="rtl">- סולמות יחסיים המבוססים על נקודות שרירותיות</span>.</p>
-<p><span dir="rtl">קלווין</span> (K) <span dir="rtl">וראנקין</span> (°R) <span dir="rtl">-</span> <span dir="rtl">סולמות אבסולוטיים המבוססים על האפס המוחלט</span>.</p>
-<p><span dir="rtl">קלווין וראנקין שומרים על אותו מרווח בין דרגות כמו צלזיוס ופרנהייט, כדי להבטיח <strong>תאימות נומרית</strong> עם הסולמות הקודמים.</span> <span dir="rtl">שינוי טמפרטורה זהה בין קלווין וצלזיוס</span> (ΔK = Δ°C), <span dir="rtl">ובין ראנקין ופרנהייט</span> (Δ°R = Δ°F).</p>
-<p><span dir="rtl">מדידת טמפרטורה מתבצעת באופן עקיף באמצעות <strong>תכונה פיזיקלית משתנה</strong> של חומר: נפח, התנגדות, מתח חשמלי או קרינה</span>. <span dir="rtl">ארבעת המכשירים העיקריים למדידת טמפרטורה הם</span>:</p>
-<p><span dir="rtl"><strong>מדחום נוזלי</strong> - מבוסס על התפשטות נוזל; פשוט אך מוגבל לטווחים צרים</span>.</p>
-<p><strong>RTD<span dir="rtl">/ תרמיסטור</span></strong> <span dir="rtl">- מבוסס על שינוי התנגדות; מדויק ויציב למדידות רציפות</span>.</p>
-<p><span dir="rtl"><strong>תרמוקפל</strong> - מודד מתח תרמי; מתאים לטווחים רחבים ולתהליכים מהירים</span>.</p>
-<p><span dir="rtl"><strong>פירומטר -</strong> מודד קרינה תרמית; מאפשר מדידה ללא מגע בטמפרטורות גבוהות מאוד</span>.</p>
-<p><span dir="rtl">הבחירה במכשיר המדידה תלויה בטווח הטמפרטורות, ברמת הדיוק הנדרשת, במהירות התגובה ובאפשרות למדידה ישירה או מרחוק</span>.</p>
+<ul>
+<li><p><span dir="rtl">טמפרטורה היא <strong>מדד לאנרגיה הקינטית הממוצעת</strong> של חלקיקי החומר, והיא מתארת את מידת החום או הקור של גוף. יש להבחין בין <strong>טמפרטורה</strong> (מצב של מערכת) לבין <strong>חום</strong> (אנרגיה העוברת בין גופים עקב הפרש טמפרטורות).</span></p></li>
+<li><p><span dir="rtl">קיימים ארבעה סולמות מרכזיים למדידת טמפרטורה:</span></p></li>
+<li><p><span dir="rtl">צלזיוס (°</span>C<span dir="rtl">) ופרנהייט(°</span>F<span dir="rtl">) - סולמות יחסיים המבוססים על נקודות שרירותיות.</span></p></li>
+<li><p><span dir="rtl">קלווין (</span>K<span dir="rtl">) וראנקין (°</span>R<span dir="rtl">) - סולמות אבסולוטיים המבוססים על האפס המוחלט.</span></p></li>
+<li><p><span dir="rtl">קלווין וראנקין שומרים על אותו מרווח בין דרגות כמו צלזיוס ופרנהייט, כדי להבטיח <strong>תאימות נומרית</strong> עם הסולמות הקודמים. שינוי טמפרטורה זהה בין קלווין וצלזיוס (</span>ΔK = Δ°C<span dir="rtl">), ובין ראנקין ופרנהייט (</span>Δ°R = Δ°F<span dir="rtl">).</span></p></li>
+<li><p><span dir="rtl">מדידת טמפרטורה מתבצעת באופן עקיף באמצעות <strong>תכונה פיזיקלית משתנה</strong> של חומר: נפח, התנגדות, מתח חשמלי או קרינה. ארבעת המכשירים העיקריים למדידת טמפרטורה הם:</span></p></li>
+<li><p><span dir="rtl"><strong>מדחום נוזלי</strong> - מבוסס על התפשטות נוזל; פשוט אך מוגבל לטווחים צרים.</span></p></li>
+<li><p><strong>RTD<span dir="rtl">/ תרמיסטור</span></strong> <span dir="rtl">- מבוסס על שינוי התנגדות; מדויק ויציב למדידות רציפות.</span></p></li>
+<li><p><span dir="rtl"><strong>תרמוקפל</strong> - מודד מתח תרמי; מתאים לטווחים רחבים ולתהליכים מהירים.</span></p></li>
+<li><p><span dir="rtl"><strong>פירומטר -</strong> מודד קרינה תרמית; מאפשר מדידה ללא מגע בטמפרטורות גבוהות מאוד.</span></p></li>
+<li><p><span dir="rtl">הבחירה במכשיר המדידה תלויה בטווח הטמפרטורות, ברמת הדיוק הנדרשת, במהירות התגובה ובאפשרות למדידה ישירה או מרחוק.</span></p></li>
+</ul>
 </section>
 </section>
 <section id="לחץ" class="level2" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="לחץ"><span class="header-section-number">5.7</span> <span dir="rtl">לחץ</span></h2>
 <p><span dir="rtl">כאשר נוזל או גז כלואים במיכל, הם אינם “שקטים”. חלקיקי החומר נעים ומתנגשים ללא הרף בדפנות. כל התנגשות מפעילה דחיפה קטנה, וביחד נוצר כוח מצטבר על פני שטח הדופן - זהו בדיוק <strong>הלחץ</strong></span>. <span dir="rtl">הלחץ מתאר עד כמה החומר “דוחף” את סביבתו – כמה כוח הוא מפעיל <em>ליחידת שטח</em>. כאשר אותו כוח מתפזר על שטח גדול, הלחץ קטן; וכשהוא מתרכז בשטח קטן – הלחץ גדל. בהנדסת תהליכים, הלחץ הוא אחד הגדלים המרכזיים שמתארים את מצב החומר במערכת: הוא קובע אם נוזל יזרום או יישאר במקומו, כמה כוח נדרש כדי להזרים אותו, ואילו עומסים יפעלו על הציוד</span>.</p>
 <p><span dir="rtl">נניח שזורם - נוזל או גז - כלוא במיכל סגור. בכל רגע, חלקיקי הזורם נעים ומתנגשים בדפנות. התוצאה הכוללת של כל ההתנגשויות האלה היא כוח שמופעל על שטח הדופן</span>. <span dir="rtl">כדי לתאר את הכוח הזה באופן עצמאי מגודל המיכל או הצינור, אנו מחשבים כמה כוח פועל <strong>על כל יחידת שטח</strong> של הדופן.</span></p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">גודל זה נקרא <strong>לחץ</strong> ומסומן</span> <span class="math inline">\(P\)</span>:</p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[P = \frac{F}{A}\]</span></p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">כאשר</span> F <span dir="rtl">הוא הכח המינימלי שצריך להפעיל על פקק חסר חיכוך כדי למנוע מהזורם לפרוץ החוצה דרך חור ששטחו</span> A</p>
 </div>
-<p><em><span dir="rtl">.</span></em><img src="media/media/image26.gif" style="width:1.84003in;height:2.30004in"> <span dir="rtl"></span><img src="media/media/image27.png" style="width:3.85916in;height:1.66296in" alt="A diagram of a cylinder AI-generated content may be incorrect."></p>
+<p><em><span dir="rtl">.</span></em><img src="assets/images/media/image26.gif" style="width:1.84003in;height:2.30004in"> <span dir="rtl"></span><img src="assets/images/media/image27.png" style="width:3.85916in;height:1.66296in" alt="A diagram of a cylinder AI-generated content may be incorrect."></p>
 <p>Figure <span dir="rtl">23- אטימת חור במיכל עם לחץ מים. מקור:</span> flex seal</p>
 <p><span dir="rtl">הלחץ הוא <strong>מאפיין של הזרם עצמו</strong></span>, <span dir="rtl">ולא רק של נקודת המגע. במצב מנוחה, המולקולות דוחפות אחת את השנייה כך שהלחץ בכל נקודה באותו עומק או באותו מצב זרימה הוא זהה — גם אם אין שם פתח או פקק ממשיים. לכן ניתן לדבר על “הלחץ במערכת” או “הלחץ בצינור”, כאילו היה זה גודל אחיד המתאר את כל הזורם</span>.</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">יחידות הלחץ הן יחידות כוח חלקי יחידות שטח. ביחידות</span> SI <span dir="rtl">נהוג למדוד לחץ בפסקל</span> (Pa), <span dir="rtl">כאשר</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[1Pa = 1\frac{N}{m^{2}} = 1\frac{Kg}{m*s}\]</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">ויחידות נוספות מוכרות הן</span> torr<span dir="rtl">,</span> atm <span dir="rtl">ו-</span> psi <span class="math inline">\(\left( \frac{lb_{m}}{in^{2}} \right)\)</span><span dir="rtl">.</span></p>
+</div>
 <section id="לחץ-אטמוספירי" class="level4" data-number="5.7.0.1">
 <h4 data-number="5.7.0.1" class="anchored" data-anchor-id="לחץ-אטמוספירי"><span class="header-section-number">5.7.0.1</span> <span dir="rtl">לחץ אטמוספירי</span></h4>
-<p><span dir="rtl">באותו האופן האוויר שסביבנו מפעיל עלינו לחץ. האוויר הוא תערובת של גזים שחלקיקיהם נעים ומתנגשים כל הזמן והתנגשויות אלה מפעילות כח עלינו ועל כל מה שנמצא סביבנו. הכוח הכולל שמפעילה האטמוספירה על כל יחידת שטח של פני הקרקע או של גוף כלשהו נקרא <strong>לחץ אטמוספירי</strong></span>.</p>
-<div class="definition">
+<p><span dir="rtl">באותו האופן האוויר שסביבנו מפעיל עלינו לחץ. האוויר הוא תערובת של גזים שחלקיקיהם נעים ומתנגשים כל הזמן והתנגשויות אלה מפעילות כח עלינו ועל כל מה שנמצא סביבנו.</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">הכוח הכולל שמפעילה האטמוספירה על כל יחידת שטח של פני הקרקע או של גוף כלשהו נקרא <strong>לחץ אטמוספירי</strong></span>.</p>
+</div>
 <p><span dir="rtl">הלחץ האטמוספירי בגובה פני הים הוא בערך</span>:</p>
-</div>
-<div class="definition">
 <p><span class="math display">\[P_{atm} = 1.013*10^{5}Pa = 1atm\]</span></p>
-</div>
-<p><span dir="rtl">כלומר, האוויר שסביבנו מפעיל על כל סנטימטר מרובע של הגוף שלנו כוח של כקילוגרם אחד – ואיננו מרגישים זאת רק משום שהלחץ בתוך גופנו שווה לזה שבחוץ</span>.</p>
-<p><span dir="rtl">אם נסתכל על פחית שתייה פתוחה "ריקה", אנו יודעים שהיא לא באמת ריקה, אלא מכילה אוויר באותו הלחץ כמו האוויר שסביבנו. אם נחבר פחית זו למשאבת ואקום כאשר נשאב את האויר מתוך הפחית, כבר לא תהיה התנגדות ללחץ שהאויר שמחוץ לפחית מפעיל, והפחית תקרוס פנימה.</span></p>
+<p><span dir="rtl">כלומר, האוויר שסביבנו מפעיל על כל סנטימטר מרובע של הגוף שלנו כוח של כקילוגרם אחד – ואיננו מרגישים זאת רק משום שהלחץ בתוך גופנו שווה לזה שבחוץ</span>. <span dir="rtl">אם נסתכל על פחית שתייה פתוחה "ריקה", אנו יודעים שהיא לא באמת ריקה, אלא מכילה אוויר באותו הלחץ כמו האוויר שסביבנו. אם נחבר פחית זו למשאבת ואקום כאשר נשאב את האויר מתוך הפחית, כבר לא תהיה התנגדות ללחץ שהאויר שמחוץ לפחית מפעיל, והפחית תקרוס פנימה.</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image28.png" style="width:2.12977in;height:1.77278in" class="figure-img"></p>
+<p><img src="assets/images/media/image28.png" style="width:2.12977in;height:1.77278in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">24 - פחית מחוברת למשאבת ואקום, הוצאת האויר גורמת ללחץ האטמוספירי למעוך את הפחית פנימה. נוצר בעזרת בינה מלאכותית</span> (Nano Banana), 2025<span dir="rtl">.</span></figcaption>
 </figure>
 </div>
 <p><span dir="rtl">הלחץ האטמוספירי איננו קבוע בכל מקום</span>. <span dir="rtl">ככל שעולים לגובה רב יותר – על פני הר, במטוס או בבלון מזג אוויר – יש <strong>פחות שכבות אוויר מעלינו</strong></span>, <span dir="rtl">ולכן גם <strong>פחות משקל של אוויר הלוחץ כלפי מטה</strong></span>.<br>
-<span dir="rtl">התוצאה היא ירידה הדרגתית בלחץ האטמוספירי עם העלייה בגובה</span>. <span dir="rtl">כשאנו אומרים "לחץ אטמוספירי" אנו מתכוונים ללחץ בגובה פני הים - כ־1 אטמוספירה, אך בגובה של כ־5 ק"מ (בערך מחצית גובה האוורסט) הלחץ יורד כמעט למחצית מערכו</span>.</p>
+<span dir="rtl">התוצאה היא ירידה הדרגתית בלחץ האטמוספירי עם העלייה בגובה. לכן הלחץ בגובה פני הים הוא כ-1 אטמוספירה, אך בגובה של כ־5 ק"מ (בערך מחצית גובה האוורסט) הלחץ יורד כמעט למחצית מערכו</span>.<span dir="rtl"><br>
+כאשר אומרים לנו שאנו נמצאים בתנאים של לחץ אטמוספירי הכוונה היא</span> P=1atm</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image29.png" style="width:2.68449in;height:2.68449in" class="figure-img"></p>
+<p><img src="assets/images/media/image29.png" style="width:2.68449in;height:2.68449in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">25 - האטמוספירה בנויה משכבות של אוויר, שכל אחת מהן מפעילה משקל על השכבות שמתחתיה. לכן ככל שיורדים לגובה נמוך יותר - המולקולות נדחסות, והלחץ עולה בהתאם. נוצר בעזרת בינה מלאכותית</span> (Nano Banana), 2025<span dir="rtl">.</span></figcaption>
 </figure>
 </div>
@@ -847,20 +895,26 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 <p><span dir="rtl">בדומה לאטמוספירה, גם בתוך נוזל או גז הנמצא במנוחה הלחץ משתנה עם הגובה. כל שכבה של זורם נושאת את משקל השכבות שמעליה, ולכן ככל שיורדים לעומק גדול יותר – כך גדל המשקל המצטבר מעל הנקודה, והלחץ עולה</span>. <span dir="rtl"></span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image30.jpeg" style="width:4.43048in;height:2.16933in" class="figure-img"></p>
+<p><img src="assets/images/media/image30.jpeg" style="width:4.43048in;height:2.16933in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">26- לחץ הידרוסטטי של מים, ככל שהחריר בנקודה יותר נמוכה, הלחץ גבוה יותר ולכן הזרימה החוצה מאותו החריר תהיה חזקה יותר.</span></figcaption>
 </figure>
 </div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">נניח עמוד זורם שגובהו</span> <span class="math inline">\(h\)</span>, <span dir="rtl">צפיפותו</span> <span class="math inline">\(\rho\)</span>, <span dir="rtl">ופתוח לאוויר. הלחץ בראש העמוד יהיה הלחץ האטמוספירי (</span><span class="math inline">\(P_{0}\)</span>(</p>
-<div class="definition">
-<p><em><span dir="rtl">הלחץ</span> <span dir="rtl">בתחתית העמוד יהיה</span></em><span class="math inline">\(P = P_{0} + \frac{\rho gh}{g_{c}}\)</span> <em><span dir="rtl">זהו הלחץ ההידרוסטטי</span> – <span dir="rtl">הלחץ הנובע ממשקל הזורם עצמו</span>.</em></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">הלחץ</span> <span dir="rtl">בתחתית העמוד יהיה</span> <span class="math inline">\(P = P_{0} + \frac{\rho gh}{g_{c}}\)</span> <span dir="rtl">זהו הלחץ ההידרוסטטי</span> – <span dir="rtl">הלחץ הנובע ממשקל הזורם עצמו</span>.</p>
 </div>
 <p><span dir="rtl">הנוסחה תקפה לכל זורם במנוחה, בין אם מדובר בשמן במיכל, במים בצינור או באוויר בשכבות התחתונות של האטמוספירה</span>. <span dir="rtl">עיקרון זה מסביר תופעות רבות שאנו פוגשים בחיי היומיום ובהנדסה</span>:<br>
 <span dir="rtl">מדוע צוללים חשים בלחץ גדל עם העומק, מדוע סכר נבנה עבה יותר בבסיסו, ומדוע תחתית מיכל תעשייתי חייבת לעמוד בעומסים גדולים בהרבה מחלקו העליון</span>.</p>
 <section id="עומד-במלעיל" class="level4" data-number="5.7.1.1">
 <h4 data-number="5.7.1.1" class="anchored" data-anchor-id="עומד-במלעיל"><span class="header-section-number">5.7.1.1</span> <span dir="rtl">ע֫ומד (במלעיל)</span></h4>
 <p><span dir="rtl">אחת הדרכים לביטוי של לחץ לא ביחידות של כוח ליחידת שטח, אלא כגובה שקול של זורם שהיה מפעיל את אותו לחץ</span>. <span dir="rtl">נניח עמוד זורם בגובה</span> <span class="math inline">\(h\)</span>, <span dir="rtl">בצפיפות</span> <span class="math inline">\(\rho\)</span>. <span dir="rtl">הלחץ בתחתיתו הוא</span> <span class="math inline">\(P = \rho gh\)</span>.<br>
-<span dir="rtl">אפשר להביע את הלחץ בתחתית העמוד באמצעות הגובה נוזל מסויים (לרוב כספית או מים) שהיה גורם לאותו הלחץ. גודל זה נקרא <strong>עומד לחץ</strong> או <strong>גובה שקול ללחץ (</strong></span><strong>head<span dir="rtl">),</span></strong><span dir="rtl">והוא מבטא את הלחץ ביחידות של אורך של נוזל. לדוגמה: לחץ של</span> ‎1‎ <span dir="rtl">אטמוספירה ניתן לביטוי כעומד של</span> ‎10.3‎ <span dir="rtl">מטר מים או</span> ‎760‎ <span dir="rtl">מילימטר כספית</span>.</p>
+<span dir="rtl">אפשר להביע את הלחץ בתחתית העמוד באמצעות הגובה נוזל מסויים (לרוב כספית או מים) שהיה גורם לאותו הלחץ. ג</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl"><strong>עומד לחץ</strong> או <strong>גובה שקול ללחץ (</strong></span><strong>head<span dir="rtl">),</span></strong><span dir="rtl">והוא מבטא את הלחץ ביחידות של אורך של נוזל.</span></p>
+</div>
+<p><span dir="rtl">לחץ של</span> ‎1‎ <span dir="rtl">אטמוספירה ניתן לביטוי כעומד של</span> ‎10.3‎ <span dir="rtl">מטר מים או</span> ‎760‎ <span dir="rtl">מילימטר כספית</span>.</p>
 <p><span class="math display">\[1atm = 101325Pa = 760mmHg = 10.3mH_{2}O = 29.92inHg\]</span></p>
 <p><span dir="rtl">אנו יכולים למצוא את העומד על ידי חלוקת הלחץ בצפיפות הנוזל הרצוי</span></p>
 <p><span class="math display">\[P_{head} = \frac{\rho_{fluid\ }\frac{g}{g_{c}}}{P\ \left( \frac{force}{area} \right)}\]</span></p>
@@ -874,11 +928,15 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 <h3 data-number="5.7.2" class="anchored" data-anchor-id="לחץ-אטמוספירי-לחץ-מוחלט-ולחץ-יחסי"><span class="header-section-number">5.7.2</span> <span dir="rtl">לחץ אטמוספירי, לחץ מוחלט ולחץ יחסי</span></h3>
 <p><span dir="rtl">עד עתה כשדיברנו על לחץ, התייחסנו ללחץ מוחלט - כלומר, לחץ שנמדד ביחס לואקום - מצב בו אין צורונים כלל, ולכן אין התנגשויות ולא מופעל כח. אבל למעט מקרים נדירים מופעל עלינו לחץ חיצוני קבוע - הלחץ האטמוספירי. במרבית המדידות המכשירים יראו לנו את הלחץ היחסי</span> <em>(Gauge Pressure)</em> <span dir="rtl">- הלחץ הנמדד ביחס ללחץ האטמוספירי</span><em>.</em> <span dir="rtl">כאשר מד הלחץ מחובר לאוויר החופשי, הוא מציג ערך אפס, מפני שהלחץ שבתוכו שווה בדיוק ללחץ האטמוספירה שמחוצה לו</span><em>.</em> <span dir="rtl">רק כאשר הלחץ במערכת גדול או קטן מהלחץ החיצוני, המד מראה ערך חיובי או שלילי בהתאמה</span><em>.</em></p>
 <p><span dir="rtl">הקשר בין שני סוגי הלחץ הוא פשוט</span><em>:</em></p>
-<p><span class="math display">\[P_{abs} = P_{\text{gauge}} + P_{\text{atmospheric}}\]</span> <span dir="rtl">כאשר</span> <span class="math inline">\(P_{\text{יחסי}} = 0\)</span><em>,</em> <span dir="rtl">פירושו שהלחץ במערכת שווה ללחץ האטמוספירי</span><em>.* <span dir="rtl">כאשר הערך שלילי, משמעות הדבר שהלחץ במערכת קטן מהאטמוספירה – מצב הנקרא <strong>ואקום חלקי</strong></span></em>.* <span dir="rtl">במקרה זה מכשיר המדידה יראה ערך שלילי. והערך הזה מייצג את "עוצמת הואקום". כך לדוגמא אם המכשיר מראה ערך של</span> <span class="math inline">\(- 100mmHg\)</span> <span dir="rtl">המשמעות היא שהלחץ האבסולוטי הוא</span> <span class="math inline">\(660mmHg\)</span> <span dir="rtl">ויש לנו ואקום של 10 ס"מ.</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span class="math display">\[P_{abs} = P_{\text{gauge}} + P_{\text{atmospheric}}\]</span> <span dir="rtl">כאשר</span> <span class="math inline">\(P_{\text{יחסי}} = 0\)</span>, <span dir="rtl">פירושו שהלחץ במערכת שווה ללחץ האטמוספירי</span>.</p>
+</div>
+<p><span dir="rtl">כאשר הערך שלילי, משמעות הדבר שהלחץ במערכת קטן מהאטמוספירה – מצב הנקרא ואקום חלקי</span>.<br>
+<span dir="rtl">במקרה זה מכשיר המדידה יראה ערך שלילי. והערך הזה מייצג את "עוצמת הואקום". כך לדוגמא אם המכשיר מראה ערך של</span> <span class="math inline">\(- 100mmHg\)</span> <span dir="rtl">המשמעות היא שהלחץ האבסולוטי הוא</span> <span class="math inline">\(660mmHg\)</span> <span dir="rtl">ויש לנו ואקום של 10 ס"מ.</span></p>
 <ul>
-<li><p><span dir="rtl">יחידות המיועדות רק ללחץ אבסולוטי:</span> <em>atma, psia</em></p></li>
-<li><p><span dir="rtl">יחידות המיועדות רק ללחץ יחסי:</span> <em>atmg, psig</em></p></li>
-<li><p><span dir="rtl">שאר היחידות (למשל</span> <em>Pa</em> <span dir="rtl">או</span> <em>mmHg</em><span dir="rtl">) דורשות ציון מפורש</span></p></li>
+<li><p><span dir="rtl">יחידות המיועדות רק ללחץ אבסולוטי:</span> atma, psia</p></li>
+<li><p><span dir="rtl">יחידות המיועדות רק ללחץ יחסי:</span> atmg, psig</p></li>
+<li><p><span dir="rtl">שאר היחידות (למשל</span> Pa <span dir="rtl">או</span> mmHg<span dir="rtl">) דורשות ציון מפורש</span></p></li>
 <li><p><span dir="rtl">אם אין ציון מפורש ניתן להניח שמדובר בלחץ אבסולוטי</span></p></li>
 </ul>
 <section id="ברומטר-ולחץ-ברומטרי" class="level4" data-number="5.7.2.1">
@@ -889,7 +947,6 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 <p><span dir="rtl">מאחר והחלל שבחלק העליון של הצינור הוא למעשה וואקום, הלחץ בראש עמוד הכספית כמעט אפסי</span>.<br>
 <span dir="rtl">מכאן שהלחץ הנמדד בברומטר הוא לחץ מוחלט ביחס לוואקום זה, וניתן להשתמש בו כערך הייחוס (לחץ ברומטרי) לכל חישוב של לחצים יחסיים במכשירים אחרים</span>.</p>
 <p><span class="math display">\[P_{abs} = P_{\text{gauge}} + P_{\text{barometer}}\]</span></p>
-<p><span dir="rtl">תרגיל</span></p>
 <p><span dir="rtl">הסטודנטית החרוצה סתוונית בודקת אחראית על בדיקת תקינות מיכל גז במפעל בו היא עובדת.<br>
 מד הלחץ (</span>Gauge<span dir="rtl">) המותקן על המכל מראה</span> <span class="math inline">\(200KPa\)</span></p>
 <p><span dir="rtl">הלחץ האטמוספרי באותו היום נמדד בברומטר כספית ועמד על</span> <span class="math inline">\(720mmHg\)</span></p>
@@ -909,7 +966,7 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 <section id="שיטות-אלסטיות-למדידת-לחץ" class="level4" data-number="5.7.3.1">
 <h4 data-number="5.7.3.1" class="anchored" data-anchor-id="שיטות-אלסטיות-למדידת-לחץ"><span class="header-section-number">5.7.3.1</span> <span dir="rtl">שיטות אלסטיות למדידת לחץ</span></h4>
 <p><span dir="rtl">בשיטות אלסטיות נמדד הלחץ באמצעות עיוות מכני של רכיב מתכתי אלסטי</span><strong>.</strong> <span dir="rtl">כאשר נוזל או גז מפעילים לחץ על רכיב גמיש — כמו צינור דק, קרום מתכת או מפוח — הלחץ גורם לשינוי בצורתו. שינוי זה מומר לתנועה מדידה, לרוב באמצעות מנגנון מכני פשוט המחובר למחוג או חיישן</span>. <span dir="rtl">השיטה הנפוצה ביותר היא צינור בורדון</span> (Bourdon tube)<span dir="rtl"><strong>.</strong> צינור זה בנוי מצינור מתכתי קעור בעל חתך אליפטי, המעוקל בצורת חצי עיגול או סליל. הקצה הפתוח של הצינור מחובר אל מקור הלחץ, בעוד שהקצה השני סגור ויכול לנוע בחופשיות</span>. <span dir="rtl">כאשר הלחץ הפנימי בצינור עולה, דפנות הצינור נמתחות והצורה הקמורה נוטה להתיישר. תנועה קטנה זו מועברת באמצעות מנגנון של מנוף וגלגל שיניים אל מחוג המורה את הלחץ על גבי סקלת המד</span>.</p>
-<p><img src="media/media/image31.jpg" style="width:2.05088in;height:2.56567in"> <span dir="rtl"></span><img src="media/media/image32.jpg" style="width:1.98575in;height:2.58476in" alt="A close-up of a circular device AI-generated content may be incorrect."></p>
+<p><img src="assets/images/media/image31.jpg" style="width:2.05088in;height:2.56567in"> <span dir="rtl"></span><img src="assets/images/media/image32.jpg" style="width:1.98575in;height:2.58476in" alt="A close-up of a circular device AI-generated content may be incorrect."></p>
 <p>Figure <span dir="rtl">27 - איור: מד לחץ מסוג בורדון (</span>Bourdon Gauge<span dir="rtl">). מימין – מראה חיצוני של מד הלחץ, שבו תנועת המחוג מציגה את ערך הלחץ על גבי סולם מכויל</span>. <span dir="rtl">משמאל – מבט פנימי של מנגנון המדידה: צינור מתכתי קמור בצורת</span> C <span dir="rtl">(צינור בורדון) המחובר לקו הלחץ</span>.</p>
 <p><span dir="rtl">מדי לחץ מסוג בורדון פשוטים, אמינים, ואינם דורשים מקור אנרגיה חיצוני. הם מתאימים למדידה של לחץ מדומה</span> (Gauge Pressure) <span dir="rtl">ומספקים תוצאות מדויקות בטווח רחב מאוד של לחצים, החל ממאות קילו־פסקל ועד מאות מגה־פסקל</span>. <span dir="rtl">חסרונם העיקרי הוא רגישות לשינויים מהירים בלחץ ולבלאי מכני לאורך זמן</span>. <span dir="rtl">בזכות פשטותם ואמינותם, מדי בורדון נחשבים עד היום לאחד המכשירים הנפוצים ביותר למדידת לחץ במערכות תעשייתיות, במעבדות ובמתקני בקרה</span>.</p>
 <p><span dir="rtl">מלבד צינור בורדון, קיימות שיטות נוספות למדידת לחץ המבוססות על אותו עיקרון של עיוות אלסטי של רכיב מתכתי</span>. <span dir="rtl">במכשירי דיאפרגמה הלחץ מפעיל כוח על קרום מתכתי דק המתעוות בהתאם לעוצמת הלחץ, ובמכשירי מפוח</span> (bellows) <span dir="rtl">הלחץ גורם להתפשטות או כיווץ של גליל מתקפל דק</span>. <span dir="rtl">בכל המקרים מדובר בהמרה של שינוי מכני קטן — כיפוף, מתיחה או התרחבות — לתנועה מדידה, אשר מתורגמת להצגה אנלוגית או לאות חשמלי</span>. <span dir="rtl">מכשירים אלה מאפשרים מדידה מדויקת גם בטווחי לחץ שונים מאוד, החל מהפרשי לחץ זעירים ועד ללחצים גבוהים בתעשייה, והם מהווים את הבסיס למרבית מדי הלחץ המכניים המודרניים</span>.</p>
@@ -934,30 +991,41 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 <span dir="rtl">נניח שני לחצים בשני הקצוות</span> <span class="math inline">\(P_{1}\)</span><span dir="rtl">ו-</span><span class="math inline">\(P_{2}\)</span>, <span dir="rtl">ושני זורמים בצינור – נוזל מדידה בצפיפות</span> <span class="math inline">\(\rho_{1}\)</span> <span dir="rtl">וזורם (לרוב אוויר) בצפיפות</span> <span class="math inline">\(\rho_{2}\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image33.png" style="width:1.41085in;height:2.01906in" class="figure-img"></p>
+<p><img src="assets/images/media/image33.png" style="width:1.41085in;height:2.01906in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">28- משוואת המנומטר הכללית - נוזל המדידה בכחול (לרוב מים או כספית), זורם עליון בירוק (לרוב אויר, זניח), לחצים חיצוניים</span> P1 <span dir="rtl">ו-</span> P2<span dir="rtl">.</span></figcaption>
 </figure>
 </div>
 <p><span dir="rtl">אם נעקוב לאורך הצינור מצד 1, דרך נוזל המדידה, ועד לצד 2 – נוכל להשוות את הלחצים בנקודות שבאותו גובה</span>.<br>
-<span dir="rtl">נכתוב את הלחץ בכל זרוע ונשווה ביניהם</span>:</p>
+<span dir="rtl">נכתוב את הלחץ בכל זרוע ונשווה ביניהם</span> <span dir="rtl">וקיבלנו את</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">משוואת המנומטר הכללית</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[P_{1} + \rho_{2}\frac{g}{g_{c}}(h_{1} + h_{2}) = P_{2} + \rho_{1}\frac{g}{g_{c}}h_{1} + \rho_{2}\frac{g}{g_{c}}h_{2}\]</span></p>
-<p><span dir="rtl">זוהי <strong>משוואת המנומטר הכללית</strong></span>, <span dir="rtl">המתארת את הקשר בין הלחצים, צפיפויות הנוזלים והפרשי הגבהים בצינור</span>.</p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">המתארת את הקשר בין הלחצים, צפיפויות הנוזלים והפרשי הגבהים בצינור</span>.</p>
+</div>
 <p><span dir="rtl">במרבית היישומים הזורם העליון הוא גז (לרוב אוויר), שצפיפותו קטנה בהרבה מצפיפות נוזל המדידה</span>.<br>
-<span dir="rtl">במקרה זה ניתן להזניח את תרומתו, ואז נקבל את משוואת המנומטר בפועל</span>:</p>
+<span dir="rtl">במקרה זה ניתן להזניח את תרומתו, ואז נקבל את</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">משוואת המנומטר כאשר הצפיפות של הזורם העליון זניחה:</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[P_{1} - P_{2} = \rho\frac{g}{g_{c}}h\]</span> <span dir="rtl">כאשר</span> <span class="math inline">\(\rho\)</span><span dir="rtl">היא צפיפות נוזל המדידה בלבד</span>.</p>
+</div>
 <p><span dir="rtl">אם</span> <span class="math inline">\(h &gt; 0\)</span>– <span dir="rtl">הלחץ בצד 1 גבוה יותר</span>; <span dir="rtl">אם</span> <span class="math inline">\(h &lt; 0\)</span>– <span dir="rtl">הלחץ בצד 2 גבוה יותר</span>.</p>
 <p><span dir="rtl">נוסחה זו היא הצורה הפשוטה והנפוצה של <strong>משוואת המנומטר</strong> אם אחד הצדדים של המנומטר פתוח לאטמוספירה, ניתן להשתמש בו למדידת לחץ יחסי (</span>Gauge <span dir="rtl"></span>Pressure<span dir="rtl">), ואם שני הצדדים מחוברים לנקודות שונות במערכת, הוא מודד הפרש לחצים</span> (Differential Pressure)<span dir="rtl">. מנומטרים משמשים בעיקר ביישומים שבהם נדרש דיוק גבוה בטווחי לחץ נמוכים, כמו כיול חיישנים, ניסויי זרימה במעבדה, או מדידות בפרויקטים חינוכיים. לעומת זאת, במערכות תעשייתיות בלחצים גבוהים משתמשים לרוב במדי לחץ אלסטיים או אלקטרוניים, שהם קומפקטיים ועמידים יותר</span>.</p>
-<p><span dir="rtl">תרגיל:</span></p>
 <p><span dir="rtl">נתונה המערכת הבאה:<br>
 1. באיזה צד הלחץ יותר גבוה?<br>
 2. מהו</span> h<span dir="rtl">?</span></p>
-<p><img src="media/media/image34.png" style="width:2.01046in;height:1.62134in"></p>
+<p><img src="assets/images/media/image34.png" style="width:2.01046in;height:1.62134in"></p>
 </section>
 <section id="סוגי-מנומטרים" class="level4" data-number="5.7.4.2">
 <h4 data-number="5.7.4.2" class="anchored" data-anchor-id="סוגי-מנומטרים"><span class="header-section-number">5.7.4.2</span> <span dir="rtl">סוגי מנומטרים</span></h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image35.png" style="width:6.5in;height:3.375in" class="figure-img"></p>
+<p><img src="assets/images/media/image35.png" style="width:6.5in;height:3.375in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">29</span>- <span dir="rtl">סוגי מנומטרים</span></figcaption>
 </figure>
 </div>
@@ -968,21 +1036,21 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 <li><p><span dir="rtl">אם נרצה לדעת את הלחץ האבסולוטי בצינור נצטרך להוסיף את הלחץ האטמוספירי</span></p></li>
 </ul>
 <p><span class="math display">\[P_{1a} = P_{atm} + P_{1g} = P_{atm} + \rho\frac{g}{g_{c}}h\]</span></p>
-<p><img src="media/media/image36.png" style="width:1.50808in;height:1.7116in"></p>
+<p><img src="assets/images/media/image36.png" style="width:1.50808in;height:1.7116in"></p>
 <p><strong><span dir="rtl">מנומטר סגור</span> <em>(Sealed-End Manometer)</em></strong></p>
 <p><span dir="rtl">במנומטר סגור צד אחד של הצינור אטום ומכיל ריק כמעט מוחלט</span> <em>(Vacuum)</em><span dir="rtl">,</span> <span dir="rtl">והצד השני מחובר למערכת. מכיוון שבצד האטום הלחץ אפסי בקירוב, הלחץ הנמדד הוא לחץ מוחלט</span></p>
-<p><span class="math display">\[P_{1a} = 0 + \rho\frac{g}{g_{c}}h\]</span> <img src="media/media/image37.png" style="width:1.34823in;height:1.69815in" alt="A diagram of a magnet AI-generated content may be incorrect."></p>
+<p><span class="math display">\[P_{1a} = 0 + \rho\frac{g}{g_{c}}h\]</span> <img src="assets/images/media/image37.png" style="width:1.34823in;height:1.69815in" alt="A diagram of a magnet AI-generated content may be incorrect."></p>
 <p><strong><span dir="rtl">מנומטר דיפרנציאלי</span> <em>(Differential Manometer)</em></strong></p>
-<p><span dir="rtl">במנומטר דיפרנציאלי שני הצדדים מחוברים לשתי נקודות שונות במערכת</span><em>.* <span dir="rtl">המכשיר מודד ישירות את <strong>הפרש הלחצים</strong> בין שתי הנקודות, ללא קשר ללחץ האטמוספרי</span></em>.* <img src="media/media/image38.png" style="width:1.55713in;height:1.73623in"></p>
+<p><span dir="rtl">במנומטר דיפרנציאלי שני הצדדים מחוברים לשתי נקודות שונות במערכת</span><em>.* <span dir="rtl">המכשיר מודד ישירות את <strong>הפרש הלחצים</strong> בין שתי הנקודות, ללא קשר ללחץ האטמוספרי</span></em>.* <img src="assets/images/media/image38.png" style="width:1.55713in;height:1.73623in"></p>
 <p><span class="math display">\[P_{1} + \rho\frac{g}{g_{c}}h = P_{2} + \rho_{f}\frac{g}{g_{c}}h\ \ \ \  \Longrightarrow \ \ \ \ \ \ \boxed{\mathrm{\Delta}P = P_{1} - P_{2} = \left( \rho_{f} - \rho \right)\frac{g}{g_{c}}h\text{~}}\]</span> <span dir="rtl">כאשר</span> <span class="math inline">\(\rho_{f}\)</span><span dir="rtl">היא צפיפות נוזל המדידה ו־</span><span class="math inline">\(\rho\)</span> <span dir="rtl">היא צפיפות הזורם במערכת</span>*.* <span dir="rtl">אם צפיפות הזורם נמוכה משמעותית מצפיפות נוזל המנומטר (למשל אם מדובר באוויר), נקבל:</span></p>
 <p><span class="math display">\[P_{1} - P_{2} = \rho\frac{g}{g_{c}}h\]</span> <strong><span dir="rtl">מנומטר משופע</span> <em>(Inclined Manometer)</em></strong></p>
 <p><span dir="rtl">במנומטר משופע אחת הזרועות של הצינור איננה אנכית אלא מונחת בזווית קטנה ביחס לאופק</span><em>.* <span dir="rtl">העיקרון הפיזיקלי זהה לזה של מנומטר רגיל, אך השיפוע מאפשר למדוד שינויים קטנים מאוד בלחץ בדיוק גבוה יותר</span></em>.* <span dir="rtl"></span></p>
 <p><span dir="rtl">על כן, בהנחה וצפיפות הזורם במערכת זניחה</span></p>
 <p><span class="math display">\[\Delta P = \rho\frac{g}{g_{c}}h = \rho\frac{g}{g_{c}}Lsin(\theta)\]</span> <span dir="rtl">כאשר</span> <span class="math inline">\(L\)</span> <span dir="rtl">הוא המרחק הנמדד לאורך הצינור ו־</span><span class="math inline">\(\theta\)</span> <span dir="rtl">היא זווית ההטיה</span>*.* <span dir="rtl">ככל ש</span> <span class="math inline">\(\theta\)</span> <span dir="rtl">קטנה יותר, נוכל לשים לב לשינויים קטנים יותר.</span></p>
-<p><span dir="rtl"></span><img src="media/media/image39.png" style="width:2.14656in;height:1.95881in" alt="A diagram of a tube with a line and arrows AI-generated content may be incorrect."></p>
+<p><span dir="rtl"></span><img src="assets/images/media/image39.png" style="width:2.14656in;height:1.95881in" alt="A diagram of a tube with a line and arrows AI-generated content may be incorrect."></p>
 <p><strong><span dir="rtl">מנומטר עם צד רחב</span> <em>(Large-Reservoir Manometer)</em></strong></p>
 <p><span dir="rtl">במנומטר זה אחת הזרועות רחבה בהרבה מהשנייה</span><em>.* <span dir="rtl">כאשר הלחץ משתנה, מפלס הנוזל בצד הצר נע מעלה או מטה באופן מורגש, בעוד שהשינוי במאגר הרחב קטן משמעותית. לכן, יש להתחשב ביחס בין שטחי החתך של שני הצדדים</span></em>,* <span class="math inline">\(A_{1}\)</span><span dir="rtl">ו־</span><span class="math inline">\(A_{2}\)</span> <span dir="rtl">כדי לתקן את החישוב</span><em>.</em></p>
-<p><img src="media/media/image40.png" style="width:3.13211in;height:2.4029in"></p>
+<p><img src="assets/images/media/image40.png" style="width:3.13211in;height:2.4029in"></p>
 <p><span dir="rtl">אנו יודעים כי המסה שירדה בצד אחד חייבת להיות שווה למסה שעלתה בצד השני. לכן, אם נסתכל על הנפח שעלה וירד ביחס לקו האדום -</span></p>
 <p><span class="math display">\[m_{1} = m_{2}\ \ ;\ \ \ m = \rho V\]</span></p>
 <p><span class="math display">\[V_{1} = A_{1}h_{1}\ \ \ \ \ \ V_{2} = A_{2}h_{2}\]</span></p>
@@ -996,10 +1064,12 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 </section>
 <section id="סיכום-מנומטרים" class="level4" data-number="5.7.4.3">
 <h4 data-number="5.7.4.3" class="anchored" data-anchor-id="סיכום-מנומטרים"><span class="header-section-number">5.7.4.3</span> <span dir="rtl">סיכום מנומטרים</span></h4>
-<p><span dir="rtl">מנומטרים הם מהמכשירים הפשוטים, המדויקים והמהימנים ביותר למדידת לחצים והפרשי לחצים</span><em>.* <span dir="rtl">הם מבוססים על עקרון <strong>שיווי המשקל ההידרוסטטי</strong></span></em>,* <span dir="rtl">שלפיו הלחץ בנוזל במנוחה תלוי רק בצפיפותו, בתאוצת הכובד ובגובה עמודת הנוזל</span><em>.* <span dir="rtl">הפרש הגבהים בין פני הנוזל בשתי זרועות הצינור מתורגם ישירות להפרש לחצים על־פי המשוואה</span></em>:*</p>
+<p><span dir="rtl">מנומטרים הם מהמכשירים הפשוטים, המדויקים והמהימנים ביותר למדידת לחצים והפרשי לחצים</span>.<br>
+<span dir="rtl">הם מבוססים על עקרון <strong>שיווי המשקל ההידרוסטטי</strong></span>, <span dir="rtl">שלפיו הלחץ בנוזל במנוחה תלוי רק בצפיפותו, בתאוצת הכובד ובגובה עמודת הנוזל</span>.<br>
+<span dir="rtl">הפרש הגבהים בין פני הנוזל בשתי זרועות הצינור מתורגם ישירות להפרש לחצים על־פי המשוואה</span>:</p>
 <p><span class="math display">\[\Delta P = \rho gh\]</span></p>
-<p><span dir="rtl">צורתו של המנומטר – פתוח, סגור, דיפרנציאלי, משופע או עם צד רחב – נקבעת לפי סוג המדידה הרצויה: לחץ מוחלט, לחץ יחסי או הפרש לחצים בין שני מקומות במערכת</span><em>.</em></p>
-<p><span dir="rtl">למרות פשטותם, מנומטרים משמשים עד היום במעבדות, בבדיקות כיול ובמערכות בקרה, בזכות רמת הדיוק הגבוהה והיכולת לספק מדידה ישירה וברורה של לחץ באמצעות גובה עמודת נוזל</span><em>.</em></p>
+<p><span dir="rtl">צורתו של המנומטר – פתוח, סגור, דיפרנציאלי, משופע או עם צד רחב – נקבעת לפי סוג המדידה הרצויה: לחץ מוחלט, לחץ יחסי או הפרש לחצים בין שני מקומות במערכת</span>.</p>
+<p><span dir="rtl">למרות פשטותם, מנומטרים משמשים עד היום במעבדות, בבדיקות כיול ובמערכות בקרה, בזכות רמת הדיוק הגבוהה והיכולת לספק מדידה ישירה וברורה של לחץ באמצעות גובה עמודת נוזל</span>.</p>
 <p><span dir="rtl">במכון הנדסי נתון מיכל מלבני ברוחב</span> <span class="math inline">\(1.0\text{~}m\)</span> <span dir="rtl">ואורך</span> <span class="math inline">\(3.0\text{~}m\)</span><span dir="rtl">.</span><br>
 <span dir="rtl">המיכל מלא עד לגובה</span> <span class="math inline">\(5.0\text{~}m\)</span> <span dir="rtl">בחומר</span> <strong>Methyl Ethyl Ketone (MEK)</strong> <span dir="rtl">,</span><br>
 <span dir="rtl">נתון:</span> <span class="math inline">\(S.G = 0.805\)</span><span dir="rtl">.<br>
@@ -1007,31 +1077,19 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 <ol type="1">
 <li><p><span dir="rtl">חשבו את הכוח</span> <span class="math inline">\(F\text{~}\lbrack N\rbrack\)</span> <span dir="rtl">הפועל על תחתית המיכל.</span></p></li>
 <li><p><span dir="rtl">מהו העומד במיכל ביחידות של</span> mMEK<span dir="rtl">?</span></p></li>
-<li><p><span dir="rtl">באחד הימים ירד גשם ונכנסו למיכל מים.</span></p>
-<ul>
+<li><p><span dir="rtl">באחד הימים ירד גשם ונכנסו למיכל מים.</span></p></li>
 <li><p><span dir="rtl">האם ניתן לחשב את כמות המים שנכנסה למיכל באמצעות מדידת הלחץ בתחתית המיכל?</span></p></li>
 <li><p><span dir="rtl">כיצד ניתן להחזיר את המיכל למצבו המקורי (ללא מים).</span></p></li>
-</ul></li>
 </ol>
 </section>
 </section>
 <section id="סיכום-2" class="level3" data-number="5.7.5">
 <h3 data-number="5.7.5" class="anchored" data-anchor-id="סיכום-2"><span class="header-section-number">5.7.5</span> <span dir="rtl">סיכום</span></h3>
 <ul>
-<li><span dir="rtl">לחץ הוא הכוח הפועל בניצב ליחידת שטח:</span></li>
-</ul>
-<blockquote class="blockquote">
-<p><span class="math display">\[P = \frac{F}{A}\]</span></p>
-</blockquote>
-<ul>
+<li><p><span dir="rtl">לחץ הוא הכוח הפועל בניצב ליחידת שטח:</span> <span class="math inline">\(P = \frac{F}{A}\)</span></p></li>
 <li><p><span dir="rtl">לחץ בזורם הוא הכוח שהנוזל או הגז מפעיל בניצב על כל יחידת שטח שבתוכו או על גבולות הכלי המכיל אותו.</span></p></li>
-<li><p><span dir="rtl">לחץ נוזל במנוחה עולה עם העומק בהתאם לצפיפות הנוזל ולכוח הכובד:</span></p></li>
-</ul>
-<blockquote class="blockquote">
-<p><span class="math display">\[\Delta P = \rho\frac{g}{g_{c}}h\]</span></p>
-</blockquote>
-<ul>
-<li><p><span dir="rtl">עומד</span> (Head) <span dir="rtl">הוא הגובה השקול של עמודת נוזל שמייצרת לחץ נתון – כלומר, גובה עמוד הנוזל שהיה יוצר את אותו לחץ במנוחה</span>.</p></li>
+<li><p><span dir="rtl">לחץ נוזל במנוחה עולה עם העומק בהתאם לצפיפות הנוזל ולכוח הכובד</span> <span class="math inline">\(\Delta P = \rho\frac{g}{g_{c}}h\)</span></p></li>
+<li><p><span dir="rtl">עומד (</span>Head<span dir="rtl">) הוא הגובה השקול של עמודת נוזל שמייצרת לחץ נתון – כלומר, גובה עמוד הנוזל שהיה יוצר את אותו לחץ במנוחה.</span></p></li>
 <li><p><span dir="rtl">סוגי לחצים:</span></p>
 <ul>
 <li><p><span dir="rtl">לחץ מוחלט (</span>Absolute Pressure<span dir="rtl">): נמדד מה</span>Vacuum<span dir="rtl">.</span></p></li>
@@ -1058,6 +1116,69 @@ Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת
 <li><p><span dir="rtl">מדידות לחץ הן הבסיס להבנת זרימה, מעבר חום ובקרה בתהליכים הנדסיים.</span></p></li>
 </ul></li>
 </ul>
+</section>
+</section>
+<section id="פרק-4-מאזן-מסה" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> <span dir="rtl">פרק 4 – מאזן מסה</span></h1>
+<section id="מה-נלמד-בפרק-הזה-1" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="מה-נלמד-בפרק-הזה-1"><span class="header-section-number">6.1</span> <span dir="rtl">מה נלמד בפרק הזה</span>?</h2>
+<ul>
+<li><p><span dir="rtl"><strong>להגדיר ולהסביר</strong> מושגים מרכזיים: תהליך מנה, חצי-מנה, רציף, מצב יציב ומצב לא יציב, מחזור, זרם פסילה, דרגות חופש, המרה של מגיב מגביל, אחוז עודף מגיב, תפוקה, בררנות, הרכב יבש, אוויר תיאורטי ואחוז עודף אוויר</span>.</p></li>
+<li><p><span dir="rtl"><strong>לשרטט ולסמן</strong> תרשימי זרימה, <strong>לבחור</strong> בסיס חישוב, <strong>לזהות</strong> תתי-מערכות</span></p></li>
+<li><p><span dir="rtl"><strong>לבצע</strong> ניתוח דרגות חופש</span></p></li>
+<li><p><span dir="rtl"><strong>לנסח ולפתור</strong> מאזני חומרים למערכות פשוטות ומורכבות (יחידה אחת או ריבוי יחידות, כולל מחזור, מעקף וזרם פסילה)</span>.</p></li>
+<li><p><span dir="rtl"><strong>ליישם</strong> שיטות שונות לכתיבת מאזנים בתהליכים עם תגובות: מאזן מולקולרי, מאזן אטומי או שימוש במידת תגובה</span>.</p></li>
+<li><p><span dir="rtl"><strong>לחשב</strong> חישובי בעירה: קצב הזנת אוויר מתוך אחוז עודף נתון או להפך, <strong>לקבוע</strong> קצב זרימה והרכב גזי מוצרים, כולל במצבים של חמצון חלקי.</span></p></li>
+</ul>
+</section>
+<section id="מאזן-מסה-כללי" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="מאזן-מסה-כללי"><span class="header-section-number">6.2</span> <span dir="rtl">מאזן מסה כללי</span></h2>
+<p><span dir="rtl">בפרק הקודם הכרנו את מושגי היסוד של תהליך תעשייתי: חומרי גלם, יחידות פעולה ותרשימי זרימה</span>.<br>
+<span dir="rtl">ראינו שכל תהליך, פשוט או מורכב, ניתן לתאר כרצף של יחידות פעולה המחוברות ביניהן בזרמי חומר</span>.<br>
+<span dir="rtl">עד כה הסתפקנו בתיאור איכותי:</span> <em><span dir="rtl">מה קורה בכל שלב,</span></em> <span dir="rtl">ואילו משתנים (לחץ, טמפרטורה, ספיקה, הרכב) מאפיינים את הזרמים</span>. <span dir="rtl">כעת אנו עושים את הצעד הבא</span>: <span dir="rtl">לתאר את התהליך באופן כמותי</span>. <span dir="rtl">נרצה לדעת לא רק <em>איזה תהליכים מתרחשים</em></span>, <span dir="rtl">אלא <em>כמה חומר</em> נכנס</span>, <em><span dir="rtl">כמה יוצא</span></em>, <span dir="rtl">ו־<em>מה קורה לו בדרך</em></span>. <span dir="rtl">כדי לענות על שאלות כאלה נשתמש באחד הכלים המרכזיים של ההנדסה</span> <strong><span dir="rtl">מאזן המסה</span> (Mass Balance)<span dir="rtl">.</span></strong><br>
+<span dir="rtl">ובאמצעותו נוכל לתאר ולחשב את זרימות החומרים בכל חלק בתהליך – ממכל בודד ועד למתקן תעשייתי שלם</span>.</p>
+<p><span dir="rtl">מאזן מסה הוא ביטוי מתמטי לעיקרון פשוט ועמוק</span>: <strong><span dir="rtl">חומר לא נעלם ואינו נוצר יש מאין</span>.</strong> <span dir="rtl">בכל מערכת — ריאקטור, מיכל ערבוב, ביוריאקטור או מתקן תעשייתי שלם — כל מה שנכנס אליה, יוצא ממנה, נוצר בתוכה או נצרך בה – חייב “להסתדר בחשבון</span>“.</p>
+<p><span dir="rtl">הצורה הכללית של מאזן מסה ניתנת לכתיבה כך</span>:</p>
+<p><span class="math display">\[\text{Input} - \text{Output} + \text{Generation} - \text{Consumption} = \text{Accumulation}\]</span></p>
+<p><span dir="rtl">נניח שיש לנו מערכת — למשל ריאקטור. אנחנו יכולים לעקוב אחרי החומר שנכנס אליו, אחרי מה שיוצא ממנו, אחרי מה שנוצר בו כתוצאה מתגובה, ואחרי מה שנצרך</span>. <span dir="rtl">אם נחבר את כל אלה, נקבל את השינוי בכמות החומר בתוך המערכת לאורך זמן</span>.</p>
+<p><span dir="rtl">במילים אחרות</span>:<br>
+<span dir="rtl">מה שנכנס, פחות מה שיצא, בתוספת מה שנוצר, פחות מה שנצרך – שווה בדיוק למה שהצטבר</span>.</p>
+<p><span dir="rtl">אחת הדרכים להבין את מאזן המסה היא לחשוב עליו כמו על ניהול חשבון בנק</span>. <span dir="rtl">חשבון הבנק שלנו הוא "מערכת" אשר יש בה בתנועה של ה"חומר" שלנו, כסף. בכל רגע נכנס כסף, יוצא כסף, מצטברת ריבית, נגרעות עמלות — ובסוף התקופה אנחנו רואים אם היתרה גדלה או קטנה</span>.</p>
+<ol type="1">
+<li><p><strong><span dir="rtl">כניסה</span> <span dir="rtl"></span>(Input)</strong><br>
+<span dir="rtl">כסף שנכנס לחשבון מבחוץ – משכורת, החזר מס, העברה מחבר, או כל הפקדה חיצונית</span>.<br>
+<span dir="rtl">זהו הזרם שנכנס למערכת מהסביבה</span>.</p></li>
+<li><p><strong><span dir="rtl">יצירה</span> (Generation)</strong><br>
+<span dir="rtl">כסף שנוצר <em>בתוך</em> המערכת עצמה – למשל ריבית על החיסכון או רווח מהשקעה</span>.<br>
+<span dir="rtl">זה כמו חומר חדש שנוצר בתגובה כימית</span>.</p></li>
+<li><p><strong><span dir="rtl">הוצאה</span> (Output)</strong><br>
+<span dir="rtl">תשלומים, קניות או העברות שביצענו – כל מה שעוזב את החשבון ויוצא החוצה</span>.<br>
+<span dir="rtl">זהו הזרם היוצא של המערכת</span>.</p></li>
+<li><p><strong><span dir="rtl">צריכה</span> (Consumption)</strong><br>
+<span dir="rtl">כסף שנעלם “מבפנים” – עמלות בנק, דמי ניהול או ריבית על האוברדראפט.</span><br>
+<span dir="rtl">הוא לא יצא החוצה, אבל הכמות שלו יורדת מאחר והוא נצרך על ידי המערכת.</span></p></li>
+<li><p><strong><span dir="rtl">צבירה</span> (Accumulation)</strong><br>
+<span dir="rtl">ההפרש בין כל מה שנכנס ונוצר לבין כל מה שיצא ונצרך</span>. <span dir="rtl">אם יותר כסף נכנס ונוצר – היתרה גדלה. אם ההוצאות והעמלות היו גדולות יותר – היתרה קטנה</span>.<br>
+<br>
+<span dir="rtl">זהו כלי החשיבה המרכזי של מהנדסי תהליך, והשלב הראשון בכל ניתוח של מערכת הנדסית</span></p></li>
+</ol>
+</section>
+</section>
+<section id="פרק-5-מערכות-חד-פאזיות" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> <span dir="rtl">פרק 5 – מערכות חד פאזיות</span></h1>
+<section id="מה-נלמד-בפרק-הזה-2" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="מה-נלמד-בפרק-הזה-2"><span class="header-section-number">7.1</span> <span dir="rtl">מה נלמד בפרק הזה</span>?</h2>
+<ul>
+<li><p><span dir="rtl">להכיר את המושגים: נוזלים בלתי-דחיסים; חיבור נפחים בנוזלים; משוואת מצב; גז אידיאלי; נפח סגולי סטנדרטי; לחץ חלקי; שבר נפחי מול שבר מולרי בגזים אידיאליים; גורם דחיסות; משוואות מצב קוביות; טמפרטורה ולחץ קריטיים</span>.</p></li>
+<li><p><span dir="rtl">לחשב צפיפות או נפח של תערובת נוזלים מתוך הרכב נתון, בעזרת נתוני צפיפות או הנחת חיבור נפחים</span>; <span dir="rtl">לגזור נוסחת אומדן צפיפות</span>.</p></li>
+<li><p><span dir="rtl">ליישם את משוואת הגז האידיאלי</span>: <span dir="rtl">לחשב את המשתנה החסר, לקבוע את צפיפות הגז, ולבחון את תקפות ההנחה בעזרת גורם הדחיסות</span>.</p></li>
+<li><p><span dir="rtl">לפרש ולחשב ספיקות גזים ביחידות סטנדרטיות ובתנאי תהליך אמיתיים</span>.</p></li>
+<li><p><span dir="rtl">לקבוע הרכב תערובת גז אידיאלי מתוך לחצים חלקיים ולחץ כולל</span>.</p></li>
+<li><p><span dir="rtl">לבצע חישובי</span> PVT <span dir="rtl">בעזרת משוואות מצב שונות</span> (<span dir="rtl">ויריאל, ואן-דר-ואלס</span>, SRK, compressibility factor).</p></li>
+<li><p><span dir="rtl">לנתח ולפתור מערכות תהליך עם ספיקות נפחיות: לבצע ניתוח דרגות חופש, לנסח משוואות, לחשב ולרשום הנחות, ולבחון את סבירותן</span>.</p></li>
+</ul>
+<p><strong><span dir="rtl"><br>
+</span></strong></p>
 
 
 </section>
@@ -1225,6 +1346,108 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // מיפוי שם סביבה -> callout + כותרת
+
+  const map = {
+
+    definition: {callout:'callout-note',      title:'הגדרה'},
+
+    example:    {callout:'callout-example',   title:'דוגמה'},
+
+    exercise:   {callout:'callout-important', title:'תרגיל'},
+
+    tip:        {callout:'callout-tip',       title:'טיפ'},
+
+    summary:    {callout:'callout-important', title:'סיכום'},
+
+    question:   {callout:'callout-note',      title:'שאלה'},
+
+    answer:     {callout:'callout-tip',       title:'תשובה', collapse:true},
+
+    remark:     {callout:'callout-note',      title:'הערה'},
+
+    theorem:    {callout:'callout-note',      title:'משפט'},
+
+    lemma:      {callout:'callout-note',      title:'למה'},
+
+    proposition:{callout:'callout-note',      title:'טענה'},
+
+    corollary:  {callout:'callout-note',      title:'מסקנה'},
+
+    proof:      {callout:'callout-note',      title:'הוכחה', collapse:true},
+
+    hint:       {callout:'callout-tip',       title:'רמז',   collapse:true},
+
+    solution:   {callout:'callout-note',      title:'הצג פתרון', collapse:true},
+
+  };
+
+
+
+  // מאתרים גם לפי custom-style וגם לפי classes
+
+  const candidates = [
+
+    ...document.querySelectorAll('div[custom-style], section[custom-style]'),
+
+    ...document.querySelectorAll(Object.keys(map).map(k => `div.${k}, section.${k}`).join(','))
+
+  ];
+
+
+
+  candidates.forEach(el => {
+
+    const raw = (el.getAttribute('custom-style') || '')
+
+                  .toLowerCase().replace(/\s+/g,'');
+
+    const cls = [...el.classList].map(c=>c.toLowerCase());
+
+    const key = Object.keys(map).find(k => k===raw || cls.includes(k));
+
+    if (!key) return;
+
+
+
+    const spec = map[key];
+
+
+
+    // הפוך ל-callout: מוסיף מחלקות תואמות של Quarto
+
+    el.classList.add('callout', spec.callout, key);
+
+
+
+    // כותרת אם חסרה
+
+    if (!el.getAttribute('title') && spec.title) {
+
+      el.setAttribute('title', spec.title);
+
+    }
+
+
+
+    // collapse אם צריך
+
+    if (spec.collapse && !el.getAttribute('collapse')) {
+
+      el.setAttribute('collapse','true');
+
+    }
+
+  });
+
+});
+
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

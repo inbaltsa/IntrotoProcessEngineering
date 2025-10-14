@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; פרק 2 – מבוא לחישובים הנדסיים – שם הספר החדש</title>
+<title>4&nbsp; פרק 2 – מבוא לחישובים הנדסיים – מבוא להנדסת תהליכים</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,7 +131,7 @@ window.Quarto = {
       <img src="./assets/logo.png" alt="הלוגו של הספר" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">שם הספר החדש</a> 
+      <a href="./">מבוא להנדסת תהליכים</a> 
         <div class="sidebar-tools-main">
     <a href="./index.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
@@ -147,7 +147,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">שם הספר החדש</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא להנדסת תהליכים</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -273,13 +273,13 @@ window.Quarto = {
 <p><span dir="rtl">מדידה היא אחת הפעולות הבסיסיות ביותר במדע ובהנדסה. כאשר אנו מבצעים מדידה, אנו מבקשים לקבוע כמה גדול מאפיין מסוים של תופעה או עצם, ולבטא את התוצאה בצורה מספרית. במילים אחרות</span>, <strong><span dir="rtl">מדידה היא תהליך של השוואת גודל פיזיקלי ליחידת מידה מוסכמת, והבעת התוצאה במספר וביחידה</span></strong>.</p>
 <p><span dir="rtl">כדי להבין טוב יותר, כדאי להבחין בין שלושת המושגים</span>:</p>
 <ul>
-<li><div class="definition">
+<li><div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><strong><span dir="rtl">מידה</span> (Quantity):</strong> <span dir="rtl">התכונה הפיסיקלית שניתנת למדידה ולהשוואה, כמו מסה, אורך, לחץ, טמפרטורה או הספק.</span></p>
 </div></li>
-<li><div class="definition">
+<li><div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><strong><span dir="rtl">מימד</span> (Dimension):</strong> <span dir="rtl">המאפיין הפיזיקלי הבסיסי של אותה מידה– למשל אורך, מסה, זמן,</span> <span dir="rtl">או שילובים שלהם (למשל אורך ליחידת זמן). הממד מתאר את סוג הגודל הפיזיקלי הנמדד.</span></p>
 </div></li>
-<li><div class="definition">
+<li><div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><strong><span dir="rtl">יחידה</span> (Unit):</strong> <span dir="rtl">קנה המידה שבו משתמשים כדי לבטא את הממד. למשל, אורך אפשר למדוד במטרים, סנטימטרים או אינצ’ים. זמן אפשר למדוד בשניות, דקות או שעות</span>.</p>
 </div></li>
 </ul>
@@ -307,32 +307,21 @@ window.Quarto = {
 <p><span dir="rtl">הצורך ביחידות מוסכמות אינו נובע רק מהיסטוריה של בלבול או נוחות, אלא מכך שאין כל משמעות פיזיקלית לחיבור בין גדלים מימדים שונים</span>. <span dir="rtl">אי אפשר לחבר שלושה מטרים לחמש שניות, משום שמדובר בגדלים השייכים לקטגוריות שונות לגמרי. כמו כן, כאשר עובדים עם אותו מימד אפשר לבצע חיבור והשוואה – אך ורק אם כל הערכים מבוטאים באותה יחידה. אם הערכים נתונים ביחידות שונות, למשל מטרים וסנטימטרים, תחילה נמיר את כולם ליחידה אחידה ורק אז נוכל לחבר או להשוות ביניהם. רק כאשר כל הגדלים באותו ממד ובאותה יחידה, ניתן לבצע פעולות של חיבור, חיסור והשוואה בין ערכים.</span></p>
 <p><span dir="rtl">מצד שני, בעוד שחיבור וחיסור אפשריים רק כאשר מדובר באותו ממד ובאותה יחידה (או לאחר המרה ליחידה אחידה), הרי שבכפל ובחילוק היחידות מתנהגות ממש כמו גורמים אלגבריים: ניתן להכפיל אותן, לחלק אותן ואף לצמצם ביניהן</span>. <span dir="rtl">בצורה זו אנו יכולים לעבור בין יחידות שונות באותו מימד, ואף ליצור יחידות חדשות המייצגות גדלים פיזיקליים חדשים.</span></p>
 <p><span dir="rtl">במילים פשוטות</span></p>
-<div class="definition">
-<p><strong><span dir="rtl">אי אפשר לחבר גדלים ממימדים שונים:</span></strong> <span class="math inline">\(1\text{ }m + 3\text{ }L = \text{לא~מוגדר}\)</span>❌</p>
-</div>
-<div class="definition">
-<p><strong><span dir="rtl">אפשר לחבר רק כשיש אותו מימד ואותה יחידה:</span></strong> <span class="math inline">\(10\text{ }cm + 5\text{ }cm = 15\text{ }cm\)</span>✅</p>
-</div>
-<div class="definition">
-<p><strong><span dir="rtl">אם היחידות שונות – חייבים להמיר:</span></strong> <span class="math inline">\(10\text{ }m + 20\text{ }ft = ?\)</span><span dir="rtl">← המרה ליחידה אחידה</span></p>
-</div>
-<div class="definition">
-<p><span dir="rtl"><strong>בכפל ובחילוק היחידות מתנהגות כמו ביטוי אלגברי:</strong><br>
-ניתן להכפיל, לחלק ולצמצם יחידות</span></p>
-</div>
 <ul>
-<li><div class="definition">
-<p><span dir="rtl">מעברי יחידות באותו המימד</span></p>
-</div></li>
-<li><div class="definition">
-<p><span dir="rtl">יצירת יחידות נגזרות (כוח, אנרגיה, לחץ).</span></p>
-</div></li>
+<li><p><span dir="rtl">אי אפשר לחבר גדלים ממימדים שונים:</span> <span class="math inline">\(1\text{ }m + 3\text{ }L = \text{undefined}\)</span>❌</p></li>
+<li><p><span dir="rtl">אפשר לחבר רק כשיש אותו מימד ואותה יחידה:</span> <span class="math inline">\(10\text{ }cm + 5\text{ }cm = 15\text{ }cm\)</span>✅</p></li>
+<li><p><span dir="rtl">אם היחידות שונות – חייבים להמיר:</span> <span class="math inline">\(10\text{ }m + 20\text{ }ft = ?\)</span><span dir="rtl">← המרה ליחידה אחידה</span></p></li>
+<li><p><span dir="rtl">בכפל ובחילוק היחידות מתנהגות כמו ביטוי אלגברי:</span></p>
+<ul>
+<li><p><span dir="rtl">ניתן להכפיל, לחלק ולצמצם יחידות</span> <span dir="rtl">באותו המימד</span></p></li>
+<li><p><span dir="rtl">יצירת יחידות נגזרות (כוח, אנרגיה, לחץ).</span></p></li>
+</ul></li>
 </ul>
 <p><span dir="rtl">המהירות מוגדרת על ידי חלוקת המרחק בזמן ולכן</span></p>
 <p><span class="math display">\[\frac{30km}{3h} = 10\frac{km}{h}\]</span></p>
 <p><span dir="rtl">אלו הן יחידות נגזרות, ואנו נדון בהן בהרחבה בהמשך הפרק.</span></p>
 <p><span dir="rtl">על מנת לעבור מיחידה אחת ליחידה אחרת, נשתמש בפקטור מעבר</span></p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">פקטור מעבר</span> <strong>(Conversion Factor) <span dir="rtl"></span></strong><span dir="rtl">-<br>
 יחס בין שתי יחידות השייכות לאותו המימד ומייצגות את אותה הכמות.</span></p>
 </div>
@@ -342,12 +331,12 @@ window.Quarto = {
 <p><span dir="rtl">כאשר נכפיל גודל פיזיקלי בפקטור מעבר</span>, <strong><span dir="rtl">המספר ישתנה, היחידות יתעדכנו, אבל הגודל הפיזיקלי עצמו יישאר זהה</span></strong>. <span dir="rtl">לדוגמה, אם נאמר שאורך מסוים הוא 1.5 מטר, אפשר לבטא אותו גם כ</span>-<span dir="rtl">150 סנטימטר – שתי הצורות נכונות, והגודל האמיתי לא השתנה</span>. <span dir="rtl">היחסים בין הגדלים השונים הם קבועים וניתן למצוא אותן בספרים.</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image2.png" style="width:6.09404in;height:5.729in" class="figure-img"></p>
+<p><img src="assets/images/media/image2.png" style="width:6.09404in;height:5.729in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">2 - גדלים לצורך העברת יחידות. הטבלה מתוך<br>
 </span>Felder, R.M., Rousseau, R.W., &amp; Bullard, L.G. (2016). Elementary Principles of Chemical Processes (4th ed.). Wiley</figcaption>
 </figure>
 </div>
-<p><span dir="rtl"><u>תרגיל:</u> השתמשו בטבלה על מנת להגדיר את פקטורי המעבר הבאים</span></p>
+<p><span dir="rtl">השתמשו בטבלה על מנת להגדיר את פקטורי המעבר הבאים</span></p>
 <p><span dir="rtl">א. ליטר לגלון (</span>L-&gt;gal<span dir="rtl">)</span></p>
 <p><span dir="rtl">ב. מטר לפיט (</span>m-&gt;ft<span dir="rtl">)</span></p>
 <p><span dir="rtl">כעת נוכל להשתמש בפקטור המעבר על מנת לפתור את המשוואה</span></p>
@@ -432,7 +421,7 @@ window.Quarto = {
 </table>
 <p><strong><span dir="rtl">שימוש בסרגל יחידות הוא כלי מרכזי להמרות נכונות ולמניעת טעויות</span><em>.</em></strong> <span dir="rtl">השיטה מחייבת להציב את הכמות הנתונה בצד שמאל, ולצידה סדרה של גורמי המרה הכתובים כשברים. כל גורם נבחר כך שיבטל את היחידות הלא רצויות ויחליף אותן ביחידות המבוקשות. ברגע שמציבים את היחידות בתוך השברים ומצמצמים אותן באופן אלגברי, נותרת בסוף רק היחידה הרצויה</span><em>.</em></p>
 <p><span dir="rtl">חשוב להכיר בכך שזו אינה שיטה אינטואיטיבית עבור רוב הסטודנטים בתחילת הדרך: בהתחלה היא עשויה להיראות מסורבלת או מלאכותית. עם זאת, לאחר שמתרגלים לעבוד כך, מתגלה יתרון גדול – לא רק שהשיטה כמעט מבטלת טעויות בסיסיות, אלא היא גם מספקת כלי להתמודדות עם מצבים חדשים ולא מוכרים. כאשר מופיעה בעיה שלא ראינו בעבר, עצם העבודה עם היחידות מובילה אותנו בצעדים מסודרים אל הפתרון</span><em>.</em></p>
-<p><span dir="rtl">שאלה: משאית נסעה מרחק של</span> 25mile <span dir="rtl">במשך 20 דקות. מהי המהירות של המשאית במטר לשנייה?</span></p>
+<p><span dir="rtl">משאית נסעה מרחק של</span> 25mile <span dir="rtl">במשך 20 דקות. מהי המהירות של המשאית במטר לשנייה?</span></p>
 <table class="caption-top" style="width:97%;">
 <colgroup>
 <col style="width: 50%">
@@ -459,13 +448,13 @@ window.Quarto = {
 </section>
 <section id="סיכום" class="level3" data-number="4.2.4">
 <h3 data-number="4.2.4" class="anchored" data-anchor-id="סיכום"><span class="header-section-number">4.2.4</span> <span dir="rtl">סיכום</span></h3>
-<p><span dir="rtl">בפרק זה הכרנו את המושגים הבסיסיים של עולם המדידה</span>:</p>
-<p><span dir="rtl"><strong>מדידה</strong> (</span>measurement<span dir="rtl">) היא פעולה של השוואת גודל ליחידת מידה מוסכמת</span>.</p>
+<p><span dir="rtl">בפרק זה הכרנו את המושגים הבסיסיים של עולם המדידה:</span></p>
+<p><span dir="rtl"><strong>מדידה</strong> (</span>measurement<span dir="rtl">) היא פעולה של השוואת גודל ליחידת מידה מוסכמת.</span></p>
 <p><span dir="rtl"><strong>מידה</strong> (</span>quantity<span dir="rtl">) היא תכונה פיסיקלית אותה ניתן לכמת.</span></p>
 <p><span dir="rtl"><strong>מימד</strong> (</span>dimention<span dir="rtl">) הוא סוג הגודל (אורך, מסה, זמן...).</span></p>
-<p><span dir="rtl"><strong>יחידה</strong> (</span>unit<span dir="rtl">) היא קנה המידה (מטר, קילוגרם, שנייה)</span>.</p>
+<p><span dir="rtl"><strong>יחידה</strong> (</span>unit<span dir="rtl">) היא קנה המידה (מטר, קילוגרם, שנייה).</span></p>
 <p><span dir="rtl"><strong>פקטור מעבר</strong> (</span>conversion factor<span dir="rtl">) הוא יחס בין שתי יחידות השייכות לאותו המימד ומייצגות את אותה הכמות</span></p>
-<p><span dir="rtl">בנוסף למדנו גם כיצד לבצע המרות באמצעות <strong>סרגל היחידות</strong></span> <span dir="rtl">(</span>simple dimensional analysis<span dir="rtl">). שיטה זו מבטיחה עבודה עקבית עם היחידות, מונעת טעויות נפוצות ומסייעת להבין מצבים חדשים ולא מוכרים.</span></p>
+<p><span dir="rtl">בנוסף למדנו גם כיצד לבצע המרות באמצעות <strong>סרגל היחידות</strong> (</span>simple dimensional analysis<span dir="rtl">). שיטה זו מבטיחה עבודה עקבית עם היחידות, מונעת טעויות נפוצות ומסייעת להבין מצבים חדשים ולא מוכרים.</span></p>
 </section>
 </section>
 <section id="מערכות-יחידות" class="level2" data-number="4.3">
@@ -577,14 +566,14 @@ window.Quarto = {
 <p><span dir="rtl">דוגמאות לכך ניתן למצוא בכל מערכת יחידות: את משקל המשאית ב</span>SI <span dir="rtl">אנו נעדיף לתאר בטונות (</span>Ton<span dir="rtl">) ולא בק"ג, ואת המרחק בין ישראל ללונדון ב</span> AES <span dir="rtl">נתאר במייל (</span>mile<span dir="rtl">) ולא ברגל (</span>ft<span dir="rtl">).</span></p>
 <p><span dir="rtl">שיטה נוספת לייצוג פשוט היא באמצעות שימוש בקידומות (</span>prefix<span dir="rtl">) אשר מהוות דרך נוחה להציג גדלים פיזיקליים בסדרי גודל שונים, מבלי להכביד במספרים ארוכים. הקידומות מייצגות מכפלות או שברים של יחידת הבסיס, וכך מאפשרות קיצור ברור וקריא: למשל</span>, <span class="math inline">\(1\text{ km} = 1000\text{ m}\)</span>, <span dir="rtl">או</span> <span class="math inline">\(1\text{ }\mu\text{s} = 10^{- 6}\text{ s}\)</span>. <span dir="rtl">השימוש בקידומות התפתח במסגרת מערכת ה-</span>SI<span dir="rtl">, אך כיום הן מקובלות גם במערכות יחידות אחרות, כגון</span> AES<span dir="rtl">, ולכן הפכו לסטנדרט אוניברסלי. עבור מהנדסים ומהנדסות, שליטה בקידומות אלו חיונית, שכן הן כלי מרכזי להצגה מדויקת ויעילה של נתונים הנדסיים ומדעיים</span>.</p>
 <figure class="figure">
-<img src="media/media/image3.png" style="width:6.5in;height:4.46597in" alt="A table of numbers and symbols AI-generated content may be incorrect." class="figure-img">
+<img src="assets/images/media/image3.png" style="width:6.5in;height:4.46597in" alt="A table of numbers and symbols AI-generated content may be incorrect." class="figure-img">
 <figcaption>
 <p>
 Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<br> </span>García, José. (2025). Dimensional Analysis in Chemistry Textbooks 1900-2020 and an Algebraic Alternative. Educación Química. 36. 82-108. 10.22201/fq.18708404e.2025.1.88260
 </p>
 </figcaption>
 </figure>
-<p><span dir="rtl">תרגיל: השלימו באמצעות טבלת הקידומות</span></p>
+<p><span dir="rtl">השלימו באמצעות טבלת הקידומות</span></p>
 <p><span class="math display">\[\begin{matrix}
 \mathbf{1}\mathbf{Mg} &amp; = &amp; \_\_\_\_\_\_\_\_\_\_\mathbf{g}\_\_ \\
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_ &amp; = &amp; \mathbf{1.5*1}\mathbf{0}^{\mathbf{- 6}}\mathbf{s} \\
@@ -729,7 +718,7 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 </tr>
 </tbody>
 </table>
-<p><span dir="rtl">תרגיל: מה פקטור המעבר בין</span> dyne <span dir="rtl">ל-</span>N<span dir="rtl">?</span> <span dir="rtl">חשבו באמצעות יחידות הבסיס.</span></p>
+<p><span dir="rtl">מה פקטור המעבר בין</span> dyne <span dir="rtl">ל-</span>N<span dir="rtl">? חשבו באמצעות יחידות הבסיס.</span></p>
 <p><span dir="rtl">(רמז- התחילו בביטוי ביחידות הבסיס של אחד מהם, והשתמשו במעברי יחידות על מנת להמיר אותן כך שיתאימו ליחידות הבסיס של השני)</span></p>
 </section>
 <section id="כוח-ומשקל" class="level3" data-number="4.3.4">
@@ -745,22 +734,28 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 <p><span class="math display">\[1lbf \equiv 32.174\frac{lb_{m}ft}{s^{2}}\]</span></p>
 <p><span dir="rtl">לכן, במערכת היחידות האמריקאית הגדירו מחדש את החוק השני של ניוטון כך ש</span></p>
 <p><span class="math display">\[F = \frac{ma}{g_{c}}\ \ \ \ \ ;\ \ \ \ \ g_{c} = 32.174\frac{lb_{m}ft}{lb_{f}s^{2}}\]</span></p>
-<p><span dir="rtl">דוגמא: צפיפות המים היא</span><span class="math inline">\(62.4\frac{lb_{m}}{ft^{3}}\)</span><br>
+<p><span dir="rtl">צפיפות המים היא</span><span class="math inline">\(62.4\frac{lb_{m}}{ft^{3}}\)</span><br>
 <span dir="rtl">מה יהיה המשקל של</span> <span class="math inline">\(500ft^{2}\)</span> <span dir="rtl">מים?</span></p>
 </section>
 <section id="סיכום-מערכות-יחידות" class="level3" data-number="4.3.5">
 <h3 data-number="4.3.5" class="anchored" data-anchor-id="סיכום-מערכות-יחידות"><span class="header-section-number">4.3.5</span> <span dir="rtl">סיכום – מערכות יחידות</span></h3>
-<p><span dir="rtl">חישובים פיזיקליים והנדסיים מחייבים שימוש במערכת יחידות עקבית</span>. <span dir="rtl"><strong>מערכת יחידות</strong> מוגדרת כאוסף מוסכם של יחידות בסיס, יחידות נגזרות וכללי המרה ביניהן, שמאפשר לבצע מדידות והשוואות באופן אחיד</span>.</p>
-<p><u><span dir="rtl">בעולם קיימות שלוש מערכות עיקריות</span>:</u></p>
-<p><strong>SI <span dir="rtl">-</span></strong><span dir="rtl">המערכת הבינלאומית, המבוססת על מטר, קילוגרם ושנייה</span>.</p>
-<p><strong>CGS <span dir="rtl">-</span></strong><span dir="rtl">דומה ל</span>SI <span dir="rtl">אך מבוססת על סנטימטר, גרם ושנייה.</span></p>
-<p><strong>AES / U.S. customary <span dir="rtl">-</span></strong> <span dir="rtl">יחידות הבסיס הן רגל</span> <span class="math inline">\((ft)\)</span><span dir="rtl">, פאונד-מסה</span> <span class="math inline">\((lbm)\ \)</span><span dir="rtl">ושנייה</span> (s)<span dir="rtl">.</span></p>
-<p><span dir="rtl"><u>בכל מערכת יש שלושה סוגים של יחידות</u></span></p>
-<p><span dir="rtl"><strong>יחידות בסיסיות</strong> הן אבני היסוד של כל מערכת יחידות. קיימות 7 מידות בסיסיות כאשר במערכת ה</span>SI <span dir="rtl">מוגדרות: מטר (אורך), קילוגרם (מסה), שנייה (זמן), קלווין (טמפרטורה), מול (כמות חומר), אמפר (זרם חשמלי) וקנדלה (עוצמת אור). כל גודל פיזיקלי אחר ניתן להבעה כשילוב מתמטי של יחידות בסיס</span>.</p>
-<p><span dir="rtl"><strong>יחידות מרובות</strong> הן שברים או מכפלות של יחידות בסיס, שנועדו לנוחות שימוש. כך, זמן נמדד לא רק בשניות אלא גם בדקות, שעות או שנים; מסות גדולות מתוארות בטונות ולא בקילוגרמים</span> <span dir="rtl">ובמערכת האמריקאית במיילים במקום ברגל למדידת מרחקים גדולים.</span></p>
-<p><span dir="rtl"><strong>יחידות נגזרות</strong>: מתקבלות משילוב מתמטי של יחידות בסיס – לדוגמא</span><br>
-<span dir="rtl">מהירות (</span><span class="math inline">\(m/s\)</span><span dir="rtl">), כוח (</span><span class="math inline">\(N = kg \cdot m/s^{2}\)</span><span dir="rtl">), אנרגיה (</span><span class="math inline">\(J = kg \cdot m^{2}/s^{2}\)</span><span dir="rtl">).</span></p>
-<p><span dir="rtl"><strong>חשוב לזכור</strong>: ב-</span>SI <span dir="rtl"></span> <span dir="rtl">אין צורך בקבועי תיקון, אך ב</span> AES<span dir="rtl">, אנו משתמשים ב</span>g<sub>c</sub> <span dir="rtl">על מנת לשמור על עקביות בין</span> lb<sub>m</sub><span dir="rtl">ל –</span> lb<sub>f</sub><span dir="rtl">.</span></p>
+<ul>
+<li><p><span dir="rtl">חישובים פיזיקליים והנדסיים מחייבים שימוש במערכת יחידות עקבית. <strong>מערכת יחידות</strong> מוגדרת כאוסף מוסכם של יחידות בסיס, יחידות נגזרות וכללי המרה ביניהן, שמאפשר לבצע מדידות והשוואות באופן אחיד.</span></p></li>
+<li><p><span dir="rtl"><u>בעולם קיימות שלוש מערכות עיקריות:</u></span></p>
+<ul>
+<li><p><strong>SI <span dir="rtl">-</span></strong><span dir="rtl">המערכת הבינלאומית, המבוססת על מטר, קילוגרם ושנייה.</span></p></li>
+<li><p><strong>CGS <span dir="rtl">-</span></strong><span dir="rtl">דומה ל</span>SI <span dir="rtl">אך מבוססת על סנטימטר, גרם ושנייה.</span></p></li>
+<li><p><strong>AES / U.S. customary <span dir="rtl">-</span></strong> <span dir="rtl">יחידות הבסיס הן רגל</span> <span class="math inline">\((ft)\)</span><span dir="rtl">, פאונד-מסה</span> <span class="math inline">\((lbm)\ \)</span><span dir="rtl">ושנייה (</span>s<span dir="rtl">).</span></p></li>
+</ul></li>
+<li><p><span dir="rtl"><u>בכל מערכת יש שלושה סוגים של יחידות</u></span></p>
+<ul>
+<li><p><span dir="rtl"><strong>יחידות בסיסיות</strong> הן אבני היסוד של כל מערכת יחידות. קיימות 7 מידות בסיסיות כאשר במערכת ה</span>SI <span dir="rtl">מוגדרות: מטר (אורך), קילוגרם (מסה), שנייה (זמן), קלווין (טמפרטורה), מול (כמות חומר), אמפר (זרם חשמלי) וקנדלה (עוצמת אור). כל גודל פיזיקלי אחר ניתן להבעה כשילוב מתמטי של יחידות בסיס.</span></p></li>
+<li><p><span dir="rtl"><strong>יחידות מרובות</strong> הן שברים או מכפלות של יחידות בסיס, שנועדו לנוחות שימוש. כך, זמן נמדד לא רק בשניות אלא גם בדקות, שעות או שנים; מסות גדולות מתוארות בטונות ולא בקילוגרמים ובמערכת האמריקאית במיילים במקום ברגל למדידת מרחקים גדולים.</span></p></li>
+<li><p><span dir="rtl"><strong>יחידות נגזרות</strong>: מתקבלות משילוב מתמטי של יחידות בסיס – לדוגמא</span><br>
+<span dir="rtl">מהירות (</span><span class="math inline">\(m/s\)</span><span dir="rtl">), כוח (</span><span class="math inline">\(N = kg \cdot m/s^{2}\)</span><span dir="rtl">), אנרגיה (</span><span class="math inline">\(J = kg \cdot m^{2}/s^{2}\)</span><span dir="rtl">).</span></p></li>
+</ul></li>
+<li><p><span dir="rtl"><strong>חשוב לזכור</strong>: ב-</span>SI <span dir="rtl">אין צורך בקבועי תיקון, אך ב</span> AES<span dir="rtl">, אנו משתמשים ב</span>g<sub>c</sub> <span dir="rtl">על מנת לשמור על עקביות בין</span> lb<sub>m</sub><span dir="rtl">ל –</span> lb<sub>f</sub><span dir="rtl">.</span></p></li>
+</ul>
 </section>
 </section>
 <section id="הומגניות-של-משוואות-ומספרים-חסרי-מימד" class="level2" data-number="4.4">
@@ -768,10 +763,10 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 <section id="הומוגניות-של-משוואות-dimensional-homogeneity" class="level3" data-number="4.4.1">
 <h3 data-number="4.4.1" class="anchored" data-anchor-id="הומוגניות-של-משוואות-dimensional-homogeneity"><span class="header-section-number">4.4.1</span> <span dir="rtl">הומוגניות של משוואות (</span>Dimensional Homogeneity<span dir="rtl">)</span></h3>
 <p><span dir="rtl">לאורך הדיון ביחידות ובממדים ראינו שגדלים פיזיקליים ניתנים לחיבור או לחיסור <strong>רק כאשר היחידות שלהם זהות</strong></span>. <span dir="rtl">אם היחידות זהות, נובע מכך שגם <strong>המימדים</strong> של כל אחד מהאיברים חייבים להיות זהים. לדוגמה, אם שני גדלים ניתנים לביטוי ביחידות של גרם לשנייה</span> (<span class="math inline">\(g/s\)</span>), <span dir="rtl">הרי שלשניהם יש ממד של מסה לזמן</span> <span class="math inline">\((M/T)\)</span>. <span dir="rtl">מכאן נובע כלל חשוב</span>:</p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">**כל משוואה פיזיקלית תקפה חייבת להיות הומוגנית ממדית**</span> – <span dir="rtl">כלומר, לכל האיברים הניתנים לחיבור בשני צדי המשוואה חייבים להיות אותם ממדים</span>.</p>
 </div>
-<p><span dir="rtl">לדוגמה, במשוואה</span></p>
+<p><span dir="rtl">במשוואה</span></p>
 <p><span class="math display">\[V = V_{0} + at\]</span> <span dir="rtl">ננתח את המימדים של כל אחד מהאיברים</span></p>
 <p><span class="math display">\[V,V_{o} \Longrightarrow \frac{אורך}{זמן} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack}\ \ \ \ \ \ a \Rightarrow \frac{אורך}{{זמן}^{2}} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack^{2}}\ \ \ \ \ t \Rightarrow זמן = \lbrack T\rbrack\]</span></p>
 <p><span dir="rtl">ונראה אילו מימדים כלל האיברים במשוואה</span></p>
@@ -788,7 +783,6 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 <p><span class="math display">\[P = kT\]</span> <span dir="rtl">כאשר הלחץ נמדד ביחידות של</span> Pa <span dir="rtl">והטפ' ביחידות של</span> K<span dir="rtl">.</span></p>
 <p><span dir="rtl">מתוך הומוגניות המשוואה ניתן להסיק את יחידות הקבוע</span> ** <span class="math display">\[P(Pa) = k(?)T(K)\ \  = &gt; k\left( \frac{Pa}{K} \right)\]</span></p>
 <p><span dir="rtl">ופיזיקלית, קיבלנו ערך המייצג את מידת השינוי בלחץ ביחידות של פסקל (</span>Pa<span dir="rtl">) לכל שינוי של מעלה אחת קלוין (</span>K<span dir="rtl">).</span></p>
-<p><span dir="rtl">תרגיל –</span></p>
 <p><span dir="rtl">ידוע כי עבור מערכת מסויימת היחס בין הלחץ לטמפ' הוא</span> <span class="math inline">\(P(Pa) = 300*T(K)\)</span></p>
 <ol type="1">
 <li><p><span dir="rtl">מה הוא</span> k <span dir="rtl">– רשמו את הערך המלא, כולל יחידות.</span></p></li>
@@ -798,14 +792,13 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 </section>
 <section id="מספרים-חסרי-מימד" class="level3" data-number="4.4.2">
 <h3 data-number="4.4.2" class="anchored" data-anchor-id="מספרים-חסרי-מימד"><span class="header-section-number">4.4.2</span> <span dir="rtl">מספרים חסרי מימד</span></h3>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">מספר חסר מימד</span> (dimensionless number) <span dir="rtl">הוא מספר שאינו נושא יחידות מידה</span></p>
 </div>
 <p><span dir="rtl">הוא המתקבל כתוצאה מחלוקה של גדלים בעלי אותן יחידות, כך שהיחידות מתבטלות והתוצאה היא גודל טהור. מספרים חסרי מימד חשובים במיוחד בתכנון ובהבנה של תהליכים הנדסיים: הם מאפשרים להקטין את מספר המשתנים הדרושים לתיאור תופעה, להשוות בין מערכות שונות שנמדדות ביחידות שונות, ולבנות תמונה כללית של ההתנהגות הפיזיקלית של מערכת בלי תלות בקנה המידה או ביחידות</span>.</p>
 <p><span dir="rtl">דוגמה פשוטה למספר חסר מימד היא השבר המסתי (</span>mass fraction<span dir="rtl">) שמבטא את החלק היחסי של רכיב מסוים במערכת הכוללת. אם נסמן את מסת הרכיב ב</span>-<span class="math inline">\(m(x)\)</span> <span dir="rtl">ואת מסת המערכת הכוללת ב</span>-<span class="math inline">\(m(total)\)</span>, <span dir="rtl">נקבל</span>:</p>
 <p><span class="math display">\[\frac{w}{w} = \frac{m(x)}{m(total)} = \frac{\lbrack M\rbrack}{\lbrack M\rbrack}\]</span></p>
 <p><span dir="rtl">היחידות מתבטלות, ולכן השבר המסתי הוא מספר חסר מימד</span>.</p>
-<p><span dir="rtl">תרגיל</span>:</p>
 <p><span dir="rtl">במעבדה לפיתוח משקאות אנרגיה עובדים שני צוותים במקביל, וכל אחד מהם הכין נוסחה שונה של משקה חדש. החומר הפעיל במשקה הוא קפאין (</span>A<span dir="rtl">) , והשאר הוא תמיסה מתוקה.</span>**** <span dir="rtl">הצוות הראשון מורכב ממדענים ומדעניות מישראל, בעוד הצוות שני מורכב ממדענים ומדעניות מארצות הברית.</span></p>
 <p><span dir="rtl">צוות 1 מדווח כי הוא מסת הקפאין במשקה שלו היא</span> <span class="math inline">\(10g\)</span><span dir="rtl">, על כל</span> <span class="math inline">\(350g\)</span> <span dir="rtl">של משקה</span></p>
 <p><span dir="rtl">צוות 2 מדווח כי הוא מסת הקפאין במשקה שלו היא</span> <span class="math inline">\(12\ lb_{m}\)</span><span dir="rtl">, על כל</span> <span class="math inline">\(600lb_{m}\)</span> <span dir="rtl">של משקה</span></p>
@@ -822,7 +815,7 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 <p><span class="math inline">\(\mathbf{\mu}\)</span> <span dir="rtl">– צמיגות הזורם</span> <span class="math inline">\(\left( \frac{Kg}{m\ s} \right)\)</span></p>
 <p><span dir="rtl">הראו שמספר ריינולדס הוא חסר יחידות.</span></p>
 <figure class="figure">
-<img src="media/media/image4.jpeg" style="width:2.32708in;height:2.32708in" alt="http://glossary.periodni.com/images/laminar_and_turbulent_flow.jpg" class="figure-img">
+<img src="assets/images/media/image4.jpeg" style="width:2.32708in;height:2.32708in" alt="http://glossary.periodni.com/images/laminar_and_turbulent_flow.jpg" class="figure-img">
 <figcaption>
 <p>
 Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות מספר ריינולדס.<br> הזרימה תהיה לינרית כאשר</span> Re&lt;2100<span dir="rtl">, ותהיה טורבולנטית כאשר</span> Re&gt;4000<span dir="rtl">.</span>
@@ -852,24 +845,26 @@ Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות �
 <span dir="rtl">לכן בכל תוצאה יש טווח קטן של אי-ודאות – טווח שבתוכו סביר להניח שהערך האמיתי נמצא</span>.<br>
 <span dir="rtl">כשנרשום את התוצאה, נרצה לשקף את רמת הוודאות שלנו, ולשם כך נשתמש רק במספר הספרות <strong>המשמעותיות</strong></span> – <span dir="rtl">כלומר, הספרות שיש להן משמעות פיזיקלית אמיתית, ולא רק תוצאה של חישוב במחשבון</span>.</p>
 <p><span dir="rtl">כדי להבין עד כמה מדידה מסוימת אמינה, אנו בוחנים אותה משתי זוויות שונות</span>:</p>
-<ul>
-<li><p><strong><span dir="rtl">דיוק</span> (Accuracy)</strong> – <span dir="rtl">עד כמה המדידה קרובה לערך האמיתי</span>.</p></li>
-<li><p><strong><span dir="rtl">הדירות/עקביות</span> (Precision)</strong> – <span dir="rtl">עד כמה המדידות חוזרות על עצמן כשמבצעים אותן שוב</span>.</p></li>
-</ul>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><strong><span dir="rtl">דיוק</span> (Accuracy)</strong> – <span dir="rtl">עד כמה המדידה קרובה לערך האמיתי</span>.</p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><strong><span dir="rtl">הדירות/עקביות</span> (Precision)</strong> – <span dir="rtl">עד כמה המדידות חוזרות על עצמן כשמבצעים אותן שוב</span>.</p>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image5.png" style="width:3.20247in;height:3.28072in" class="figure-img"></p>
+<p><img src="assets/images/media/image5.png" style="width:2.82676in;height:2.89583in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">6 - דיוק והדירות</span></figcaption>
 </figure>
 </div>
 <p><span dir="rtl">כאשר אנחנו רושמים תוצאה מדעית או הנדסית, המספר שאנו כותבים צריך לשקף את רמת האמינות של המדידה</span>. <span dir="rtl">אין טעם לכתוב 54.44183 גרם אם המאזניים שלנו מסוגלות למדוד רק עד עשירית הגרם – זו אשליה של דיוק שאינו קיים באמת</span>. <span dir="rtl">מספר הספרות שאנו כוללים בתוצאה הוא בעצם דרך לתקשר את רמת הדיוק והחזרתיות של המדידה</span>.</p>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl"><strong>ספרות משמעותיות</strong> (</span>significant figures<span dir="rtl">) הן כל הספרות במספר המעידות על רמת הדיוק של המדידה</span>. <span dir="rtl">הן כוללות את כל הספרות שאנו בטוחים בהן</span>, <span dir="rtl">ועוד ספרה אחת נוספת שאנו מעריכים</span>.</p>
 </div>
 <p><span dir="rtl">לדוגמה, אם שקלתי דגימה מסוימת וקיבלתי תוצאה של</span> ‎2.36‎ <span dir="rtl">גרם – שתי הספרות הראשונות (2 ו-3) הן ודאיות</span>, <span dir="rtl">ואילו השלישית (6) מייצגת את חוסר הוודאות במדידה, כלומר הערכה של הגודל הכי קטן שאנו רגישים אליו</span>. <span dir="rtl">אם נמדוד את אותה הדגימה שנית ייתכן שהפעם נקבל</span> 2.35g <span dir="rtl">או</span> 2.37g<span dir="rtl">.</span><br>
 <span dir="rtl">כך הספרות המשמעותיות הופכות לגשר בין החישוב המתמטי לבין העולם הפיזי</span>:<br>
 <span dir="rtl">הן מבטאות לא רק את המספר עצמו, אלא גם כמה אנחנו סומכים עליו</span>.</p>
-<p><em><span dir="rtl">חשוב לזכור</span>: <span dir="rtl">רק לערכים שנמדדו יש ספרות משמעותיות</span>.</em><br>
+<p><u><span dir="rtl">חשוב לזכור</span> <span dir="rtl">רק לערכים שנמדדו יש ספרות משמעותיות</span>.</u><br>
 <span dir="rtl">כאשר אנו מבצעים מדידה, כל ספרה בתוצאה משקפת את רמת הוודאות של המכשיר ושל התהליך – ולכן יש לה משמעות פיזיקלית אמיתית</span>. <span dir="rtl">לעומת זאת</span>, <span dir="rtl">קבועים והמרות יחידות (כמו</span> ‎1 kg = 2.20462 lb‎<span dir="rtl">)</span> <span dir="rtl">נחשבים כבעלי אינסוף ספרות משמעותיות</span>, <span dir="rtl">משום שאנו יכולים להתחייב על נכונותם בכל אורך שנרצה. אם נצטרך לדעת את הספרות הבאות נווכל למצוא ערכים יותר מדוייקים בספרות. כך למשל</span>, <span dir="rtl">מהירות האור נחשבת בדרך כלל בקירוב ל</span> ‎300,000,000 m/s <span dir="rtl">ערך נוח לשימוש יומיומי או למרבית החישובים הנדרשים. אבל, אם נצטרך את מהירות האור באופן יותר מדויק נוכל לראות בספרות כי היא שווה</span> 299,792,458 m/s‎<span dir="rtl">.</span></p>
 <p><span dir="rtl">גם מספרים שלמים שמקורם בספירה - למשל חמישה חתולים או שלושה מיכלים - הם מדויקים לחלוטין, כי אין בהם אי-ודאות כלל</span>. <span dir="rtl">במילים אחרות, אנחנו יכולים “להתחייב” על 5.000000 בדיוק</span>. <span dir="rtl">ההבחנה הזו חשובה במיוחד בעת חישובים: רק המספרים הנמדדים קובעים כמה ספרות משמעותיות תופיע בתוצאה הסופית, בעוד הקבועים או המספרים השלמים אינם מגבילים את רמת הדיוק</span>.</p>
 <section id="כללי-ספרות-משמעותיות" class="level3" data-number="4.5.1">
@@ -961,14 +956,12 @@ Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות �
 </tbody>
 </table>
 <p><span dir="rtl">תרגיל:<br>
-כמה ספרות משמעותיות יש בכל אחד מהמספרים הבאים</span>?</p>
-<ol type="1">
-<li><p>‎0.0045‎</p></li>
-<li><p>‎205‎</p></li>
-<li><p>‎1.50 × 10³‎</p></li>
-<li><p>‎1500‎</p></li>
-<li><p>‎0.000300‎</p></li>
-</ol>
+כמה ספרות משמעותיות יש בכל אחד מהמספרים הבאים?</span></p>
+<p>‎0.0045‎</p>
+<p>‎205‎</p>
+<p>‎1.50 × 10³‎</p>
+<p>‎1500‎</p>
+<p>‎0.000300‎</p>
 <p><span dir="rtl">כאשר אנו מבצעים חישובים המבוססים על נתונים מדודים, עלינו לזכור שכל אחד מהנתונים כולל רמת דיוק מוגבלת</span>. <span dir="rtl">אין טעם להציג תוצאה ארוכה ומדויקת יותר מהמידע שנמדד בפועל – זו תהיה <strong>אשליה של דיוק שאינו קיים</strong></span>. <span dir="rtl">לכן נקבעו כללים ברורים כיצד לקבוע כמה ספרות משמעותיות מותר לשמור בתוצאה של חישוב</span>.</p>
 <ol type="1">
 <li><p><span dir="rtl">רמת הדיוק של התוצאה הסופית נקבעת לפי <strong>הנתון הפחות מדויק</strong> שבחישוב</span>.<br>
@@ -993,41 +986,37 @@ Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות �
 }\]</span></p></li>
 <li><p><span dir="rtl">חישובים ארוכים מומלץ <strong>לא לעגל בכל שלב</strong></span>, <span dir="rtl">אלא לשמור ערכים ארוכים יותר לאורך הדרך ולעגל רק בסוף</span>. <span dir="rtl">כך נמנע מהצטברות של שגיאות עיגול ביניים</span>.</p></li>
 </ul>
-<p><span dir="rtl">תרגיל:</span></p>
-<p><span dir="rtl">כתבו כל תוצאה ברמת הדיוק המתאימה</span>.</p>
-<ol type="1">
-<li><p>‎2.3 × 1.245 = ?‎</p></li>
-<li><p>‎45.2 ÷ 1.2 = ?‎</p></li>
-<li><p>0.056 × 3.12 = ?‎</p></li>
-<li><p>‎45.2 + 1.35 = ?‎</p></li>
-<li><p>‎2.06 – 0.142 = ?‎</p></li>
-<li><p>‎0.230 + 1.2 = ?</p></li>
-</ol>
+<p><span dir="rtl">כתבו כל תוצאה ברמת הדיוק המתאימה.</span></p>
+<p>‎2.3 × 1.245 = ?‎</p>
+<p>‎45.2 ÷ 1.2 = ?‎</p>
+<p>0.056 <span dir="rtl">× 3.12 = ?</span>‎</p>
+<p>‎45.2 + 1.35 = ?‎</p>
+<p>‎2.06 – 0.142 = ?‎</p>
+<p>‎0.230 + 1.2 <span dir="rtl">= ?</span></p>
 </section>
 <section id="כתיבה-מדעית-של-מספרים-scientific-notation" class="level3" data-number="8.0.1">
 <h3 data-number="8.0.1" class="anchored" data-anchor-id="כתיבה-מדעית-של-מספרים-scientific-notation"><span class="header-section-number">8.0.1</span> <span dir="rtl">כתיבה מדעית של מספרים (</span>Scientific notation<span dir="rtl">)</span></h3>
-<p><span dir="rtl">אחת הדרכים הברורות ביותר לבטא על אילו ספרות אנחנו מוכנים “להתחייב" היא באמצעות כתיבה מדעית</span>. <span dir="rtl">במקום למנות אינסוף אפסים או להסתבך עם נקודות עשרוניות ארוכות, אנחנו מבטאים את המספר כרצף הספרות עליהן אנחנו מוכנים להתחייב כפול סדר הגודל של המספר המיוצג על ידי עשר בחזקת מספר שלם כלשהו. בכתיבה מדעית המספר נכתב בצורה</span>:</p>
+<p><span dir="rtl">אחת הדרכים הברורות ביותר לבטא על אילו ספרות אנחנו מוכנים “להתחייב" היא באמצעות כתיבה מדעית</span>. <span dir="rtl">במקום למנות אינסוף אפסים או להסתבך עם נקודות עשרוניות ארוכות, אנחנו מבטאים את המספר כרצף הספרות עליהן אנחנו מוכנים להתחייב כפול סדר הגודל של המספר המיוצג על ידי עשר בחזקת מספר שלם כלשהו.</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">בכתיבה מדעית המספר נכתב בצורה</span>:</p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[a \times 10^{n}\]</span> <span dir="rtl">כאשר</span> <span class="math inline">\(a\)</span> <span dir="rtl">הוא מספר עשרוני בטווח בין 1 ל-10, המכיל את כל הספרות המשמעותיות ורק אותן<br>
-ו-</span><span class="math inline">\(n\)</span> <span dir="rtl">הוא מספר שלם (חיובי או שלילי) המציין את סדר הגודל</span>. <span dir="rtl">דוגמה</span>:</p>
-<ul>
-<li><p><span dir="rtl">מהירות האור</span> <span class="math inline">\(3.00 \times 10^{8}\text{ m/s}\)</span> <span dir="rtl">במקום</span> 300,000,000<span dir="rtl">.</span></p></li>
-<li><p><span dir="rtl">מסת מולקולת מים</span> <span class="math inline">\(2.99 \times 10^{- 26}\text{ kg}\)</span> <span dir="rtl">במקום</span> ‎0.0000000000000000000000000299‎</p></li>
-</ul>
+ו-</span><span class="math inline">\(n\)</span> <span dir="rtl">הוא מספר שלם (חיובי או שלילי) המציין את סדר הגודל</span>.</p>
+</div>
+<p><span dir="rtl">מהירות האור</span> <span class="math inline">\(3.00 \times 10^{8}\text{ m/s}\)</span> <span dir="rtl">במקום</span> 300,000,000<span dir="rtl">.</span></p>
+<p><span dir="rtl">מסת מולקולת מים</span> <span class="math inline">\(2.99 \times 10^{- 26}\text{ kg}\)</span> <span dir="rtl">במקום</span> ‎0.0000000000000000000000000299‎</p>
 <p><span dir="rtl">הצורה הזו מאפשרת להציג בבירור גם <strong>את סדר הגודל</strong> וגם <strong>את רמת הדיוק</strong></span></p>
-<p><strong><span dir="rtl">איך ממירים לכתיבה מדעית</span>?</strong></p>
-<ol type="1">
-<li><p><span dir="rtl">מזיזים את הנקודה העשרונית כך שתשאר ספרה אחת בלבד משמאל לה</span>.</p></li>
-<li><p><span dir="rtl">סופרים כמה מקומות הזזנו את הנקודה – זה יהיה ערך המעריך</span> <span class="math inline">\(n\)</span>.</p>
-<ul>
-<li><p><span dir="rtl">אם הזזנו שמאלה</span> <span dir="rtl"></span><span class="math inline">\(\ n \leftarrow\)</span><span dir="rtl">חיובי</span>.</p></li>
-<li><p><span dir="rtl">אם הזזנו ימינה</span> <span class="math inline">\(n \leftarrow \ \)</span> <span dir="rtl">שלילי</span>.</p></li>
-</ul></li>
-</ol>
+<p><span dir="rtl">איך ממירים לכתיבה מדעית</span>?<span dir="rtl"><br>
+1. מזיזים את הנקודה העשרונית כך שתשאר ספרה אחת בלבד משמאל לה</span>.<span dir="rtl"><br>
+2. סופרים כמה מקומות הזזנו את הנקודה – זה יהיה ערך המעריך</span> <span class="math inline">\(n\)</span>.<span dir="rtl"><br>
+אם הזזנו שמאלה</span> <span dir="rtl"></span><span class="math inline">\(\ n \leftarrow\)</span><span dir="rtl">חיובי</span>.<span dir="rtl"><br>
+אם הזזנו ימינה</span> <span class="math inline">\(n \leftarrow \ \)</span> <span dir="rtl">שלילי</span>.</p>
 <p><span class="math display">\[{0.0045 = 4.5 \times 10^{- 3}
 }{72000 = 7.2 \times 10^{4}
-}\]</span><span dir="rtl">הכתיבה המדעית חשובה כי היא מאפשרת להשוות מספרים בקלות לפי סדרי גודל</span>.<span dir="rtl">, היא מונעת בלבול בקריאת אפסים מיותרים והיא <strong>שומרת על המשמעות הפיזיקלית של הספרות</strong> כך שנוכל לזהות בקלות את הספרות שאנו מוכנים להתחייב עליהן.</span></p>
-<p><span dir="rtl">המירו את המספרים הבאים לכתיבה מדעית</span>,<br>
-<span dir="rtl">ושמרו על מספר הספרות המשמעותיות שניתן לפי הנתון</span>:</p>
+}\]</span><span dir="rtl">הכתיבה המדעית חשובה כי היא מאפשרת להשוות מספרים בקלות לפי סדרי גודל</span>.<span dir="rtl">, היא מונעת בלבול בקריאת אפסים מיותרים והיא שומרת על המשמעות הפיזיקלית של הספרות כך שנוכל לזהות בקלות את הספרות שאנו מוכנים להתחייב עליהן.</span></p>
+<p><span dir="rtl">המירו את המספרים הבאים לכתיבה מדעית,</span><br>
+<span dir="rtl">ושמרו על מספר הספרות המשמעותיות שניתן לפי הנתון:</span></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 27%">
@@ -1038,7 +1027,7 @@ Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות �
 <tr class="header">
 <th style="text-align: left;"><strong><span dir="rtl">מספר רגיל</span></strong></th>
 <th style="text-align: left;"><strong><span dir="rtl">כתיבה מדעית</span></strong></th>
-<th style="text-align: left;"><strong><span dir="rtl">כמה ספרות משמעותיות יש</span>?</strong></th>
+<th style="text-align: left;"><strong><span dir="rtl">כמה ספרות משמעותיות יש?</span></strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1072,18 +1061,16 @@ Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות �
 </section>
 <section id="לסיכום" class="level3" data-number="8.0.2">
 <h3 data-number="8.0.2" class="anchored" data-anchor-id="לסיכום"><span class="header-section-number">8.0.2</span> <span dir="rtl">לסיכום</span></h3>
-<ul>
-<li><p><span dir="rtl">כל מדידה כוללת <strong>אי-ודאות</strong></span>, <span dir="rtl">ולכן הספרות בתוצאה מייצגות את <strong>רמת הדיוק</strong> של המדידה</span>.</p></li>
-<li><p><span dir="rtl">הספרות המשמעותיות הן כל הספרות <strong>שאנחנו בטוחים בהן</strong></span>, <span dir="rtl">ועוד אחת <strong>מוערכת</strong> לפי יכולת המכשיר</span>.</p></li>
-<li><p><span dir="rtl">כדי לזהות ספרות משמעותיות:</span></p></li>
-<li><p><span dir="rtl">כל ספרה שאינה אפס – משמעותית</span>.</p></li>
-<li><p><span dir="rtl">אפסים עשויים להיות משמעותיים או לא – תלוי במיקומם ובנקודה העשרונית</span>.</p></li>
-<li><p><span dir="rtl">בחישובים:</span></p></li>
-<li><p><span dir="rtl"><strong>כפל/חילוק</strong></span> – <span dir="rtl">שמרו את מספר הספרות המשמעותיות של <strong>הנתון הפחות מדויק</strong></span>.</p></li>
-<li><p><span dir="rtl"><strong>חיבור/חיסור</strong></span> – <span dir="rtl">שמרו את רמת הדיוק (המיקום העשרוני) של <strong>הנתון הפחות מדויק</strong></span>.</p></li>
-<li><p><span dir="rtl">המטרה<strong>: להציג תוצאה אמינה</strong></span> – <span dir="rtl">לא מדויקת מדי, ולא גסה מדי</span></p></li>
-<li><p><span dir="rtl">כדי להימנע משורה של אפסים, נשתמש ב-<strong>כתיבה מדעית</strong></span>: <span dir="rtl"></span><span class="math inline">\(a \times 10^{n}\)</span> <span dir="rtl">כאשר</span> <span class="math inline">\(a\)</span> <span dir="rtl">הוא מספר בין 1 ל-10, ו-</span><span class="math inline">\(n\)</span> <span dir="rtl">הוא מעריך שלם</span>.</p></li>
-</ul>
+<p><span dir="rtl">כל מדידה כוללת <strong>אי-ודאות</strong>, ולכן הספרות בתוצאה מייצגות את <strong>רמת הדיוק</strong> של המדידה.</span></p>
+<p><span dir="rtl">הספרות המשמעותיות הן כל הספרות <strong>שאנחנו בטוחים בהן</strong>, ועוד אחת <strong>מוערכת</strong> לפי יכולת המכשיר.</span></p>
+<p><span dir="rtl">כדי לזהות ספרות משמעותיות:</span></p>
+<p><span dir="rtl">כל ספרה שאינה אפס – משמעותית.</span></p>
+<p><span dir="rtl">אפסים עשויים להיות משמעותיים או לא – תלוי במיקומם ובנקודה העשרונית.</span></p>
+<p><span dir="rtl">בחישובים:</span></p>
+<p><span dir="rtl"><strong>כפל/חילוק</strong> – שמרו את מספר הספרות המשמעותיות של <strong>הנתון הפחות מדויק</strong>.</span></p>
+<p><span dir="rtl"><strong>חיבור/חיסור</strong> – שמרו את רמת הדיוק (המיקום העשרוני) של <strong>הנתון הפחות מדויק</strong>.</span></p>
+<p><span dir="rtl">המטרה<strong>: להציג תוצאה אמינה</strong> – לא מדויקת מדי, ולא גסה מדי</span></p>
+<p><span dir="rtl">כדי להימנע משורה של אפסים, נשתמש ב-<strong>כתיבה מדעית</strong>:</span> <span class="math inline">\(a \times 10^{n}\)</span> <span dir="rtl">כאשר</span> <span class="math inline">\(a\)</span> <span dir="rtl">הוא מספר בין 1 ל-10, ו-</span><span class="math inline">\(n\)</span> <span dir="rtl">הוא מעריך שלם.</span></p>
 </section>
 </section>
 <section id="ניתוח-והצגת-נתוני-תהליך" class="level2" data-number="8.1">
@@ -1092,8 +1079,15 @@ Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות �
 <h3 data-number="8.1.1" class="anchored" data-anchor-id="הערכה-של-נתונים-ניסיוניים-ממוצע-וסטיית-תקן"><span class="header-section-number">8.1.1</span> <span dir="rtl">הערכה של נתונים ניסיוניים – ממוצע וסטיית תקן</span></h3>
 <p><span dir="rtl">בכל ניסוי הנדסי שבו מבצעים מדידות חוזרות, לעולם לא נקבל את אותה תוצאה בדיוק. תנאי העבודה, איכות הדגימה, דיוק המדידה ואפילו הבדל של שנייה אחת בזמן הדגימה – כולם גורמים לפיזור בתוצאות. לכן כל גודל מדוד נחשב <strong>משתנה מקרי</strong></span>, <span dir="rtl">והתוצאה שאנו רושמים היא רק <em>אומדן</em> לערך האמיתי</span>.</p>
 <p><span dir="rtl">כדי להעריך את הערך “האמיתי” ביותר משתמשים ב-<strong>ממוצע המדגם</strong></span>:</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><strong><span dir="rtl">ממוצע המדגם</span></strong></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span class="math display">\[\overset{ˉ}{X} = \frac{1}{N}\sum_{i = 1}^{N}X_{i}\]</span></p>
-<p><span dir="rtl">זהו הערך המייצג את כלל המדידות שבוצעו</span>.</p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl">זהו הערך הנותן אומדן לערך המשתנה במערכת על בסיס כלל המדידות שנערכו</span></p>
+</div>
 <p><strong><span dir="rtl">דוגמה 1 – מד זרימה בתהליך תעשייתי</span>:</strong><br>
 <span dir="rtl">בבדיקות חוזרות של ספיקה בצינור התקבלו הערכים [10.2, 9.8, 10.1, 9.9, 10.0] ליטר/דקה</span>.<br>
 <span dir="rtl">הממוצע הוא</span> <span class="math inline">\(\overset{ˉ}{X} = 10.0\text{ L/min}\)</span>.<br>
@@ -1101,9 +1095,9 @@ Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות �
 <p><span dir="rtl">אך ערך הממוצע עצמו לא עוזר לנו לדעת עד כמה המדידות הדירות. כאשר יש לנו רק מדידה אחת או שאין לנו מידע נוסף, נניח שהשגיאה היא חצי מהספרה האחרונה –</span> <span class="math inline">\(132.4 \pm 0.5\)</span> <span dir="rtl">אך כדי לדעת מהי רמת הדיוק האמיתית של המדידה נבדוק את הפיזור סביב הממוצע. אנחנו נעשה זאת באמצעות חישוב סטיית תקן</span> (<span class="math inline">\(\sigma\)</span>) <span dir="rtl">ו-שונות</span> (s²):</p>
 <p><span class="math display">\[s^{2} = \frac{1}{N - 1}\sum_{i = 1}^{N}{(X_{i} - \overset{ˉ}{X})^{2}}\text{     ;      }\sigma = \sqrt{s^{2}}\]</span></p>
 <p><span dir="rtl">ככל שהערכים רחוקים יותר מהממוצע, השונות וסטיית התקן גדלות – כלומר, יש לנו פחות בטחון בכך שהממוצע אכן משקף לנו את הערך ה"אמיתי".</span></p>
-<p><span dir="rtl">תרגיל – צפיפות ביומסה במתססה</span>:<span dir="rtl"><br>
+<p><span dir="rtl">תרגיל – צפיפות ביומסה במתססה:<br>
 נמדדו ריכוזי תאים בשתי מערכות שונות</span></p>
-<p><span dir="rtl">מערכת אחת - נמדדו ריכוזי תאים [1.83, 1.81, 1.79, 1.85, 1.80] גרם/ליטר</span>.</p>
+<p><span dir="rtl">מערכת אחת - נמדדו ריכוזי תאים [1.83, 1.81, 1.79, 1.85, 1.80] גרם/ליטר.</span></p>
 <p><span dir="rtl">מערכת שתיים - נמדדו ריכוזי תאים [1.83, 1.81, 1.79, 1.85, 1.80] גרם/ליטר.</span></p>
 <p><span dir="rtl">איזו מערכת יותר יציבה?</span></p>
 </section>
@@ -1118,9 +1112,9 @@ Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות �
 <li><p><span dir="rtl">נבנה <strong>עקומת כיול</strong> –</span> <span dir="rtl">גרף של בליעה לעומת ריכוז</span>.</p></li>
 <li><p><span dir="rtl">נמדוד את בליעת האור של <strong>תמיסת הנעלם</strong></span>, <span dir="rtl">ובעזרת עקומת הכיול נסיק את ריכוזה</span>.</p></li>
 </ol>
-<p><span dir="rtl"></span><img src="media/media/image6.png" style="width:2.95035in;height:1.79322in"> <span dir="rtl"></span><img src="media/media/image7.png" style="width:3.26215in;height:1.79209in" alt="A graph of a mathematical equation AI-generated content may be incorrect."></p>
+<p><span dir="rtl"></span><img src="assets/images/media/image6.png" style="width:2.95035in;height:1.79322in"> <span dir="rtl"></span><img src="assets/images/media/image7.png" style="width:3.26215in;height:1.79209in" alt="A graph of a mathematical equation AI-generated content may be incorrect."></p>
 <figure class="figure">
-<img src="media/media/image8.png" style="width:3.271in;height:1.75009in" alt="A screenshot of a math test AI-generated content may be incorrect." class="figure-img">
+<img src="assets/images/media/image8.png" style="width:3.271in;height:1.75009in" alt="A screenshot of a math test AI-generated content may be incorrect." class="figure-img">
 <figcaption>
 <p>
 Figure <span dir="rtl">7- מציאת ריכוז תמיסת נעלם בשיטות ספקטרוסקופיות - שלב ראשון מציאת אורך הגל המקסימלי, שלב שני בניית גרף כיול, ושלב שלישי – מדידת הבליעה של תמיסת נעלם והסקת הערך המהגרף.<br> כל התמונות מתוך הלומדה “ספקטרוסקופיה, מבוא למשוואת ביר למברט”, ד”ר אלינה גולדשטיין לויטין, היחידה לקידום איכות ההוראה והלמידה באוניברסיטת בן גוריון</span>
@@ -1132,26 +1126,26 @@ Figure <span dir="rtl">7- מציאת ריכוז תמיסת נעלם בשיטות
 <section id="אינטרפולציה-ואקסטרפולציה" class="level3" data-number="8.1.3">
 <h3 data-number="8.1.3" class="anchored" data-anchor-id="אינטרפולציה-ואקסטרפולציה"><span class="header-section-number">8.1.3</span> <span dir="rtl">אינטרפולציה ואקסטרפולציה</span></h3>
 <p><span dir="rtl">במדידות ניסיוניות אנו אוספים נקודות נתונים המתארות את הקשר בין שני משתנים, אך לא תמיד נוכל למדוד את כל הערכים האפשריים. לעיתים נרצה להעריך את ערכו של המשתנה עבור נקודה <strong>שלא נמדדה ישירות</strong> –</span> <span dir="rtl">בין שתי נקודות ידועות או מחוץ לתחום הנתונים</span></p>
-<div class="definition">
-<p>.<span dir="rtl"><strong>אינטרפולציה -</strong> שיטה מקובלת כדי למצוא נתון חסר הנמצא בתוך תחום המוגדר על ידי שני ערכים נתונים, הקרובים זה לזה.</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p><span dir="rtl"><strong>אינטרפולציה -</strong> שיטה מקובלת כדי למצוא נתון חסר הנמצא בתוך תחום המוגדר על ידי שני ערכים נתונים, הקרובים זה לזה.</span></p>
 </div>
-<div class="definition">
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl"><strong>אקסטרפולציה-</strong> אמידת ערך של פונקציה מחוץ לטווח שבו ערכיה ידועים.</span></p>
 </div>
 <p><span dir="rtl">שתי השיטות מבוססות על ההנחה שהקשר שנמצא בין המשתנים נמשך גם בנקודות שלא נמדדו, אך חשוב לזכור כי באקסטרפולציה גדל הסיכון לשגיאה</span> – <span dir="rtl">אין ודאות שהמגמה תישמר מעבר לגבולות הנתונים שנמדדו בפועל</span>. <span dir="rtl">כדי לבצע חיזויים כאלה נדרש מודל מתמטי המתאר את הקשר בין המשתנים. מודל זה יכול להיות פשוט – כמו קו ישר בין שתי נקודות – או מורכב יותר, כמו עקומה לא ליניארית המותאמת לנתונים. במקרים אחרים נשתמש בטריקים מתמטיים כמו לינאריזציה או גרפים לוגיים כדי להציג קשרים מורכבים בצורה פשוטה וברורה</span>.</p>
-<p><img src="media/media/image9.png" style="width:3.20853in;height:1.86736in" alt="A graph with green and blue dots and red arrows AI-generated content may be incorrect."> <img src="media/media/image10.png" style="width:3.17406in;height:1.84745in" alt="A graph with numbers and points AI-generated content may be incorrect."></p>
+<p><img src="assets/images/media/image9.png" style="width:3.20853in;height:1.86736in" alt="A graph with green and blue dots and red arrows AI-generated content may be incorrect."> <img src="assets/images/media/image10.png" style="width:3.17406in;height:1.84745in" alt="A graph with numbers and points AI-generated content may be incorrect."></p>
 <p>Figure <span dir="rtl">8 - בשני הגרפים מוצגות דוגמאות למדידה של ערכים שלא נמדדו ישירות: הנקודות הכחולות הן הערכים שנמדודו, הנקודות הירוקות מייצגות חיזוי בתוך תחום המדידות (אינטרפולציה), והנקודות האדומות – חיזוי מחוץ לתחום המדידות (אקסטראפולציה), שבו גובר הסיכון לסטות מהמגמה האמיתית</span>.</p>
 </section>
 <section id="אינטרפולציה-מקומית" class="level3" data-number="8.1.4">
 <h3 data-number="8.1.4" class="anchored" data-anchor-id="אינטרפולציה-מקומית"><span class="header-section-number">8.1.4</span> <span dir="rtl">אינטרפולציה מקומית</span></h3>
 <p><span dir="rtl">כאשר נרצה להעריך את ערכו של משתנה בנקודה שנמצאת בין שתי מדידות ידועות</span>, <span dir="rtl">נשתמש ב-<strong>אינטרפולציה מקומית</strong></span> <strong>(Local Interpolation)</strong>.<br>
 <span dir="rtl">הרעיון פשוט: אם שתי נקודות סמוכות מראות מגמה כמעט ישרה, ניתן להניח שהקשר ביניהן ליניארי בטווח הצר הזה. כך נוכל לחשב את ערך המשתנה המבוקש לפי קו ישר המחבר בין שתי הנקודות</span>.</p>
-<p><span dir="rtl">אם הנקודות הן</span> <span class="math inline">\((x_{1},y_{1})\)</span><span dir="rtl">ו-</span><span class="math inline">\((x_{2},y_{2})\)</span>, <span dir="rtl">ניתן לחשב את</span> <span class="math inline">\(y\)</span><span dir="rtl">עבור ערך ביניים של</span> <span class="math inline">\(x\)</span><span dir="rtl">לפי</span>:</p>
+<p><span dir="rtl">אם הנקודות הן</span> <span class="math inline">\((x_{1},y_{1})\)</span><span dir="rtl">ו-</span><span class="math inline">\((x_{2},y_{2})\)</span>, <span dir="rtl">ניתן לחשב את</span> <span class="math inline">\(y\)</span> <span dir="rtl">עבור ערך ביניים של</span> <span class="math inline">\(x\)</span><span dir="rtl">לפי</span>:</p>
 <p><span class="math display">\[y = y_{1} + \frac{x - x_{1}}{x_{2} - x_{1}}(y_{2} - y_{1})\]</span></p>
 <p><span dir="rtl">שיטה זו נוחה במיוחד בגרפים ניסיוניים או בטבלאות כיול, שבהם נרצה למצוא ערך חסר <em>בתוך</em> התחום שנמדד</span>. <span dir="rtl">עם זאת, יש לזכור כי ההנחה הליניארית תקפה רק <strong>בקרבת הנקודות, ובהנחה שהמדידות מדוייקות באופן יחסי.</strong></span> <span dir="rtl">כאשר המרווחים גדולים, המדידות רועשות, ו/או הנתונים מתנהגים באופן שאינו לינארי, יש לעבור לשיטות מדויקות יותר כגון התאמת קו או התאמת עקומה</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image11.png" style="width:6.5in;height:1.9in" class="figure-img"></p>
+<p><img src="assets/images/media/image11.png" style="width:6.5in;height:1.9in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">9 - חישוב אינטרפולציה לינארית בין שתי נקודות מדידה סמוכות לצורך הערכת ערך החסר בתוך טווח הנתונים.</span></figcaption>
 </figure>
 </div>
@@ -1163,7 +1157,7 @@ Figure <span dir="rtl">7- מציאת ריכוז תמיסת נעלם בשיטות
 <p><span class="math display">\[y = ax + b\]</span> <span dir="rtl">אם נבחר כל שתי נקודות על הקו</span>, <span class="math inline">\((x_{1},y_{1})\)</span><span dir="rtl">ו-</span><span class="math inline">\((x_{2},y_{2})\)</span>, <span dir="rtl">נוכל לחשב את מקדמי המשוואה לפי</span>:</p>
 <p><span class="math display">\[a = \frac{y_{2} - y_{1}}{x_{2} - x_{1}},b = y_{1} - ax_{1}\]</span> <span dir="rtl">במקרה זה משוואת הקו מבוססת על הנקודות אותן בחרנו, לפי ההנחה שאלו שתי הנקודות שמייצגות את הישר בצורה הטובה ביותר ("לפי העין"). לאחר שמצאנו את משוואת הקו, נוכל להשתמש בה גם לצורך אינטרפולציה וגם לצורך אקסטרפולציה. עם זאת, חשוב לזכור כי ככל שנצא רחוק יותר מתחום המדידות</span>, <span dir="rtl">האמינות של האקסטרפולציה פוחתת</span>. <span dir="rtl">כאשר הנתונים מצייתים באופן הדוק לקו ישר, ניתן להתאים את הקו “בעין” או על סמך שתי נקודות בלבד. אך כאשר קיים פיזור או רעש מדידה, יש להיעזר בכלים סטטיסטיים מדויקים יותר.</span></p>
 <figure class="figure">
-<img src="media/media/image12.png" style="width:3.55556in;height:2.06952in" alt="A graph with a line and red dots AI-generated content may be incorrect." class="figure-img">
+<img src="assets/images/media/image12.png" style="width:3.55556in;height:2.06952in" alt="A graph with a line and red dots AI-generated content may be incorrect." class="figure-img">
 <figcaption>
 <p>
 Figure <span dir="rtl">10 הגרף מציג שתי התאמות לינאריות לסט נתונים זהה, כאשר כל אחת מבוססת על זוג נקודות שונה.<br> השוואת הקווים מדגימה כיצד בחירת נקודות שונות משפיעה על שיפוע ונקודת החיתוך של המשוואה</span>
@@ -1175,13 +1169,13 @@ Figure <span dir="rtl">10 הגרף מציג שתי התאמות לינאריות
 <h3 data-number="8.1.6" class="anchored" data-anchor-id="רגרסיה-לינארית-linear-regression"><span class="header-section-number">8.1.6</span> <span dir="rtl">רגרסיה לינארית</span> (Linear Regression)</h3>
 <p><span dir="rtl">במדידות אמיתיות כמעט תמיד קיימות שגיאות מדידה ורעש אקראי. לכן, גם אם הקשר בין המשתנים ליניארי באופן עקרוני, הנקודות בפועל אינן נופלות בדיוק על קו אחד אלא מפוזרות סביבו</span>. <span dir="rtl">במצב כזה, לא ניתן לבחור שתי נקודות ולבנות מהן קו מייצג – יש צורך בשיטה שתמצא את הקו “הכי מתאים</span>” <span dir="rtl">לכל הנתונים יחד</span>. <span dir="rtl">שיטה זו נקראת רגרסיה ליניארית</span>, <span dir="rtl">והיא מבוססת על עיקרון ה-</span>Least Squares<span dir="rtl">, "שיטת הריבועים הפחותים".</span><br>
 <span dir="rtl">לפי עיקרון זה, נבחר את השיפוע</span> <span class="math inline">\(a\)</span> <span dir="rtl">והחיתוך</span> <span class="math inline">\(b\)</span> <span dir="rtl">של הקו</span> <span class="math inline">\(y = ax + b\)</span> <span dir="rtl">כך שסכום הריבועים של ההפרשים בין הערכים הנמדדים</span> <span class="math inline">\(y_{i}\)</span> <span dir="rtl">לערכים החזויים לפי הקו יהיה הקטן ביותר</span>:</p>
-<p><span class="math display">\[\text{מינימום\:\,\:\,}\sum_{i}^{}{(y_{i} - (ax_{i} + b))^{2}}\]</span> <img src="media/media/image13.png" style="width:2.69075in;height:1.27926in"></p>
+<p><span class="math display">\[\text{מינימום\:\,\:\,}\sum_{i}^{}{(y_{i} - (ax_{i} + b))^{2}}\]</span> <img src="assets/images/media/image13.png" style="width:2.69075in;height:1.27926in"></p>
 <p><span dir="rtl">כלומר, הקו שנבחר הוא זה שמייצג בצורה הטובה ביותר את כלל הנתונים, גם אם כל נקודה בודדת סוטה ממנו מעט</span>.</p>
 <p><span dir="rtl">רגרסיה ליניארית אינה רק דרך ציור מדויקת יותר של קו; היא גם מספקת <strong>מדדים כמותיים</strong> לאיכות ההתאמה, כמו מקדם הקורלציה</span> <span class="math inline">\(R^{2}\)</span>, <span dir="rtl">המעיד עד כמה הקו מתאר את הנתונים היטב</span>.</p>
 <p><span dir="rtl">במעבדות ובתעשייה, רגרסיה ליניארית משמשת לעיתים קרובות ליצירת <strong>עקומות כיול אמינות</strong></span> – <span dir="rtl">למשל, במכשירי ספקטרופוטומטר, שבהם נבנה קו כיול על סמך מדידות רועשות ומחשבים את ריכוז הדגימה הלא ידועה לפי משוואת הקו שהתקבלה</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image14.png" style="width:4.72666in;height:2.63097in" class="figure-img"></p>
+<p><img src="assets/images/media/image14.png" style="width:4.72666in;height:2.63097in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">11 - הנקודות המייצגות נתונים ניסיוניים, והקו מציג את קו הרגרסיה שנקבע לפי שיטת הריבועים הפחותים. ערך</span></figcaption>
 </figure>
 </div>
@@ -1193,7 +1187,7 @@ Figure <span dir="rtl">10 הגרף מציג שתי התאמות לינאריות
 <p><span class="math display">\[y = ae^{bx},y = ax^{b},y = a(x - x_{0})^{2} + c\]</span></p>
 <p><span dir="rtl">נחשב את הפרמטרים</span> <span class="math inline">\(a,b,c\)</span><span dir="rtl">כך שהעקומה תתאים בצורה הטובה ביותר למדידות – לעיתים בעזרת חישוב ממוחשב (למשל בשיטת הריבועים המינימליים הלא-ליניארית)</span>. <span dir="rtl">לעיתים נבחר את הצורה של הפונקציה לפי ידע פיזיקלי מוקדם (למשל תגובה אקספוננציאלית או קצב תלוי חזקתית), ובמקרים אחרים פשוט נבחן איזו פונקציה מתאימה טוב יותר לנתונים</span>.</p>
 <figure class="figure">
-<img src="media/media/image15.png" style="width:4.67316in;height:2.67159in" alt="A graph of a function AI-generated content may be incorrect." class="figure-img">
+<img src="assets/images/media/image15.png" style="width:4.67316in;height:2.67159in" alt="A graph of a function AI-generated content may be incorrect." class="figure-img">
 <figcaption>
 <p>
 Figure <span dir="rtl">12 - הגרף מציג נתונים המתואמים לעקומה מהצורה</span> <span class="math inline"><em>y</em> = 2<em>x</em><sup>3</sup></span> <span dir="rtl">כדוגמה למקרה שבו הקשר בין המשתנים אינו ליניארי.</span>
@@ -1205,14 +1199,15 @@ Figure <span dir="rtl">12 - הגרף מציג נתונים המתואמים לע
 <section id="לינאריזציה-linearization" class="level3" data-number="8.1.8">
 <h3 data-number="8.1.8" class="anchored" data-anchor-id="לינאריזציה-linearization"><span class="header-section-number">8.1.8</span> <strong><span dir="rtl">לינאריזציה</span></strong> (Linearization)</h3>
 <p><span dir="rtl">במקרים רבים נעדיף להמיר קשר לא ליניארי לקשר <strong>ליניארי</strong></span>, <span dir="rtl">כדי להקל על ניתוח הנתונים או על התאמת קו ישר. פעולה זו נקראת <strong>לינאריזציה</strong></span> – <span dir="rtl">הפיכת המשוואה לצורה ישרה על-ידי שינוי המשתנים או הצירים</span>.</p>
-<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image16.png" style="width:4.47709in;height:2.31747in" class="figure-img"></p>
-<figcaption>A graph with a line and dots AI-generated content may be incorrect.</figcaption>
+<img src="assets/images/media/image16.png" style="width:4.47709in;height:2.31747in" alt="A graph with a line and dots AI-generated content may be incorrect." class="figure-img">
+<figcaption>
+<p>
+Figure <span dir="rtl">13 - לינאריזציה עבור הגרף מתמונה 11. על החלפת המשתנה</span> x <span dir="rtl">במשתנה</span> <span class="math inline"><em>z</em> = <em>x</em><sup>3</sup></span> <span dir="rtl">קיבלנו גרף לינארי</span>
+</p>
+</figcaption>
 </figure>
-</div>
-<p>Figure <span dir="rtl">13 - לינאריזציה עבור הגרף מתמונה 11. על החלפת המשתנה</span> x <span dir="rtl">במשתנה</span> <span class="math inline">\(z = x^{3}\)</span> <span dir="rtl">קיבלנו גרף לינארי</span></p>
-<p><span dir="rtl">הרעיון פשוט: אם ניתן לכתוב את המשוואה כך שתתקבל הצגה מהצורה</span> <span class="math inline">\(f(x,y) = ag(x,y) + b\)</span>, <span dir="rtl">אז גרף של</span> <span class="math inline">\(f\)</span><span dir="rtl">לעומת</span> <span class="math inline">\(g\)</span><span dir="rtl">יניב <strong>קו ישר</strong></span>, <span dir="rtl">שממנו אפשר לחשב את השיפוע</span> <span class="math inline">\(a\)</span><span dir="rtl">והחיתוך</span> <span class="math inline">\(b\)</span>.</p>
+<p><span dir="rtl">הרעיון פשוט: אם ניתן לכתוב את המשוואה כך שתתקבל הצגה מהצורה</span> <span class="math inline">\(f(x,y) = ag(x,y) + b\)</span>, <span dir="rtl">אז גרף של</span> <span class="math inline">\(f\)</span> <span dir="rtl">לעומת</span> <span class="math inline">\(g\)</span> <span dir="rtl">יניב <strong>קו ישר</strong></span>, <span dir="rtl">שממנו אפשר לחשב את השיפוע</span> <span class="math inline">\(a\)</span><span dir="rtl">והחיתוך</span> <span class="math inline">\(b\)</span>.</p>
 <p><span dir="rtl">לדוגמה</span>:</p>
 <ul>
 <li><p><span dir="rtl">נניח שהקשר בין שני משתנים הוא</span> <span class="math inline">\(y = 3x^{3}\)</span>.<br>
@@ -1229,12 +1224,12 @@ Figure <span dir="rtl">12 - הגרף מציג נתונים המתואמים לע
 <p><span dir="rtl">לפני עידן המחשבים, אחת הדרכים הנפוצות לנתח נתונים ניסיוניים הייתה שימוש בגרפים לוגיים</span> (Log– <span dir="rtl"></span>Log) <span dir="rtl">ו-סמילוגיים</span> (Semi–Log)<span dir="rtl">. גרפים אלה שימשו להמחשה גרפית של קשרים מתמטיים לא ליניאריים – בעיקר קשרים אקספוננציאליים ו-חזקתיים –</span> <span dir="rtl">והיו כלי בסיסי בעבודתו של כל מהנדס או חוקר</span>. <span dir="rtl"></span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/media/image17.png" style="width:6.5in;height:2.28472in" class="figure-img"></p>
+<p><img src="assets/images/media/image17.png" style="width:6.5in;height:2.28472in" class="figure-img"></p>
 <figcaption>Figure <span dir="rtl">14</span> <span dir="rtl">- דפים לוגריתמים וסמי לוגריתמים. שימוש בגרפים מסוג זה מאפשר להציג קשרים אקספוננציאליים וחזקתיים כקווים ישרים, ולזהות בקלות את טיב הקשר בין המשתנים</span>.</figcaption>
 </figure>
 </div>
 <figure class="figure">
-<img src="media/media/image18.png" style="width:6.5in;height:2.87917in" alt="A graph of different colored lines AI-generated content may be incorrect." class="figure-img">
+<img src="assets/images/media/image18.png" style="width:6.5in;height:2.87917in" alt="A graph of different colored lines AI-generated content may be incorrect." class="figure-img">
 <figcaption>
 <p>
 Figure <span dir="rtl">15השוואה בין גרף ליניארי, סמי-לוגריתמי ולוגריתמי-לוגריתמי.</span>
@@ -1309,8 +1304,7 @@ Figure <span dir="rtl">15השוואה בין גרף ליניארי, סמי-לו�
 <li><p><span dir="rtl">לינאריזציה וגרפים לוגיים מאפשרים להפוך קשרים לא ליניאריים לייצוגים ישרים שקל לנתח בעין ובחישוב</span>.</p></li>
 </ul>
 <p><span dir="rtl">בין אם מדובר בקו פשוט או בעקומה מורכבת, המטרה המשותפת היא אחת</span> – <span dir="rtl">למצוא תיאור מתמטי אמין של הנתונים ולבחון עד כמה הוא מייצג את המציאות</span>. <span dir="rtl">גם בעידן שבו תוכנות מבצעות עבורנו את כל ההתאמות בלחיצת כפתור, חשוב להבין את העקרונות מאחורי השיטות: רק כך נוכל להעריך את אמינות התוצאות, לזהות מתי חיזוי הוא סביר ומתי מדובר באקסטרפולציה מסוכנת, ולשלב בין ניתוח מתמטי לבין שיקול הנדסי ופיזיקלי נכון</span>.</p>
-<p><span dir="rtl">תרגיל</span></p>
-<p><span dir="rtl">בטבלת הכיול הבאה נמדדה בליעת אור</span> (<span class="math inline">\(y\)</span>) <span dir="rtl">עבור ריכוזים שונים של חומר</span> (<span class="math inline">\(x\)</span>):</p>
+<p><span dir="rtl">בטבלת הכיול הבאה נמדדה בליעת אור (</span><span class="math inline">\(y\)</span><span dir="rtl">) עבור ריכוזים שונים של חומר (</span><span class="math inline">\(x\)</span><span dir="rtl">):</span></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
@@ -1341,12 +1335,10 @@ Figure <span dir="rtl">15השוואה בין גרף ליניארי, סמי-לו�
 </tr>
 </tbody>
 </table>
-<ol type="1">
-<li><p><span dir="rtl">השתמשו באינטרפולציה מקומית כדי להעריך את ערך הבליעה עבור</span> <span class="math inline">\(y = 1.70\)</span>.</p></li>
-<li><p><span dir="rtl">מצאו את משוואת הקו המתארת את הנתונים, בהנחה שהקשר ליניארי</span>.</p></li>
-<li><p><span dir="rtl">השתמשו במשוואה שמצאתם כדי למצוא את הריכוז עבור</span> <span class="math inline">\(y = 2.85\ \)</span></p></li>
-<li><p><span dir="rtl">הסבירו מדוע התוצאה האחרונה עלולה להיות פחות אמינה</span>.</p></li>
-</ol>
+<p><span dir="rtl">1. השתמשו באינטרפולציה מקומית כדי להעריך את ערך הבליעה עבור</span> <span class="math inline">\(y = 1.70\)</span><span dir="rtl">.</span></p>
+<p><span dir="rtl">2. מצאו את משוואת הקו המתארת את הנתונים, בהנחה שהקשר ליניארי.</span></p>
+<p><span dir="rtl">3. השתמשו במשוואה שמצאתם כדי למצוא את הריכוז עבור</span> <span class="math inline">\(y = 2.85\ \)</span></p>
+<p><span dir="rtl">4. אילו היה מספר רב של נקודות מדידה, באיזו מהשיטות המוזכרות בפרק היה כדאי להשתמש?</span></p>
 
 
 </section>
@@ -1514,6 +1506,108 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // מיפוי שם סביבה -> callout + כותרת
+
+  const map = {
+
+    definition: {callout:'callout-note',      title:'הגדרה'},
+
+    example:    {callout:'callout-example',   title:'דוגמה'},
+
+    exercise:   {callout:'callout-important', title:'תרגיל'},
+
+    tip:        {callout:'callout-tip',       title:'טיפ'},
+
+    summary:    {callout:'callout-important', title:'סיכום'},
+
+    question:   {callout:'callout-note',      title:'שאלה'},
+
+    answer:     {callout:'callout-tip',       title:'תשובה', collapse:true},
+
+    remark:     {callout:'callout-note',      title:'הערה'},
+
+    theorem:    {callout:'callout-note',      title:'משפט'},
+
+    lemma:      {callout:'callout-note',      title:'למה'},
+
+    proposition:{callout:'callout-note',      title:'טענה'},
+
+    corollary:  {callout:'callout-note',      title:'מסקנה'},
+
+    proof:      {callout:'callout-note',      title:'הוכחה', collapse:true},
+
+    hint:       {callout:'callout-tip',       title:'רמז',   collapse:true},
+
+    solution:   {callout:'callout-note',      title:'הצג פתרון', collapse:true},
+
+  };
+
+
+
+  // מאתרים גם לפי custom-style וגם לפי classes
+
+  const candidates = [
+
+    ...document.querySelectorAll('div[custom-style], section[custom-style]'),
+
+    ...document.querySelectorAll(Object.keys(map).map(k => `div.${k}, section.${k}`).join(','))
+
+  ];
+
+
+
+  candidates.forEach(el => {
+
+    const raw = (el.getAttribute('custom-style') || '')
+
+                  .toLowerCase().replace(/\s+/g,'');
+
+    const cls = [...el.classList].map(c=>c.toLowerCase());
+
+    const key = Object.keys(map).find(k => k===raw || cls.includes(k));
+
+    if (!key) return;
+
+
+
+    const spec = map[key];
+
+
+
+    // הפוך ל-callout: מוסיף מחלקות תואמות של Quarto
+
+    el.classList.add('callout', spec.callout, key);
+
+
+
+    // כותרת אם חסרה
+
+    if (!el.getAttribute('title') && spec.title) {
+
+      el.setAttribute('title', spec.title);
+
+    }
+
+
+
+    // collapse אם צריך
+
+    if (spec.collapse && !el.getAttribute('collapse')) {
+
+      el.setAttribute('collapse','true');
+
+    }
+
+  });
+
+});
+
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

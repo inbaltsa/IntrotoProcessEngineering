@@ -2,15 +2,15 @@ project:
   type: book
 
 book:
-  title: "שם הספר החדש"
-  author: "שם המחבר/ת"
+  title: "מבוא להנדסת תהליכים"
+  author: "ענבל צרפתי-ברעד"
   chapters:
     - index.qmd
     - intro.qmd
     - chapter1.qmd
     - chapter2.qmd
     - chapter3.qmd  
-    
+
   downloads: [pdf]        # כפתור הורדת PDF
   output-file: "index"    # שם קובץ ה-PDF/HTML העיקרי
   sidebar:
@@ -30,6 +30,7 @@ format:
     include-after-body:
       - assets/auto-env-titles.html
       - assets/chapter-numbering.html
+      - assets/env-autocallouts.js
   pdf:
     pdf-engine: xelatex         # חשוב לעברית
     mainfont: "Noto Sans Hebrew" # או "Arial" אם מעדיפה
