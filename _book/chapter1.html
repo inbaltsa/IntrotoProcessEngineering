@@ -308,41 +308,295 @@ ul.task-list li input[type="checkbox"] {
 <span dir="rtl">לרוב הפתרון אינו מתבצע בגישה אחת בלבד אלא בשילוב: מתחילים מהנתונים הידועים, מזהים את החסר, חושבים לאחור מהתוצאה, ולעיתים עוצרים באמצע כדי להתמודד עם מכשול נקודתי</span>.</p></li>
 </ol>
 <p><span dir="rtl">כאשר נתקלים בשאלה ארוכה או מורכבת, לא ניגשים מיד לחישובים. פתרון בעיות בהנדסה דורש סדר מחשבתי, ארגון מידע והסקת מסקנות מבוססות. התרשים הבא מציג תהליך שיטתי — מעין "אלגוריתם הנדסי" — המסייע לגשת לכל שאלה בצורה מסודרת: לקרוא, לנתח, לבחור כלים, להציב נתונים ולבדוק את סבירות התוצאה</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><strong><span dir="rtl"><u>שלב א: ניתוח והגדרת הבעיה</u></span></strong></p>
+</div>
+</div>
 <ol type="1">
-<li><p><span dir="rtl">קריאה מהירה לסריקה כללית, ואז קריאה מדויקת של השאלה</span>.</p></li>
-<li><p><span dir="rtl">ניסוח היעד במילים שלך: מה בדיוק נדרש לחשב/להראות</span>.</p></li>
-<li><p><span dir="rtl">ציור דיאגרמה של המערכת; סימון נתונים ידועים (עם יחידות) ובלתי־ידועים (אותיות)</span>.</p></li>
-<li><p><span dir="rtl">זיהוי רמזים מילוליים (למשל “גדול/קטן מאוד”, “בקירוב”, “בהשוואה ל–”) ושיוכם לתובנות הנדסיות</span>.</p></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">קריאה מהירה לסריקה כללית, ואז קריאה מדויקת של השאלה</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">ניסוח היעד במילים שלך: מה בדיוק נדרש לחשב/להראות</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">ציור דיאגרמה של המערכת; סימון נתונים ידועים (עם יחידות) ובלתי־ידועים (אותיות)</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">זיהוי רמזים מילוליים (למשל “גדול/קטן מאוד”, “בקירוב”, “בהשוואה ל–”) ושיוכם לתובנות הנדסיות</span>.</p>
+</div>
+</div></li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><strong><span dir="rtl"><u>שלב ב: תכנון הפתרון</u></span></strong></p>
+</div>
+</div>
 <ol type="1">
-<li><p><span dir="rtl">קביעת גבולות המערכת ובחירת בסיס חישוב (אם רלוונטי)</span>.</p></li>
-<li><p><span dir="rtl">רישום הנחות עבודה מוצהרות (מצב יציב/לא יציב, הזנחות, אידיאליזציות)</span>.</p></li>
-<li><p><span dir="rtl">פירוק הבעיה לבעיות קטנות</span></p></li>
-<li><p><span dir="rtl">בחירת הכלים המתאימים: מאזני מסה/אנרגיה/תנע, משוואות מצב, קורלציות/טבלאות (קיטור, פסיכרומטרי וכו')</span>.</p></li>
-<li><p><span dir="rtl">אם חסר נתון: חפשו במקורות/גרפים; ואם עדיין חסר — הציעו הנחה סבירה וציינו אותה במפורש</span>.</p></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">קביעת גבולות המערכת ובחירת בסיס חישוב (אם רלוונטי)</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">רישום הנחות עבודה מוצהרות (מצב יציב/לא יציב, הזנחות, אידיאליזציות)</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">פירוק הבעיה לבעיות קטנות</span></p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">בחירת הכלים המתאימים: מאזני מסה/אנרגיה/תנע, משוואות מצב, קורלציות/טבלאות (קיטור, פסיכרומטרי וכו')</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">אם חסר נתון: חפשו במקורות/גרפים; ואם עדיין חסר — הציעו הנחה סבירה וציינו אותה במפורש</span>.</p>
+</div>
+</div></li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><strong><span dir="rtl"><u>שלב ג: פתרון</u></span></strong></p>
+</div>
+</div>
 <ol type="1">
-<li><p><span dir="rtl">רישום המשוואות בסימנים תחילה (ללא מספרים) ובדיקת הומוגניות יחידות</span>.</p></li>
-<li><p><span dir="rtl">הצבה מסודרת של ערכים (עם יחידות!), פתרון אלגברי/נומרי/גרפי.</span></p></li>
-<li><p><span dir="rtl">עבודה איטרטיבית: אם מתגלה חסר/סתירה — חזרה לשלב ב’ לעדכון הנחות/בחירת מסלול חלופי</span>.</p></li>
-<li><p><span dir="rtl">הצגת התוצאות בדיוק הנדסי סביר</span></p></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">רישום המשוואות בסימנים תחילה (ללא מספרים) ובדיקת הומוגניות יחידות</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">הצבה מסודרת של ערכים (עם יחידות!), פתרון אלגברי/נומרי/גרפי.</span></p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">עבודה איטרטיבית: אם מתגלה חסר/סתירה — חזרה לשלב ב’ לעדכון הנחות/בחירת מסלול חלופי</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">הצגת התוצאות בדיוק הנדסי סביר</span></p>
+</div>
+</div></li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><strong><span dir="rtl"><u>שלב ד: בדיקה ואימות</u></span></strong></p>
+</div>
+</div>
 <ol type="1">
-<li><p>“<span dir="rtl">בדיקת שפיות”: יחידות נכונות, סדרי גודל סבירים, תחומים פיזיקליים הגיוניים</span>.</p></li>
-<li><p><span dir="rtl">הצבה חוזרת במשוואות</span> (Back-Substitution) <span dir="rtl">ובמידת האפשר בדיקה בדרך חלופית קצרה</span>.</p></li>
-<li><p><span dir="rtl">וידוא שעניתם בדיוק על מה שהתבקש (הגדרה, יחידות, דיוק/ספרות משמעותיות)</span></p></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“<span dir="rtl">בדיקת שפיות”: יחידות נכונות, סדרי גודל סבירים, תחומים פיזיקליים הגיוניים</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">הצבה חוזרת במשוואות</span> (Back-Substitution) <span dir="rtl">ובמידת האפשר בדיקה בדרך חלופית קצרה</span>.</p>
+</div>
+</div></li>
+<li><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span dir="rtl">וידוא שעניתם בדיוק על מה שהתבקש (הגדרה, יחידות, דיוק/ספרות משמעותיות)</span></p>
+</div>
+</div></li>
 </ol>
-<p><img src="assets/images/media/image1.png" style="width:6.5in;height:3.36736in"></p>
+<p><img src="media/media/image1.png" style="width:6.5in;height:3.36736in"></p>
+<div data-custom-style="caption">
 <p>Figure <span dir="rtl">1 - שלבים בפתרון בעיות</span></p>
+</div>
 </section>
 <section id="פתרון-בעיות-כמיומנות-נרכשת" class="level3" data-number="3.3.3">
 <h3 data-number="3.3.3" class="anchored" data-anchor-id="פתרון-בעיות-כמיומנות-נרכשת"><span class="header-section-number">3.3.3</span> <span dir="rtl">פתרון בעיות כמיומנות נרכשת</span></h3>
 <p><span dir="rtl">מעבר לגישות, חשוב לזכור כי פתרון בעיות הוא מיומנות שמתפתחת עם תרגול. הטעויות הן החלק הכי חשוב בלמידה. הן מאפשרות לנו להבין היכן ההנחות לא היו נכונות, היכן המודל לא התאים, או אילו נתונים נדרשו ולא נלקחו בחשבון</span>. <span dir="rtl">כאשר פתרון מצליח מיד, אנו נוטים לעבור הלאה מבלי לשים לב מדוע הוא הצליח. דווקא כאשר מתרחשת טעות אנו נדרשים לעצור, לנתח את מקור הבעיה, ולהבין את המגבלות של דרך החשיבה שלנו. במובן זה,</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+הערה
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p><span dir="rtl">טעות היא לא כישלון אלא מקור לתובנות חדשות</span></p>
+</div>
+</div>
 <p><span dir="rtl">היא מאלצת אותנו לשכלל את המיומנות, ומביאה אותנו לפתרונות עמוקים ויצירתיים יותר</span>. <span dir="rtl">יכולת ההנדסה אינה נמדדת רק בפתרון "נכון", אלא גם (שלא לומר, בעיקר) ביכולת להסביר למה פתרון מסוים שגוי, ולשפר אותו</span>.</p>
 <p><span dir="rtl">חשוב לזכור שפתרון בעיות זהו תהליך אינטראקטיבי ולא לינארי, התהליך כולל שלבים של זיהוי הבעיה, פירוק לגורמים, שילוב ידע מתמטי וכימי, ו"בדיקת שפיות" (בדיקה של סבירות הפתרון המתקבל). אך מעבר לכך יש שונות מאוד גדולה בין המערכות השונות והדרכים להתמודד איתן. המטרה היא לפתח דרך מתודית להתמודדות עם בעיות חדשות ולזהות באילו שלבים אנו נתקעים. תהליך זה כולל שלבים כמו זיהוי הבעיה, הבנתה, שליפת מידע רלוונטי, סינתזה של הנתונים, והערכת התוצאה תוך בדיקת יחידות, סדרי גודל ורמת הדיוק הנדרשת.</span></p>
 <section id="אימות-התוצאות-validating-results" class="level4" data-number="3.3.3.1">
