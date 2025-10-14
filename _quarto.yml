@@ -1,0 +1,40 @@
+project:
+  type: book
+
+book:
+  title: "שם הספר החדש"
+  author: "שם המחבר/ת"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - chapter1.qmd
+  downloads: [pdf]     # מוסיף כפתור הורדה ל-PDF
+  # אופציונלי: שליטה בשם הקובץ שהכפתור מצפה לו
+  output-file: "index" # ואז ייפתח קובץ בשם index.pdf
+  sidebar:
+    logo: assets/logo.png         # או logo.png בשורש
+    logo-alt: "הלוגו של הספר"
+    logo-href: "/"                # לא חובה; קובע לאן הלוגו יקליק
+
+format:
+  html:
+    theme: default
+    toc: true
+    number-sections: true
+    df-print: paged
+    css:
+      - assets/styles.css
+      - assets/rtl-baseline.css
+    include-after-body:
+      - assets/auto-env-titles.html
+      - assets/chapter-numbering.html
+
+# RTL + עברית
+lang: he
+
+# פילטרים ל-HTML
+filters:
+  - assets/env-to-callout.lua
+  
+resources:
+    - index.pdf

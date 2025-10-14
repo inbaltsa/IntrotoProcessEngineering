@@ -1,0 +1,23 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // בחר את כל כותרות הפרקים הראשיים
+  const chapters = document.querySelectorAll('main h1[data-number]');
+  let counter = 0;
+  chapters.forEach(h1 => {
+    counter++;
+    if (counter <= 3) {
+      // שני פרקים ראשונים ברומי
+      const roman = ['I','II'][counter-1];
+      h1.setAttribute('data-number', roman);
+      const numSpan = h1.querySelector('.header-section-number');
+      if (numSpan) numSpan.textContent = roman;
+    } else {
+      // חזרה למספרים רגילים החל מ-1
+      const normal = counter - 3;
+      h1.setAttribute('data-number', normal);
+      const numSpan = h1.querySelector('.header-section-number');
+      if (numSpan) numSpan.textContent = normal;
+    }
+  });
+});
+</script>
