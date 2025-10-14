@@ -94,3 +94,22 @@ figure.quarto-figure figcaption,
   direction: rtl;                /* מוודא RTL גם ברשימה */
   text-align: right;
 }
+/* טבלאות RTL מיושרות לימין + פונט */
+.rtl-table table {
+  direction: rtl;
+  margin-right: 0;
+  margin-left: auto;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: right;
+  font-family: "Assistant","Arimo",sans-serif;
+}
+.rtl-table th, .rtl-table td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  vertical-align: top;
+}
+.rtl-table th {
+  background: #f5f5f5;
+  font-weight: 700;
+}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.14)  14 OCT 2025 15:14
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.14)  14 OCT 2025 18:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1623,35 +1623,11 @@ No file index.toc.
 [2
 
 ]
-chapter 1.
-Missing character: There is no מ (U+05DE) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ב (U+05D1) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ו (U+05D5) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no א (U+05D0) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ל (U+05DC) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ה (U+05D4) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no נ (U+05E0) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ד (U+05D3) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ס (U+05E1) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ת (U+05EA) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ת (U+05EA) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ה (U+05D4) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ל (U+05DC) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no י (U+05D9) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no כ (U+05DB) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no י (U+05D9) in font [lmsans10-bold]:mapping=tex-text;!
-Missing character: There is no ם (U+05DD) in font [lmsans10-bold]:mapping=tex-text;!
-
-
-[3
-
-]
-chapter 2.
 ! Undefined control sequence.
 <argument> \RL 
-               {תודות}
-l.233 \chapter{\texorpdfstring{\RL{תודות}}{תודות}}
-                                                  \label{ux5eaux5d5ux5d3ux5d...
+               {מבוא להנדסת תהליכים}
+l.229 תהליכים}}{מבוא להנדסת תהליכים}}
+                                     \label{ux5deux5d1ux5d5ux5d0-ux5dcux5d4u...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1660,11 +1636,11 @@ and I'll forget about whatever was undefined.
 
  
 Here is how much of TeX's memory you used:
- 40279 strings out of 470344
- 832849 string characters out of 5482128
+ 40271 strings out of 470344
+ 832652 string characters out of 5482128
  1548490 words of memory out of 5000000
- 68109 multiletter control sequences out of 15000+600000
+ 68101 multiletter control sequences out of 15000+600000
  631790 words of font info for 94 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  108i,7n,122p,11227b,417s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on index.pdf (3 pages).
+Output written on index.pdf (2 pages).
