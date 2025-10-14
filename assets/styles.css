@@ -94,3 +94,14 @@ figure.quarto-figure figcaption,
   direction: rtl;                /* מוודא RTL גם ברשימה */
   text-align: right;
 }
+.summary {
+  --env-color: rgba(255, 215, 0, 0.35); /* זהב פסטלי */
+  border: 1px solid var(--env-color);
+}
+
+.summary .theorem-title {
+  background-color: var(--env-color);
+  color: black;
+  font-weight: bold;
+  padding: 0.35rem 0.6rem;
+}
