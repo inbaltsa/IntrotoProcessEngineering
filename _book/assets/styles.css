@@ -113,3 +113,18 @@ figure.quarto-figure figcaption,
   background: #f5f5f5;
   font-weight: 700;
 }
+.exercise table {
+  font-family: "Assistant", "Arimo", sans-serif;
+  font-size: 1rem;
+  direction: rtl;
+  text-align: right;
+  margin: 0 auto;
+}
+
+.exercise th,
+.exercise td {
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  vertical-align: middle;
+}
