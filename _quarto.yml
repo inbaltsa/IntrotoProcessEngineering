@@ -8,13 +8,15 @@ book:
     - index.qmd
     - intro.qmd
     - chapter1.qmd
-  downloads: [pdf]     # מוסיף כפתור הורדה ל-PDF
-  # אופציונלי: שליטה בשם הקובץ שהכפתור מצפה לו
-  output-file: "index" # ואז ייפתח קובץ בשם index.pdf
+    - chapter2.qmd
+    - chapter3.qmd  
+    
+  downloads: [pdf]        # כפתור הורדת PDF
+  output-file: "index"    # שם קובץ ה-PDF/HTML העיקרי
   sidebar:
-    logo: assets/logo.png         # או logo.png בשורש
+    logo: assets/logo.png
     logo-alt: "הלוגו של הספר"
-    logo-href: "/"                # לא חובה; קובע לאן הלוגו יקליק
+    logo-href: "/"
 
 format:
   html:
@@ -28,6 +30,11 @@ format:
     include-after-body:
       - assets/auto-env-titles.html
       - assets/chapter-numbering.html
+  pdf:
+    pdf-engine: xelatex         # חשוב לעברית
+    mainfont: "Noto Sans Hebrew" # או "Arial" אם מעדיפה
+    documentclass: scrreprt
+    number-sections: true
 
 # RTL + עברית
 lang: he
@@ -35,6 +42,7 @@ lang: he
 # פילטרים ל-HTML
 filters:
   - assets/env-to-callout.lua
-  
+
 resources:
-    - index.pdf
+  - index.pdf
+
