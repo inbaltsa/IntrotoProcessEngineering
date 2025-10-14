@@ -1320,18 +1320,26 @@ Figure <span dir="rtl">13 - לינאריזציה עבור הגרף מתמונה 
 </div>
 </figcaption>
 </figure>
-<p><span dir="rtl">הרעיון פשוט: אם ניתן לכתוב את המשוואה כך שתתקבל הצגה מהצורה</span> <span class="math inline">\(f(x,y) = ag(x,y) + b\)</span>, <span dir="rtl">אז גרף של</span> <span class="math inline">\(f\)</span> <span dir="rtl">לעומת</span> <span class="math inline">\(g\)</span> <span dir="rtl">יניב <strong>קו ישר</strong></span>, <span dir="rtl">שממנו אפשר לחשב את השיפוע</span> <span class="math inline">\(a\)</span><span dir="rtl">והחיתוך</span> <span class="math inline">\(b\)</span>.</p>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><strong>לינאריזציה של קשרים לא־ליניאריים</strong></p>
-<p>הרעיון פשוט: אם אפשר לכתוב <span class="math display">\[ y = a\,g(x) + b, \]</span> אז גרף של (y) מול (g(x)) יניב קו ישר; השיפוע הוא (a) והחיתוך הוא (b).</p>
-<p><strong>דוגמאות</strong></p>
-<ol type="1">
-<li><p>(y = 3x^{3}). נגדיר (u = x^{3}).<br>
-גרף (y) מול (u) הוא קו ישר עם שיפוע (3) וחיתוך (0).</p></li>
-<li><p>(y = a e^{bx}). לוקחים לוג טבעי: (y = a + b x).<br>
-גרף (y) מול (x) הוא קו ישר; השיפוע (b), החיתוך (a).</p></li>
-</ol>
-</div>
+<p>הרעיון פשוט: אם ניתן לכתוב את המשוואה כך שתתקבל הצגה מהצורה</p>
+<p><span class="math display">\[
+f(x) = a\,g(x) + b
+\]</span></p>
+<p>אז גרף של ( f(x) ) לעומת ( g(x) ) יניב <strong>קו ישר</strong>, שממנו ניתן לחשב את השיפוע ( a ) והחיתוך ( b ).</p>
+<p>לדוגמה:</p>
+<p><span class="math display">\[
+y = 3x^{3}
+\]</span></p>
+<p>נגדיר משתנה חדש ( u = x^{3} ).<br>
+גרף של ( y ) מול ( u ) הוא קו ישר עם שיפוע ( 3 ) וחיתוך ( 0 ).</p>
+<p>דוגמה נוספת:</p>
+<p><span class="math display">\[
+y = a e^{bx}
+\]</span></p>
+<p>נבצע לוג טבעי:</p>
+<p><span class="math display">\[
+\ln y = \ln a + b x
+\]</span></p>
+<p>גרף של ( y ) מול ( x ) הוא קו ישר; השיפוע הוא ( b ), והחיתוך הוא ( a ).</p>
 <p><span dir="rtl">השימוש בלינאריזציה מקל מאוד על זיהוי מגמות, על חישוב פרמטרים, ועל הערכת איכות ההתאמה בעין – מאחר שקל לנו יותר לזהות “ישרות” של קו מאשר עקמומיות של עקומה</span>.<br>
 <span dir="rtl">עם זאת, יש לזכור שלינאריזציה משנה את יחידות הצירים ואת משמעות המשתנים, ולכן יש <strong>להחזיר את התוצאה למשתנים המקוריים</strong> בסיום הניתוח</span>.</p>
 </section>

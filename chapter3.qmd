@@ -64,9 +64,6 @@
 
 ::: definition
 ![A diagram of a mixture AI-generated content may be incorrect.](media/media/image20.png){width="6.5in" height="2.7375in"}
-:::
-
-::: definition
 Figure [17 - יחידות פעולה בסיסיות בתהליך הכימי/ביולוגי]{dir="rtl"}
 :::
 
@@ -159,20 +156,16 @@ Figure [21 - תרשים בלוקים - מערכת תסיסה]{dir="rtl"}
 
 ::: definition
 [היחס בין מסה לנפח נקרא **צפיפות** ומסומן באות היוונית]{dir="rtl"} ρ (rho):
-:::
-
-::: definition
 $$\rho = \frac{m}{V}\ \ \ \ \ \ ;\ \ \ \ \lbrack\rho\rbrack\ :\ \ \ \frac{\lbrack M\rbrack}{\lbrack L\rbrack^{3}} \Longrightarrow \frac{kg}{m^{3}}\ ,\ \frac{g}{cm^{3}},\frac{lb_{m}}{{ft}^{3}}$$
 :::
 
 [הצפיפות היא בעצם המסה של יחידת נפח אחת של חומר. זהו גודל **אינטנסיבי,** מפני שהוא אינו תלוי בגודל המערכת אלא באופי החומר ובתנאים שהוא נמצא בהם (למשל בטמפרטורה ובלחץ)]{dir="rtl"}. [במילים אחרות -- בין אם ניקח גרם אחד של מים או קילוגרם שלם, הצפיפות שלהם תישאר זהה, כל עוד התנאים זהים]{dir="rtl"}. [למשל, הצפיפות של מים בטמפרטורה של]{dir="rtl"} $4℃$ [היא]{dir="rtl"}
 
-::: definition
+
 $$\rho_{H_{2}O} = 1.000\frac{g}{cm^{3}} = 1000\frac{kg}{m^{3}} = 0.0624\frac{lb_{m}}{ft^{3}}$$
-[הנפח הסגולי (]{dir="rtl"}specific Volume[) מגדיר מהו הנפח ליחידת מסה - ההיפוך של הצפיפות]{dir="rtl"}
-:::
 
 ::: definition
+[ הנפח הסגולי ]{dir="rtl"}(Specific Volume)[ מגדיר מהו הנפח ליחידת מסה - ההיפוך של הצפיפות ]{dir="rtl"}
 $$v = \frac{V}{m} = \frac{1}{\rho}$$
 :::
 
@@ -180,25 +173,12 @@ $$v = \frac{V}{m} = \frac{1}{\rho}$$
 
 ::: exercise
 [בעזרת]{dir="rtl"} CRC Handbook of Chemistry and Physics [או]{dir="rtl"} *Perry's Chemical Engineers' Handbook*[. מצאו את ערכי הצפיפות (]{dir="rtl"}ρ[) בטמפרטורת החדר עבור החומרים הבאים:]{dir="rtl"}
-:::
 
-::: exercise
-**[אתנול (]{dir="rtl"}Ethanol[)]{dir="rtl"}**
-:::
+  - **[אתנול ]{dir="rtl"}(Ethanol)[]{dir="rtl"}**
+  - **[בנזן ]{dir="rtl"}(Benzene)[]{dir="rtl"}**
+  - **[כלורופורם ]{dir="rtl"}(Chloroform)[]{dir="rtl"}**
+  - **[גליצרול ]{dir="rtl"}(Glycerol)[]{dir="rtl"}**
 
-::: exercise
-**[בנזן (]{dir="rtl"}Benzene[)]{dir="rtl"}**
-:::
-
-::: exercise
-**[כלורופורם (]{dir="rtl"}Chloroform[)]{dir="rtl"}**
-:::
-
-::: exercise
-**[גליצרול (]{dir="rtl"}Glycerol[)]{dir="rtl"}**
-:::
-
-::: exercise
 [**א.** ציינו את יחידות הצפיפות כפי שהן מופיעות בטבלה.]{dir="rtl"}\
 [**ב.** המירו את הערכים ליחידות מערכת]{dir="rtl"} SI (kg/m³)[.]{dir="rtl"}\
 [**ג.** השוו בין החומרים: מי מהחומרים צפוף יותר ממי, ומה ניתן להסיק על כך מבחינת הציפה במים?]{dir="rtl"}
@@ -210,9 +190,7 @@ $$v = \frac{V}{m} = \frac{1}{\rho}$$
 
 ::: definition
 [**משקל סגולי** (]{dir="rtl"}Specific gravity, SG[) -- היחס בין צפיפות של חומר לצפיפות של חומר ייחוס ידוע]{dir="rtl"}
-:::
 
-::: definition
 $$SG = \frac{\rho_{\text{חומר}}}{\rho_{\text{ייחוס}}}$$
 :::
 
@@ -224,30 +202,25 @@ $$\rho_{H}^{2}O = 1.000\frac{g}{cm^{3}} = 1000\frac{kg}{m^{3}} = 62.43\frac{lb_{
 
 ::: example
 [עבור]{dir="rtl"} $SG = 0.85$.
-:::
 
-::: example
 $$SG = 0.85 = \frac{\rho_{\text{חומר}}}{\rho_{\text{ייחוס}}}\  = < \ \ \rho_{חומר} = 0.85*\rho_{\text{ייחוס}}\  = 0.85*1.000\frac{g}{cm^{3}}$$
-:::
 
-::: example
 $$\ \rho_{חומר} = 0.85\frac{g}{cm^{3}}$$
 :::
 
-[עם זאת, במערכת היחידות האמריקאית]{dir="rtl"} (AES), [הצפיפות של מים נמדדת שווה ל]{dir="rtl"} $62.43\frac{lb_{m}}{ft^{3}}$ [ולכן במקרה זה הערך המספרי של הצפיפות אינו שווה לערך ה]{dir="rtl"} SG[. מאחר וערך הייחוס שונה]{dir="rtl"}\
+[במערכת היחידות האמריקאית (AES), הצפיפות של מים נמדדת כשווה ל]{dir="rtl"}  
+$62.43\ \frac{lb_{m}}{ft^{3}}$ [ולכן הערך המספרי של הצפיפות אינו שווה לערך ה־SG, מאחר וערך הייחוס שונה.]{dir="rtl"}
 [לכן יש להמיר תחילה את הצפיפות ליחידות המתאימות לפני שמחשבים את ה-]{dir="rtl"}SG []{dir="rtl"} [לפי]{dir="rtl"}:
 
-::: example
 $$SG = \frac{\rho_{חומר}}{62.43\frac{lb_{m}}{ft^{3}}}$$
-[אם הצפיפות של נוזל מסויים היא]{dir="rtl"} $78.0\frac{lb_{m}}{ft^{3}}$ [המשקל הסגולי שלו יהיה]{dir="rtl"}
-:::
 
 ::: example
+[אם הצפיפות של נוזל מסויים היא]{dir="rtl"} $78.0\frac{lb_{m}}{ft^{3}}$ [המשקל הסגולי שלו יהיה]{dir="rtl"}
 $$SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25$$
 :::
 
 ::: exercise
-[ערכי צפיפות של חומר מסויים הן]{dir="rtl"} $\rho = 800\frac{kg}{m^{3}}$ [(ב]{dir="rtl"} SI[)ו-]{dir="rtl"} $\rho = 49.9\frac{lb_{m}}{ft^{3}}$ [ (ב]{dir="rtl"} AES[). חשבו את]{dir="rtl"} SG [על פי כל אחד מהנתונים בנפרד, מה ניתן להגיד על התוצאות?]{dir="rtl"}
+[ערכי צפיפות של חומר מסויים הן]{dir="rtl"} $\rho = 800\frac{kg}{m^{3}}$ []{dir="rtl"} SI[-]{dir="rtl"} $\rho = 49.9\frac{lb_{m}}{ft^{3}}$ [ (ב]{dir="rtl"} AES[). חשבו את]{dir="rtl"} SG [על פי כל אחד מהנתונים בנפרד, מה ניתן להגיד על התוצאות?]{dir="rtl"}
 :::
 
 [מכיוון שהמשקל הסגולי]{dir="rtl"} (Specific Gravity) [מוגדר כיחס בין שתי צפיפויות -- צפיפות החומר וצפיפות חומר הייחוס -- הוא אינו תלוי ביחידות המדידה]{dir="rtl"}. [כל שינוי ביחידות ישפיע באותו יחס על המונה והמחנה, ולכן הערך הנומרי של]{dir="rtl"} $SG$ [יישאר זהה בכל מערכת יחידות]{dir="rtl"}. [במילים אחרות, מדובר בגודל חסר ממדים]{dir="rtl"} (dimensionless) [המבטא השוואה טהורה בין צפיפויות וניתן להשתמש באותו הערך ללא תלות במערכת היחידות עימה אנו עובדים.]{dir="rtl"}
@@ -260,9 +233,6 @@ $$SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25$$
 [עבור חלק מהחומרים, ערכי ה־]{dir="rtl"}SG [נמדדו בטמפרטורות שונות, ולכן מופיע ליד המספר סימון קטן לדוגמה]{dir="rtl"}: $SG = {0.783}^{18}$[מציין שהמדידה בוצעה ב]{dir="rtl"} $18℃$\
 [ואילו]{dir="rtl"} $SG = {1.266}^{15}$ [נמדדה ב]{dir="rtl"} $15℃$\
 [המספר הקטן אינו חזקה מתמטית, אלא מציין **את טמפרטורת המדידה**]{dir="rtl"}.
-:::
-
-::: callout-note
 [מכיוון שהצפיפות -- ובהתאם גם המשקל הסגולי -- משתנים מעט עם הטמפרטורה]{dir="rtl"},\
 [יש לוודא תמיד שהנתונים נלקחים באותם תנאים לפני שמשווים בין חומרים או מבצעים חישובי המרה]{dir="rtl"}.
 :::
@@ -273,18 +243,12 @@ $$SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25$$
 
 ::: definition
 **[ספיקה מסה]{dir="rtl"} (Mass flow rate)** -- [כמות המסה העוברת בנקודה מסוימת ליחידת זמן]{dir="rtl"}.
-:::
-
-::: definition
-[מסומנת בדרך כלל]{dir="rtl"} $\dot{m}$(m-dot), [ומוגדרת כ-]{dir="rtl"} $\dot{m} = \frac{dm}{dt}$
+[מסומנת בדרך כלל]{dir="rtl"} $\dot{m}$(m-dot) [ומוגדרת כ-]{dir="rtl"} $\dot{m} = \frac{dm}{dt}$
 :::
 
 ::: definition
 [ספיקה נפחית]{dir="rtl"} (Volumetric flow rate) -- [הנפח העובר ליחידת זמן]{dir="rtl"},
-:::
-
-::: definition
-[מסומנת]{dir="rtl"} $\dot{V}$, [ומוגדרת כ]{dir="rtl"} $\dot{V} = \frac{dV}{dt}$
+[מסומנת]{dir="rtl"} $\dot{V}$ [ומוגדרת כ]{dir="rtl"} $\dot{V} = \frac{dV}{dt}$
 :::
 
 > [שני סוגי הספיקה קשורים זה לזה דרך הצפיפות]{dir="rtl"}: []{dir="rtl"}$\rho = \frac{m}{V} = \frac{\overset{.}{m}}{\overset{.}{V}}$ []{dir="rtl"}
@@ -300,9 +264,6 @@ $$SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25$$
 [הספיקה הנפחית הנמדדת היא]{dir="rtl"} $\dot{V} = 2.0 \times 10^{- 3}\text{ m³/s}$\
 [וצפיפות המים בטמפרטורה זו היא]{dir="rtl"} $\rho = 997\text{ kg/m³}$\
 [א. חשבו את **ספיקת המסה** של הזרימה.]{dir="rtl"}
-:::
-
-::: exercise
 [ב. כמה זמן יידרש למלא מיכל בנפח של]{dir="rtl"} $0.5m^{3}$
 :::
 
@@ -319,20 +280,19 @@ $$SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25$$
 $$N_{A} = 6.02214076 \times 10^{23}\frac{particles}{mol}$$
 [צורונים. המספר הזה נקרא מס\' אבוגדרו.]{dir="rtl"}
 
-::: definition
-[לכל מערכת יחידות יש יחידת כמות המותאמת לשאר היחידות במערכת.]{dir="rtl"}
-:::
+::: {.definition}
 
-::: definition
-[במערכת]{dir="rtl"} cgs [היחידות נקראות]{dir="rtl"} g-mol [והן שוות ל]{dir="rtl"}$1g - mol = 1mol$ [(זו למעשה ההגדרה המקבילה ל]{dir="rtl"}mol [המוכר מכימיה)]{dir="rtl"}
-:::
+לכל מערכת יחידות יש יחידת כמות מותאמת לשאר היחידות במערכת:
 
-::: definition
-[במערכת]{dir="rtl"} SI [היחידות נקראות]{dir="rtl"} kg-mol [והן שוות ל]{dir="rtl"}$Kg - mol = kmol = 1000kmol$
-:::
+- **במערכת CGS** (יחידות גרם־מול):  
+  $1\,g\!-\!mol = 1\,mol$  
+  (למעשה ההגדרה מקבילה ל־mol המוכר מכימיה)
 
-::: definition
-[במערכת]{dir="rtl"} AES [היחידות הן]{dir="rtl"} lb-mol [והן שוות]{dir="rtl"} $1lb_{m} - mol = lbmol = 453.592mol$
+- **במערכת SI** (יחידות קילוגרם־מול):  
+  $1\,Kg\!-\!mol = 1\,kmol = 1000\,mol$
+
+- **במערכת AES** (יחידות פאונד־מול):  
+  $1\,lb_{m}\!-\!mol = 1\,lbmol = 453.592\,mol$
 :::
 
 [כדי להשוות בין חומרים שונים ומערכות שונות, עלינו למצוא את התכונה אשר נשארת זהה עבור אותו החומר במערכות שונות*.*]{dir="rtl"} [תכונה זו נקראת משקל אטומי (לאטומים) או משקל מולקולרי (למולקולות), והיא מייצגת את המסה של מול אחד של אותם צורונים. זוהי תכונה אינטנסיבית, כלומר קבועה לחומר מסוים ואינה משתנה עם גודל המערכת.]{dir="rtl"}
@@ -343,9 +303,6 @@ $$N_{A} = 6.02214076 \times 10^{23}\frac{particles}{mol}$$
 
 ::: definition
 [עבור כל מערכת יחידות המשקל המולקולרי מוגדר כמסה האטומים היחסית עם יחידות התואמות למערכת בה אנחנו משתמשים]{dir="rtl"}
-:::
-
-::: definition
 $$Mw\left\lbrack \frac{g}{gmol} \right\rbrack = Mw\left\lbrack \frac{kg}{kgmol} \right\rbrack = Mw\left\lbrack \frac{lb_{m}}{lbmol} \right\rbrack$$
 :::
 
@@ -355,29 +312,18 @@ $$Mw\left\lbrack \frac{g}{gmol} \right\rbrack = Mw\left\lbrack \frac{kg}{kgmol} 
 
 ::: example
 [כך לדוגמא, המסה המולקולרית של גלוקוז]{dir="rtl"}
-:::
 
-::: example
 []{dir="rtl"}$Mw\left( C_{6}H_{12}O_{6} \right) = 6*Mw(C) + 12*Mw(H) + 6*Mw(O)$
-:::
 
-::: example
 $$Mw\left( C_{6}H_{12}O_{6} \right) = 6*Mw(12.01) + 12*Mw(H1.01) + 6*Mw(15.99) = 180.18$$
-:::
 
-::: example
 [והיחידות תלויות במערכת היחידות בה אנו משתמשים]{dir="rtl"}
-:::
 
-::: example
 $$Mw\left( C_{6}H_{12}O_{6} \right) = 180.18\left\lbrack \frac{g}{gmol} \right\rbrack = 180.18\left\lbrack \frac{kg}{kgmol} \right\rbrack = 180.18\left\lbrack \frac{lb_{m}}{lbmol} \right\rbrack$$
 :::
 
 ::: exercise
 [מהי המסה המולרית של אלומינים ביחידות]{dir="rtl"} SI[? מהי המסה המולרית של אלומיניום ביחידות]{dir="rtl"} AES[?]{dir="rtl"}
-:::
-
-::: exercise
 [כמה מול אטומי אלומיניום יש ב100 גרם של אלומיניום? כמה פאונדמול]{dir="rtl"} lb-mol [יש ב100 גרם של אלומיניום?]{dir="rtl"}
 :::
 
@@ -385,21 +331,15 @@ $$Mw\left( C_{6}H_{12}O_{6} \right) = 180.18\left\lbrack \frac{g}{gmol} \right\r
 
 [רוב החומרים בטבע ובמערכות תהליך אינם טהורים, אלא מורכבים ממספר חומרים שונים]{dir="rtl"}. [כאשר שני חומרים או יותר מצויים יחד במצב פיזיקלי אחיד (גז, נוזל או מוצק), אנו מכנים את המערכת תערובת]{dir="rtl"} (mixture)[. לדוגמה, אוויר הוא תערובת של גזים (חנקן, חמצן, ארגון ועוד), ומיץ פטל הוא תערובת נוזלית]{dir="rtl"}. [על מנת לתאר הרכב כימי של תערובתף לא מספיק להגדיר את כמות החומר הכוללת, אלא לתאר *כמה יש מכל מרכיב* יחסית לאחרים]{dir="rtl"}. [תיאור זה יכול להיעשות בדרכים שונות, בהתאם למה שנוח למדידה או לחישוב]{dir="rtl"}.
 
-#### [שבר מסתי/מולי (]{dir="rtl"}Mass/Mole Fraction[) ואחוז מסתי/מולי (]{dir="rtl"}Mass/Mole Percentage[)]{dir="rtl"}
+#### [שבר מסתי/מולרי (Mass/Mole Fraction) ואחוז מסתי/מולרי (Mass/Mole Percentage)]{dir="rtl"}
 
 ::: definition
-[שבר מסתי (]{dir="rtl"}Mass Fraction[)- היחס בין מסת רכיב מסוים למסה הכוללת של התערובת]{dir="rtl"}:
-:::
-
-::: definition
+[שבר מסתי ]{dir="rtl"} Mass Fraction [- היחס בין מסת רכיב מסוים למסה הכוללת של התערובת]{dir="rtl"}:
 $$x_{A} = \frac{m_{A}}{\sum m_{i}}$$
 :::
 
 ::: definition
 [שבר מול]{dir="rtl"} (Mole Fraction)[- היחס בין מספר המולים של רכיב למספר הכולל של מולים בתערובת]{dir="rtl"}:
-:::
-
-::: definition
 $$y_{A} = \frac{n_{A}}{\sum n_{i}}$$
 :::
 
@@ -426,13 +366,7 @@ $$\frac{1}{\overset{ˉ}{M}} = \sum_{i}^{}\frac{x_{i}}{M_{i}}$$
 ::: example
 [אוויר יבש הוא תערובת של בערך 79% חנקן]{dir="rtl"} (N₂) [ו־21% חמצן]{dir="rtl"} (O₂) [לפי שברי מול]{dir="rtl"}.\
 [המשקלים המולקולריים הם 28 ו־32 בהתאמה, ולכן]{dir="rtl"}:
-:::
-
-::: example
 $$\overset{ˉ}{M} = (0.79)\left( 28\frac{g}{mol} \right) + (0.21)\left( 32\frac{g}{mol} \right) = 29\frac{g}{mol}$$
-:::
-
-::: example
 [כלומר, נוכל להתייחס אל האוויר כולו כאילו \"מול אחד\" שלו שוקל בממוצע 29 גרם]{dir="rtl"}.
 :::
 
@@ -442,45 +376,15 @@ $$\overset{ˉ}{M} = (0.79)\left( 28\frac{g}{mol} \right) + (0.21)\left( 32\frac{
 
 ::: callout-note
 [[כיצד חושבה הנוסחה לחישוב מסה מולרית של תערובת באמצעות שברים מסתיים?]{.underline}]{dir="rtl"}
-:::
-
-::: callout-note
 [מאחר ואנו מחפשים תכונה שאינה תלויה בכמות, נשתמש בבסיס חישוב]{dir="rtl"}
-:::
-
-::: callout-note
 [בסיס חישוב -- מאחר ואנחנו מחפשים יחס בין ערכים, נוכל לבצע את הניתוח על כל כמות של חומר, ולכן נבחר את הכמות שהכי נוחה לנו לחישוב]{dir="rtl"}
-:::
-
-::: callout-note
 [נניח שבחרנו בסיס נוח של 1 ק\"ג תערובת]{dir="rtl"}. [אז]{dir="rtl"}:
-:::
-
-::: callout-note
 [המסה של כל רכיב תהיה]{dir="rtl"} $m_{i} = x_{i} \times 1\text{ }kg$
-:::
-
-::: callout-note
 [מספר המולים של כל רכיב הוא]{dir="rtl"}: []{dir="rtl"}$n_{i} = \frac{m_{i}}{M_{i}} = \frac{x_{i}}{M_{i}}$
-:::
-
-::: callout-note
 [מספר המולים הכולל הוא]{dir="rtl"}: []{dir="rtl"}$n_{\text{total}} = \sum_{i}^{}n_{i} = \sum_{i}^{}\frac{x_{i}}{M_{i}}$
-:::
-
-::: callout-note
 [כעת, נזכור שהתחלנו את החישוב עם מסה כוללת של]{dir="rtl"} $1Kg$ [ולכן אם נחשב את המסה הכוללת חלקי מספר המולים הכולל --- נקבל את המשקל המולקולרי הממוצע]{dir="rtl"}:
-:::
-
-::: callout-note
 $$\overset{ˉ}{M\left\lbrack \frac{Kg}{Kmol} \right\rbrack} = \frac{m_{\text{total}}}{n_{\text{total}}} = \frac{1Kg}{\sum_{i}^{}{\frac{x_{i}}{M_{i}}Kmol}}$$
-:::
-
-::: callout-note
 [וזה בדיוק מביא אותנו לצורה של הנוסחה]{dir="rtl"}:
-:::
-
-::: callout-note
 $$\boxed{\frac{1}{\overset{ˉ}{M}} = \sum_{i}^{}\frac{x_{i}}{M_{i}}}$$
 :::
 
@@ -500,30 +404,18 @@ $$\boxed{\frac{1}{\overset{ˉ}{M}} = \sum_{i}^{}\frac{x_{i}}{M_{i}}}$$
 
 ::: definition
 [[ריכוז מסתי]{dir="rtl"} (Mass Concentration)[-]{dir="rtl"}]{.underline} [הריכוז המסתי של רכיב בתערובת מתאר את [כמות המסה]{custom-style="Strong"} של אותו רכיב ביחס [לנפח הכולל]{custom-style="Strong"} של המערכת]{dir="rtl"}.
-:::
-
-::: definition
 $$c_{A} = \frac{m_{A}}{V}\ \ \ \ \ ;\ \ \ \left\lbrack c_{A} \right\rbrack:\ \ \ \frac{kg}{m^{3}}\ \ ,\ \frac{g}{L}\ \ ,\ \ \ \frac{lb_{m}}{ft^{3}}\ $$
 [כאשר]{dir="rtl"} $m_{A}$ [היא המסה של רכיב]{dir="rtl"} $A$ [ו]{dir="rtl"}$V$ [הוא הנפח הכולל של התערובת.]{dir="rtl"}
 :::
 
 ::: example
 [לדוגמה, בתמיסה שבה 10 גרם מלח מומסים ב]{dir="rtl"},[תמיסה בנפח 200 מ\"ל, הריכוז המסתי של המלח הוא]{dir="rtl"}:
-:::
-
-::: example
 $$c_{salt} = \frac{10g}{0.2L} = 50\frac{g}{L}$$
-:::
-
-::: example
 [כלומר, בכל ליטר תמיסה יש 50 גרם מלח]{dir="rtl"}.
 :::
 
 ::: definition
 [ריכוז מולרי]{dir="rtl"} (Molar Concentration) [- מספר המולים של רכיב ביחס לנפח]{dir="rtl"}
-:::
-
-::: definition
 $$C_{A} = \frac{n_{A}}{V}\ \ \ \ ;\ \ \ \ \ \ \left\lbrack C_{A} \right\rbrack:\ \ \ \frac{kmol}{m^{3}}\ \ ;\ \ \frac{mol}{L}\ \ \ ;\ \frac{lbmol}{ft^{3}}$$
 [כלומר אם אנו יודעים שתמיסה מסויימת מכילה]{dir="rtl"} 0.5 [מול של]{dir="rtl"} NaOH [על כל ליטר תמיסה הריכוז המולרי יהיה]{dir="rtl"} $C_{NaOH} = \frac{0.5mol}{1L} = 0.5\frac{mol}{L} = 0.5M$
 :::
@@ -537,15 +429,9 @@ $$C_{A} = \frac{n_{A}}{V}\ \ \ \ ;\ \ \ \ \ \ \left\lbrack C_{A} \right\rbrack:\
 ::: definition
 [יחידות]{dir="rtl"} **ppm (parts per million) []{dir="rtl"}**[ו-]{dir="rtl"}**ppb (parts per billion)** [מבטאות כמה חלקים מהרכיב קיימים לכל מיליון או לכל מיליארד חלקים של התערובת]{dir="rtl"}.\
 [הן ניתנות להגדרה על בסיס מסה או על בסיס מולים --- בהתאם לסוג המערכת]{dir="rtl"}:
-:::
-
-::: definition
 $${\text{ppm}_{A} = y_{A} \times 10^{6\ \ }\text{או}{\ \ \ \ \ x}_{A} \times 10^{6}
 }{\text{ppb}_{A} = y_{A} \times 10^{9}\text{       או}{\ \ \ \ x}_{A} \times 10^{9}
 }$$
-:::
-
-::: definition
 [כאשר]{dir="rtl"} $y_{A}$[הוא שבר מולרי ו]{dir="rtl"}-$x_{A}$ [הוא שבר מסתי]{dir="rtl"}.
 :::
 
@@ -695,7 +581,7 @@ $$T({^\circ}R) = T({^\circ}F) + 459.67\ \ \ \ \ \ ;\ \ \ \ \ \ 1\ ℉ = 1\ {^\ci
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <figure>
-<img src="media/media/image25.jpeg" style="width:5.03476in;height:2.67068in" alt="Three temperature scales—Fahrenheit, Celsius, and Kelvin—are oriented horizontally, one below the other, and aligned to show how they relate to each other. Absolute zero is at negative four hundred fifty nine point six seven degrees F, negative two hundred seventy three point one five degrees C, and 0 K. Water freezes at thirty two degrees F, 0 degrees C, and two hundred seventy three point one five K. Water boils at two hundred twelve degrees F, one hundred degrees C, and three hundred seventy three point one five K. A temperature difference of 9 degrees F is the same as a temperature difference of 5 degrees C and 5 K." />
+<img src="media/media/image25.jpeg" style="width:5.03476in;height:2.67068in" alt="Three temperature scales-Fahrenheit, Celsius, and Kelvin-are oriented horizontally, one below the other, and aligned to show how they relate to each other. Absolute zero is at negative four hundred fifty nine point six seven degrees F, negative two hundred seventy three point one five degrees C, and 0 K. Water freezes at thirty two degrees F, 0 degrees C, and two hundred seventy three point one five K. Water boils at two hundred twelve degrees F, one hundred degrees C, and three hundred seventy three point one five K. A temperature difference of 9 degrees F is the same as a temperature difference of 5 degrees C and 5 K." />
 <figcaption><div data-custom-style="caption">
 <p>Figure <span dir="rtl">22</span>- <span dir="rtl">השוואה בין שלושת סרגלי טמפרטורה - פרנהייט, צלזיוס וקלווין<br />
 מתוך</span> LibreTexts Physics<span dir="rtl">,</span> <span dir="rtl">לפי רישיון</span> Creative Commons BY-NC-SA 4.0.</p>
@@ -704,14 +590,8 @@ $$T({^\circ}R) = T({^\circ}F) + 459.67\ \ \ \ \ \ ;\ \ \ \ \ \ 1\ ℉ = 1\ {^\ci
 
 ::: callout-tip
 [כאשר מדברים על טמפרטורה עצמה -- למשל "הטמפרטורה בחדר היא]{dir="rtl"} $25℃$[\" המשמעות תלויה בסולם שנבחר]{dir="rtl"}. [אותו מצב פיזיקלי יתואר בערכים שונים בכל סולם, למשל]{dir="rtl"}:
-:::
-
-::: callout-tip
 $$25{^\circ}C = 298.15K = 77{^\circ}F = 536.7{^\circ}R$$
 [אבל כאשר מדברים על **שינוי טמפרטורה** (למשל עלייה של]{dir="rtl"} $10℃$[, או ירידה של]{dir="rtl"} $5\ ℉$[) המרווחים בסולמות קלווין וצלזיוס זהים, ולכן]{dir="rtl"} $\Delta T(K) = \Delta T({^\circ}C)$ [,]{dir="rtl"} $\Delta T({^\circ}R) = \Delta T({^\circ}F)$
-:::
-
-::: callout-tip
 [כלומר, אם חומר מתחמם]{dir="rtl"} $10℃$ [זה שקול לעלייה של]{dir="rtl"} $10\ K$[, ואם הוא יורד]{dir="rtl"} $5\ ℉$ [זה שווה ערך לירידה של]{dir="rtl"} $5\ {^\circ}R$ [. על כן, חשוב להבחין בין **ערך מוחלט של טמפרטורה**, המשפיע על חישובי אנרגיה או נפח, לבין **שינוי טמפרטורה,**]{dir="rtl"} [הקובע זרימת חום, העברת אנרגיה או קצב תגובה]{dir="rtl"}.\
 [רוב המשוואות התרמודינמיות דורשות שימוש בסולמות אבסולוטיים כמו]{dir="rtl"} K [או]{dir="rtl"} ${^\circ}R$ [בעוד שבחישובים יחסיים או במדידות שדה מקומיות ניתן להשתמש גם בצלזיוס או פרנהייט, כל עוד מבצעים את ההמרות הנכונות]{dir="rtl"}.
 :::
@@ -773,13 +653,13 @@ $$25{^\circ}C = 298.15K = 77{^\circ}F = 536.7{^\circ}R$$
   [קיימים ארבעה סולמות מרכזיים למדידת טמפרטורה:]{dir="rtl"}
   :::
 
-- ::: {custom-style="summary"}
-  [צלזיוס (°]{dir="rtl"}C[) ופרנהייט(°]{dir="rtl"}F[) - סולמות יחסיים המבוססים על נקודות שרירותיות.]{dir="rtl"}
-  :::
+    - ::: {custom-style="summary"}
+      [צלזיוס (°]{dir="rtl"}C[) ופרנהייט(°]{dir="rtl"}F[) - סולמות יחסיים המבוססים על נקודות שרירותיות.]{dir="rtl"}
+      :::
 
-- ::: {custom-style="summary"}
-  [קלווין (]{dir="rtl"}K[) וראנקין (°]{dir="rtl"}R[) - סולמות אבסולוטיים המבוססים על האפס המוחלט.]{dir="rtl"}
-  :::
+    - ::: {custom-style="summary"}
+      [קלווין (]{dir="rtl"}K[) וראנקין (°]{dir="rtl"}R[) - סולמות אבסולוטיים המבוססים על האפס המוחלט.]{dir="rtl"}
+      :::
 
 - ::: {custom-style="summary"}
   [קלווין וראנקין שומרים על אותו מרווח בין דרגות כמו צלזיוס ופרנהייט, כדי להבטיח **תאימות נומרית** עם הסולמות הקודמים. שינוי טמפרטורה זהה בין קלווין וצלזיוס (]{dir="rtl"}ΔK = Δ°C[), ובין ראנקין ופרנהייט (]{dir="rtl"}Δ°R = Δ°F[).]{dir="rtl"}
@@ -789,25 +669,25 @@ $$25{^\circ}C = 298.15K = 77{^\circ}F = 536.7{^\circ}R$$
   [מדידת טמפרטורה מתבצעת באופן עקיף באמצעות **תכונה פיזיקלית משתנה** של חומר: נפח, התנגדות, מתח חשמלי או קרינה. ארבעת המכשירים העיקריים למדידת טמפרטורה הם:]{dir="rtl"}
   :::
 
-- ::: {custom-style="summary"}
-  [**מדחום נוזלי** - מבוסס על התפשטות נוזל; פשוט אך מוגבל לטווחים צרים.]{dir="rtl"}
-  :::
+  - ::: {custom-style="summary"}
+    [**מדחום נוזלי** - מבוסס על התפשטות נוזל; פשוט אך מוגבל לטווחים צרים.]{dir="rtl"}
+    :::
 
-- ::: {custom-style="summary"}
-  **RTD[/ תרמיסטור]{dir="rtl"}** [- מבוסס על שינוי התנגדות; מדויק ויציב למדידות רציפות.]{dir="rtl"}
-  :::
+  - ::: {custom-style="summary"}
+    **RTD[/ תרמיסטור]{dir="rtl"}** [- מבוסס על שינוי התנגדות; מדויק ויציב למדידות רציפות.]{dir="rtl"}
+    :::
 
-- ::: {custom-style="summary"}
-  [**תרמוקפל** - מודד מתח תרמי; מתאים לטווחים רחבים ולתהליכים מהירים.]{dir="rtl"}
-  :::
+  - ::: {custom-style="summary"}
+    [**תרמוקפל** - מודד מתח תרמי; מתאים לטווחים רחבים ולתהליכים מהירים.]{dir="rtl"}
+    :::
 
-- ::: {custom-style="summary"}
-  [**פירומטר -** מודד קרינה תרמית; מאפשר מדידה ללא מגע בטמפרטורות גבוהות מאוד.]{dir="rtl"}
-  :::
+  - ::: {custom-style="summary"}
+    [**פירומטר -** מודד קרינה תרמית; מאפשר מדידה ללא מגע בטמפרטורות גבוהות מאוד.]{dir="rtl"}
+    :::
 
-- ::: {custom-style="summary"}
-  [הבחירה במכשיר המדידה תלויה בטווח הטמפרטורות, ברמת הדיוק הנדרשת, במהירות התגובה ובאפשרות למדידה ישירה או מרחוק.]{dir="rtl"}
-  :::
+  - ::: {custom-style="summary"}
+    [הבחירה במכשיר המדידה תלויה בטווח הטמפרטורות, ברמת הדיוק הנדרשת, במהירות התגובה ובאפשרות למדידה ישירה או מרחוק.]{dir="rtl"}
+    :::
 
 ## [לחץ]{dir="rtl"}
 
@@ -817,13 +697,9 @@ $$25{^\circ}C = 298.15K = 77{^\circ}F = 536.7{^\circ}R$$
 
 ::: definition
 [גודל זה נקרא **לחץ** ומסומן]{dir="rtl"} $P$:
-:::
 
-::: definition
 $$P = \frac{F}{A}$$
-:::
 
-::: definition
 [כאשר]{dir="rtl"} F [הוא הכח המינימלי שצריך להפעיל על פקק חסר חיכוך כדי למנוע מהזורם לפרוץ החוצה דרך חור ששטחו]{dir="rtl"} A
 :::
 
@@ -837,13 +713,7 @@ Figure [23- אטימת חור במיכל עם לחץ מים. מקור:]{dir="rtl
 
 ::: definition
 [יחידות הלחץ הן יחידות כוח חלקי יחידות שטח. ביחידות]{dir="rtl"} SI [נהוג למדוד לחץ בפסקל]{dir="rtl"} (Pa), [כאשר]{dir="rtl"}
-:::
-
-::: definition
 $$1Pa = 1\frac{N}{m^{2}} = 1\frac{Kg}{m*s}$$
-:::
-
-::: definition
 [ויחידות נוספות מוכרות הן]{dir="rtl"} torr[,]{dir="rtl"} atm [ו-]{dir="rtl"} psi $\left( \frac{lb_{m}}{in^{2}} \right)$[.]{dir="rtl"}
 :::
 
@@ -892,9 +762,6 @@ $$P_{atm} = 1.013*10^{5}Pa = 1atm$$
 
 ::: definition
 [נניח עמוד זורם שגובהו]{dir="rtl"} $h$, [צפיפותו]{dir="rtl"} $\rho$, [ופתוח לאוויר. הלחץ בראש העמוד יהיה הלחץ האטמוספירי (]{dir="rtl"}$P_{0}$(
-:::
-
-::: definition
 [הלחץ]{dir="rtl"} [בתחתית העמוד יהיה]{dir="rtl"} $P = P_{0} + \frac{\rho gh}{g_{c}}$
 [זהו הלחץ ההידרוסטטי]{dir="rtl"} -- [הלחץ הנובע ממשקל הזורם עצמו]{dir="rtl"}.
 :::
@@ -913,9 +780,6 @@ $$P_{atm} = 1.013*10^{5}Pa = 1atm$$
 
 ::: example
 [לחץ של]{dir="rtl"} ‎1‎ [אטמוספירה ניתן לביטוי כעומד של]{dir="rtl"} ‎10.3‎ [מטר מים או]{dir="rtl"} ‎760‎ [מילימטר כספית]{dir="rtl"}.
-:::
-
-::: example
 $$1atm = 101325Pa = 760mmHg = 10.3mH_{2}O = 29.92inHg$$
 :::
 
@@ -925,13 +789,7 @@ $$P_{head} = \frac{\rho_{fluid\ }\frac{g}{g_{c}}}{P\ \left( \frac{force}{area} \
 
 ::: callout-note
 [יחידות העומד]{dir="rtl"} (Head) [נראות במבט ראשון זהות ליחידות של **אורך -** למשל מטרים או סנטימטרים - אך משמעותן הפיזיקלית שונה לחלוטין]{dir="rtl"}. [כאשר אנו אומרים "גובה של 2 מטרים", הכוונה היא למרחק פיזי במרחב]{dir="rtl"}. [לעומת זאת, כשאנחנו אומרים "עומד לחץ של 2 מטר מים", אין מדובר במרחק ממשי, אלא ב**גובה שקול של עמוד מים שהיה יוצר את אותו לחץ**]{dir="rtl"}.
-:::
-
-::: callout-note
 $$P(mmHg) = P_{0}(mmHg) + h(mmHg)$$
-:::
-
-::: callout-note
 [כיצד נזהה שמדובר בעומד ולא באורך אמיתי]{dir="rtl"}?\
 [נבחן את **ההקשר הפיזיקלי** אם הגודל מופיע כחלק מביטוי של לחץ]{dir="rtl"} $(P = \rho gh)$ [ויחד עימו מוזכר נוזל מסויים (לרוב מים או כספית) -- מדובר בעומד]{dir="rtl"}. [אם הוא מתאר מיקום במרחב (כמו גובה מיכל, אורך צינור או מרחק בין נקודות) -- מדובר באורך]{dir="rtl"}.
 :::
@@ -950,21 +808,12 @@ $$P_{abs} = P_{\text{gauge}} + P_{\text{atmospheric}}$$
 [כאשר הערך שלילי, משמעות הדבר שהלחץ במערכת קטן מהאטמוספירה -- מצב הנקרא ואקום חלקי]{dir="rtl"}.\
 [במקרה זה מכשיר המדידה יראה ערך שלילי. והערך הזה מייצג את \"עוצמת הואקום\". כך לדוגמא אם המכשיר מראה ערך של]{dir="rtl"} $- 100mmHg$ [המשמעות היא שהלחץ האבסולוטי הוא]{dir="rtl"} $660mmHg$ [ויש לנו ואקום של 10 ס\"מ.]{dir="rtl"}
 
-- ::: callout-note
-  [יחידות המיועדות רק ללחץ אבסולוטי:]{dir="rtl"} atma, psia
-  :::
-
-- ::: callout-note
-  [יחידות המיועדות רק ללחץ יחסי:]{dir="rtl"} atmg, psig
-  :::
-
-- ::: callout-note
-  [שאר היחידות (למשל]{dir="rtl"} Pa [או]{dir="rtl"} mmHg[) דורשות ציון מפורש]{dir="rtl"}
-  :::
-
-- ::: callout-note
-  [אם אין ציון מפורש ניתן להניח שמדובר בלחץ אבסולוטי]{dir="rtl"}
-  :::
+::: callout-note
+  - [יחידות המיועדות רק ללחץ אבסולוטי:]{dir="rtl"} atma, psia
+  - [יחידות המיועדות רק ללחץ יחסי:]{dir="rtl"} atmg, psig
+  - [שאר היחידות (למשל]{dir="rtl"} Pa [או]{dir="rtl"} mmHg[) דורשות ציון מפורש]{dir="rtl"}
+  - [אם אין ציון מפורש ניתן להניח שמדובר בלחץ אבסולוטי]{dir="rtl"}
+:::
 
 #### [ברומטר ולחץ ברומטרי]{dir="rtl"}
 
@@ -983,17 +832,8 @@ $$P_{abs} = P_{\text{gauge}} + P_{\text{barometer}}$$
 ::: exercise
 [הסטודנטית החרוצה סתוונית בודקת אחראית על בדיקת תקינות מיכל גז במפעל בו היא עובדת.\
 מד הלחץ (]{dir="rtl"}Gauge[) המותקן על המכל מראה]{dir="rtl"} $200KPa$
-:::
-
-::: exercise
 [הלחץ האטמוספרי באותו היום נמדד בברומטר כספית ועמד על]{dir="rtl"} $720mmHg$
-:::
-
-::: exercise
 [ידוע כי המיכל מתוכנן לעמוד בלחץ אבסולוטי מרבי של]{dir="rtl"} $310KPa$
-:::
-
-::: exercise
 [האם המכל נמצא בתחום התקין או שקיים חשש לחריגה מהלחץ המותר?]{dir="rtl"}
 :::
 
@@ -1056,13 +896,7 @@ Figure [27 - איור: מד לחץ מסוג בורדון (]{dir="rtl"}Bourdon Ga
 
 ::: definition
 [משוואת המנומטר הכללית]{dir="rtl"}
-:::
-
-::: definition
 $$P_{1} + \rho_{2}\frac{g}{g_{c}}(h_{1} + h_{2}) = P_{2} + \rho_{1}\frac{g}{g_{c}}h_{1} + \rho_{2}\frac{g}{g_{c}}h_{2}$$
-:::
-
-::: definition
 [המתארת את הקשר בין הלחצים, צפיפויות הנוזלים והפרשי הגבהים בצינור]{dir="rtl"}.
 :::
 
@@ -1071,9 +905,6 @@ $$P_{1} + \rho_{2}\frac{g}{g_{c}}(h_{1} + h_{2}) = P_{2} + \rho_{1}\frac{g}{g_{c
 
 ::: definition
 [משוואת המנומטר כאשר הצפיפות של הזורם העליון זניחה:]{dir="rtl"}
-:::
-
-::: definition
 $$P_{1} - P_{2} = \rho\frac{g}{g_{c}}h$$
 [כאשר]{dir="rtl"} $\rho$[היא צפיפות נוזל המדידה בלבד]{dir="rtl"}.
 :::
@@ -1086,9 +917,6 @@ $$P_{1} - P_{2} = \rho\frac{g}{g_{c}}h$$
 [נתונה המערכת הבאה:\
 1. באיזה צד הלחץ יותר גבוה?\
 2. מהו]{dir="rtl"} h[?]{dir="rtl"}
-:::
-
-::: exercise
 ![](media/media/image34.png){width="2.010462598425197in" height="1.621340769903762in"}
 :::
 
@@ -1130,6 +958,7 @@ $$P_{1a} = 0 + \rho\frac{g}{g_{c}}h$$
 
 [במנומטר דיפרנציאלי שני הצדדים מחוברים לשתי נקודות שונות במערכת]{dir="rtl"}*.\*
 [המכשיר מודד ישירות את **הפרש הלחצים** בין שתי הנקודות, ללא קשר ללחץ האטמוספרי]{dir="rtl"}*.\*
+
 ![](media/media/image38.png){width="1.5571347331583552in" height="1.73623031496063in"}
 
 $$P_{1} + \rho\frac{g}{g_{c}}h = P_{2} + \rho_{f}\frac{g}{g_{c}}h\ \ \ \  \Longrightarrow \ \ \ \ \ \ \boxed{\mathrm{\Delta}P = P_{1} - P_{2} = \left( \rho_{f} - \rho \right)\frac{g}{g_{c}}h\text{~}}$$
@@ -1184,17 +1013,8 @@ $$P_{1} = P_{atm} + \rho\frac{g}{g_{c}}h_{2}\left( 1 + \frac{A_{2}}{A_{1}} \righ
 [מנומטרים הם מהמכשירים הפשוטים, המדויקים והמהימנים ביותר למדידת לחצים והפרשי לחצים]{dir="rtl"}.\
 [הם מבוססים על עקרון **שיווי המשקל ההידרוסטטי**]{dir="rtl"}, [שלפיו הלחץ בנוזל במנוחה תלוי רק בצפיפותו, בתאוצת הכובד ובגובה עמודת הנוזל]{dir="rtl"}.\
 [הפרש הגבהים בין פני הנוזל בשתי זרועות הצינור מתורגם ישירות להפרש לחצים על־פי המשוואה]{dir="rtl"}:
-:::
-
-::: callout-note
 $$\Delta P = \rho gh$$
-:::
-
-::: callout-note
 [צורתו של המנומטר -- פתוח, סגור, דיפרנציאלי, משופע או עם צד רחב -- נקבעת לפי סוג המדידה הרצויה: לחץ מוחלט, לחץ יחסי או הפרש לחצים בין שני מקומות במערכת]{dir="rtl"}.
-:::
-
-::: callout-note
 [למרות פשטותם, מנומטרים משמשים עד היום במעבדות, בבדיקות כיול ובמערכות בקרה, בזכות רמת הדיוק הגבוהה והיכולת לספק מדידה ישירה וברורה של לחץ באמצעות גובה עמודת נוזל]{dir="rtl"}.
 :::
 
@@ -1203,110 +1023,34 @@ $$\Delta P = \rho gh$$
 [המיכל מלא עד לגובה]{dir="rtl"} $5.0\text{~}m$ [בחומר]{dir="rtl"} Methyl Ethyl Ketone (MEK)[.]{dir="rtl"}\
 [נתון:]{dir="rtl"} $S.G = 0.805$[.\
 הלחץ האטמוספירי באותו יום הוא]{dir="rtl"} $772\text{~}mmHg$[.]{dir="rtl"}
+    1.  [חשבו את הכוח]{dir="rtl"} $F\text{~}\lbrack N\rbrack$ [הפועל על תחתית המיכל.]{dir="rtl"}
+    2.  [מהו העומד במיכל ביחידות של]{dir="rtl"} mMEK[?]{dir="rtl"}
+    3.  [באחד הימים ירד גשם ונכנסו למיכל מים.]{dir="rtl"}
+        [האם ניתן לחשב את כמות המים שנכנסה למיכל באמצעות מדידת הלחץ בתחתית המיכל?]{dir="rtl"}
+    4.  [כיצד ניתן להחזיר את המיכל למצבו המקורי (ללא מים).]{dir="rtl"}
 :::
-
-1.  ::: exercise
-    [חשבו את הכוח]{dir="rtl"} $F\text{~}\lbrack N\rbrack$ [הפועל על תחתית המיכל.]{dir="rtl"}
-    :::
-
-2.  ::: exercise
-    [מהו העומד במיכל ביחידות של]{dir="rtl"} mMEK[?]{dir="rtl"}
-    :::
-
-3.  ::: exercise
-    [באחד הימים ירד גשם ונכנסו למיכל מים.]{dir="rtl"}
-    :::
-
-4.  ::: exercise
-    [האם ניתן לחשב את כמות המים שנכנסה למיכל באמצעות מדידת הלחץ בתחתית המיכל?]{dir="rtl"}
-    :::
-
-5.  ::: exercise
-    [כיצד ניתן להחזיר את המיכל למצבו המקורי (ללא מים).]{dir="rtl"}
-    :::
 
 ### [סיכום]{dir="rtl"}
 
-- ::: {custom-style="summary"}
-  [לחץ הוא הכוח הפועל בניצב ליחידת שטח:]{dir="rtl"} $P = \frac{F}{A}$
-  :::
+  - [לחץ הוא הכוח הפועל בניצב ליחידת שטח:]{dir="rtl"} $P = \frac{F}{A}$
+  - [לחץ בזורם הוא הכוח שהנוזל או הגז מפעיל בניצב על כל יחידת שטח שבתוכו או על גבולות הכלי המכיל אותו.]{dir="rtl"}
+  - [לחץ נוזל במנוחה עולה עם העומק בהתאם לצפיפות הנוזל ולכוח הכובד]{dir="rtl"} $\Delta P = \rho\frac{g}{g_{c}}h$
+  - [עומד ]{dir="rtl"}Head[ הוא הגובה השקול של עמודת נוזל שמייצרת לחץ נתון -- כלומר, גובה עמוד הנוזל שהיה יוצר את אותו לחץ במנוחה.]{dir="rtl"}
+  - [סוגי לחצים:]{dir="rtl"}
+    - [לחץ מוחלט (]{dir="rtl"}Absolute Pressure[): נמדד מה]{dir="rtl"}Vacuum[.]{dir="rtl"}
+    - [לחץ אטמוספירי (]{dir="rtl"}Atmospheric Pressure[): לחץ האוויר שמסביבנו.]{dir="rtl"}
+    - [לחץ יחסי (]{dir="rtl"}Gauge Pressure[): ההפרש בין הלחץ המוחלט ללחץ האטמוספירי.]{dir="rtl"}
+    - $P_{\text{abs}} = P_{\text{gauge}} + P_{\text{atm}}$
+  - [מכשירים למדידת לחץ:]{dir="rtl"}
+    - [ברומטר (]{dir="rtl"}Barometer[): מודד את הלחץ האטמוספירי בעזרת עמוד כספית סגור.]{dir="rtl"}
+    - [מנומטר (]{dir="rtl"}Manometer[): מודד הפרשי לחצים באמצעות עמודת נוזל בצורת]{dir="rtl"} U[.]{dir="rtl"}
+      - [פתוח ←לחץ יחסי]{dir="rtl"}
+      - [סגור ← לחץ מוחלט]{dir="rtl"}
+      - [דיפרנציאלי ← הפרש לחצים]{dir="rtl"}
+      - [משופע / צד רחב ← דיוק גבוה למדידות קטנות]{dir="rtl"}
+  - [עקרונות מרכזיים לזכור:]{dir="rtl"}
+    - [לחץ שווה בכל נקודה באותו גובה באותו נוזל.]{dir="rtl"}
+    - [הפרש לחצים ניתן לחישוב לפי הפרש גבהים במנוחה.]{dir="rtl"}
+    - [לרוב ניתן להזניח את צפיפות האויר שבתוך המנומטר]{dir="rtl"}
+    - [ביימדידות לחץ הן הבסיס להבנת זרימה, מעבר חום ובקרה בתהליכים הנדסיים.]{dir="rtl"}
 
-- ::: {custom-style="summary"}
-  [לחץ בזורם הוא הכוח שהנוזל או הגז מפעיל בניצב על כל יחידת שטח שבתוכו או על גבולות הכלי המכיל אותו.]{dir="rtl"}
-  :::
-
-- ::: {custom-style="summary"}
-  [לחץ נוזל במנוחה עולה עם העומק בהתאם לצפיפות הנוזל ולכוח הכובד]{dir="rtl"} $\Delta P = \rho\frac{g}{g_{c}}h$
-  :::
-
-- ::: {custom-style="summary"}
-  [עומד (]{dir="rtl"}Head[) הוא הגובה השקול של עמודת נוזל שמייצרת לחץ נתון -- כלומר, גובה עמוד הנוזל שהיה יוצר את אותו לחץ במנוחה.]{dir="rtl"}
-  :::
-
-- ::: {custom-style="summary"}
-  [סוגי לחצים:]{dir="rtl"}
-  :::
-
-  - ::: {custom-style="summary"}
-    [לחץ מוחלט (]{dir="rtl"}Absolute Pressure[): נמדד מה]{dir="rtl"}Vacuum[.]{dir="rtl"}
-    :::
-
-  - ::: {custom-style="summary"}
-    [לחץ אטמוספירי (]{dir="rtl"}Atmospheric Pressure[): לחץ האוויר שמסביבנו.]{dir="rtl"}
-    :::
-
-  - ::: {custom-style="summary"}
-    [לחץ יחסי (]{dir="rtl"}Gauge Pressure[): ההפרש בין הלחץ המוחלט ללחץ האטמוספירי.]{dir="rtl"}
-    :::
-
-- ::: {custom-style="summary"}
-  $P_{\text{abs}} = P_{\text{gauge}} + P_{\text{atm}}$
-  :::
-
-- ::: {custom-style="summary"}
-  [מכשירים למדידת לחץ:]{dir="rtl"}
-  :::
-
-  - ::: {custom-style="summary"}
-    [ברומטר (]{dir="rtl"}Barometer[): מודד את הלחץ האטמוספירי בעזרת עמוד כספית סגור.]{dir="rtl"}
-    :::
-
-  - ::: {custom-style="summary"}
-    [מנומטר (]{dir="rtl"}Manometer[): מודד הפרשי לחצים באמצעות עמודת נוזל בצורת]{dir="rtl"} U[.]{dir="rtl"}
-    :::
-
-    - ::: {custom-style="summary"}
-      [פתוח ←לחץ יחסי]{dir="rtl"}
-      :::
-
-    - ::: {custom-style="summary"}
-      [סגור ← לחץ מוחלט]{dir="rtl"}
-      :::
-
-    - ::: {custom-style="summary"}
-      [דיפרנציאלי ← הפרש לחצים]{dir="rtl"}
-      :::
-
-    - ::: {custom-style="summary"}
-      [משופע / צד רחב ← דיוק גבוה למדידות קטנות]{dir="rtl"}
-      :::
-
-- ::: {custom-style="summary"}
-  [עקרונות מרכזיים לזכור:]{dir="rtl"}
-  :::
-
-  - ::: {custom-style="summary"}
-    [לחץ שווה בכל נקודה באותו גובה באותו נוזל.]{dir="rtl"}
-    :::
-
-  - ::: {custom-style="summary"}
-    [הפרש לחצים ניתן לחישוב לפי הפרש גבהים במנוחה.]{dir="rtl"}
-    :::
-
-  - ::: {custom-style="summary"}
-    [לרוב ניתן להזניח את צפיפות האויר שבתוך המנומטר]{dir="rtl"}
-    :::
-
-  - ::: {custom-style="summary"}
-    [ביימדידות לחץ הן הבסיס להבנת זרימה, מעבר חום ובקרה בתהליכים הנדסיים.]{dir="rtl"}
-    :::
