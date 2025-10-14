@@ -1,0 +1,22 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "שם הספר החדש",
+    "section": "",
+    "text": "1 פתיחה\n\nהגדרה 1.1. זהו טקסט של הגדרה לדוגמה.\n\n\nדוגמה 1.1. זו דוגמה קצרה עם נוסחה \\(x^2+y^2=1\\).\n\n\nתרגיל 1.1. נסחו והוכיחו את הטענה…\n\n\nמשפט 1.1. כאן יבוא ניסוח משפט.\n\n\nהוכחה. הוכחה. כאן יבוא מהלך הוכחה.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>שם הספר החדש</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  שם הספר החדש",
+    "section": "",
+    "text": "3 פתיחה\n\nהגדרה 1.1. זהו טקסט של הגדרה לדוגמה.\n\n\nדוגמה 1.1. זו דוגמה קצרה עם נוסחה \\(x^2+y^2=1\\).\n\n\nתרגיל 1.1. נסחו והוכיחו את הטענה…\n\n\nמשפט 1.1. כאן יבוא ניסוח משפט.\n\n\nהוכחה. הוכחה. כאן יבוא מהלך הוכחה.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>שם הספר החדש</span>"
+    ]
+  }
+]
