@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="שם המחבר/ת">
+<meta name="author" content="ענבל צרפתי-ברעד">
 
-<title>שם הספר החדש</title>
+<title>מבוא להנדסת תהליכים</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="stylesheet" href="assets/rtl-baseline.css">
@@ -113,7 +84,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">שם הספר החדש</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא להנדסת תהליכים</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
@@ -131,10 +102,7 @@ window.Quarto = {
       <img src="./assets/logo.png" alt="הלוגו של הספר" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">שם הספר החדש</a> 
-        <div class="sidebar-tools-main">
-    <a href="./index.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
-</div>
+      <a href="./">מבוא להנדסת תהליכים</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -147,19 +115,31 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">שם הספר החדש</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא להנדסת תהליכים</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">שם הספר החדש</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span dir="rtl">הקדמה</span></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">פרק ראשון</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><span dir="rtl">פרק 1 – מבוא להנדסת תהליכים</span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><span dir="rtl">פרק 2 – מבוא לחישובים הנדסיים</span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title"><span dir="rtl">פרק 3– תהליכים ומשתני תהליך</span></span></span></a>
   </div>
 </li>
     </ul>
@@ -172,7 +152,7 @@ window.Quarto = {
     <h2 id="toc-title">תוכן עניינים</h2>
    
   <ul>
-  <li><a href="#פתיחה" id="toc-פתיחה" class="nav-link active" data-scroll-target="#פתיחה"><span class="header-section-number">1</span> פתיחה</a></li>
+  <li><a href="#תודות" id="toc-תודות" class="nav-link active" data-scroll-target="#תודות"><span class="header-section-number">1</span> <span dir="rtl">תודות</span></a></li>
   </ul>
 </nav>
     </div>
@@ -181,7 +161,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">שם הספר החדש</h1>
+<h1 class="title">מבוא להנדסת תהליכים</h1>
 </div>
 
 
@@ -191,7 +171,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">כותב</div>
     <div class="quarto-title-meta-contents">
-             <p>שם המחבר/ת </p>
+             <p>ענבל צרפתי-ברעד </p>
           </div>
   </div>
     
@@ -204,23 +184,9 @@ window.Quarto = {
 </header>
 
 
-<section id="פתיחה" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> פתיחה</h1>
-<div class="definition">
-<p><strong>הגדרה 1.1</strong>. זהו טקסט של הגדרה לדוגמה.</p>
-</div>
-<div class="example">
-<p><strong>דוגמה 1.1</strong>. זו דוגמה קצרה עם נוסחה <span class="math inline">\(x^2+y^2=1\)</span>.</p>
-</div>
-<div class="exercise">
-<p><strong>תרגיל 1.1</strong>. נסחו והוכיחו את הטענה…</p>
-</div>
-<div class="theorem">
-<p><strong>משפט 1.1</strong>. כאן יבוא ניסוח משפט.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>הוכחה</em>. </span><strong>הוכחה.</strong> כאן יבוא מהלך הוכחה.</p>
-</div>
+<section id="תודות" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> <span dir="rtl">תודות</span></h1>
+<p><span dir="rtl">דר רחל ליכטנשטיין-גליקליס</span>. <span dir="rtl">פרופ’ רונית ביטון</span>.</p>
 
 
 </section>
@@ -387,6 +353,108 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // מיפוי שם סביבה -> callout + כותרת
+
+  const map = {
+
+    definition: {callout:'callout-note',      title:'הגדרה'},
+
+    example:    {callout:'callout-example',   title:'דוגמה'},
+
+    exercise:   {callout:'callout-important', title:'תרגיל'},
+
+    tip:        {callout:'callout-tip',       title:'טיפ'},
+
+    summary:    {callout:'callout-important', title:'סיכום'},
+
+    question:   {callout:'callout-note',      title:'שאלה'},
+
+    answer:     {callout:'callout-tip',       title:'תשובה', collapse:true},
+
+    remark:     {callout:'callout-note',      title:'הערה'},
+
+    theorem:    {callout:'callout-note',      title:'משפט'},
+
+    lemma:      {callout:'callout-note',      title:'למה'},
+
+    proposition:{callout:'callout-note',      title:'טענה'},
+
+    corollary:  {callout:'callout-note',      title:'מסקנה'},
+
+    proof:      {callout:'callout-note',      title:'הוכחה', collapse:true},
+
+    hint:       {callout:'callout-tip',       title:'רמז',   collapse:true},
+
+    solution:   {callout:'callout-note',      title:'הצג פתרון', collapse:true},
+
+  };
+
+
+
+  // מאתרים גם לפי custom-style וגם לפי classes
+
+  const candidates = [
+
+    ...document.querySelectorAll('div[custom-style], section[custom-style]'),
+
+    ...document.querySelectorAll(Object.keys(map).map(k => `div.${k}, section.${k}`).join(','))
+
+  ];
+
+
+
+  candidates.forEach(el => {
+
+    const raw = (el.getAttribute('custom-style') || '')
+
+                  .toLowerCase().replace(/\s+/g,'');
+
+    const cls = [...el.classList].map(c=>c.toLowerCase());
+
+    const key = Object.keys(map).find(k => k===raw || cls.includes(k));
+
+    if (!key) return;
+
+
+
+    const spec = map[key];
+
+
+
+    // הפוך ל-callout: מוסיף מחלקות תואמות של Quarto
+
+    el.classList.add('callout', spec.callout, key);
+
+
+
+    // כותרת אם חסרה
+
+    if (!el.getAttribute('title') && spec.title) {
+
+      el.setAttribute('title', spec.title);
+
+    }
+
+
+
+    // collapse אם צריך
+
+    if (spec.collapse && !el.getAttribute('collapse')) {
+
+      el.setAttribute('collapse','true');
+
+    }
+
+  });
+
+});
+
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -790,8 +858,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="שם הספר החדש">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">שם הספר החדש</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro.html" class="pagination-link" aria-label="[הקדמה]{dir=&quot;rtl&quot;}">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span dir="rtl">הקדמה</span></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
