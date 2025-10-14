@@ -11,7 +11,7 @@ book:
     - chapter2.qmd
     - chapter3.qmd  
 
-  downloads: [pdf]        # כפתור הורדת PDF
+  # downloads: [pdf]        # כפתור הורדת PDF
   output-file: "index"    # שם קובץ ה-PDF/HTML העיקרי
   sidebar:
     logo: assets/logo.png
@@ -31,11 +31,11 @@ format:
       - assets/auto-env-titles.html
       - assets/chapter-numbering.html
       - assets/env-autocallouts.js
-  pdf:
-    pdf-engine: xelatex         # חשוב לעברית
-    mainfont: "Noto Sans Hebrew" # או "Arial" אם מעדיפה
-    documentclass: scrreprt
-    number-sections: true
+#  pdf:
+ #   pdf-engine: xelatex         # חשוב לעברית
+  #  mainfont: "Noto Sans Hebrew" # או "Arial" אם מעדיפה
+   # documentclass: scrreprt
+    #number-sections: true
 
 # RTL + עברית
 lang: he

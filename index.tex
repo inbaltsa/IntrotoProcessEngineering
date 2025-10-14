@@ -1,0 +1,4198 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  hebrew,
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrreprt}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Noto Sans Hebrew}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+\fi
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,provide=*]{babel}
+\else
+\usepackage[bidi=default,provide=*]{babel}
+\fi
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Noto Sans Hebrew}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\ifPDFTeX
+  \TeXXeTstate=1
+  \newcommand{\RL}[1]{\beginR #1\endR}
+  \newcommand{\LR}[1]{\beginL #1\endL}
+  \newenvironment{RTL}{\beginR}{\endR}
+  \newenvironment{LTR}{\beginL}{\endL}
+\fi
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{תוכן עניינים}
+\else
+  \newcommand\contentsname{תוכן עניינים}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{רשימת תרשימים}
+\else
+  \newcommand\listfigurename{רשימת תרשימים}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{רשימת טבלאות}
+\else
+  \newcommand\listtablename{רשימת טבלאות}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{תרשים}
+\else
+  \newcommand\figurename{תרשים}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{טבלה}
+\else
+  \newcommand\tablename{טבלה}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{רישום}
+\newcommand*\listoflistings{\listof{codelisting}{רשימת רישומים}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={מבוא להנדסת תהליכים},
+  pdfauthor={ענבל צרפתי-ברעד},
+  pdflang={he},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{מבוא להנדסת תהליכים}
+\author{ענבל צרפתי-ברעד}
+\date{}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{תוכן עניינים}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter{מבוא להנדסת
+תהליכים}\label{ux5deux5d1ux5d5ux5d0-ux5dcux5d4ux5e0ux5d3ux5e1ux5ea-ux5eaux5d4ux5dcux5d9ux5dbux5d9ux5dd}
+
+\bookmarksetup{startatroot}
+
+\chapter{\texorpdfstring{\RL{תודות}}{תודות}}\label{ux5eaux5d5ux5d3ux5d5ux5ea}
+
+\RL{דר רחל ליכטנשטיין-גליקליס}. \RL{פרופ' רונית ביטון}.
+
+\bookmarksetup{startatroot}
+
+\chapter{\texorpdfstring{\RL{הקדמה}}{הקדמה}}\label{ux5d4ux5e7ux5d3ux5deux5d4}
+
+\RL{מבוא להנדסת תהליכים}
+
+\RL{ד"ר ענבל צרפתי-ברעד}
+
+\RL{אוקטובר 2025\\
+}
+
+\RL{בשנת 2020 התפרצה מגפת הקורונה והציבה בפני האנושות אתגר חסר תקדים:
+בתוך פרק זמן קצר מאוד נדרש היה לפתח, לייצר ולחלק מיליארדי מנות חיסון
+ברחבי העולם. מצד אחד, ההישג המדעי היה דרמטי -- בתוך פחות משנה פותחו
+חיסונים חדשניים, חלקם בטכנולוגיות שלא נוסו קודם בקנה מידה עולמי. מצד
+שני, האתגר לא הסתיים ברמת המחקר במעבדה: השלב הקריטי בקביעת קצב ההתחסנות
+של האוכלוסיות היה אתגר של \textbf{העברה מפתרון ניסויי לייצור תעשייתי
+בקנה מידה עצום}}.
+
+\RL{חברות התרופות נאלצו להקים קווי ייצור חדשים או להרחיב מתקנים קיימים
+במהירות מסחררת. תהליכים שנמשכים בדרך כלל שנים ארוכות -- בניית מפעלים,
+התאמת ציוד, והבטחת איכות קפדנית -- התרחשו תוך חודשים ספורים. כל שלב דרש
+תיאום הדוק בין מהנדסי ומהנדסות תהליכים, מהנדסי ומהנדסות ביוטכנולוגיה,
+אנשי ונשות רגולציה וגם כלכלנים וכלכלניות. מעבר לכך, יצרנים התמודדו עם
+מחסור עולמי בציוד, בחומרי גלם ובכוח אדם מיומן}. \RL{הרגולטורים נדרשו אף
+הם להתאים את עצמם: במקום מסלול אישור ארוך ומדורג, נבנו מנגנוני "אישור
+חירום" שעדיין שמרו על רמות בטיחות גבוהות אך איפשרו הפעלה מהירה של
+מתקנים. ועדיין, לא כל הבעיות נפתרו בבת אחת. קצב ההתחסנות הושפע לא רק
+מפיתוח החיסונים והוכחת יעילותם, אלא גם מיכולת הייצור, מהאישורים
+הלוגיסטיים, ומהאתגרים של הפצה בקירור עמוק לכל נקודה על פני הגלובוס}.
+
+\RL{בחורף 2020--2021, עם תחילת מתן החיסונים נגד קורונה, הכמות שהגיעה לכל
+מדינה הייתה מוגבלת מאוד. החיסונים הראשונים נשמרו בקפידה לקבוצות בסיכון
+גבוה: צוותי רפואה, קשישים, וחולים כרוניים. רוב הציבור נאלץ להמתין
+בסבלנות, כשברקע התפרסמו שוב ושוב תמונות של תורים ארוכים למנות חיסון
+עודפות, שהיו עומדות לפוג תוך שעות ספורות. עבור רבים זו הייתה החוויה
+הראשונה של "מחסור רפואי גלובלי": להבין שיש תרופה או חיסון שיכול להציל
+חיים -- אבל היכולת לייצר ולהפיץ אותו מוגבלת מאוד}. \RL{המצב הזה השתנה
+בהדרגה. בתוך חודשים ספורים, ייצור החיסונים הפך לפרויקט תעשייתי עצום בקנה
+מידה עולמי. אם בתחילת הדרך נספרו כל קרטון וכל בקבוקון, הרי שבסוף 2021
+כבר יוצרו מעל 10 מיליארד מנות חיסון -- קצב שלא נראה כמותו בהיסטוריה של
+התעשייה התרופתית. המעבר ממחסור חריף לשפע יחסי התרחש בזכות שילוב של
+טכנולוגיות חדשות, הרחבת קווי ייצור, רגולציה מואצת ושיתוף פעולה
+בינלאומי}.
+
+\RL{הסיפור הזה מדגיש היטב את תפקידה של הנדסת תהליכים: היא זו שמאפשרת
+להפוך הישג מדעי נקודתי להישג מעשי בקנה מידה עולמי -- במהירות, באמינות,
+ובעלות סבירה. ללא ההתרחבות הדרמטית של יכולות הייצור, החיסונים היו נשארים
+במעבדות ובמרכזי מחקר, רחוקים מן האנשים שהיו זקוקים להם ביותר}.
+\RL{מהנדסי ומהנדסות תהליכים הם מי שמתרגמים ידע מדעי לתשתית תעשייתית
+ברת-קיימא, והם ממלאים תפקיד קריטי בכל תחום שבו נדרשת הנדסה בקנה מידה
+גדול -- מתעשיית המזון והתרופות ועד לאנרגיה ולכימיה מתקדמת}.
+
+\RL{במובן זה, מגפת הקורונה שימשה "שיעור חי" לעולם כולו: היא המחישה כיצד
+אתגרים גלובליים תלויים לא רק במדע, אלא גם בהנדסה שמאפשרת להפוך רעיון
+למציאות}. \RL{הנדסת תהליכים היא הסיפור הזה -- איך מולקולה שנבדקה במעבדה
+הופכת לחיסון שמציל חיים. איך חדשנות הופכת לאוכל על המדף, לאנרגיה נקייה,
+או לשבב מחשב שמניע את הטלפון שלכם}. \RL{הספר שלפניכם לא בא רק ללמד
+חוקים, משוואות או דיאגרמות. הוא בא לספר את הסיפור של תחום שמחבר בין מדע
+לבין חיים אמיתיים. תחום שנמצא בכל מקום -- גם אם לפעמים לא שמים לב.}
+
+\bookmarksetup{startatroot}
+
+\chapter{\texorpdfstring{\RL{פרק 1 -- מבוא להנדסת
+תהליכים}}{פרק 1 -- מבוא להנדסת תהליכים}}\label{ux5e4ux5e8ux5e7-1-ux5deux5d1ux5d5ux5d0-ux5dcux5d4ux5e0ux5d3ux5e1ux5ea-ux5eaux5d4ux5dcux5d9ux5dbux5d9ux5dd}
+
+\section{\texorpdfstring{\RL{מהי הנדסת
+תהליך}?}{מהי הנדסת תהליך?}}\label{ux5deux5d4ux5d9-ux5d4ux5e0ux5d3ux5e1ux5ea-ux5eaux5d4ux5dcux5d9ux5da}
+
+\RL{הנדסת תהליך היא תחום הנדסי-מדעי רחב, העוסק בהמרת חומרי גלם למוצרים
+בעלי ערך כלכלי או חברתי, באמצעות תהליכים מתוכננים ומבוקרים. בניגוד למדע
+"טהור", שמבקש להבין תופעות טבע, מטרתה של הנדסת תהליך היא \textbf{לרתום
+את הידע המדעי לצורך יישום מעשי}}. \RL{מהנדסי תהליך שואלים לא רק
+\emph{מהי} תגובה כימית או ביולוגית, אלא גם \emph{כיצד ניתן לתרגם אותה
+לייצור תעשייתי} - יציב, בטוח, כלכלי ובר-קיימא}.
+
+\RL{התחום משלב ידע ממדעים בסיסיים -- כימיה, ביולוגיה, פיזיקה ומתמטיקה --
+יחד עם כלים הנדסיים ותפיסה מערכתית. השאלה המרכזית היא תמיד מערכתית: איך
+הופכים תהליך מקומי או תופעה מדעית לתהליך כולל, שבו חומרי גלם מוזרמים,
+מומרצים, עוברים שינוי, מופרדים, ומניבים מוצר איכותי}?
+
+\RL{כיוון שהנדסת תהליך עוסקת \emph{בדרכים} ולא רק \emph{בתוצרים}},
+\RL{היא מיושמת במגוון עצום של תחומים}.
+
+\RL{בתעשייה הכימית, לדוגמה, הנדסת תהליך מאפשרת ייצור של פולימרים, דשנים
+ומתכות בקנה מידה עולמי. בתחום הביוטכנולוגיה היא מאפשרת הפקה של חלבונים,
+חיסונים ותרופות, לעיתים באמצעות תאים חיים או אנזימים, תוך שמירה על תנאים
+אופטימליים לריאקציה הביולוגית}. \RL{מעבר לכך, הנדסת תהליך נוגעת גם
+באנרגיה -- למשל בפיתוח דלק ביולוגי מאצות}; \RL{בסביבה -- באמצעות טיפול
+בשפכים תעשייתיים בעזרת ביוריאקטורים}; \RL{ובמזון -- למשל בייצור יוגורט
+תעשייתי}, \RL{שבו שליטה בתנאי התסיסה היא קריטית}.
+
+\RL{בכל התחומים הללו חוזרת אותה לוגיקה הנדסית\ul{: פירוק הבעיה ליחידות
+פעולה (חימום, קירור, ערבוב, זרימה, ספיגה, הפרדה) ושילובן לתהליך
+כולל}}\ul{.}
+
+\subsection{\texorpdfstring{\RL{מה מבדיל בין ביוטכנולוגים למהנדסי
+ביוטכנולוגיה}?}{מה מבדיל בין ביוטכנולוגים למהנדסי ביוטכנולוגיה?}}\label{ux5deux5d4-ux5deux5d1ux5d3ux5d9ux5dc-ux5d1ux5d9ux5df-ux5d1ux5d9ux5d5ux5d8ux5dbux5e0ux5d5ux5dcux5d5ux5d2ux5d9ux5dd-ux5dcux5deux5d4ux5e0ux5d3ux5e1ux5d9-ux5d1ux5d9ux5d5ux5d8ux5dbux5e0ux5d5ux5dcux5d5ux5d2ux5d9ux5d4}
+
+\RL{ביוטכנולוגים וביוטכנולוגיות מתמקדים בחקר מערכות ביולוגיות בקנה מידה
+קטן: הם מפתחים שיטות מעבדתיות חדשות, מאפיינים תאים וחלבונים, ומגלים
+דרכים לנצל מנגנונים ביולוגיים ליצירת חומרים ותרופות. עבודתם עוסקת בשאלה
+\emph{האם תהליך ביולוגי מסוים מתרחש וכיצד ניתן להשתמש בו
+לרווחתנו}}\emph{?}
+
+\RL{מהנדסי ומהנדסות ביוטכנולוגיה, לעומת זאת, לוקחים את הממצאים הללו
+ומתרגמים אותם למערכות בקנה מידה תעשייתי. הם מתמודדים עם האתגר של הפיכת
+תהליכים עדינים ורגישים, כמו גידול תאים, ייצור חלבונים רקומביננטיים או
+תסיסה מיקרוביאלית, למערכות יציבות, מבוקרות ורווחיות}.\\
+\RL{המשימה שלהם אינה רק להבין את התהליך, אלא להפוך אותו ליישים במפעל
+ביוטכנולוגי}.
+
+\RL{אתגרים מרכזיים בעבודת מהנדס ביוטכנולוגיה כוללים}:
+
+\begin{itemize}
+\item
+  \RL{\textbf{אספקת חומרי גלם ביולוגיים}} -- \RL{תאים, מצעי גידול,
+  אנזימים}.
+\item
+  \RL{\textbf{תכנון ביוריאקטורים}} -- \RL{שליטה בלחץ, טמפרטורה}, pH,
+  \RL{רמות חמצן והזנה לקבלת מערכת הומוגנית}
+\item
+  \RL{\textbf{הפרדת תוצרים}} -- \RL{טיהור חלבונים, סינון תאים, הפרדת
+  תרכובות מורכבות}.
+\item
+  \RL{\textbf{בטיחות ביולוגית}} -- \RL{מניעת זיהומים, עבודה בתנאים
+  סטריליים, מניעת שחרור מיקרואורגניזמים}.
+\end{itemize}
+
+\RL{במילים אחרות: הביוטכנולוג שואל} \emph{``\RL{האם התא מייצר את
+החלבון?"}\emph{\RL{מהנדס הביוטכנולוגיה שואל} }''\RL{איך אני מייצר מיליון
+מנות תרופה בצורה יציבה, בטוחה ורווחית}?{}``}
+
+\subsection{\texorpdfstring{\RL{היבטים משלימים: כלכלה, רגולציה
+וסביבה}}{היבטים משלימים: כלכלה, רגולציה וסביבה}}\label{ux5d4ux5d9ux5d1ux5d8ux5d9ux5dd-ux5deux5e9ux5dcux5d9ux5deux5d9ux5dd-ux5dbux5dcux5dbux5dcux5d4-ux5e8ux5d2ux5d5ux5dcux5e6ux5d9ux5d4-ux5d5ux5e1ux5d1ux5d9ux5d1ux5d4}
+
+\RL{כדי שתהליך ביוטכנולוגי יהפוך ממחקר מעבדתי לייצור תעשייתי, יש לשקלל
+שלושה ממדים נוספים מעבר לצד הטכני-מדעי}:
+
+\begin{itemize}
+\item
+  \RL{\textbf{כלכלה}} -- \RL{ייצור בקנה מידה גדול דורש חישוב עלויות של
+  מצעי גידול, מערכות סטריליזציה, אנרגיה ותפעול. אם שלב הטיהור של חלבון
+  יקר מדי -- המוצר לא יוכל לצאת לשוק}.
+\item
+  \RL{\textbf{רגולציה}} -- \RL{מוצרי ביוטכנולוגיה (כמו חיסונים או תרופות
+  מבוססות תאים) כפופים לסטנדרטים מחמירים של רשויות בריאות. נדרש תיעוד
+  מלא, בקרת איכות רציפה ותהליכי ייצור נקיים} (GMP).
+\item
+  \RL{\textbf{סביבה}} -- \RL{תהליכים ביוטכנולוגיים יוצרים פסולת ביולוגית
+  ושפכים תעשייתיים. יש צורך בשיטות טיפול, ניטרול והשבה כדי למזער נזקים
+  סביבתיים ולשמור על קיימות}.
+\end{itemize}
+
+\RL{האיזון בין שלושת ההיבטים הללו -- כלכלה, רגולציה וסביבה -- לצד הידע
+המדעי וההנדסי, הוא שמאפשר למהנדסי ביוטכנולוגיה להפוך תגלית ביולוגית
+למערכת ייצור תעשייתית שמספקת ערך אמיתי לחברה}.
+
+\section{\texorpdfstring{\RL{איך נראית עבודת מהנדס ומהנדסת
+התהליך}?}{איך נראית עבודת מהנדס ומהנדסת התהליך?}}\label{ux5d0ux5d9ux5da-ux5e0ux5e8ux5d0ux5d9ux5ea-ux5e2ux5d1ux5d5ux5d3ux5ea-ux5deux5d4ux5e0ux5d3ux5e1-ux5d5ux5deux5d4ux5e0ux5d3ux5e1ux5ea-ux5d4ux5eaux5d4ux5dcux5d9ux5da}
+
+\RL{עבודתם של מהנדסי ומהנדסות התהליך מורכבת ממספר שלבים עיקריים. שלבים
+אלו אינם תמיד לינאריים -- לעיתים חוזרים אחורה, בוחנים חלופות חדשות או
+משנים פרמטרים בהתאם לנתונים שמתקבלים}.
+
+\textbf{\RL{שלבים מרכזיים בהנדסת תהליך:}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1634}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3007}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5294}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{\RL{שלב}}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{\RL{תיאור}}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{\RL{דוגמא}}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{\RL{אפיון הבעיה והגדרת מטרות}} &
+\begin{minipage}[t]{\linewidth}\raggedright
+\RL{זיהוי הצורך: האם מדובר בייצור מוצר חדש, בשיפור תהליך קיים או בהפחתת
+עלויות}?\\
+\RL{קביעת יעדים כמותיים ואיכותיים (כמות ייצור, רמת טוהר, דרישות
+רגולציה)}.\strut
+\end{minipage} & \RL{חברת ביוטכנולוגיה המעוניינת לייצר חיסון חדש נדרשת
+להגדיר מראש כמה מנות יש לייצר בשנה, מהו טווח הטמפרטורה לשימור, ואילו
+תקנים רפואיים יש לעמוד בהם}. \\
+\textbf{\RL{פיתוח ראשוני של התהליך}} &
+\begin{minipage}[t]{\linewidth}\raggedright
+\RL{בחירת מסלול תגובה או שיטה ביוטכנולוגית (כימית/אנזימטית/ביולוגית)}.\\
+\RL{בחינת תנאים פיזיקליים} \RL{(טמפרטורה, לחץ}, pH, \RL{ריכוזים)}\strut
+\end{minipage} & \RL{בייצור בירה, התהליך הביוכימי המרכזי הוא התססת
+סוכרים להפקת אלכוהול. מהנדס התהליך בוחר את תנאי התסיסה -- סוג השמרים,
+טמפרטורה וזמן} \\
+\textbf{\RL{תכנון יחידות פעולה}} &
+\begin{minipage}[t]{\linewidth}\raggedright
+\RL{קביעת סוג הריאקטור (רציף/אצווה, ביוריאקטור עם ערבוב או ללא)}.\\
+\RL{תכנון שלבי הפרדה (סינון, זיקוק, מיצוי)}.\\
+\RL{תכנון מערכות תומכות: חימום, קירור, ערבוב, אוורור}.\strut
+\end{minipage} & \RL{בייצור אתנול מדלק ביולוגי נדרשים ריאקטורים לתסיסה,
+אך גם שלב זיקוק להפרדת האתנול מהמים} \\
+\textbf{\RL{התייחסות לשיקולי כלכלה ובטיחות}} &
+\begin{minipage}[t]{\linewidth}\raggedright
+\RL{בחינת עלות חומרי גלם, אנרגיה ותפעול}.\\
+\RL{עמידה בתקני בטיחות ותכנון למניעת כשלים (לחץ יתר, טמפרטורה
+חריגה)}.\strut
+\end{minipage} & \RL{במפעל לייצור אמוניה (תהליך הבר--בוש), נדרש לחץ גבוה
+מאוד. מהנדסי התהליך מתכננים מערכות בטיחות כדי למנוע פיצוצים ולשמור על
+יציבות הכלים}. \\
+\textbf{\RL{בקרה ואופטימיזציה}} &
+\begin{minipage}[t]{\linewidth}\raggedright
+\RL{הטמעת מערכות בקרה בזמן אמת}.\\
+\RL{ניתוח נתוני תהליך ושיפורים מתמשכים}.\strut
+\end{minipage} & \RL{בייצור אינסולין רקומביננטי, בקרה רציפה של רמות
+ה-}pH \RL{והריכוזים בתרביות התאים מאפשרת למקסם את תפוקת החלבון ולהפחית
+הפסדים} \\
+\end{longtable}
+
+\section{\texorpdfstring{\RL{פתרון בעיות בהנדסת
+תהליך}}{פתרון בעיות בהנדסת תהליך}}\label{ux5e4ux5eaux5e8ux5d5ux5df-ux5d1ux5e2ux5d9ux5d5ux5ea-ux5d1ux5d4ux5e0ux5d3ux5e1ux5ea-ux5eaux5d4ux5dcux5d9ux5da}
+
+\RL{פתרון בעיות הוא ליבת ההנדסה, ובמיוחד בהנדסת תהליך. אך חשוב להדגיש:
+בניגוד לבעיות מתמטיות "טהורות", בעיות הנדסיות עוסקות במציאות, והמציאות
+אינה ניתנת לתיאור מושלם}.
+
+\subsection{\texorpdfstring{\RL{מודלים כקירוב
+למציאות}}{מודלים כקירוב למציאות}}\label{ux5deux5d5ux5d3ux5dcux5d9ux5dd-ux5dbux5e7ux5d9ux5e8ux5d5ux5d1-ux5dcux5deux5e6ux5d9ux5d0ux5d5ux5ea}
+
+\RL{בהנדסת תהליך אנו עושים שימוש במודלים מתמטיים -- משוואות מאזני חומר,
+אנרגיה ותנע, משוואות קינטיות, מודלים אמפיריים ועוד -- כדי לתאר תהליכים
+מורכבים. המודל מאפשר חישוב, חיזוי ואופטימיזציה}.\\
+\RL{אולם, המודלים הם תמיד \textbf{קירוב}}:
+
+\begin{itemize}
+\item
+  \RL{הם מתבססים על הנחות (לדוגמה: זרימה למינרית, מצב יציב, תגובה
+  חד-שלבית)}.
+\item
+  \RL{הם מפשטים מצבים מורכבים (למשל, מניחים שהתערובת אידיאלית או שהתנאים
+  אחידים בכל המערכת)}.
+\item
+  \RL{הם מתעלמים לעיתים מגורמים "קטנים" שבמציאות עשויים להיות משמעותיים
+  (למשל, זיהום זעיר שמוביל לשינוי התוצאה)}.
+\end{itemize}
+
+\RL{למרות זאת, מודלים טובים משמשים לחיסכון בזמן ומשאבים. תיאור מתמטי מלא
+של מערכת פיזיקלית או ביולוגית יהיה בדרך כלל כה מורכב, עד שלא ניתן לפתור
+אותו באופן אנליטי. גם אם נכתוב את המודל "המדויק ביותר", בסופו של דבר
+ניאלץ להשתמש בקירובים נומריים שמכניסים שגיאות משלהם. לכן, לעיתים דווקא
+מודל פשוט יותר מספק תובנות שימושיות יותר -- מפני שקל יותר לחשב אותו
+ולבצע עליו ניתוחים}.
+
+\RL{במילים אחרות, המודל אינו "האמת", אלא כלי עבודה שמאפשר לנו להתקדם.
+כפי שצוטט הסטטיסטיקאי ג'ורג' אי. פ. בוקס} (George E. P. Box)\RL{:}
+
+\emph{"All models are wrong, but some are useful."}
+
+\RL{המהנדס חייב לדעת \textbf{להשתמש במודל בלי ליפול לאשליה שהוא המציאות
+עצמה-} לדעת מתי המודל מספיק שימושי, ואילו שגיאות הוא מכניס לתמונה}.
+\RL{לכן חלק מהבעיה הוא גם לשאול: \emph{עד כמה הפתרון רלוונטי? מהי רמת
+הדיוק הדרושה}}\emph{?}
+
+\subsection{\texorpdfstring{\RL{אסטרטגיות לפתרון
+בעיות}}{אסטרטגיות לפתרון בעיות}}\label{ux5d0ux5e1ux5d8ux5e8ux5d8ux5d2ux5d9ux5d5ux5ea-ux5dcux5e4ux5eaux5e8ux5d5ux5df-ux5d1ux5e2ux5d9ux5d5ux5ea}
+
+\RL{פתרון בעיות בהנדסה איננו חד-כיווני. קיימות מספר גישות שיכולות
+לסייע}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{\RL{גישה מההתחלה לסוף} (forward problem solving)}\\
+  \RL{מתחילים מהנתונים הידועים ומתקדמים שלב אחר שלב באמצעות המודלים עד
+  לתוצאה המבוקשת}. \RL{זה נוח כאשר יש שיטה מסודרת או שיש לנו את כל
+  הנתונים מלאים. אבל} \RL{אם יש נתון חסר או טעות בהתחלה -- אנחנו עלולים
+  להתקע במקום, או להתפזר לחישובים שאינם רלוונטיים.}
+\item
+  \textbf{\RL{גישה מהסוף להתחלה} \RL{}(backward problem solving)}\\
+  \RL{מתחילים מהתוצאה הרצויה (מה אנחנו רוצים לדעת או לחשב) וחושבים
+  לאחור: אילו משתנים דרושים כדי להגיע לשם? אילו משוואות עלינו להפעיל}?
+  \RL{}
+\item
+  \textbf{\RL{גישה מהאמצע} (identifying the bottleneck)}\\
+  \RL{לעיתים הבעיה נתקעת סביב שלב מסוים -- למשל חוסר נתון קריטי, או
+  משוואה שאיננו יודעים כיצד ליישם. במקרה כזה כדאי להתחיל דווקא מהנקודה
+  הבעייתית ביותר, לפרק אותה, ולהמשיך ממנה קדימה ואחורה}.
+\item
+  \textbf{\RL{גישה אינטגרטיבית} \RL{}(mixed strategies)}\\
+  \RL{לרוב הפתרון אינו מתבצע בגישה אחת בלבד אלא בשילוב: מתחילים מהנתונים
+  הידועים, מזהים את החסר, חושבים לאחור מהתוצאה, ולעיתים עוצרים באמצע כדי
+  להתמודד עם מכשול נקודתי}.
+\end{enumerate}
+
+\RL{כאשר נתקלים בשאלה ארוכה או מורכבת, לא ניגשים מיד לחישובים. פתרון
+בעיות בהנדסה דורש סדר מחשבתי, ארגון מידע והסקת מסקנות מבוססות. התרשים
+הבא מציג תהליך שיטתי --- מעין "אלגוריתם הנדסי" --- המסייע לגשת לכל שאלה
+בצורה מסודרת: לקרוא, לנתח, לבחור כלים, להציב נתונים ולבדוק את סבירות
+התוצאה}.
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+\textbf{\RL{\ul{שלב א: ניתוח והגדרת הבעיה}}}
+
+\end{tcolorbox}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{קריאה מהירה לסריקה כללית, ואז קריאה מדויקת של השאלה}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{ניסוח היעד במילים שלך: מה בדיוק נדרש לחשב/להראות}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{ציור דיאגרמה של המערכת; סימון נתונים ידועים (עם יחידות)
+  ובלתי־ידועים (אותיות)}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{זיהוי רמזים מילוליים (למשל ``גדול/קטן מאוד'', ``בקירוב'',
+  ``בהשוואה ל--'') ושיוכם לתובנות הנדסיות}.
+
+  \end{tcolorbox}
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+\textbf{\RL{\ul{שלב ב: תכנון הפתרון}}}
+
+\end{tcolorbox}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{קביעת גבולות המערכת ובחירת בסיס חישוב (אם רלוונטי)}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{רישום הנחות עבודה מוצהרות (מצב יציב/לא יציב, הזנחות,
+  אידיאליזציות)}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{פירוק הבעיה לבעיות קטנות}
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{בחירת הכלים המתאימים: מאזני מסה/אנרגיה/תנע, משוואות מצב,
+  קורלציות/טבלאות (קיטור, פסיכרומטרי וכו\textquotesingle)}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{אם חסר נתון: חפשו במקורות/גרפים; ואם עדיין חסר --- הציעו הנחה
+  סבירה וציינו אותה במפורש}.
+
+  \end{tcolorbox}
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+\textbf{\RL{\ul{שלב ג: פתרון}}}
+
+\end{tcolorbox}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{רישום המשוואות בסימנים תחילה (ללא מספרים) ובדיקת הומוגניות
+  יחידות}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{הצבה מסודרת של ערכים (עם יחידות!), פתרון אלגברי/נומרי/גרפי.}
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{עבודה איטרטיבית: אם מתגלה חסר/סתירה --- חזרה לשלב ב' לעדכון
+  הנחות/בחירת מסלול חלופי}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{הצגת התוצאות בדיוק הנדסי סביר}
+
+  \end{tcolorbox}
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+\textbf{\RL{\ul{שלב ד: בדיקה ואימות}}}
+
+\end{tcolorbox}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  ``\RL{בדיקת שפיות'': יחידות נכונות, סדרי גודל סבירים, תחומים פיזיקליים
+  הגיוניים}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{הצבה חוזרת במשוואות} (Back-Substitution) \RL{ובמידת האפשר בדיקה
+  בדרך חלופית קצרה}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{וידוא שעניתם בדיוק על מה שהתבקש (הגדרה, יחידות, דיוק/ספרות
+  משמעותיות)}
+
+  \end{tcolorbox}
+\end{enumerate}
+
+\includegraphics[width=6.5in,height=3.36736in]{media/media/image1.png}
+
+Figure \RL{1 - שלבים בפתרון בעיות}
+
+\subsection{\texorpdfstring{\RL{פתרון בעיות כמיומנות
+נרכשת}}{פתרון בעיות כמיומנות נרכשת}}\label{ux5e4ux5eaux5e8ux5d5ux5df-ux5d1ux5e2ux5d9ux5d5ux5ea-ux5dbux5deux5d9ux5d5ux5deux5e0ux5d5ux5ea-ux5e0ux5e8ux5dbux5e9ux5ea}
+
+\RL{מעבר לגישות, חשוב לזכור כי פתרון בעיות הוא מיומנות שמתפתחת עם תרגול.
+הטעויות הן החלק הכי חשוב בלמידה. הן מאפשרות לנו להבין היכן ההנחות לא היו
+נכונות, היכן המודל לא התאים, או אילו נתונים נדרשו ולא נלקחו בחשבון}.
+\RL{כאשר פתרון מצליח מיד, אנו נוטים לעבור הלאה מבלי לשים לב מדוע הוא
+הצליח. דווקא כאשר מתרחשת טעות אנו נדרשים לעצור, לנתח את מקור הבעיה,
+ולהבין את המגבלות של דרך החשיבה שלנו. במובן זה,}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{טעות היא לא כישלון אלא מקור לתובנות חדשות}
+
+\end{tcolorbox}
+
+\RL{היא מאלצת אותנו לשכלל את המיומנות, ומביאה אותנו לפתרונות עמוקים
+ויצירתיים יותר}. \RL{יכולת ההנדסה אינה נמדדת רק בפתרון "נכון", אלא גם
+(שלא לומר, בעיקר) ביכולת להסביר למה פתרון מסוים שגוי, ולשפר אותו}.
+
+\RL{חשוב לזכור שפתרון בעיות זהו תהליך אינטראקטיבי ולא לינארי, התהליך
+כולל שלבים של זיהוי הבעיה, פירוק לגורמים, שילוב ידע מתמטי וכימי, ו"בדיקת
+שפיות" (בדיקה של סבירות הפתרון המתקבל). אך מעבר לכך יש שונות מאוד גדולה
+בין המערכות השונות והדרכים להתמודד איתן. המטרה היא לפתח דרך מתודית
+להתמודדות עם בעיות חדשות ולזהות באילו שלבים אנו נתקעים. תהליך זה כולל
+שלבים כמו זיהוי הבעיה, הבנתה, שליפת מידע רלוונטי, סינתזה של הנתונים,
+והערכת התוצאה תוך בדיקת יחידות, סדרי גודל ורמת הדיוק הנדרשת.}
+
+\subsubsection{\texorpdfstring{\RL{אימות התוצאות (}validating
+results\RL{)}}{אימות התוצאות (validating results)}}\label{ux5d0ux5d9ux5deux5d5ux5ea-ux5d4ux5eaux5d5ux5e6ux5d0ux5d5ux5ea-validating-results}
+
+\RL{יש שלוש דרכים עיקריות לבצע אימות כזה}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{\RL{הצבה חוזרת} (Back-Substitution)} -- \RL{לאחר מציאת הפתרון,
+  מציבים אותו בחזרה במשוואות המקוריות ובודקים אם הוא אכן מקיים אותן}.
+  \RL{זוהי דרך ישירה לוודא שהפתרון מתמטי תקין}.
+\item
+  \textbf{\RL{בדיקת סדר גודל} (Order of Magnitude Estimation)} --
+  \RL{מבצעים חישוב גס עם מספרים פשוטים או חזקות של 10 כדי להעריך את גודל
+  התוצאה הצפוי}. \RL{אם התוצאה המדויקת שונה בסדרי גודל -- סביר שנפלה
+  טעות. אם היא קרובה -- זה נותן ביסוס לתוצאה שלא התרחקנו מהאמת}.
+\item
+  \textbf{\RL{מבחן ההיגיון} (Test of Reasonableness)} -- \RL{שואלים האם
+  התוצאה אפשרית פיזיקלית: האם היא עומדת בתחומי המציאות}? \RL{לדוגמה, אם
+  קיבלנו טמפרטורה גבוהה מהשמש או מהירות גדולה ממהירות האור -- יש לשוב
+  ולבדוק את הדרך}.
+\end{enumerate}
+
+\RL{בדיקה עצמית היא אחת מאבני היסוד של החשיבה ההנדסית}. \RL{מהנדס או
+מהנדסת טובים אינם רק פותרים בעיות -- הם גם יודעים לזהות מתי הפתרון שלהם
+לא סביר ולתקן בהתאם}.
+
+\subsubsection{\texorpdfstring{\RL{מחסומים בפתרון בעיות: זיהוי וכלים
+להתמודדות}}{מחסומים בפתרון בעיות: זיהוי וכלים להתמודדות}}\label{ux5deux5d7ux5e1ux5d5ux5deux5d9ux5dd-ux5d1ux5e4ux5eaux5e8ux5d5ux5df-ux5d1ux5e2ux5d9ux5d5ux5ea-ux5d6ux5d9ux5d4ux5d5ux5d9-ux5d5ux5dbux5dcux5d9ux5dd-ux5dcux5d4ux5eaux5deux5d5ux5d3ux5d3ux5d5ux5ea}
+
+\RL{במקרים רבים סטודנטים וסטודנטיות נתקלים בקשיים שונים בתהליך הפתרון --
+לעיתים בשל חוסר ידע, אך לרוב בשל עבודה לא שיטתית. טעויות שכיחות כוללות
+קריאה שטחית של השאלה, בחירת משוואות לא מתאימות, בלבול ביחידות, או
+חישובים מרושלים. לעיתים הקושי נובע ממתח ולחץ, או ממחשבה חד-כיוונית
+שמובילה להיתקעות בפתרון אחד בלבד. ההתקדמות בלמידה מתחילה בזיהוי הסיבה
+האמיתית לקושי -- האם מדובר בבעיה בהבנת הנתונים, בתכנון הדרך, או בהערכת
+התוצאה -- ורק אז ניתן לשפר את המיומנות המתאימה.}
+
+\RL{כדי להתגבר על מחסומים בפתרון בעיות חשוב לפתח הרגלי חשיבה יעילים:
+לקרוא את השאלה כמה פעמים ולנסח אותה במילים שלנו, לצייר דיאגרמה מסודרת של
+הנתונים, לתכנן מראש את דרך הפתרון ולחזות תוצאה סבירה. בתחילת הדרך אנו
+נעבוד עם מערכות פשוטות כך שעלולה להווצר נטייה לדלג על שלבים, חשוב לזכור
+שהמטרה היא לא הפתרון של המערכת הספציפית, אלא פיתוח שיטות להתמודדות עם
+מערכות מסובכות יותר בעתיד, ועל כן הדגש הוא על שימוש נכון בשיטות ולא על
+התוצאה הסופית.}
+
+\section{\texorpdfstring{\RL{סיכום}}{סיכום}}\label{ux5e1ux5d9ux5dbux5d5ux5dd}
+
+\RL{הנדסת תהליך היא תחום רחב שמאחד עקרונות מדעיים, שיקולים הנדסיים
+וכלכלה יישומית לכדי מסגרת אחת. היא גשר בין מעבדה לתעשייה, בין רעיונות
+חדשניים ליישום בקנה מידה גדול. המהות שלה היא היכולת להמיר ידע לכדי תהליך
+מתוכנן -- כזה שמשרת את החברה, מייצר ערך כלכלי, ושומר על בטיחות האדם
+והסביבה}.
+
+\RL{\hfill\break
+}
+
+\bookmarksetup{startatroot}
+
+\chapter{\texorpdfstring{\RL{פרק 2 -- מבוא לחישובים
+הנדסיים}}{פרק 2 -- מבוא לחישובים הנדסיים}}\label{ux5e4ux5e8ux5e7-2-ux5deux5d1ux5d5ux5d0-ux5dcux5d7ux5d9ux5e9ux5d5ux5d1ux5d9ux5dd-ux5d4ux5e0ux5d3ux5e1ux5d9ux5d9ux5dd}
+
+\section{\texorpdfstring{\RL{מה נלמד בפרק
+הזה}?}{מה נלמד בפרק הזה?}}\label{ux5deux5d4-ux5e0ux5dcux5deux5d3-ux5d1ux5e4ux5e8ux5e7-ux5d4ux5d6ux5d4}
+
+\begin{itemize}
+\item
+  \RL{\textbf{להמיר} גדלים פיזיקליים בין מערכות יחידות שונות בעזרת מקדמי
+  המרה}.
+\item
+  \RL{\textbf{לזהות} יחידות מקובלות למסה ולמשקל במערכות} SI, CGS
+  \RL{ואמריקאיות}; \RL{\textbf{לחשב} משקל מתוך מסה ביחידות טבעיות או
+  מוגדרות}.
+\item
+  \RL{\textbf{לקבוע} מספר ספרות משמעותיות בערך נתון}; \RL{\textbf{להחיל}
+  כללים לקביעת ספרות משמעותיות בתוצאות של פעולות חשבון}.
+\item
+  \RL{\textbf{לאמת} פתרון באמצעות הצבה חוזרת, בדיקת סדרי גודל ובחינת
+  סבירות}.
+\item
+  \RL{\textbf{לחשב} ממוצע, טווח, שונות וסטיית תקן מנתוני מדגם,
+  ו\textbf{לפרש} את משמעותם}.
+\item
+  \RL{\textbf{להסביר} את עקרון ההומוגניות הממדית של משוואות
+  ו\textbf{להחיל} אותו על איברים לא ידועים}.
+\item
+  \RL{\textbf{לבצע} אינטרפולציה ליניארית בין נתוני טבלה, ו\textbf{לנתח}
+  מצבים שבהם השיטה עלולה להטעות}.
+\item
+  \RL{\textbf{לגזור} משוואת קו ישר משתי נקודות נתונות, ו\textbf{להתאים}
+  קו ישר לנתונים ניסיוניים}.
+\item
+  \RL{\textbf{לזהות} ייצוגים גרפיים מתאימים (רגיל, חצי-לוגריתמי,
+  לוגריתמי) עבור קשרים מסוג חזקה או אקספוננט}; \RL{\textbf{לקבוע}
+  פרמטרים מתוך גרף ליניארי}.
+\end{itemize}
+
+\section{\texorpdfstring{\RL{מימדים
+ויחידות}}{מימדים ויחידות}}\label{ux5deux5d9ux5deux5d3ux5d9ux5dd-ux5d5ux5d9ux5d7ux5d9ux5d3ux5d5ux5ea}
+
+\RL{כל תחום המדע וההנדסה בנוי על היכולת שלנו \textbf{לתאר תופעות באופן
+מספרי ומדויק}}. \RL{ברגע שאנחנו מתארים תופעה באמצעות מספר ויחידה, אנחנו
+יכולים להשוות אותה לתופעות אחרות, לחשב חישובים מתמטיים, לבצע ניבויים ואף
+לתכנן מערכות מורכבות. אבל כדי שכל זה יעבוד, עלינו להשתמש בשפה משותפת --
+שפה של יחידות ומימדים}.
+
+\RL{אי-הבנה או חוסר הקפדה בהמרת יחידות עלול להוביל לשגיאות חמורות. דוגמה
+מפורסמת לכך היא תאונת ה-}\emph{Gimli Glider}\RL{, טיסה של חברת אייר קנדה
+שבה המטוס המריא עם חצי מכמות הדלק הדרושה, עקב בלבול בין ליטרים לבין
+פאונדים. חוסר תשומת לב לשאלה באיזו יחידת מידה מבטאים את כמות הדלק כמעט
+הסתיים באסון. המקרה הזה מדגים עד כמה חיוני להבין היטב מהי מדידה ואיך
+מבצעים המרה נכונה בין יחידות}.
+
+\subsection{\texorpdfstring{\RL{מהי
+מדידה}?}{מהי מדידה?}}\label{ux5deux5d4ux5d9-ux5deux5d3ux5d9ux5d3ux5d4}
+
+\RL{מדידה היא אחת הפעולות הבסיסיות ביותר במדע ובהנדסה. כאשר אנו מבצעים
+מדידה, אנו מבקשים לקבוע כמה גדול מאפיין מסוים של תופעה או עצם, ולבטא את
+התוצאה בצורה מספרית. במילים אחרות}, \textbf{\RL{מדידה היא תהליך של
+השוואת גודל פיזיקלי ליחידת מידה מוסכמת, והבעת התוצאה במספר וביחידה}}.
+
+\RL{כדי להבין טוב יותר, כדאי להבחין בין שלושת המושגים}:
+
+\begin{itemize}
+\item
+  \textbf{\RL{מידה} (Quantity):} \RL{התכונה הפיסיקלית שניתנת למדידה
+  ולהשוואה, כמו מסה, אורך, לחץ, טמפרטורה או הספק.}
+\item
+  \textbf{\RL{מימד} (Dimension):} \RL{המאפיין הפיזיקלי הבסיסי של אותה
+  מידה-- למשל אורך, מסה, זמן,} \RL{או שילובים שלהם (למשל אורך ליחידת
+  זמן). הממד מתאר את סוג הגודל הפיזיקלי הנמדד.}
+\item
+  \textbf{\RL{יחידה} (Unit):} \RL{קנה המידה שבו משתמשים כדי לבטא את
+  הממד. למשל, אורך אפשר למדוד במטרים, סנטימטרים או אינצ'ים. זמן אפשר
+  למדוד בשניות, דקות או שעות}.
+\end{itemize}
+
+\RL{לדוגמה: אם נאמר שהתאוצה היא} \(10\frac{m}{s^{2}}\) \RL{, המידה היא
+התאוצה, המימדים הם אורך ליחידת זמן בריבוע, והיחידות הן מטר לשנייה
+בריבוע.}
+
+\RL{חשוב לשים לב להבדל בין מימד ליחידה}:
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+  \RL{\textbf{המימד} עונה על השאלה \emph{מה אנחנו מודדים}} -- \RL{אורך,
+  זמן, מסה, טמפרטורה}.
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+  \RL{\textbf{היחידה} עונה על השאלה מהו הגודל המוסכם אליו אנו משווים -}
+  \RL{מטרים, שניות, קילוגרמים, מעלות צלזיוס}.
+
+  \end{tcolorbox}
+\end{itemize}
+
+\subsection{\texorpdfstring{\RL{יחידות מידה -- מסע קצר
+בהיסטוריה}}{יחידות מידה -- מסע קצר בהיסטוריה}}\label{ux5d9ux5d7ux5d9ux5d3ux5d5ux5ea-ux5deux5d9ux5d3ux5d4-ux5deux5e1ux5e2-ux5e7ux5e6ux5e8-ux5d1ux5d4ux5d9ux5e1ux5d8ux5d5ux5e8ux5d9ux5d4}
+
+\RL{לפני שהיה סטנדרט בינלאומי, כל תרבות השתמשה ביחידות שונות. רבות מהן
+היו מבוססות על גוף האדם או על צורכי היומיום. למשל}:
+
+\begin{itemize}
+\item
+  \textbf{\RL{אמה} (Cubit):} \RL{המרחק מהמרפק עד קצה האצבעות, ששימש
+  במצרים העתיקה לבנייה}.
+\item
+  \textbf{\RL{פאתום} (Fathom):} \RL{אורך של שישה צעדי רגל, בערך 1.8 מטר,
+  ששימש למדידת עומק מים}.
+\item
+  \textbf{\RL{מיל רומי (}Roman Mile\RL{): מקור}} \RL{השם מייל הוא מהמילה
+  הלטינית} mille passus \RL{-- כלומר "אלף צעדים". אצל הרומאים צעד נחשב
+  לשני פסיעות (צעד שמאל וצעד ימין יחד), ולכן המיל הרומי היה שווה לאלף
+  זוגות צעדים -- בערך 1480 מטר. יחידת מדידה זו שימשה את הלגיונות הרומיים
+  לסימון דרכים ונשארה בסיס לחלק מהיחידות שהתפתחו מאוחר יותר באירופה.}
+\item
+  \textbf{\RL{מייל ימי}:} \RL{כ-1.852 ק"מ, נבעה מחיבור בין מפות הכוכבים
+  למרחקים על פני הים, באמצעות מדידות סקסנט ומחישובים של הימאים. היום
+  מייל ימי מוגדר כ"דקת קשת" המרחק שמקבלים כאשר מחלקים את היקף כדור הארץ
+  ל360 מעלות ו60 דקות בכל מעלה.}
+\item
+  \textbf{\RL{סמאוט} (Smoot):} \RL{יחידת מידה הומוריסטית שהומצאה ב}MIT
+  \RL{ושווה לאורך גופו של סטודנט בשם אוליבר סמאוט (כ}-\RL{1.70
+  מ\textquotesingle)}.
+\end{itemize}
+
+\RL{יחידות אלו אולי נראות לנו מוזרות או מגוחכות היום, אך הן היו הגיוניות
+בתקופתן. היתרון הגדול בשימוש ביחידות המבוססות על גוף האדם הוא נוחות
+וזמינות: לכל אחד יש יד, רגל או אמה, ולכן לא צריך כלי מדידה מיוחד כדי
+לקבוע מרחקים או גדלים. כך למשל, חקלאי יכול היה למדוד שדה בצעדים, ובנאי
+יכול היה למדוד קורות לפי אמות ידיו. עם זאת, יחידות כאלו סובלות מבעיה
+מרכזית -- הן אינן אחידות. אורך הזרוע של אדם אחד שונה מזה של אחר, ואפילו
+אצל אותו אדם המדידה אינה מדויקת לאורך זמן. חוסר האחידות הזה מקשה מאוד על
+תקשורת מדעית וטכנית: מה שאצל אחד הוא "אמה" של 45 ס"מ יכול אצל אחר להיות
+50 ס"מ. לכן, ככל שהמדע והטכנולוגיה התקדמו, התעורר צורך ביחידות מוסכמות,
+קבועות ומוגדרות היטב. השימוש ביחידות בינלאומיות מאפשר לנו לתקשר ידע
+בצורה אמינה וברורה, לבצע חישובים עקביים, ולמנוע טעויות שנובעות מפרשנויות
+שונות של אותה מידה}.
+
+\subsection{\texorpdfstring{\RL{מעבר בין
+יחידות}}{מעבר בין יחידות}}\label{ux5deux5e2ux5d1ux5e8-ux5d1ux5d9ux5df-ux5d9ux5d7ux5d9ux5d3ux5d5ux5ea}
+
+\RL{הצורך ביחידות מוסכמות אינו נובע רק מהיסטוריה של בלבול או נוחות, אלא
+מכך שאין כל משמעות פיזיקלית לחיבור בין גדלים מימדים שונים}. \RL{אי אפשר
+לחבר שלושה מטרים לחמש שניות, משום שמדובר בגדלים השייכים לקטגוריות שונות
+לגמרי. כמו כן, כאשר עובדים עם אותו מימד אפשר לבצע חיבור והשוואה -- אך
+ורק אם כל הערכים מבוטאים באותה יחידה. אם הערכים נתונים ביחידות שונות,
+למשל מטרים וסנטימטרים, תחילה נמיר את כולם ליחידה אחידה ורק אז נוכל לחבר
+או להשוות ביניהם. רק כאשר כל הגדלים באותו ממד ובאותה יחידה, ניתן לבצע
+פעולות של חיבור, חיסור והשוואה בין ערכים.}
+
+\RL{מצד שני, בעוד שחיבור וחיסור אפשריים רק כאשר מדובר באותו ממד ובאותה
+יחידה (או לאחר המרה ליחידה אחידה), הרי שבכפל ובחילוק היחידות מתנהגות ממש
+כמו גורמים אלגבריים: ניתן להכפיל אותן, לחלק אותן ואף לצמצם ביניהן}.
+\RL{בצורה זו אנו יכולים לעבור בין יחידות שונות באותו מימד, ואף ליצור
+יחידות חדשות המייצגות גדלים פיזיקליים חדשים.}
+
+\RL{במילים פשוטות}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{אי אפשר לחבר גדלים ממימדים שונים:}
+  \(1\text{ }m + 3\text{ }L = \text{undefined}\)❌
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{אפשר לחבר רק כשיש אותו מימד ואותה יחידה:}
+  \(10\text{ }cm + 5\text{ }cm = 15\text{ }cm\)✅
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{אם היחידות שונות -- חייבים להמיר:}
+  \(10\text{ }m + 20\text{ }ft = ?\)\RL{← המרה ליחידה אחידה}
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+  \RL{בכפל ובחילוק היחידות מתנהגות כמו ביטוי אלגברי:}
+
+  \end{tcolorbox}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+    \RL{ניתן להכפיל, לחלק ולצמצם יחידות} \RL{באותו המימד}
+
+    \end{tcolorbox}
+  \item
+    \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+    \RL{יצירת יחידות נגזרות (כוח, אנרגיה, לחץ).}
+
+    \end{tcolorbox}
+  \end{itemize}
+\end{itemize}
+
+\RL{המהירות מוגדרת על ידי חלוקת המרחק בזמן ולכן}
+
+\[\frac{30km}{3h} = 10\frac{km}{h}\]
+
+\RL{אלו הן יחידות נגזרות, ואנו נדון בהן בהרחבה בהמשך הפרק.}
+
+\RL{על מנת לעבור מיחידה אחת ליחידה אחרת, נשתמש בפקטור מעבר}
+
+\RL{פקטור מעבר} \textbf{(Conversion Factor) \RL{}}\RL{-\\
+יחס בין שתי יחידות השייכות לאותו המימד ומייצגות את אותה הכמות.}
+
+\RL{זהו יחס מתמטי בין שתי יחידות של אותו ממד, שמבחינה פיסיקלית שווה
+ל}-\RL{1. פקטור המעבר מאפשר לשנות את היחידות מבלי לשנות את הגודל עצמו}.
+
+\[1m = 100cm\  \rightarrow \ \ \frac{1m}{100cm}\ \ \ \ \ או\ \ \ \ \frac{100cm}{1m}\]
+
+\[1h = 3600s\  \rightarrow \ \ \ \ \frac{1h}{3600s}\ \ \ \ \ או\ \ \ \frac{3600s}{1h}\]
+
+\RL{כאשר נכפיל גודל פיזיקלי בפקטור מעבר}, \textbf{\RL{המספר ישתנה,
+היחידות יתעדכנו, אבל הגודל הפיזיקלי עצמו יישאר זהה}}. \RL{לדוגמה, אם
+נאמר שאורך מסוים הוא 1.5 מטר, אפשר לבטא אותו גם כ}-\RL{150 סנטימטר --
+שתי הצורות נכונות, והגודל האמיתי לא השתנה}. \RL{היחסים בין הגדלים השונים
+הם קבועים וניתן למצוא אותן בספרים.}
+
+Figure \RL{2 - גדלים לצורך העברת יחידות. הטבלה מתוך }Felder, R.M.,
+Rousseau, R.W., \& Bullard, L.G. (2016). Elementary Principles of
+Chemical Processes (4th ed.). Wiley
+
+\RL{השתמשו בטבלה על מנת להגדיר את פקטורי המעבר הבאים}
+
+\RL{א. ליטר לגלון (}L-\textgreater gal\RL{)}
+
+\RL{ב. מטר לפיט (}m-\textgreater ft\RL{)}
+
+\RL{כעת נוכל להשתמש בפקטור המעבר על מנת לפתור את המשוואה}
+
+\[10m + 20ft = ?\]
+
+\RL{לצורך כך נמצא את פקטור המעבר בין מטר לפיט. על פי הטבלה} 1m=3.28ft
+\RL{ולכן נוכל להגדיר את פקטורי המעבר}
+
+\[\frac{1m}{3.28ft}\ \ \ \ \ או\ \ \ \frac{3.28ft}{1m}\]
+
+\RL{וכך נוכל לחשב}
+
+\[20ft\  \times \frac{1m}{3.028ft} = 6.1m\]
+
+\RL{שימו לב שניתן לצמצם את היחידות הישנות כך שאנו נשארים רק עם היחידות
+החדשות.}
+
+\RL{בתחום שלנו נהוג לכתוב מעבר זה באמצעות שימוש \textbf{בסרגל מעבר
+יחידות} הנראה כך}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3889}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
+\[= 6.1m\]
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\[1m\]
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\[20ft\]
+\end{minipage} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\[3.28ft\]
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \RL{הוא מאפשר לנו לראות בצורה יותר ברורה שלא נעשתה טעות במעבר
+  היחידות.\\
+  אם בטעות היינו כותבים}
+\end{enumerate}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3056}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4167}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2639}}@{}}
+\toprule\noalign{}
+\multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
+\[=\]
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\[3.28ft\]
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\[20ft\]
+\end{minipage} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\[1m\]
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\RL{היינו רואים שהיחידות לא מצטמצמות כפי שרצינו ומתקנים את ההצבה}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  \RL{הוא מאפשר לנו לשרשר מספר מעברי יחידות אחד אחרי השני, ללא חישובי
+  ביניים כך שהסיכוי לטעות חישובית במהלך המעברים מצטמצם משמעותית. כך
+  למשל, אם נרצה לעבור מיחידות של} ft/h \RL{ליחידות של} m \RL{ל}min\RL{.
+  נגדיר את פקטורי המעבר הנדרשים באמצעות הטבלה}
+\end{enumerate}
+
+\[\frac{1h}{60m}\ \ \ או\ \ \ \frac{60m}{1h}\ \ \ \ \ \ ;\ \ \ \ \ \frac{1m}{3.28ft}\ \ \ \ \ או\ \ \ \frac{3.28ft}{1m}\]
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.5889}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1444}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1444}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1000}}@{}}
+\toprule\noalign{}
+\multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
+\[= \frac{1m}{3.28*60min} = 0.0051\frac{m}{\min}\]
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\[1h\]
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\[1m\]
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\[ft\]
+\end{minipage} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\[60min\]
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\[3.28ft\]
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\[h\]
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\textbf{\RL{שימוש בסרגל יחידות הוא כלי מרכזי להמרות נכונות ולמניעת
+טעויות}\emph{.}} \RL{השיטה מחייבת להציב את הכמות הנתונה בצד שמאל, ולצידה
+סדרה של גורמי המרה הכתובים כשברים. כל גורם נבחר כך שיבטל את היחידות הלא
+רצויות ויחליף אותן ביחידות המבוקשות. ברגע שמציבים את היחידות בתוך השברים
+ומצמצמים אותן באופן אלגברי, נותרת בסוף רק היחידה הרצויה}\emph{.}
+
+\RL{חשוב להכיר בכך שזו אינה שיטה אינטואיטיבית עבור רוב הסטודנטים בתחילת
+הדרך: בהתחלה היא עשויה להיראות מסורבלת או מלאכותית. עם זאת, לאחר
+שמתרגלים לעבוד כך, מתגלה יתרון גדול -- לא רק שהשיטה כמעט מבטלת טעויות
+בסיסיות, אלא היא גם מספקת כלי להתמודדות עם מצבים חדשים ולא מוכרים. כאשר
+מופיעה בעיה שלא ראינו בעבר, עצם העבודה עם היחידות מובילה אותנו בצעדים
+מסודרים אל הפתרון}\emph{.}
+
+\RL{משאית נסעה מרחק של} 25mile \RL{במשך 20 דקות. מהי המהירות של המשאית
+במטר לשנייה?}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1579}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1184}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1974}}@{}}
+\toprule\noalign{}
+\multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
+\[=\]
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\[25\ mile\]
+\end{minipage} \\
+& \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\[20\ min\]
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\subsection{\texorpdfstring{\RL{סיכום}}{סיכום}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-1}
+
+\RL{בפרק זה הכרנו את המושגים הבסיסיים של עולם המדידה:}
+
+\RL{\textbf{מדידה} (}measurement\RL{) היא פעולה של השוואת גודל ליחידת
+מידה מוסכמת.}
+
+\RL{\textbf{מידה} (}quantity\RL{) היא תכונה פיסיקלית אותה ניתן לכמת.}
+
+\RL{\textbf{מימד} (}dimention\RL{) הוא סוג הגודל (אורך, מסה, זמן...).}
+
+\RL{\textbf{יחידה} (}unit\RL{) היא קנה המידה (מטר, קילוגרם, שנייה).}
+
+\RL{\textbf{פקטור מעבר} (}conversion factor\RL{) הוא יחס בין שתי יחידות
+השייכות לאותו המימד ומייצגות את אותה הכמות}
+
+\RL{בנוסף למדנו גם כיצד לבצע המרות באמצעות \textbf{סרגל היחידות}
+(}simple dimensional analysis\RL{). שיטה זו מבטיחה עבודה עקבית עם
+היחידות, מונעת טעויות נפוצות ומסייעת להבין מצבים חדשים ולא מוכרים.}
+
+\section{\texorpdfstring{\RL{מערכות
+יחידות}}{מערכות יחידות}}\label{ux5deux5e2ux5e8ux5dbux5d5ux5ea-ux5d9ux5d7ux5d9ux5d3ux5d5ux5ea}
+
+\RL{מערכת יחידות היא מסגרת מוסכמת של יחידות בסיס ונגזרות, המאפשרת למדוד
+ולחשב גדלים פיזיקליים בצורה עקבית}. \RL{כל מערכת יחידות מורכבת משלושה
+מרכיבים -- יחידות בסיס, יחידות מרובות, ויחידות נגזרות. בעולם המדע
+וההנדסה נעשה שימוש בכמה מערכות יחידות שונות. המערכת המרכזית והמוסכמת
+כיום היא \textbf{המערכת הבינלאומית}}\textbf{(SI)\RL{,}} \RL{המבוססת על
+המטר, הקילוגרם והשנייה, והיא המערכת הרשמית ברוב מדינות העולם. לצד ה-}SI
+\RL{קיימת גם \textbf{מערכת ה-}} \textbf{CGS} \RL{שהיתה נפוצה יותר בעבר
+ובה יחידות הבסיס הן הסנטימטר, הגרם והשנייה. בארצות הברית מקובלת בעיקר
+\textbf{המערכת האמריקאית}} \textbf{(American engineering system (AES))},
+\RL{שבה יחידות הבסיס הן הרגל, הפאונד}-\RL{מסה והשנייה. ההבדלים בין
+מערכות אלו מתבטאים בעיקר בבחירת יחידות הבסיס ובמורכבות ההמרות ביניהן, אך
+כולן מבוססות על אותם עקרונות של מדידה עקבית}.
+
+\RL{\hfill\break
+}
+
+\subsection{\texorpdfstring{\RL{מידות
+בסיסיות}}{מידות בסיסיות}}\label{ux5deux5d9ux5d3ux5d5ux5ea-ux5d1ux5e1ux5d9ux5e1ux5d9ux5d5ux5ea}
+
+\RL{ישנן 7 מידות בסיסיות אשר באמצעותן ניתן להביע את כלל המידות. בכל
+מערכות היחידות המידות הבסיסיות הן זהות, אך היחידות בהן מודדים מידות אלו
+משתנות. הן יחידות שנבחרו לשמש כאבני היסוד של מערכת היחידות. יחידות אלו
+אינן מוגדרות מתוך יחידות אחרות אלא מהוות נקודת מוצא מוסכמת למדידה}.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1389}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1250}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1389}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1250}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1389}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1250}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1736}}@{}}
+\caption{Figure \RL{3} - \RL{היחידות הבסיסיות עבור כל מערכת
+יחידות}}\tabularnewline
+\toprule\noalign{}
+\multicolumn{2}{@{}>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2639} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{AES}
+\end{minipage}} &
+\multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2639} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{CGS}
+\end{minipage}} &
+\multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2639} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{SI}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{\RL{מידות}}
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\multicolumn{2}{@{}>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2639} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{AES}
+\end{minipage}} &
+\multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2639} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{CGS}
+\end{minipage}} &
+\multicolumn{2}{>{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2639} + 2\tabcolsep}}{%
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{SI}
+\end{minipage}} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{\RL{מידות}}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\RL{סימן} & \RL{שם} & \RL{סימן} & \RL{שם} & \RL{סימן} & \RL{שם} & \\
+ft & foot & cm & Centimeter & m & Meter & \RL{אורך} \\
+lb\textsubscript{m} & Pound & g & gram & Kg & Kilogram & \RL{מסה} \\
+s & Second & s & Second & s & Second & \RL{זמן} \\
+\textsuperscript{0}F & Fahrenheit & K & Kelvin & K & Kelvin &
+\RL{טמפרטורה} \\
+A & Ampere & A & Ampere & A & Ampere & \RL{זרם חשמלי} \\
+lb-mol & Pound-mole & mol & g·mole & mol & mole & \RL{כמות} \\
+A & Ampere & Cd & Candela & Cd & Candela & \RL{עוצמת אור} \\
+\end{longtable}
+
+\subsection{\texorpdfstring{\RL{יחידות
+מרובות}}{יחידות מרובות}}\label{ux5d9ux5d7ux5d9ux5d3ux5d5ux5ea-ux5deux5e8ux5d5ux5d1ux5d5ux5ea}
+
+\RL{\textbf{יחידות מרובות} הן יחידות שמוגדרות כשבר או כמכפלה של יחידות
+בסיס. לדוגמא -- יחידת הבסיס של זמן היא שנייה אך אנו נוהגים להתייחס לזמן
+גם בדקות, שעות, ימים או שנים. מבחינה עקרונית כל גודל פיסיקלי ניתן להביע
+ביחידות הבסיס עצמן, אך הדבר אינו נוח: מה היה קורה לו היינו צריכים
+וצריכות לתאר את הגיל שלנו בשניות?} \RL{לכן, יחידות מרובות משמשות אותנו
+לא מתוך הכרח מתמטי אלא כדי לאפשר הצגה יעילה ונוחה יותר של כמויות גדולות
+או קטנות במיוחד}.
+
+\RL{דוגמאות לכך ניתן למצוא בכל מערכת יחידות: את משקל המשאית ב}SI \RL{אנו
+נעדיף לתאר בטונות (}Ton\RL{) ולא בק"ג, ואת המרחק בין ישראל ללונדון ב}
+AES \RL{נתאר במייל (}mile\RL{) ולא ברגל (}ft\RL{).}
+
+\RL{שיטה נוספת לייצוג פשוט היא באמצעות שימוש בקידומות (}prefix\RL{) אשר
+מהוות דרך נוחה להציג גדלים פיזיקליים בסדרי גודל שונים, מבלי להכביד
+במספרים ארוכים. הקידומות מייצגות מכפלות או שברים של יחידת הבסיס, וכך
+מאפשרות קיצור ברור וקריא: למשל}, \(1\text{ km} = 1000\text{ m}\),
+\RL{או} \(1\text{ }\mu\text{s} = 10^{- 6}\text{ s}\). \RL{השימוש
+בקידומות התפתח במסגרת מערכת ה-}SI\RL{, אך כיום הן מקובלות גם במערכות
+יחידות אחרות, כגון} AES\RL{, ולכן הפכו לסטנדרט אוניברסלי. עבור מהנדסים
+ומהנדסות, שליטה בקידומות אלו חיונית, שכן הן כלי מרכזי להצגה מדויקת
+ויעילה של נתונים הנדסיים ומדעיים}.
+
+Figure \RL{4 - קידומות מוכרים ליחידות, מתוך }García, José. (2025).
+Dimensional Analysis in Chemistry Textbooks 1900-2020 and an Algebraic
+Alternative. Educación Química. 36. 82-108.
+10.22201/fq.18708404e.2025.1.88260
+
+\RL{השלימו באמצעות טבלת הקידומות}
+
+\[\begin{matrix}
+\mathbf{1}\mathbf{Mg} & = & \_\_\_\_\_\_\_\_\_\_\mathbf{g}\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_ & = & \mathbf{1.5*1}\mathbf{0}^{\mathbf{- 6}}\mathbf{s} \\
+\mathbf{1}\mathbf{nm} & & \_\_\_\_\_\_\_\_\_\_\_\_\_\mathbf{m}
+\end{matrix}\]
+
+\subsection{\texorpdfstring{\RL{יחידות
+נגזרות}}{יחידות נגזרות}}\label{ux5d9ux5d7ux5d9ux5d3ux5d5ux5ea-ux5e0ux5d2ux5d6ux5e8ux5d5ux5ea}
+
+\RL{\textbf{יחידות נגזרות} הן יחידות שמתקבלות משילוב מתמטי של יחידות
+הבסיס -- באמצעות כפל או חילוק. בעוד יחידות הבסיס נבחרות כמוסכמות
+בינלאומיות שאינן תלויות זו בזו, יחידות נגזרות מתארות גדלים פיזיקליים
+מורכבים יותר, כמו מהירות, תאוצה, כוח, אנרגיה ולחץ}. \RL{יחידות נגזרות הן
+ביטוי מתמטי פשוט של יחידות הבסיס. כך למשל, מהירות נמדדת במטר לשנייה}
+(\(m/s\)), \RL{תאוצה במטר לשנייה בריבוע} (\(m/s^{2}\))\RL{, כוח בניוטון}
+\((N = kg \cdot m/s^{2})\)\RL{, ואנרגיה בג'אול}
+(\(J = kg \cdot m^{2}/s^{2}\))\RL{. טבלה זו מדגימה כיצד כל גודל פיזיקלי
+מורכב מתפרק תמיד לשילוב של המידות היסודיות: מסה, אורך, זמן, ולעיתים גם
+טמפרטורה, זרם חשמלי או כמות חומר.}
+
+\RL{כך לדוגמא במערכת} SI
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.5693}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1241}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0985}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0985}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1022}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\RL{ביטוי במימדים}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{ביטוי ביחידות בסיס}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{יחידה}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{סימול יחידה}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{גודל פיזיקלי}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(\left\lbrack \mathbf{L} \right\rbrack\mathbf{/\lbrack T\rbrack}\) &
+\(m/s\) & \RL{מטר לשנייה} & \(m/s\) & \RL{מהירות} \\
+\(\left\lbrack \mathbf{L} \right\rbrack\mathbf{/}\left\lbrack \mathbf{T} \right\rbrack^{\mathbf{2}}\)
+& \(m/s²\) & \RL{מטר לשנייה²} & \(m/s²\) & \RL{תאוצה} \\
+\(\mathbf{\lbrack M\rbrack}\mathbf{\cdot}\left\lbrack \mathbf{L} \right\rbrack\mathbf{/}\left\lbrack \mathbf{T} \right\rbrack^{\mathbf{2}}\)
+& \(kg \cdot m/s²\) & \RL{ניוטון} & \(N\) & \RL{כוח} \\
+\(\mathbf{\lbrack M\rbrack}\mathbf{\cdot}\left\lbrack \mathbf{L} \right\rbrack^{\mathbf{2}}\mathbf{/}\left\lbrack \mathbf{T} \right\rbrack^{\mathbf{2}}\)
+& \(kg \cdot m²/s²\) & \RL{ג'אול} & \(J\) & \RL{אנרגיה} \\
+\(\mathbf{\lbrack M\rbrack/(\lbrack L\rbrack}\mathbf{\cdot}\left\lbrack \mathbf{T} \right\rbrack^{\mathbf{2}}\mathbf{)}\)
+& \(kg/(m \cdot s²)\) & \RL{פסקל} & \(Pa\) & \RL{לחץ} \\
+\(\mathbf{\lbrack M\rbrack}\mathbf{\cdot}\left\lbrack \mathbf{L} \right\rbrack^{\mathbf{2}}\mathbf{/}\left\lbrack \mathbf{T} \right\rbrack^{\mathbf{3}}\)
+& \(kg \cdot m²/s³\) & \RL{וואט} & \(W\) & \RL{הספק} \\
+\end{longtable}
+
+\RL{מעבר ליחידות הנגזרות שמוגדרות ישירות מתוך יחידות הבסיס (כמו ניוטון
+או ג'אול), קיימות גם \textbf{יחידות מורכבות נוספות} שנקבעו לשימוש נוח
+יותר בתחומים שונים. יחידות אלו מבטאות את אותם המימדים הפיזיקליים -- אך
+בערכים מספריים נוחים או ביחידות מותאמות למדידות מעשיות}.\\
+\RL{כך, למשל, לחץ ניתן למדידה הן ב}-\RL{פסקל} (Pa) \RL{והן
+ב}-\RL{אטמוספירה} (atm), \RL{ואנרגיה יכולה להימדד בג'אול} (J) \RL{או
+בארג} (erg). \RL{הבחירה ביחידה תלויה בהקשר}: \RL{ניסויי מעבדה, תעשייה או
+מערכת המדידה הנהוגה, אך כולן שקולות מבחינת המימדים שהן מייצגות}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4851}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1040}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1238}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1386}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1386}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\RL{ערך היחידה}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{סימול}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{שם יחידה}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{גודל פיזיקלי}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{מערכת}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(\mathbf{1atm\  = \ 101,325\ Pa}\) & atm & \RL{אטמוספירה} & \RL{לחץ} &
+\textbf{SI} \\
+\(\mathbf{1L =}\mathbf{10}^{\mathbf{- 3}}\mathbf{\ }\mathbf{m}^{\mathbf{3}}\)
+& L & \RL{ליטר} & \RL{נפח} & \\
+\(\mathbf{1T =}\mathbf{10}^{\mathbf{3}}\mathbf{Kg}\) & T & \RL{טון} &
+\RL{מסה} & \\
+\(\mathbf{1dyne\  = 1\ }\frac{\mathbf{g \cdot cm}}{\mathbf{s}^{\mathbf{2}}}\)
+& dyne & \RL{דיין} & \RL{כוח} & \textbf{CGS} \\
+\(\mathbf{1erg = \ (1\ ,\ g \cdot cm\hat{}2/s\hat{}2)}\) & erg &
+\RL{ארג} & \RL{אנרגיה} & \\
+\(\mathbf{1hp\  \approx \ 550\ }\frac{\mathbf{ft \cdot l}\mathbf{b}_{\mathbf{f}}}{\mathbf{s}}\)
+& hp & \begin{minipage}[t]{\linewidth}\raggedright
+\RL{כח סוס\\
+}Horsepower\strut
+\end{minipage} & \RL{הספק} & \textbf{AES / U.S. customary} \\
+\(\mathbf{gal\  \approx \ 231\ in³}\) & Gal & \RL{גלון} & \RL{נפח} & \\
+\end{longtable}
+
+\RL{מה פקטור המעבר בין} dyne \RL{ל-}N\RL{? חשבו באמצעות יחידות הבסיס.}
+
+\RL{(רמז- התחילו בביטוי ביחידות הבסיס של אחד מהם, והשתמשו במעברי יחידות
+על מנת להמיר אותן כך שיתאימו ליחידות הבסיס של השני)}
+
+\subsection{\texorpdfstring{\RL{כוח
+ומשקל}}{כוח ומשקל}}\label{ux5dbux5d5ux5d7-ux5d5ux5deux5e9ux5e7ux5dc}
+
+\RL{במערכת ה-}SI \RL{כל יחידות הבסיס הוגדרו כך שהקשרים ביניהן עקביים
+ומדויקים, ולכן נגזרות כמו ניוטון או ג'אול אינן דורשות מקדם תיקון --
+היחידות ``מסונכרנות'' באופן טבעי. לעומת זאת, במערכת ה-}AES \RL{יחידות
+הבסיס אינן מוגדרות כך, ולכן כאשר מחשבים כוח או גדלים נגזרים אחרים נדרש
+להשתמש בקבוע תיקון נומרי} (\(g_{c}\)) \RL{כדי לשמור על עקביות מימדית.}
+
+\RL{נזכר כי מתוך החוק השני של ניוטון אנו יודעים ש}
+
+\[F = ma\]
+
+\RL{במערכת} SI \RL{יחידת הכח הוגדרה כך שהיא שווה מבחינה נומרית למכפלת
+יחידות הבסיס המרכיבות אותה.}
+
+\[1N \equiv 1Kg*\frac{m}{s^{2}}\]
+
+\RL{ובאופן דומה במערכת} \emph{CGS} \RL{הוגדרה יחידת הכח} \emph{dyne}
+\RL{כך ש}
+
+\[1dyne \equiv 1g*\frac{cm}{s^{2}}\]
+
+\RL{לעומת זאת, ביחידות} \emph{AES} \RL{כח של} \(1lb_{f}\) \RL{לא הוגדרה
+מתוך יחידות הבסיס אלא הוגדרה היסטורית כמשקלו של פאונד מסה אחד בתנאי
+כבידה סטנדרטיים, ז"א}
+
+\[1lbf \equiv 32.174\frac{lb_{m}ft}{s^{2}}\]
+
+\RL{לכן, במערכת היחידות האמריקאית הגדירו מחדש את החוק השני של ניוטון כך
+ש}
+
+\[F = \frac{ma}{g_{c}}\ \ \ \ \ ;\ \ \ \ \ g_{c} = 32.174\frac{lb_{m}ft}{lb_{f}s^{2}}\]
+
+\RL{צפיפות המים היא}\(62.4\frac{lb_{m}}{ft^{3}}\)\\
+\RL{מה יהיה המשקל של} \(500ft^{2}\) \RL{מים?}
+
+\subsection{\texorpdfstring{\RL{סיכום -- מערכות
+יחידות}}{סיכום -- מערכות יחידות}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-ux5deux5e2ux5e8ux5dbux5d5ux5ea-ux5d9ux5d7ux5d9ux5d3ux5d5ux5ea}
+
+\begin{itemize}
+\item
+  \RL{חישובים פיזיקליים והנדסיים מחייבים שימוש במערכת יחידות עקבית.
+  \textbf{מערכת יחידות} מוגדרת כאוסף מוסכם של יחידות בסיס, יחידות נגזרות
+  וכללי המרה ביניהן, שמאפשר לבצע מדידות והשוואות באופן אחיד.}
+\item
+  \RL{\ul{בעולם קיימות שלוש מערכות עיקריות:}}
+
+  \begin{itemize}
+  \item
+    \textbf{SI \RL{-}}\RL{המערכת הבינלאומית, המבוססת על מטר, קילוגרם
+    ושנייה.}
+  \item
+    \textbf{CGS \RL{-}}\RL{דומה ל}SI \RL{אך מבוססת על סנטימטר, גרם
+    ושנייה.}
+  \item
+    \textbf{AES / U.S. customary \RL{-}} \RL{יחידות הבסיס הן רגל}
+    \((ft)\)\RL{, פאונד-מסה} \((lbm)\ \)\RL{ושנייה (}s\RL{).}
+  \end{itemize}
+\item
+  \RL{\ul{בכל מערכת יש שלושה סוגים של יחידות}}
+
+  \begin{itemize}
+  \item
+    \RL{\textbf{יחידות בסיסיות} הן אבני היסוד של כל מערכת יחידות. קיימות
+    7 מידות בסיסיות כאשר במערכת ה}SI \RL{מוגדרות: מטר (אורך), קילוגרם
+    (מסה), שנייה (זמן), קלווין (טמפרטורה), מול (כמות חומר), אמפר (זרם
+    חשמלי) וקנדלה (עוצמת אור). כל גודל פיזיקלי אחר ניתן להבעה כשילוב
+    מתמטי של יחידות בסיס.}
+  \item
+    \RL{\textbf{יחידות מרובות} הן שברים או מכפלות של יחידות בסיס, שנועדו
+    לנוחות שימוש. כך, זמן נמדד לא רק בשניות אלא גם בדקות, שעות או שנים;
+    מסות גדולות מתוארות בטונות ולא בקילוגרמים ובמערכת האמריקאית במיילים
+    במקום ברגל למדידת מרחקים גדולים.}
+  \item
+    \RL{\textbf{יחידות נגזרות}: מתקבלות משילוב מתמטי של יחידות בסיס --
+    לדוגמא}\\
+    \RL{מהירות (}\(m/s\)\RL{), כוח (}\(N = kg \cdot m/s^{2}\)\RL{),
+    אנרגיה (}\(J = kg \cdot m^{2}/s^{2}\)\RL{).}
+  \end{itemize}
+\item
+  \RL{\textbf{חשוב לזכור}: ב-}SI \RL{אין צורך בקבועי תיקון, אך ב}
+  AES\RL{, אנו משתמשים ב}g\textsubscript{c} \RL{על מנת לשמור על עקביות
+  בין} lb\textsubscript{m}\RL{ל --} lb\textsubscript{f}\RL{.}
+\end{itemize}
+
+\section{\texorpdfstring{\RL{הומגניות של משוואות ומספרים חסרי
+מימד}}{הומגניות של משוואות ומספרים חסרי מימד}}\label{ux5d4ux5d5ux5deux5d2ux5e0ux5d9ux5d5ux5ea-ux5e9ux5dc-ux5deux5e9ux5d5ux5d5ux5d0ux5d5ux5ea-ux5d5ux5deux5e1ux5e4ux5e8ux5d9ux5dd-ux5d7ux5e1ux5e8ux5d9-ux5deux5d9ux5deux5d3}
+
+\subsection{\texorpdfstring{\RL{הומוגניות של משוואות (}Dimensional
+Homogeneity\RL{)}}{הומוגניות של משוואות (Dimensional Homogeneity)}}\label{ux5d4ux5d5ux5deux5d5ux5d2ux5e0ux5d9ux5d5ux5ea-ux5e9ux5dc-ux5deux5e9ux5d5ux5d5ux5d0ux5d5ux5ea-dimensional-homogeneity}
+
+\RL{לאורך הדיון ביחידות ובממדים ראינו שגדלים פיזיקליים ניתנים לחיבור או
+לחיסור \textbf{רק כאשר היחידות שלהם זהות}}. \RL{אם היחידות זהות, נובע
+מכך שגם \textbf{המימדים} של כל אחד מהאיברים חייבים להיות זהים. לדוגמה,
+אם שני גדלים ניתנים לביטוי ביחידות של גרם לשנייה} (\(g/s\)), \RL{הרי
+שלשניהם יש ממד של מסה לזמן} \((M/T)\). \RL{מכאן נובע כלל חשוב}:
+
+\RL{**כל משוואה פיזיקלית תקפה חייבת להיות הומוגנית ממדית**} --
+\RL{כלומר, לכל האיברים הניתנים לחיבור בשני צדי המשוואה חייבים להיות אותם
+ממדים}.
+
+\RL{במשוואה}
+
+\[V = V_{0} + at\] \RL{ננתח את המימדים של כל אחד מהאיברים}
+
+\[V,V_{o} \Longrightarrow \frac{אורך}{זמן} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack}\ \ \ \ \ \ a \Rightarrow \frac{אורך}{{זמן}^{2}} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack^{2}}\ \ \ \ \ t \Rightarrow זמן = \lbrack T\rbrack\]
+
+\RL{ונראה אילו מימדים כלל האיברים במשוואה}
+
+\[V\frac{\lbrack L\rbrack}{\lbrack T\rbrack} = V_{0}\frac{\lbrack L\rbrack}{\lbrack T\rbrack} + a\frac{\lbrack L\rbrack}{\lbrack T\rbrack^{2}}t\lbrack T\rbrack\]
+
+\RL{ניתן לראות שכל האיברים במשוואה מתכנסים ליחידות של אורך לזמן, ולכן
+המשוואה הומוגנית מימדית.}
+
+\RL{לעומת זאת, המשוואה}
+
+\[V\frac{\lbrack L\rbrack}{\lbrack T\rbrack} = V_{0}\frac{\lbrack L\rbrack}{\lbrack T\rbrack} + t\lbrack T\rbrack\ \ \ \ \ \mathbf{}\]
+
+\RL{איננה הומוגנית מימדית ולכן אינה יכולה להיות פיזיקלית, , ז"א היא לא
+מתארת קשר אפשרי במציאות.}
+
+\RL{גם כאשר משוואה עומדת בכלל ההומוגניות המימדית, עדיין נדרש שכל האיברים
+יהיו באותן יחידות בפועל.} \RL{לדוגמא, עבור המשוואה הבאה}
+
+\[V\left( \frac{m}{s} \right) = V_{0}\left( \frac{m}{s} \right) + a\left( \frac{m}{s^{2}} \right)t(s)\]
+
+\RL{אם התאוצה ניתנת לנו ביחידות של} \(\left( \frac{m}{s^{2}} \right)\)
+\RL{אבל הזמן נתון לנו בדקות} \(t(min)\)\RL{, יש לבצע המרה ליחידה אחידה
+לפני הצבה במשוואה, ז"א קודם כל נמיר את הזמן לשניות ולאחר מכן נציב
+במשוואה.\\
+\strut \\
+עיקרון זה אינו רק דרישת תקינות מתמטית -- הוא גם כלי משמעותי בניתוח
+תוצאות ניסוי ובהסקת חוקים חדשים}. \RL{כאשר אנו בוחנים את הקשר בין גדלים
+נמדדים, ניתוח המימדים מאפשר לבדוק אם המשוואה המוצעת אפשרית מבחינה
+פיזיקלית, ולהסיק את המימדים והיחידות של קבועים ניסיוניים}. \RL{לדוגמא
+הפיזיקאי גֵּיי-לוסאק ערך בתחילת המאה ה-19 סדרת ניסויים שבהם חימם גזים בכלי
+סגור -- כך שכמות הגז והנפח נותרו קבועים. הוא הבחין בתופעה עקבית}:
+\RL{ככל שהטמפרטורה עלתה}, \RL{הלחץ של הגז על דפנות הכלי עלה ביחס ישר
+לטמפרטורה המוחלטת}. \RL{מתוך המדידות הניסיוניות הללו הוא ניסח את הקשר}:
+
+\[P = kT\] \RL{כאשר הלחץ נמדד ביחידות של} Pa \RL{והטפ\textquotesingle{}
+ביחידות של} K\RL{.}
+
+\RL{מתוך הומוגניות המשוואה ניתן להסיק את יחידות הקבוע} **
+\[P(Pa) = k(?)T(K)\ \  = > k\left( \frac{Pa}{K} \right)\]
+
+\RL{ופיזיקלית, קיבלנו ערך המייצג את מידת השינוי בלחץ ביחידות של פסקל
+(}Pa\RL{) לכל שינוי של מעלה אחת קלוין (}K\RL{).}
+
+\RL{ידוע כי עבור מערכת מסויימת היחס בין הלחץ לטמפ\textquotesingle{} הוא}
+\(P(Pa) = 300*T(K)\)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \RL{מה הוא} k \RL{-- רשמו את הערך המלא, כולל יחידות.}
+\item
+  \RL{הסבירו באופן מילולי מה המשמעות של הקבוע -- איזה שינוי מתואר
+  במערכת?}
+\item
+  \RL{במקרים רבים נהוג למדוד את הלחץ ביחידות של אטמוספירה. ברצוננו לנסח
+  את המשוואה כך שנקבל את התוצאה באטמוספירה באופן ישיר. מה יהיה ערכו
+  הנומרי החדש של} k \RL{במקרה זה? מה יהיו היחידות שלו?}
+\end{enumerate}
+
+\subsection{\texorpdfstring{\RL{מספרים חסרי
+מימד}}{מספרים חסרי מימד}}\label{ux5deux5e1ux5e4ux5e8ux5d9ux5dd-ux5d7ux5e1ux5e8ux5d9-ux5deux5d9ux5deux5d3}
+
+\RL{מספר חסר מימד} (dimensionless number) \RL{הוא מספר שאינו נושא יחידות
+מידה}
+
+\RL{הוא המתקבל כתוצאה מחלוקה של גדלים בעלי אותן יחידות, כך שהיחידות
+מתבטלות והתוצאה היא גודל טהור. מספרים חסרי מימד חשובים במיוחד בתכנון
+ובהבנה של תהליכים הנדסיים: הם מאפשרים להקטין את מספר המשתנים הדרושים
+לתיאור תופעה, להשוות בין מערכות שונות שנמדדות ביחידות שונות, ולבנות
+תמונה כללית של ההתנהגות הפיזיקלית של מערכת בלי תלות בקנה המידה או
+ביחידות}.
+
+\RL{דוגמה פשוטה למספר חסר מימד היא השבר המסתי (}mass fraction\RL{) שמבטא
+את החלק היחסי של רכיב מסוים במערכת הכוללת. אם נסמן את מסת הרכיב
+ב}-\(m(x)\) \RL{ואת מסת המערכת הכוללת ב}-\(m(total)\), \RL{נקבל}:
+
+\[\frac{w}{w} = \frac{m(x)}{m(total)} = \frac{\lbrack M\rbrack}{\lbrack M\rbrack}\]
+
+\RL{היחידות מתבטלות, ולכן השבר המסתי הוא מספר חסר מימד}.
+
+\RL{במעבדה לפיתוח משקאות אנרגיה עובדים שני צוותים במקביל, וכל אחד מהם
+הכין נוסחה שונה של משקה חדש. החומר הפעיל במשקה הוא קפאין (}A\RL{) ,
+והשאר הוא תמיסה מתוקה.}**** \RL{הצוות הראשון מורכב ממדענים ומדעניות
+מישראל, בעוד הצוות שני מורכב ממדענים ומדעניות מארצות הברית.}
+
+\RL{צוות 1 מדווח כי הוא מסת הקפאין במשקה שלו היא} \(10g\)\RL{, על כל}
+\(350g\) \RL{של משקה}
+
+\RL{צוות 2 מדווח כי הוא מסת הקפאין במשקה שלו היא} \(12\ lb_{m}\)\RL{, על
+כל} \(600lb_{m}\) \RL{של משקה}
+
+\RL{שני הצוותים טוענים שהמשקה שלהם "חזק יותר" -- כלומר, שיש בו יותר
+קפאין באופן יחסי לתמיסה הכוללת.}
+
+\RL{\textbf{השאלה:}\\
+בלי להמיר יחידות לק"ג או לפאונדים -- מי צודק?\\
+באיזה משקה יש אחוז גבוה יותר של קפאין?}
+
+\RL{אחד היתרונות הגדולים של שימוש במספרים חסרי מימד הוא היכולת להשוות
+בין מערכות בעלות קני מידה שונים}. \RL{אם שתי מערכות שונות מתוארות על-ידי
+אותם מספרים חסרי מימד, נוכל לצפות שהן יתנהגו באופן דומה מבחינה פיזיקלית
+-- גם אם אחת מהן קטנה פי אלף מהשנייה. עיקרון זה מאפשר למהנדסים ולחוקרים
+לבנות מודלים מוקטנים במעבדה כדי לבדוק תהליכים שיתרחשו במתקנים אמיתיים,
+יקרים או מסוכנים}.
+
+\RL{אחד המספרים חסרי המימד המפורסמים במיותר הוא מספר ריינולדס. מספר מאוד
+חשוב בהנדסת תהליכים המבטא את היחס בין כוחות האינרציה והצמיגות ומשמש
+לאפיון פרופיל הזרימה בצינור.}
+
+\[\mathbf{Re =}\frac{\mathbf{D \bullet v \bullet \rho}}{\mathbf{\mu}}\]
+
+D\RL{- קוטר הצינור} \((m)\)
+
+\(\mathbf{v}\) \RL{-- מהירות הזורם} \(\left( \frac{m}{s} \right)\)
+
+\(\mathbf{\rho}\) \RL{-- צפיפות הזורם}
+\(\left( \frac{Kg}{m^{3}} \right)\)
+
+\(\mathbf{\mu}\) \RL{-- צמיגות הזורם} \(\left( \frac{Kg}{m\ s} \right)\)
+
+\RL{הראו שמספר ריינולדס הוא חסר יחידות.}
+
+Figure \RL{5 - אפיון פרופילי זרימה באמצעות מספר ריינולדס. הזרימה תהיה
+לינרית כאשר} Re\textless2100\RL{, ותהיה טורבולנטית כאשר}
+Re\textgreater4000\RL{.}
+
+\RL{מהנדסי אווירונאוטיקה משתמשים בין השאר במספר ריינולדס כדי לבחון דגמים
+מוקטנים של מטוסים. כל עוד הדגם והמטוס האמיתי פועלים תחת אותו מספר
+ריינולדס}, \RL{היחס בין כוחות האינרציה והצמיגות זהה -- ולכן תבנית הזרימה
+סביבם תהיה דומה. בדרך זו ניתן לחזות כיצד ישפיע שינוי בצורת הכנף או
+בזווית ההתקפה על המטוס המלא, על ידי בנייה של דגם מוקטן בלבד.}
+
+\subsection{\texorpdfstring{\RL{סיכום: הומוגניות של משוואות ומספרים חסרי
+מימד}}{סיכום: הומוגניות של משוואות ומספרים חסרי מימד}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-ux5d4ux5d5ux5deux5d5ux5d2ux5e0ux5d9ux5d5ux5ea-ux5e9ux5dc-ux5deux5e9ux5d5ux5d5ux5d0ux5d5ux5ea-ux5d5ux5deux5e1ux5e4ux5e8ux5d9ux5dd-ux5d7ux5e1ux5e8ux5d9-ux5deux5d9ux5deux5d3}
+
+\begin{itemize}
+\item
+  \RL{\textbf{הומוגניות מימדית} היא תנאי הכרחי לכל משוואה פיזיקלית תקפה
+  -- כל האיברים במשוואה חייבים להיות באותם מימדים}.
+\item
+  \RL{בדיקת הומוגניות מאפשרת לגלות טעויות נפוצות, לבדוק אם משוואה
+  ``פיזיקלית'', ולמצוא את היחידות של קבועים ניסיוניים}.
+\item
+  \RL{\textbf{ניתוח מימדי} הוא כלי עוצמתי להסקת קשרים בין גדלים גם בלי
+  לדעת את הנוסחה המלאה}.
+\item
+  \RL{\textbf{מספרים חסרי מימד} נוצרים מחלוקה של גדלים בעלי אותן יחידות
+  -- היחידות מתבטלות, והתוצאה היא גודל טהור}.
+\item
+  \RL{הם מאפשרים להשוות בין מערכות שונות, לבנות מודלים בקנה מידה מוקטן,
+  ולתאר תופעות באופן כללי ואוניברסלי}.
+\item
+  \RL{דוגמאות נפוצות: מספר ריינולדס (זרימה), מספר פראוד (כובד), מספר
+  נוסלט (מעבר חום)}.
+\item
+  \RL{בסופו של דבר, הבנה של הומוגניות ושל מספרים חסרי מימד היא
+  \textbf{בסיס להבנה פיזיקלית עמוקה ולחשיבה הנדסית נכונה}}.
+\end{itemize}
+
+\section{\texorpdfstring{\RL{דיוק, הדירות וספרות
+משמעותיות}}{דיוק, הדירות וספרות משמעותיות}}\label{ux5d3ux5d9ux5d5ux5e7-ux5d4ux5d3ux5d9ux5e8ux5d5ux5ea-ux5d5ux5e1ux5e4ux5e8ux5d5ux5ea-ux5deux5e9ux5deux5e2ux5d5ux5eaux5d9ux5d5ux5ea}
+
+\RL{כשאנחנו מודדים משהו -- טמפרטורה של תמיסה, משקל של דגימה או אורך של
+צינור -- אנחנו נוטים לחשוב שהתוצאה שכתובה על המסך או על הצג היא ``הערך
+האמיתי}``. \RL{אבל במציאות, כל מדידה היא רק \textbf{הערכה} של הגודל
+הפיזיקלי}. \RL{נניח ששני אנשים מודדים את אותה טמפרטורת מים. האחד משתמש
+במדחום דיגיטלי שמציג} \(37.2℃\) \RL{והשני במדחום זכוכית ישן שמראה בערך}
+\(37℃\) \RL{- שניהם צודקים, אבל לא באותה מידה. הראשון יודע את התוצאה
+בדיוק של עשירית מעלה, והשני רק בערך של מעלה אחת}.\\
+\RL{אם נחזור על המדידה שוב ושוב, נקבל אולי 37.2, 37.3 או 37.1 -- כלומר,
+גם במכשיר הטוב יותר נראה תמיד סטייה מסויימת בין מדידה למדידה, ההבדל הוא
+בשאלה עד כמה גדולה התנודה בין המדידות.}
+
+\RL{שינויים קטנים כאלה נובעים ממגבלות של המכשיר, מתנאי הסביבה או מהאופן
+שבו בוצעה המדידה}.\\
+\RL{לכן בכל תוצאה יש טווח קטן של אי-ודאות -- טווח שבתוכו סביר להניח
+שהערך האמיתי נמצא}.\\
+\RL{כשנרשום את התוצאה, נרצה לשקף את רמת הוודאות שלנו, ולשם כך נשתמש רק
+במספר הספרות \textbf{המשמעותיות}} -- \RL{כלומר, הספרות שיש להן משמעות
+פיזיקלית אמיתית, ולא רק תוצאה של חישוב במחשבון}.
+
+\RL{כדי להבין עד כמה מדידה מסוימת אמינה, אנו בוחנים אותה משתי זוויות
+שונות}:
+
+\textbf{\RL{דיוק} (Accuracy)} -- \RL{עד כמה המדידה קרובה לערך האמיתי}.
+
+\textbf{\RL{הדירות/עקביות} (Precision)} -- \RL{עד כמה המדידות חוזרות על
+עצמן כשמבצעים אותן שוב}.
+
+Figure \RL{6 - דיוק והדירות}
+
+\RL{כאשר אנחנו רושמים תוצאה מדעית או הנדסית, המספר שאנו כותבים צריך לשקף
+את רמת האמינות של המדידה}. \RL{אין טעם לכתוב 54.44183 גרם אם המאזניים
+שלנו מסוגלות למדוד רק עד עשירית הגרם -- זו אשליה של דיוק שאינו קיים
+באמת}. \RL{מספר הספרות שאנו כוללים בתוצאה הוא בעצם דרך לתקשר את רמת
+הדיוק והחזרתיות של המדידה}.
+
+\RL{\textbf{ספרות משמעותיות} (}significant figures\RL{) הן כל הספרות
+במספר המעידות על רמת הדיוק של המדידה}. \RL{הן כוללות את כל הספרות שאנו
+בטוחים בהן}, \RL{ועוד ספרה אחת נוספת שאנו מעריכים}.
+
+\RL{לדוגמה, אם שקלתי דגימה מסוימת וקיבלתי תוצאה של} ‎2.36‎ \RL{גרם -- שתי
+הספרות הראשונות (2 ו-3) הן ודאיות}, \RL{ואילו השלישית (6) מייצגת את חוסר
+הוודאות במדידה, כלומר הערכה של הגודל הכי קטן שאנו רגישים אליו}. \RL{אם
+נמדוד את אותה הדגימה שנית ייתכן שהפעם נקבל} 2.35g \RL{או} 2.37g\RL{.}\\
+\RL{כך הספרות המשמעותיות הופכות לגשר בין החישוב המתמטי לבין העולם
+הפיזי}:\\
+\RL{הן מבטאות לא רק את המספר עצמו, אלא גם כמה אנחנו סומכים עליו}.
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\ul{\RL{חשוב לזכור} \RL{רק לערכים שנמדדו יש ספרות משמעותיות}.}\\
+\RL{כאשר אנו מבצעים מדידה, כל ספרה בתוצאה משקפת את רמת הוודאות של המכשיר
+ושל התהליך -- ולכן יש לה משמעות פיזיקלית אמיתית}. \RL{לעומת זאת},
+\RL{קבועים והמרות יחידות (כמו} ‎1 kg = 2.20462 lb‎\RL{)} \RL{נחשבים כבעלי
+אינסוף ספרות משמעותיות}, \RL{משום שאנו יכולים להתחייב על נכונותם בכל
+אורך שנרצה. אם נצטרך לדעת את הספרות הבאות נווכל למצוא ערכים יותר
+מדוייקים בספרות. כך למשל}, \RL{מהירות האור נחשבת בדרך כלל בקירוב ל}
+‎300,000,000 m/s \RL{ערך נוח לשימוש יומיומי או למרבית החישובים הנדרשים.
+אבל, אם נצטרך את מהירות האור באופן יותר מדויק נוכל לראות בספרות כי היא
+שווה} 299,792,458 m/s‎\RL{.}
+
+\end{tcolorbox}
+
+\RL{גם מספרים שלמים שמקורם בספירה - למשל חמישה חתולים או שלושה מיכלים -
+הם מדויקים לחלוטין, כי אין בהם אי-ודאות כלל}. \RL{במילים אחרות, אנחנו
+יכולים ``להתחייב'' על 5.000000 בדיוק}. \RL{ההבחנה הזו חשובה במיוחד בעת
+חישובים: רק המספרים הנמדדים קובעים כמה ספרות משמעותיות תופיע בתוצאה
+הסופית, בעוד הקבועים או המספרים השלמים אינם מגבילים את רמת הדיוק}.
+
+\subsection{\texorpdfstring{\RL{כללי ספרות
+משמעותיות}}{כללי ספרות משמעותיות}}\label{ux5dbux5dcux5dcux5d9-ux5e1ux5e4ux5e8ux5d5ux5ea-ux5deux5e9ux5deux5e2ux5d5ux5eaux5d9ux5d5ux5ea}
+
+\RL{כאשר אנו רואים מספר כתוב, עולה השאלה}: \textbf{\RL{כיצד נדע כמה
+ספרות משמעותיות יש בו}?}\\
+\RL{כמובן שכל הספרות שאינן אפס הן משמעותיות, אך האפסים דורשים תשומת לב
+מיוחדת}. \RL{לפעמים הם מציינים ערך מדוד אמיתי, ולפעמים הם רק ``ממלאים
+מקום'' כדי להראות היכן נמצאת הנקודה.\\
+אם אני אומרת שבכלי מסויים יש לי 1000 ליטר, האם זה אומר שאני מתחייבת עד
+רמת המיליליטר, או שהכוונה היא לסדר גודל של 1000 ליטר (שיכול להיות כל
+מספר בטווח של 950-1050 ליטר) והאפסים נמצאים שם רק כדי לייצג את סדר הגודל
+של הדגימה? כדי להבדיל ביניהם, ניעזר בכמה כללים פשוטים שיעזרו לנו לקבוע
+אילו ספרות נחשבות משמעותיות ואילו לא.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.4098}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1366}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1854}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2585}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\multirow{3}{=}{\begin{minipage}[t]{\linewidth}\raggedright
+\bookmarksetup{startatroot}
+
+\chapter{\texorpdfstring{\RL{כלל}}{כלל}}\label{ux5dbux5dcux5dc}
+
+\RL{כל הספרות שאינן אפס נחשבות משמעותיות}
+\end{minipage}} &
+\multirow{2}{=}{\begin{minipage}[t]{\linewidth}\raggedright
+\bookmarksetup{startatroot}
+
+\chapter{\texorpdfstring{\RL{דוגמה}}{דוגמה}}\label{ux5d3ux5d5ux5d2ux5deux5d4}
+
+‎347‎
+\end{minipage}} &
+\multirow{2}{=}{\begin{minipage}[t]{\linewidth}\raggedright
+\bookmarksetup{startatroot}
+
+\chapter{\texorpdfstring{\RL{מספר הספרות
+המשמעותיות}}{מספר הספרות המשמעותיות}}\label{ux5deux5e1ux5e4ux5e8-ux5d4ux5e1ux5e4ux5e8ux5d5ux5ea-ux5d4ux5deux5e9ux5deux5e2ux5d5ux5eaux5d9ux5d5ux5ea}
+
+3
+\end{minipage}} &
+\multirow{2}{=}{\begin{minipage}[t]{\linewidth}\raggedright
+\bookmarksetup{startatroot}
+
+\chapter{\texorpdfstring{\RL{הערות}}{הערות}}\label{ux5d4ux5e2ux5e8ux5d5ux5ea}
+
+--
+\end{minipage}} \\
+ \\
+& ‎58.26‎ & 4 & -- \\
+\multirow{2}{=}{\RL{אפסים בין ספרות שאינן אפס נחשבים משמעותיים}} & ‎205‎ &
+3 & -- \\
+& ‎1003‎ & 4 & -- \\
+\multirow{2}{=}{\RL{אפסים מובילים אינם משמעותיים}} & ‎0.0045‎ & 2 &
+\RL{האפסים רק ממקמים את הנקודה העשרונית} \\
+& ‎0.000300‎ & 3 & \RL{האפסים שאחרי הספרה 3 נחשבים משמעותיים} \\
+\multirow{2}{=}{\RL{אפסים בסוף מספר עם נקודה עשרונית נחשבים משמעותיים}}
+& ‎2.300‎ & 4 & \RL{כל האפסים שאחרי הספרה 3 נחשבים} \\
+& ‎0.050‎ & 2 & -- \\
+\multirow{3}{=}{\RL{אפסים בסוף מספר שלם בלי נקודה עשרונית אינם בהכרח
+משמעותיים}} & ‎1500‎ & \RL{לא ניתן לדעת} & \RL{יש לכתוב בכתיב מדעי כדי
+להבהיר} \\
+& ‎ & 2 & 1.5 × 10³‎ \\
+& ‎ & 3 & 1.50 × 10³‎ \\
+\RL{מספרים מדויקים (ספירה או קבועים) נחשבים כבעלי אינסוף ספרות
+משמעותיות} & \begin{minipage}[t]{\linewidth}\raggedright
+‎5 \RL{מבחנות}‎, ‎\RL{\hfill\break
+60 שניות בדקה}‎\strut
+\end{minipage} & ∞ & \RL{אינם מגבילים את הדיוק בחישוב} \\
+\end{longtable}
+
+\RL{תרגיל:\\
+כמה ספרות משמעותיות יש בכל אחד מהמספרים הבאים?}
+
+‎0.0045‎
+
+‎205‎
+
+‎1.50 × 10³‎
+
+‎1500‎
+
+‎0.000300‎
+
+\RL{כאשר אנו מבצעים חישובים המבוססים על נתונים מדודים, עלינו לזכור שכל
+אחד מהנתונים כולל רמת דיוק מוגבלת}. \RL{אין טעם להציג תוצאה ארוכה
+ומדויקת יותר מהמידע שנמדד בפועל -- זו תהיה \textbf{אשליה של דיוק שאינו
+קיים}}. \RL{לכן נקבעו כללים ברורים כיצד לקבוע כמה ספרות משמעותיות מותר
+לשמור בתוצאה של חישוב}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \RL{רמת הדיוק של התוצאה הסופית נקבעת לפי \textbf{הנתון הפחות מדויק}
+  שבחישוב}.\\
+  \RL{עם זאת, הדרך ליישם כלל זה שונה בין \textbf{כפל/חילוק} לבין
+  \textbf{חיבור/חיסור}}.
+\item
+  \RL{בכפל או בחילוק, מספר הספרות המשמעותיות בתוצאה צריך להיות שווה
+  למספר הספרות המשמעותיות שבנתון הפחות מדויק}.
+  \RL{דוגמה}:\RL{\hfill\break
+  }\[2.3 \times 1.245 = 2.8635\] \RL{הנתון הראשון (2.3) כולל שתי ספרות
+  משמעותיות בלבד, ולכן גם התוצאה תיכתב כך}:
+\end{enumerate}
+
+\[2.3 \times 1.245 = \mathbf{2.9}\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  \RL{בחיבור או חיסור, יש לשים לב למיקום הנקודה
+  העשרונית}:\RL{\hfill\break
+  התוצאה צריכה לכלול ספרות עד אותה רמת דיוק (אותו מקום עשרוני) כמו הנתון
+  הפחות מדויק}. \RL{דוגמה}: \RL{\hfill\break
+  }\[345.2 + 1.353 = 346.553\] \RL{מכיוון של-345.2 יש ספרה אחת אחרי
+  הנקודה, נכתוב את התוצאה כך}:\RL{\hfill\break
+  }\[345.2 + 1.353 = \mathbf{46.6}\]
+\item
+  \RL{כאשר יש צורך לעגל מספר, נשתמש בכלל הבא}:
+\end{enumerate}
+
+\begin{itemize}
+\item
+  \RL{אם הספרה הראשונה שמושמטת \textbf{קטנה מ-5}}, \RL{נשאיר את הספרה
+  האחרונה כפי שהיא (נעגל כלפי מטה)}
+\item
+  \RL{אם היא \textbf{גדולה מ-5}}, \RL{נוסיף 1 לספרה האחרונה שנשמרת (נעגל
+  כלפי מעלה)}
+\item
+  \RL{אם היא בדיוק \textbf{5,} נשמור את הספרה האחרונה \textbf{זוגית}
+  (כדי להימנע מהטיה שיטתית במאגרי נתונים).\\
+  }\[{2.845 \rightarrow 2.84\ \text{(כי הספרה האחרונה הזוגית נשמרת)}
+  }{2.855 \rightarrow 2.86
+  }\]
+\item
+  \RL{חישובים ארוכים מומלץ \textbf{לא לעגל בכל שלב}}, \RL{אלא לשמור
+  ערכים ארוכים יותר לאורך הדרך ולעגל רק בסוף}. \RL{כך נמנע מהצטברות של
+  שגיאות עיגול ביניים}.
+\end{itemize}
+
+\RL{כתבו כל תוצאה ברמת הדיוק המתאימה.}
+
+‎2.3 × 1.245 = ?‎
+
+‎45.2 ÷ 1.2 = ?‎
+
+0.056 \RL{× 3.12 = ?}‎
+
+‎45.2 + 1.35 = ?‎
+
+‎2.06 -- 0.142 = ?‎
+
+‎0.230 + 1.2 \RL{= ?}
+
+\subsection{\texorpdfstring{\RL{כתיבה מדעית של מספרים (}Scientific
+notation\RL{)}}{כתיבה מדעית של מספרים (Scientific notation)}}\label{ux5dbux5eaux5d9ux5d1ux5d4-ux5deux5d3ux5e2ux5d9ux5ea-ux5e9ux5dc-ux5deux5e1ux5e4ux5e8ux5d9ux5dd-scientific-notation}
+
+\RL{אחת הדרכים הברורות ביותר לבטא על אילו ספרות אנחנו מוכנים ``להתחייב"
+היא באמצעות כתיבה מדעית}. \RL{במקום למנות אינסוף אפסים או להסתבך עם
+נקודות עשרוניות ארוכות, אנחנו מבטאים את המספר כרצף הספרות עליהן אנחנו
+מוכנים להתחייב כפול סדר הגודל של המספר המיוצג על ידי עשר בחזקת מספר שלם
+כלשהו.}
+
+\RL{בכתיבה מדעית המספר נכתב בצורה}:
+
+\[a \times 10^{n}\] \RL{כאשר} \(a\) \RL{הוא מספר עשרוני בטווח בין 1
+ל-10, המכיל את כל הספרות המשמעותיות ורק אותן\\
+ו-}\(n\) \RL{הוא מספר שלם (חיובי או שלילי) המציין את סדר הגודל}.
+
+\RL{מהירות האור} \(3.00 \times 10^{8}\text{ m/s}\) \RL{במקום}
+300,000,000\RL{.}
+
+\RL{מסת מולקולת מים} \(2.99 \times 10^{- 26}\text{ kg}\) \RL{במקום}
+‎0.0000000000000000000000000299‎
+
+\RL{הצורה הזו מאפשרת להציג בבירור גם \textbf{את סדר הגודל} וגם
+\textbf{את רמת הדיוק}}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+\RL{איך ממירים לכתיבה מדעית}?\RL{\hfill\break
+1. מזיזים את הנקודה העשרונית כך שתשאר ספרה אחת בלבד משמאל
+לה}.\RL{\hfill\break
+2. סופרים כמה מקומות הזזנו את הנקודה -- זה יהיה ערך המעריך}
+\(n\).\RL{\hfill\break
+אם הזזנו שמאלה} \RL{}\(\ n \leftarrow\)\RL{חיובי}.\RL{\hfill\break
+אם הזזנו ימינה} \(n \leftarrow \ \) \RL{שלילי}.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+\[{0.0045 = 4.5 \times 10^{- 3}
+}{72000 = 7.2 \times 10^{4}
+}\]\RL{הכתיבה המדעית חשובה כי היא מאפשרת להשוות מספרים בקלות לפי סדרי
+גודל}.\RL{, היא מונעת בלבול בקריאת אפסים מיותרים והיא שומרת על המשמעות
+הפיזיקלית של הספרות כך שנוכל לזהות בקלות את הספרות שאנו מוכנים להתחייב
+עליהן.}
+
+\end{tcolorbox}
+
+\RL{המירו את המספרים הבאים לכתיבה מדעית,}\\
+\RL{ושמרו על מספר הספרות המשמעותיות שניתן לפי הנתון:}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2788}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2981}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4135}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{\RL{מספר רגיל}}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{\RL{כתיבה מדעית}}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{\RL{כמה ספרות משמעותיות יש?}}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\begin{minipage}[t]{\linewidth}\raggedright
+0.00056
+\end{minipage} & & \\
+\begin{minipage}[t]{\linewidth}\raggedright
+82300
+\end{minipage} & & \\
+\begin{minipage}[t]{\linewidth}\raggedright
+0.0120
+\end{minipage} & & \\
+\begin{minipage}[t]{\linewidth}\raggedright
+6,450,000
+\end{minipage} & & \\
+\begin{minipage}[t]{\linewidth}\raggedright
+0.00450
+\end{minipage} & & \\
+\end{longtable}
+
+\subsection{\texorpdfstring{\RL{לסיכום}}{לסיכום}}\label{ux5dcux5e1ux5d9ux5dbux5d5ux5dd}
+
+\RL{כל מדידה כוללת \textbf{אי-ודאות}, ולכן הספרות בתוצאה מייצגות את
+\textbf{רמת הדיוק} של המדידה.}
+
+\RL{הספרות המשמעותיות הן כל הספרות \textbf{שאנחנו בטוחים בהן}, ועוד אחת
+\textbf{מוערכת} לפי יכולת המכשיר.}
+
+\RL{כדי לזהות ספרות משמעותיות:}
+
+\RL{כל ספרה שאינה אפס -- משמעותית.}
+
+\RL{אפסים עשויים להיות משמעותיים או לא -- תלוי במיקומם ובנקודה
+העשרונית.}
+
+\RL{בחישובים:}
+
+\RL{\textbf{כפל/חילוק} -- שמרו את מספר הספרות המשמעותיות של
+\textbf{הנתון הפחות מדויק}.}
+
+\RL{\textbf{חיבור/חיסור} -- שמרו את רמת הדיוק (המיקום העשרוני) של
+\textbf{הנתון הפחות מדויק}.}
+
+\RL{המטרה\textbf{: להציג תוצאה אמינה} -- לא מדויקת מדי, ולא גסה מדי}
+
+\RL{כדי להימנע משורה של אפסים, נשתמש ב-\textbf{כתיבה מדעית}:}
+\(a \times 10^{n}\) \RL{כאשר} \(a\) \RL{הוא מספר בין 1 ל-10, ו-}\(n\)
+\RL{הוא מעריך שלם.}
+
+\section{\texorpdfstring{\RL{ניתוח והצגת נתוני
+תהליך}}{ניתוח והצגת נתוני תהליך}}\label{ux5e0ux5d9ux5eaux5d5ux5d7-ux5d5ux5d4ux5e6ux5d2ux5ea-ux5e0ux5eaux5d5ux5e0ux5d9-ux5eaux5d4ux5dcux5d9ux5da}
+
+\subsection{\texorpdfstring{\RL{הערכה של נתונים ניסיוניים -- ממוצע
+וסטיית
+תקן}}{הערכה של נתונים ניסיוניים -- ממוצע וסטיית תקן}}\label{ux5d4ux5e2ux5e8ux5dbux5d4-ux5e9ux5dc-ux5e0ux5eaux5d5ux5e0ux5d9ux5dd-ux5e0ux5d9ux5e1ux5d9ux5d5ux5e0ux5d9ux5d9ux5dd-ux5deux5deux5d5ux5e6ux5e2-ux5d5ux5e1ux5d8ux5d9ux5d9ux5ea-ux5eaux5e7ux5df}
+
+\RL{בכל ניסוי הנדסי שבו מבצעים מדידות חוזרות, לעולם לא נקבל את אותה
+תוצאה בדיוק. תנאי העבודה, איכות הדגימה, דיוק המדידה ואפילו הבדל של שנייה
+אחת בזמן הדגימה -- כולם גורמים לפיזור בתוצאות. לכן כל גודל מדוד נחשב
+{משתנה מקרי}}, \RL{והתוצאה שאנו רושמים היא רק {אומדן} לערך האמיתי}.
+
+\RL{כדי להעריך את הערך ``האמיתי'' ביותר משתמשים ב-{ממוצע המדגם}}:
+
+{\RL{ממוצע המדגם}}
+
+\[\overset{ˉ}{X} = \frac{1}{N}\sum_{i = 1}^{N}X_{i}\]
+
+\RL{זהו הערך הנותן אומדן לערך המשתנה במערכת על בסיס כלל המדידות שנערכו}
+
+{\RL{דוגמה 1 -- מד זרימה בתהליך תעשייתי}:}\\
+\RL{בבדיקות חוזרות של ספיקה בצינור התקבלו הערכים {[}10.2, 9.8, 10.1,
+9.9, 10.0{]} ליטר/דקה}.\\
+\RL{הממוצע הוא} \(\overset{ˉ}{X} = 10.0\text{ L/min}\).\\
+\RL{זהו האומדן הסביר ביותר לספיקה האמיתית, גם אם בפועל כל מדידה מעט
+שונה}.
+
+\RL{אך ערך הממוצע עצמו לא עוזר לנו לדעת עד כמה המדידות הדירות. כאשר יש
+לנו רק מדידה אחת או שאין לנו מידע נוסף, נניח שהשגיאה היא חצי מהספרה
+האחרונה --} \(132.4 \pm 0.5\) \RL{אך כדי לדעת מהי רמת הדיוק האמיתית של
+המדידה נבדוק את הפיזור סביב הממוצע. אנחנו נעשה זאת באמצעות חישוב סטיית
+תקן} (\(\sigma\)) \RL{ו-שונות} (s²):
+
+\[s^{2} = \frac{1}{N - 1}\sum_{i = 1}^{N}{(X_{i} - \overset{ˉ}{X})^{2}}\text{     ;      }\sigma = \sqrt{s^{2}}\]
+
+\RL{ככל שהערכים רחוקים יותר מהממוצע, השונות וסטיית התקן גדלות -- כלומר,
+יש לנו פחות בטחון בכך שהממוצע אכן משקף לנו את הערך ה"אמיתי".}
+
+\RL{תרגיל -- צפיפות ביומסה במתססה:\\
+נמדדו ריכוזי תאים בשתי מערכות שונות}
+
+\RL{מערכת אחת - נמדדו ריכוזי תאים {[}1.83, 1.81, 1.79, 1.85, 1.80{]}
+גרם/ליטר.}
+
+\RL{מערכת שתיים - נמדדו ריכוזי תאים {[}1.83, 1.81, 1.79, 1.85, 1.80{]}
+גרם/ליטר.}
+
+\RL{איזו מערכת יותר יציבה?}
+
+\subsection{\texorpdfstring{\RL{מדידה עקיפה וכיול
+נתונים}}{מדידה עקיפה וכיול נתונים}}\label{ux5deux5d3ux5d9ux5d3ux5d4-ux5e2ux5e7ux5d9ux5e4ux5d4-ux5d5ux5dbux5d9ux5d5ux5dc-ux5e0ux5eaux5d5ux5e0ux5d9ux5dd}
+
+\RL{בכל תהליך הנדסי אנו נשענים על נתונים ניסיוניים --} \RL{מדידות של
+טמפרטורה, לחץ, ספיקה, ריכוז וכדומה. הנתונים הללו הם הבסיס להבנה, לבקרה
+ולתכנון}.\\
+\RL{עם זאת, ברוב המקרים איננו יכולים למדוד ישירות את הגודל שאנו באמת
+מעוניינים בו. במקום זאת אנו מודדים גודל אחר, נלווה}, \RL{שקל למדוד אותו
+(למשל מוליכות חשמלית או בליעת אור), ומשתמשים בקשר הידוע ביניהם כדי לחשב
+את המשתנה הרצוי}. \RL{כדי להגדיר קשר זה נבצע \textbf{ניסוי כיול}} --
+\RL{נמדוד את המשתנה הנלווה עבור ערכים ידועים של המשתנה האמיתי, ונשתמש
+בתוצאות כדי למצוא משוואה או גרף כיול. משם נוכל, בכל מדידה עתידית, לחשב
+את הערך המבוקש}. \RL{לדוגמה, איננו יכולים למדוד ישירות את \textbf{ריכוז
+החומר בתמיסה}}, \RL{אך אנו יודעים שלכל חומר יש נטייה לבלוע אור באורכי גל
+מסוימים, וככל שריכוז החומר גבוה יותר -- בליעת האור גדולה יותר. קשר זה
+מוכר בשם \textbf{חוק ביר--למבר}}. \RL{ערך הבליעה שמתקבל במכשיר נמדד
+ביחידות} \RL{שרירותיות (}a.u. -- arbitrary units\RL{) יחידה חסרת ממד
+הנובעת הנובעת מההגדרה הלוגריתמית של הבליעה. ככל שהבליעה גדולה יותר, כך
+ריכוז החומר בתמיסה גבוה יותר}. \RL{ליחידה זו אין משמעות פיסיקלית ישירה
+אך מה שחשוב לנו הוא ההבדלים בין הערכים השונים, שבעזרתם יבנה גרף הכיון.}
+
+\RL{לכן נפעל בשלבים}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \RL{נאתר (על סמך ספרות או מדידה) את \textbf{אורך הגל} שבו בליעת החומר
+  מרבית}.
+\item
+  \RL{נמדוד את \textbf{בליעת האור} עבור סדרת תמיסות שריכוזן ידוע}.
+\item
+  \RL{נבנה \textbf{עקומת כיול} --} \RL{גרף של בליעה לעומת ריכוז}.
+\item
+  \RL{נמדוד את בליעת האור של \textbf{תמיסת הנעלם}}, \RL{ובעזרת עקומת
+  הכיול נסיק את ריכוזה}.
+\end{enumerate}
+
+\RL{}\includegraphics[width=2.95035in,height=1.79322in]{media/media/image6.png}
+\RL{}\includegraphics[width=3.26215in,height=1.79209in]{media/media/image7.png}
+
+Figure \RL{7- מציאת ריכוז תמיסת נעלם בשיטות ספקטרוסקופיות - שלב ראשון
+מציאת אורך הגל המקסימלי, שלב שני בניית גרף כיול, ושלב שלישי -- מדידת
+הבליעה של תמיסת נעלם והסקת הערך המהגרף. כל התמונות מתוך הלומדה
+``ספקטרוסקופיה, מבוא למשוואת ביר למברט'', ד''ר אלינה גולדשטיין לויטין,
+היחידה לקידום איכות ההוראה והלמידה באוניברסיטת בן גוריון}
+
+\RL{לאחר שביצענו כיול וקיבלנו גרף המתאר את הקשר בין המשתנה הנמדד למשתנה
+הרצוי, נרצה להשתמש בו כדי לחשב ערכים חדשים}. \RL{עם זאת}, \textbf{\RL{לא
+כל מצב מחושב באותה דרך}}: \RL{לעיתים יש לנו רק שתי נקודות כיול סמוכות,
+ולעיתים סדרת נתונים שלמה שנראית לינארית או מתפזרת סביב קו מגמה. במקרים
+אחרים הקשר בין המשתנים כלל אינו לינארי, ולכן נידרש לבצע
+\textbf{לינאריזציה}} -- \RL{הגדרה מחדש של המשתנים, או שימוש בגרפים
+לוגריתמים/חצי לוגריתמים, על מנת שנוכל לעבד את הגרפים כגרפים ישרים.}
+
+\subsection{\texorpdfstring{\RL{אינטרפולציה
+ואקסטרפולציה}}{אינטרפולציה ואקסטרפולציה}}\label{ux5d0ux5d9ux5e0ux5d8ux5e8ux5e4ux5d5ux5dcux5e6ux5d9ux5d4-ux5d5ux5d0ux5e7ux5e1ux5d8ux5e8ux5e4ux5d5ux5dcux5e6ux5d9ux5d4}
+
+\RL{במדידות ניסיוניות אנו אוספים נקודות נתונים המתארות את הקשר בין שני
+משתנים, אך לא תמיד נוכל למדוד את כל הערכים האפשריים. לעיתים נרצה להעריך
+את ערכו של המשתנה עבור נקודה \textbf{שלא נמדדה ישירות} --} \RL{בין שתי
+נקודות ידועות או מחוץ לתחום הנתונים}
+
+\RL{\textbf{אינטרפולציה -} שיטה מקובלת כדי למצוא נתון חסר הנמצא בתוך
+תחום המוגדר על ידי שני ערכים נתונים, הקרובים זה לזה.}
+
+\RL{\textbf{אקסטרפולציה-} אמידת ערך של פונקציה מחוץ לטווח שבו ערכיה
+ידועים.}
+
+\RL{שתי השיטות מבוססות על ההנחה שהקשר שנמצא בין המשתנים נמשך גם בנקודות
+שלא נמדדו, אך חשוב לזכור כי באקסטרפולציה גדל הסיכון לשגיאה} -- \RL{אין
+ודאות שהמגמה תישמר מעבר לגבולות הנתונים שנמדדו בפועל}. \RL{כדי לבצע
+חיזויים כאלה נדרש מודל מתמטי המתאר את הקשר בין המשתנים. מודל זה יכול
+להיות פשוט -- כמו קו ישר בין שתי נקודות -- או מורכב יותר, כמו עקומה לא
+ליניארית המותאמת לנתונים. במקרים אחרים נשתמש בטריקים מתמטיים כמו
+לינאריזציה או גרפים לוגיים כדי להציג קשרים מורכבים בצורה פשוטה וברורה}.
+
+\includegraphics[width=3.20853in,height=1.86736in]{media/media/image9.png}
+\includegraphics[width=3.17406in,height=1.84745in]{media/media/image10.png}
+
+Figure \RL{8 - בשני הגרפים מוצגות דוגמאות למדידה של ערכים שלא נמדדו
+ישירות: הנקודות הכחולות הן הערכים שנמדודו, הנקודות הירוקות מייצגות חיזוי
+בתוך תחום המדידות (אינטרפולציה), והנקודות האדומות -- חיזוי מחוץ לתחום
+המדידות (אקסטראפולציה), שבו גובר הסיכון לסטות מהמגמה האמיתית}.
+
+\subsection{\texorpdfstring{\RL{אינטרפולציה
+מקומית}}{אינטרפולציה מקומית}}\label{ux5d0ux5d9ux5e0ux5d8ux5e8ux5e4ux5d5ux5dcux5e6ux5d9ux5d4-ux5deux5e7ux5d5ux5deux5d9ux5ea}
+
+\RL{כאשר נרצה להעריך את ערכו של משתנה בנקודה שנמצאת בין שתי מדידות
+ידועות}, \RL{נשתמש ב-\textbf{אינטרפולציה מקומית}} \textbf{(Local
+Interpolation)}.\\
+\RL{הרעיון פשוט: אם שתי נקודות סמוכות מראות מגמה כמעט ישרה, ניתן להניח
+שהקשר ביניהן ליניארי בטווח הצר הזה. כך נוכל לחשב את ערך המשתנה המבוקש
+לפי קו ישר המחבר בין שתי הנקודות}.
+
+\RL{אם הנקודות הן} \((x_{1},y_{1})\)\RL{ו-}\((x_{2},y_{2})\), \RL{ניתן
+לחשב את} \(y\) \RL{עבור ערך ביניים של} \(x\)\RL{לפי}:
+
+\[y = y_{1} + \frac{x - x_{1}}{x_{2} - x_{1}}(y_{2} - y_{1})\]
+
+\RL{שיטה זו נוחה במיוחד בגרפים ניסיוניים או בטבלאות כיול, שבהם נרצה
+למצוא ערך חסר \emph{בתוך} התחום שנמדד}. \RL{עם זאת, יש לזכור כי ההנחה
+הליניארית תקפה רק \textbf{בקרבת הנקודות, ובהנחה שהמדידות מדוייקות באופן
+יחסי.}} \RL{כאשר המרווחים גדולים, המדידות רועשות, ו/או הנתונים מתנהגים
+באופן שאינו לינארי, יש לעבור לשיטות מדויקות יותר כגון התאמת קו או התאמת
+עקומה}.
+
+Figure \RL{9 - חישוב אינטרפולציה לינארית בין שתי נקודות מדידה סמוכות
+לצורך הערכת ערך החסר בתוך טווח הנתונים.}
+
+\subsection{\texorpdfstring{\RL{התאמת קו ישר} (Linear
+Fit)\RL{.}}{התאמת קו ישר (Linear Fit).}}\label{ux5d4ux5eaux5d0ux5deux5ea-ux5e7ux5d5-ux5d9ux5e9ux5e8-linear-fit.}
+
+\RL{כאשר ברשותנו מספר נקודות מדידה המתארות קשר כמעט ליניארי בין שני
+משתנים, נוכל לתאר את הנתונים באמצעות התאמת קו ישר} (Linear Fit)\RL{.}
+\RL{במקרה זה, אנו לא מסתכלים רק על האזור המסויים בו נמצא הערך שלנו, אלא
+משתמשים בנקודות על הגרף על מנת לייצר משוואת קו ישר}.
+
+\RL{המודל המתמטי הוא}:
+
+\[y = ax + b\] \RL{אם נבחר כל שתי נקודות על הקו},
+\((x_{1},y_{1})\)\RL{ו-}\((x_{2},y_{2})\), \RL{נוכל לחשב את מקדמי
+המשוואה לפי}:
+
+\[a = \frac{y_{2} - y_{1}}{x_{2} - x_{1}},b = y_{1} - ax_{1}\] \RL{במקרה
+זה משוואת הקו מבוססת על הנקודות אותן בחרנו, לפי ההנחה שאלו שתי הנקודות
+שמייצגות את הישר בצורה הטובה ביותר ("לפי העין"). לאחר שמצאנו את משוואת
+הקו, נוכל להשתמש בה גם לצורך אינטרפולציה וגם לצורך אקסטרפולציה. עם זאת,
+חשוב לזכור כי ככל שנצא רחוק יותר מתחום המדידות}, \RL{האמינות של
+האקסטרפולציה פוחתת}. \RL{כאשר הנתונים מצייתים באופן הדוק לקו ישר, ניתן
+להתאים את הקו ``בעין'' או על סמך שתי נקודות בלבד. אך כאשר קיים פיזור או
+רעש מדידה, יש להיעזר בכלים סטטיסטיים מדויקים יותר.}
+
+Figure \RL{10 הגרף מציג שתי התאמות לינאריות לסט נתונים זהה, כאשר כל אחת
+מבוססת על זוג נקודות שונה. השוואת הקווים מדגימה כיצד בחירת נקודות שונות
+משפיעה על שיפוע ונקודת החיתוך של המשוואה}
+
+\subsection{\texorpdfstring{\RL{רגרסיה לינארית} (Linear
+Regression)}{רגרסיה לינארית (Linear Regression)}}\label{ux5e8ux5d2ux5e8ux5e1ux5d9ux5d4-ux5dcux5d9ux5e0ux5d0ux5e8ux5d9ux5ea-linear-regression}
+
+\RL{במדידות אמיתיות כמעט תמיד קיימות שגיאות מדידה ורעש אקראי. לכן, גם אם
+הקשר בין המשתנים ליניארי באופן עקרוני, הנקודות בפועל אינן נופלות בדיוק
+על קו אחד אלא מפוזרות סביבו}. \RL{במצב כזה, לא ניתן לבחור שתי נקודות
+ולבנות מהן קו מייצג -- יש צורך בשיטה שתמצא את הקו ``הכי מתאים}'' \RL{לכל
+הנתונים יחד}. \RL{שיטה זו נקראת רגרסיה ליניארית}, \RL{והיא מבוססת על
+עיקרון ה-}Least Squares\RL{, "שיטת הריבועים הפחותים".}\\
+\RL{לפי עיקרון זה, נבחר את השיפוע} \(a\) \RL{והחיתוך} \(b\) \RL{של הקו}
+\(y = ax + b\) \RL{כך שסכום הריבועים של ההפרשים בין הערכים הנמדדים}
+\(y_{i}\) \RL{לערכים החזויים לפי הקו יהיה הקטן ביותר}:
+
+\[\text{מינימום\:\,\:\,}\sum_{i}^{}{(y_{i} - (ax_{i} + b))^{2}}\]
+\includegraphics[width=2.69075in,height=1.27926in]{media/media/image13.png}
+
+\RL{כלומר, הקו שנבחר הוא זה שמייצג בצורה הטובה ביותר את כלל הנתונים, גם
+אם כל נקודה בודדת סוטה ממנו מעט}.
+
+\RL{רגרסיה ליניארית אינה רק דרך ציור מדויקת יותר של קו; היא גם מספקת
+\textbf{מדדים כמותיים} לאיכות ההתאמה, כמו מקדם הקורלציה} \(R^{2}\),
+\RL{המעיד עד כמה הקו מתאר את הנתונים היטב}.
+
+\RL{במעבדות ובתעשייה, רגרסיה ליניארית משמשת לעיתים קרובות ליצירת
+\textbf{עקומות כיול אמינות}} -- \RL{למשל, במכשירי ספקטרופוטומטר, שבהם
+נבנה קו כיול על סמך מדידות רועשות ומחשבים את ריכוז הדגימה הלא ידועה לפי
+משוואת הקו שהתקבלה}.
+
+Figure \RL{11 - הנקודות המייצגות נתונים ניסיוניים, והקו מציג את קו
+הרגרסיה שנקבע לפי שיטת הריבועים הפחותים. ערך}
+
+\subsection{\texorpdfstring{\RL{התאמת עקומה לא ליניארית} (Nonlinear
+Curve
+Fitting)}{התאמת עקומה לא ליניארית (Nonlinear Curve Fitting)}}\label{ux5d4ux5eaux5d0ux5deux5ea-ux5e2ux5e7ux5d5ux5deux5d4-ux5dcux5d0-ux5dcux5d9ux5e0ux5d9ux5d0ux5e8ux5d9ux5ea-nonlinear-curve-fitting}
+
+\RL{לא כל קשר בין משתנים הוא ליניארי. במקרים רבים -- במיוחד בתהליכים
+כימיים, ביולוגיים או פיזיקליים -- הנתונים מראים \textbf{עקומה ברורה}}:
+\RL{הקצב משתנה עם הזמן, הבליעה מתקרבת לערך רוויה, או הלחץ תלוי בריבוע
+הטמפרטורה. במצבים כאלה, קו ישר כבר אינו מתאים, ונדרש לבצע \textbf{התאמת
+עקומה לא ליניארית}}.
+
+\RL{במקום להשתמש במשוואה מהצורה} \(y = ax + b\), \RL{נבחר פונקציה שתואמת
+את האופי של הנתונים, למשל}:
+
+\[y = ae^{bx},y = ax^{b},y = a(x - x_{0})^{2} + c\]
+
+\RL{נחשב את הפרמטרים} \(a,b,c\)\RL{כך שהעקומה תתאים בצורה הטובה ביותר
+למדידות -- לעיתים בעזרת חישוב ממוחשב (למשל בשיטת הריבועים המינימליים
+הלא-ליניארית)}. \RL{לעיתים נבחר את הצורה של הפונקציה לפי ידע פיזיקלי
+מוקדם (למשל תגובה אקספוננציאלית או קצב תלוי חזקתית), ובמקרים אחרים פשוט
+נבחן איזו פונקציה מתאימה טוב יותר לנתונים}.
+
+Figure \RL{12 - הגרף מציג נתונים המתואמים לעקומה מהצורה} {(y =
+2x\^{}\{3\})} \RL{כדוגמה למקרה שבו הקשר בין המשתנים אינו ליניארי.}
+
+\RL{עם זאת, התאמות לא ליניאריות קשות יותר להערכה אינטואיטיבית: בעקומה
+מורכבת קשה לעין האנושית להבחין אם ההתאמה ``מדויקת'' או לא, במיוחד כשיש
+כמה פרמטרים חופשיים. לכן חשוב להיעזר גם בידע הפיזיקלי על התהליך וגם
+במדדים מספריים (כמו} \(R^{2}\)\RL{או סטיות תקן של הפרמטרים) כדי לוודא
+שההתאמה סבירה ולא רק מתמטית}. \RL{לבסוף, ככל שמספר הפרמטרים גדל, כך גם
+הסיכון ל-התאמה יתר} (overfitting) -- \RL{מצב שבו הפונקציה ``מתאימה'' את
+עצמה לכל נקודה אך מאבדת משמעות פיזיקלית}.
+
+\subsection{\texorpdfstring{\textbf{\RL{לינאריזציה}}
+(Linearization)}{לינאריזציה (Linearization)}}\label{ux5dcux5d9ux5e0ux5d0ux5e8ux5d9ux5d6ux5e6ux5d9ux5d4-linearization}
+
+\RL{במקרים רבים נעדיף להמיר קשר לא ליניארי לקשר \textbf{ליניארי}},
+\RL{כדי להקל על ניתוח הנתונים או על התאמת קו ישר. פעולה זו נקראת
+\textbf{לינאריזציה}} -- \RL{הפיכת המשוואה לצורה ישרה על-ידי שינוי
+המשתנים או הצירים}.
+
+Figure \RL{13 - לינאריזציה עבור הגרף מתמונה 11. על החלפת המשתנה} x
+\RL{במשתנה} {(z = x\^{}\{3\})} \RL{קיבלנו גרף לינארי}
+
+\RL{הרעיון פשוט: אם ניתן לכתוב את המשוואה כך שתתקבל הצגה מהצורה}
+\(f(x,y) = ag(x,y) + b\), \RL{אז גרף של} \(f\) \RL{לעומת} \(g\) \RL{יניב
+\textbf{קו ישר}}, \RL{שממנו אפשר לחשב את השיפוע} \(a\)\RL{והחיתוך}
+\(b\).
+
+\RL{לדוגמה}:
+
+\begin{itemize}
+\item
+  \RL{נניח שהקשר בין שני משתנים הוא} \(y = 3x^{3}\).\\
+  \RL{אם נצייר גרף של} \(y\)\RL{מול} \(x\), \RL{נקבל עקומה קמורה כלפי
+  מעלה}.\\
+  \RL{אבל אם נחשב} \(x^{3}\)\RL{ונצייר את} \(y\)\RL{מול} \(x^{3}\),
+  \RL{נקבל \textbf{קו ישר} עם שיפוע 3 וחיתוך 0}.\\
+  \RL{זהו מקרה פשוט שבו שינוי המשתנה מאפשר לנו לנתח את הקשר הליניארי
+  בקלות}.
+\item
+  \RL{דוגמה נפוצה יותר: עבור} \(y = ae^{bx}\), \RL{נחשב}
+  \(\ln y\)\RL{ונצייר גרף של} \(\ln y\)\RL{מול} \(x\); \RL{גם כאן מתקבל
+  קו ישר, שממנו ניתן לקבוע את} \(a\)\RL{ו-}\(b\).
+\end{itemize}
+
+\RL{השימוש בלינאריזציה מקל מאוד על זיהוי מגמות, על חישוב פרמטרים, ועל
+הערכת איכות ההתאמה בעין -- מאחר שקל לנו יותר לזהות ``ישרות'' של קו מאשר
+עקמומיות של עקומה}.\\
+\RL{עם זאת, יש לזכור שלינאריזציה משנה את יחידות הצירים ואת משמעות
+המשתנים, ולכן יש \textbf{להחזיר את התוצאה למשתנים המקוריים} בסיום
+הניתוח}.
+
+\subsection{\texorpdfstring{\RL{שימוש בגרפים לוגיים
+וסמילוגיים}}{שימוש בגרפים לוגיים וסמילוגיים}}\label{ux5e9ux5d9ux5deux5d5ux5e9-ux5d1ux5d2ux5e8ux5e4ux5d9ux5dd-ux5dcux5d5ux5d2ux5d9ux5d9ux5dd-ux5d5ux5e1ux5deux5d9ux5dcux5d5ux5d2ux5d9ux5d9ux5dd}
+
+\RL{לפני עידן המחשבים, אחת הדרכים הנפוצות לנתח נתונים ניסיוניים הייתה
+שימוש בגרפים לוגיים} (Log-- \RL{}Log) \RL{ו-סמילוגיים} (Semi--Log)\RL{.
+גרפים אלה שימשו להמחשה גרפית של קשרים מתמטיים לא ליניאריים -- בעיקר
+קשרים אקספוננציאליים ו-חזקתיים --} \RL{והיו כלי בסיסי בעבודתו של כל
+מהנדס או חוקר}. \RL{}
+
+Figure \RL{14} \RL{- דפים לוגריתמים וסמי לוגריתמים. שימוש בגרפים מסוג זה
+מאפשר להציג קשרים אקספוננציאליים וחזקתיים כקווים ישרים, ולזהות בקלות את
+טיב הקשר בין המשתנים}.
+
+Figure \RL{15השוואה בין גרף ליניארי, סמי-לוגריתמי ולוגריתמי-לוגריתמי.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1268}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2085}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2732}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3859}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\RL{סוג גרף}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{ליניארי}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{סמי-לוגריתמי}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{לוג-לוגריתמי}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\RL{צירי הסקאלה} & \RL{שני הצירים ליניאריים} & \RL{ציר אחד (בד"כ}
+(y)\RL{) לוגריתמי, השני ליניארי} & \RL{שני הצירים לוגריתמיים} \\
+\RL{סוג הקשר} & \RL{קשר ישר} & \RL{קשר אקספוננציאלי} & \RL{קשר חזקתי} \\
+\RL{צורת המשואה} & ( y = a + bx ) & ( y = a e\^{}\{bx\} ) & ( y = a
+x\^{}b ) \\
+\RL{פירוש השיפוע (}m\RL{)} & \RL{קצב שינוי קבוע של (}y\RL{) ביחס
+ל-(}x\RL{)} & \RL{קצב הגידול או הדעיכה האקספוננציאלי} & \RL{המעריך
+(}b\RL{) בקשר החזקתי} \\
+\RL{חישוב השיפוע בפועל} &
+\(\left( m = \frac{\Delta y}{\Delta x} \right)\) &
+\(\left( b = \frac{\ln\left( y_{2} \right) - \ln\left( y_{1} \right)}{x_{2} - x_{1}} \right)\)
+&
+\(\left( b = \frac{\log\left( y_{2} \right) - \log\left( y_{1} \right)}{\log\left( x_{2} \right) - \log\left( x_{1} \right)} \right)\) \\
+\RL{משמעות פיזיקלית} & \RL{השיפוע הוא השינוי המוחלט (כמו מהירות, קצב
+זרימה וכו')} & \RL{מציין שיעור שינוי יחסי קבוע (למשל קצב דעיכה
+רדיואקטיבית)} & \RL{מתאר יחס קנה מידה -- איך (}y\RL{) משתנה כאשר
+(}x\RL{) מוכפל פי ערך קבוע} \\
+\end{longtable}
+
+\RL{כיום, בעידן התוכנות והחישובים הדיגיטליים, כמעט ואין צורך לצייר גרפים
+לוגריתמיים באופן ידני}.\\
+\RL{עם זאת}, \RL{הבנה של הצגה לוגית חשובה מאוד -- היא מאפשרת לנו להעריך
+בצורה נכונה שינויים לוגריתמיים או אקספוננציאליים (למשל גידול מעריכי או
+דעיכה מהירה), ולפרש נכונה גרפים מדעיים שבהם קני מידה כאלה עדיין נפוצים}.
+
+\subsection{\texorpdfstring{\RL{סיכום}}{סיכום}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-2}
+
+\RL{בעבודה הנדסית וניסויית, אנו כמעט תמיד נדרשים להסיק מסקנות מתוך
+מדידות חלקיות}. \RL{האתגר הוא לייצג את הנתונים בדרך שתאפשר לנבא ערכים
+חדשים ולבדוק אם הם סבירים מבחינה פיזיקלית}. \RL{לשם כך עומדים לרשותנו
+כלים ברמות שונות של מורכבות}:
+
+\begin{itemize}
+\item
+  \RL{אינטרפולציה מקומית מאפשרת להעריך ערכים \emph{בין} שתי נקודות
+  סמוכות}.
+\item
+  \RL{התאמת קו ישר יוצרת מודל פשוט שמתאר את המגמה הכללית של נתונים אשר
+  נראים לינאריים באופן יחסי.}
+\item
+  \RL{רגרסיה ליניארית מחשבת קו מייצג סטטיסטי כאשר קיימות סטיות ורעש
+  מדידה}.
+\item
+  \RL{התאמת עקומה לא ליניארית מרחיבה את הגישה למקרים שבהם הקשר בין
+  המשתנים עוקב אחרי פונקציה מורכבת יותר}.
+\item
+  \RL{לינאריזציה וגרפים לוגיים מאפשרים להפוך קשרים לא ליניאריים לייצוגים
+  ישרים שקל לנתח בעין ובחישוב}.
+\end{itemize}
+
+\RL{בין אם מדובר בקו פשוט או בעקומה מורכבת, המטרה המשותפת היא אחת} --
+\RL{למצוא תיאור מתמטי אמין של הנתונים ולבחון עד כמה הוא מייצג את
+המציאות}. \RL{גם בעידן שבו תוכנות מבצעות עבורנו את כל ההתאמות בלחיצת
+כפתור, חשוב להבין את העקרונות מאחורי השיטות: רק כך נוכל להעריך את אמינות
+התוצאות, לזהות מתי חיזוי הוא סביר ומתי מדובר באקסטרפולציה מסוכנת, ולשלב
+בין ניתוח מתמטי לבין שיקול הנדסי ופיזיקלי נכון}.
+
+\RL{בטבלת הכיול הבאה נמדדה בליעת אור (}\(y\)\RL{) עבור ריכוזים שונים של
+חומר (}\(x\)\RL{):}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.3248}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1282}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1282}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1282}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1282}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1282}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\[x\ \left( \frac{mol}{L} \right)\]
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{0.10}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{0.20}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{0.30}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{0.40}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{0.50}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\begin{minipage}[t]{\linewidth}\raggedright
+\[y\ (a.u.)\] \RL{יחידות שרירותיות}
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+0.48
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+0.96
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+1.45
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+1.94
+\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
+2.44
+\end{minipage} \\
+\end{longtable}
+
+\RL{1. השתמשו באינטרפולציה מקומית כדי להעריך את ערך הבליעה עבור}
+\(y = 1.70\)\RL{.}
+
+\RL{2. מצאו את משוואת הקו המתארת את הנתונים, בהנחה שהקשר ליניארי.}
+
+\RL{3. השתמשו במשוואה שמצאתם כדי למצוא את הריכוז עבור} \(y = 2.85\ \)
+
+\RL{4. אילו היה מספר רב של נקודות מדידה, באיזו מהשיטות המוזכרות בפרק היה
+כדאי להשתמש?}
+
+\bookmarksetup{startatroot}
+
+\chapter{\texorpdfstring{\RL{פרק 3-- תהליכים ומשתני
+תהליך}}{פרק 3-- תהליכים ומשתני תהליך}}\label{ux5e4ux5e8ux5e7-3-ux5eaux5d4ux5dcux5d9ux5dbux5d9ux5dd-ux5d5ux5deux5e9ux5eaux5e0ux5d9-ux5eaux5d4ux5dcux5d9ux5da}
+
+\section{\texorpdfstring{\RL{מה נלמד בפרק
+הזה}?}{מה נלמד בפרק הזה?}}\label{ux5deux5d4-ux5e0ux5dcux5deux5d3-ux5d1ux5e4ux5e8ux5e7-ux5d4ux5d6ux5d4-1}
+
+\begin{itemize}
+\item
+  \RL{{להגדיר ולהסביר} את המושגים הבסיסיים של צפיפות, משקל סגולי, יחידות
+  מוליות} \RL{(}mole gram-mole, pound-mole\RL{), וגדלי טמפרטורה ולחץ}.
+\item
+  \RL{{להמחיש ולזהות} משתנים בתרשים תהליך -- זרמים, משתני מצב והרכב --
+  ולתאר את תפקידם בתהליך הנדסי}.
+\item
+  \RL{{להבדיל ולהשוות} בין סוגי לחצים (מוחלט, נמדד ואטמוספרי), ולנתח
+  מצבים בהם הלחץ נמדד בעזרת מנומטר או עמוד נוזל}.
+\item
+  \RL{{לבצע ולנמק} חישובים המקשרים בין מסה, נפח ומולים, בהתבסס על צפיפות
+  ומשקל מולקולרי}.
+\item
+  \RL{{להמיר ולפרש} הרכב תערובת בין שברי מסה לשברי מולים, ולחשב משקל
+  מולקולרי ממוצע של תערובת מרובת רכיבים}.
+\item
+  \RL{{להמיר ולהעריך} יחידות טמפרטורה בין קלווין, צלזיוס, פרנהייט
+  וראנקין, ולהבין את משמעות הבחירה ביחידת מידה בתיאור תהליך פיזיקלי או
+  ביוטכנולוגי}.
+\end{itemize}
+
+\section{\texorpdfstring{\RL{מהו תהליך
+הנדסי?}}{מהו תהליך הנדסי?}}\label{ux5deux5d4ux5d5-ux5eaux5d4ux5dcux5d9ux5da-ux5d4ux5e0ux5d3ux5e1ux5d9}
+
+\RL{תהליך הוא רצף של פעולות פיזיקליות או כימיות שבמהלכן חומרי גלם עוברים
+שינוי} \RL{בהרכבם, בצורתם או באנרגיה שלהם.}
+
+\RL{לעבודתם של מהנדסי ומהנדסות התהליך שלושה היבטים: תכנון, תפעול
+ואופטימיזציה של תהליכים במפעלי הייצור השונים, כך שהתהליכים יהיו יציבים,
+בטוחים, רווחיים ויעילים לאורך זמן.}
+
+\textbf{\RL{תכנון התהליך} (Process Design)} -- \RL{הגדרה של יחידות
+הפעולה, תנאי ההפעלה והציוד הדרוש כך שהתהליך יעמוד במטרות הייצור ובדרישות
+הבטיחות}.
+
+\textbf{\RL{תפעול התהליך} (Process Operation)} -- \RL{פיקוח יומיומי על
+תהליך קיים, ניטור נתונים בזמן אמת, וזיהוי חריגות או תקלות בתפקוד
+המערכת}.
+
+\textbf{\RL{אופטימיזציה של התהליך} (Process Optimization)} -- \RL{ניתוח
+ביצועים וחיפוש מתמיד אחר דרכים לשפר יעילות, להפחית צריכת אנרגיה ולהגדיל
+תפוקה}.
+
+\RL{שלושת השלבים הללו משקפים את עיקר העשייה של מהנדס ומהנדסת תהליך: לא
+רק להבין מה קורה במערכת, אלא גם \textbf{לדעת לשלוט בה ולכוון אותה}}.
+
+\RL{כל תהליך בנוי מיחידות פעולה} (Unit Operations)
+
+\RL{יחידות פעולה}- (Unit Operations) \RL{רכיבים נפרדים שכל אחד מהם מבצע
+שינוי מסוים בחומר}:
+
+Figure \RL{16- תיאור כללי של תהליך בדיאגרמת בלוקים}
+
+\RL{יש סוגים רבים של יחידות פעולה, אך הבסיסיות ביותר, בהן נשתמש בספר זה,
+הן --}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=6.5in,height=2.7375in]{media/media/image20.png}
+
+}
+
+\caption{A diagram of a mixture AI-generated content may be incorrect.}
+
+\end{figure}%
+
+Figure \RL{17 - יחידות פעולה בסיסיות בתהליך הכימי/ביולוגי}
+
+\subsection{\texorpdfstring{\RL{דיאגרמות לתכנון
+תהליך}}{דיאגרמות לתכנון תהליך}}\label{ux5d3ux5d9ux5d0ux5d2ux5e8ux5deux5d5ux5ea-ux5dcux5eaux5dbux5e0ux5d5ux5df-ux5eaux5d4ux5dcux5d9ux5da}
+
+\RL{מהנדסים משתמשים בתרשימים שונים כדי לתאר תהליכים -- כל תרשים מתאים
+לרמת פירוט אחרת של התכנון}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Block Flow Diagram (BFD)}
+\end{enumerate}
+
+\RL{התרשים הפשוט ביותר}. \RL{כל יחידת פעולה מיוצגת כמלבן אחד, והחצים
+מראים את כיווני זרימת החומרים}. \RL{משמש להמחשה כללית של מבנה התהליך ושל
+הקשרים בין היחידות}.
+
+Figure \RL{18} \RL{-} Block flow process diagram for the production of
+benzene (Turton et al., 2012)
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  \textbf{Process Flow Diagram (PFD)}
+\end{enumerate}
+
+\RL{תרשים מפורט יותר, המשמש לתכנון הנדסי}. \RL{כולל את כל יחידות הפעולה
+העיקריות, קווים לכל זרם חומר ואנרגיה, נתוני פעולה בסיסיים} \RL{(}T,
+P\RL{,} \RL{ספיקות), לעיתים גם ציוד עזר חשוב}. \RL{תרשימי} PFD
+\RL{משמשים לחישובי מאזן חומר ואנרגיה ולתכנון ראשוני של תהליך תעשייתי}.
+
+Figure \RL{19-} Process Flow Diagram Detailing the Nitric Acid Process
+(Towler and Sinnott, 2013)
+
+\textbf{Piping and Instrumentation Diagram (P\&ID)}
+
+\RL{התרשים המפורט ביותר}. \RL{מכיל את כל הצנרת, השסתומים, החיישנים,
+מכשירי המדידה, יחידות הבקרה והאזעקות}. \RL{משמש למהנדסי מכשור ובקרה בעת
+בנייה והפעלה של מתקנים בפועל}.
+
+Figure \RL{20 - תזרים צנרת ומכשור.} Copyright © 2025 Edrawsoft
+
+\RL{\ul{כיצד נצייר תהליך?}}
+
+\RL{כדי לנתח תהליך, נייצג אותו באופן סכמטי כ-תרשים בלוקים} (Block Flow
+Diagram -- BFD)\RL{. כל בלוק מייצג יחידת פעולה אחת}. \RL{חצים מייצגים
+זרמי חומר או אנרגיה הנכנסים ויוצאים מהבלוקים}. \RL{ליד כל חץ נציין את שם
+הזרם ואת המשתנים הפיזיקליים החשובים}: \RL{טמפרטורה} (T), \RL{לחץ} (P),
+\RL{ספיקת מסה} (ṁ), \RL{והרכב} (xᵢ).\RL{לעיתים מסמנים גם מסגרת גבולות
+מערכת} (System Boundary), \RL{המגדירה מה נכלל בתהליך ומה לא}. \RL{כך
+נוצר ייצוג גרפי של תהליך מורכב, שממנו נוכל בהמשך לגזור משוואות מאזן חומר
+ואנרגיה}.
+
+\RL{תהליך תסיסה} (Fermentation Process)
+
+\RL{כדי להמחיש את רעיון התרשים, נבחן תהליך פשוט של ייצור בירה}.
+\RL{בתהליך זה מוזרמים שני חומרים למיכל תסיסה} (Fermentation
+Reactor):\RL{\hfill\break
+- תמיסת סוכר} (Substrate Feed) \RL{מהווה את מקור האנרגיה
+לשמרים}.\RL{\hfill\break
+- תמיסת שמרים} (Cell Suspension) \RL{מכילה תאים חיים המבצעים את התגובה
+הביולוגית}.
+
+\RL{בתוך המיכל מתרחשת תגובה ביוכימית}: \RL{השמרים ממירים את הסוכרים
+ל-אתנול (מוצר רצוי) ו-פחמן דו-חמצני (תוצר לוואי) מהמיכל יוצא זרם אחד ובו
+תערובת של מים, אתנול ותאים מתים}. \RL{וזרם נוסף של פחמן דו חמצני במצב
+גזי}
+
+\RL{תרשים התהליך ייראה כך}:
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=5.9375in,height=2.60417in]{media/media/image24.png}
+
+}
+
+\caption{A diagram of fermentation reactor AI-generated content may be
+incorrect.}
+
+\end{figure}%
+
+Figure \RL{21 - תרשים בלוקים - מערכת תסיסה}
+
+\section{\texorpdfstring{\RL{משתני
+תהליך}}{משתני תהליך}}\label{ux5deux5e9ux5eaux5e0ux5d9-ux5eaux5d4ux5dcux5d9ux5da}
+
+\RL{אחר שזיהינו את שלבי התהליך ואת יחידות הפעולה המרכיבות אותו, נוכל
+להתחיל לבחון אותו לעומק. כל אחת מהיחידות בתהליך -- בין אם מדובר במיכל
+ערבוב, במחליף חום או במגדל ספיגה -- מאופיינת על-ידי משתני תהליך}
+(process variables)\RL{.}
+
+\textbf{\RL{משתני תהליך} (Process Variables)} \RL{הם גדלים פיזיקליים או
+כימיים הנמדדים או נשלטים במהלך פעולה של מערכת תהליכית, ומשמשים לתיאור
+מצבה בזמן נתון.}
+
+\RL{משתנים אלה כוללים גדלים כמו טמפרטורה, לחץ, ספיקה, ריכוז והרכב כימי},
+\RL{והם אלה שמאפשרים לנו לכמת את מה שקורה בכל שלב של התהליך. במילים
+אחרות, אם תרשים הבלוקים מציג לנו את ``מה קורה'' בתהליך, משתני התהליך הם
+\textbf{השפה הכמותית} שבאמצעותה מהנדסים ומהנדסות מתארים מה מתרחש בתוך כל
+יחידת פעולה, וכיצד שינוי באחד מהם משפיע על שאר מרכיבי המערכת}.
+
+\RL{דוגמאות למשתני תהליך}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2117}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4599}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3139}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\RL{סוג המשתנה} & \RL{דוגמאות} & \RL{מה הוא מתאר} \\
+\textbf{\RL{תרמודינמי}} & \RL{טמפרטורה (}T\RL{), לחץ (}P\RL{)} &
+\RL{מצבי אנרגיה והתנהגות חומרים} \\
+\textbf{\RL{זרימה}} & \RL{ספיקה מסה/נפח} \((\dot{m},\dot{F})\) & \RL{כמה
+חומר עובר ביחידת זמן} \\
+\textbf{\RL{הרכב}} & \RL{ריכוז, אחוז מסה, שבר מולרי} & \RL{תכולת חומרים
+בתערובת} \\
+\end{longtable}
+
+\section{\texorpdfstring{\RL{מסה
+ונפח}}{מסה ונפח}}\label{ux5deux5e1ux5d4-ux5d5ux5e0ux5e4ux5d7}
+
+\RL{כאשר אנו ניגשים לתאר מערכת, שני הגדלים הראשונים שבהם נשתמש כמעט בכל
+תהליך הם \textbf{מסה}}\textbf{(Mass) \RL{}}
+\RL{ו\textbf{נפח}}\textbf{(Volume)}\RL{. הם מתארים כמה חומר יש לנו וכמה
+מקום הוא תופס}. \RL{הכמות שלהם תלויה בגודל המערכת איתה אנחנו עובדים. אם
+נסתכל על כוס שתייה, נפח המים (ובהתאם גם מסת המים) יהיו קטנים מאשר נפח
+המים בדלי או בבריכה. לכן אלו תכונות \textbf{תלויות במערכת,}} \RL{או
+במונחים הנדסיים} -- \textbf{\RL{תכונות אקסטנסיביות} (Extensive
+Properties)}\RL{.}
+
+\RL{עם זאת, תכונות כאלה אינן נוחות כשאנחנו רוצים להשוות בין מערכות שונות
+או לתאר התנהגות של חומר שאינה תלויה בגודל המתקן. לצורך כך אנו מחפשים
+תכונות שאינן תלויות במערכת, תלויות אשר קבועות עבור חומר מסויים ללא תלות
+במערכת. אם נשווה טיפת מים, כוס מים ודלי מלא מים -- נראה שכמות המים
+משתנה, אבל היחס בין המסה לנפח נשאר כמעט קבוע}. \RL{למשל, ליטר אחד של מים
+שוקל בקירוב קילוגרם אחד}. \RL{גם אם נכפיל את הכמות פי עשרה או פי אלף,
+היחס הזה לא ישתנה: בכל פעם נקבל בערך קילוגרם לכל ליטר}.
+
+\RL{כאשר היחס בין שני גדלים אקסטנסיביים נשאר קבוע עבור חומר מסוים, אפשר
+להגדיר ממנו \textbf{תכונה אינטנסיבית}}\textbf{(Intensive Properties)}
+\RL{}-- \RL{תכונה שמאפיינת את החומר עצמו, בלי קשר לגודל או לכמות}.
+\RL{לדוגמא -- היחס בין המסה לנפח של חומר מסויים בתנאי לחץ
+וטמפ\textquotesingle{} מסויימים.\\
+}
+
+\subsection{\texorpdfstring{\RL{צפיפות} \RL{}(Density) \RL{ונפח סגולי}
+(Specific
+Volume)\RL{.}}{צפיפות (Density) ונפח סגולי (Specific Volume).}}\label{ux5e6ux5e4ux5d9ux5e4ux5d5ux5ea-density-ux5d5ux5e0ux5e4ux5d7-ux5e1ux5d2ux5d5ux5dcux5d9-specific-volume.}
+
+\RL{היחס בין מסה לנפח נקרא \textbf{צפיפות} ומסומן באות היוונית} ρ (rho):
+
+\[\rho = \frac{m}{V}\ \ \ \ \ \ ;\ \ \ \ \lbrack\rho\rbrack\ :\ \ \ \frac{\lbrack M\rbrack}{\lbrack L\rbrack^{3}} \Longrightarrow \frac{kg}{m^{3}}\ ,\ \frac{g}{cm^{3}},\frac{lb_{m}}{{ft}^{3}}\]
+
+\RL{הצפיפות היא בעצם המסה של יחידת נפח אחת של חומר. זהו גודל
+\textbf{אינטנסיבי,} מפני שהוא אינו תלוי בגודל המערכת אלא באופי החומר
+ובתנאים שהוא נמצא בהם (למשל בטמפרטורה ובלחץ)}. \RL{במילים אחרות -- בין
+אם ניקח גרם אחד של מים או קילוגרם שלם, הצפיפות שלהם תישאר זהה, כל עוד
+התנאים זהים}. \RL{למשל, הצפיפות של מים בטמפרטורה של} \(4℃\) \RL{היא}
+
+\[\rho_{H_{2}O} = 1.000\frac{g}{cm^{3}} = 1000\frac{kg}{m^{3}} = 0.0624\frac{lb_{m}}{ft^{3}}\]
+\RL{הנפח הסגולי (}specific Volume\RL{) מגדיר מהו הנפח ליחידת מסה -
+ההיפוך של הצפיפות}
+
+\[v = \frac{V}{m} = \frac{1}{\rho}\]
+
+\RL{תכונות פיזיקליות כמו צפיפות}, \RL{נקודת רתיחה}, \RL{טמפרטורת התכה},
+\RL{מקדם שבירה ועוד -- אינן נמדדות בכל פעם מחדש, אלא נלקחות לרוב ממקורות
+אמינים של נתונים ניסיוניים}. \RL{כמו}
+\href{https://hbcp-chemnetbase-com.bengurionu.idm.oclc.org/contents/ContentsSearch.xhtml?dswid=-9306}{{CRC
+Handbook of Chemistry and Physics,}} \RL{ו-}
+\href{https://primo.bgu.ac.il/discovery/fulldisplay?docid=alma990020411320204361&context=L&vid=972BGU_INST:972BGU&lang=he&search_scope=MyInst_and_CI&adaptor=Local\%20Search\%20Engine&tab=Everything&query=any,contains,Perry\%E2\%80\%99s\%20Chemical\%20Engineers\%E2\%80\%99\%20Handbook&facet=tlevel,include,online_resources&mode=basic&offset=0}{{\emph{Perry's
+Chemical Engineers' Handbook}}}.\RL{, בהם מופיעים ערכים מדויקים של
+תכונות עבור אלפי חומרים -- אורגניים ואי-אורגניים כאחד. הספרים כולל
+טבלאות של צפיפויות בטמפרטורות שונות, מקדמי התפשטות תרמית, צמיגויות, חום
+סגולי ותכונות נוספות החיוניות לחישובים הנדסיים}. \RL{}
+
+\RL{בעזרת} CRC Handbook of Chemistry and Physics \RL{או} \emph{Perry's
+Chemical Engineers' Handbook}\RL{. מצאו את ערכי הצפיפות (}ρ\RL{)
+בטמפרטורת החדר עבור החומרים הבאים:}
+
+\textbf{\RL{אתנול (}Ethanol\RL{)}}
+
+\textbf{\RL{בנזן (}Benzene\RL{)}}
+
+\textbf{\RL{כלורופורם (}Chloroform\RL{)}}
+
+\textbf{\RL{גליצרול (}Glycerol\RL{)}}
+
+\RL{\textbf{א.} ציינו את יחידות הצפיפות כפי שהן מופיעות בטבלה.}\\
+\RL{\textbf{ב.} המירו את הערכים ליחידות מערכת} SI (kg/m³)\RL{.}\\
+\RL{\textbf{ג.} השוו בין החומרים: מי מהחומרים צפוף יותר ממי, ומה ניתן
+להסיק על כך מבחינת הציפה במים?}
+
+\subsection{\texorpdfstring{\RL{משקל סגולי} (Specific
+Gravity)}{משקל סגולי (Specific Gravity)}}\label{ux5deux5e9ux5e7ux5dc-ux5e1ux5d2ux5d5ux5dcux5d9-specific-gravity}
+
+\RL{לעיתים קרובות נוח להשוות את צפיפותו של חומר לצפיפות של חומר ייחוס},
+\RL{במקום להשתמש בערכים מוחלטים}. \RL{לצורך כך משתמשים בגודל חסר-ממדים
+משקל סגולי (}Specific gravity\RL{)}
+
+\RL{\textbf{משקל סגולי} (}Specific gravity, SG\RL{) -- היחס בין צפיפות
+של חומר לצפיפות של חומר ייחוס ידוע}
+
+\[SG = \frac{\rho_{\text{חומר}}}{\rho_{\text{ייחוס}}}\]
+
+\RL{ברוב המקרים, החומר המשמש כייחוס הוא מים נוזליים בטמפרטורה של} \(4℃\)
+\RL{ולץ של} 1atm \RL{אשר הצפיפות שלהם במערכת} SI \RL{היא}
+
+\[\rho_{H}^{2}O = 1.000\frac{g}{cm^{3}} = 1000\frac{kg}{m^{3}} = 62.43\frac{lb_{m}}{ft^{3}}\]
+
+\RL{היות ו-}SG \RL{} \RL{הוא \textbf{יחס בין שתי צפיפויות}}, \RL{הוא חסר
+יחידות}. \RL{ואפשר לראות שבעת חישוב צפיפות באמצעות הצפיפות הסגולית ב}SI
+\RL{או} GCS \RL{הערך הנומרי של צפיפות החומר שווה לערך המשקל הסגולי שלו}.
+\RL{}
+
+\RL{עבור} \(SG = 0.85\).
+
+\[SG = 0.85 = \frac{\rho_{\text{חומר}}}{\rho_{\text{ייחוס}}}\  = < \ \ \rho_{חומר} = 0.85*\rho_{\text{ייחוס}}\  = 0.85*1.000\frac{g}{cm^{3}}\]
+
+\[\ \rho_{חומר} = 0.85\frac{g}{cm^{3}}\]
+
+\RL{עם זאת, במערכת היחידות האמריקאית} (AES), \RL{הצפיפות של מים נמדדת
+שווה ל} \(62.43\frac{lb_{m}}{ft^{3}}\) \RL{ולכן במקרה זה הערך המספרי של
+הצפיפות אינו שווה לערך ה} SG\RL{. מאחר וערך הייחוס שונה}\\
+\RL{לכן יש להמיר תחילה את הצפיפות ליחידות המתאימות לפני שמחשבים את ה-}SG
+\RL{} \RL{לפי}:
+
+\[SG = \frac{\rho_{חומר}}{62.43\frac{lb_{m}}{ft^{3}}}\] \RL{אם הצפיפות
+של נוזל מסויים היא} \(78.0\frac{lb_{m}}{ft^{3}}\) \RL{המשקל הסגולי שלו
+יהיה}
+
+\[SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25\]
+
+\RL{ערכי צפיפות של חומר מסויים הן} \(\rho = 800\frac{kg}{m^{3}}\)
+\RL{(ב} SI\RL{)ו-} \(\rho = 49.9\frac{lb_{m}}{ft^{3}}\) \RL{(ב}
+AES\RL{). חשבו את} SG \RL{על פי כל אחד מהנתונים בנפרד, מה ניתן להגיד על
+התוצאות?}
+
+\RL{מכיוון שהמשקל הסגולי} (Specific Gravity) \RL{מוגדר כיחס בין שתי
+צפיפויות -- צפיפות החומר וצפיפות חומר הייחוס -- הוא אינו תלוי ביחידות
+המדידה}. \RL{כל שינוי ביחידות ישפיע באותו יחס על המונה והמחנה, ולכן הערך
+הנומרי של} \(SG\) \RL{יישאר זהה בכל מערכת יחידות}. \RL{במילים אחרות,
+מדובר בגודל חסר ממדים} (dimensionless) \RL{המבטא השוואה טהורה בין
+צפיפויות וניתן להשתמש באותו הערך ללא תלות במערכת היחידות עימה אנו
+עובדים.}
+
+\RL{כמו כן מאחר וה-}SG \RL{מבוסס על יחס, הוא מאפשר להעריך בקלות את
+התנהגות החומר ביחס לחומר הייחוס}. \RL{כאשר ערך ה-}SG \RL{קטן מ-1,
+המשמעות היא שהחומר קל יותר מהייחוס (לרוב מים) והוא ייטה לצוף}; \RL{כאשר
+הוא גדול מ-1, החומר צפוף יותר וייטה לשקוע}. \RL{תכונה זו הופכת את המשקל
+הסגולי לכלי שימושי ומהיר לזיהוי חומרים ולהבנה אינטואיטיבית של התנהגותם},
+\RL{מבלי להזדקק לחישובי צפיפות מפורטים בכל מערכת יחידות}.
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{בכל טבלה של תכונות פיזיקליות חשוב לשים לב לתנאי המדידה של הנתונים}.
+\RL{בעמודות המציינות משקל סגולי} (SG) \RL{מופיעה לעיתים הכותרת} SG
+(20°/4°) \RL{} \RL{שפירושה הוא}: \RL{\hfill\break
+\textbf{\emph{המשקל הסגולי של החומר בטמפרטורה של}}}\(\mathbf{20℃}\)
+\RL{\textbf{\emph{ביחס למים בטמפרטורה של}}}
+\(\mathbf{4℃}\)\textbf{\emph{\RL{.}}}\\
+\RL{עבור חלק מהחומרים, ערכי ה־}SG \RL{נמדדו בטמפרטורות שונות, ולכן מופיע
+ליד המספר סימון קטן לדוגמה}: \(SG = {0.783}^{18}\)\RL{מציין שהמדידה
+בוצעה ב} \(18℃\)\\
+\RL{ואילו} \(SG = {1.266}^{15}\) \RL{נמדדה ב} \(15℃\)\\
+\RL{המספר הקטן אינו חזקה מתמטית, אלא מציין \textbf{את טמפרטורת המדידה}}.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{מכיוון שהצפיפות -- ובהתאם גם המשקל הסגולי -- משתנים מעט עם
+הטמפרטורה},\\
+\RL{יש לוודא תמיד שהנתונים נלקחים באותם תנאים לפני שמשווים בין חומרים או
+מבצעים חישובי המרה}.
+
+\end{tcolorbox}
+
+\subsection{\texorpdfstring{\RL{ספיקות} (Flow
+rate)}{ספיקות (Flow rate)}}\label{ux5e1ux5e4ux5d9ux5e7ux5d5ux5ea-flow-rate}
+
+\RL{כאשר נתחיל לדבר על מערכות יהיו מקרים בהם תהיה לנו תנועה קבועה של
+חומר לתוך ומחוץ למערכת. על מנת לאפיין את התהליך נצטרך לדעת באיזה קצב
+חומרים נכנסים ויוצאים מהמערכת}. \RL{הגודל המתאר זאת נקרא ספיקה} (Flow
+rate)\RL{. ובהתאם:}
+
+\textbf{\RL{ספיקה מסה} (Mass flow rate)} -- \RL{כמות המסה העוברת בנקודה
+מסוימת ליחידת זמן}.
+
+\RL{מסומנת בדרך כלל} \(\dot{m}\)(m-dot), \RL{ומוגדרת כ-}
+\(\dot{m} = \frac{dm}{dt}\)
+
+\RL{ספיקה נפחית} (Volumetric flow rate) -- \RL{הנפח העובר ליחידת זמן},
+
+\RL{מסומנת} \(\dot{V}\), \RL{ומוגדרת כ} \(\dot{V} = \frac{dV}{dt}\)
+
+\begin{quote}
+\RL{שני סוגי הספיקה קשורים זה לזה דרך הצפיפות}:
+\RL{}\(\rho = \frac{m}{V} = \frac{\overset{.}{m}}{\overset{.}{V}}\)
+\RL{}
+
+\RL{כמו כן, כאשר נדבר על מולים נוכל להגדיר גם ספיקה מולרית}
+\end{quote}
+
+\textbf{\RL{ספיקה מולרית -} (Molar flow rate)} \RL{כמות המולים העוברת
+יחידת זמן} \(\dot{n} = \frac{dn}{dt}\)
+
+\RL{בצינור זורמים מים בטמפרטורה של} \(25℃\)\\
+\RL{הספיקה הנפחית הנמדדת היא}
+\(\dot{V} = 2.0 \times 10^{- 3}\text{ m³/s}\)\\
+\RL{וצפיפות המים בטמפרטורה זו היא} \(\rho = 997\text{ kg/m³}\)\\
+\RL{א. חשבו את \textbf{ספיקת המסה} של הזרימה.}
+
+\RL{ב. כמה זמן יידרש למלא מיכל בנפח של} \(0.5m^{3}\)
+
+\section{\texorpdfstring{\RL{הרכב
+כימי}}{הרכב כימי}}\label{ux5d4ux5e8ux5dbux5d1-ux5dbux5d9ux5deux5d9}
+
+\RL{רוב החומרים בטבע ובמערכות תהליך הם תערובות. לתרכובת ולהרכב התערובת
+יש השפעה ישירה על תכונות פיזיקליות (צפיפות, צמיגות, נקודת רתיחה) ועל
+אופן החישוב ההנדסי. בפרק זה נסקור דרכי ייצוג נפוצות של הרכב, ונראה כיצד
+לעבור בין ייצוגים שונים.}
+
+\subsection{\texorpdfstring{\RL{מול ומשקל אטומי
+ומולקולרי}}{מול ומשקל אטומי ומולקולרי}}\label{ux5deux5d5ux5dc-ux5d5ux5deux5e9ux5e7ux5dc-ux5d0ux5d8ux5d5ux5deux5d9-ux5d5ux5deux5d5ux5dcux5e7ux5d5ux5dcux5e8ux5d9}
+
+\RL{כאשר אנו מאפיינים חומר הכי קל להתחיל מהמאפיין המוחשי ביותר שלו --
+המסה. המסה מספרת לנו כמה ``חומר'' יש במערכת אבל היא אינה אומרת לנו כמה
+צורונים שונים יש בתוך המערכת. בדיוק כמו שאם יגידו לנו שבכיתה מסויימת יש
+1,000 ק"ג של תלמידים, לא נוכל לדעת כמה תלמידים יש לנו בפועל. מאחר וכמות
+הצורונים (אטומים/מולקולות/יונים/אלקטרונים/וכו...) היא עצומה, היה צריך
+להגדיר יחידת מידה שתאפשר לנו לספור את כמות הצורונים בנוחות.}
+
+\RL{מול} (mol) \RL{הוא יחידת מידה לכמות חומר. זוהי דרך לספור צורונים
+במספרים עצומים שאי אפשר לספור ישירות}. \RL{במערכת ה-} SI \RL{יחידת כמות
+החומר היא \textbf{מול}}\textbf{(mol)}\RL{,} \RL{המוגדרת כך שמול אחד מכיל
+בדיוק}
+
+\[N_{A} = 6.02214076 \times 10^{23}\frac{particles}{mol}\] \RL{צורונים.
+המספר הזה נקרא מס\textquotesingle{} אבוגדרו.}
+
+\RL{לכל מערכת יחידות יש יחידת כמות המותאמת לשאר היחידות במערכת.}
+
+\RL{במערכת} cgs \RL{היחידות נקראות} g-mol \RL{והן שוות
+ל}\(1g - mol = 1mol\) \RL{(זו למעשה ההגדרה המקבילה ל}mol \RL{המוכר
+מכימיה)}
+
+\RL{במערכת} SI \RL{היחידות נקראות} kg-mol \RL{והן שוות
+ל}\(Kg - mol = kmol = 1000kmol\)
+
+\RL{במערכת} AES \RL{היחידות הן} lb-mol \RL{והן שוות}
+\(1lb_{m} - mol = lbmol = 453.592mol\)
+
+\RL{כדי להשוות בין חומרים שונים ומערכות שונות, עלינו למצוא את התכונה אשר
+נשארת זהה עבור אותו החומר במערכות שונות\emph{.}} \RL{תכונה זו נקראת משקל
+אטומי (לאטומים) או משקל מולקולרי (למולקולות), והיא מייצגת את המסה של מול
+אחד של אותם צורונים. זוהי תכונה אינטנסיבית, כלומר קבועה לחומר מסוים
+ואינה משתנה עם גודל המערכת.}
+
+\RL{שימו לב- למרות שבספרות נהוג לדבר על משקל או} weight \RL{הכוונה היא
+למסת החומר ולא להגדרה הפיזיקלית של משקל - הכח המופעל על גוף באמצעות שדה
+הכבידה. נוכל לדעת בודאות האם מדובר במסה או במשקל על ידי היחידות.}
+
+\RL{על מנת להפוך מס\textquotesingle{} מולים למסה אנו משתמשים במשקל
+מולקולרי. את המשקלים האטומיים ניתן למצוא בטבלה המחזורית. באופן פורמלי,
+המספרים המופיעים בטבלה המחזורית מוגדרים כ\textbf{מסות אטומיות יחסיות} -}
+\RL{כלומר, יחסים חסרי ממד בין המסה של אטום אחד של היסוד לבין 1/12 מהמסה
+של אטום פחמן-12. לכן, מבחינה פורמלית, הם אינם בעלי יחידות.}
+
+\RL{עבור כל מערכת יחידות המשקל המולקולרי מוגדר כמסה האטומים היחסית עם
+יחידות התואמות למערכת בה אנחנו משתמשים}
+
+\[Mw\left\lbrack \frac{g}{gmol} \right\rbrack = Mw\left\lbrack \frac{kg}{kgmol} \right\rbrack = Mw\left\lbrack \frac{lb_{m}}{lbmol} \right\rbrack\]
+
+\RL{מסה מולרית של תרכובת - כסכום המסות האטומיות של האטומים שמרכיבים
+אותה}, \RL{והיא מייצגת את המסה של מול אחד של מולקולות מהתרכובת.}
+
+\RL{כך לדוגמא, המסה המולקולרית של גלוקוז}
+
+\RL{}\(Mw\left( C_{6}H_{12}O_{6} \right) = 6*Mw(C) + 12*Mw(H) + 6*Mw(O)\)
+
+\[Mw\left( C_{6}H_{12}O_{6} \right) = 6*Mw(12.01) + 12*Mw(H1.01) + 6*Mw(15.99) = 180.18\]
+
+\RL{והיחידות תלויות במערכת היחידות בה אנו משתמשים}
+
+\[Mw\left( C_{6}H_{12}O_{6} \right) = 180.18\left\lbrack \frac{g}{gmol} \right\rbrack = 180.18\left\lbrack \frac{kg}{kgmol} \right\rbrack = 180.18\left\lbrack \frac{lb_{m}}{lbmol} \right\rbrack\]
+
+\RL{מהי המסה המולרית של אלומינים ביחידות} SI\RL{? מהי המסה המולרית של
+אלומיניום ביחידות} AES\RL{?}
+
+\RL{כמה מול אטומי אלומיניום יש ב100 גרם של אלומיניום? כמה פאונדמול}
+lb-mol \RL{יש ב100 גרם של אלומיניום?}
+
+\subsection{\texorpdfstring{\RL{תערובות
+והרכבן}}{תערובות והרכבן}}\label{ux5eaux5e2ux5e8ux5d5ux5d1ux5d5ux5ea-ux5d5ux5d4ux5e8ux5dbux5d1ux5df}
+
+\RL{רוב החומרים בטבע ובמערכות תהליך אינם טהורים, אלא מורכבים ממספר
+חומרים שונים}. \RL{כאשר שני חומרים או יותר מצויים יחד במצב פיזיקלי אחיד
+(גז, נוזל או מוצק), אנו מכנים את המערכת תערובת} (mixture)\RL{. לדוגמה,
+אוויר הוא תערובת של גזים (חנקן, חמצן, ארגון ועוד), ומיץ פטל הוא תערובת
+נוזלית}. \RL{על מנת לתאר הרכב כימי של תערובתף לא מספיק להגדיר את כמות
+החומר הכוללת, אלא לתאר \emph{כמה יש מכל מרכיב} יחסית לאחרים}. \RL{תיאור
+זה יכול להיעשות בדרכים שונות, בהתאם למה שנוח למדידה או לחישוב}.
+
+\subsubsection{\texorpdfstring{\RL{שבר מסתי/מולי (}Mass/Mole
+Fraction\RL{) ואחוז מסתי/מולי (}Mass/Mole
+Percentage\RL{)}}{שבר מסתי/מולי (Mass/Mole Fraction) ואחוז מסתי/מולי (Mass/Mole Percentage)}}\label{ux5e9ux5d1ux5e8-ux5deux5e1ux5eaux5d9ux5deux5d5ux5dcux5d9-massmole-fraction-ux5d5ux5d0ux5d7ux5d5ux5d6-ux5deux5e1ux5eaux5d9ux5deux5d5ux5dcux5d9-massmole-percentage}
+
+\RL{שבר מסתי (}Mass Fraction\RL{)- היחס בין מסת רכיב מסוים למסה הכוללת
+של התערובת}:
+
+\[x_{A} = \frac{m_{A}}{\sum m_{i}}\]
+
+\RL{שבר מול} (Mole Fraction)\RL{- היחס בין מספר המולים של רכיב למספר
+הכולל של מולים בתערובת}:
+
+\[y_{A} = \frac{n_{A}}{\sum n_{i}}\]
+
+\RL{בשני המקרים נקבל ערך הנע בין 0-1 (1 מייצג את התערובת המלואה). אם
+נעדיף להציג את הערך באחוזים, ניתן לכפול את השבר ב100\%. אין הבדל עקרוני
+בין הצגה של הרכב התערובת כשבר (ערך בין 0 ל־1) לבין הצגה באחוזים (ערך בין
+0 ל־100\%). שתי הדרכים \textbf{אקוויולנטיות לחלוטין מבחינה חישובית}},
+\RL{אך חשוב להקפיד על עקביות לאורך כל החישוב -- כלומר, לא לערבב בין
+אחוזים לשברים באותה משוואה}. \RL{שני סוגי השברים --- מסה ומול --- הם
+גדלים חסרי מימד ויחסיים בלבד, ומאפשרים לתאר בדיוק את הרכב התערובת בלי
+קשר לגודלה}.
+
+\subsubsection{\texorpdfstring{\RL{משקל מולקולרי ממוצע של
+תערובת}}{משקל מולקולרי ממוצע של תערובת}}\label{ux5deux5e9ux5e7ux5dc-ux5deux5d5ux5dcux5e7ux5d5ux5dcux5e8ux5d9-ux5deux5deux5d5ux5e6ux5e2-ux5e9ux5dc-ux5eaux5e2ux5e8ux5d5ux5d1ux5ea}
+
+\RL{כאשר תערובת מורכבת ממספר חומרים שונים, לכל אחד מהם יש \textbf{משקל
+מולקולרי שונה}}.\\
+\RL{אם נרצה לתאר את התערובת כולה בעזרת גודל יחיד, שיהיה אפשר להשתמש בו
+לחישובים עבור כלל המערכת, נשתמש ב־\textbf{משקל מולקולרי ממוצע}}
+
+\textbf{\RL{משקל מולקולרי ממוצע-}} \RL{גודל שמייצג את המסה הממוצעת של
+מול אחד של תערובת החומרים}.
+
+\RL{ניתן לחשב את את המשקל המולקולרי הממוצע במספר אופנים. אם אנו יודעים
+מהו \textbf{שבר המול} של כל רכיב} (\(y_{i}\)) --- \RL{כלומר, איזה חלק
+מהמולים בתערובת שייך לכל חומר --- נסכום את מכפלת השברים המוליים עם המסות
+המולריות של כל רכיב.}
+
+\[\overset{ˉ}{M} = \sum_{i}^{}{y_{i}{Mw}_{i}}\]
+
+\RL{אם במקום זאת נתון \textbf{שבר המסה} של כל רכיב (}\(x_{i}\)\RL{),
+כלומר איזה חלק מהמסה הכוללת שייך לכל חומר נוכל לחשב את הממוצע המשוקלל
+לפי המסות של הרכיבים.}
+
+\[\frac{1}{\overset{ˉ}{M}} = \sum_{i}^{}\frac{x_{i}}{M_{i}}\] \RL{שתי
+הדרכים נותנות את אותו ערך בסופו של דבר -- רק נקודת המוצא שונה (מולית או
+מסתית)}.
+
+\RL{אוויר יבש הוא תערובת של בערך 79\% חנקן} (N₂) \RL{ו־21\% חמצן} (O₂)
+\RL{לפי שברי מול}.\\
+\RL{המשקלים המולקולריים הם 28 ו־32 בהתאמה, ולכן}:
+
+\[\overset{ˉ}{M} = (0.79)\left( 28\frac{g}{mol} \right) + (0.21)\left( 32\frac{g}{mol} \right) = 29\frac{g}{mol}\]
+
+\RL{כלומר, נוכל להתייחס אל האוויר כולו כאילו "מול אחד" שלו שוקל בממוצע
+29 גרם}.
+
+\RL{מה יהיה המשקל המולקולרי הממוצע של אויר ביחידות} AES\RL{?}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{\ul{כיצד חושבה הנוסחה לחישוב מסה מולרית של תערובת באמצעות שברים
+מסתיים?}}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{מאחר ואנו מחפשים תכונה שאינה תלויה בכמות, נשתמש בבסיס חישוב}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{בסיס חישוב -- מאחר ואנחנו מחפשים יחס בין ערכים, נוכל לבצע את הניתוח
+על כל כמות של חומר, ולכן נבחר את הכמות שהכי נוחה לנו לחישוב}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{נניח שבחרנו בסיס נוח של 1 ק"ג תערובת}. \RL{אז}:
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{המסה של כל רכיב תהיה} \(m_{i} = x_{i} \times 1\text{ }kg\)
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{מספר המולים של כל רכיב הוא}:
+\RL{}\(n_{i} = \frac{m_{i}}{M_{i}} = \frac{x_{i}}{M_{i}}\)
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{מספר המולים הכולל הוא}:
+\RL{}\(n_{\text{total}} = \sum_{i}^{}n_{i} = \sum_{i}^{}\frac{x_{i}}{M_{i}}\)
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{כעת, נזכור שהתחלנו את החישוב עם מסה כוללת של} \(1Kg\) \RL{ולכן אם
+נחשב את המסה הכוללת חלקי מספר המולים הכולל --- נקבל את המשקל המולקולרי
+הממוצע}:
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\[\overset{ˉ}{M\left\lbrack \frac{Kg}{Kmol} \right\rbrack} = \frac{m_{\text{total}}}{n_{\text{total}}} = \frac{1Kg}{\sum_{i}^{}{\frac{x_{i}}{M_{i}}Kmol}}\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{וזה בדיוק מביא אותנו לצורה של הנוסחה}:
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\[\boxed{\frac{1}{\overset{ˉ}{M}} = \sum_{i}^{}\frac{x_{i}}{M_{i}}}\]
+
+\end{tcolorbox}
+
+\subsubsection{\texorpdfstring{\RL{ריכוזים}}{ריכוזים}}\label{ux5e8ux5d9ux5dbux5d5ux5d6ux5d9ux5dd}
+
+\RL{כאשר תיארנו את הרכב התערובת באמצעות שברים מסתיים או שברים מולריים},
+\RL{תיארנו \emph{את היחס} בין הרכיבים בתערובת, אך לא \emph{את הפיזור} של
+החומר במרחב}. \RL{שבר מולרי של 0.2 אומר שרכיב} A \RL{מהווה חמישית
+מהתערובת --- אבל לא אומר האם מדובר במערכת דלילה מאוד (למשל תערובת גזים
+בלחץ נמוך) או במערכת מרוכזת מאוד (תמיסה סמיכה או נוזל דחוס)}. \RL{}
+
+\RL{ההבדל הזה הוא קריטי בתהליכים הנדסיים}:
+
+\begin{itemize}
+\item
+  \RL{קצב תגובה כימית תלוי בכמה מולקולות יש בנפח נתון}.
+\item
+  \RL{מעבר מסה תלוי בהפרשי ריכוזים במרחב, לא ביחסי מסה}.
+\item
+  \RL{תכנון זרימה דורש לדעת כמה קילוגרמים או מולים זורמים לשנייה דרך
+  צינור נתון}.
+\end{itemize}
+
+\RL{על כן, במקרים מקרים אנחנו נעדיף להשתמש ביחידות של ריכוז לתיאור כמותי
+של חומר ביחס למרחב הפיזי}.
+
+\ul{\RL{ריכוז מסתי} (Mass Concentration)\RL{-}} \RL{הריכוז המסתי של רכיב
+בתערובת מתאר את {כמות המסה} של אותו רכיב ביחס {לנפח הכולל} של המערכת}.
+
+\[c_{A} = \frac{m_{A}}{V}\ \ \ \ \ ;\ \ \ \left\lbrack c_{A} \right\rbrack:\ \ \ \frac{kg}{m^{3}}\ \ ,\ \frac{g}{L}\ \ ,\ \ \ \frac{lb_{m}}{ft^{3}}\ \]
+\RL{כאשר} \(m_{A}\) \RL{היא המסה של רכיב} \(A\) \RL{ו}\(V\) \RL{הוא הנפח
+הכולל של התערובת.}
+
+\RL{לדוגמה, בתמיסה שבה 10 גרם מלח מומסים ב},\RL{תמיסה בנפח 200 מ"ל,
+הריכוז המסתי של המלח הוא}:
+
+\[c_{salt} = \frac{10g}{0.2L} = 50\frac{g}{L}\]
+
+\RL{כלומר, בכל ליטר תמיסה יש 50 גרם מלח}.
+
+\RL{ריכוז מולרי} (Molar Concentration) \RL{- מספר המולים של רכיב ביחס
+לנפח}
+
+\[C_{A} = \frac{n_{A}}{V}\ \ \ \ ;\ \ \ \ \ \ \left\lbrack C_{A} \right\rbrack:\ \ \ \frac{kmol}{m^{3}}\ \ ;\ \ \frac{mol}{L}\ \ \ ;\ \frac{lbmol}{ft^{3}}\]
+\RL{כלומר אם אנו יודעים שתמיסה מסויימת מכילה} 0.5 \RL{מול של} NaOH
+\RL{על כל ליטר תמיסה הריכוז המולרי יהיה}
+\(C_{NaOH} = \frac{0.5mol}{1L} = 0.5\frac{mol}{L} = 0.5M\)
+
+\RL{דרך נוספת לתאר את התמיסה היא באמצעות מולר
+(}\(M = \frac{mol}{L}\)(\RL{. במקרה זה נגיד שהריכוז בתמיסה הוא} 0.5
+\RL{מולר.}
+
+\subsubsection{\texorpdfstring{\RL{תמיסות מהולות מאוד} (Dilute
+Solutions)}{תמיסות מהולות מאוד (Dilute Solutions)}}\label{ux5eaux5deux5d9ux5e1ux5d5ux5ea-ux5deux5d4ux5d5ux5dcux5d5ux5ea-ux5deux5d0ux5d5ux5d3-dilute-solutions}
+
+\RL{במקרים רבים בהרבה, אחד הרכיבים בתערובת נמצא בריכוז נמוך מאוד ביחס
+לאחרים --- למשל מזהמים באוויר, מלחים במי שתייה או חלבונים בתמיסות
+ביולוגיות}. \RL{בתערובות כאלה, שבהן הרכיב המבוקש מהווה חלק קטן מאוד
+מהמערכת, נוח להשתמש ביחידות ייחודיות המתאימות לתיאור ריכוזים קטנים
+במיוחד}. \RL{}
+
+\RL{יחידות} \textbf{ppm (parts per million) \RL{}}\RL{ו-}\textbf{ppb
+(parts per billion)} \RL{מבטאות כמה חלקים מהרכיב קיימים לכל מיליון או
+לכל מיליארד חלקים של התערובת}.\\
+\RL{הן ניתנות להגדרה על בסיס מסה או על בסיס מולים --- בהתאם לסוג
+המערכת}:
+
+\[{\text{ppm}_{A} = y_{A} \times 10^{6\ \ }\text{או}{\ \ \ \ \ x}_{A} \times 10^{6}
+}{\text{ppb}_{A} = y_{A} \times 10^{9}\text{       או}{\ \ \ \ x}_{A} \times 10^{9}
+}\]
+
+\RL{כאשר} \(y_{A}\)\RL{הוא שבר מולרי ו}-\(x_{A}\) \RL{הוא שבר מסתי}.
+
+\RL{לדוגמה, אם באוויר נמדדו} ‎15 ppm‎ \RL{של} \(SO_{2}\)\RL{,} \RL{המשמעות
+היא בכל מיליון מולים של אוויר יש 15 מולים של} \(SO_{2}\). \RL{באופן
+דומה, אם דם מכיל} ‎68 ppm‎ \RL{של קריאטינין על בסיס מסה, המשמעות היא שבכל
+קילוגרם דם יש} ‎68 \RL{מיליגרם}‎ \RL{של קריאטינין}.
+
+\RL{יחידות} ppm \RL{ו־}ppb \RL{} \RL{נפוצות במיוחד בתחומים שבהם יש
+חשיבות רבה גם לכמויות זעירות של חומר}:
+
+\begin{itemize}
+\item
+  \RL{ניטור איכות אוויר ומים (מזהמים, מתכות כבדות, תרכובות נדיפות)}.
+\item
+  \RL{בקרה ביוטכנולוגית וביוכימית (ריכוזי אנזימים, חלבונים או תוצרים)}.
+\item
+  \RL{תעשיות פרמצבטיות ומזון, שבהן יש להקפיד על עקבות של מזהמים}.
+\end{itemize}
+
+\RL{יחידות אלו נוחות מפני שהן מאפשרות להביע ריכוזים קטנים מאוד בערכים
+קריאים וברורים --- מבלי להשתמש במערכות יחידות גדולות או במספרים מדעיים}.
+
+\subsection{\texorpdfstring{\RL{סיכום}}{סיכום}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-3}
+
+\RL{בפרק זה עברנו מהתיאורים הפשוטים של ``כמה יש'' (מסה ונפח) לתיאורים
+שמאפשרים להשוות מערכות שונות -- מול, משקל מולקולרי וריכוזים.}
+
+\textbf{\RL{\ul{גדלים בסיסיים} -}}
+
+\begin{itemize}
+\item
+  \textbf{\RL{מסה (}m\RL{)}} \RL{-- כמה חומר יש במערכת שלנו}
+\item
+  \textbf{\RL{נפח (}V\RL{)}} \RL{-- כמה מקום הוא תופס.}
+\item
+  \textbf{\RL{צפיפות (}ρ = m/V\RL{)}} \RL{-- כמה חומר ביחידת נפח; תכונה
+  של החומר עצמו.}
+\item
+  \textbf{\RL{צפיפות יחסית (}SG\RL{)}} \RL{-- יחס בין צפיפות החומר
+  לצפיפות המים; חסרת מימד.}
+\end{itemize}
+
+\textbf{\RL{\ul{כמות חומר ברמת חלקיקים}}}
+
+\begin{itemize}
+\item
+  \textbf{\RL{מול (}mol\RL{)}} \RL{-- יחידת ``ספירה'' של}
+  \(6.022 \times 10^{23}\)\RL{חלקיקים.}
+\item
+  \textbf{\RL{יחידות מותאמות למערכת:}}
+  \(\mathbf{kmol\ }\left( \mathbf{SI} \right)\mathbf{,\ gmol\ }\left( \mathbf{gcs} \right)\mathbf{,\ lbmol\ (AES)}\)
+\item
+  \textbf{\RL{משקל מולקולרי (}M\RL{)}} \RL{-- המסה של מול אחד של חומר
+  (}g/mol, kg/kmol, lbm/lb-mol\RL{).}
+\end{itemize}
+
+\textbf{\RL{\ul{תערובות והרכב}}}
+
+\begin{itemize}
+\item
+  \textbf{\RL{שבר מסתי (}x\RL{):}} \RL{חלקו של רכיב לפי מסה.}
+\item
+  \textbf{\RL{שבר מולרי (}y\RL{):}} \RL{חלקו של רכיב לפי מולים.}
+\item
+  \RL{\textbf{משקל מולקולרי ממוצע:} מייצג את המסה של מול אחד של תערובת.}
+\end{itemize}
+
+\textbf{\RL{\ul{ריכוזים}}}
+
+\begin{itemize}
+\item
+  \RL{\textbf{ריכוז מסתי:} מסה של רכיב ביחידת נפח.}
+\item
+  \RL{\textbf{ריכוז מולרי:} מולים של רכיב ביחידת נפח.}
+\item
+  \textbf{ppm / ppb\RL{:}}\RL{יחידות לריכוזים קטנים מאוד (חלקים למיליון
+  / מיליארד).}
+\end{itemize}
+
+\section{\texorpdfstring{\RL{טמפרטורה}}{טמפרטורה}}\label{ux5d8ux5deux5e4ux5e8ux5d8ux5d5ux5e8ux5d4}
+
+\RL{ביומיום אנחנו משתמשים במילים \emph{חום} ו־\emph{טמפרטורה} כמעט באותו
+מובן אומרים "היום חם" או "המרק איבד חום". אבל מבחינה פיזיקלית, אלו שני
+מושגים שונים לגמרי}. \RL{טמפרטורה היא מדד למצב האנרגיה של הגוף - כמה
+אנרגיה קינטית יש \emph{בממוצע} לחלקיקיו}. \RL{חום,} \RL{לעומת זאת, הוא
+אנרגיה בתנועה -} \RL{הכמות הכוללת של אנרגיה תרמית שעוברת מגוף אחד לאחר
+בגלל הפרש טמפרטורות}. \RL{כאשר אנו מחממים מים, אנחנו \emph{מעבירים חום}
+מהגז/חשמל למים, כתוצאה מכך הטמפרטורה של המים עולה}.
+
+\RL{מבחינה מיקרוסקופית, כל חומר מורכב מחלקיקים, אטומים או מולקולות,
+הנמצאים בתנועה מתמדת}. \RL{בגז הם נעים בחופשיות ומתנגשים זה בזה; בנוזל
+הם רוטטים ומחליקים זה לצד זה; ובמוצק הם רוטטים סביב מיקומם הקבוע בסריג}.
+\RL{המהירות והעוצמה של תנועות אלה קובעות את \textbf{האנרגיה הקינטית} של
+החלקיקים, וזו בדיוק מה שהטמפרטורה מודדת}. \RL{כאשר אנו אומרים שחומר ``חם
+יותר'', המשמעות היא שחלקיקיו נעים מהר יותר, כלומר האנרגיה הקינטית
+הממוצעת שלהם גבוהה יותר}. \RL{כאשר הוא ``קר יותר'', תנועת החלקיקים מואטת
+והאנרגיה קטנה}. \RL{במילים אחרות}:
+
+\RL{הטמפרטורה היא מדד לרמת התנועה המולקולרית במערכת -- ככל שהתנועה מהירה
+יותר, כך הטמפרטורה גבוהה יותר}.
+
+\RL{לאורך ההיסטוריה, בני האדם רצו למדוד ``כמה חם'' או ``כמה קר'' -- אבל
+לא הייתה דרך מוחלטת לעשות זאת}. \RL{החוויה האנושית של חום וקור היא
+יחסית: מה שנעים לנו בקיץ עשוי להיראות קפוא בחורף}.\\
+\RL{לכן נדרש היה סולם מוסכם שיתרגם את התחושה הסובייקטיבית למספר
+אובייקטיבי}. \RL{הניסיונות הראשונים נעשו עוד במאה ה־17, כשחוקרים גילו
+שחומרים שונים (כמו כספית, אלכוהול או אוויר) מתפשטים באופן עקבי כאשר הם
+מתחממים ומתכווצים כשהם מתקררים}. \RL{הם השתמשו בשינוי הגודל הזה כדי
+ליצור מד טמפרטורה} --- \RL{צינור זכוכית דק ובו נוזל שמתפשט או מתכווץ}.
+\RL{אבל כדי להשתמש במד חום כזה באופן עקבי, היה צורך להגדיר נקודות ייחוס
+קבועות: טמפרטורות שכולם יוכלו לשחזר}.
+
+\subsection{\texorpdfstring{\RL{סולמות טמפ\textquotesingle{} יחסיים --
+צלזיוס
+ופרנהייט}}{סולמות טמפ\textquotesingle{} יחסיים -- צלזיוס ופרנהייט}}\label{ux5e1ux5d5ux5dcux5deux5d5ux5ea-ux5d8ux5deux5e4-ux5d9ux5d7ux5e1ux5d9ux5d9ux5dd-ux5e6ux5dcux5d6ux5d9ux5d5ux5e1-ux5d5ux5e4ux5e8ux5e0ux5d4ux5d9ux5d9ux5d8}
+
+\RL{כאן נכנסו לתמונה סולמות הטמפרטורה הראשונים}:
+
+\begin{itemize}
+\item
+  \RL{\textbf{דניאל פרנהייט}} (Fahrenheit) \RL{בחר במאה ה־18 שתי נקודות
+  שנראו לו יציבות --- הקפאת תערובת של מלח וקרח} (\(0\ {^\circ}F\))
+  \RL{וטמפרטורת הגוף של אדם בריא} (\(96\ {^\circ}F\))\RL{, וחילק את
+  הסקאלה ל96 חלקים שווים.}
+\item
+  \textbf{\RL{אנדרס צלזיוס}} (Celsius) \RL{בחר בשתי נקודות אחרות:}
+  \(0\ ℃\) \RL{לקיפאון מים, ו} \(100\ ℃\)\RL{לרתיחה,}\\
+  \RL{המרווח בין שתי הנקודות חולק ל100 חלקים שווים, והתקבלה היחידה שהפכה
+  לסטנדרט עולמי}.
+\end{itemize}
+
+\RL{שני הסולמות הללו הם יחסיים - האפס שלהם לא סימן ``אין חום בכלל"};
+\RL{הם מבוססים על נקודות ייחוס נוחות, אך לא על עקרון פיזיקלי מוחלט}.
+\RL{רק בהמשך, עם התפתחות הפיזיקה התרמודינמית, נבנה סולם שבו נקודת האפס
+משקפת גבול פיזיקלי ממשי --- המקום שבו נפסקת כמעט כל תנועה של חלקיקים}.
+
+\subsection{\texorpdfstring{\RL{סולמות טמפ\textquotesingle{} מוחלטים --
+קלוין
+וראנקין}}{סולמות טמפ\textquotesingle{} מוחלטים -- קלוין וראנקין}}\label{ux5e1ux5d5ux5dcux5deux5d5ux5ea-ux5d8ux5deux5e4-ux5deux5d5ux5d7ux5dcux5d8ux5d9ux5dd-ux5e7ux5dcux5d5ux5d9ux5df-ux5d5ux5e8ux5d0ux5e0ux5e7ux5d9ux5df}
+
+\RL{במאה ה־19, עם התפתחות התרמודינמיקה}, \RL{גילו מדענים כי קיים גבול
+תחתון לטמפרטורה -- נקודה שבה כמעט כל תנועה מולקולרית נפסקת}. \RL{נקודה
+זו נקראת האפס המוחלט}: \RL{הטמפרטורה שבה לא ניתן עוד להוציא אנרגיה
+קינטית מן המערכת}.\RL{לא ניתן להגיע אליה בפועל, אך אפשר להתקרב אליה מאוד
+באמצעים ניסיוניים}.
+
+\RL{על בסיס עיקרון זה פיתח הלורד קלווין} (Lord Kelvin) \RL{בשנת 1848
+סולם חדש} -- \textbf{\RL{סולם קלווין} (K)} -- \RL{שבו האפס מייצג את האפס
+המוחלט, וכל יחידת קלווין שווה בדיוק למעלת צלזיוס אחת}.\\
+\RL{כלומר, השינוי של טמפרטורה נשמר, אך נקודת האפס הוזזה}:
+
+\[T(K) = T({^\circ}C) + 273.15\ \ \ \ \ \ ;\ \ \ 1℃ = 1K\] \RL{בהתאם,
+טמפרטורת קיפאון של מים היא} \(273.15℃\) \RL{וטמפרטורת רתיחה היא}
+\(373.15℃\)
+
+\RL{מאחר שבשלב זה סולם צלזיוס כבר היה בשימוש נרחב במדע ובתעשייה},
+\RL{קלווין ביקש לשמור על תאימות מלאה עמו}. \RL{לכן נקבע כי גודל השינוי
+בין שתי טמפרטורות} ΔT \RL{יישאר זהה בשני הסולמות}.\\
+\RL{במילים אחרות, שינוי של מעלה אחת בקלווין שקול בדיוק לשינוי של מעלה
+אחת בצלזיוס, ורק נקודת האפס שונתה}. \RL{משמעות הדבר היא שכל הנוסחאות
+הפיזיקליות שתלויות \ul{בשינוי טמפרטורה} (הפרש בין טמפרטורות) נותרו
+נכונות ללא צורך בשינוי יחידות.}
+
+\RL{באופן דומה, המהנדס הסקוטי ויליאם ראנקין הציע גרסה אבסולוטית לסולם
+פרנהייט, שנועדה לשמור על אותה נוחות חישובית במערכת היחידות האמריקאית}.
+\RL{ב־סולם ראנקין} (°R)\RL{,} \RL{נקודת האפס היא שוב האפס המוחלט, אך
+המרווח בין דרגות נשמר זהה למעלת פרנהייט}:
+
+\[T({^\circ}R) = T({^\circ}F) + 459.67\ \ \ \ \ \ ;\ \ \ \ \ \ 1\ ℉ = 1\ {^\circ}R\]
+\RL{סולמות קלווין וראנקין, אשר הוגדרו על בסיס עקרון פיסיקלי (האפס
+המוחלט), תוכננו כך שיישארו תואמים לסולמות היחסיים שקדמו להם}. \RL{}
+
+\subsection{\texorpdfstring{\RL{שימוש בסולמות טמפ\textquotesingle{}
+השונים}}{שימוש בסולמות טמפ\textquotesingle{} השונים}}\label{ux5e9ux5d9ux5deux5d5ux5e9-ux5d1ux5e1ux5d5ux5dcux5deux5d5ux5ea-ux5d8ux5deux5e4-ux5d4ux5e9ux5d5ux5e0ux5d9ux5dd}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1441}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1486}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2613}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1306}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3063}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\RL{מאפיין}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{צלזיוס} (°C)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{קלווין} (K)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{פרנהייט} (°F)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{ראנקין} (°R)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\RL{סוג הסולם} & \RL{יחסי} & \RL{אבסולוטי} & \RL{יחסי} &
+\RL{אבסולוטי} \\
+\RL{נקודת אפס} & \RL{קיפאון מים =} \(0℃\) & \RL{אפס מוחלט}
+\(0{^\circ}K\) & \begin{minipage}[t]{\linewidth}\raggedright
+\RL{קיפאון תערובת\\
+מלח־קרח =} \(0℉\)\strut
+\end{minipage} & \RL{אפס מוחלט} \(0{^\circ}K\) \\
+\RL{קיפאון מים} & 0°C & 273.15 K & 32 °F & 491.67 °R \\
+\RL{רתיחת מים} & 100°C & 373.15 K & 212 °F & 671.67 °R \\
+\RL{גודל השינוי} (ΔT) & 1°C &
+\(\mathrm{\Delta}1\ K\  = \ \mathrm{\Delta}1{^\circ}C\) & 1 °F &
+\(\mathrm{\Delta}1\ {^\circ}R\  = \ \mathrm{\Delta}1\ {^\circ}F\) \\
+\end{longtable}
+
+Figure \RL{22}- \RL{השוואה בין שלושת סרגלי טמפרטורה - פרנהייט, צלזיוס
+וקלווין מתוך} LibreTexts Physics\RL{,} \RL{לפי רישיון} Creative Commons
+BY-NC-SA 4.0.
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+\RL{כאשר מדברים על טמפרטורה עצמה -- למשל ``הטמפרטורה בחדר היא}
+\(25℃\)\RL{" המשמעות תלויה בסולם שנבחר}. \RL{אותו מצב פיזיקלי יתואר
+בערכים שונים בכל סולם, למשל}:
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+\[25{^\circ}C = 298.15K = 77{^\circ}F = 536.7{^\circ}R\] \RL{אבל כאשר
+מדברים על \textbf{שינוי טמפרטורה} (למשל עלייה של} \(10℃\)\RL{, או ירידה
+של} \(5\ ℉\)\RL{) המרווחים בסולמות קלווין וצלזיוס זהים, ולכן}
+\(\Delta T(K) = \Delta T({^\circ}C)\) \RL{,}
+\(\Delta T({^\circ}R) = \Delta T({^\circ}F)\)
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+
+\RL{כלומר, אם חומר מתחמם} \(10℃\) \RL{זה שקול לעלייה של} \(10\ K\)\RL{,
+ואם הוא יורד} \(5\ ℉\) \RL{זה שווה ערך לירידה של} \(5\ {^\circ}R\) \RL{.
+על כן, חשוב להבחין בין \textbf{ערך מוחלט של טמפרטורה}, המשפיע על חישובי
+אנרגיה או נפח, לבין \textbf{שינוי טמפרטורה,}} \RL{הקובע זרימת חום, העברת
+אנרגיה או קצב תגובה}.\\
+\RL{רוב המשוואות התרמודינמיות דורשות שימוש בסולמות אבסולוטיים כמו} K
+\RL{או} \({^\circ}R\) \RL{בעוד שבחישובים יחסיים או במדידות שדה מקומיות
+ניתן להשתמש גם בצלזיוס או פרנהייט, כל עוד מבצעים את ההמרות הנכונות}.
+
+\end{tcolorbox}
+
+\RL{נתונה טמפ\textquotesingle{} של} \(200{^\circ}R\)\RL{. מה יהיה ערכה
+של הטמפרטורה בצלזיוס? פרנהייט? קלוין?}
+
+\subsection{\texorpdfstring{\RL{שיטות שונות למדידת וחישוב
+טמפרטורה}}{שיטות שונות למדידת וחישוב טמפרטורה}}\label{ux5e9ux5d9ux5d8ux5d5ux5ea-ux5e9ux5d5ux5e0ux5d5ux5ea-ux5dcux5deux5d3ux5d9ux5d3ux5ea-ux5d5ux5d7ux5d9ux5e9ux5d5ux5d1-ux5d8ux5deux5e4ux5e8ux5d8ux5d5ux5e8ux5d4}
+
+\RL{לא ניתן למדוד ישירות את ``האנרגיה הקינטית הממוצעת'' של חלקיקי החומר
+-- אין מכשיר שמודד תנועה מולקולרית אחת לאחת}. \RL{לכן מדידת
+טמפ\textquotesingle{} מבוססת על \textbf{תכונה פיזיקלית אחרת} של חומר
+שמשתנה באופן קבוע עם הטמפרטורה}. \RL{ברגע שהקשר בין התכונה לבין
+הטמפרטורה ידוע, אפשר לחשב ממנה את ערך הטמפרטורה הנדרש}.
+
+\RL{באופן כללי קיימות \textbf{ארבע משפחות עיקריות של שיטות
+מדידה}}\textbf{:}
+
+\subsubsection{\texorpdfstring{\RL{מדידת התפשטות תרמית} (Thermal
+Expansion)}{מדידת התפשטות תרמית (Thermal Expansion)}}\label{ux5deux5d3ux5d9ux5d3ux5ea-ux5d4ux5eaux5e4ux5e9ux5d8ux5d5ux5ea-ux5eaux5e8ux5deux5d9ux5ea-thermal-expansion}
+
+\RL{אחת השיטות הוותיקות והפשוטות ביותר למדידת טמפרטורה היא באמצעות
+\textbf{מדחום נוזלי}}.\\
+\RL{מדחום כזה, שבו נוזל (בדרך כלל כספית או אלכוהול) כלוא בצינור זכוכית
+צר, מבוסס על התפשטות הנוזל עם עליית הטמפרטורה והתכווצותו כשהוא מתקרר}.\\
+\RL{השינוי בנפח מתורגם ישירות לשינוי בגובה עמוד הנוזל, שמסומן בסולם
+טמפרטורה}.\\
+\RL{מדחומים כאלה אמינים וזולים, ואינם דורשים מקור חשמל או תחזוקה מיוחדת,
+ולכן משמשים למדידות פשוטות ולבקרת טמפרטורה כללית}.\\
+\RL{עם זאת, הם מתאימים רק לטווח טמפרטורות מצומצם יחסית, מגיבים באיטיות,
+ושבירים -- ולכן כמעט ואינם בשימוש בתעשייה מודרנית}.
+
+\subsubsection{\texorpdfstring{\RL{שינוי התנגדות חשמלית} (Resistance
+Thermometry)}{שינוי התנגדות חשמלית (Resistance Thermometry)}}\label{ux5e9ux5d9ux5e0ux5d5ux5d9-ux5d4ux5eaux5e0ux5d2ux5d3ux5d5ux5ea-ux5d7ux5e9ux5deux5dcux5d9ux5ea-resistance-thermometry}
+
+\RL{שיטה מדויקת בהרבה מבוססת על \textbf{שינוי התנגדות חשמלית של
+חומרים}}. \RL{במכשירים כמו תרמיסטור או} RTD (Resistance Temperature
+Detector) \RL{מנצלים את העובדה שהתנגדותם של חומרים מסוימים, ובמיוחד של
+מתכות כגון פלטינה או ניקל, משתנה באופן צפוי עם שינוי הטמפרטורה}.
+\RL{ב}RTD \RL{השינוי כמעט ליניארי, מה שמאפשר מדידה מדויקת ויציבה לאורך
+זמן; בתרמיסטור השינוי חד יותר, ולכן הוא רגיש במיוחד לשינויים קטנים אך
+פחות מדויק בטווח רחב}. \RL{מכשירים אלו מתאימים למדידות רציפות ובקרה
+עדינה, ומשמשים למשל בבקרת תסיסות ביולוגיות, במערכות קירור או במכשור
+מעבדתי}.\\
+\RL{הם דורשים כיול ומיגון מפני רעשים חשמליים, אך מצטיינים בדיוק ובאמינות
+גבוהה}.
+
+\subsubsection{\texorpdfstring{\RL{מדידת מתח תרמי}
+(Thermocouple)}{מדידת מתח תרמי (Thermocouple)}}\label{ux5deux5d3ux5d9ux5d3ux5ea-ux5deux5eaux5d7-ux5eaux5e8ux5deux5d9-thermocouple}
+
+\RL{במקרים שבהם נדרשת מדידה בתנאים קיצוניים או בתגובה מהירה, נעשה שימוש
+ב-\textbf{תרמוקפל}} \textbf{(Thermocouple)}\RL{. מכשיר זה מורכב משתי
+מתכות שונות המחוברות בקצה אחד}. \RL{כאשר הקצה המחובר נחשף לטמפרטורה שונה
+מהקצה החופשי, נוצר ביניהם מתח חשמלי קטן שתלוי בהפרש הטמפרטורות}.
+\RL{המתח הזה נמדד ומומר לטמפרטורה באמצעות כיול ידוע מראש}. \RL{תרמוקפלים
+אמנם פחות מדויקים מטווחים נמוכים, אך הם עמידים, מהירים, וזולים לייצור --
+ולכן מתאימים במיוחד לתהליכים תעשייתיים, לתנורי בעירה, ולמדידות שבהן נדרש
+תגובה מהירה לשינויי טמפרטורה}.
+
+\subsubsection{\texorpdfstring{\RL{מדידת קרינה תרמית} (Radiation /
+Pyrometry)}{מדידת קרינה תרמית (Radiation / Pyrometry)}}\label{ux5deux5d3ux5d9ux5d3ux5ea-ux5e7ux5e8ux5d9ux5e0ux5d4-ux5eaux5e8ux5deux5d9ux5ea-radiation-pyrometry}
+
+\RL{לבסוף, כאשר לא ניתן למדוד את הטמפרטורה במגע ישיר - למשל בתנורים
+בטמפרטורות גבוהות במיוחד, במתכות מותכות או במערכות בתנועה - משתמשים
+ב־\textbf{פירומטר (}}\textbf{Pyrometer\RL{).}}\RL{פירומטרים מודדים את
+הקרינה האלקטרומגנטית הנפלטת מהגוף, בדרך כלל בתחום האינפרא־אדום, וממירים
+את עוצמת הקרינה או את אורך הגל לאומדן של טמפרטורה}. \RL{מדידה כזו מאפשרת
+להעריך את הטמפרטורה ללא מגע, אך היא מושפעת ממאפייני פני השטח של הגוף
+(כמו צבע וברק) ומן הסביבה שבה מתבצעת המדידה}. \RL{פירומטרים הם הכלי
+המועדף למדידות מרחוק, בייחוד בתעשיית המתכות, בזכוכית ובחומרים קרמיים}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1053}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2632}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2167}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1920}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2167}}@{}}
+\caption{Table \RL{1 - השוואה בין שיטות למדידת חום}}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\RL{סוג המכשיר}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{עיקרון פעולה}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{יתרונות}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{חסרונות}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{שימושים עיקריים}
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\RL{סוג המכשיר}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{עיקרון פעולה}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{יתרונות}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{חסרונות}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\RL{שימושים עיקריים}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{\RL{מדחום נוזלי}} & \RL{התפשטות נוזל (כספית או אלכוהול) עם שינוי
+טמפרטורה} & \RL{מבנה פשוט, אמין, אינו דורש מקור חשמל} & \RL{טווח
+טמפרטורות מוגבל, תגובה איטית, שביר} & \RL{מדידות בסיסיות, טמפרטורת סביבה
+ונוזלים בטמפרטורה נמוכה} \\
+\textbf{RTD / \RL{תרמיסטור}} & \RL{שינוי ההתנגדות החשמלית של מתכת או
+חומר קרמי כתלות בטמפרטורה} & \RL{מדויק מאוד, יציב לאורך זמן, מתאים
+למדידות רציפות} & \RL{רגיש לרעשים חשמליים, דורש כיול תקופתי} &
+\RL{מערכות בקרה, ביוריאקטורים, מעבדות} \\
+\textbf{\RL{תרמוקפל}} & \RL{יצירת מתח חשמלי קטן עקב הפרש טמפרטורה בין
+שתי מתכות שונות (אפקט סיבק)} & \RL{טווח מדידה רחב מאוד, תגובה מהירה,
+עמיד בתנאים קיצוניים} & \RL{דיוק מוגבל בטמפרטורות נמוכות, דורש נקודת
+ייחוס} & \RL{תנורים תעשייתיים, בעירה, תהליכי מעבר חום} \\
+\textbf{\RL{פירומטר}} & \RL{מדידת הקרינה האלקטרומגנטית הנפלטת מהגוף החם
+(בד"כ אינפרא־אדום)} & \RL{מדידה ללא מגע, מתאימה לטמפרטורות גבוהות
+במיוחד} & \RL{מושפעת ממאפייני פני השטח ומהסביבה, יקרה יחסית} &
+\RL{תעשיית מתכות וזכוכית, מדידות מרחוק, תנורי התכה} \\
+\end{longtable}
+
+\RL{הבחירה באיזו שיטה להשתמש תלויה בדרישות הדיוק, בטווח הטמפרטורות,
+במהירות התגובה ובאופי הסביבה התעשייתית שבה מתבצעת המדידה}. \RL{לעיתים
+נשלב כמה שיטות באותה מערכת}: \RL{למשל, תרמוקפל למדידת קצה ריאקטור
+ו-}RTD\RL{, למדידה רציפה באזור הבקרה}.
+
+\subsection{\texorpdfstring{\RL{סיכום}}{סיכום}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-4}
+
+\begin{itemize}
+\item
+  \RL{טמפרטורה היא \textbf{מדד לאנרגיה הקינטית הממוצעת} של חלקיקי החומר,
+  והיא מתארת את מידת החום או הקור של גוף. יש להבחין בין
+  \textbf{טמפרטורה} (מצב של מערכת) לבין \textbf{חום} (אנרגיה העוברת בין
+  גופים עקב הפרש טמפרטורות).}
+\item
+  \RL{קיימים ארבעה סולמות מרכזיים למדידת טמפרטורה:}
+\item
+  \RL{צלזיוס (°}C\RL{) ופרנהייט(°}F\RL{) - סולמות יחסיים המבוססים על
+  נקודות שרירותיות.}
+\item
+  \RL{קלווין (}K\RL{) וראנקין (°}R\RL{) - סולמות אבסולוטיים המבוססים על
+  האפס המוחלט.}
+\item
+  \RL{קלווין וראנקין שומרים על אותו מרווח בין דרגות כמו צלזיוס ופרנהייט,
+  כדי להבטיח \textbf{תאימות נומרית} עם הסולמות הקודמים. שינוי טמפרטורה
+  זהה בין קלווין וצלזיוס (}ΔK = Δ°C\RL{), ובין ראנקין ופרנהייט (}Δ°R =
+  Δ°F\RL{).}
+\item
+  \RL{מדידת טמפרטורה מתבצעת באופן עקיף באמצעות \textbf{תכונה פיזיקלית
+  משתנה} של חומר: נפח, התנגדות, מתח חשמלי או קרינה. ארבעת המכשירים
+  העיקריים למדידת טמפרטורה הם:}
+\item
+  \RL{\textbf{מדחום נוזלי} - מבוסס על התפשטות נוזל; פשוט אך מוגבל
+  לטווחים צרים.}
+\item
+  \textbf{RTD\RL{/ תרמיסטור}} \RL{- מבוסס על שינוי התנגדות; מדויק ויציב
+  למדידות רציפות.}
+\item
+  \RL{\textbf{תרמוקפל} - מודד מתח תרמי; מתאים לטווחים רחבים ולתהליכים
+  מהירים.}
+\item
+  \RL{\textbf{פירומטר -} מודד קרינה תרמית; מאפשר מדידה ללא מגע
+  בטמפרטורות גבוהות מאוד.}
+\item
+  \RL{הבחירה במכשיר המדידה תלויה בטווח הטמפרטורות, ברמת הדיוק הנדרשת,
+  במהירות התגובה ובאפשרות למדידה ישירה או מרחוק.}
+\end{itemize}
+
+\section{\texorpdfstring{\RL{לחץ}}{לחץ}}\label{ux5dcux5d7ux5e5}
+
+\RL{כאשר נוזל או גז כלואים במיכל, הם אינם ``שקטים''. חלקיקי החומר נעים
+ומתנגשים ללא הרף בדפנות. כל התנגשות מפעילה דחיפה קטנה, וביחד נוצר כוח
+מצטבר על פני שטח הדופן - זהו בדיוק \textbf{הלחץ}}. \RL{הלחץ מתאר עד כמה
+החומר ``דוחף'' את סביבתו -- כמה כוח הוא מפעיל \emph{ליחידת שטח}. כאשר
+אותו כוח מתפזר על שטח גדול, הלחץ קטן; וכשהוא מתרכז בשטח קטן -- הלחץ גדל.
+בהנדסת תהליכים, הלחץ הוא אחד הגדלים המרכזיים שמתארים את מצב החומר
+במערכת: הוא קובע אם נוזל יזרום או יישאר במקומו, כמה כוח נדרש כדי להזרים
+אותו, ואילו עומסים יפעלו על הציוד}.
+
+\RL{נניח שזורם - נוזל או גז - כלוא במיכל סגור. בכל רגע, חלקיקי הזורם
+נעים ומתנגשים בדפנות. התוצאה הכוללת של כל ההתנגשויות האלה היא כוח שמופעל
+על שטח הדופן}. \RL{כדי לתאר את הכוח הזה באופן עצמאי מגודל המיכל או
+הצינור, אנו מחשבים כמה כוח פועל \textbf{על כל יחידת שטח} של הדופן.}
+
+\RL{גודל זה נקרא \textbf{לחץ} ומסומן} \(P\):
+
+\[P = \frac{F}{A}\]
+
+\RL{כאשר} F \RL{הוא הכח המינימלי שצריך להפעיל על פקק חסר חיכוך כדי למנוע
+מהזורם לפרוץ החוצה דרך חור ששטחו} A
+
+\emph{\RL{.}}\includegraphics[width=1.84003in,height=2.30004in]{media/media/image26.gif}
+\RL{}\includegraphics[width=3.85916in,height=1.66296in]{media/media/image27.png}
+
+Figure \RL{23- אטימת חור במיכל עם לחץ מים. מקור:} flex seal
+
+\RL{הלחץ הוא \textbf{מאפיין של הזרם עצמו}}, \RL{ולא רק של נקודת המגע.
+במצב מנוחה, המולקולות דוחפות אחת את השנייה כך שהלחץ בכל נקודה באותו עומק
+או באותו מצב זרימה הוא זהה --- גם אם אין שם פתח או פקק ממשיים. לכן ניתן
+לדבר על ``הלחץ במערכת'' או ``הלחץ בצינור'', כאילו היה זה גודל אחיד המתאר
+את כל הזורם}.
+
+\RL{יחידות הלחץ הן יחידות כוח חלקי יחידות שטח. ביחידות} SI \RL{נהוג
+למדוד לחץ בפסקל} (Pa), \RL{כאשר}
+
+\[1Pa = 1\frac{N}{m^{2}} = 1\frac{Kg}{m*s}\]
+
+\RL{ויחידות נוספות מוכרות הן} torr\RL{,} atm \RL{ו-} psi
+\(\left( \frac{lb_{m}}{in^{2}} \right)\)\RL{.}
+
+\subsubsection{\texorpdfstring{\RL{לחץ
+אטמוספירי}}{לחץ אטמוספירי}}\label{ux5dcux5d7ux5e5-ux5d0ux5d8ux5deux5d5ux5e1ux5e4ux5d9ux5e8ux5d9}
+
+\RL{באותו האופן האוויר שסביבנו מפעיל עלינו לחץ. האוויר הוא תערובת של
+גזים שחלקיקיהם נעים ומתנגשים כל הזמן והתנגשויות אלה מפעילות כח עלינו ועל
+כל מה שנמצא סביבנו.}
+
+\RL{הכוח הכולל שמפעילה האטמוספירה על כל יחידת שטח של פני הקרקע או של גוף
+כלשהו נקרא \textbf{לחץ אטמוספירי}}.
+
+\RL{הלחץ האטמוספירי בגובה פני הים הוא בערך}:
+
+\[P_{atm} = 1.013*10^{5}Pa = 1atm\]
+
+\RL{כלומר, האוויר שסביבנו מפעיל על כל סנטימטר מרובע של הגוף שלנו כוח של
+כקילוגרם אחד -- ואיננו מרגישים זאת רק משום שהלחץ בתוך גופנו שווה לזה
+שבחוץ}. \RL{אם נסתכל על פחית שתייה פתוחה "ריקה", אנו יודעים שהיא לא באמת
+ריקה, אלא מכילה אוויר באותו הלחץ כמו האוויר שסביבנו. אם נחבר פחית זו
+למשאבת ואקום כאשר נשאב את האויר מתוך הפחית, כבר לא תהיה התנגדות ללחץ
+שהאויר שמחוץ לפחית מפעיל, והפחית תקרוס פנימה.}
+
+Figure \RL{24 - פחית מחוברת למשאבת ואקום, הוצאת האויר גורמת ללחץ
+האטמוספירי למעוך את הפחית פנימה. נוצר בעזרת בינה מלאכותית} (Nano
+Banana), 2025\RL{.}
+
+\RL{הלחץ האטמוספירי איננו קבוע בכל מקום}. \RL{ככל שעולים לגובה רב יותר
+-- על פני הר, במטוס או בבלון מזג אוויר -- יש \textbf{פחות שכבות אוויר
+מעלינו}}, \RL{ולכן גם \textbf{פחות משקל של אוויר הלוחץ כלפי מטה}}.\\
+\RL{התוצאה היא ירידה הדרגתית בלחץ האטמוספירי עם העלייה בגובה. לכן הלחץ
+בגובה פני הים הוא כ-1 אטמוספירה, אך בגובה של כ־5 ק"מ (בערך מחצית גובה
+האוורסט) הלחץ יורד כמעט למחצית מערכו}.\RL{\hfill\break
+כאשר אומרים לנו שאנו נמצאים בתנאים של לחץ אטמוספירי הכוונה היא} P=1atm
+
+Figure \RL{25 - האטמוספירה בנויה משכבות של אוויר, שכל אחת מהן מפעילה
+משקל על השכבות שמתחתיה. לכן ככל שיורדים לגובה נמוך יותר - המולקולות
+נדחסות, והלחץ עולה בהתאם. נוצר בעזרת בינה מלאכותית} (Nano Banana),
+2025\RL{.}
+
+\subsection{\texorpdfstring{\RL{לחץ
+הידרוסטטי}}{לחץ הידרוסטטי}}\label{ux5dcux5d7ux5e5-ux5d4ux5d9ux5d3ux5e8ux5d5ux5e1ux5d8ux5d8ux5d9}
+
+\RL{בדומה לאטמוספירה, גם בתוך נוזל או גז הנמצא במנוחה הלחץ משתנה עם
+הגובה. כל שכבה של זורם נושאת את משקל השכבות שמעליה, ולכן ככל שיורדים
+לעומק גדול יותר -- כך גדל המשקל המצטבר מעל הנקודה, והלחץ עולה}. \RL{}
+
+Figure \RL{26- לחץ הידרוסטטי של מים, ככל שהחריר בנקודה יותר נמוכה, הלחץ
+גבוה יותר ולכן הזרימה החוצה מאותו החריר תהיה חזקה יותר.}
+
+\RL{נניח עמוד זורם שגובהו} \(h\), \RL{צפיפותו} \(\rho\), \RL{ופתוח
+לאוויר. הלחץ בראש העמוד יהיה הלחץ האטמוספירי (}\(P_{0}\)(
+
+\RL{הלחץ} \RL{בתחתית העמוד יהיה} \(P = P_{0} + \frac{\rho gh}{g_{c}}\)
+\RL{זהו הלחץ ההידרוסטטי} -- \RL{הלחץ הנובע ממשקל הזורם עצמו}.
+
+\RL{הנוסחה תקפה לכל זורם במנוחה, בין אם מדובר בשמן במיכל, במים בצינור או
+באוויר בשכבות התחתונות של האטמוספירה}. \RL{עיקרון זה מסביר תופעות רבות
+שאנו פוגשים בחיי היומיום ובהנדסה}:\\
+\RL{מדוע צוללים חשים בלחץ גדל עם העומק, מדוע סכר נבנה עבה יותר בבסיסו,
+ומדוע תחתית מיכל תעשייתי חייבת לעמוד בעומסים גדולים בהרבה מחלקו העליון}.
+
+\subsubsection{\texorpdfstring{\RL{ע֫ומד
+(במלעיל)}}{ע֫ומד (במלעיל)}}\label{ux5e2ux5d5ux5deux5d3-ux5d1ux5deux5dcux5e2ux5d9ux5dc}
+
+\RL{אחת הדרכים לביטוי של לחץ לא ביחידות של כוח ליחידת שטח, אלא כ{גובה
+שקול של זורם} שהיה מפעיל את אותו לחץ}. \RL{נניח עמוד זורם בגובה} \(h\),
+\RL{בצפיפות} \(\rho\). \RL{הלחץ בתחתיתו הוא} \(P = \rho gh\).\\
+\RL{אפשר להביע את הלחץ בתחתית העמוד באמצעות הגובה נוזל מסויים (לרוב
+כספית או מים) שהיה גורם לאותו הלחץ. ג}
+
+\RL{{עומד לחץ} או {גובה שקול ללחץ (}}{head\RL{),}}\RL{והוא מבטא את הלחץ
+ביחידות של אורך של נוזל.}
+
+\RL{לחץ של} ‎1‎ \RL{אטמוספירה ניתן לביטוי כעומד של} ‎10.3‎ \RL{מטר מים או}
+‎760‎ \RL{מילימטר כספית}.
+
+\[1atm = 101325Pa = 760mmHg = 10.3mH_{2}O = 29.92inHg\]
+
+\RL{אנו יכולים למצוא את העומד על ידי חלוקת הלחץ בצפיפות הנוזל הרצוי}
+
+\[P_{head} = \frac{\rho_{fluid\ }\frac{g}{g_{c}}}{P\ \left( \frac{force}{area} \right)}\]
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{יחידות העומד} (Head) \RL{נראות במבט ראשון זהות ליחידות של
+\textbf{אורך -} למשל מטרים או סנטימטרים - אך משמעותן הפיזיקלית שונה
+לחלוטין}. \RL{כאשר אנו אומרים ``גובה של 2 מטרים'', הכוונה היא למרחק פיזי
+במרחב}. \RL{לעומת זאת, כשאנחנו אומרים ``עומד לחץ של 2 מטר מים'', אין
+מדובר במרחק ממשי, אלא ב\textbf{גובה שקול של עמוד מים שהיה יוצר את אותו
+לחץ}}.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\[P(mmHg) = P_{0}(mmHg) + h(mmHg)\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{כיצד נזהה שמדובר בעומד ולא באורך אמיתי}?\\
+\RL{נבחן את \textbf{ההקשר הפיזיקלי} אם הגודל מופיע כחלק מביטוי של לחץ}
+\((P = \rho gh)\) \RL{ויחד עימו מוזכר נוזל מסויים (לרוב מים או כספית) --
+מדובר בעומד}. \RL{אם הוא מתאר מיקום במרחב (כמו גובה מיכל, אורך צינור או
+מרחק בין נקודות) -- מדובר באורך}.
+
+\end{tcolorbox}
+
+\subsection{\texorpdfstring{\RL{לחץ אטמוספירי, לחץ מוחלט ולחץ
+יחסי}}{לחץ אטמוספירי, לחץ מוחלט ולחץ יחסי}}\label{ux5dcux5d7ux5e5-ux5d0ux5d8ux5deux5d5ux5e1ux5e4ux5d9ux5e8ux5d9-ux5dcux5d7ux5e5-ux5deux5d5ux5d7ux5dcux5d8-ux5d5ux5dcux5d7ux5e5-ux5d9ux5d7ux5e1ux5d9}
+
+\RL{עד עתה כשדיברנו על לחץ, התייחסנו ללחץ מוחלט - כלומר, לחץ שנמדד ביחס
+לואקום - מצב בו אין צורונים כלל, ולכן אין התנגשויות ולא מופעל כח. אבל
+למעט מקרים נדירים מופעל עלינו לחץ חיצוני קבוע - הלחץ האטמוספירי. במרבית
+המדידות המכשירים יראו לנו את הלחץ היחסי} \emph{(Gauge Pressure)} \RL{-
+הלחץ הנמדד ביחס ללחץ האטמוספירי}\emph{.} \RL{כאשר מד הלחץ מחובר לאוויר
+החופשי, הוא מציג ערך אפס, מפני שהלחץ שבתוכו שווה בדיוק ללחץ האטמוספירה
+שמחוצה לו}\emph{.} \RL{רק כאשר הלחץ במערכת גדול או קטן מהלחץ החיצוני,
+המד מראה ערך חיובי או שלילי בהתאמה}\emph{.}
+
+\RL{הקשר בין שני סוגי הלחץ הוא פשוט}\emph{:}
+
+\[P_{abs} = P_{\text{gauge}} + P_{\text{atmospheric}}\] \RL{כאשר}
+\(P_{\text{יחסי}} = 0\), \RL{פירושו שהלחץ במערכת שווה ללחץ האטמוספירי}.
+
+\RL{כאשר הערך שלילי, משמעות הדבר שהלחץ במערכת קטן מהאטמוספירה -- מצב
+הנקרא ואקום חלקי}.\\
+\RL{במקרה זה מכשיר המדידה יראה ערך שלילי. והערך הזה מייצג את "עוצמת
+הואקום". כך לדוגמא אם המכשיר מראה ערך של} \(- 100mmHg\) \RL{המשמעות היא
+שהלחץ האבסולוטי הוא} \(660mmHg\) \RL{ויש לנו ואקום של 10 ס"מ.}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+  \RL{יחידות המיועדות רק ללחץ אבסולוטי:} atma, psia
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+  \RL{יחידות המיועדות רק ללחץ יחסי:} atmg, psig
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+  \RL{שאר היחידות (למשל} Pa \RL{או} mmHg\RL{) דורשות ציון מפורש}
+
+  \end{tcolorbox}
+\item
+  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+  \RL{אם אין ציון מפורש ניתן להניח שמדובר בלחץ אבסולוטי}
+
+  \end{tcolorbox}
+\end{itemize}
+
+\subsubsection{\texorpdfstring{\RL{ברומטר ולחץ
+ברומטרי}}{ברומטר ולחץ ברומטרי}}\label{ux5d1ux5e8ux5d5ux5deux5d8ux5e8-ux5d5ux5dcux5d7ux5e5-ux5d1ux5e8ux5d5ux5deux5d8ux5e8ux5d9}
+
+\RL{כשאין מידע נוסף אנו מעריכים את הלחץ החיצוני המופעל עלינו כלחץ של}
+1atm\RL{. אך הלחץ המדוייק תלוי בתנאים שבהם אנו נמצאים כמו הגובה מעל (או
+מתחת) פני הים והטמפ\textquotesingle{} שאנו נמצאים בה. על מנת למדוד את
+הלחץ המופעל עלינו על ידי האטמוספירה בפועל בנקודה מסויימת בזמן מסויים,}
+\RL{נשתמש במכשיר שנקרא {ברומטר}}{(Barometer)\RL{.}} \RL{}
+
+\RL{ברומטר כספית הוא מכשיר פשוט אך מדויק למדידת הלחץ על פני השטח. הוא
+מורכב מצינור זכוכית ארוך (בדרך כלל באורך של כ־90 ס״מ), שצידו האחד אטום
+וסגור}, \RL{והצד השני פתוח ומוטבל בתוך כלי המכיל כספית נוזלית}. \RL{את
+הצינור ממלאים לחלוטין בכספית, סוגרים את קצהו העליון, והופכים אותו כך
+שקצהו הפתוח ייטבל במיכל}. \RL{כאשר הצינור מונח כך, חלק מהכספית מחליקה
+החוצה אל המיכל, אך רובה נותרת בצינור}. \RL{בחלק העליון של הצינור נוצר
+חלל כמעט ריק} -- \RL{ואקום כמעט מושלם} -- \RL{משום שאין בו אוויר כלל}.
+\RL{במצב זה נוצר שיווי משקל בין שני כוחות}: \RL{הלחץ שמפעיל האוויר
+האטמוספירי על פני הכספית שבמיכל} ,\RL{ומשקל עמוד הכספית שבתוך הצינור}.
+\RL{שיווי המשקל מתואר על ידי}:
+
+\[P_{\text{barometer}} = \frac{\rho_{\text{Hg}}gh}{g_{c}}\] \RL{כאשר}
+\(\mathbf{h}\) \RL{הוא גובה עמוד הכספית הנותר בצינור}.
+
+\RL{מאחר והחלל שבחלק העליון של הצינור הוא למעשה וואקום, הלחץ בראש עמוד
+הכספית כמעט אפסי}.\\
+\RL{מכאן שהלחץ הנמדד בברומטר הוא לחץ מוחלט ביחס לוואקום זה, וניתן להשתמש
+בו כערך הייחוס (לחץ ברומטרי) לכל חישוב של לחצים יחסיים במכשירים אחרים}.
+
+\[P_{abs} = P_{\text{gauge}} + P_{\text{barometer}}\]
+
+\RL{הסטודנטית החרוצה סתוונית בודקת אחראית על בדיקת תקינות מיכל גז במפעל
+בו היא עובדת.\\
+מד הלחץ (}Gauge\RL{) המותקן על המכל מראה} \(200KPa\)
+
+\RL{הלחץ האטמוספרי באותו היום נמדד בברומטר כספית ועמד על} \(720mmHg\)
+
+\RL{ידוע כי המיכל מתוכנן לעמוד בלחץ אבסולוטי מרבי של} \(310KPa\)
+
+\RL{האם המכל נמצא בתחום התקין או שקיים חשש לחריגה מהלחץ המותר?}
+
+\subsection{\texorpdfstring{. \RL{מכשירים למדידת
+לחץ}}{. מכשירים למדידת לחץ}}\label{ux5deux5dbux5e9ux5d9ux5e8ux5d9ux5dd-ux5dcux5deux5d3ux5d9ux5d3ux5ea-ux5dcux5d7ux5e5}
+
+\RL{קיימות שיטות רבות למדידת לחץ, השונות זו מזו בעקרון הפעולה, בטווחי
+הלחצים המתאימים ובדיוק הנדרש}. \RL{לפי} \emph{Perry's Chemical
+Engineers' Handbook\RL{,}} \RL{ניתן לחלק את מכשירי המדידה לשלוש קבוצות
+עיקריות}:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{\RL{שיטות מבוססות עמוד נוזל} (liquid-column methods)} --
+  \RL{כמו המנומטר, שבהן הלחץ נמדד באמצעות גובה נוזל המאזן את הלחץ הפועל
+  עליו. שיטות אלו פשוטות, מדויקות יחסית ומתאימות במיוחד למדידות לחץ
+  נמוך}.
+\item
+  \textbf{\RL{שיטות אלסטיות} (elastic-element methods)} -- \RL{מבוססות
+  על עיוות מכני של רכיב מתכתי אלסטי, כמו בצינור בורדון, בדיאפרגמה או
+  במפוח. הלחץ גורם לעיוות מבוקר שמומר לתנועה מכנית הניתנת לקריאה על גבי
+  סקלת מד. שיטות אלו נפוצות בתעשייה למדידת לחצים בינוניים וגבוהים}.
+\item
+  \textbf{\RL{שיטות חשמליות} (electrical methods)} -- \RL{משתמשות
+  בחיישנים אלקטרוניים} (\RL{כגון} strain gauges \RL{או חיישנים
+  פייזו־אלקטריים}), \RL{הממירים את העיוות המכני לאות חשמלי. שיטות אלו
+  מאפשרות מדידה מדויקת ורציפה, ומתאימות במיוחד למערכות בקרה אוטומטיות}.
+\end{enumerate}
+
+\RL{שלוש הקטגוריות הללו מתבססות על עקרון משותף: הפיכת הלחץ הפועל לגודל
+מדיד -- גובה נוזל, תזוזה מכנית, או אות חשמלי -- הניתן לכיול ביחידות של
+פסקל, בר או אטמוספירה}.
+
+\subsubsection{\texorpdfstring{\RL{שיטות אלסטיות למדידת
+לחץ}}{שיטות אלסטיות למדידת לחץ}}\label{ux5e9ux5d9ux5d8ux5d5ux5ea-ux5d0ux5dcux5e1ux5d8ux5d9ux5d5ux5ea-ux5dcux5deux5d3ux5d9ux5d3ux5ea-ux5dcux5d7ux5e5}
+
+\RL{בשיטות אלסטיות נמדד הלחץ באמצעות {עיוות מכני של רכיב מתכתי
+אלסטי}}\textbf{.} \RL{כאשר נוזל או גז מפעילים לחץ על רכיב גמיש --- כמו
+צינור דק, קרום מתכת או מפוח --- הלחץ גורם לשינוי בצורתו. שינוי זה מומר
+לתנועה מדידה, לרוב באמצעות מנגנון מכני פשוט המחובר למחוג או חיישן}.
+\RL{השיטה הנפוצה ביותר היא {צינור בורדון}}{(Bourdon tube)}\RL{\textbf{.}
+צינור זה בנוי מצינור מתכתי קעור בעל חתך אליפטי, המעוקל בצורת חצי עיגול
+או סליל. הקצה הפתוח של הצינור מחובר אל מקור הלחץ, בעוד שהקצה השני סגור
+ויכול לנוע בחופשיות}. \RL{כאשר הלחץ הפנימי בצינור עולה, דפנות הצינור
+נמתחות והצורה הקמורה נוטה להתיישר. תנועה קטנה זו מועברת באמצעות מנגנון
+של מנוף וגלגל שיניים אל מחוג המורה את הלחץ על גבי סקלת המד}.
+
+\includegraphics[width=2.05088in,height=2.56567in]{media/media/image31.jpg}
+\RL{}\includegraphics[width=1.98575in,height=2.58476in]{media/media/image32.jpg}
+
+Figure \RL{27 - איור: מד לחץ מסוג בורדון (}Bourdon Gauge\RL{). מימין --
+מראה חיצוני של מד הלחץ, שבו תנועת המחוג מציגה את ערך הלחץ על גבי סולם
+מכויל}. \RL{משמאל -- מבט פנימי של מנגנון המדידה: צינור מתכתי קמור בצורת}
+C \RL{(צינור בורדון) המחובר לקו הלחץ}.
+
+\RL{מדי לחץ מסוג בורדון פשוטים, אמינים, ואינם דורשים מקור אנרגיה חיצוני.
+הם מתאימים למדידה של {לחץ מדומה}} {(Gauge Pressure)} \RL{ומספקים תוצאות
+מדויקות בטווח רחב מאוד של לחצים, החל ממאות קילו־פסקל ועד מאות מגה־פסקל}.
+\RL{חסרונם העיקרי הוא רגישות לשינויים מהירים בלחץ ולבלאי מכני לאורך
+זמן}. \RL{בזכות פשטותם ואמינותם, מדי בורדון נחשבים עד היום לאחד המכשירים
+הנפוצים ביותר למדידת לחץ במערכות תעשייתיות, במעבדות ובמתקני בקרה}.
+
+\RL{מלבד צינור בורדון, קיימות שיטות נוספות למדידת לחץ המבוססות על אותו
+עיקרון של עיוות אלסטי של רכיב מתכתי}. \RL{במכשירי דיאפרגמה הלחץ מפעיל
+כוח על קרום מתכתי דק המתעוות בהתאם לעוצמת הלחץ, ובמכשירי מפוח} (bellows)
+\RL{הלחץ גורם להתפשטות או כיווץ של גליל מתקפל דק}. \RL{בכל המקרים מדובר
+בהמרה של שינוי מכני קטן --- כיפוף, מתיחה או התרחבות --- לתנועה מדידה,
+אשר מתורגמת להצגה אנלוגית או לאות חשמלי}. \RL{מכשירים אלה מאפשרים מדידה
+מדויקת גם בטווחי לחץ שונים מאוד, החל מהפרשי לחץ זעירים ועד ללחצים גבוהים
+בתעשייה, והם מהווים את הבסיס למרבית מדי הלחץ המכניים המודרניים}.
+
+\subsubsection{\texorpdfstring{\RL{שיטות חשמליות למדידת
+לחץ}}{שיטות חשמליות למדידת לחץ}}\label{ux5e9ux5d9ux5d8ux5d5ux5ea-ux5d7ux5e9ux5deux5dcux5d9ux5d5ux5ea-ux5dcux5deux5d3ux5d9ux5d3ux5ea-ux5dcux5d7ux5e5}
+
+\RL{בשיטות חשמליות נמדד הלחץ בעזרת חיישנים ההופכים עיוות מכני לאות חשמלי
+מדיד}. \RL{בכל השיטות העיקרון זהה: לחץ הפועל על רכיב גמיש גורם לשינוי
+פיזי (כיפוף, מתיחה או דחיסה), והמערכת האלקטרונית מתרגמת שינוי זה לשינוי
+במתח, בזרם או במטען}. \RL{היתרון המרכזי של שיטות אלו הוא האפשרות לשלב
+אותן במערכות בקרה ממוחשבות, ולקבל מדידה רציפה, מדויקת ומהירה של לחצים גם
+בתנאים משתנים}. \RL{קיימים שלושה סוגים עיקריים של חיישנים חשמליים}:
+
+\begin{itemize}
+\item
+  \RL{}Strain Gauge \RL{- חוט מתכתי דק או סרט מוליך שההתנגדות החשמלית
+  שלו משתנה בהתאם למידת המתיחה או הדחיסה. שינוי ההתנגדות מומר ישירות
+  לשינוי במתח החשמלי ומאפשר מדידת לחצים סטטיים לאורך זמן}.
+\item
+  Piezo-resistive Sensor \RL{- מבוסס על שינוי בהתנגדות החשמלית של חומרים
+  מוליכים למחצה (כמו סיליקון) כתוצאה מלחץ מכני. חיישנים אלה רגישים
+  במיוחד ומתאימים למערכות מדידה מדויקות, כולל יישומים רפואיים
+  ותעשייתיים}.
+\item
+  Piezo-electric Sensor \RL{-} \RL{מבוסס על תופעת הפייזואלקטריות, שבה
+  גבישים מסוימים (כמו קוורץ או חומרים קרמיים) מייצרים מטען חשמלי חדש
+  כשהם נתונים ללחץ. המטען מומר לאות חשמלי באמצעות מעגל הגברה, ומאפשר
+  מדידה של לחצים דינמיים מאוד -- כמו פיצוצים, רטט או פעימות מהירות
+  במנועים}. \RL{}~\RL{יש לציין כי חיישנים אלו אינם מתאימים למדידת לחץ
+  סטטי (קבוע) לאורך זמן, כיוון שהמטען החשמלי נוטה להתפוגג.}
+\end{itemize}
+
+\RL{החיישנים החשמליים משלבים בין רגישות גבוהה}, \RL{מהירות תגובה ויכולת
+אינטגרציה במערכות בקרה מתקדמות}. \RL{עם זאת, יש להבחין בין חיישנים
+המתאימים ללחצים קבועים לבין כאלה המשמשים למדידות רגעיות בלבד -- בהתאם
+לעקרון הפעולה של כל טכנולוגיה}.
+
+\subsection{\texorpdfstring{\RL{מנומטרים}}{מנומטרים}}\label{ux5deux5e0ux5d5ux5deux5d8ux5e8ux5d9ux5dd}
+
+\textbf{\RL{מנומטרים} (Manometers)} \RL{הם מהמכשירים הפשוטים והמדויקים
+ביותר למדידת לחץ}. \RL{הם פועלים על עקרון בסיסי של שיווי משקל הידרוסטטי:
+כאשר עמודת נוזל נמצאת במנוחה, הפרש הגבהים בין שני צדדים של הצינור משקף
+את הפרש הלחצים ביניהם}. \RL{מנומטר טיפוסי הוא צינור בצורת} U \RL{המכיל
+נוזל מדידה (כמו כספית או מים). כאשר שני צדדיו חשופים ללחצים שונים, הנוזל
+נע עד שהפרשי הלחצים משתווים להפרש המשקלים של עמודות הנוזל בשני הצדדים.
+גובה עמודת הנוזל מהווה מדד ישיר להפרש הלחצים בין הנקודות}.
+
+\subsubsection{\texorpdfstring{\RL{משוואת המנומטר
+הכללית}}{משוואת המנומטר הכללית}}\label{ux5deux5e9ux5d5ux5d5ux5d0ux5ea-ux5d4ux5deux5e0ux5d5ux5deux5d8ux5e8-ux5d4ux5dbux5dcux5dcux5d9ux5ea}
+
+\RL{העיקרון הפיזיקלי הבסיסי הוא שהלחץ זהה בכל שתי נקודות הנמצאות באותו
+גובה באותו נוזל רציף}.\\
+\RL{נניח שני לחצים בשני הקצוות} \(P_{1}\)\RL{ו-}\(P_{2}\), \RL{ושני
+זורמים בצינור -- נוזל מדידה בצפיפות} \(\rho_{1}\) \RL{וזורם (לרוב אוויר)
+בצפיפות} \(\rho_{2}\).
+
+Figure \RL{28- משוואת המנומטר הכללית - נוזל המדידה בכחול (לרוב מים או
+כספית), זורם עליון בירוק (לרוב אויר, זניח), לחצים חיצוניים} P1 \RL{ו-}
+P2\RL{.}
+
+\RL{אם נעקוב לאורך הצינור מצד 1, דרך נוזל המדידה, ועד לצד 2 -- נוכל
+להשוות את הלחצים בנקודות שבאותו גובה}.\\
+\RL{נכתוב את הלחץ בכל זרוע ונשווה ביניהם} \RL{וקיבלנו את}
+
+\RL{משוואת המנומטר הכללית}
+
+\[P_{1} + \rho_{2}\frac{g}{g_{c}}(h_{1} + h_{2}) = P_{2} + \rho_{1}\frac{g}{g_{c}}h_{1} + \rho_{2}\frac{g}{g_{c}}h_{2}\]
+
+\RL{המתארת את הקשר בין הלחצים, צפיפויות הנוזלים והפרשי הגבהים בצינור}.
+
+\RL{במרבית היישומים הזורם העליון הוא גז (לרוב אוויר), שצפיפותו קטנה
+בהרבה מצפיפות נוזל המדידה}.\\
+\RL{במקרה זה ניתן להזניח את תרומתו, ואז נקבל את}
+
+\RL{משוואת המנומטר כאשר הצפיפות של הזורם העליון זניחה:}
+
+\[P_{1} - P_{2} = \rho\frac{g}{g_{c}}h\] \RL{כאשר} \(\rho\)\RL{היא
+צפיפות נוזל המדידה בלבד}.
+
+\RL{אם} \(h > 0\)-- \RL{הלחץ בצד 1 גבוה יותר}; \RL{אם} \(h < 0\)--
+\RL{הלחץ בצד 2 גבוה יותר}.
+
+\RL{נוסחה זו היא הצורה הפשוטה והנפוצה של \textbf{משוואת המנומטר} אם אחד
+הצדדים של המנומטר פתוח לאטמוספירה, ניתן להשתמש בו למדידת לחץ יחסי
+(}Gauge \RL{}Pressure\RL{), ואם שני הצדדים מחוברים לנקודות שונות במערכת,
+הוא מודד הפרש לחצים} (Differential Pressure)\RL{. מנומטרים משמשים בעיקר
+ביישומים שבהם נדרש דיוק גבוה בטווחי לחץ נמוכים, כמו כיול חיישנים, ניסויי
+זרימה במעבדה, או מדידות בפרויקטים חינוכיים. לעומת זאת, במערכות תעשייתיות
+בלחצים גבוהים משתמשים לרוב במדי לחץ אלסטיים או אלקטרוניים, שהם קומפקטיים
+ועמידים יותר}.
+
+\RL{נתונה המערכת הבאה:\\
+1. באיזה צד הלחץ יותר גבוה?\\
+2. מהו} h\RL{?}
+
+\includegraphics[width=2.01046in,height=1.62134in]{media/media/image34.png}
+
+\subsubsection{\texorpdfstring{\RL{סוגי
+מנומטרים}}{סוגי מנומטרים}}\label{ux5e1ux5d5ux5d2ux5d9-ux5deux5e0ux5d5ux5deux5d8ux5e8ux5d9ux5dd}
+
+Figure \RL{29}- \RL{סוגי מנומטרים}
+
+\textbf{\RL{מנומטר פתוח} \emph{(Open-End Manometer)}}
+
+\RL{במנומטר פתוח צד אחד של הצינור חשוף לאטמוספירה, והצד השני מחובר
+לנקודה במערכת שברצוננו למדוד את הלחץ בה}\emph{.} \RL{אם הלחץ במערכת גדול
+מהלחץ האטמוספרי, מפלס הנוזל בצד הפתוח יעלה; ואם הוא קטן יירד}\emph{.}
+\RL{}
+
+\begin{itemize}
+\item
+  \RL{מאחר והמנומטר פתוח לאמוספירה הוא יראה לנו את הלחץ היחסי
+  (}\emph{gauge}\RL{)} \(P_{1g} = \rho\frac{g}{g_{c}}h\)
+\item
+  \RL{אם נרצה לדעת את הלחץ האבסולוטי בצינור נצטרך להוסיף את הלחץ
+  האטמוספירי}
+\end{itemize}
+
+\[P_{1a} = P_{atm} + P_{1g} = P_{atm} + \rho\frac{g}{g_{c}}h\]
+
+\includegraphics[width=1.50808in,height=1.7116in]{media/media/image36.png}
+
+\textbf{\RL{מנומטר סגור} \emph{(Sealed-End Manometer)}}
+
+\RL{במנומטר סגור צד אחד של הצינור אטום ומכיל ריק כמעט מוחלט}
+\emph{(Vacuum)}\RL{,} \RL{והצד השני מחובר למערכת. מכיוון שבצד האטום הלחץ
+אפסי בקירוב, הלחץ הנמדד הוא לחץ מוחלט}
+
+\[P_{1a} = 0 + \rho\frac{g}{g_{c}}h\]
+\includegraphics[width=1.34823in,height=1.69815in]{media/media/image37.png}
+
+\textbf{\RL{מנומטר דיפרנציאלי} \emph{(Differential Manometer)}}
+
+\RL{במנומטר דיפרנציאלי שני הצדדים מחוברים לשתי נקודות שונות
+במערכת}\emph{.* \RL{המכשיר מודד ישירות את \textbf{הפרש הלחצים} בין שתי
+הנקודות, ללא קשר ללחץ האטמוספרי}}.*
+\includegraphics[width=1.55713in,height=1.73623in]{media/media/image38.png}
+
+\[P_{1} + \rho\frac{g}{g_{c}}h = P_{2} + \rho_{f}\frac{g}{g_{c}}h\ \ \ \  \Longrightarrow \ \ \ \ \ \ \boxed{\mathrm{\Delta}P = P_{1} - P_{2} = \left( \rho_{f} - \rho \right)\frac{g}{g_{c}}h\text{~}}\]
+\RL{כאשר} \(\rho_{f}\)\RL{היא צפיפות נוזל המדידה ו־}\(\rho\) \RL{היא
+צפיפות הזורם במערכת}*.* \RL{אם צפיפות הזורם נמוכה משמעותית מצפיפות נוזל
+המנומטר (למשל אם מדובר באוויר), נקבל:}
+
+\[P_{1} - P_{2} = \rho\frac{g}{g_{c}}h\] \textbf{\RL{מנומטר משופע}
+\emph{(Inclined Manometer)}}
+
+\RL{במנומטר משופע אחת הזרועות של הצינור איננה אנכית אלא מונחת בזווית
+קטנה ביחס לאופק}\emph{.* \RL{העיקרון הפיזיקלי זהה לזה של מנומטר רגיל, אך
+השיפוע מאפשר למדוד שינויים קטנים מאוד בלחץ בדיוק גבוה יותר}}.* \RL{}
+
+\RL{על כן, בהנחה וצפיפות הזורם במערכת זניחה}
+
+\[\Delta P = \rho\frac{g}{g_{c}}h = \rho\frac{g}{g_{c}}Lsin(\theta)\]
+\RL{כאשר} \(L\) \RL{הוא המרחק הנמדד לאורך הצינור ו־}\(\theta\) \RL{היא
+זווית ההטיה}*.* \RL{ככל ש} \(\theta\) \RL{קטנה יותר, נוכל לשים לב
+לשינויים קטנים יותר.}
+
+\RL{}\includegraphics[width=2.14656in,height=1.95881in]{media/media/image39.png}
+
+\textbf{\RL{מנומטר עם צד רחב} \emph{(Large-Reservoir Manometer)}}
+
+\RL{במנומטר זה אחת הזרועות רחבה בהרבה מהשנייה}\emph{.* \RL{כאשר הלחץ
+משתנה, מפלס הנוזל בצד הצר נע מעלה או מטה באופן מורגש, בעוד שהשינוי במאגר
+הרחב קטן משמעותית. לכן, יש להתחשב ביחס בין שטחי החתך של שני הצדדים}},*
+\(A_{1}\)\RL{ו־}\(A_{2}\) \RL{כדי לתקן את החישוב}\emph{.}
+
+\includegraphics[width=3.13211in,height=2.4029in]{media/media/image40.png}
+
+\RL{אנו יודעים כי המסה שירדה בצד אחד חייבת להיות שווה למסה שעלתה בצד
+השני. לכן, אם נסתכל על הנפח שעלה וירד ביחס לקו האדום -}
+
+\[m_{1} = m_{2}\ \ ;\ \ \ m = \rho V\]
+
+\[V_{1} = A_{1}h_{1}\ \ \ \ \ \ V_{2} = A_{2}h_{2}\]
+
+\[m_{1} = \rho A_{1}h_{1}\ \ \ \ ;\ \ \ m_{2} = \rho A_{2}h_{2}\  \Rightarrow \ \rho A_{1}h_{1} = \rho A_{2}h_{2}\  \Rightarrow h_{1} = h_{2}\frac{A_{2}}{A_{1}}\]
+
+** \RL{כדי לחשב את הלחץ} \(P_{1}\) \RL{נניח כי צפיפות האויר זניחה, וכי
+הצד השני של המנומטר פתוח לאטמוספירה}
+
+\[P_{1} = P_{2} + \rho\frac{g}{g_{c}}\left( h_{1} + h_{2} \right)\]
+
+\[\boxed{P_{1} = P_{atm} + \rho\frac{g}{g_{c}}h_{2}\left( 1 + \frac{A_{2}}{A_{1}} \right)}\]
+
+\RL{אם המאגר רחב מאוד יחסית לצינור הצר, ניתן להגיד ש}
+\(A_{1} \gg A_{2},\ h_{1} \ll h_{2}\) \RL{והמשוואה מתלכדת עם המשוואה של
+מנומטר רגיל.}
+
+\[P_{1} = P_{atm} + \rho\frac{g}{g_{c}}h_{2}\left( 1 + \frac{A_{2}}{A_{1}} \right) = P_{atm} + \rho\frac{g}{g_{c}}h_{2}\]
+
+\RL{מבנה זה מאפשר \textbf{מדידה נוחה וקריאה מדויקת של הפרש
+גבהים}}\emph{,} \RL{כיוון שהשינוי מתרכז כולו בצינור הצר}\emph{.}
+\RL{מנומטרים כאלה נפוצים במעבדות ובמדידות כיול, שבהן נדרשת רגישות גבוהה
+אך שינוי לחץ מוגבל}\emph{.}
+
+\subsubsection{\texorpdfstring{\RL{סיכום
+מנומטרים}}{סיכום מנומטרים}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-ux5deux5e0ux5d5ux5deux5d8ux5e8ux5d9ux5dd}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{מנומטרים הם מהמכשירים הפשוטים, המדויקים והמהימנים ביותר למדידת לחצים
+והפרשי לחצים}.\\
+\RL{הם מבוססים על עקרון \textbf{שיווי המשקל ההידרוסטטי}}, \RL{שלפיו הלחץ
+בנוזל במנוחה תלוי רק בצפיפותו, בתאוצת הכובד ובגובה עמודת הנוזל}.\\
+\RL{הפרש הגבהים בין פני הנוזל בשתי זרועות הצינור מתורגם ישירות להפרש
+לחצים על־פי המשוואה}:
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\[\Delta P = \rho gh\]
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{צורתו של המנומטר -- פתוח, סגור, דיפרנציאלי, משופע או עם צד רחב --
+נקבעת לפי סוג המדידה הרצויה: לחץ מוחלט, לחץ יחסי או הפרש לחצים בין שני
+מקומות במערכת}.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+
+\RL{למרות פשטותם, מנומטרים משמשים עד היום במעבדות, בבדיקות כיול ובמערכות
+בקרה, בזכות רמת הדיוק הגבוהה והיכולת לספק מדידה ישירה וברורה של לחץ
+באמצעות גובה עמודת נוזל}.
+
+\end{tcolorbox}
+
+\RL{במכון הנדסי נתון מיכל מלבני ברוחב} \(1.0\text{~}m\) \RL{ואורך}
+\(3.0\text{~}m\)\RL{.}\\
+\RL{המיכל מלא עד לגובה} \(5.0\text{~}m\) \RL{בחומר} Methyl Ethyl Ketone
+(MEK)\RL{.}\\
+\RL{נתון:} \(S.G = 0.805\)\RL{.\\
+הלחץ האטמוספירי באותו יום הוא} \(772\text{~}mmHg\)\RL{.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \RL{חשבו את הכוח} \(F\text{~}\lbrack N\rbrack\) \RL{הפועל על תחתית
+  המיכל.}
+\item
+  \RL{מהו העומד במיכל ביחידות של} mMEK\RL{?}
+\item
+  \RL{באחד הימים ירד גשם ונכנסו למיכל מים.}
+\item
+  \RL{האם ניתן לחשב את כמות המים שנכנסה למיכל באמצעות מדידת הלחץ בתחתית
+  המיכל?}
+\item
+  \RL{כיצד ניתן להחזיר את המיכל למצבו המקורי (ללא מים).}
+\end{enumerate}
+
+\subsection{\texorpdfstring{\RL{סיכום}}{סיכום}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-5}
+
+\begin{itemize}
+\item
+  \RL{לחץ הוא הכוח הפועל בניצב ליחידת שטח:} \(P = \frac{F}{A}\)
+\item
+  \RL{לחץ בזורם הוא הכוח שהנוזל או הגז מפעיל בניצב על כל יחידת שטח
+  שבתוכו או על גבולות הכלי המכיל אותו.}
+\item
+  \RL{לחץ נוזל במנוחה עולה עם העומק בהתאם לצפיפות הנוזל ולכוח הכובד}
+  \(\Delta P = \rho\frac{g}{g_{c}}h\)
+\item
+  \RL{עומד (}Head\RL{) הוא הגובה השקול של עמודת נוזל שמייצרת לחץ נתון --
+  כלומר, גובה עמוד הנוזל שהיה יוצר את אותו לחץ במנוחה.}
+\item
+  \RL{סוגי לחצים:}
+
+  \begin{itemize}
+  \item
+    \RL{לחץ מוחלט (}Absolute Pressure\RL{): נמדד מה}Vacuum\RL{.}
+  \item
+    \RL{לחץ אטמוספירי (}Atmospheric Pressure\RL{): לחץ האוויר שמסביבנו.}
+  \item
+    \RL{לחץ יחסי (}Gauge Pressure\RL{): ההפרש בין הלחץ המוחלט ללחץ
+    האטמוספירי.}
+  \end{itemize}
+\item
+  \(P_{\text{abs}} = P_{\text{gauge}} + P_{\text{atm}}\)
+\item
+  \RL{מכשירים למדידת לחץ:}
+
+  \begin{itemize}
+  \item
+    \RL{ברומטר (}Barometer\RL{): מודד את הלחץ האטמוספירי בעזרת עמוד
+    כספית סגור.}
+  \item
+    \RL{מנומטר (}Manometer\RL{): מודד הפרשי לחצים באמצעות עמודת נוזל
+    בצורת} U\RL{.}
+
+    \begin{itemize}
+    \item
+      \RL{פתוח ←לחץ יחסי}
+    \item
+      \RL{סגור ← לחץ מוחלט}
+    \item
+      \RL{דיפרנציאלי ← הפרש לחצים}
+    \item
+      \RL{משופע / צד רחב ← דיוק גבוה למדידות קטנות}
+    \end{itemize}
+  \end{itemize}
+\item
+  \RL{עקרונות מרכזיים לזכור:}
+
+  \begin{itemize}
+  \item
+    \RL{לחץ שווה בכל נקודה באותו גובה באותו נוזל.}
+  \item
+    \RL{הפרש לחצים ניתן לחישוב לפי הפרש גבהים במנוחה.}
+  \item
+    \RL{לרוב ניתן להזניח את צפיפות האויר שבתוך המנומטר}
+  \item
+    \RL{ביימדידות לחץ הן הבסיס להבנת זרימה, מעבר חום ובקרה בתהליכים
+    הנדסיים.}
+  \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
