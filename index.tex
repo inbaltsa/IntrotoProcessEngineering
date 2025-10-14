@@ -25,7 +25,7 @@
 \usepackage{lmodern}
 \ifPDFTeX\else
   % xetex/luatex font selection
-  \setmainfont[]{Noto Sans Hebrew}
+  \setmainfont[]{Arial}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -110,7 +110,7 @@
 \fi
 \ifPDFTeX
 \else
-\babelfont{rm}[]{Noto Sans Hebrew}
+\babelfont{rm}[]{Arial}
 \fi
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
@@ -237,13 +237,6 @@
 \bookmarksetup{startatroot}
 
 \chapter{\texorpdfstring{\RL{הקדמה}}{הקדמה}}\label{ux5d4ux5e7ux5d3ux5deux5d4}
-
-\RL{מבוא להנדסת תהליכים}
-
-\RL{ד"ר ענבל צרפתי-ברעד}
-
-\RL{אוקטובר 2025\\
-}
 
 \RL{בשנת 2020 התפרצה מגפת הקורונה והציבה בפני האנושות אתגר חסר תקדים:
 בתוך פרק זמן קצר מאוד נדרש היה לפתח, לייצר ולחלק מיליארדי מנות חיסון
@@ -538,155 +531,75 @@
 בצורה מסודרת: לקרוא, לנתח, לבחור כלים, להציב נתונים ולבדוק את סבירות
 התוצאה}.
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \textbf{\RL{\ul{שלב א: ניתוח והגדרת הבעיה}}}
 
-\end{tcolorbox}
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{קריאה מהירה לסריקה כללית, ואז קריאה מדויקת של השאלה}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{ניסוח היעד במילים שלך: מה בדיוק נדרש לחשב/להראות}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{ציור דיאגרמה של המערכת; סימון נתונים ידועים (עם יחידות)
   ובלתי־ידועים (אותיות)}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{זיהוי רמזים מילוליים (למשל ``גדול/קטן מאוד'', ``בקירוב'',
   ``בהשוואה ל--'') ושיוכם לתובנות הנדסיות}.
-
-  \end{tcolorbox}
 \end{enumerate}
-
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
 
 \textbf{\RL{\ul{שלב ב: תכנון הפתרון}}}
 
-\end{tcolorbox}
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{קביעת גבולות המערכת ובחירת בסיס חישוב (אם רלוונטי)}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{רישום הנחות עבודה מוצהרות (מצב יציב/לא יציב, הזנחות,
   אידיאליזציות)}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{פירוק הבעיה לבעיות קטנות}
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{בחירת הכלים המתאימים: מאזני מסה/אנרגיה/תנע, משוואות מצב,
   קורלציות/טבלאות (קיטור, פסיכרומטרי וכו\textquotesingle)}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{אם חסר נתון: חפשו במקורות/גרפים; ואם עדיין חסר --- הציעו הנחה
   סבירה וציינו אותה במפורש}.
-
-  \end{tcolorbox}
 \end{enumerate}
-
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
 
 \textbf{\RL{\ul{שלב ג: פתרון}}}
 
-\end{tcolorbox}
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{רישום המשוואות בסימנים תחילה (ללא מספרים) ובדיקת הומוגניות
   יחידות}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{הצבה מסודרת של ערכים (עם יחידות!), פתרון אלגברי/נומרי/גרפי.}
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{עבודה איטרטיבית: אם מתגלה חסר/סתירה --- חזרה לשלב ב' לעדכון
   הנחות/בחירת מסלול חלופי}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{הצגת התוצאות בדיוק הנדסי סביר}
-
-  \end{tcolorbox}
 \end{enumerate}
-
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
 
 \textbf{\RL{\ul{שלב ד: בדיקה ואימות}}}
 
-\end{tcolorbox}
-
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
-  ``\RL{בדיקת שפיות'': יחידות נכונות, סדרי גודל סבירים, תחומים פיזיקליים
+  \RL{בדיקת שפיות'': יחידות נכונות, סדרי גודל סבירים, תחומים פיזיקליים
   הגיוניים}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{הצבה חוזרת במשוואות} (Back-Substitution) \RL{ובמידת האפשר בדיקה
   בדרך חלופית קצרה}.
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{וידוא שעניתם בדיוק על מה שהתבקש (הגדרה, יחידות, דיוק/ספרות
   משמעותיות)}
-
-  \end{tcolorbox}
 \end{enumerate}
+
+\end{tcolorbox}
 
 \includegraphics[width=6.5in,height=3.36736in]{media/media/image1.png}
 
@@ -702,7 +615,7 @@ Figure \RL{1 - שלבים בפתרון בעיות}
 הצליח. דווקא כאשר מתרחשת טעות אנו נדרשים לעצור, לנתח את מקור הבעיה,
 ולהבין את המגבלות של דרך החשיבה שלנו. במובן זה,}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{טעות היא לא כישלון אלא מקור לתובנות חדשות}
 
@@ -864,19 +777,18 @@ results\RL{)}}{אימות התוצאות (validating results)}}\label{ux5d0ux5d9
 \RL{חשוב לשים לב להבדל בין מימד ליחידה}:
 
 \begin{itemize}
-\tightlist
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+  \begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
-  \RL{\textbf{המימד} עונה על השאלה \emph{מה אנחנו מודדים}} -- \RL{אורך,
-  זמן, מסה, טמפרטורה}.
-
-  \end{tcolorbox}
-\item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
-
-  \RL{\textbf{היחידה} עונה על השאלה מהו הגודל המוסכם אליו אנו משווים -}
-  \RL{מטרים, שניות, קילוגרמים, מעלות צלזיוס}.
+  \begin{itemize}
+  \tightlist
+  \item
+    \RL{\textbf{המימד} עונה על השאלה \emph{מה אנחנו מודדים}} --
+    \RL{אורך, זמן, מסה, טמפרטורה}.
+  \item
+    \RL{\textbf{היחידה} עונה על השאלה מהו הגודל המוסכם אליו אנו משווים
+    -} \RL{מטרים, שניות, קילוגרמים, מעלות צלזיוס}.
+  \end{itemize}
 
   \end{tcolorbox}
 \end{itemize}
@@ -944,52 +856,32 @@ results\RL{)}}{אימות התוצאות (validating results)}}\label{ux5d0ux5d9
 
 \RL{במילים פשוטות}
 
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
+
 \begin{itemize}
 \tightlist
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{אי אפשר לחבר גדלים ממימדים שונים:}
   \(1\text{ }m + 3\text{ }L = \text{undefined}\)❌
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{אפשר לחבר רק כשיש אותו מימד ואותה יחידה:}
   \(10\text{ }cm + 5\text{ }cm = 15\text{ }cm\)✅
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{אם היחידות שונות -- חייבים להמיר:}
   \(10\text{ }m + 20\text{ }ft = ?\)\RL{← המרה ליחידה אחידה}
-
-  \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
   \RL{בכפל ובחילוק היחידות מתנהגות כמו ביטוי אלגברי:}
-
-  \end{tcolorbox}
 
   \begin{itemize}
   \tightlist
   \item
-    \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
     \RL{ניתן להכפיל, לחלק ולצמצם יחידות} \RL{באותו המימד}
-
-    \end{tcolorbox}
   \item
-    \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
-
-    \RL{יצירת יחידות נגזרות (כוח, אנרגיה, לחץ).}
-
-    \end{tcolorbox}
+    \RL{בצורה זו ניתן להגדיר יחידות נגזרות (כוח, אנרגיה, לחץ).}
   \end{itemize}
 \end{itemize}
+
+\end{tcolorbox}
 
 \RL{המהירות מוגדרת על ידי חלוקת המרחק בזמן ולכן}
 
@@ -1019,24 +911,14 @@ Figure \RL{2 - גדלים לצורך העברת יחידות. הטבלה מתו�
 Rousseau, R.W., \& Bullard, L.G. (2016). Elementary Principles of
 Chemical Processes (4th ed.). Wiley
 
-\RL{השתמשו בטבלה על מנת להגדיר את פקטורי המעבר הבאים}
-
-\RL{א. ליטר לגלון (}L-\textgreater gal\RL{)}
-
-\RL{ב. מטר לפיט (}m-\textgreater ft\RL{)}
+\RL{השתמשו בטבלה על מנת להגדיר את פקטורי המעבר הבאים} 1. \RL{ליטר לגלון
+(}L-\textgreater gal\RL{)} 2. \RL{מטר לפיט (}m-\textgreater ft\RL{)}
 
 \RL{כעת נוכל להשתמש בפקטור המעבר על מנת לפתור את המשוואה}
-
-\[10m + 20ft = ?\]
-
-\RL{לצורך כך נמצא את פקטור המעבר בין מטר לפיט. על פי הטבלה} 1m=3.28ft
-\RL{ולכן נוכל להגדיר את פקטורי המעבר}
-
-\[\frac{1m}{3.28ft}\ \ \ \ \ או\ \ \ \frac{3.28ft}{1m}\]
-
-\RL{וכך נוכל לחשב}
-
-\[20ft\  \times \frac{1m}{3.028ft} = 6.1m\]
+\[10m + 20ft = ?\] \RL{לצורך כך נמצא את פקטור המעבר בין מטר לפיט. על פי
+הטבלה} 1m=3.28ft \RL{ולכן נוכל להגדיר את פקטורי המעבר}
+:\[\frac{1m}{3.28ft}\ \ \ \ \ או\ \ \ \frac{3.28ft}{1m}\] \RL{וכך נוכל
+לחשב} \[20ft\  \times \frac{1m}{3.028ft} = 6.1m\]
 
 \RL{שימו לב שניתן לצמצם את היחידות הישנות כך שאנו נשארים רק עם היחידות
 החדשות.}
@@ -1154,45 +1036,24 @@ Chemical Processes (4th ed.). Wiley
 \RL{משאית נסעה מרחק של} 25mile \RL{במשך 20 דקות. מהי המהירות של המשאית
 במטר לשנייה?}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1579}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1184}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1974}}@{}}
-\toprule\noalign{}
-\multirow{2}{=}{\begin{minipage}[b]{\linewidth}\raggedright
-\[=\]
-\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\[25\ mile\]
-\end{minipage} \\
-& \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\[20\ min\]
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
-
 \subsection{\texorpdfstring{\RL{סיכום}}{סיכום}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-1}
 
 \RL{בפרק זה הכרנו את המושגים הבסיסיים של עולם המדידה:}
 
-\RL{\textbf{מדידה} (}measurement\RL{) היא פעולה של השוואת גודל ליחידת
-מידה מוסכמת.}
-
-\RL{\textbf{מידה} (}quantity\RL{) היא תכונה פיסיקלית אותה ניתן לכמת.}
-
-\RL{\textbf{מימד} (}dimention\RL{) הוא סוג הגודל (אורך, מסה, זמן...).}
-
-\RL{\textbf{יחידה} (}unit\RL{) היא קנה המידה (מטר, קילוגרם, שנייה).}
-
-\RL{\textbf{פקטור מעבר} (}conversion factor\RL{) הוא יחס בין שתי יחידות
-השייכות לאותו המימד ומייצגות את אותה הכמות}
+\begin{itemize}
+\item
+  \RL{\textbf{מדידה} (}measurement\RL{) היא פעולה של השוואת גודל ליחידת
+  מידה מוסכמת.}
+\item
+  \RL{\textbf{מידה} (}quantity\RL{) היא תכונה פיסיקלית אותה ניתן לכמת.}
+\item
+  \RL{\textbf{מימד} (}dimention\RL{) הוא סוג הגודל (אורך, מסה, זמן...).}
+\item
+  \RL{\textbf{יחידה} (}unit\RL{) היא קנה המידה (מטר, קילוגרם, שנייה).}
+\item
+  \RL{\textbf{פקטור מעבר} (}conversion factor\RL{) הוא יחס בין שתי
+  יחידות השייכות לאותו המימד ומייצגות את אותה הכמות}
+\end{itemize}
 
 \RL{בנוסף למדנו גם כיצד לבצע המרות באמצעות \textbf{סרגל היחידות}
 (}simple dimensional analysis\RL{). שיטה זו מבטיחה עבודה עקבית עם
@@ -1312,9 +1173,7 @@ Dimensional Analysis in Chemistry Textbooks 1900-2020 and an Algebraic
 Alternative. Educación Química. 36. 82-108.
 10.22201/fq.18708404e.2025.1.88260
 
-\RL{השלימו באמצעות טבלת הקידומות}
-
-\[\begin{matrix}
+\RL{השלימו באמצעות טבלת הקידומות} \[\begin{matrix}
 \mathbf{1}\mathbf{Mg} & = & \_\_\_\_\_\_\_\_\_\_\mathbf{g}\_\_ \\
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_ & = & \mathbf{1.5*1}\mathbf{0}^{\mathbf{- 6}}\mathbf{s} \\
 \mathbf{1}\mathbf{nm} & & \_\_\_\_\_\_\_\_\_\_\_\_\_\mathbf{m}
@@ -1422,7 +1281,6 @@ Alternative. Educación Química. 36. 82-108.
 \end{longtable}
 
 \RL{מה פקטור המעבר בין} dyne \RL{ל-}N\RL{? חשבו באמצעות יחידות הבסיס.}
-
 \RL{(רמז- התחילו בביטוי ביחידות הבסיס של אחד מהם, והשתמשו במעברי יחידות
 על מנת להמיר אותן כך שיתאימו ליחידות הבסיס של השני)}
 
@@ -1467,6 +1325,7 @@ Alternative. Educación Química. 36. 82-108.
 יחידות}}{סיכום -- מערכות יחידות}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-ux5deux5e2ux5e8ux5dbux5d5ux5ea-ux5d9ux5d7ux5d9ux5d3ux5d5ux5ea}
 
 \begin{itemize}
+\tightlist
 \item
   \RL{חישובים פיזיקליים והנדסיים מחייבים שימוש במערכת יחידות עקבית.
   \textbf{מערכת יחידות} מוגדרת כאוסף מוסכם של יחידות בסיס, יחידות נגזרות
@@ -1475,6 +1334,7 @@ Alternative. Educación Química. 36. 82-108.
   \RL{\ul{בעולם קיימות שלוש מערכות עיקריות:}}
 
   \begin{itemize}
+  \tightlist
   \item
     \textbf{SI \RL{-}}\RL{המערכת הבינלאומית, המבוססת על מטר, קילוגרם
     ושנייה.}
@@ -1489,6 +1349,7 @@ Alternative. Educación Química. 36. 82-108.
   \RL{\ul{בכל מערכת יש שלושה סוגים של יחידות}}
 
   \begin{itemize}
+  \tightlist
   \item
     \RL{\textbf{יחידות בסיסיות} הן אבני היסוד של כל מערכת יחידות. קיימות
     7 מידות בסיסיות כאשר במערכת ה}SI \RL{מוגדרות: מטר (אורך), קילוגרם
@@ -1515,8 +1376,8 @@ Alternative. Educación Química. 36. 82-108.
 \section{\texorpdfstring{\RL{הומגניות של משוואות ומספרים חסרי
 מימד}}{הומגניות של משוואות ומספרים חסרי מימד}}\label{ux5d4ux5d5ux5deux5d2ux5e0ux5d9ux5d5ux5ea-ux5e9ux5dc-ux5deux5e9ux5d5ux5d5ux5d0ux5d5ux5ea-ux5d5ux5deux5e1ux5e4ux5e8ux5d9ux5dd-ux5d7ux5e1ux5e8ux5d9-ux5deux5d9ux5deux5d3}
 
-\subsection{\texorpdfstring{\RL{הומוגניות של משוואות (}Dimensional
-Homogeneity\RL{)}}{הומוגניות של משוואות (Dimensional Homogeneity)}}\label{ux5d4ux5d5ux5deux5d5ux5d2ux5e0ux5d9ux5d5ux5ea-ux5e9ux5dc-ux5deux5e9ux5d5ux5d5ux5d0ux5d5ux5ea-dimensional-homogeneity}
+\subsection{\texorpdfstring{\RL{הומוגניות של משוואות}Dimensional
+Homogeneity\RL{}}{הומוגניות של משוואותDimensional Homogeneity}}\label{ux5d4ux5d5ux5deux5d5ux5d2ux5e0ux5d9ux5d5ux5ea-ux5e9ux5dc-ux5deux5e9ux5d5ux5d5ux5d0ux5d5ux5eadimensional-homogeneity}
 
 \RL{לאורך הדיון ביחידות ובממדים ראינו שגדלים פיזיקליים ניתנים לחיבור או
 לחיסור \textbf{רק כאשר היחידות שלהם זהות}}. \RL{אם היחידות זהות, נובע
@@ -1528,16 +1389,10 @@ Homogeneity\RL{)}}{הומוגניות של משוואות (Dimensional Homogenei
 \RL{כלומר, לכל האיברים הניתנים לחיבור בשני צדי המשוואה חייבים להיות אותם
 ממדים}.
 
-\RL{במשוואה}
-
-\[V = V_{0} + at\] \RL{ננתח את המימדים של כל אחד מהאיברים}
-
+\RL{במשוואה} \[V = V_{0} + at\] \RL{ננתח את המימדים של כל אחד מהאיברים}
 \[V,V_{o} \Longrightarrow \frac{אורך}{זמן} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack}\ \ \ \ \ \ a \Rightarrow \frac{אורך}{{זמן}^{2}} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack^{2}}\ \ \ \ \ t \Rightarrow זמן = \lbrack T\rbrack\]
-
 \RL{ונראה אילו מימדים כלל האיברים במשוואה}
-
 \[V\frac{\lbrack L\rbrack}{\lbrack T\rbrack} = V_{0}\frac{\lbrack L\rbrack}{\lbrack T\rbrack} + a\frac{\lbrack L\rbrack}{\lbrack T\rbrack^{2}}t\lbrack T\rbrack\]
-
 \RL{ניתן לראות שכל האיברים במשוואה מתכנסים ליחידות של אורך לזמן, ולכן
 המשוואה הומוגנית מימדית.}
 
@@ -1577,12 +1432,12 @@ Homogeneity\RL{)}}{הומוגניות של משוואות (Dimensional Homogenei
 (}Pa\RL{) לכל שינוי של מעלה אחת קלוין (}K\RL{).}
 
 \RL{ידוע כי עבור מערכת מסויימת היחס בין הלחץ לטמפ\textquotesingle{} הוא}
-\(P(Pa) = 300*T(K)\)
+\(P(Pa) = 300*T(K)\) 1. \RL{מה הוא} k \RL{-- רשמו את הערך המלא, כולל
+יחידות.}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\item
-  \RL{מה הוא} k \RL{-- רשמו את הערך המלא, כולל יחידות.}
+\setcounter{enumi}{1}
 \item
   \RL{הסבירו באופן מילולי מה המשמעות של הקבוע -- איזה שינוי מתואר
   במערכת?}
@@ -1615,8 +1470,10 @@ Homogeneity\RL{)}}{הומוגניות של משוואות (Dimensional Homogenei
 
 \RL{במעבדה לפיתוח משקאות אנרגיה עובדים שני צוותים במקביל, וכל אחד מהם
 הכין נוסחה שונה של משקה חדש. החומר הפעיל במשקה הוא קפאין (}A\RL{) ,
-והשאר הוא תמיסה מתוקה.}**** \RL{הצוות הראשון מורכב ממדענים ומדעניות
-מישראל, בעוד הצוות שני מורכב ממדענים ומדעניות מארצות הברית.}
+והשאר הוא תמיסה מתוקה.}****
+
+\RL{הצוות הראשון מורכב ממדענים ומדעניות מישראל, בעוד הצוות שני מורכב
+ממדענים ומדעניות מארצות הברית.}
 
 \RL{צוות 1 מדווח כי הוא מסת הקפאין במשקה שלו היא} \(10g\)\RL{, על כל}
 \(350g\) \RL{של משקה}
@@ -1669,6 +1526,7 @@ Re\textgreater4000\RL{.}
 מימד}}{סיכום: הומוגניות של משוואות ומספרים חסרי מימד}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-ux5d4ux5d5ux5deux5d5ux5d2ux5e0ux5d9ux5d5ux5ea-ux5e9ux5dc-ux5deux5e9ux5d5ux5d5ux5d0ux5d5ux5ea-ux5d5ux5deux5e1ux5e4ux5e8ux5d9ux5dd-ux5d7ux5e1ux5e8ux5d9-ux5deux5d9ux5deux5d3}
 
 \begin{itemize}
+\tightlist
 \item
   \RL{\textbf{הומוגניות מימדית} היא תנאי הכרחי לכל משוואה פיזיקלית תקפה
   -- כל האיברים במשוואה חייבים להיות באותם מימדים}.
@@ -1742,7 +1600,7 @@ Figure \RL{6 - דיוק והדירות}
 הפיזי}:\\
 \RL{הן מבטאות לא רק את המספר עצמו, אלא גם כמה אנחנו סומכים עליו}.
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \ul{\RL{חשוב לזכור} \RL{רק לערכים שנמדדו יש ספרות משמעותיות}.}\\
 \RL{כאשר אנו מבצעים מדידה, כל ספרה בתוצאה משקפת את רמת הוודאות של המכשיר
@@ -1841,15 +1699,18 @@ Figure \RL{6 - דיוק והדירות}
 \RL{תרגיל:\\
 כמה ספרות משמעותיות יש בכל אחד מהמספרים הבאים?}
 
-‎0.0045‎
-
-‎205‎
-
-‎1.50 × 10³‎
-
-‎1500‎
-
-‎0.000300‎
+\begin{itemize}
+\item
+  ‎0.0045‎
+\item
+  ‎205‎
+\item
+  ‎1.50 × 10³‎
+\item
+  ‎1500‎
+\item
+  ‎0.000300‎
+\end{itemize}
 
 \RL{כאשר אנו מבצעים חישובים המבוססים על נתונים מדודים, עלינו לזכור שכל
 אחד מהנתונים כולל רמת דיוק מוגבלת}. \RL{אין טעם להציג תוצאה ארוכה
@@ -1908,19 +1769,9 @@ Figure \RL{6 - דיוק והדירות}
   שגיאות עיגול ביניים}.
 \end{itemize}
 
-\RL{כתבו כל תוצאה ברמת הדיוק המתאימה.}
-
-‎2.3 × 1.245 = ?‎
-
-‎45.2 ÷ 1.2 = ?‎
-
-0.056 \RL{× 3.12 = ?}‎
-
-‎45.2 + 1.35 = ?‎
-
-‎2.06 -- 0.142 = ?‎
-
-‎0.230 + 1.2 \RL{= ?}
+\RL{כתבו כל תוצאה ברמת הדיוק המתאימה.} - ‎2.3 × 1.245 = ?‎ - ‎45.2 ÷ 1.2 =
+?‎ - ‎0.056 {[}× 3.12 = ?{]}‎ - ‎45.2 + 1.35 = ?‎ - ‎2.06 -- 0.142 = ?‎ - ‎0.230
++ 1.2 \RL{= ?}
 
 \subsection{\texorpdfstring{\RL{כתיבה מדעית של מספרים (}Scientific
 notation\RL{)}}{כתיבה מדעית של מספרים (Scientific notation)}}\label{ux5dbux5eaux5d9ux5d1ux5d4-ux5deux5d3ux5e2ux5d9ux5ea-ux5e9ux5dc-ux5deux5e1ux5e4ux5e8ux5d9ux5dd-scientific-notation}
@@ -1946,7 +1797,7 @@ notation\RL{)}}{כתיבה מדעית של מספרים (Scientific notation)}}\
 \RL{הצורה הזו מאפשרת להציג בבירור גם \textbf{את סדר הגודל} וגם
 \textbf{את רמת הדיוק}}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{איך ממירים לכתיבה מדעית}?\RL{\hfill\break
 1. מזיזים את הנקודה העשרונית כך שתשאר ספרה אחת בלבד משמאל
@@ -1958,7 +1809,7 @@ notation\RL{)}}{כתיבה מדעית של מספרים (Scientific notation)}}\
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \[{0.0045 = 4.5 \times 10^{- 3}
 }{72000 = 7.2 \times 10^{4}
@@ -2798,7 +2649,7 @@ AES\RL{). חשבו את} SG \RL{על פי כל אחד מהנתונים בנפר�
 הסגולי לכלי שימושי ומהיר לזיהוי חומרים ולהבנה אינטואיטיבית של התנהגותם},
 \RL{מבלי להזדקק לחישובי צפיפות מפורטים בכל מערכת יחידות}.
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{בכל טבלה של תכונות פיזיקליות חשוב לשים לב לתנאי המדידה של הנתונים}.
 \RL{בעמודות המציינות משקל סגולי} (SG) \RL{מופיעה לעיתים הכותרת} SG
@@ -2814,7 +2665,7 @@ AES\RL{). חשבו את} SG \RL{על פי כל אחד מהנתונים בנפר�
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{מכיוון שהצפיפות -- ובהתאם גם המשקל הסגולי -- משתנים מעט עם
 הטמפרטורה},\\
@@ -3009,53 +2860,53 @@ Percentage\RL{)}}{שבר מסתי/מולי (Mass/Mole Fraction) ואחוז מס�
 
 \RL{מה יהיה המשקל המולקולרי הממוצע של אויר ביחידות} AES\RL{?}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{\ul{כיצד חושבה הנוסחה לחישוב מסה מולרית של תערובת באמצעות שברים
 מסתיים?}}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{מאחר ואנו מחפשים תכונה שאינה תלויה בכמות, נשתמש בבסיס חישוב}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{בסיס חישוב -- מאחר ואנחנו מחפשים יחס בין ערכים, נוכל לבצע את הניתוח
 על כל כמות של חומר, ולכן נבחר את הכמות שהכי נוחה לנו לחישוב}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{נניח שבחרנו בסיס נוח של 1 ק"ג תערובת}. \RL{אז}:
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{המסה של כל רכיב תהיה} \(m_{i} = x_{i} \times 1\text{ }kg\)
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{מספר המולים של כל רכיב הוא}:
 \RL{}\(n_{i} = \frac{m_{i}}{M_{i}} = \frac{x_{i}}{M_{i}}\)
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{מספר המולים הכולל הוא}:
 \RL{}\(n_{\text{total}} = \sum_{i}^{}n_{i} = \sum_{i}^{}\frac{x_{i}}{M_{i}}\)
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{כעת, נזכור שהתחלנו את החישוב עם מסה כוללת של} \(1Kg\) \RL{ולכן אם
 נחשב את המסה הכוללת חלקי מספר המולים הכולל --- נקבל את המשקל המולקולרי
@@ -3063,19 +2914,19 @@ Percentage\RL{)}}{שבר מסתי/מולי (Mass/Mole Fraction) ואחוז מס�
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \[\overset{ˉ}{M\left\lbrack \frac{Kg}{Kmol} \right\rbrack} = \frac{m_{\text{total}}}{n_{\text{total}}} = \frac{1Kg}{\sum_{i}^{}{\frac{x_{i}}{M_{i}}Kmol}}\]
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{וזה בדיוק מביא אותנו לצורה של הנוסחה}:
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \[\boxed{\frac{1}{\overset{ˉ}{M}} = \sum_{i}^{}\frac{x_{i}}{M_{i}}}\]
 
@@ -3364,7 +3215,7 @@ Figure \RL{22}- \RL{השוואה בין שלושת סרגלי טמפרטורה -
 וקלווין מתוך} LibreTexts Physics\RL{,} \RL{לפי רישיון} Creative Commons
 BY-NC-SA 4.0.
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{כאשר מדברים על טמפרטורה עצמה -- למשל ``הטמפרטורה בחדר היא}
 \(25℃\)\RL{" המשמעות תלויה בסולם שנבחר}. \RL{אותו מצב פיזיקלי יתואר
@@ -3372,7 +3223,7 @@ BY-NC-SA 4.0.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \[25{^\circ}C = 298.15K = 77{^\circ}F = 536.7{^\circ}R\] \RL{אבל כאשר
 מדברים על \textbf{שינוי טמפרטורה} (למשל עלייה של} \(10℃\)\RL{, או ירידה
@@ -3382,7 +3233,7 @@ BY-NC-SA 4.0.
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-tip-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-tip-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{עצה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, colbacktitle=quarto-callout-tip-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{כלומר, אם חומר מתחמם} \(10℃\) \RL{זה שקול לעלייה של} \(10\ K\)\RL{,
 ואם הוא יורד} \(5\ ℉\) \RL{זה שווה ערך לירידה של} \(5\ {^\circ}R\) \RL{.
@@ -3688,7 +3539,7 @@ Figure \RL{26- לחץ הידרוסטטי של מים, ככל שהחריר בנק
 
 \[P_{head} = \frac{\rho_{fluid\ }\frac{g}{g_{c}}}{P\ \left( \frac{force}{area} \right)}\]
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{יחידות העומד} (Head) \RL{נראות במבט ראשון זהות ליחידות של
 \textbf{אורך -} למשל מטרים או סנטימטרים - אך משמעותן הפיזיקלית שונה
@@ -3699,13 +3550,13 @@ Figure \RL{26- לחץ הידרוסטטי של מים, ככל שהחריר בנק
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \[P(mmHg) = P_{0}(mmHg) + h(mmHg)\]
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{כיצד נזהה שמדובר בעומד ולא באורך אמיתי}?\\
 \RL{נבחן את \textbf{ההקשר הפיזיקלי} אם הגודל מופיע כחלק מביטוי של לחץ}
@@ -3741,25 +3592,25 @@ Figure \RL{26- לחץ הידרוסטטי של מים, ככל שהחריר בנק
 \begin{itemize}
 \tightlist
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+  \begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
   \RL{יחידות המיועדות רק ללחץ אבסולוטי:} atma, psia
 
   \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+  \begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
   \RL{יחידות המיועדות רק ללחץ יחסי:} atmg, psig
 
   \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+  \begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
   \RL{שאר היחידות (למשל} Pa \RL{או} mmHg\RL{) דורשות ציון מפורש}
 
   \end{tcolorbox}
 \item
-  \begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+  \begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
   \RL{אם אין ציון מפורש ניתן להניח שמדובר בלחץ אבסולוטי}
 
@@ -4070,7 +3921,7 @@ Figure \RL{29}- \RL{סוגי מנומטרים}
 \subsubsection{\texorpdfstring{\RL{סיכום
 מנומטרים}}{סיכום מנומטרים}}\label{ux5e1ux5d9ux5dbux5d5ux5dd-ux5deux5e0ux5d5ux5deux5d8ux5e8ux5d9ux5dd}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{מנומטרים הם מהמכשירים הפשוטים, המדויקים והמהימנים ביותר למדידת לחצים
 והפרשי לחצים}.\\
@@ -4081,13 +3932,13 @@ Figure \RL{29}- \RL{סוגי מנומטרים}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \[\Delta P = \rho gh\]
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{צורתו של המנומטר -- פתוח, סגור, דיפרנציאלי, משופע או עם צד רחב --
 נקבעת לפי סוג המדידה הרצויה: לחץ מוחלט, לחץ יחסי או הפרש לחצים בין שני
@@ -4095,7 +3946,7 @@ Figure \RL{29}- \RL{סוגי מנומטרים}
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, breakable, rightrule=.15mm, coltitle=black, leftrule=.75mm, arc=.35mm, left=2mm, bottomtitle=1mm, toptitle=1mm, bottomrule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, opacitybacktitle=0.6, colback=white, colframe=quarto-callout-note-color-frame, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}]
+\begin{tcolorbox}[enhanced jigsaw, leftrule=.75mm, breakable, colback=white, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{הערה}, coltitle=black, opacitybacktitle=0.6, toprule=.15mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, colbacktitle=quarto-callout-note-color!10!white, left=2mm, bottomtitle=1mm, arc=.35mm, opacityback=0, titlerule=0mm, bottomrule=.15mm, rightrule=.15mm]
 
 \RL{למרות פשטותם, מנומטרים משמשים עד היום במעבדות, בבדיקות כיול ובמערכות
 בקרה, בזכות רמת הדיוק הגבוהה והיכולת לספק מדידה ישירה וברורה של לחץ

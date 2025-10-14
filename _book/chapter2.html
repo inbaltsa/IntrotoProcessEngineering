@@ -132,6 +132,9 @@ window.Quarto = {
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">מבוא להנדסת תהליכים</a> 
+        <div class="sidebar-tools-main">
+    <a href="./index.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -199,7 +202,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#הומגניות-של-משוואות-ומספרים-חסרי-מימד" id="toc-הומגניות-של-משוואות-ומספרים-חסרי-מימד" class="nav-link" data-scroll-target="#הומגניות-של-משוואות-ומספרים-חסרי-מימד"><span class="header-section-number">4.4</span> <span dir="rtl">הומגניות של משוואות ומספרים חסרי מימד</span></a>
   <ul class="collapse">
-  <li><a href="#הומוגניות-של-משוואות-dimensional-homogeneity" id="toc-הומוגניות-של-משוואות-dimensional-homogeneity" class="nav-link" data-scroll-target="#הומוגניות-של-משוואות-dimensional-homogeneity"><span class="header-section-number">4.4.1</span> <span dir="rtl">הומוגניות של משוואות (</span>Dimensional Homogeneity<span dir="rtl">)</span></a></li>
+  <li><a href="#הומוגניות-של-משוואותdimensional-homogeneity" id="toc-הומוגניות-של-משוואותdimensional-homogeneity" class="nav-link" data-scroll-target="#הומוגניות-של-משוואותdimensional-homogeneity"><span class="header-section-number">4.4.1</span> <span dir="rtl">הומוגניות של משוואות</span>Dimensional Homogeneity<span dir="rtl"></span></a></li>
   <li><a href="#מספרים-חסרי-מימד" id="toc-מספרים-חסרי-מימד" class="nav-link" data-scroll-target="#מספרים-חסרי-מימד"><span class="header-section-number">4.4.2</span> <span dir="rtl">מספרים חסרי מימד</span></a></li>
   <li><a href="#סיכום-הומוגניות-של-משוואות-ומספרים-חסרי-מימד" id="toc-סיכום-הומוגניות-של-משוואות-ומספרים-חסרי-מימד" class="nav-link" data-scroll-target="#סיכום-הומוגניות-של-משוואות-ומספרים-חסרי-מימד"><span class="header-section-number">4.4.3</span> <span dir="rtl">סיכום: הומוגניות של משוואות ומספרים חסרי מימד</span></a></li>
   </ul></li>
@@ -311,20 +314,10 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span dir="rtl"><strong>המימד</strong> עונה על השאלה <em>מה אנחנו מודדים</em></span> – <span dir="rtl">אורך, זמן, מסה, טמפרטורה</span>.</p>
-</div>
-</div></li>
-<li><div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-הערה
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span dir="rtl"><strong>היחידה</strong> עונה על השאלה מהו הגודל המוסכם אליו אנו משווים -</span> <span dir="rtl">מטרים, שניות, קילוגרמים, מעלות צלזיוס</span>.</p>
+<ul>
+<li><span dir="rtl"><strong>המימד</strong> עונה על השאלה <em>מה אנחנו מודדים</em></span> – <span dir="rtl">אורך, זמן, מסה, טמפרטורה</span>.</li>
+<li><span dir="rtl"><strong>היחידה</strong> עונה על השאלה מהו הגודל המוסכם אליו אנו משווים -</span> <span dir="rtl">מטרים, שניות, קילוגרמים, מעלות צלזיוס</span>.</li>
+</ul>
 </div>
 </div></li>
 </ul>
@@ -346,88 +339,28 @@ window.Quarto = {
 <p><span dir="rtl">הצורך ביחידות מוסכמות אינו נובע רק מהיסטוריה של בלבול או נוחות, אלא מכך שאין כל משמעות פיזיקלית לחיבור בין גדלים מימדים שונים</span>. <span dir="rtl">אי אפשר לחבר שלושה מטרים לחמש שניות, משום שמדובר בגדלים השייכים לקטגוריות שונות לגמרי. כמו כן, כאשר עובדים עם אותו מימד אפשר לבצע חיבור והשוואה – אך ורק אם כל הערכים מבוטאים באותה יחידה. אם הערכים נתונים ביחידות שונות, למשל מטרים וסנטימטרים, תחילה נמיר את כולם ליחידה אחידה ורק אז נוכל לחבר או להשוות ביניהם. רק כאשר כל הגדלים באותו ממד ובאותה יחידה, ניתן לבצע פעולות של חיבור, חיסור והשוואה בין ערכים.</span></p>
 <p><span dir="rtl">מצד שני, בעוד שחיבור וחיסור אפשריים רק כאשר מדובר באותו ממד ובאותה יחידה (או לאחר המרה ליחידה אחידה), הרי שבכפל ובחילוק היחידות מתנהגות ממש כמו גורמים אלגבריים: ניתן להכפיל אותן, לחלק אותן ואף לצמצם ביניהן</span>. <span dir="rtl">בצורה זו אנו יכולים לעבור בין יחידות שונות באותו מימד, ואף ליצור יחידות חדשות המייצגות גדלים פיזיקליים חדשים.</span></p>
 <p><span dir="rtl">במילים פשוטות</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-עצה
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span dir="rtl">אי אפשר לחבר גדלים ממימדים שונים:</span> <span class="math inline">\(1\text{ }m + 3\text{ }L = \text{undefined}\)</span>❌</p>
-</div>
-</div></li>
-<li><div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-עצה
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span dir="rtl">אפשר לחבר רק כשיש אותו מימד ואותה יחידה:</span> <span class="math inline">\(10\text{ }cm + 5\text{ }cm = 15\text{ }cm\)</span>✅</p>
-</div>
-</div></li>
-<li><div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-עצה
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span dir="rtl">אם היחידות שונות – חייבים להמיר:</span> <span class="math inline">\(10\text{ }m + 20\text{ }ft = ?\)</span><span dir="rtl">← המרה ליחידה אחידה</span></p>
-</div>
-</div></li>
-<li><div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-עצה
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span dir="rtl">בכפל ובחילוק היחידות מתנהגות כמו ביטוי אלגברי:</span></p>
-</div>
-</div>
+<li><span dir="rtl">אי אפשר לחבר גדלים ממימדים שונים:</span> <span class="math inline">\(1\text{ }m + 3\text{ }L = \text{undefined}\)</span>❌</li>
+<li><span dir="rtl">אפשר לחבר רק כשיש אותו מימד ואותה יחידה:</span> <span class="math inline">\(10\text{ }cm + 5\text{ }cm = 15\text{ }cm\)</span>✅</li>
+<li><span dir="rtl">אם היחידות שונות – חייבים להמיר:</span> <span class="math inline">\(10\text{ }m + 20\text{ }ft = ?\)</span><span dir="rtl">← המרה ליחידה אחידה</span></li>
+<li><span dir="rtl">בכפל ובחילוק היחידות מתנהגות כמו ביטוי אלגברי:</span>
 <ul>
-<li><div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-עצה
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span dir="rtl">ניתן להכפיל, לחלק ולצמצם יחידות</span> <span dir="rtl">באותו המימד</span></p>
-</div>
-</div></li>
-<li><div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-עצה
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span dir="rtl">יצירת יחידות נגזרות (כוח, אנרגיה, לחץ).</span></p>
-</div>
-</div></li>
+<li><span dir="rtl">ניתן להכפיל, לחלק ולצמצם יחידות</span> <span dir="rtl">באותו המימד</span></li>
+<li><span dir="rtl">בצורה זו ניתן להגדיר יחידות נגזרות (כוח, אנרגיה, לחץ).</span></li>
 </ul></li>
 </ul>
+</div>
+</div>
 <p><span dir="rtl">המהירות מוגדרת על ידי חלוקת המרחק בזמן ולכן</span></p>
 <p><span class="math display">\[\frac{30km}{3h} = 10\frac{km}{h}\]</span></p>
 <p><span dir="rtl">אלו הן יחידות נגזרות, ואנו נדון בהן בהרחבה בהמשך הפרק.</span></p>
@@ -451,31 +384,10 @@ Figure <span dir="rtl">2 - גדלים לצורך העברת יחידות. הטב
 </figcaption>
 </figure>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">השתמשו בטבלה על מנת להגדיר את פקטורי המעבר הבאים</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">א. ליטר לגלון (</span>L-&gt;gal<span dir="rtl">)</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">ב. מטר לפיט (</span>m-&gt;ft<span dir="rtl">)</span></p>
+<p><span dir="rtl">השתמשו בטבלה על מנת להגדיר את פקטורי המעבר הבאים</span> 1. <span dir="rtl">ליטר לגלון (</span>L-&gt;gal<span dir="rtl">)</span> 2. <span dir="rtl">מטר לפיט (</span>m-&gt;ft<span dir="rtl">)</span></p>
 </div>
 <div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span dir="rtl">כעת נוכל להשתמש בפקטור המעבר על מנת לפתור את המשוואה</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span class="math display">\[10m + 20ft = ?\]</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span dir="rtl">לצורך כך נמצא את פקטור המעבר בין מטר לפיט. על פי הטבלה</span> 1m=3.28ft <span dir="rtl">ולכן נוכל להגדיר את פקטורי המעבר</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span class="math display">\[\frac{1m}{3.28ft}\ \ \ \ \ או\ \ \ \frac{3.28ft}{1m}\]</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span dir="rtl">וכך נוכל לחשב</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span class="math display">\[20ft\  \times \frac{1m}{3.028ft} = 6.1m\]</span></p>
+<p><span dir="rtl">כעת נוכל להשתמש בפקטור המעבר על מנת לפתור את המשוואה</span> <span class="math display">\[10m + 20ft = ?\]</span> <span dir="rtl">לצורך כך נמצא את פקטור המעבר בין מטר לפיט. על פי הטבלה</span> 1m=3.28ft <span dir="rtl">ולכן נוכל להגדיר את פקטורי המעבר</span> :<span class="math display">\[\frac{1m}{3.28ft}\ \ \ \ \ או\ \ \ \frac{3.28ft}{1m}\]</span> <span dir="rtl">וכך נוכל לחשב</span> <span class="math display">\[20ft\  \times \frac{1m}{3.028ft} = 6.1m\]</span></p>
 </div>
 <p><span dir="rtl">שימו לב שניתן לצמצם את היחידות הישנות כך שאנו נשארים רק עם היחידות החדשות.</span></p>
 <p><span dir="rtl">בתחום שלנו נהוג לכתוב מעבר זה באמצעות שימוש <strong>בסרגל מעבר יחידות</strong> הנראה כך</span></p>
@@ -562,55 +474,18 @@ Figure <span dir="rtl">2 - גדלים לצורך העברת יחידות. הטב
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p><span dir="rtl">משאית נסעה מרחק של</span> 25mile <span dir="rtl">במשך 20 דקות. מהי המהירות של המשאית במטר לשנייה?</span></p>
 </div>
-<table class="caption-top" style="width:97%;">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 15%">
-<col style="width: 11%">
-<col style="width: 19%">
-</colgroup>
-<thead>
-<tr class="header">
-<th rowspan="2"><div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span class="math display">\[=\]</span></p>
-</div></th>
-<th></th>
-<th></th>
-<th><div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span class="math display">\[25\ mile\]</span></p>
-</div></th>
-</tr>
-<tr class="even">
-<th></th>
-<th></th>
-<th><span class="math display">\[20\ min\]</span></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 </section>
 <section id="סיכום" class="level3" data-number="4.2.4">
 <h3 data-number="4.2.4" class="anchored" data-anchor-id="סיכום"><span class="header-section-number">4.2.4</span> <span dir="rtl">סיכום</span></h3>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">בפרק זה הכרנו את המושגים הבסיסיים של עולם המדידה:</span></p>
-</div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>מדידה</strong> (</span>measurement<span dir="rtl">) היא פעולה של השוואת גודל ליחידת מידה מוסכמת.</span></p>
-</div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>מידה</strong> (</span>quantity<span dir="rtl">) היא תכונה פיסיקלית אותה ניתן לכמת.</span></p>
-</div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>מימד</strong> (</span>dimention<span dir="rtl">) הוא סוג הגודל (אורך, מסה, זמן...).</span></p>
-</div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>יחידה</strong> (</span>unit<span dir="rtl">) היא קנה המידה (מטר, קילוגרם, שנייה).</span></p>
-</div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>פקטור מעבר</strong> (</span>conversion factor<span dir="rtl">) הוא יחס בין שתי יחידות השייכות לאותו המימד ומייצגות את אותה הכמות</span></p>
-</div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<ul>
+<li><p><span dir="rtl"><strong>מדידה</strong> (</span>measurement<span dir="rtl">) היא פעולה של השוואת גודל ליחידת מידה מוסכמת.</span></p></li>
+<li><p><span dir="rtl"><strong>מידה</strong> (</span>quantity<span dir="rtl">) היא תכונה פיסיקלית אותה ניתן לכמת.</span></p></li>
+<li><p><span dir="rtl"><strong>מימד</strong> (</span>dimention<span dir="rtl">) הוא סוג הגודל (אורך, מסה, זמן...).</span></p></li>
+<li><p><span dir="rtl"><strong>יחידה</strong> (</span>unit<span dir="rtl">) היא קנה המידה (מטר, קילוגרם, שנייה).</span></p></li>
+<li><p><span dir="rtl"><strong>פקטור מעבר</strong> (</span>conversion factor<span dir="rtl">) הוא יחס בין שתי יחידות השייכות לאותו המימד ומייצגות את אותה הכמות</span></p></li>
+</ul>
 <p><span dir="rtl">בנוסף למדנו גם כיצד לבצע המרות באמצעות <strong>סרגל היחידות</strong> (</span>simple dimensional analysis<span dir="rtl">). שיטה זו מבטיחה עבודה עקבית עם היחידות, מונעת טעויות נפוצות ומסייעת להבין מצבים חדשים ולא מוכרים.</span></p>
 </div>
 </section>
@@ -734,10 +609,7 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 </figcaption>
 </figure>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">השלימו באמצעות טבלת הקידומות</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span class="math display">\[\begin{matrix}
+<p><span dir="rtl">השלימו באמצעות טבלת הקידומות</span> <span class="math display">\[\begin{matrix}
 \mathbf{1}\mathbf{Mg} &amp; = &amp; \_\_\_\_\_\_\_\_\_\_\mathbf{g}\_\_ \\
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_ &amp; = &amp; \mathbf{1.5*1}\mathbf{0}^{\mathbf{- 6}}\mathbf{s} \\
 \mathbf{1}\mathbf{nm} &amp; &amp; \_\_\_\_\_\_\_\_\_\_\_\_\_\mathbf{m}
@@ -883,10 +755,7 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 </tbody>
 </table>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">מה פקטור המעבר בין</span> dyne <span dir="rtl">ל-</span>N<span dir="rtl">? חשבו באמצעות יחידות הבסיס.</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">(רמז- התחילו בביטוי ביחידות הבסיס של אחד מהם, והשתמשו במעברי יחידות על מנת להמיר אותן כך שיתאימו ליחידות הבסיס של השני)</span></p>
+<p><span dir="rtl">מה פקטור המעבר בין</span> dyne <span dir="rtl">ל-</span>N<span dir="rtl">? חשבו באמצעות יחידות הבסיס.</span> <span dir="rtl">(רמז- התחילו בביטוי ביחידות הבסיס של אחד מהם, והשתמשו במעברי יחידות על מנת להמיר אותן כך שיתאימו ליחידות הבסיס של השני)</span></p>
 </div>
 </section>
 <section id="כוח-ומשקל" class="level3" data-number="4.3.4">
@@ -909,70 +778,37 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 </section>
 <section id="סיכום-מערכות-יחידות" class="level3" data-number="4.3.5">
 <h3 data-number="4.3.5" class="anchored" data-anchor-id="סיכום-מערכות-יחידות"><span class="header-section-number">4.3.5</span> <span dir="rtl">סיכום – מערכות יחידות</span></h3>
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <ul>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl">חישובים פיזיקליים והנדסיים מחייבים שימוש במערכת יחידות עקבית. <strong>מערכת יחידות</strong> מוגדרת כאוסף מוסכם של יחידות בסיס, יחידות נגזרות וכללי המרה ביניהן, שמאפשר לבצע מדידות והשוואות באופן אחיד.</span></p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><u>בעולם קיימות שלוש מערכות עיקריות:</u></span></p>
-</div>
+<li><span dir="rtl">חישובים פיזיקליים והנדסיים מחייבים שימוש במערכת יחידות עקבית. <strong>מערכת יחידות</strong> מוגדרת כאוסף מוסכם של יחידות בסיס, יחידות נגזרות וכללי המרה ביניהן, שמאפשר לבצע מדידות והשוואות באופן אחיד.</span></li>
+<li><span dir="rtl"><u>בעולם קיימות שלוש מערכות עיקריות:</u></span>
 <ul>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><strong>SI <span dir="rtl">-</span></strong><span dir="rtl">המערכת הבינלאומית, המבוססת על מטר, קילוגרם ושנייה.</span></p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><strong>CGS <span dir="rtl">-</span></strong><span dir="rtl">דומה ל</span>SI <span dir="rtl">אך מבוססת על סנטימטר, גרם ושנייה.</span></p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><strong>AES / U.S. customary <span dir="rtl">-</span></strong> <span dir="rtl">יחידות הבסיס הן רגל</span> <span class="math inline">\((ft)\)</span><span dir="rtl">, פאונד-מסה</span> <span class="math inline">\((lbm)\ \)</span><span dir="rtl">ושנייה (</span>s<span dir="rtl">).</span></p>
-</div></li>
+<li><strong>SI <span dir="rtl">-</span></strong><span dir="rtl">המערכת הבינלאומית, המבוססת על מטר, קילוגרם ושנייה.</span></li>
+<li><strong>CGS <span dir="rtl">-</span></strong><span dir="rtl">דומה ל</span>SI <span dir="rtl">אך מבוססת על סנטימטר, גרם ושנייה.</span></li>
+<li><strong>AES / U.S. customary <span dir="rtl">-</span></strong> <span dir="rtl">יחידות הבסיס הן רגל</span> <span class="math inline">\((ft)\)</span><span dir="rtl">, פאונד-מסה</span> <span class="math inline">\((lbm)\ \)</span><span dir="rtl">ושנייה (</span>s<span dir="rtl">).</span></li>
 </ul></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><u>בכל מערכת יש שלושה סוגים של יחידות</u></span></p>
-</div>
+<li><span dir="rtl"><u>בכל מערכת יש שלושה סוגים של יחידות</u></span>
 <ul>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>יחידות בסיסיות</strong> הן אבני היסוד של כל מערכת יחידות. קיימות 7 מידות בסיסיות כאשר במערכת ה</span>SI <span dir="rtl">מוגדרות: מטר (אורך), קילוגרם (מסה), שנייה (זמן), קלווין (טמפרטורה), מול (כמות חומר), אמפר (זרם חשמלי) וקנדלה (עוצמת אור). כל גודל פיזיקלי אחר ניתן להבעה כשילוב מתמטי של יחידות בסיס.</span></p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>יחידות מרובות</strong> הן שברים או מכפלות של יחידות בסיס, שנועדו לנוחות שימוש. כך, זמן נמדד לא רק בשניות אלא גם בדקות, שעות או שנים; מסות גדולות מתוארות בטונות ולא בקילוגרמים ובמערכת האמריקאית במיילים במקום ברגל למדידת מרחקים גדולים.</span></p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>יחידות נגזרות</strong>: מתקבלות משילוב מתמטי של יחידות בסיס – לדוגמא</span><br>
-<span dir="rtl">מהירות (</span><span class="math inline">\(m/s\)</span><span dir="rtl">), כוח (</span><span class="math inline">\(N = kg \cdot m/s^{2}\)</span><span dir="rtl">), אנרגיה (</span><span class="math inline">\(J = kg \cdot m^{2}/s^{2}\)</span><span dir="rtl">).</span></p>
-</div></li>
+<li><span dir="rtl"><strong>יחידות בסיסיות</strong> הן אבני היסוד של כל מערכת יחידות. קיימות 7 מידות בסיסיות כאשר במערכת ה</span>SI <span dir="rtl">מוגדרות: מטר (אורך), קילוגרם (מסה), שנייה (זמן), קלווין (טמפרטורה), מול (כמות חומר), אמפר (זרם חשמלי) וקנדלה (עוצמת אור). כל גודל פיזיקלי אחר ניתן להבעה כשילוב מתמטי של יחידות בסיס.</span></li>
+<li><span dir="rtl"><strong>יחידות מרובות</strong> הן שברים או מכפלות של יחידות בסיס, שנועדו לנוחות שימוש. כך, זמן נמדד לא רק בשניות אלא גם בדקות, שעות או שנים; מסות גדולות מתוארות בטונות ולא בקילוגרמים ובמערכת האמריקאית במיילים במקום ברגל למדידת מרחקים גדולים.</span></li>
+<li><span dir="rtl"><strong>יחידות נגזרות</strong>: מתקבלות משילוב מתמטי של יחידות בסיס – לדוגמא</span><br>
+<span dir="rtl">מהירות (</span><span class="math inline">\(m/s\)</span><span dir="rtl">), כוח (</span><span class="math inline">\(N = kg \cdot m/s^{2}\)</span><span dir="rtl">), אנרגיה (</span><span class="math inline">\(J = kg \cdot m^{2}/s^{2}\)</span><span dir="rtl">).</span></li>
 </ul></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>חשוב לזכור</strong>: ב-</span>SI <span dir="rtl">אין צורך בקבועי תיקון, אך ב</span> AES<span dir="rtl">, אנו משתמשים ב</span>g<sub>c</sub> <span dir="rtl">על מנת לשמור על עקביות בין</span> lb<sub>m</sub><span dir="rtl">ל –</span> lb<sub>f</sub><span dir="rtl">.</span></p>
-</div></li>
+<li><span dir="rtl"><strong>חשוב לזכור</strong>: ב-</span>SI <span dir="rtl">אין צורך בקבועי תיקון, אך ב</span> AES<span dir="rtl">, אנו משתמשים ב</span>g<sub>c</sub> <span dir="rtl">על מנת לשמור על עקביות בין</span> lb<sub>m</sub><span dir="rtl">ל –</span> lb<sub>f</sub><span dir="rtl">.</span></li>
 </ul>
+</div>
 </section>
 </section>
 <section id="הומגניות-של-משוואות-ומספרים-חסרי-מימד" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="הומגניות-של-משוואות-ומספרים-חסרי-מימד"><span class="header-section-number">4.4</span> <span dir="rtl">הומגניות של משוואות ומספרים חסרי מימד</span></h2>
-<section id="הומוגניות-של-משוואות-dimensional-homogeneity" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="הומוגניות-של-משוואות-dimensional-homogeneity"><span class="header-section-number">4.4.1</span> <span dir="rtl">הומוגניות של משוואות (</span>Dimensional Homogeneity<span dir="rtl">)</span></h3>
+<section id="הומוגניות-של-משוואותdimensional-homogeneity" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="הומוגניות-של-משוואותdimensional-homogeneity"><span class="header-section-number">4.4.1</span> <span dir="rtl">הומוגניות של משוואות</span>Dimensional Homogeneity<span dir="rtl"></span></h3>
 <p><span dir="rtl">לאורך הדיון ביחידות ובממדים ראינו שגדלים פיזיקליים ניתנים לחיבור או לחיסור <strong>רק כאשר היחידות שלהם זהות</strong></span>. <span dir="rtl">אם היחידות זהות, נובע מכך שגם <strong>המימדים</strong> של כל אחד מהאיברים חייבים להיות זהים. לדוגמה, אם שני גדלים ניתנים לביטוי ביחידות של גרם לשנייה</span> (<span class="math inline">\(g/s\)</span>), <span dir="rtl">הרי שלשניהם יש ממד של מסה לזמן</span> <span class="math inline">\((M/T)\)</span>. <span dir="rtl">מכאן נובע כלל חשוב</span>:</p>
 <div class="callout callout-note definition" title="הגדרה" data-collapse="false">
 <p><span dir="rtl">**כל משוואה פיזיקלית תקפה חייבת להיות הומוגנית ממדית**</span> – <span dir="rtl">כלומר, לכל האיברים הניתנים לחיבור בשני צדי המשוואה חייבים להיות אותם ממדים</span>.</p>
 </div>
 <div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span dir="rtl">במשוואה</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span class="math display">\[V = V_{0} + at\]</span> <span dir="rtl">ננתח את המימדים של כל אחד מהאיברים</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span class="math display">\[V,V_{o} \Longrightarrow \frac{אורך}{זמן} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack}\ \ \ \ \ \ a \Rightarrow \frac{אורך}{{זמן}^{2}} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack^{2}}\ \ \ \ \ t \Rightarrow זמן = \lbrack T\rbrack\]</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span dir="rtl">ונראה אילו מימדים כלל האיברים במשוואה</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span class="math display">\[V\frac{\lbrack L\rbrack}{\lbrack T\rbrack} = V_{0}\frac{\lbrack L\rbrack}{\lbrack T\rbrack} + a\frac{\lbrack L\rbrack}{\lbrack T\rbrack^{2}}t\lbrack T\rbrack\]</span></p>
-</div>
-<div class="callout callout-example example" title="דוגמה" data-collapse="false">
-<p><span dir="rtl">ניתן לראות שכל האיברים במשוואה מתכנסים ליחידות של אורך לזמן, ולכן המשוואה הומוגנית מימדית.</span></p>
+<p><span dir="rtl">במשוואה</span> <span class="math display">\[V = V_{0} + at\]</span> <span dir="rtl">ננתח את המימדים של כל אחד מהאיברים</span> <span class="math display">\[V,V_{o} \Longrightarrow \frac{אורך}{זמן} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack}\ \ \ \ \ \ a \Rightarrow \frac{אורך}{{זמן}^{2}} = \frac{\lbrack L\rbrack}{\lbrack T\rbrack^{2}}\ \ \ \ \ t \Rightarrow זמן = \lbrack T\rbrack\]</span> <span dir="rtl">ונראה אילו מימדים כלל האיברים במשוואה</span> <span class="math display">\[V\frac{\lbrack L\rbrack}{\lbrack T\rbrack} = V_{0}\frac{\lbrack L\rbrack}{\lbrack T\rbrack} + a\frac{\lbrack L\rbrack}{\lbrack T\rbrack^{2}}t\lbrack T\rbrack\]</span> <span dir="rtl">ניתן לראות שכל האיברים במשוואה מתכנסים ליחידות של אורך לזמן, ולכן המשוואה הומוגנית מימדית.</span></p>
 </div>
 <p><span dir="rtl">לעומת זאת, המשוואה</span></p>
 <p><span class="math display">\[V\frac{\lbrack L\rbrack}{\lbrack T\rbrack} = V_{0}\frac{\lbrack L\rbrack}{\lbrack T\rbrack} + t\lbrack T\rbrack\ \ \ \ \ \mathbf{}\]</span></p>
@@ -986,19 +822,12 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 <p><span dir="rtl">מתוך הומוגניות המשוואה ניתן להסיק את יחידות הקבוע</span> ** <span class="math display">\[P(Pa) = k(?)T(K)\ \  = &gt; k\left( \frac{Pa}{K} \right)\]</span></p>
 <p><span dir="rtl">ופיזיקלית, קיבלנו ערך המייצג את מידת השינוי בלחץ ביחידות של פסקל (</span>Pa<span dir="rtl">) לכל שינוי של מעלה אחת קלוין (</span>K<span dir="rtl">).</span></p>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">ידוע כי עבור מערכת מסויימת היחס בין הלחץ לטמפ' הוא</span> <span class="math inline">\(P(Pa) = 300*T(K)\)</span></p>
-</div>
-<ol type="1">
-<li><div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">מה הוא</span> k <span dir="rtl">– רשמו את הערך המלא, כולל יחידות.</span></p>
-</div></li>
-<li><div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">הסבירו באופן מילולי מה המשמעות של הקבוע – איזה שינוי מתואר במערכת?</span></p>
-</div></li>
-<li><div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">במקרים רבים נהוג למדוד את הלחץ ביחידות של אטמוספירה. ברצוננו לנסח את המשוואה כך שנקבל את התוצאה באטמוספירה באופן ישיר. מה יהיה ערכו הנומרי החדש של</span> k <span dir="rtl">במקרה זה? מה יהיו היחידות שלו?</span></p>
-</div></li>
+<p><span dir="rtl">ידוע כי עבור מערכת מסויימת היחס בין הלחץ לטמפ' הוא</span> <span class="math inline">\(P(Pa) = 300*T(K)\)</span> 1. <span dir="rtl">מה הוא</span> k <span dir="rtl">– רשמו את הערך המלא, כולל יחידות.</span></p>
+<ol start="2" type="1">
+<li><p><span dir="rtl">הסבירו באופן מילולי מה המשמעות של הקבוע – איזה שינוי מתואר במערכת?</span></p></li>
+<li><p><span dir="rtl">במקרים רבים נהוג למדוד את הלחץ ביחידות של אטמוספירה. ברצוננו לנסח את המשוואה כך שנקבל את התוצאה באטמוספירה באופן ישיר. מה יהיה ערכו הנומרי החדש של</span> k <span dir="rtl">במקרה זה? מה יהיו היחידות שלו?</span></p></li>
 </ol>
+</div>
 </section>
 <section id="מספרים-חסרי-מימד" class="level3" data-number="4.4.2">
 <h3 data-number="4.4.2" class="anchored" data-anchor-id="מספרים-חסרי-מימד"><span class="header-section-number">4.4.2</span> <span dir="rtl">מספרים חסרי מימד</span></h3>
@@ -1010,18 +839,11 @@ Figure <span dir="rtl">4 - קידומות מוכרים ליחידות, מתוך<
 <p><span class="math display">\[\frac{w}{w} = \frac{m(x)}{m(total)} = \frac{\lbrack M\rbrack}{\lbrack M\rbrack}\]</span></p>
 <p><span dir="rtl">היחידות מתבטלות, ולכן השבר המסתי הוא מספר חסר מימד</span>.</p>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">במעבדה לפיתוח משקאות אנרגיה עובדים שני צוותים במקביל, וכל אחד מהם הכין נוסחה שונה של משקה חדש. החומר הפעיל במשקה הוא קפאין (</span>A<span dir="rtl">) , והשאר הוא תמיסה מתוקה.</span>**** <span dir="rtl">הצוות הראשון מורכב ממדענים ומדעניות מישראל, בעוד הצוות שני מורכב ממדענים ומדעניות מארצות הברית.</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p><span dir="rtl">במעבדה לפיתוח משקאות אנרגיה עובדים שני צוותים במקביל, וכל אחד מהם הכין נוסחה שונה של משקה חדש. החומר הפעיל במשקה הוא קפאין (</span>A<span dir="rtl">) , והשאר הוא תמיסה מתוקה.</span>****</p>
+<p><span dir="rtl">הצוות הראשון מורכב ממדענים ומדעניות מישראל, בעוד הצוות שני מורכב ממדענים ומדעניות מארצות הברית.</span></p>
 <p><span dir="rtl">צוות 1 מדווח כי הוא מסת הקפאין במשקה שלו היא</span> <span class="math inline">\(10g\)</span><span dir="rtl">, על כל</span> <span class="math inline">\(350g\)</span> <span dir="rtl">של משקה</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p><span dir="rtl">צוות 2 מדווח כי הוא מסת הקפאין במשקה שלו היא</span> <span class="math inline">\(12\ lb_{m}\)</span><span dir="rtl">, על כל</span> <span class="math inline">\(600lb_{m}\)</span> <span dir="rtl">של משקה</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p><span dir="rtl">שני הצוותים טוענים שהמשקה שלהם "חזק יותר" – כלומר, שיש בו יותר קפאין באופן יחסי לתמיסה הכוללת.</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p><span dir="rtl"><strong>השאלה:</strong><br>
 בלי להמיר יחידות לק"ג או לפאונדים – מי צודק?<br>
 באיזה משקה יש אחוז גבוה יותר של קפאין?</span></p>
@@ -1048,29 +870,17 @@ Figure <span dir="rtl">5 - אפיון פרופילי זרימה באמצעות �
 </section>
 <section id="סיכום-הומוגניות-של-משוואות-ומספרים-חסרי-מימד" class="level3" data-number="4.4.3">
 <h3 data-number="4.4.3" class="anchored" data-anchor-id="סיכום-הומוגניות-של-משוואות-ומספרים-חסרי-מימד"><span class="header-section-number">4.4.3</span> <span dir="rtl">סיכום: הומוגניות של משוואות ומספרים חסרי מימד</span></h3>
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <ul>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>הומוגניות מימדית</strong> היא תנאי הכרחי לכל משוואה פיזיקלית תקפה – כל האיברים במשוואה חייבים להיות באותם מימדים</span>.</p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl">בדיקת הומוגניות מאפשרת לגלות טעויות נפוצות, לבדוק אם משוואה “פיזיקלית”, ולמצוא את היחידות של קבועים ניסיוניים</span>.</p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>ניתוח מימדי</strong> הוא כלי עוצמתי להסקת קשרים בין גדלים גם בלי לדעת את הנוסחה המלאה</span>.</p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl"><strong>מספרים חסרי מימד</strong> נוצרים מחלוקה של גדלים בעלי אותן יחידות – היחידות מתבטלות, והתוצאה היא גודל טהור</span>.</p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl">הם מאפשרים להשוות בין מערכות שונות, לבנות מודלים בקנה מידה מוקטן, ולתאר תופעות באופן כללי ואוניברסלי</span>.</p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl">דוגמאות נפוצות: מספר ריינולדס (זרימה), מספר פראוד (כובד), מספר נוסלט (מעבר חום)</span>.</p>
-</div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
-<p><span dir="rtl">בסופו של דבר, הבנה של הומוגניות ושל מספרים חסרי מימד היא <strong>בסיס להבנה פיזיקלית עמוקה ולחשיבה הנדסית נכונה</strong></span>.</p>
-</div></li>
+<li><span dir="rtl"><strong>הומוגניות מימדית</strong> היא תנאי הכרחי לכל משוואה פיזיקלית תקפה – כל האיברים במשוואה חייבים להיות באותם מימדים</span>.</li>
+<li><span dir="rtl">בדיקת הומוגניות מאפשרת לגלות טעויות נפוצות, לבדוק אם משוואה “פיזיקלית”, ולמצוא את היחידות של קבועים ניסיוניים</span>.</li>
+<li><span dir="rtl"><strong>ניתוח מימדי</strong> הוא כלי עוצמתי להסקת קשרים בין גדלים גם בלי לדעת את הנוסחה המלאה</span>.</li>
+<li><span dir="rtl"><strong>מספרים חסרי מימד</strong> נוצרים מחלוקה של גדלים בעלי אותן יחידות – היחידות מתבטלות, והתוצאה היא גודל טהור</span>.</li>
+<li><span dir="rtl">הם מאפשרים להשוות בין מערכות שונות, לבנות מודלים בקנה מידה מוקטן, ולתאר תופעות באופן כללי ואוניברסלי</span>.</li>
+<li><span dir="rtl">דוגמאות נפוצות: מספר ריינולדס (זרימה), מספר פראוד (כובד), מספר נוסלט (מעבר חום)</span>.</li>
+<li><span dir="rtl">בסופו של דבר, הבנה של הומוגניות ושל מספרים חסרי מימד היא <strong>בסיס להבנה פיזיקלית עמוקה ולחשיבה הנדסית נכונה</strong></span>.</li>
 </ul>
+</div>
 </section>
 </section>
 <section id="דיוק-הדירות-וספרות-משמעותיות" class="level2" data-number="4.5">
@@ -1210,21 +1020,13 @@ Figure <span dir="rtl">6 - דיוק והדירות</span>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p><span dir="rtl">תרגיל:<br>
 כמה ספרות משמעותיות יש בכל אחד מהמספרים הבאים?</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎0.0045‎</p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎205‎</p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎1.50 × 10³‎</p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎1500‎</p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎0.000300‎</p>
+<ul>
+<li><p>‎0.0045‎</p></li>
+<li><p>‎205‎</p></li>
+<li><p>‎1.50 × 10³‎</p></li>
+<li><p>‎1500‎</p></li>
+<li><p>‎0.000300‎</p></li>
+</ul>
 </div>
 <p><span dir="rtl">כאשר אנו מבצעים חישובים המבוססים על נתונים מדודים, עלינו לזכור שכל אחד מהנתונים כולל רמת דיוק מוגבלת</span>. <span dir="rtl">אין טעם להציג תוצאה ארוכה ומדויקת יותר מהמידע שנמדד בפועל – זו תהיה <strong>אשליה של דיוק שאינו קיים</strong></span>. <span dir="rtl">לכן נקבעו כללים ברורים כיצד לקבוע כמה ספרות משמעותיות מותר לשמור בתוצאה של חישוב</span>.</p>
 <ol type="1">
@@ -1259,25 +1061,7 @@ Figure <span dir="rtl">6 - דיוק והדירות</span>
 <li><p><span dir="rtl">חישובים ארוכים מומלץ <strong>לא לעגל בכל שלב</strong></span>, <span dir="rtl">אלא לשמור ערכים ארוכים יותר לאורך הדרך ולעגל רק בסוף</span>. <span dir="rtl">כך נמנע מהצטברות של שגיאות עיגול ביניים</span>.</p></li>
 </ul>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p><span dir="rtl">כתבו כל תוצאה ברמת הדיוק המתאימה.</span></p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎2.3 × 1.245 = ?‎</p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎45.2 ÷ 1.2 = ?‎</p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>0.056 <span dir="rtl">× 3.12 = ?</span>‎</p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎45.2 + 1.35 = ?‎</p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎2.06 – 0.142 = ?‎</p>
-</div>
-<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
-<p>‎0.230 + 1.2 <span dir="rtl">= ?</span></p>
+<p><span dir="rtl">כתבו כל תוצאה ברמת הדיוק המתאימה.</span> - ‎2.3 × 1.245 = ?‎ - ‎45.2 ÷ 1.2 = ?‎ - ‎0.056 [× 3.12 = ?]‎ - ‎45.2 + 1.35 = ?‎ - ‎2.06 – 0.142 = ?‎ - ‎0.230 + 1.2 <span dir="rtl">= ?</span></p>
 </div>
 </section>
 <section id="כתיבה-מדעית-של-מספרים-scientific-notation" class="level3" data-number="8.0.1">
@@ -1393,34 +1177,34 @@ Figure <span dir="rtl">6 - דיוק והדירות</span>
 </section>
 <section id="לסיכום" class="level3" data-number="8.0.2">
 <h3 data-number="8.0.2" class="anchored" data-anchor-id="לסיכום"><span class="header-section-number">8.0.2</span> <span dir="rtl">לסיכום</span></h3>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">כל מדידה כוללת <strong>אי-ודאות</strong>, ולכן הספרות בתוצאה מייצגות את <strong>רמת הדיוק</strong> של המדידה.</span></p>
 </div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">הספרות המשמעותיות הן כל הספרות <strong>שאנחנו בטוחים בהן</strong>, ועוד אחת <strong>מוערכת</strong> לפי יכולת המכשיר.</span></p>
 </div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">כדי לזהות ספרות משמעותיות:</span></p>
 </div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">כל ספרה שאינה אפס – משמעותית.</span></p>
 </div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">אפסים עשויים להיות משמעותיים או לא – תלוי במיקומם ובנקודה העשרונית.</span></p>
 </div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">בחישובים:</span></p>
 </div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl"><strong>כפל/חילוק</strong> – שמרו את מספר הספרות המשמעותיות של <strong>הנתון הפחות מדויק</strong>.</span></p>
 </div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl"><strong>חיבור/חיסור</strong> – שמרו את רמת הדיוק (המיקום העשרוני) של <strong>הנתון הפחות מדויק</strong>.</span></p>
 </div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">המטרה<strong>: להציג תוצאה אמינה</strong> – לא מדויקת מדי, ולא גסה מדי</span></p>
 </div>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">כדי להימנע משורה של אפסים, נשתמש ב-<strong>כתיבה מדעית</strong>:</span> <span class="math inline">\(a \times 10^{n}\)</span> <span dir="rtl">כאשר</span> <span class="math inline">\(a\)</span> <span dir="rtl">הוא מספר בין 1 ל-10, ו-</span><span class="math inline">\(n\)</span> <span dir="rtl">הוא מעריך שלם.</span></p>
 </div>
 </section>
@@ -1687,27 +1471,27 @@ Figure <span dir="rtl">15השוואה בין גרף ליניארי, סמי-לו�
 </section>
 <section id="סיכום-1" class="level3" data-number="8.1.10">
 <h3 data-number="8.1.10" class="anchored" data-anchor-id="סיכום-1"><span class="header-section-number">8.1.10</span> <span dir="rtl">סיכום</span></h3>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">בעבודה הנדסית וניסויית, אנו כמעט תמיד נדרשים להסיק מסקנות מתוך מדידות חלקיות</span>. <span dir="rtl">האתגר הוא לייצג את הנתונים בדרך שתאפשר לנבא ערכים חדשים ולבדוק אם הם סבירים מבחינה פיזיקלית</span>. <span dir="rtl">לשם כך עומדים לרשותנו כלים ברמות שונות של מורכבות</span>:</p>
 </div>
 <ul>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<li><div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">אינטרפולציה מקומית מאפשרת להעריך ערכים <em>בין</em> שתי נקודות סמוכות</span>.</p>
 </div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<li><div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">התאמת קו ישר יוצרת מודל פשוט שמתאר את המגמה הכללית של נתונים אשר נראים לינאריים באופן יחסי.</span></p>
 </div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<li><div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">רגרסיה ליניארית מחשבת קו מייצג סטטיסטי כאשר קיימות סטיות ורעש מדידה</span>.</p>
 </div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<li><div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">התאמת עקומה לא ליניארית מרחיבה את הגישה למקרים שבהם הקשר בין המשתנים עוקב אחרי פונקציה מורכבת יותר</span>.</p>
 </div></li>
-<li><div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<li><div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">לינאריזציה וגרפים לוגיים מאפשרים להפוך קשרים לא ליניאריים לייצוגים ישרים שקל לנתח בעין ובחישוב</span>.</p>
 </div></li>
 </ul>
-<div class="callout callout-important summary" data-custom-style="summary" title="סיכום" data-collapse="false">
+<div class="callout-important" data-custom-style="summary" title="סיכום" data-collapse="false">
 <p><span dir="rtl">בין אם מדובר בקו פשוט או בעקומה מורכבת, המטרה המשותפת היא אחת</span> – <span dir="rtl">למצוא תיאור מתמטי אמין של הנתונים ולבחון עד כמה הוא מייצג את המציאות</span>. <span dir="rtl">גם בעידן שבו תוכנות מבצעות עבורנו את כל ההתאמות בלחיצת כפתור, חשוב להבין את העקרונות מאחורי השיטות: רק כך נוכל להעריך את אמינות התוצאות, לזהות מתי חיזוי הוא סביר ומתי מדובר באקסטרפולציה מסוכנת, ולשלב בין ניתוח מתמטי לבין שיקול הנדסי ופיזיקלי נכון</span>.</p>
 </div>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
