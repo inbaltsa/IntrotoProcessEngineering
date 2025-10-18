@@ -128,3 +128,69 @@ figure.quarto-figure figcaption,
   text-align: center;
   vertical-align: middle;
 }
+
+/* === עיצוב עמוד הפתיחה === */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2b3e50;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.page-logo {
+  display: block;
+  margin: 2rem auto;
+  width: 180px;
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.1));
+}
+
+.page-description {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* === עיצוב סיידבר === */
+.sidebar {
+  background: linear-gradient(180deg, #fdfdfd 0%, #f4f8fb 100%);
+  border-left: 1px solid #ddd;
+  padding: 1.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+.sidebar .sidebar-header {
+  font-weight: 600;
+  color: #2b3e50;
+  margin-bottom: 1rem;
+}
+
+.sidebar nav a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.sidebar nav a:hover {
+  background-color: rgba(30, 144, 255, 0.15);
+  color: #1e90ff;
+}
+
+.sidebar nav a.active {
+  background-color: rgba(30, 144, 255, 0.3);
+  color: #000;
+  font-weight: 600;
+}
