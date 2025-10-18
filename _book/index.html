@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא להנדסת תהליכים</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="הצג/הסתר את סרגל הניווט" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="חפש" onclick="window.quartoOpenSearch();">
@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">מבוא להנדסת תהליכים</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -177,6 +177,26 @@ ul.task-list li input[type="checkbox"] {
 ד״ר רחל ליכטנשטיין, המחלקה להנדסת ביוטכנולוגיה על שם אברם וסטלה גולדשטיין־גורן<br> פרופ׳ רונית ביטון, המחלקה להנדסה כימית<br> היחידה לקידום איכות ההוראה והלמידה<br> אוניברסיטת בן־גוריון בנגב
 </p>
 </div>
+<!-- Hide Quarto's default title block + the current-page label in sidebar (cover page only) -->
+<style>
+/* 1) העלמת כותרת ברירת־מחדל של Quarto בעמוד הזה בלבד */
+header#title-block-header.quarto-title-block { 
+  display: none !important; 
+  visibility: hidden !important;
+  margin: 0 !important; 
+  padding: 0 !important; 
+  height: 0 !important; 
+}
+
+/* 2) העלמת התווית "index.html 1" בחלונית הימנית בעמוד השער */
+#quarto-sidebar .sidebar-title { 
+  display: none !important; 
+}
+/* וגם מחיקת המספר ליד הפרק ברשימה (בעמוד השער בלבד, כי הסגנון מוטמע בדף הזה) */
+#quarto-sidebar .chapter-number { 
+  display: none !important; 
+}
+</style>
 
 
 

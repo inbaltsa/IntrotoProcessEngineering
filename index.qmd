@@ -1,5 +1,5 @@
 ---
-title: ""                # לא מציג כותרת ברירת מחדל
+title: "מבוא להנדסת תהליכים"
 author: ""               # לא מציג מחבר ברירת מחדל
 title-meta: "מבוא להנדסת תהליכים"
 author-meta: "ענבל צרפתי-ברעד"
@@ -27,3 +27,24 @@ title-block-style: none
   אוניברסיטת בן־גוריון בנגב
   </p>
 </div>
+
+<!-- Hide Quarto's default title block + the current-page label in sidebar (cover page only) -->
+<style>
+/* 1) העלמת כותרת ברירת־מחדל של Quarto בעמוד הזה בלבד */
+header#title-block-header.quarto-title-block { 
+  display: none !important; 
+  visibility: hidden !important;
+  margin: 0 !important; 
+  padding: 0 !important; 
+  height: 0 !important; 
+}
+
+/* 2) העלמת התווית "index.html 1" בחלונית הימנית בעמוד השער */
+#quarto-sidebar .sidebar-title { 
+  display: none !important; 
+}
+/* וגם מחיקת המספר ליד הפרק ברשימה (בעמוד השער בלבד, כי הסגנון מוטמע בדף הזה) */
+#quarto-sidebar .chapter-number { 
+  display: none !important; 
+}
+</style>
