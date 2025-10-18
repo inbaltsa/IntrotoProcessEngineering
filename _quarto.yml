@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "מבוא להנדסת תהליכים"
+  title: "<div class='sidebar-title'>מבוא להנדסת תהליכים</div>"
   author: "ענבל צרפתי-ברעד"
   chapters:
     - index.qmd
@@ -27,10 +27,12 @@ format:
     css:
       - assets/styles.css
       - assets/rtl-baseline.css
+      - assets/site-enhance.css
     include-after-body:
       - assets/auto-env-titles.html
       - assets/chapter-numbering.html
       - assets/env-autocallouts.js
+      - assets/univ-footer.html
 #  pdf:
  #   pdf-engine: xelatex         # חשוב לעברית
   #  mainfont: "Arial" # או "Arial" אם מעדיפה
