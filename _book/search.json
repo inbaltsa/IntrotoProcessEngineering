@@ -218,5 +218,55 @@
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>[פרק 3-- תהליכים ומשתני תהליך]{dir=\"rtl\"}</span>"
     ]
+  },
+  {
+    "objectID": "chapter4.html",
+    "href": "chapter4.html",
+    "title": "5  עקרונות מאזני מסה",
+    "section": "",
+    "text": "בבנייה - - -",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>עקרונות מאזני מסה</span>"
+    ]
+  },
+  {
+    "objectID": "chapter5.html",
+    "href": "chapter5.html",
+    "title": "6  מערכות חד פאזיות",
+    "section": "",
+    "text": "בבנייה - - -",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>מערכות חד פאזיות</span>"
+    ]
+  },
+  {
+    "objectID": "Bibliography.html",
+    "href": "Bibliography.html",
+    "title": "7  ביבליוגרפיה",
+    "section": "",
+    "text": "7.1 ספרי קורס\n- Felder, R.M., Rousseau, R.W., & Bullard, L.G. (2016). Elementary Principles of Chemical Processes (4th ed., Global Edition). Wiley.  גרסה דיגיטלית זמינה לשימוש. ניתן להיעזר גם במהדורות קודמות – עותקים זמינים בספריית האוניברסיטה.\n- Himmelblau, D.M. (2012). Basic Principles and Calculations in Chemical Engineering. Prentice Hall. \nמומלץ לעיון נוסף. עותקים זמינים בספרייה.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>ביבליוגרפיה</span>"
+    ]
+  },
+  {
+    "objectID": "Bibliography.html#חומרי-הוראה-משלימים",
+    "href": "Bibliography.html#חומרי-הוראה-משלימים",
+    "title": "7  ביבליוגרפיה",
+    "section": "7.2 חומרי הוראה משלימים",
+    "text": "7.2 חומרי הוראה משלימים\n\nחומרי הוראה של ד”ר רחל ליכטנשטיין\n\nחומרי הוראה של פרופ’ רונית ביטון",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>ביבליוגרפיה</span>"
+    ]
+  },
+  {
+    "objectID": "Bibliography.html#מקורות-תמונות-ואיורים",
+    "href": "Bibliography.html#מקורות-תמונות-ואיורים",
+    "title": "7  ביבליוגרפיה",
+    "section": "7.3 מקורות תמונות ואיורים",
+    "text": "7.3 מקורות תמונות ואיורים\n\nספרי הלימוד לעיל\n\nWikipedia – שימוש בתמונות תחת רישיון Creative Commons עם קרדיט מתאים\n\nFreepik – שימוש בתמונות ובאיורים תחת רישיון Premium (מנוי פעיל בתשלום)\n\nFreepik AI Generator – תמונות מקוריות שנוצרו באמצעות כלים מבוססי בינה מלאכותית של Freepik במסגרת מנוי Premium",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>ביבליוגרפיה</span>"
+    ]
   }
 ]

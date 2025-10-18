@@ -7,6 +7,7 @@ page-layout: full
 toc: false
 page-classes: cover-page
 title-block-style: none
+number-sections: false
 ---
 
 <img src="assets/logo.png" class="page-logo">

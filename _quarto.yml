@@ -10,6 +10,9 @@ book:
     - chapter1.qmd
     - chapter2.qmd
     - chapter3.qmd  
+    - chapter4.qmd  
+    - chapter5.qmd  
+    - Bibliography.qmd
 
 #  downloads: [pdf]        # כפתור הורדת PDF
   output-file: "index"    # שם קובץ ה-PDF/HTML העיקרי
