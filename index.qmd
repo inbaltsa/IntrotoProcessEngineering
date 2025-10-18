@@ -1,19 +1,8 @@
----
-title: "מבוא להנדסת תהליכים"
-author: ""               # לא מציג מחבר ברירת מחדל
-title-meta: "מבוא להנדסת תהליכים"
-author-meta: "ענבל צרפתי-ברעד"
-page-layout: full
-toc: false
-page-classes: cover-page
-title-block-style: none
-number-sections: false
----
+
+# מבוא להנדסת תהליכים {.unnumbered .page-title}
+## ענבל צרפתי-ברעד {.unnumbered .page-subtitle}
 
 <img src="assets/logo.png" class="page-logo">
-
-<h1 class="page-title">מבוא להנדסת תהליכים</h1>
-<h2 class="page-subtitle">ענבל צרפתי-ברעד</h2>
 
 <p class="page-description">
 מיועד לסטודנטים וסטודנטיות בתחילת דרכם בלימודי הנדסת תהליכים
