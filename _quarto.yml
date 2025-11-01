@@ -46,6 +46,9 @@ format:
 # RTL + עברית
 lang: he
 
+website:
+  google-analytics: "G-BCB5KL9VEP"
+  
 # פילטרים ל-HTML
 filters:
   - assets/env-to-callout.lua
