@@ -543,9 +543,11 @@ document.addEventListener("DOMContentLoaded", () =&gt; {
 
 
 
-  // למצוא את כל ה-callouts המתקפלים (פתרונות/עצות וכו')
+  // למצוא את כל ה-callouts בעמוד
 
   const callouts = document.querySelectorAll(".callout");
+
+  console.log("found callouts:", callouts.length);
 
 
 
@@ -561,8 +563,6 @@ document.addEventListener("DOMContentLoaded", () =&gt; {
 
 
 
-    // מאזין ללחיצה על כותרת ה-callout (כדי לא לתפוס כל קליק בתוך התיבה)
-
     const header = block.querySelector(".callout-header") || block;
 
 
@@ -574,8 +574,6 @@ document.addEventListener("DOMContentLoaded", () =&gt; {
       console.log("Solution opened:", id);
 
 
-
-      // אם GA קיים - שולחים event
 
       if (window.gtag) {
 
@@ -592,7 +590,6 @@ document.addEventListener("DOMContentLoaded", () =&gt; {
   });
 
 });
-
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
