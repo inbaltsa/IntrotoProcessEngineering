@@ -539,25 +539,51 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 document.addEventListener("DOMContentLoaded", () =&gt; {
 
-  document.querySelectorAll(".callout").forEach((block, i) =&gt; {
+  console.log("solution tracking loaded");
 
-    block.addEventListener("click", () =&gt; {
 
-      if (block.classList.contains("callout-collapsed")) {
 
-        console.log("Solution opened: ", block.id || i);
+  // למצוא את כל ה-callouts המתקפלים (פתרונות/עצות וכו')
 
-        // כאן אפשר לשלוח מידע לגוגל אנליטיקס:
+  const callouts = document.querySelectorAll(".callout");
 
-        if (window.gtag) {
 
-          gtag("event", "solution_opened", {
 
-            solution_id: block.id || `solution_${i}`
+  callouts.forEach((block, i) =&gt; {
 
-          });
+    // לתת ID אם אין
 
-        }
+    if (!block.id) {
+
+      block.id = `solution_${i}`;
+
+    }
+
+
+
+    // מאזין ללחיצה על כותרת ה-callout (כדי לא לתפוס כל קליק בתוך התיבה)
+
+    const header = block.querySelector(".callout-header") || block;
+
+
+
+    header.addEventListener("click", () =&gt; {
+
+      const id = block.id;
+
+      console.log("Solution opened:", id);
+
+
+
+      // אם GA קיים - שולחים event
+
+      if (window.gtag) {
+
+        gtag("event", "solution_opened", {
+
+          solution_id: id
+
+        });
 
       }
 
