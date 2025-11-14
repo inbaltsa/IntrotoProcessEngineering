@@ -699,6 +699,36 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 
 </div>
+document.addEventListener("DOMContentLoaded", () =&gt; {
+
+  document.querySelectorAll(".callout").forEach((block, i) =&gt; {
+
+    block.addEventListener("click", () =&gt; {
+
+      if (block.classList.contains("callout-collapsed")) {
+
+        console.log("Solution opened: ", block.id || i);
+
+        // כאן אפשר לשלוח מידע לגוגל אנליטיקס:
+
+        if (window.gtag) {
+
+          gtag("event", "solution_opened", {
+
+            solution_id: block.id || `solution_${i}`
+
+          });
+
+        }
+
+      }
+
+    });
+
+  });
+
+});
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
