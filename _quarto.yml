@@ -36,6 +36,8 @@ format:
       - assets/chapter-numbering.html
       - assets/env-autocallouts.js
       - assets/univ-footer.html
+      - assets/tracking.html
+    include-in-header: _includes/head.html
 #  pdf:
  #   pdf-engine: xelatex         # חשוב לעברית
   #  mainfont: "Arial" # או "Arial" אם מעדיפה

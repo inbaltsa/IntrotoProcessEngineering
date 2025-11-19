@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>שיטת הריבועים המינימליים + פרוינדליך – דף הסבר עם סימולציה</title>
+<style>
+  :root{--bg:#0b1020;--panel:#121931;--ink:#eef3ff;--muted:#a9b4d4;--acc:#6ee7b7;--acc2:#60a5fa;--warn:#fbbf24}
+  html,body{height:100%}
+  body{margin:0;background:linear-gradient(180deg,#0b1020,#0e1530);color:var(--ink);font:16px/1.5 system-ui,Segoe UI,Arial,"Helvetica Neue",Helvetica}
+  .wrap{max-width:1000px;margin:24px auto;padding:16px}
+  header{display:flex;gap:16px;align-items:center}
+  header h1{margin:0;font-size:28px}
+  header .tag{font-size:12px;color:var(--muted)}
+  .tabs{display:flex;gap:8px;margin:16px 0}
+  .tabs button{background:var(--panel);border:1px solid #1b2547;color:var(--ink);padding:8px 12px;border-radius:14px;cursor:pointer}
+  .tabs button.active{outline:2px solid var(--acc);color:#0b1020;background:linear-gradient(180deg,#b6ffe0,#6ee7b7)}
+  .grid{display:grid;grid-template-columns:360px 1fr;gap:16px}
+  .card{background:var(--panel);border:1px solid #1b2547;border-radius:16px;padding:14px}
+  .card h2{margin:0 0 8px 0;font-size:18px}
+  .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  label{font-size:14px;color:var(--muted)}
+  input[type="number"],input[type="text"]{background:#0c1330;color:var(--ink);border:1px solid #1b2547;border-radius:10px;padding:6px 8px;min-width:70px}
+  table{width:100%;border-collapse:collapse}
+  th,td{border-bottom:1px dashed #2a3566;padding:6px 8px;text-align:center}
+  th{color:var(--muted);font-weight:600}
+  .btn{background:#0f1a3a;border:1px solid #20306a;color:var(--ink);padding:6px 10px;border-radius:10px;cursor:pointer}
+  .btn.primary{background:linear-gradient(180deg,#a7c5ff,#60a5fa);color:#081029;border:none}
+  .hint{color:var(--muted);font-size:13px}
+  .eq{font-family:ui-monospace,Consolas,Monaco,monospace;background:#0b1434;border:1px solid #1b2547;padding:6px 8px;border-radius:10px}
+  .dot{fill:var(--acc2);stroke:#0b1020;stroke-width:1}
+  .res{stroke:var(--warn);stroke-width:1.5}
+  .line{stroke:var(--acc);stroke-width:2.5}
+  .axis{stroke:#44507d;stroke-width:1}
+  .tick text{fill:#98a5cc;font-size:10px}
+  .kpi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .kpi .item{background:#0c1434;border:1px solid #1b2547;border-radius:12px;padding:10px}
+  .item b{font-size:13px;color:#cfe1ff}
+  .item .val{font-size:18px}
+  .foot{margin-top:10px;color:#8aa0d8;font-size:12px}
+  .small{font-size:12px;color:#9fb0df}
+  .danger{color:#ff9d9d}
+  .success{color:#80eec3}
+  .muted{color:var(--muted)}
+  /* Responsive */
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%2360a5fa'/%3E%3Cpath d='M7 13l3 3 7-7' stroke='%230b1020' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"/>
+      <div>
+        <h1>שיטת הריבועים המינימליים</h1>
+        <div class="tag">גררו נקודות, צפו בשאריות, וראו איך ה‑a וה‑b מחושבים צעד אחר צעד.</div>
+      </div>
+    </header>
+
+    <div class="tabs">
+      <button id="tab-ls" class="active">ריבועים מינימליים</button>
+    </div>
+
+    <!-- Least Squares -->
+    <section id="ls" class="grid">
+      <div class="card">
+        <h2>נתונים</h2>
+        <div class="row" style="margin-bottom:8px">
+          <button class="btn" id="btn-demo">נתוני דוגמה</button>
+          <button class="btn" id="btn-clear">ניקוי הכל</button>
+          <span class="hint">לחיצה בתרשים מוסיפה נקודה. גרירה מזיזה. לחיצה על תא בטבלה לעריכה ידנית.</span>
+        </div>
+        <table id="tbl">
+          <thead><tr><th>#</th><th>x</th><th>y</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <div class="row" style="margin-top:8px">
+          <button class="btn" id="btn-add">הוסף נקודה</button>
+        </div>
+        <div class="foot small">האלגוריתם מחשב את a ו‑b כך שמינימלי S = Σ(y_i − (a + b x_i))².</div>
+      </div>
+
+      <div class="card">
+        <h2>תרשים והמחשה</h2>
+        <svg id="plot" width="100%" viewBox="0 0 640 420" style="background:#0a1230;border-radius:12px;border:1px solid #1b2547;cursor:crosshair"></svg>
+        <div class="kpi" style="margin-top:10px">
+          <div class="item"><b>a (חיתוך)</b><div class="val" id="ka">–</div></div>
+          <div class="item"><b>b (שיפוע)</b><div class="val" id="kb">–</div></div>
+          <div class="item"><b>SSE = Σd_i²</b><div class="val" id="kse">–</div></div>
+          <div class="item"><b>R²</b><div class="val" id="kr2">–</div></div>
+        </div>
+      </div>
+
+      <div class="card" style="grid-column:1/-1">
+        <h2>הסבר צעד אחר צעד</h2>
+        <p class="muted">הנוסחאות החישוביות לשיפוע ולחיתוך:</p>
+        <div class="eq">b = [ n·Σ(xy) − (Σx)(Σy) ] / [ n·Σ(x²) − (Σx)² ]<br/>a = ȳ − b·x̄</div>
+        <div id="steps" class="small" style="margin-top:8px"></div>
+      </div>
+    </section>
+
+    <!-- Freundlich -->
+    <section id="fr" class="grid" style="display:none">
+      <div class="card">
+        <h2>נתוני ספיחה – פרוינדליך</h2>
+        <p class="hint">מזינים C_e ו‑q_e. הרגרסיה מתבצעת על y = ln q_e מול x = ln C_e.</p>
+        <table id="tblF">
+          <thead><tr><th>#</th><th>C_e</th><th>q_e</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <div class="row" style="margin-top:8px">
+          <button class="btn" id="btnF-demo">דוגמה</button>
+          <button class="btn" id="btnF-add">הוסף שורה</button>
+          <button class="btn" id="btnF-clear">ניקוי</button>
+        </div>
+        <div class="foot small">לינאריזציה: ln q_e = ln K_F + (1/n) ln C_e. לכן K_F = e^a, n = 1/b.</div>
+      </div>
+
+      <div class="card">
+        <h2>גרפים ותוצאות</h2>
+        <svg id="plotF" width="100%" viewBox="0 0 640 420" style="background:#0a1230;border-radius:12px;border:1px solid #1b2547"></svg>
+        <div class="kpi" style="margin-top:10px">
+          <div class="item"><b>K_F</b><div class="val" id="kKF">–</div></div>
+          <div class="item"><b>n</b><div class="val" id="kn">–</div></div>
+          <div class="item"><b>a = ln K_F</b><div class="val" id="kaF">–</div></div>
+          <div class="item"><b>b = 1/n</b><div class="val" id="kbF">–</div></div>
+        </div>
+        <div class="foot small">הקו בגרף הלוג‑לוג הוא קו הרגרסיה. העקומה בגרף המקורי היא q̂_e = K_F · C_e^{1/n}.</div>
+      </div>
+
+      <div class="card" style="grid-column:1/-1">
+        <h2>נוסחאות חישוב</h2>
+        <div class="eq">במרחב המנורמל: y = ln q_e, x = ln C_e → רגרסיה ליניארית כפי שבוצע בלשונית הקודמת.</div>
+        <div id="stepsF" class="small" style="margin-top:8px"></div>
+      </div>
+    </section>
+
+    <div class="foot">נכתב ב‑HTML ו‑JavaScript נקיים. אין תלות בספריות חיצוניות.</div>
+  </div>
+
+<script>
+// Utilities
+const fmt = (v, d=3) => (isFinite(v)? Number(v).toFixed(d): "–");
+function statsLeastSquares(xs, ys){
+  const n = xs.length; if(n<2) return null;
+  const sx = xs.reduce((a,b)=>a+b,0);
+  const sy = ys.reduce((a,b)=>a+b,0);
+  const sxx = xs.reduce((a,b)=>a+b*b,0);
+  const sxy = xs.reduce((a,_,i)=>a+xs[i]*ys[i],0);
+  const mx = sx/n, my = sy/n;
+  const den = n*sxx - sx*sx;
+  const b = den===0? 0 : (n*sxy - sx*sy)/den;
+  const a = my - b*mx;
+  const yhat = xs.map(x=>a + b*x);
+  const res = ys.map((y,i)=>y - yhat[i]);
+  const sse = res.reduce((A,r)=>A+r*r,0);
+  const sst = ys.reduce((A,y)=>A + Math.pow(y-my,2),0);
+  const r2 = sst===0? 1 : 1 - sse/sst;
+  return {a,b,mx,my,sx,sy,sxx,sxy,den,yhat,res,sse,sst,r2};
+}
+
+// Table helpers
+function makeRow(tbody, idx, x, y, onChange){
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${idx+1}</td>
+    <td><input type="number" step="any" value="${x}"/></td>
+    <td><input type="number" step="any" value="${y}"/></td>
+    <td><button class="btn" title="מחק">✕</button></td>`;
+  const [ix, iy, rm] = tr.querySelectorAll('input,button');
+  ix.addEventListener('input', ()=>onChange());
+  iy.addEventListener('input', ()=>onChange());
+  rm.addEventListener('click', ()=>{tr.remove(); onChange();});
+  tbody.appendChild(tr);
+  return tr;
+}
+function readTable(tbody){
+  const xs=[], ys=[];
+  tbody.querySelectorAll('tr').forEach(tr=>{
+    const inp = tr.querySelectorAll('input');
+    const x = parseFloat(inp[0].value), y = parseFloat(inp[1].value);
+    if(isFinite(x) && isFinite(y)) { xs.push(x); ys.push(y); }
+  });
+  return {xs,ys};
+}
+
+// Plot axes
+function drawAxes(svg, xmin, xmax, ymin, ymax){
+  svg.innerHTML = '';
+  const W=640,H=420, L=60, B=40, T=10, R=20;
+  const w=W-L-R, h=H-T-B;
+  const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+  svg.appendChild(g);
+  function sx(x){return L + (x - xmin)/(xmax-xmin)*w}
+  function sy(y){return T + h - (y - ymin)/(ymax-ymin)*h}
+  // frame
+  const frame = document.createElementNS('http://www.w3.org/2000/svg','rect');
+  frame.setAttribute('x',L); frame.setAttribute('y',T);
+  frame.setAttribute('width',w); frame.setAttribute('height',h);
+  frame.setAttribute('fill','none'); frame.setAttribute('class','axis');
+  g.appendChild(frame);
+  // ticks
+  function ticks(min,max,step){const a=[]; const s=step||(max-min)/5; for(let v=min; v<=max+1e-9; v+=s) a.push(v); return a}
+  const tx = ticks(xmin,xmax);
+  const ty = ticks(ymin,ymax);
+  tx.forEach(v=>{
+    const x=sx(v);
+    const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+    l.setAttribute('x1',x);l.setAttribute('x2',x);l.setAttribute('y1',T+h);l.setAttribute('y2',T+h+6);l.setAttribute('class','axis');g.appendChild(l);
+    const t=document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.setAttribute('x',x);t.setAttribute('y',T+h+18);t.setAttribute('text-anchor','middle');t.setAttribute('class','tick');t.textContent=fmt(v,1);g.appendChild(t);
+  });
+  ty.forEach(v=>{
+    const y=sy(v);
+    const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+    l.setAttribute('x1',L-6);l.setAttribute('x2',L);l.setAttribute('y1',y);l.setAttribute('y2',y);l.setAttribute('class','axis');g.appendChild(l);
+    const t=document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.setAttribute('x',L-10);t.setAttribute('y',y+3);t.setAttribute('text-anchor','end');t.setAttribute('class','tick');t.textContent=fmt(v,1);g.appendChild(t);
+  });
+  return {sx,sy,w,h,L,T,B,R};
+}
+
+// Least squares UI
+const tbody = document.querySelector('#tbl tbody');
+const plot = document.getElementById('plot');
+const kA = document.getElementById('ka');
+const kB = document.getElementById('kb');
+const kSE = document.getElementById('kse');
+const kR2 = document.getElementById('kr2');
+const steps = document.getElementById('steps');
+
+function refreshLS(){
+  const {xs,ys} = readTable(tbody);
+  if(xs.length===0){ plot.innerHTML=''; kA.textContent=kB.textContent=kSE.textContent=kR2.textContent='–'; steps.innerHTML=''; return; }
+  const xmin = Math.min(...xs); const xmax = Math.max(...xs);
+  const ymin = Math.min(...ys); const ymax = Math.max(...ys);
+  const padx = (xmax-xmin)||1, pady=(ymax-ymin)||1;
+  const ax = drawAxes(plot, xmin-0.1*padx, xmax+0.1*padx, ymin-0.1*pady, ymax+0.1*pady);
+  const s = statsLeastSquares(xs,ys);
+  if(!s) return;
+  kA.textContent = fmt(s.a);
+  kB.textContent = fmt(s.b);
+  kSE.textContent = fmt(s.sse);
+  kR2.textContent = fmt(s.r2);
+
+  // Draw residuals and points
+  xs.forEach((x,i)=>{
+    const y = ys[i];
+    const yh = s.yhat[i];
+    const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1',ax.sx(x));
+    line.setAttribute('x2',ax.sx(x));
+    line.setAttribute('y1',ax.sy(y));
+    line.setAttribute('y2',ax.sy(yh));
+    line.setAttribute('class','res');
+    plot.appendChild(line);
+  });
+  // Best-fit line
+  const lx1 = Math.min(...xs), lx2 = Math.max(...xs);
+  const ly1 = s.a + s.b*lx1, ly2 = s.a + s.b*lx2;
+  const L = document.createElementNS('http://www.w3.org/2000/svg','line');
+  L.setAttribute('x1',ax.sx(lx1)); L.setAttribute('x2',ax.sx(lx2));
+  L.setAttribute('y1',ax.sy(ly1)); L.setAttribute('y2',ax.sy(ly2));
+  L.setAttribute('class','line'); plot.appendChild(L);
+
+  // Points
+  xs.forEach((x,i)=>{
+    const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    c.setAttribute('cx',ax.sx(x)); c.setAttribute('cy',ax.sy(ys[i])); c.setAttribute('r',5); c.setAttribute('class','dot');
+    c.style.cursor='grab';
+    // drag logic
+    let dragging=false;
+    c.addEventListener('mousedown',e=>{dragging=true; c.style.cursor='grabbing';});
+    window.addEventListener('mouseup',()=>{dragging=false; c.style.cursor='grab';});
+    window.addEventListener('mousemove',e=>{
+      if(!dragging) return;
+      const rect = plot.getBoundingClientRect();
+      const px = e.clientX - rect.left, py = e.clientY - rect.top;
+      // invert scales
+      const W=640,H=420, Lm=60, Bm=40, Tm=10, Rm=20; const w=W-Lm-Rm, h=H-Tm-Bm;
+      const xnew = (px - Lm)/w*( (Math.max(...xs)-Math.min(...xs))||1 ) + Math.min(...xs);
+      const ynew = (h - (py - Tm))/h*( (Math.max(...ys)-Math.min(...ys))||1 ) + Math.min(...ys);
+      // update table row i
+      const row = tbody.querySelectorAll('tr')[i];
+      row.querySelectorAll('input')[0].value = xnew.toFixed(3);
+      row.querySelectorAll('input')[1].value = ynew.toFixed(3);
+      refreshLS();
+    });
+    plot.appendChild(c);
+  });
+
+  // Steps text
+  steps.innerHTML = `
+    <div>n = ${xs.length},  Σx = ${fmt(s.sx,3)},  Σy = ${fmt(s.sy,3)},  Σx² = ${fmt(s.sxx,3)},  Σ(xy) = ${fmt(s.sxy,3)}</div>
+    <div>x̄ = ${fmt(s.mx,3)},  ȳ = ${fmt(s.my,3)},  המכנה = n·Σx² − (Σx)² = ${fmt(s.den,3)}</div>
+    <div>b = ${fmt(xs.length)}·${fmt(s.sxy)} − ${fmt(s.sx)}·${fmt(s.sy)}  /  ${fmt(s.den)}  = <b>${fmt(s.b)}</b></div>
+    <div>a = ȳ − b·x̄ = ${fmt(s.my)} − ${fmt(s.b)}·${fmt(s.mx)} = <b>${fmt(s.a)}</b></div>
+    <div>SSE = Σ(y − ŷ)² = ${fmt(s.sse)},  R² = 1 − SSE/SST = ${fmt(s.r2)}</div>`;
+}
+
+// interactivity: add/clear/demo
+function addRow(x='',y=''){ makeRow(tbody, tbody.querySelectorAll('tr').length, x, y, refreshLS); refreshLS(); }
+
+document.getElementById('btn-add').onclick = ()=> addRow(0,0);
+document.getElementById('btn-clear').onclick = ()=>{ tbody.innerHTML=''; refreshLS(); };
+document.getElementById('btn-demo').onclick = ()=>{
+  tbody.innerHTML='';
+  [[1,2.1],[2,2.9],[3,4.2],[4,4.8],[5,5.5]].forEach(p=>addRow(p[0],p[1]));
+};
+
+// click to add point on plot
+plot.addEventListener('click', (e)=>{
+  const rect = plot.getBoundingClientRect();
+  const px = e.clientX - rect.left, py = e.clientY - rect.top;
+  // try to infer current axes from last draw by sampling ticks
+  // fallback to [0,10]
+  let xmin=0,xmax=10,ymin=0,ymax=10;
+  // crude parse from tick labels if exist
+  const ticks = plot.querySelectorAll('.tick');
+  if(ticks.length>0){
+    const xsTicks=[...ticks].slice(-6).map(t=>parseFloat(t.textContent)).filter(v=>isFinite(v));
+    const ysTicks=[...ticks].slice(0,6).map(t=>parseFloat(t.textContent)).filter(v=>isFinite(v));
+    if(xsTicks.length){xmin = xsTicks[0]; xmax = xsTicks[xsTicks.length-1];}
+    if(ysTicks.length){ymin = ysTicks[0]; ymax = ysTicks[ysTicks.length-1];}
+  }
+  const W=640,H=420, L=60, B=40, T=10, R=20; const w=W-L-R, h=H-T-B;
+  const x = (px - L)/w*(xmax-xmin) + xmin;
+  const y = (h - (py - T))/h*(ymax-ymin) + ymin;
+  addRow(x.toFixed(3), y.toFixed(3));
+});
+
+// Initialize with demo
+(document.getElementById('btn-demo').onclick)();
+
+// Tabs
+const tabLS = document.getElementById('tab-ls');
+const tabFR = document.getElementById('tab-fr');
+const secLS = document.getElementById('ls');
+const secFR = document.getElementById('fr');
+[tabLS,tabFR].forEach(btn=>btn.addEventListener('click',()=>{
+  tabLS.classList.toggle('active', btn===tabLS);
+  tabFR.classList.toggle('active', btn===tabFR);
+  secLS.style.display = btn===tabLS? 'grid':'none';
+  secFR.style.display = btn===tabFR? 'grid':'none';
+}));
+
+document.getElementById('btnF-add').onclick = ()=> addRowF(1,1);
+document.getElementById('btnF-clear').onclick = ()=>{ tbodyF.innerHTML=''; refreshF(); };
+document.getElementById('btnF-demo').onclick = ()=>{
+  tbodyF.innerHTML='';
+  [[2,1.5],[4,2.3],[6,2.9],[8,3.3],[10,3.6]].forEach(p=>addRowF(p[0],p[1]));
+};
+// default demo
+(document.getElementById('btnF-demo').onclick)();
+</script>
+</body>
+</html>

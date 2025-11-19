@@ -69,6 +69,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "חפש"
   }
 }</script>
+<!-- Google tag (gtag.js) -->
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9L4PW59LRK"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-9L4PW59LRK');
+
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -239,7 +254,8 @@ window.Quarto = {
   <li><a href="#התאמת-עקומה-לא-ליניארית-nonlinear-curve-fitting" id="toc-התאמת-עקומה-לא-ליניארית-nonlinear-curve-fitting" class="nav-link" data-scroll-target="#התאמת-עקומה-לא-ליניארית-nonlinear-curve-fitting"><span class="header-section-number">2.6.7</span> <span dir="rtl">התאמת עקומה לא ליניארית</span> (Nonlinear Curve Fitting)</a></li>
   <li><a href="#לינאריזציה-linearization" id="toc-לינאריזציה-linearization" class="nav-link" data-scroll-target="#לינאריזציה-linearization"><span class="header-section-number">2.6.8</span> <strong><span dir="rtl">לינאריזציה</span></strong> (Linearization)</a></li>
   <li><a href="#שימוש-בגרפים-לוגיים-וסמילוגיים" id="toc-שימוש-בגרפים-לוגיים-וסמילוגיים" class="nav-link" data-scroll-target="#שימוש-בגרפים-לוגיים-וסמילוגיים"><span class="header-section-number">2.6.9</span> <span dir="rtl">שימוש בגרפים לוגיים וסמילוגיים</span></a></li>
-  <li><a href="#סיכום-1" id="toc-סיכום-1" class="nav-link" data-scroll-target="#סיכום-1"><span class="header-section-number">2.6.10</span> <span dir="rtl">סיכום</span></a></li>
+  <li><a href="#סט-תרגילים-בחירת-שיטת-הערכה-מנתונים-גרפיים" id="toc-סט-תרגילים-בחירת-שיטת-הערכה-מנתונים-גרפיים" class="nav-link" data-scroll-target="#סט-תרגילים-בחירת-שיטת-הערכה-מנתונים-גרפיים"><span class="header-section-number">2.6.10</span> סט תרגילים: בחירת שיטת הערכה מנתונים גרפיים</a></li>
+  <li><a href="#סיכום-1" id="toc-סיכום-1" class="nav-link" data-scroll-target="#סיכום-1"><span class="header-section-number">2.6.11</span> <span dir="rtl">סיכום</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1319,6 +1335,9 @@ Figure 12 – <span dir="rtl">הגרף מציג נתונים המתואמים ל
 </figcaption>
 </figure>
 <p>עם זאת, התאמות לא־ליניאריות קשות יותר להערכה אינטואיטיבית: בעקומה מורכבת קשה לעין האנושית להבחין אם ההתאמה “מדויקת” או לא, במיוחד כשיש כמה פרמטרים חופשיים. לכן חשוב להיעזר גם בידע הפיזיקלי על התהליך וגם במדדים מספריים (כמו <span class="math inline">\(R^{2}\)</span> או סטיות התקן של הפרמטרים) כדי לוודא שההתאמה סבירה ולא רק מתמטית. לבסוף, ככל שמספר הפרמטרים גדל, כך גם הסיכון ל־התאמת יתר (overfitting) — מצב שבו הפונקציה “מתאימה” את עצמה לכל נקודה אך מאבדת משמעות פיזיקלית.</p>
+<div class="callout callout-example example" title="דוגמה" data-collapse="false">
+<p><a href="simulations/leastsquares.html" target="_blank">סימולציה: המחשת שיטת הריבועים המינימליים</a></p>
+</div>
 </section>
 <section id="לינאריזציה-linearization" class="level3" data-number="2.6.8">
 <h3 data-number="2.6.8" class="anchored" data-anchor-id="לינאריזציה-linearization"><span class="header-section-number">2.6.8</span> <strong><span dir="rtl">לינאריזציה</span></strong> (Linearization)</h3>
@@ -1338,7 +1357,7 @@ Figure 13 – <span dir="rtl">לינאריזציה עבור הגרף מתמונ�
 f(x) = a\,g(x) + b
 \]</span></p>
 <p>אז גרף של ( f(x) ) לעומת ( g(x) ) יניב <strong>קו ישר</strong>, שממנו ניתן לחשב את השיפוע ( a ) והחיתוך ( b ).</p>
-<p>לדוגמה:</p>
+<div class="callout callout-example example" title="דוגמה" data-collapse="false">
 <p><span class="math display">\[
 y = 3x^{3}
 \]</span></p>
@@ -1352,8 +1371,28 @@ y = a e^{bx}
 <p>[ y = a + b x ]</p>
 <p>גרף של <span class="math inline">\(\ln y\)</span> מול <span class="math inline">\(x\)</span> הוא קו ישר:<br>
 השיפוע הוא <span class="math inline">\(b\)</span>, והחיתוך עם הציר הוא <span class="math inline">\(\ln a\)</span>.</p>
+</div>
 <p><span dir="rtl">השימוש בלינאריזציה מקל מאוד על זיהוי מגמות, על חישוב פרמטרים, ועל הערכת איכות ההתאמה בעין – מאחר שקל לנו יותר לזהות “ישרות” של קו מאשר עקמומיות של עקומה</span>.<br>
 <span dir="rtl">עם זאת, יש לזכור שלינאריזציה משנה את יחידות הצירים ואת משמעות המשתנים, ולכן יש <strong>להחזיר את התוצאה למשתנים המקוריים</strong> בסיום הניתוח</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+טיפ: דפי עבודה אינטראקטיביים לריבועים המינימליים
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>רוצים לתרגל צעד-אחר-צעד את חישוב קו הרגרסיה אחרי לינאריזציה של מודל לא-ליניארי?<br>
+הקישורים הבאים מובילים לדפי עבודה אינטראקטיביים (הסימולציה תיפתח בעמוד חדש):</p>
+<ul>
+<li><a href="simulations/LeastSquaresCalc.html" target="_blank">דף עבודה 1 – חישוב קו הרגרסיה צעד-אחר-צעד</a></li>
+<li><a href="simulations/LeastSquaresCalc2.html" target="_blank">דף עבודה 2 – הדגמה, מציאת הקשר בין הזמן לכמות חלבון</a></li>
+</ul>
+<p>מומלץ לפתוח את דפי העבודה בלשונית נפרדת, ולחזור לפרק תוך כדי פתרון.</p>
+</div>
+</div>
 </section>
 <section id="שימוש-בגרפים-לוגיים-וסמילוגיים" class="level3" data-number="2.6.9">
 <h3 data-number="2.6.9" class="anchored" data-anchor-id="שימוש-בגרפים-לוגיים-וסמילוגיים"><span class="header-section-number">2.6.9</span> <span dir="rtl">שימוש בגרפים לוגיים וסמילוגיים</span></h3>
@@ -1479,8 +1518,132 @@ Figure <span dir="rtl">15השוואה בין גרף ליניארי, סמי-לו�
 </ol>
 </div>
 </section>
-<section id="סיכום-1" class="level3" data-number="2.6.10">
-<h3 data-number="2.6.10" class="anchored" data-anchor-id="סיכום-1"><span class="header-section-number">2.6.10</span> <span dir="rtl">סיכום</span></h3>
+<section id="סט-תרגילים-בחירת-שיטת-הערכה-מנתונים-גרפיים" class="level3" data-number="2.6.10">
+<h3 data-number="2.6.10" class="anchored" data-anchor-id="סט-תרגילים-בחירת-שיטת-הערכה-מנתונים-גרפיים"><span class="header-section-number">2.6.10</span> סט תרגילים: בחירת שיטת הערכה מנתונים גרפיים</h3>
+<p>כאשר אנו רוצים להעריך נתונים, אנחנו ננסה לעשות את זה מצד אחד מדוייק ומצד שני מהר. לכן ננסה לחפש את השיטה שתתן לנו את התוצאה הכי קרובה במינימום מאמץ. נסו לענות על השאלות הבאות ולנמק מדוע בחרתם כל שיטה. יכולות להיות תשובות רבות, מה שחשוב הוא הנימוק. התשובות פה ממחישות נימוקים אפשריים לבחירה מסויימת.</p>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<div id="fig-ex1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ex1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ex1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ex1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+תרשים&nbsp;2.1: גרף לשאלה 1
+</figcaption>
+</figure>
+</div>
+<p>בגרף מוצגים נתונים של (y) כפונקציה של (x). הנקודות כמעט מסודרות על קו ישר. אין ברשותינו מחשב זמין, אלא רק מחשבון פשוט יחסית.</p>
+<p>נרצה להעריך את הערך של (y) עבור ערך ביניים של (x).</p>
+<p>באיזו שיטה כדאי להשתמש?</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="פתרון">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+פתרון
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>יש לנו נקודות שיוצרות קו שנראה ישר יחסית כשהנקודה נמצאת בתוך הטווח, אבל רחוקה מנקודות אחרות, ולכן כדאי להשתמש בשיטה של התאמה פשוטה של קו ישר.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<div id="fig-ex2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ex2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ex2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ex2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+תרשים&nbsp;2.2: גרף לשאלה 2
+</figcaption>
+</figure>
+</div>
+<p>בגרף מוצגים ערכי (y) כפונקציה של הזמן (t) בין (t=0) לבין (t=5). נרצה להעריך את ערך (y) בזמן (t=8), מחוץ לטווח המדידה.</p>
+<p>איזו שיטה מתאימה ביותר כדי להעריך את (y) בזמן (t=8)?</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="פתרון">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+פתרון
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>הגרף נראה יחסית לינארי, אבל עם סטיות למעלה ולמטה, כמו כן, באקסטרפולציה השגיאה גדלה ולכן נרצה ישר מדוייק ככל האפשר, ולכן נעשה רגרסיה לינארית</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<div id="fig-ex4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ex4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ex4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ex4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+תרשים&nbsp;2.3: גרף לשאלה 4
+</figcaption>
+</figure>
+</div>
+<p>בגרף מוצגת גדילה שנראית אקספוננציאלית של (y) כפונקציה של הזמן (t). הקשר מתואר על ידי מודל פיסיקלי מהצורה (y = Ce^{kt}).</p>
+<p>כיצד נבנה את המשוואה ונמצא את הקבועים המתאימים למודל?</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="פתרון">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+פתרון
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>עבור מודל (y = Ce^{kt}) נפעיל ln על שני האגפים, ונקבל קשר לינארי בין (y) לבין (t), ואז נעשה רגרסיה לינארית על הנתונים. מאחר ומדובר במציאת קבועים לתיאור מערכת פיסיקלית נבחר בשיטה הכי מדוייקת שיש לנו. ברמה העקרונית ניתן להשתמש גם בשיטת הריבועים המינימלים עבור רגרסיה שאינה לינארית, אך במקרה זה החישוב הוא משמעותית יותר מסובך ולא ניתן לפתור אותו באופן ישיר אלא רק בצורה נומרית.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<div id="fig-ex5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ex5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ex5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ex5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+תרשים&nbsp;2.4: גרף לשאלה 5
+</figcaption>
+</figure>
+</div>
+<p>בגרף מוצגת פונקציה כללית של (y) מול (x). נרצה להעריך את ערך (y) ב-(x=1.8),אך אין לנו מודל פיסיקלי המתאר את המערכת איזו שיטה עדיפה?</p>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="פתרון">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+פתרון
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>כאן מעניינת אותנו התנהגות מקומית באזור קטן, ולא מודל גלובלי לכל התחום. הנקודות קרובות יחסית, ורואים מגמה עקבית ולא רועשת, כך שסביר מאוד שהפונקציה עצמה פועלת באופן מאוד קרוב לנתונים, וכי המשתנים בין כל שתי נקודות סמוכות מתנהגים כקו ישר. לכן נבחר באינטרפולציה מקומית</p>
+</div>
+</div>
+</div>
+</section>
+<section id="סיכום-1" class="level3" data-number="2.6.11">
+<h3 data-number="2.6.11" class="anchored" data-anchor-id="סיכום-1"><span class="header-section-number">2.6.11</span> <span dir="rtl">סיכום</span></h3>
 <p>בעבודה הנדסית וניסויית אנו כמעט תמיד נדרשים להסיק מסקנות מתוך מדידות חלקיות.<br>
 האתגר הוא לייצג את הנתונים בדרך שתאפשר לנבא ערכים חדשים ולבדוק אם הם סבירים מבחינה פיזיקלית.<br>
 לשם כך עומדים לרשותנו כלים ברמות שונות של מורכבות:</p>
@@ -1779,6 +1942,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 
 </div>
+<script src="assets/tracking.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
