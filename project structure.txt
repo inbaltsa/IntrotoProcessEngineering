@@ -1,0 +1,280 @@
+│   .gitignore
+│   Bibliography.qmd
+│   chapter1.qmd
+│   chapter2.qmd
+│   chapter3.qmd
+│   chapter4.qmd
+│   chapter5.qmd
+│   environments.qmd
+│   index.aux
+│   index.log
+│   index.pdf
+│   index.qmd
+│   index.tex
+│   index.toc
+│   intro.qmd
+│   _quarto.yml
+│
+├───.quarto
+│   ├───cites
+│   │       index.json
+│   │
+│   ├───idx
+│   │       Bibliography.qmd.json
+│   │       chapter1.qmd.json
+│   │       chapter2.qmd.json
+│   │       chapter3.qmd.json
+│   │       chapter4.qmd.json
+│   │       chapter5.qmd.json
+│   │       index.qmd.json
+│   │       intro.qmd.json
+│   │
+│   ├───preview
+│   ├───project-cache
+│   │       deno-kv-file
+│   │       ea923d2918fa5ac1356929d4c5346f29
+│   │
+│   └───xref
+│           12d107a8
+│           16973bca
+│           1c9c659a
+│           610cac22
+│           6f30b77f
+│           c9881325
+│           d3c27d72
+│           e61b1138
+│           INDEX
+│
+├───assets
+│   │   auto-env-titles.html
+│   │   chapter-numbering.html
+│   │   env-autocallouts.js
+│   │   env-to-callout.lua
+│   │   logo.png
+│   │   rtl-baseline.css
+│   │   site-enhance.css
+│   │   styles.css
+│   │   tracking.html
+│   │   tracking.js
+│   │   univ-footer.html
+│   │   wordstyles-to-quarto.lua
+│   │
+│   └───images
+│       └───media
+│               image1.png
+│               image10.png
+│               image11.png
+│               image12.png
+│               image13.png
+│               image14.png
+│               image15.png
+│               image16.png
+│               image17.png
+│               image18.png
+│               image19.png
+│               image2.png
+│               image20.png
+│               image21.jpeg
+│               image22.jpeg
+│               image23.png
+│               image24.png
+│               image25.jpeg
+│               image26.gif
+│               image27.png
+│               image28.png
+│               image29.png
+│               image3.png
+│               image30.jpeg
+│               image31.jpg
+│               image32.jpg
+│               image33.png
+│               image34.png
+│               image35.png
+│               image36.png
+│               image37.png
+│               image38.png
+│               image39.png
+│               image4.jpeg
+│               image40.png
+│               image5.png
+│               image6.png
+│               image7.png
+│               image8.png
+│               image9.png
+│
+├───images
+│       ex1.png
+│       ex2.png
+│       ex3.png
+│       ex4.png
+│       ex5.png
+│
+├───media
+│   └───media
+│           image1.png
+│           image10.png
+│           image11.png
+│           image12.png
+│           image13.png
+│           image14.png
+│           image15.png
+│           image16.png
+│           image17.png
+│           image18.png
+│           image19.png
+│           image2.png
+│           image20.png
+│           image21.jpeg
+│           image22.jpeg
+│           image23.png
+│           image24.png
+│           image25.jpeg
+│           image26.gif
+│           image27.png
+│           image28.png
+│           image29.png
+│           image3.png
+│           image30.jpeg
+│           image31.jpg
+│           image32.jpg
+│           image33.png
+│           image34.png
+│           image35.png
+│           image36.png
+│           image37.png
+│           image38.png
+│           image39.png
+│           image4.jpeg
+│           image40.png
+│           image5.png
+│           image6.png
+│           image7.png
+│           image8.png
+│           image9.png
+│           units1.png
+│           units2.png
+│           units3.png
+│           שאלה1.png
+│           שאלה2.png
+│
+├───simulations
+│       leastsquares.html
+│       LeastSquaresCalc.html
+│       LeastSquaresCalc2.html
+│
+├───sources
+│       env-to-callout.lua
+│       IntroToCHemEng.docx
+│       IntroToCHemEng.qmd
+│       IntroToCHemEng2.docx
+│       output.qmd
+│       temp.json
+│
+├───_book
+│   │   Bibliography.html
+│   │   chapter1.html
+│   │   chapter2.html
+│   │   chapter3.html
+│   │   chapter4.html
+│   │   chapter5.html
+│   │   index.html
+│   │   index.pdf
+│   │   intro.html
+│   │   search.json
+│   │
+│   ├───assets
+│   │       logo.png
+│   │       rtl-baseline.css
+│   │       site-enhance.css
+│   │       styles.css
+│   │       tracking.js
+│   │
+│   ├───images
+│   │       ex1.png
+│   │       ex2.png
+│   │       ex4.png
+│   │       ex5.png
+│   │
+│   ├───media
+│   │   └───media
+│   │           image1.png
+│   │           image10.png
+│   │           image11.png
+│   │           image12.png
+│   │           image13.png
+│   │           image14.png
+│   │           image15.png
+│   │           image16.png
+│   │           image17.png
+│   │           image18.png
+│   │           image19.png
+│   │           image2.png
+│   │           image20.png
+│   │           image21.jpeg
+│   │           image22.jpeg
+│   │           image23.png
+│   │           image24.png
+│   │           image25.jpeg
+│   │           image26.gif
+│   │           image27.png
+│   │           image28.png
+│   │           image29.png
+│   │           image3.png
+│   │           image30.jpeg
+│   │           image31.jpg
+│   │           image32.jpg
+│   │           image33.png
+│   │           image34.png
+│   │           image35.png
+│   │           image36.png
+│   │           image37.png
+│   │           image38.png
+│   │           image39.png
+│   │           image4.jpeg
+│   │           image40.png
+│   │           image5.png
+│   │           image6.png
+│   │           image7.png
+│   │           image8.png
+│   │           image9.png
+│   │           units1.png
+│   │           units2.png
+│   │           units3.png
+│   │
+│   ├───simulations
+│   │       leastsquares.html
+│   │       LeastSquaresCalc.html
+│   │       LeastSquaresCalc2.html
+│   │
+│   └───site_libs
+│       ├───bootstrap
+│       │       bootstrap-ffd282cb318059e0bcb130885a47f5dc.min.css
+│       │       bootstrap-icons.css
+│       │       bootstrap-icons.woff
+│       │       bootstrap.min.js
+│       │
+│       ├───clipboard
+│       │       clipboard.min.js
+│       │
+│       ├───quarto-html
+│       │   │   anchor.min.js
+│       │   │   popper.min.js
+│       │   │   quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css
+│       │   │   quarto.js
+│       │   │   tippy.css
+│       │   │   tippy.umd.min.js
+│       │   │   
+│       │   └───tabsets
+│       │           tabsets.js
+│       │
+│       ├───quarto-nav
+│       │       headroom.min.js
+│       │       quarto-nav.js
+│       │
+│       └───quarto-search
+│               autocomplete.umd.js
+│               fuse.min.js
+│               quarto-search.js
+│
+└───_includes
+        head.html
