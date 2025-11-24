@@ -1116,8 +1116,9 @@ $$SG = 0.805 \Rightarrow \rho_{MEK} = 0.805 \cdot 1000 \text{ kg/m}^3 = 805 \tex
 תאוצת הכובד: $g = 9.8 \text{ m/s}^2$
 
 לחץ אטמוספרי:
-$$P_{atm} = 772 \text{ mmHg} = 772 \cdot 133.322 = 1.029 \times 10^5 \text{ Pa}$$
-
+$$
+P_{atm} = 772 \text{ mmHg} \times \frac{101325 \text{ Pa}}{760 \text{ mmHg}} = 1.029 \times 10^5 \text{ Pa}
+$$
  א. הכוח על תחתית המיכל
 
 הלחץ בתחתית (מוחלט): $P_b = P_{atm} + \rho_{MEK} g H$
