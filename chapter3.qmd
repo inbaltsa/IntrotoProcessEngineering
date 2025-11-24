@@ -1103,95 +1103,67 @@ $$\Delta P = \rho gh$$
   4.  כיצד ניתן להחזיר את המיכל למצבו המקורי (ללא המים)?
 :::
 
-::: callout-note "פתרון סעיף א" {collapse="true"}
-הלחץ בתחתית המיכל (לחץ מוחלט):
+::: {.callout-note title="פתרון סעיף א" collapse="true"}
 
-\[
-P_b = P_{\text{atm}} + \rho_{\text{MEK}} g H
-\]
+נתונים: 
+מיכל מלבני: רוחב $W = 1.0 \text{ m}$, אורך $L = 3.0 \text{ m}$ ולכן שטח תחתית $A = WL = 3.0 \text{ m}^2$
 
-נתונים:  
-\(P_{\text{atm}} = 1.029 \times 10^5 \,\text{Pa}\)
+גובה נוזל: $H = 5.0 \text{ m}$
 
-\[
-\Delta P = \rho_{\text{MEK}} g H
-         = 805\,\frac{\text{kg}}{\text{m}^3} \cdot 9.8\,\frac{\text{m}}{\text{s}^2} \cdot 5.0\,\text{m}
-         = 3.9485 \times 10^4 \,\text{Pa}
-\]
+נוזל (MEK):
+$$SG = 0.805 \Rightarrow \rho_{MEK} = 0.805 \cdot 1000 \text{ kg/m}^3 = 805 \text{ kg/m}^3$$
 
-לכן:
+תאוצת הכובד: $g = 9.8 \text{ m/s}^2$
 
-\[
-P_b = 1.029\times 10^5 + 3.9485\times 10^4
-    = 1.424\times 10^5 \,\text{Pa}
-\]
+לחץ אטמוספרי:
+$$P_{atm} = 772 \text{ mmHg} = 772 \cdot 133.322 = 1.029 \times 10^5 \text{ Pa}$$
 
-הכוח על התחתית:
+ א. הכוח על תחתית המיכל
 
-\[
-F = P_b A = 1.424\times 10^5 \,\frac{\text{N}}{\text{m}^2} \cdot 3.0\,\text{m}^2
-  = 4.3\times 10^5 \,\text{N}
-\]
+הלחץ בתחתית (מוחלט): $P_b = P_{atm} + \rho_{MEK} g H$
+
+הכוח על התחתית: $F = P_b \cdot A$
+
+חישוב הלחץ ההידרוסטטי:
+$$
+\Delta P = \rho_{MEK} g H = \frac{805 \text{ kg}}{\text{m}^3} \cdot 9.8 \frac{\text{m}}{\text{s}^2} \cdot 5.0 \text{ m} = 3.9485 \times 10^4 \frac{\text{kg}}{\text{m s}^2} = 3.9485 \times 10^4 \frac{\text{N}}{\text{m}^2}
+$$
+
+חישוב הלחץ בתחתית:
+$$
+P_b = 1.029 \times 10^5 + 3.9485 \times 10^4 = 1.424 \times 10^5 \text{ Pa}
+$$
+
+חישוב הכוח הסופי:
+$$
+\boxed{F = P_b A = 1.424 \times 10^5 \frac{\text{N}}{\text{m}^2} \cdot 3.0 \text{ m}^2 = 4.3 \times 10^5 \text{ N}}
+$$
+
+:::
+
+
+::: {.callout-note collapse="true" title="פתרון סעיף ב"}
+לחץ gauge בתחתית ביחידות של $m\text{MEK}$
+
+לחץ $gauge$ בתחתית ביחידות של $m\text{MEK}$. לחץ $gauge$ הוא למעשה תרומת עמודת הנוזל בלבד.
+אנחנו רוצים להביע את העומד באמצעות יחידות של $m\text{MEK}$. במילים אחרות אנו עונים על השאלה מהו הגובה של $\text{MEK}$ שמפעיל לחץ כזה? הגובה הוא $5.0\text{m}$ ולכן עומד הלחץ הוא $5.0\text{mMEK}$ (שווה ערך ל-$3.95 \times 10^4 \text{ Pa}$).
 :::
 
 
 
-::: callout-note "פתרון סעיף ב" {collapse="true"}
-לחץ gauge הוא תרומת עמודת הנוזל בלבד:
+::: {.callout-note collapse="true" title="פתרון סעיף ג"}
 
-\[
-P_{\text{gauge}} = \rho_{\text{MEK}} g H
-\]
-
-כדי להביע את הלחץ במטר MEK שואלים:  
-מהו גובה עמודת MEK שנותן לחץ כזה?
-
-התשובה:  
-\[
-5.0\,\text{m MEK}
-\]
-
-(שווה ל \(3.95 \times 10^4\,\text{Pa}\))
+מה $SG$ אנו יודעים שמים צפופים יותר מה-$\text{MEK}$ ו לכן ייווצרו שתי שכבות: מים בתחתית, $\text{MEK}$ למעלה. מד הלחץ בתחתית מודד את ה $gauge$ הנוצר מסך הנוזל שמעליו. אנו יודעים מהו הלחץ שה $\text{MEK}$ יוצר, ולכן ההפרש בין ה $gauge$ ללחץ של ה$\text{MEK}$ יתן לנו בדיוק את הלחץ של עמודת המים.
+מאחר ואנו יודעים את צפיפות המים ואת השטח של המיכל נוכל לחשב את גובה המים היוצר את הלחץ הזה. או לחילופין, לחשב את עומד המים הנובע מהפרש זה.
 :::
 
 
 
-::: callout-note "פתרון סעיף ג" {collapse="true"}
-המים צפופים יותר מ-MEK ולכן שוקעים. נוצרות שתי שכבות.
 
-הלחץ בתחתית:
+::: {.callout-note collapse="true" title="פתרון סעיף ד"}
 
-\[
-P_{\text{gauge,total}} = 
-\rho_{\text{water}} g h_{\text{water}}
-+ \rho_{\text{MEK}} g h_{\text{MEK}}
-\]
+לצורך הוצאת המים מהמיכל, אנו יודעים מהפרש הצפיפויות שהמים הם השכבה התחתונה, ולכן ניתן לרוקן בעדינות דרך פתח ניקוז תחתון את כל המים עד שמגיעים לתחילת שכבת ה$\text{MEK}$.
 
-את תרומת ה-MEK כבר ידענו מסעיף ב', לכן:
-
-\[
-\rho_{\text{water}} g h_{\text{water}}
-= P_{\text{gauge,total}} - P_{\text{MEK}}
-\]
-
-ומכאן:
-
-\[
-h_{\text{water}}
-= \frac{P_{\text{gauge,total}} - P_{\text{MEK}}}
-{\rho_{\text{water}} g}
-\]
-
-זהו גובה המים שנכנסו למיכל.
-:::
-
-
-
-::: callout-note "פתרון סעיף ד" {collapse="true"}
-כיוון שהמים הם השכבה התחתונה, ניתן לרוקן אותם דרך פתח ניקוז תחתון.
-
-ברגע שמתחילה להופיע שכבת MEK — מפסיקים.  
-כך מרוקנים את המים בלבד בלי לאבד MEK.
 :::
 
 ### [סיכום]{dir="rtl"}
