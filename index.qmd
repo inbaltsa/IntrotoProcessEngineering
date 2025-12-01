@@ -1,11 +1,12 @@
 
 # מבוא להנדסת תהליכים {.unnumbered .page-title}
-## ענבל צרפתי-ברעד {.unnumbered .page-subtitle}
+## ד"ר ענבל צרפתי-ברעד {.unnumbered .page-subtitle}
 
 <img src="assets/logo.png" class="page-logo">
 
 <p class="page-description">
-מיועד לסטודנטים וסטודנטיות בתחילת דרכם בלימודי הנדסת תהליכים
+מיועד לסטודנטים וסטודנטיות בתחילת דרכם<br>
+בתחום הנדסת תהליכים
 </p>
 
 <div class="thanks-box">
