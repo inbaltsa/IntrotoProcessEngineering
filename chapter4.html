@@ -258,6 +258,13 @@ window.Quarto = {
   <li><a href="#חישוב-דרגות-חופש-עבור-מערכות-עם-ריאקציה" id="toc-חישוב-דרגות-חופש-עבור-מערכות-עם-ריאקציה" class="nav-link" data-scroll-target="#חישוב-דרגות-חופש-עבור-מערכות-עם-ריאקציה"><span class="header-section-number">4.7.2</span> חישוב דרגות חופש עבור מערכות עם ריאקציה</a></li>
   <li><a href="#מערכות-מורכבות-הכוללות-תגובות-כימיות" id="toc-מערכות-מורכבות-הכוללות-תגובות-כימיות" class="nav-link" data-scroll-target="#מערכות-מורכבות-הכוללות-תגובות-כימיות"><span class="header-section-number">4.7.3</span> מערכות מורכבות הכוללות תגובות כימיות</a></li>
   </ul></li>
+  <li><a href="#תגובות-שריפה" id="toc-תגובות-שריפה" class="nav-link" data-scroll-target="#תגובות-שריפה"><span class="header-section-number">4.8</span> תגובות שריפה</a>
+  <ul class="collapse">
+  <li><a href="#מושגי-היסוד" id="toc-מושגי-היסוד" class="nav-link" data-scroll-target="#מושגי-היסוד"><span class="header-section-number">4.8.1</span> מושגי היסוד</a></li>
+  <li><a href="#הכימיה-של-השריפה-תגובות-ותוצרים" id="toc-הכימיה-של-השריפה-תגובות-ותוצרים" class="nav-link" data-scroll-target="#הכימיה-של-השריפה-תגובות-ותוצרים"><span class="header-section-number">4.8.2</span> הכימיה של השריפה: תגובות ותוצרים</a></li>
+  <li><a href="#הרכב-גזים-בסיס-רטוב-מול-בסיס-יבש" id="toc-הרכב-גזים-בסיס-רטוב-מול-בסיס-יבש" class="nav-link" data-scroll-target="#הרכב-גזים-בסיס-רטוב-מול-בסיס-יבש"><span class="header-section-number">4.8.3</span> הרכב גזים: בסיס רטוב מול בסיס יבש</a></li>
+  <li><a href="#אוויר-תיאורטי-ואוויר-עודף" id="toc-אוויר-תיאורטי-ואוויר-עודף" class="nav-link" data-scroll-target="#אוויר-תיאורטי-ואוויר-עודף"><span class="header-section-number">4.8.4</span> אוויר תיאורטי ואוויר עודף</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -1878,9 +1885,458 @@ window.Quarto = {
 <p><span class="math display">\[f_{p} = \frac{{\dot{n}}_{P}}{{\dot{n}}_{\text{recycle loop}}}\]</span></p>
 </div>
 <p>ככל ש-<span class="math inline">\(f_{p}\)</span> גדול יותר, האינרטים יוצאים מהר יותר וההצטברות קטנה, אבל גדל גם איבוד המגיבים. ככל ש-<span class="math inline">\(f_{p}\)</span> קטן יותר, נחסוך חומר גלם בטווח הקצר אבל נסתכן בהצטברות שתפגע בביצועי התהליך .</p>
-
-
+<div class="callout callout-example example" title="דוגמה" data-collapse="false">
+<p>מפעל לייצור מתנול (<span class="math inline">\(CH_{3}OH\)</span>) מוזן בגז סינתזה המכיל פחמן חד-חמצני (<span class="math inline">\(CO\)</span>) ומימן (<span class="math inline">\(H_{2}\)</span>). חומר הגלם מכיל גם כמות קטנה של מתאן (<span class="math inline">\(CH_{4}\)</span>), אשר אינו מגיב בתהליך (אינרטי). הריאקציה המתרחשת היא:<br>
+<span class="math display">\[CO + 2H_{2} \rightarrow CH_{3}OH\]</span></p>
+<p>הנתונים בתרשים, קצב הסילוק מכוונן כך שריכוז המתאן בכניסה לראקטור יהיה 10% מולי</p>
+<p><img src="images\IntroToCHemEng2/media/image72.png" style="width:6.18655in;height:2.11688in"></p>
+<p>מהי כמות המתנול אשר נוצרת בתהליך ומהו מקדם ההמרה הכללי?<br>
+מה צריך להיות התחזיר על מנת שהתהליך ישאר במצב עמיד?</p>
+<p>פתרון</p>
+<p>הנחות:</p>
+<ul>
+<li><p>הפרדה מושלמת במפריד. כל המתנול מתעבה ויוצא כתוצר טהור; כל הגזים <span class="math inline">\(CO,H_{2},CH_{4}\)</span> יוצאים כזרם גז.</p></li>
+<li><p>כל הזרמים הנכנסים והיוצאים מהמפצל הם בעלי אותו ההרכב.</p></li>
+<li><p>כל האחוזים המוצגים בשרטוט הם מולריים</p></li>
+</ul>
+<p><img src="images\IntroToCHemEng2/media/image73.png" style="width:5.96753in;height:2.33512in"></p>
+<blockquote class="blockquote">
+<p><u>נתחיל עם ניתוח דרגות חופש על המערכת הכוללת כ"קופסא שחורה" (ריבוע סגול)</u><br>
+מסתכלים רק על מה שנכנס ומה שיוצא</p>
+<p>במערכת הכוללת יש לנו 3 זרמים – 1,5,6<br>
+נחשב דרגות חופש על בסיס אטומים (כי יש לנו קופסא שחורה, אנחנו לא יודעים מה קורה בפנים)<br>
+לכן חסרים 5 נעלמים <span class="math inline">\(\ {\dot{n}}_{1},{\dot{n}}_{6},\ {\dot{n}}_{5},y_{CO,4},\ y_{H_{2},4}\ \)</span></p>
+<p>ויש לנו 3 מאזנים אפשריים – על שלושה אטומים C,H,O<span class="math inline">\(\ \)</span><br>
+ולכן דרגות חופש על המערכת הכוללת הן <span class="math inline">\(DOF = 5 - 3\)</span> – לא פתיר<br>
+נוכל להוריד דרגת חופש אחת על ידי הנחת בסיס חישוב של <span class="math inline">\({\dot{n}}_{1} = \frac{100}{h}\)</span> אבל עדיין חסרה עוד דרגה</p>
+</blockquote>
+<p>על מנת למצוא את המידע החסר נסתכל על תת המערכות השונות עם הנחת בסיס החישוב<span class="math inline">\({\dot{n}}_{1} = \frac{100}{h}\)</span><br>
+עם הזמן תתפתח לנו האינטואיציה של אילו תת-מערכות עדיפות בכל סיטואציה ולא באמת נחשב את דרגות החופש של כל תתי המערכות באופן מלא, אבל בשלב זה אנחנו עדיין עושים זאת למען התרגול.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 45%">
+<col style="width: 17%">
+<col style="width: 9%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><blockquote class="blockquote">
+<p><strong>תת־מערכת</strong></p>
+</blockquote></th>
+<th><blockquote class="blockquote">
+<p><strong>נעלמים</strong></p>
+</blockquote></th>
+<th><blockquote class="blockquote">
+<p><strong>מידע זמין (משוואות)</strong></p>
+</blockquote></th>
+<th><blockquote class="blockquote">
+<p><strong>DOF</strong></p>
+</blockquote></th>
+<th><blockquote class="blockquote">
+<p><strong>פתיר?</strong></p>
+</blockquote></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><blockquote class="blockquote">
+<p>מערכת כוללת (קופסה שחורה)</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p><span class="math inline">\(\left( n_{3},n_{6},y_{CO,6},y_{CH_{4},6} \right)\)</span>- סה"כ 4</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>מאזנים אטומיים C,H,O – סך הכל 3 מאזנים.</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>1</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>לא</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote class="blockquote">
+<p>ערבוב (Mixer)</p>
+</blockquote></td>
+<td><p><span class="math display">\[{\dot{n}}_{2},y_{CO,2},\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{7},y_{CO,4},y_{CH_{4},4}\]</span></p></td>
+<td><blockquote class="blockquote">
+<p>מאזנים עם הרכיבים בנקודת הערבוב – סך הכל 3 משוואות.</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>2</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>לא</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote class="blockquote">
+<p>ריאקטור בלבד</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p><span class="math display">\[{{\dot{n}}_{2},y_{CO,2}
+}{{\dot{n}}_{3},y_{CO,3},y_{H_{2},3},y_{CH_{4},3}}\]</span></p>
+<p>משתנה תגובה (<span class="math inline">\(\xi\)</span>) - סה"כ 7</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>משוואות על מינים מוגדרות באמצעות <span class="math inline">\(\xi\)</span> – 4 משוואות<br>
+אילוצים פיסיקליים – מקדם המרה<br>
+סך הכל - 5</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>2</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>לא</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote class="blockquote">
+<p>מפריד (Condenser) בלבד</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p><span class="math display">\[{\dot{n}}_{3},y_{CO,3},y_{H_{2},3},y_{CH_{4},3}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{4},y_{CO,4},y_{CH_{4},4}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{5}\]</span></p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>4 מאזנים על 4 רכיבים</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>4</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>לא</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote class="blockquote">
+<p>מפצל (Splitter) בלבד</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p><span class="math display">\[{\dot{n}}_{4},{\dot{n}}_{7},{\dot{n}}_{6}\]</span></p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>מאזן מסה על הספיקות<br>
+(אין טעם לעשות על הרכיבים, כולם נגזרים מהיחס בין הספיקות)</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>4</p>
+</blockquote></td>
+<td><blockquote class="blockquote">
+<p>לא</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>ובשלב ראשון אנחנו רואים שאין לנו שום תת מערכת, אבל התת מערכת הכי קרובה לפתרון היא תת מערכת על הראקטור, ולכן ננסה לפתח אותה יותר לעומק. האם נוכל למצוא מידע נוסף?</p>
+</blockquote>
+<ul>
+<li>ישנו אילוץ נוסף על המערכת שלא שמנו לב אליו כי הוא דורש תנאים ספציפיים.- אם נסתכל על היחס בין הCO למימן אנחנו רואים שהיחס בכניסה הוא 1:2, וגם יחס התגובה הוא 1:2. מאחר ובשום מקום אנחנו לא מפרידים בינהם, והם תמיד ממשיכים יחד באותם הזרמים המשמעות היא שהיחס בינהם בכל הזרמים חייב להיות בהכרח</li>
+</ul>
+<p><span class="math display">\[\frac{n_{CO}}{n_{H_{2}}} = \frac{y_{CO}}{y_{H_{2}}} = \frac{1}{2}\]</span></p>
+<ul>
+<li>אמנם אין אפשרות לפתור את הראקטור באופן מלא, אבל אנחנו יכולים לפתור רק חלק מהמשתנים אם נתמקד בתכונות האינטנסיביות של הראקטור, וננסה לחשב רק את ההרכבים של הזרמים. לצורך כך נוכל להגדיר <u>בסיס חישוב זמני</u> רק עבור הראקטור שיהיה נוח לחישוב</li>
+</ul>
+<blockquote class="blockquote">
+<p><span class="math display">\[{\dot{n}}_{2}^{*} = 100\frac{mol}{h}\]</span></p>
+</blockquote>
+<p>מאחר שכל הזרמים בלולאה (יציאה מהראקטור, זרם הגז לאחר ההפרדה, זרם התחזיר וזרם הסילוק) <strong>קשורים זה לזה ליניארית</strong>, שינוי קנה המידה של הספיקה משנה רק את הערכים המוחלטים – אך <strong>אינו משנה את השברים המולריים</strong> .אמנם הערכים <span class="math inline">\({\dot{n}}_{2}^{*},{\dot{n}}_{3}^{*}\)</span> לא יהיו נכונים עבור המערכת הגדולה, אבל זה יאפשר לנו למצוא את ההרכבים. <span class="math inline">\(y_{H_{2,3}}\ ,\ y_{CO_{3}},\ y_{{CH}_{4,3}},y_{{CH}_{4,3}}\)</span><br>
+</p>
+<div class="Callout-tip">
+<p>בחירת בסיס חישוב זמני (כמו <span class="math inline">\(\dot{n} = 100\)</span>) <strong>לצורך מציאת הרכבים</strong> מותרת רק כאשר המידע הזמין קובע יחסים בין זרמים, אך לא קובע את הסקאלה המוחלטת שלהם.</p>
+<p>מתי נוכל להגדיר בסיס חישוב זמני? מספר דוגמאות:</p>
+<ol type="1">
+<li><p>ריאקטור עם המרה נתונה, כאשר ספיקת הכניסה אינה ידועה. במקרה זה הסטויכיומטריה וההמרה קובעות את היחסים בין המינים, אך לא את הספיקה הכוללת.</p></li>
+<li><p>לולאת תחזיר עם אילוץ על הרכב (למשל ריכוז אינרטי בכניסה לריאקטור). האילוץ קובע את ההרכב בלולאה, אך הסקאלה נקבעת רק במאזן הגלובלי.</p></li>
+</ol>
+<p>מתי לא נוכל להגדיר בסיס חישוב זמני? דוגמאות</p>
+<ol type="1">
+<li><p>מערכת שבה ספיקת ההזנה נתונה במפורש (למשל <span class="math inline">\(100\text{ kmol/h}\)</span>). במקרה זה הסקאלה כבר נקבעה, ואין חופש לבחור בסיס אחר.</p></li>
+<li><p>בעיות הכוללות קינטיקה או מאזני אנרגיה התלויים בריכוזים או בספיקות מוחלטות. כאן שינוי הבסיס משנה את הפיזיקה של הבעיה, ולא רק את המספרים.</p></li>
+</ol>
+<p>או בקיצור</p>
+<p><strong>בסיס חישוב זמני מותר רק כאשר הבעיה עדיין לא קבעה סקאלה.<br>
+אם הסקאלה נקבעה – אין חופש לבחור בסיס.</strong></p>
+</div>
+<blockquote class="blockquote">
+<p>עם המידע הנוסף ננסה לפתור את המערכת<br>
+משוואת המרה - <span class="math inline">\(\frac{{\dot{n}}_{CO,2} - {\dot{n}}_{CO,3}}{{\dot{n}}_{CO,2}} = 0.40\)</span>** <u>אילוץ בכניסה לראקטור שנקבע על ידי התהליך</u> <span class="math inline">\(y_{CH_{4},2} = 0.10\)</span></p>
+<p>ובסיס חישוב זמני ** <span class="math display">\[{\dot{n}}_{2}^{*} = 100\frac{mol}{h}\]</span></p>
+<p>{מבחינה רעיונית אנחנו מנתחים עכשיו מערכת אחרת שהספיקה בכניסה שלה היא שונה, והספיקה בכניסה לראקטור היא <span class="math inline">\(n_{1}^{*}\)</span> במקרה זה לא תהיה 100mol אבל היחסים בין הזרמים חייבים להשמר ולכן השברים המולריים עבור המערכת הזו יהיה זהה לחישוב היחסים עבור המערכת השנייה}</p>
+<p>מהאילוץ:</p>
+<p><span class="math display">\[n_{CH_{4},2}^{*} = {\dot{n}}_{2}^{*}{\ y}_{CH_{4},2}\ \ \ \ y_{CH_{4},2} = 0.10\frac{mol}{mol}\]</span></p>
+<p><span class="math display">\[\Rightarrow n_{CH_{4},2}^{*} = 100\frac{mol}{h}*0.10\frac{mol}{mol} = 10\frac{mol}{h}\]</span></p>
+<p>לכן:</p>
+<p><span class="math display">\[{\dot{n}}_{2}^{*} = {\dot{n}}_{CO,2}^{*} + {\dot{n}}_{H_{2},2}^{*} + n_{CH_{4},2}^{*}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{CO,2}^{*} + {\dot{n}}_{H_{2},2}^{*} = 90\frac{mol}{h}\]</span></p>
+<p>נשתמש ביחס בין המימן לCO</p>
+<p><span class="math display">\[\frac{n{\dot{\text{ }}}_{H_{2,2}}^{*}}{{\dot{n}}_{CO,2}^{*}} = \frac{2}{1}\ \  \Longrightarrow \ \ \ {\dot{n}}_{H_{2},2}^{*} = 2{\dot{n}}_{CO,2}^{*}\]</span></p>
+<p>ולכן</p>
+<p><span class="math display">\[{\dot{n}}_{CO,2}^{*} + 2{\dot{n}}_{CO,2}^{*} = 90\frac{mol}{h}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{CO,2}^{*} = 30\frac{mol}{h},\ \ \ \ \ \ \ \ \ \ \ {\dot{n}}_{H_{2},2}^{*} = 60\frac{mol}{h}\]</span></p>
+<p><span class="math display">\[y_{CO,2}^{*} = 0.3,\ \ \ \ \ \ \ \ \ \ \ y_{H_{2},2}^{*} = 0.6\frac{mol}{h}\]</span></p>
+<p>כעת נשתמש במקדם ההמרה <span class="math inline">\(X_{sp,CO} = 0.40\)</span>:</p>
+<p><span class="math display">\[X_{sp,CO} = \frac{{\dot{n}}_{CO,2}^{*} - {\dot{n}}_{CO,3}^{*}}{{\dot{n}}_{CO,2}^{*}}\  = &gt; \ {\dot{n}}_{CO,3}^{*} = {\dot{n}}_{CO,2}^{*}\left( 1 - X_{SP} \right)\ \]</span></p>
+<p><span class="math display">\[\ {\dot{N}}_{CO,3}^{*} = {\dot{n}}_{CO,2}^{*}\left( 1 - X_{SP} \right)\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{CO,3}^{*} = 30\frac{mol}{h}(1 - 0.4) = 18\frac{mol}{h}\]</span> ושוב לפי יחס המגיבים</p>
+<p><span class="math display">\[{\dot{n}}_{H_{2},3}^{*} = 2{\dot{n}}_{CO,3}^{*}\ \ \ \  = &gt; {\dot{n}}_{H_{2},3}^{*} = 2*18\frac{mol}{h} = 36\frac{mol}{h}\ \ \ \ \]</span></p>
+<p>כמות החומר האינרטי לא משתנה:</p>
+<p><span class="math display">\[{\dot{n^{*}}}_{CH_{4},3} = 10\]</span></p>
+<p>ונוצר מתנול לפי היחסים הסטויכיומטרים –</p>
+<p><span class="math display">\[\frac{\nu_{CH_{3}OH,3}}{\nu_{CO,reacted}} = \frac{{\dot{n}}_{CH_{3}OH,3}}{{\dot{n}}_{CO,2}^{*}X_{SP}}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{CH_{3}OH,3} = \frac{\nu_{CH_{3}OH,3}}{\nu_{CO,reacted}}{\dot{n}}_{CO,2}^{*}X_{SP} = \frac{1}{1}*30\frac{mol}{h}*0.4 = 12\frac{mol}{h}\]</span></p>
+<p><span class="math display">\[{{\dot{n}}^{*}}_{CH_{3}OH,3} = 12\frac{mol}{h}\]</span> כעת אנחנו יודעים את הכמויות של כל החומרים ביציאה מהראקטור ולכן ניתן לחשב את השברים המוליים שלהם</p>
+<p><span class="math display">\[{\dot{n}}_{3}^{*} = {\dot{n}}_{CO,3}^{*} + {\dot{n}}_{H_{2},3}^{*} + n_{CH_{4},3}^{*} + {\dot{n}}_{CH_{3}OH,3}^{*}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{3}^{*} = 18\frac{mol}{h} + 36\frac{mol}{h} + 10\frac{mol}{h} + 12\frac{mol}{h} = 76\frac{mol}{h}\]</span></p>
+<p><span class="math display">\[{y_{CH_{4},3} = \frac{10\frac{mol}{h}}{76\frac{mol}{h}} = 0.13
+}{y_{CO,3} = \frac{18\frac{mol}{h}}{76\frac{mol}{h}} = 0.24
+}{y_{H_{2},3} = \frac{36\frac{mol}{h}}{76\frac{mol}{h}} = 0.47}\]</span></p>
+<p><span class="math display">\[y_{CH_{3}OH,3} = \frac{12\frac{mol}{h}}{76\frac{mol}{h}} = 0.16\]</span></p>
+</blockquote>
+<p>ומצאנו את היחסים המולריים ביציאה מהראקטור</p>
+<p>מאחר והמפריד יוצר הפרדה מלאה, וכל המתנול ממשיך לצד אחד, ושאר הגזים לזרם אחר, אנו יכולים למצוא גם את הרכב הגזים בזרם 4</p>
+<blockquote class="blockquote">
+<p><span class="math display">\[{y_{CH_{4},4} = \frac{10\frac{mol}{h}}{(76 - 12)\frac{mol}{h}} = 0.16
+}{y_{CO,4} = \frac{18\frac{mol}{h}}{(76 - 12)\frac{mol}{h}} = 0.28
+}{y_{H_{2},4} = \frac{36\frac{mol}{h}}{(76 - 12)\frac{mol}{h}} = 0.56}\]</span></p>
+</blockquote>
+<p>(אם רוצים לראות את זה באופן פורמלי אפשר לבנות את המאזנים המפריד על אותו בסיס חישוב זמני, או לחילופין להחליט מלכתחילה שעושים את כל החישובים על תת מערכת המכילה את הראקטור והמפריד. עם הזמן נדע לזהות זרמים כמו זרם 3 שמוסיפים לנו המון משתנים למערכת ומעט מאוד מידע, ולכן לבחור תת מערכות המכילות בתוכן את הזרמים הללו).</p>
+<blockquote class="blockquote">
+<p>חשוב לשים לב שגם כאן כל הערכים המוחלטים מתבססים על בסיס החישוב הזמני שלנו <span class="math inline">\({\dot{n}}^{*}\)</span>, ולכן נשתמש רק ביחסים ולא בערכים המוחלטים כשנחזור למערכת המלאה.</p>
+<p>כעת נסתכל על המערכת הכוללת עם בסיס חישוב <span class="math inline">\(\dot{n_{1}} = 100\frac{mol}{h}\)</span><br>
+ועם היחסים<br>
+<span class="math display">\[y_{CH_{4},4} = 0.16,\ \ \ \ y_{CO,4} = 0.28,\ \ \ \ \ y_{H_{2},4} = 0.56\]</span></p>
+</blockquote>
+<p>ונשארו לנו רק שני נעלמים <span class="math inline">\(\dot{n_{5},}\ \dot{n_{6}}\)</span></p>
+<blockquote class="blockquote">
+<p><u>מאזן על המתאן</u></p>
+<p><span class="math inline">\({\dot{n}}_{CH_{4},1} = {\dot{n}}_{6}*y_{CH_{4},6}\)</span></p>
+<p>{ אם אנחנו במצב עמיד אז כל המתאן שנכנס חייב לצאת בזרם הטיהור (אחרת תהיה הצטברות).}</p>
+<p><span class="math inline">\(4.0\frac{mol}{h} = {\dot{n}}_{6}*0.16\  \Rightarrow \ {\dot{n}}_{6} = 25.0\frac{mol}{h}\)</span></p>
+</blockquote>
+<p>ומספר המולים הכללי בזרם 6 יהיה שווה גם ל-</p>
+<p><span class="math display">\[{\dot{n}}_{6} = {\dot{n}}_{CH_{4},6} + {\dot{n}}_{H_{2},6} + {\dot{n}}_{CO,6}\]</span></p>
+<p>נזכור שקיים יחס קבוע בין ** <span class="math display">\[\frac{n_{CO}}{n_{H_{2}}} = \frac{y_{CO}}{y_{H_{2}}} = \frac{1}{2}\]</span></p>
+<p><span class="math display">\[25.0\frac{mol}{h} = 4.0\frac{mol}{h} + 2{\dot{n}}_{CO,6} + {\dot{n}}_{CO,6}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{CO,6} = 7.0\frac{mol}{h}\ \ \ \ ,\ \ \ {\dot{n}}_{H_{2},6} = 14.0\frac{mol}{h}\ \ \]</span></p>
+<p>נעצור ונזכר מה שאלו אותנו</p>
+<p>מהי כמות המתנול אשר נוצרת בתהליך ומהו מקדם ההמרה הכללי?<br>
+מה צריך להיות התחזיר על מנת שהתהליך ישאר במצב עמיד?</p>
+<blockquote class="blockquote">
+<p><u>מאזן על ה CO</u></p>
+<p><span class="math display">\[{\dot{n}}_{in} = {\dot{n}}_{reacted} + {\dot{n}}_{out}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{CO,1} = {\dot{n}}_{co,reacted} + {\dot{n}}_{CO,6}\]</span></p>
+<p><span class="math display">\[32\frac{mol}{h} = {\dot{n}}_{co,reacted} + 7\frac{mol}{h}\ \  \Rightarrow \ {\dot{n}}_{co,reacted} = 25\frac{mol}{h}\]</span></p>
+<p>ולכן מקדם ההמרה הכללי יהיה <span class="math inline">\(X_{ov} = \frac{{\dot{n}}_{CO,1} - {\dot{n}}_{CO,6}}{{\dot{n}}_{CO,1}}\)</span></p>
+<p><span class="math display">\[X_{ov} = \frac{32\frac{mol}{h} - 7\frac{mol}{h}}{32\frac{mol}{h}} = 0.78\ או\ \ 78\%\]</span></p>
+<p><u>מאזן על המתנול</u></p>
+<p><span class="math display">\[{\dot{n}}_{in} + {\dot{n}}_{generated} = {\dot{n}}_{out}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{CH_{3}OH,gen} = \frac{\nu_{CH_{3}OH}}{\nu_{CO}}{\dot{n}}_{co,reacted}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{CH_{3}OH,gen} = \frac{1}{1}*25\frac{mol}{h} = 25\frac{mol}{h}\]</span></p>
+<p>על מנת למצוא את התחזיר נצטרך להשתמש בנתונים מתוך הלולאה<br>
+נזכר ביחסים שמצאנו ** <span class="math display">\[y_{CO,2}^{} = 0.3,\ \ \ \ \ \ \ \ \ \ \ y_{H_{2},2}^{} = 0.6\frac{mol}{h}\]</span></p>
+<p><span class="math display">\[y_{CH_{4},4} = 0.16,\ \ \ \ y_{CO,4} = 0.28,\ \ \ \ \ y_{H_{2},4} = 0.56\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{CO,6} = 7.0\frac{mol}{h}\ \ \ \ ,\ \ \ {\dot{n}}_{H_{2},6} = 14.0\frac{mol}{h}\]</span></p>
+<p>ומתוך המאזן על נקודת הערבוב</p>
+<p>אין תגובה אז מספר המולים שנכנס חייב להיות שווה למספר המולים שיוצא</p>
+<p><span class="math display">\[{\dot{n}}_{in} + {\dot{n}}_{7} = {\dot{n}}_{2}\]</span></p>
+<p>מאזנים על הCO</p>
+<p><span class="math display">\[{\dot{n}}_{CO,in} + {\dot{n}}_{CO,7} = {\dot{n}}_{CO,2} \Rightarrow 32\frac{mol}{h} + 0.28{\dot{n}}_{7} = 0.3{\dot{n}}_{2}\]</span></p>
+<p><span class="math display">\[100\frac{mol}{h} + {\dot{n}}_{7} = {\dot{n}}_{2}\]</span></p>
+<p><span class="math display">\[32\frac{mol}{h} + 0.28{\dot{n}}_{7} = 0.3{\dot{n}}_{2}\]</span></p>
+<p>נחלק משוואות</p>
+<p><span class="math display">\[\frac{32\frac{mol}{h} + 0.28{\dot{n}}_{7}}{100\frac{mol}{h} + {\dot{n}}_{7}} = 0.3\]</span></p>
+<p><span class="math display">\[32\frac{mol}{h} + 0.28{\dot{n}}_{7} = 30\frac{mol}{h} + 0.3{\dot{n}}_{7}\]</span></p>
+<p><span class="math display">\[2\frac{mol}{h} = 0.02{\dot{n}}_{7}\  \Rightarrow \ {\dot{n}}_{7} = 100\frac{mol}{h}\]</span></p>
+<p><span class="math display">\[{\dot{n}}_{in} + {\dot{n}}_{7} = {\dot{n}}_{2} = 100\frac{mol}{h} + 100\frac{mol}{h} = 200\frac{mol}{h}\]</span></p>
+<p>נבדוק את עצמינו עם מאזן על המתאן</p>
+<p><span class="math display">\[{\dot{n}}_{in,CH_{4}} + {\dot{n}}_{7}y_{CH_{4},4} = {\dot{n}}_{2}y_{CH_{4},2}\]</span></p>
+<p><span class="math display">\[4\frac{mol}{h} + 100\frac{mol}{h}0.16\overset{?}{\overbrace{=}}200\frac{mol}{h}*0.1\]</span></p>
+</blockquote>
+<p>ורואים שהמאזן מתקיים.</p>
+<p>התחזיר הוא זרם למעשה זרם 7 <span class="math display">\[{\dot{n}}_{7} = 100\frac{mol}{h}\]</span></p>
+</div>
 </section>
+</section>
+</section>
+<section id="תגובות-שריפה" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="תגובות-שריפה"><span class="header-section-number">4.8</span> תגובות שריפה</h2>
+<p>תגובות שריפה הן מהתגובות הכימיות המוכרות והאינטואיטיביות ביותר: כולנו יודעים שדלק “נשרף”, שדרוש חמצן, ושמתקבלים חום וגזי פליטה, אך מעבר לכך תגובות שריפה הן אולי הסוג הנפוץ והחשוב ביותר של תגובות כימיות בתעשייה. יש סוגים רבים של תגובות שריפה אך כולן מתבססות על אותו העקרון</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p>תגובת שריפה - תגובה מהירה בין <strong>דלק</strong> (Fuel) לבין <strong>מחמצן</strong> (Oxidizer) המשחררת כמות גדולה של אנרגיה.</p>
+</div>
+<p>מנקודת מבט של הנדסת תהליכים, שריפה היא מקרה פרטי ומאוד שימושי של תגובה כימית. מבחינת מהנדס התהליך, שריפה היא "רק" עוד תגובה כימית, וכל חוקי מאזני החומר שלמדנו (כולל מגיב מגביל, המרה וסטויכיומטריה) חלים גם כאן בדיוק באותו אופן. עם זאת, בגלל השכיחות העצומה וההיסטורית של התהליכים הללו, התפתח עבורם ז'רגון מקצועי ייחודי. מסיבה זו, תגובות שריפה משמשות מודל קלאסי ללימוד ולתרגול של מושגי יסוד בניתוח מערכות עם תגובות כימיות.</p>
+<section id="מושגי-היסוד" class="level3" data-number="4.8.1">
+<h3 data-number="4.8.1" class="anchored" data-anchor-id="מושגי-היסוד"><span class="header-section-number">4.8.1</span> מושגי היסוד</h3>
+<section id="הדלק-fuel" class="level4" data-number="4.8.1.1">
+<h4 data-number="4.8.1.1" class="anchored" data-anchor-id="הדלק-fuel"><span class="header-section-number">4.8.1.1</span> הדלק (Fuel)</h4>
+<p>הדלק הוא חומר הגלם אותו אנו שורפים במטרה להפיק אנרגיה תרמית. מבחינה כימית, רוב הדלקים התעשייתיים הם <strong>פחמימנים</strong> (Hydrocarbons) - תרכובות אורגניות הבנויות בעיקר מאטומי פחמן (C) ומימן (H). האנרגיה הרבה המשתחררת בתהליך השריפה נובעת מפירוק הקשרים הכימיים במולקולות הדלק ויצירת קשרים חדשים ויציבים יותר עם החמצן.</p>
+<p>נהוג לסווג את הדלקים לפי מצב הצבירה שלהם, שכן הוא מכתיב את אופן הטיפול בהם ואת הציוד ההנדסי הנדרש. <strong>דלקים גזיים</strong>, ובראשם הגז הטבעי (Natural Gas), הם הנפוצים והנקיים יחסית. במודלים פשוטים נהוג להתייחס לגז טבעי כאל מתאן טהור (<span class="math inline">\({CH}_{4}\)</span>( בפועל הוא מכיל תערובת של פחמימנים קלים נוספים (כגון אתאן ופרופאן) ולעיתים גם גזים שאינם דליקים. <strong>דלקים נוזליים</strong>, כמו הבנזין, הסולר והמזוט, הם תוצרי זיקוק של נפט גולמי. דלקים אלו הם תערובות מורכבות של מאות סוגי מולקולות, ולכן בחישובי הנדסה נהוג לייצג אותם באמצעות נוסחה כימית "ממוצעת" או באמצעות הרכב משקלי (<span class="math inline">\(wt\%\)</span>). הקבוצה השלישית היא <strong>דלקים מוצקים,</strong> כאשר הנציג הבולט הוא הפחם (Coal) המורכב ברובו מפחמן.</p>
+<p>חשוב לזכור כי בניגוד למתרחש במעבדה הסטרילית או בתרגילי הכימיה התיאורטיים, הדלקים במציאות התעשייתית אינם טהורים. הם מכילים רכיבים נוספים ("אי-ניקיונות") המשפיעים מהותית על תהליך השריפה ועל חישובי המאזן. הזיהום המשמעותי ביותר הוא הגופרית (S), המצויה באופן טבעי בנפט ובפחם. בתהליך השריפה, הגופרית מתנהגת באופן דומה לפחמן – היא מתרכבת עם החמצן ונשרפת על פי המשוואה:</p>
+<p><span class="math display">\[S + O_{2} \rightarrow SO_{2}\]</span></p>
+<p>התוצר, גופרית דו-חמצנית (<span class="math inline">\(SO_{2}\)</span>), הוא גז רעיל המהווה מקור זיהום סביבתי חמור (גשם חומצי). מבחינת מהנדס התהליך, נוכחות גופרית מחייבת התייחסות כפולה: ראשית, הגופרית צורכת חמצן ולכן משפיעה על כמות האוויר שיש להזין למערכת; ושנית, יש לקחת בחשבון את הטיפול בתוצרי הלוואי הנוצרים.</p>
+<p>מלבד הגופרית, דלקים (ובמיוחד פחם) מכילים לרוב גם <strong>אפר</strong> (Ash) - מינרלים ומתכות שאינם משתתפים בתגובה הכימית, נכנסים ויוצאים מהמערכת כמוצק, ומהווים פסולת שיש לסלק. כמו כן, דלקים עשויים להכיל אחוזי <strong>לחות</strong> (מים) משמעותיים. המים אמנם אינם נשרפים, אך הם מתאדים במהלך התהליך, גוזלים אנרגיה ומשפיעים על הרכב הגזים בארובה.</p>
+</section>
+<section id="המחמצן-oxidizer" class="level4" data-number="4.8.1.2">
+<h4 data-number="4.8.1.2" class="anchored" data-anchor-id="המחמצן-oxidizer"><span class="header-section-number">4.8.1.2</span> המחמצן (Oxidizer)</h4>
+<p>הרכיב השני ההכרחי בכל תגובת שריפה הוא ה<strong>מחמצן</strong> (Oxidizer). בעוד שבמעבדה או ביישומים ייחודיים (כגון טילים) אנו עשויים להשתמש בחמצן טהור או במי-חמצן, הרי שבתעשייה התהליכית הכבדה המחמצן הכמעט בלעדי הוא <strong>האוויר</strong>. הסיבה לכך היא כלכלית גרידא: האוויר זמין, זול ואינו דורש אחסון.</p>
+<p>עם זאת, השימוש באוויר מציב בפנינו אתגר חישובי: האוויר הוא תערובת גזים, ולא חומר טהור. המודל המקובל מתייחס ל"אוויר יבש" המכיל חנקן וחמצן בלבד.</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p>אוויר יבש מורכב משני הגזים ביחס מולרי קבוע:</p>
+<p>21% חמצן (<span class="math inline">\(O_{2}\)</span>) - זהו הרכיב הפעיל המשתתף בתגובה.</p>
+<p>79% חנקן (<span class="math inline">\(N_{2}\)</span>) - רכיב אינרטי (אדיש).</p>
+<p>המשקל המולקולרי הממוצע של תערובת זו הוא ערך שחשוב לזכור בעל-פה <span class="math inline">\(MW_{air} \approx 29\frac{g}{mol}\)</span>.</p>
+</div>
+<p>בפועל אוויר אמיתי מכיל אדי מים (לחות), ארגון (Ar) פחמן דו-חמצני וגזים אצילים נוספים, אך לצורך חישובים הנדסיים של שריפה נהוג להזניח אותם אלא אם צוין אחרת במפורש.</p>
+<p>החנקן, למרות שאינו משתתף פעיל בתגובת השריפה עצמה, הוא בעל השפעה משמעותית על התהליך. הוא תופס נפח ומקטין את הלחץ החלקי של החמצן, מה שעשוי להשפיע על קצב התגובה. וחשוב מכך, החנקן קולט כמות אדירה של חום בתהליך השריפה ויוצא איתו דרך הארובה, מה שמוריד את היעילות האנרגטית של התהליך כולו.</p>
+<p>לכן, חשוב לשים לב ליחס בין החמצן לחנקן במערכת. על כל מול של חמצן שאנו מזינים למערכת (במטרה לשרוף את הדלק), אנו נאלצים להזין יחד איתו כמות גדולה של חנקן:</p>
+<p><span class="math display">\[\frac{79\text{ mol }N_{2}}{21\text{ mol }O_{2}} = 3.76\frac{\text{mol }N_{2}}{\text{mol }O_{2}}\]</span></p>
+<p>במילים אחרות, ברגע שחישבנו כמה חמצן אנו זקוקים לצורך התגובה, נדע מיד כי כמות החנקן הנלווית אליו גדולה ממנו כמעט פי ארבע.</p>
+</section>
+</section>
+<section id="הכימיה-של-השריפה-תגובות-ותוצרים" class="level3" data-number="4.8.2">
+<h3 data-number="4.8.2" class="anchored" data-anchor-id="הכימיה-של-השריפה-תגובות-ותוצרים"><span class="header-section-number">4.8.2</span> הכימיה של השריפה: תגובות ותוצרים</h3>
+<p>כעת, כשיש לנו דלק ומחמצן, מתרחש המפגש ביניהם. תהליך השריפה הוא למעשה שרשרת מהירה של תגובות חמצון אקסותרמיות (פולטות חום). זהות התוצרים הסופיים תלויה בזמינות החמצן ובאופי התהליך, כאשר אנו מבחינים בין שני מצבים עיקריים: שריפה מלאה ושריפה חלקית.</p>
+<p><u>שריפה מלאה (Complete Combustion)</u></p>
+<p>זהו המצב האידיאלי והרצוי ברוב היישומים ההנדסיים.</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p>בשריפה מלאה, אנו מניחים שיש מספיק חמצן וזמן שהייה מספק בריאקטור, כך שכל רכיב בדלק מתחמצן לדרגת החמצון הגבוהה ביותר (היציבה ביותר) שלו</p>
+</div>
+<ul>
+<li><p>כל הפחמן (<span class="math inline">\(C\)</span>) הופך לפחמן דו-חמצני (<span class="math inline">\(CO_{2}\)</span>)</p></li>
+<li><p>כל המימן (<span class="math inline">\(H\)</span>) הופך למים (<span class="math inline">\(H_{2}O\)</span>)</p></li>
+</ul>
+<p>לדוגמא, משוואת השריפה המלאה של פרופאן (<span class="math inline">\(C_{3}H_{8}\)</span>):</p>
+<blockquote class="blockquote">
+<p><span class="math display">\[C_{3}H_{8} + 5O_{2} \rightarrow 3CO_{2} + 4H_{2}O\]</span></p>
+</blockquote>
+<ul>
+<li>כמו כן, כל הגופרית (<span class="math inline">\(S\)</span>), אם קיימת בדלק, הופכת לגופרית דו-חמצנית (<span class="math inline">\(SO_{2}\)</span>)</li>
+</ul>
+<p><u>שריפה חלקית (Partial Combustion)</u></p>
+<p>במציאות, תהליכים אינם מושלמים. לעיתים כמות החמצן אינה מספקת, או שהערבוב בין הדלק לאוויר אינו אחיד. במצבים אלו, הפחמן אינו משלים את תהליך החמצון ל<span class="math inline">\(CO_{2}\)</span> ונוצרים תוצרי ביניים: פחמן חד-חמצני (<span class="math inline">\(CO\)</span>) או אפילו פיח (C – פחמן מוצק). היווצרות <span class="math inline">\(CO\)</span> היא בעייתית במיוחד, קודם כל זהו גז רעיל מאוד, ומעבר לכך - היווצרותו מעידה על בזבוז אנרגיה, שכן המעבר מ<span class="math inline">\(CO\)</span> ל<span class="math inline">\(CO_{2}\)</span> יכול היה לשחרר חום נוסף שלא נוצל. באותו אופן יכולה להיות שריפה חלקית גם של הגופרית.</p>
+<p><u>גזי הפליטה (Flue Gas / Stack Gas)</u></p>
+<p>הזרם היוצא מהארובה בסופו של התהליך נקרא "גז פליטה". ניתוח ההרכב שלו הוא הכלי המרכזי שלנו לבקרת התהליך ולביצוע מאזני חומר. זרם זה הוא תערובת הכוללת את תוצרי השריפה (<span class="math inline">\(CO_{2},H_{2}O,SO_{2}\)</span>), את החמצן העודף שלא הגיב <span class="math inline">\(O_{2}\)</span>, וכמובן את כמות החנקן הגדולה (<span class="math inline">\(N_{2}\)</span>) שנכנסה עם האוויר ויצאה ללא שינוי.</p>
+</section>
+<section id="הרכב-גזים-בסיס-רטוב-מול-בסיס-יבש" class="level3" data-number="4.8.3">
+<h3 data-number="4.8.3" class="anchored" data-anchor-id="הרכב-גזים-בסיס-רטוב-מול-בסיס-יבש"><span class="header-section-number">4.8.3</span> הרכב גזים: בסיס רטוב מול בסיס יבש</h3>
+<p>כאשר אנו נדרשים לנתח את הרכב גזי הפליטה (למשל, כדי לבדוק אם עמדנו בתקני איכות הסביבה או כדי לחשב את יעילות השריפה), אנו נתקלים לעיתים קרובות בבלבול הנובע משיטת המדידה. גזי הפליטה יוצאים מהתהליך בטמפרטורה גבוהה מאוד. רוב מכשירי המדידה (החל ממכשיר ה"אורסט" הקלאסי ועד חיישנים אלקטרוניים מודרניים) אינם יכולים לעבוד בטמפרטורות אלו. כדי לבצע את המדידה, לוקחים דגימה מהגז ומקררים אותה לטמפרטורת החדר. בנקודה זו קורה דבר קריטי: אדי המים שהיו בגז מתעבים והופכים לנוזל, והמכשיר מודד רק את הגזים שנשארו במצב גז. (חמצן, חנקן,<span class="math inline">\(CO_{2}\)</span>, וכו...) ומתעלם לחלוטין מהמים שהפכו לנוזל וסולקו. התוצאה שמתקבלת נקראת אנליזה על בסיס יבש (Dry Basis Analysis) והיא מציגה את הרכב הגז כאילו המים מעולם לא היו שם.</p>
+<p>לכן, נהוג להתייחס להרכב גזי הפליטה בשני אופנים שונים החשובים במידה שווה:</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p>בסיס רטוב (Wet Basis): ההרכב האמיתי של הגז אשר נפלט מהתהליך, במקרה זה נחשב את השברים המוליים תוך התייחסות לכלל המרכיבים – כולל המים. <span class="math display">\[y_{i,wet} = \frac{n_{i}}{n_{total,wet}}\]</span></p>
+</div>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p>בסיס יבש (Dry Basis): היחס בין כמות כל רכיב לבין סך הגזים היבשים בלבד (ללא המים). זהו הגודל אשר לרוב ישתקף במכשירי המדידה בהם משתמשים לצורך ניתוח הדגימות. <span class="math display">\[y_{i,dry} = \frac{n_{i}}{n_{total,wet} - n_{H_{2}O}} = \frac{n_{i}}{n_{total,dry}}\]</span></p>
+</div>
+<div class="callout callout-example example" title="דוגמה" data-collapse="false">
+<p>נניח שיש לנו גז פליטה המורכב מ-100 מולים סך הכל: 20 מול <span class="math inline">\(H_{2}O\)</span>, 10 מול <span class="math inline">\(CO_{2}\)</span> ו-70 מול <span class="math inline">\(N_{2}\)</span>.</p>
+<p>בסיס רטוב:</p>
+<p><span class="math display">\[y_{{CO}_{2},wet} = \frac{10molCO_{2}}{100mol} = 0.1\ \ \ ;\ \ \ \ y_{N_{2},wet} = \frac{70molN_{2}}{100mol} = 0.7\ \]</span></p>
+<p><span class="math display">\[y_{H_{2}O,wet} = \frac{20molH_{2}O}{100mol} = 0.2\ \ \ \ \ \ \]</span></p>
+<p>בסיס יבש: כמות הגז היבש היא <span class="math inline">\(100mol - 20mol = 80mol\)</span></p>
+<p>ובהתאם - ** <span class="math display">\[y_{{CO}_{2},dry} = \frac{10molCO_{2}}{80mol} = 0.125\ \ \ ;\ \ \ \ y_{N_{2},dry} = \frac{70molN_{2}}{80mol} = 0.875\ \]</span></p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>בעת ניתוח מערכות מסוג זה, חשוב לדעת לעבור בקלות בין שתי דרכי ההצגה.</p>
+<p>במעבר מבסיס רטוב לבסיס יבש הוא פשוט יחסית. נבחר בסיס חישוב (לרוב 100 מול גז רטוב), נחסיר את כמות המים ונחשב את השברים מחדש ביחס לסכום היבש.</p>
+<p>המעבר מבסיס יבש לבסיס רטוב הוא מעט יותר מורכב מכיוון שאם ההרכב הוא יבש אנו לא יכולים לדעת כמה מים היו שם במקור. אנו נהיה חייבים למצוא נתון חיצוני היכול להצביע על כמות המים שהיתה בתוצר (כמו מאזן על המימן) ומשם נשחזר את ההרכב הרטוב.</p>
+</div>
+</div>
+</section>
+<section id="אוויר-תיאורטי-ואוויר-עודף" class="level3" data-number="4.8.4">
+<h3 data-number="4.8.4" class="anchored" data-anchor-id="אוויר-תיאורטי-ואוויר-עודף"><span class="header-section-number">4.8.4</span> אוויר תיאורטי ואוויר עודף</h3>
+<p>בשריפה אידיאלית, ניתן לחשב באופן חד־משמעי את כמות החמצן הדרושה לתגובה על פי הסטויכיומטריה של הדלק. בפועל, תהליכי שריפה תעשייתיים כמעט תמיד פועלים עם כמות גדולה יותר של אוויר, המכונה אוויר עודף. הסיבה לכך אינה סטויכיומטרית אלא תפעולית: ערבוב לא מושלם, מגבלות קינטיות ותנאי זרימה מחייבים אספקת חמצן מעבר לדרוש על פי המשוואה הכימית, כדי להבטיח שריפה מלאה ולהפחית היווצרות תוצרים בלתי רצויים כגון פחמן חד־חמצני. כדי לכמת את העודף הזה בצורה אחידה, עלינו להגדיר תחילה מושג ייחוס שנקרא "אוויר תיאורטי".</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p>חמצן תיאורטי (<span class="math inline">\(O_{2,theoretical}\)</span>): זוהי כמות החמצן המינימלית הנדרשת כדי לשרוף את כל הדלק שהוזן למערכת שריפה מלאה.</p>
+</div>
+<p>במקרה זה אנו מניחים שהיה חמצון מלא של כל האטומים המשתתפים בתגובה כך שכל הפחמנים הפכו לפחמן דו חמצני, כל המימנים הפכו למים, וכל הגופרית (אם יש) הפכה לגופרית דו חמצנית. חישוב החמצן התיאורטי מבוסס אך ורק על הרכב הדלק ועל משוואות התגובה, והוא מניח שכל החמצן המוזן למערכת מגיב בפועל. במובן זה, החמצן התיאורטי הוא גודל חישובי אידיאלי, המשמש נקודת ייחוס לניתוח תהליכי שריפה.</p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p>אוויר תיאורטי (<span class="math inline">\(Air_{theoretical}\)</span>): מכיוון שאנו שורפים עם אוויר ולא עם חמצן טהור, אנו נדרשים לחשב את כמות האוויר שתספק לנו את הכמות החמצן התיאורטי אשר חישבנו קודם לכן.</p>
+</div>
+<p>כזכור, האוויר מכיל 21% חמצן מולרי, ולכן:</p>
+<p><span class="math display">\[n_{air,theoretical} = \frac{n_{O_{2},theoretical}}{0.21}\]</span></p>
+<div class="callout callout-note definition" title="הגדרה" data-collapse="false">
+<p>אחוז עודף אוויר (% Excess Air): מדד לכמות האוויר שהכנסנו מעבר למינימום הנדרש.</p>
+</div>
+<p>הנוסחה לחישוב אחוז העודף היא:</p>
+<p><span class="math display">\[\%\text{Excess} = \frac{n_{fed} - n_{theoretical}}{n_{theoretical}} \times 100\%\]</span></p>
+<p>כאשר נרצה לתכנן תהליך, נוכל לחשב מהו האויר התיאורטי, להגדיר את אחוז האויר העודף בו אנו מעוניינים וכך לחשב כמה אוויר להזין בפועל.</p>
+<p><span class="math display">\[n_{fed} = n_{theoretical} \times \left( 1 + \frac{\%\text{Excess}}{100} \right)\]</span></p>
+<p>אם תגובה דורשת תיאורטית 10 מול חמצן ז"א שהאויר התיאורטי יהיה</p>
+<p><span class="math display">\[n_{air,theoretical} = \frac{n_{O_{2},theoretical}}{0.21}\  = \frac{10mol}{0.21} = 48\ mol\ air\]</span></p>
+<p>אם נרצה לעבוד ב50% אויר עודף יהיה עלינו להזין בפועל</p>
+<p><span class="math display">\[n_{fed} = 48mol \times \left( 1 + \frac{50}{100} \right) = 72\ mol\ air\]</span></p>
+<p>24 המולים ה"מיותרים" של האוויר לא ישתתפו בתגובה, אלא יתחממו ויצאו בארובה יחד עם החנקן.</p>
+<p>בכימיה נהוג לעיתים להניח שעודף חמצן מוביל לשריפה מלאה, אולם בניתוח הנדסי אין מניחים זאת מראש. אנו קובעים את אופי השריפה על פי הרכב התוצרים בפועל. אוויר עודף הוא פרמטר תפעולי המשפיע על אופן התרחשות השריפה, אך אינו מגדיר אותה.</p>
+<p>לתוך תא שריפה (Combustion Chamber) מוזן גז אתאן (<span class="math inline">\(C_{2}H_{6}\)</span>) ואוויר ב-20% עודף. אנליזה של גזי הפליטה מראה שהם מכילים פחמן דו חמצני, חנקן, חמצן ושאריות של אתאן. מאותה אנליזה הסיקו כי אחוז ההמרה של האתאן הוא 90% בלבד.<br>
+א. איזו תגובה/תגובות מתרחשות בתא השריפה? הסבירו<br>
+ב. מהי כמות האוויר (מולים) המוזנת לכל 100 מול אתאן.<br>
+ג. מהו הרכב גזי הפליטה ביציאה מהארובה? יש לחשב על בסיס רטוב ועל בסיס יבש.</p>
+<p>אנו רואים שהתרחשה לנו רק שריפה מלאה (אחרת היה לנו גם פחמן חד חמצני/שאריות פחמן בתוצרים)</p>
+<p>ציור המערכת <img src="images\IntroToCHemEng2/media/image74.png" style="width:6.5in;height:1.61528in"></p>
+<p>מדוע לא רואים מים בתוצרים? מפני שהם מתעבים לפני שמכניסים אותם למכשיר האנליזה. ציור יותר נכון של המערכת יהיה</p>
+<p><img src="images\IntroToCHemEng2/media/image75.png" style="width:6.5in;height:2.01944in"><br>
+ניתוח דרגות חופש בסיסי על המערכת המלאה -<br>
+נעלמים – בזרם הכניסה – <span class="math inline">\(n_{C_{2}H_{6},\ in}\ \ ,\ \ n_{O_{2},\ in}\ \ \ \ ,\ n_{N_{2},in}\)</span></p>
+<p>ביציאה <span class="math inline">\(n_{C_{2}H_{6},\ out}\ \ ,\ \ n_{O_{2},\ out}\ \ \ \ ,\ n_{N_{2},out},\ \ \ \ n_{{CO}_{2},\ out}\ \ \ \ ,\ n_{H_{2}O,out}\)</span></p>
+<p>סך הכל 8 נעלמים.</p>
+<p>משוואות ואילוצים –</p>
+<ol type="1">
+<li><p>בסיס חישוב (100 מול אתאן, לפי השאלה)</p></li>
+<li><p>קשר בין חנקן לחמצן באוויר</p></li>
+<li><p>קשר בין הדלק שנכנס לאוויר הנכנס (20% עודף)</p></li>
+<li><p>הקשר בין דלק נכנס לדלק יוצא</p></li>
+<li><p>מאזני אטומים עצמאיים – C,H,N,O</p></li>
+</ol>
+<p>סך הכל 8 משוואות.</p>
+<p>המשוואה מוגדרת היטב וניתנת לפתרון יחיד.</p>
+<p>פתרון</p>
+<p>קודם כל ננסח תגובת שריפה עבור אתאן ונאזן</p>
+<p><span class="math display">\[C_{2}H_{6} + 3.5\ O_{2} \rightarrow 2CO_{2} + 3H_{2}O\]</span></p>
+<p>נחשב את החמצן התיאורטי לצורך חישוב האוויר שנכנס למערכת.</p>
+<p><span class="math display">\[n_{O_{2},\ theroetical} = n_{C_{2}H_{6},\ in}*\frac{\nu_{O_{2}}}{\nu_{C_{2}H_{6}}} = 100mol*3.5 = 350\ mol\ O_{2}\]</span></p>
+<p>אוויר תיאורטי</p>
+<p><span class="math display">\[n_{air,theoretical} = \frac{n_{O_{2},\ theroetical}}{0.21} = \frac{350mol}{0.21} = 1670\ mol\ air\]</span></p>
+<p>אוויר עודף</p>
+<p><span class="math display">\[n_{fed} = n_{theoretical} \times \left( 1 + \frac{\%\text{Excess}}{100} \right)\]</span></p>
+<p><span class="math display">\[n_{fed} = 1670 \times \left( 1 + \frac{20}{100} \right) = 2000\ mol\ air\]</span></p>
+<p><span class="math display">\[n_{fed,O_{2}} = 420mol\ \ \ \ \ n_{fed,N_{2}} = 1580mol\ \ \ \ \ \]</span></p>
+<p>מה קרה בפועל? נבצע מאזן חומר</p>
+<p>אתאן - <span class="math inline">\(n_{C_{2}H_{6},\ in} = n_{C_{2}H_{6},\ reacted} + n_{C_{2}H_{6},\ out}\)</span></p>
+<p><span class="math display">\[X = \frac{n_{C_{2}H_{6},\ in} - n_{C_{2}H_{6},\ out}}{n_{C_{2}H_{6},\ in}} = 0.9\]</span></p>
+<p><span class="math display">\[n_{C_{2}H_{6},\ in} = 100mol\ \ ;\ n_{C_{2}H_{6},\ out} = 10mol\ ;\ \ n_{C_{2}H_{6},\ reacted} = 90mol\ \]</span></p>
+<p>חמצן נצרך (לפי המקדמים הסטויכיומטריים)</p>
+<p><span class="math display">\[n_{O_{2},\ reacted} = \frac{\nu_{O_{2}}}{\nu_{C_{2}H_{6}}}n_{C_{2}H_{6},\ reacted} = \frac{3.5}{1}*90mol = 315mol\]</span></p>
+<p>מאזן על חמצן</p>
+<p><span class="math display">\[n_{O_{2},\ in} = n_{O_{2},\ reacted} + n_{O_{2},\ out}\]</span></p>
+<p><span class="math display">\[n_{O_{2},\ out} = 420mol - 315mol = 105mol\]</span></p>
+<p>פחמן דו חמצני</p>
+<p><span class="math display">\[n_{{CO}_{2},gen} = n_{{CO}_{2},\ out}\]</span></p>
+<p><span class="math display">\[n_{{CO}_{2},gen} = \frac{\nu_{{CO}_{2}}}{\nu_{C_{2}H_{6}}}n_{C_{2}H_{6},\ reacted} = \frac{3}{1}*90mol = 270mol\]</span></p>
+<p>מים</p>
+<p><span class="math display">\[n_{H_{2}O,gen} = n_{H_{2}O,\ out}\]</span></p>
+<p><span class="math display">\[n_{H_{2}O,gen} = \frac{\nu_{H_{2}O}}{\nu_{C_{2}H_{6}}}n_{C_{2}H_{6},\ reacted} = \frac{2}{1}*90mol = 180mol\]</span></p>
+<p>הרכב על בסיס רטוב</p>
+<p><img src="images\IntroToCHemEng2/media/image76.png" style="width:6.5in;height:2.6375in"></p>
+<p>הרכב על בסיס יבש</p>
+<p><img src="images\IntroToCHemEng2/media/image77.png" style="width:4.20855in;height:1.91677in"></p>
+
+
 </section>
 </section>
 
