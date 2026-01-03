@@ -267,6 +267,15 @@ window.Quarto = {
   <li><a href="#אוויר-תיאורטי-ואוויר-עודף" id="toc-אוויר-תיאורטי-ואוויר-עודף" class="nav-link" data-scroll-target="#אוויר-תיאורטי-ואוויר-עודף"><span class="header-section-number">4.8.4</span> אוויר תיאורטי ואוויר עודף</a></li>
   <li><a href="#סיכום-תגובות-שריפה" id="toc-סיכום-תגובות-שריפה" class="nav-link" data-scroll-target="#סיכום-תגובות-שריפה"><span class="header-section-number">4.8.5</span> סיכום תגובות שריפה</a></li>
   </ul></li>
+  <li><a href="#סיכום-מאזני-חומר-בהנדסת-תהליכים" id="toc-סיכום-מאזני-חומר-בהנדסת-תהליכים" class="nav-link" data-scroll-target="#סיכום-מאזני-חומר-בהנדסת-תהליכים"><span class="header-section-number">4.9</span> סיכום מאזני חומר בהנדסת תהליכים</a>
+  <ul class="collapse">
+  <li><a href="#מערכות-ללא-תגובה-כימית" id="toc-מערכות-ללא-תגובה-כימית" class="nav-link" data-scroll-target="#מערכות-ללא-תגובה-כימית"><span class="header-section-number">4.9.1</span> מערכות ללא תגובה כימית</a></li>
+  <li><a href="#מערכות-עם-תגובה-כימית" id="toc-מערכות-עם-תגובה-כימית" class="nav-link" data-scroll-target="#מערכות-עם-תגובה-כימית"><span class="header-section-number">4.9.2</span> מערכות עם תגובה כימית</a></li>
+  <li><a href="#דרגות-חופש-dof" id="toc-דרגות-חופש-dof" class="nav-link" data-scroll-target="#דרגות-חופש-dof"><span class="header-section-number">4.9.3</span> דרגות חופש (DOF)</a></li>
+  <li><a href="#תגובות-שריפה-1" id="toc-תגובות-שריפה-1" class="nav-link" data-scroll-target="#תגובות-שריפה-1"><span class="header-section-number">4.9.4</span> תגובות שריפה</a></li>
+  <li><a href="#מערכות-עם-תחזיר-וזרם-סילוק" id="toc-מערכות-עם-תחזיר-וזרם-סילוק" class="nav-link" data-scroll-target="#מערכות-עם-תחזיר-וזרם-סילוק"><span class="header-section-number">4.9.5</span> מערכות עם תחזיר וזרם סילוק</a></li>
+  <li><a href="#אסטרטגיית-פתרון" id="toc-אסטרטגיית-פתרון" class="nav-link" data-scroll-target="#אסטרטגיית-פתרון"><span class="header-section-number">4.9.6</span> אסטרטגיית פתרון</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -2743,6 +2752,104 @@ CH_{4} + 1.5O_{2} \rightarrow CO + 2H_{2}O &amp; \xi_{2}
 <ul>
 <li>במעבר מבסיס יבש (נתון מדידה) לבסיס רטוב (נתון מאזן), חובה להשתמש בנתון חיצוני (כגון מאזן אטומי על מימן) כדי לשחזר את כמות המים המקורית<em>.</em></li>
 </ul>
+</section>
+</section>
+<section id="סיכום-מאזני-חומר-בהנדסת-תהליכים" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="סיכום-מאזני-חומר-בהנדסת-תהליכים"><span class="header-section-number">4.9</span> סיכום מאזני חומר בהנדסת תהליכים</h2>
+<p>מאזן חומר הוא הכלי המרכזי לניתוח תהליכים כימיים ופיזיקליים. הוא מבוסס על חוק שימור המסה ומאפשר לקשר בין זרמי כניסה, זרמי יציאה, ותהליכים המתרחשים בתוך מערכת.</p>
+<p>הביטוי הכללי של מאזן חומר עבור כל מערכת הוא:</p>
+<p><span class="math display">\[
+\text{Input} - \text{Output} + \text{Generation} - \text{Consumption} = \text{Accumulation}
+\]</span></p>
+<p>ובמצב עמיד:</p>
+<p><span class="math display">\[
+\text{Input} + \text{Generation} = \text{Output} + \text{Consumption}
+\]</span></p>
+<p>השלב הקריטי בכל יישום הוא הגדרת גבול מערכת וזיהוי הזרמים החוצים אותו.</p>
+<section id="מערכות-ללא-תגובה-כימית" class="level3" data-number="4.9.1">
+<h3 data-number="4.9.1" class="anchored" data-anchor-id="מערכות-ללא-תגובה-כימית"><span class="header-section-number">4.9.1</span> מערכות ללא תגובה כימית</h3>
+<p>במערכות פיזיקליות בלבד (ללא תגובה כימית) אין יצירה או צריכה של חומרים:</p>
+<ul>
+<li>לכל מין כימי מתקיים<br>
+<span class="math inline">\(\text{Input} = \text{Output}\)</span><br>
+</li>
+<li>הפתרון נשען על מאזנים מולקולריים, שברים מולריים ויחסי זרמים.<br>
+</li>
+<li>בדיקת דרגות חופש קובעת האם הנתונים מספיקים לפתרון חד-משמעי.</li>
+</ul>
+</section>
+<section id="מערכות-עם-תגובה-כימית" class="level3" data-number="4.9.2">
+<h3 data-number="4.9.2" class="anchored" data-anchor-id="מערכות-עם-תגובה-כימית"><span class="header-section-number">4.9.2</span> מערכות עם תגובה כימית</h3>
+<p>כאשר מתרחשת תגובה כימית:</p>
+<ul>
+<li>מולקולות נוצרות ונצרכות, אך אטומים נשמרים.<br>
+</li>
+<li>קיימות שלוש דרכי ייצוג שקולות של אותה פיזיקה:
+<ul>
+<li><strong>מאזן מולקולרי</strong> - כולל איברי יצירה וצריכה לכל מין.</li>
+<li><strong>מאזן אטומי</strong> - סופר אטומים בלבד, ללא תלות בזהות המולקולות.</li>
+<li><strong>מידת ההתקדמות</strong> (<span class="math inline">\(\xi\)</span>) - מרכזת את השינוי הכימי במשתנה אחד לכל ריאקציה.</li>
+</ul></li>
+<li>כל גישה מייצרת מערכת משוואות שונה, אך הפתרון הפיזיקלי זהה.</li>
+</ul>
+<p>במערכות עם יותר מריאקציה אחת:</p>
+<ul>
+<li>לא כל משוואת תגובה מוסיפה מידע חדש.</li>
+<li>ריאקציות נספרות רק אם הן <strong>בלתי תלויות</strong>, כלומר לא ניתנות להרכבה כצירוף לינארי של אחרות.</li>
+</ul>
+</section>
+<section id="דרגות-חופש-dof" class="level3" data-number="4.9.3">
+<h3 data-number="4.9.3" class="anchored" data-anchor-id="דרגות-חופש-dof"><span class="header-section-number">4.9.3</span> דרגות חופש (DOF)</h3>
+<p>ניתוח דרגות חופש הוא כלי לבדיקת פתירות:</p>
+<ul>
+<li>מספר דרגות החופש של מערכת הוא ההפרש בין מספר הנעלמים למספר המשוואות הבלתי תלויות.</li>
+<li>כדי שלמערכת יהיה פתרון יחיד (מערכת מוגדרת היטב), נדרש<br>
+<span class="math inline">\(\mathrm{DOF}=0\)</span>.</li>
+<li>במערכות עם תגובה ניתן לבצע את הספירה:
+<ul>
+<li>בגישה האטומית (נעלמים בזרמים בלבד).</li>
+<li>או בגישת <span class="math inline">\(\xi\)</span> / מאזן מולקולרי (כולל משתני תגובה).</li>
+</ul></li>
+<li>אילוצים פיזיקליים ונתונים תפעוליים מצמצמים DOF רק אם הם מערבים את נעלמי המערכת.</li>
+</ul>
+</section>
+<section id="תגובות-שריפה-1" class="level3" data-number="4.9.4">
+<h3 data-number="4.9.4" class="anchored" data-anchor-id="תגובות-שריפה-1"><span class="header-section-number">4.9.4</span> תגובות שריפה</h3>
+<p>תגובות שריפה הן תגובות חשובות בתעשייה:</p>
+<ul>
+<li>דלק (לרוב פחמימנים) מגיב עם חמצן מהאוויר.</li>
+<li>החנקן שבאוויר מתפקד כאינרטי: אינו מגיב אך משפיע על נפח ואנרגיה.</li>
+<li>נעשה שימוש במונחי ייחוס ייעודיים:
+<ul>
+<li>חמצן ואוויר תיאורטיים.</li>
+<li>אוויר עודף.</li>
+</ul></li>
+<li>ניתוח גזי פליטה מחייב הבחנה בין בסיס רטוב לבסיס יבש והשלמה באמצעות מאזנים אטומיים.</li>
+</ul>
+</section>
+<section id="מערכות-עם-תחזיר-וזרם-סילוק" class="level3" data-number="4.9.5">
+<h3 data-number="4.9.5" class="anchored" data-anchor-id="מערכות-עם-תחזיר-וזרם-סילוק"><span class="header-section-number">4.9.5</span> מערכות עם תחזיר וזרם סילוק</h3>
+<p>בתהליכים תעשייתיים המרה מלאה בריאקטור היא חריגה:</p>
+<ul>
+<li><strong>תחזיר (Recycle)</strong> מאפשר ניצול חוזר של מגיבים.</li>
+<li><strong>זרם סילוק (Purge)</strong> מונע הצטברות אינרטים ותוצרי לוואי.</li>
+<li>קיימת הבחנה מושגית בין:
+<ul>
+<li>המרת מעבר יחיד - מאפיין של הריאקטור.</li>
+<li>המרה כוללת - מאפיין של המערכת כולה.</li>
+</ul></li>
+</ul>
+</section>
+<section id="אסטרטגיית-פתרון" class="level3" data-number="4.9.6">
+<h3 data-number="4.9.6" class="anchored" data-anchor-id="אסטרטגיית-פתרון"><span class="header-section-number">4.9.6</span> אסטרטגיית פתרון</h3>
+<p>פתרון בעיות מאזנים הוא תהליך הנדסי:</p>
+<ul>
+<li>בחירת ייצוג (אטומי, מולקולרי, <span class="math inline">\(\xi\)</span>).</li>
+<li>בחירת גבולות מערכת ותתי-מערכות.</li>
+<li>שימוש בבסיס חישוב מתאים (ולעיתים זמני).</li>
+<li>חתירה לפתרון עקבי פנימית, ולא רק לתוצאה מספרית.</li>
+</ul>
+<p>מאזן החומר הוא לא רק אוסף משוואות, אלא שפה הנדסית לתיאור תהליכים. שליטה בכלי זה מאפשרת למהנדס לנתח, לבדוק ולהבין מערכות - מפשוטות ועד מורכבות - באופן שיטתי, ביקורתי ועקבי.</p>
 
 
 </section>
