@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "<div class='sidebar-title'>מבוא להנדסת תהליכים</div>"
+  title: מבוא להנדסת תהליכים
   author: "ענבל צרפתי-ברעד"
   chapters:
     - index.qmd
@@ -14,7 +14,7 @@ book:
     - chapter5.qmd  
     - Bibliography.qmd
 
-#  downloads: [pdf]        # כפתור הורדת PDF
+  downloads: [pdf]        # כפתור הורדת PDF
   output-file: "index"    # שם קובץ ה-PDF/HTML העיקרי
   sidebar:
     logo: assets/logo.png
@@ -38,12 +38,16 @@ format:
       - assets/univ-footer.html
       - assets/tracking.html
     include-in-header: _includes/head.html
-#  pdf:
- #   pdf-engine: xelatex         # חשוב לעברית
-  #  mainfont: "Arial" # או "Arial" אם מעדיפה
-   # lang: he
-    #documentclass: scrreprt
-    #number-sections: true
+
+  pdf:
+    pdf-engine: xelatex         # חשוב לעברית
+    mainfont: "Arial" # או "Arial" אם מעדיפה
+    lang: he
+    documentclass: scrreprt
+    number-sections: true
+    output-file: "process-engineering-book"
+    include-in-header:
+      - _includes/latex-he.tex
 
 # RTL + עברית
 lang: he
@@ -53,9 +57,7 @@ website:
   
 # פילטרים ל-HTML
 filters:
+  - assets/strip-dir.lua
   - assets/env-to-callout.lua
   - assets/wordstyles-to-quarto.lua
-
-resources:
-  - index.pdf
 

@@ -1,0 +1,14 @@
+\usepackage{polyglossia}
+\setmainlanguage{hebrew}
+\setotherlanguage{english}
+
+% הגדרת פונטים - חייבת להתאים לפונט שמותקן לך במחשב
+% אם בחרת Arial ב-YAML, צריך להגדיר אותו גם כאן לפעמים, 
+% אבל ההגדרה הכי בטוחה היא:
+\newfontfamily\hebrewfont[Script=Hebrew]{Arial}
+\newfontfamily\englishfont{Arial}
+
+% תיקון לכיווניות של טבלאות ורשימות
+\let\oldlongtable\longtable
+\let\endoldlongtable\endlongtable
+\renewenvironment{longtable}{\oldlongtable}{\endoldlongtable}
