@@ -1,0 +1,24 @@
+/* rtl-baseline.css — minimal RTL + math LTR, no environment box styles */
+
+/* Set document direction to RTL */
+html {
+  direction: rtl;
+  unicode-bidi: plaintext;
+}
+
+/* Right-align general text flow */
+body {
+  text-align: right;
+}
+
+/* Keep math left-to-right */
+.math.inline, .math.display {
+  direction: ltr;
+  unicode-bidi: embed;
+  text-align: left;
+}
+
+/* Optional: keep sidebar text right-aligned */
+.sidebar, .sidebar nav, .sidebar .sidebar-item, .sidebar .sidebar-header {
+  text-align: right;
+}

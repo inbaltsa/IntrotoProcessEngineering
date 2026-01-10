@@ -1,14 +1,7 @@
-\usepackage{polyglossia}
-\setmainlanguage{hebrew}
-\setotherlanguage{english}
+\usepackage{bidi}
 
-% הגדרת פונטים - חייבת להתאים לפונט שמותקן לך במחשב
-% אם בחרת Arial ב-YAML, צריך להגדיר אותו גם כאן לפעמים, 
-% אבל ההגדרה הכי בטוחה היא:
-\newfontfamily\hebrewfont[Script=Hebrew]{Arial}
-\newfontfamily\englishfont{Arial}
+% Force RTL for the whole document
+\AtBeginDocument{\setRTL}
 
-% תיקון לכיווניות של טבלאות ורשימות
-\let\oldlongtable\longtable
-\let\endoldlongtable\endlongtable
-\renewenvironment{longtable}{\oldlongtable}{\endoldlongtable}
+% Make underline safe: override soul \ul AFTER packages load
+\AtBeginDocument{\renewcommand{\ul}[1]{\underline{#1}}}

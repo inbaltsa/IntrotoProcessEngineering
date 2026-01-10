@@ -1,0 +1,61 @@
+# 5.4.5 הכלי ההנדסי: גרף הדחיסות הכללי
+
+לאחר שנירמלנו את הלחץ והטמפרטורה, אנו יכולים להשתמש בגרף הדחיסות הכללי. כדי לאפשר קריאה מדויקת בטווחים שונים, הגרף מחולק להלן לשלושה תחומי לחץ.
+
+---
+
+```{python}
+#| label: setup-graphs
+#| echo: false
+#| output: false
+
+# --- זהו בלוק נסתר. הסטודנטים לא רואים אותו, הוא רק טוען את הפונקציות ---
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 1. פונקציה לחישוב Z לפי משוואת Redlich-Kwong
+def solve_z_rk(Tr, Pr):
+    Omega_a = 0.42748
+    Omega_b = 0.08664
+    
+    if Pr == 0: return 1.0
+    
+    # חישוב מקדמים
+    A = Omega_a * Pr / (Tr ** 2.5)
+    B = Omega_b * Pr / Tr
+    
+    # משוואה קובית: Z^3 - Z^2 + (A - B - B^2)Z - AB = 0
+    c3 = 1.0
+    c2 = -1.0
+    c1 = A - B - B**2
+    c0 = -A * B
+    
+    # מציאת שורשים
+    roots = np.roots([c3, c2, c1, c0])
+    real_roots = roots[np.isreal(roots)].real
+    return np.max(real_roots)
+
+# 2. פונקציה לציור גרף בודד
+def plot_chart(pr_min, pr_max, tr_values, title, ylim=None):
+    fig, ax = plt.subplots(figsize=(8, 5))
+    
+    pr_steps = np.linspace(pr_min, pr_max, 200)
+    if pr_min == 0: pr_steps[0] = 0.001 
+
+    for Tr in tr_values:
+        z_values = [solve_z_rk(Tr, Pr) for Pr in pr_steps]
+        ax.plot(pr_steps, z_values, label=f'$T_r={Tr}$', linewidth=2)
+
+    # עיצוב
+    ax.set_xlabel('לחץ מופחת ($P_r$)', fontsize=12)
+    ax.set_ylabel('מקדם דחיסות ($z$)', fontsize=12)
+    ax.set_title(title, fontsize=14, pad=15)
+    ax.grid(True, which='both', linestyle='--', alpha=0.5)
+    ax.axhline(y=1, color='black', linestyle='-', linewidth=1.5, alpha=0.4)
+    ax.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0., title='$T_r$')
+    
+    if ylim: ax.set_ylim(ylim)
+    ax.set_xlim(pr_min, pr_max)
+    plt.tight_layout()
+    plt.show()

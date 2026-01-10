@@ -13,6 +13,7 @@
 
 - חומרי הוראה של ד"ר רחל ליכטנשטיין  
 - חומרי הוראה של פרופ' רונית ביטון  
+- PhET Interactive Simulations. (n.d.). Gas Properties. University of Colorado Boulder. https://phet.colorado.edu/sims/html/gas-properties/latest/gas-properties_all.html
 
 ## מקורות תמונות ואיורים
 
@@ -23,4 +24,4 @@
 
 ---
 
-*הספר נערך ונוסח בעזרת ChatGPT (GPT-5, OpenAI), לצורך שיפור ניסוחים, תיאום מונחים והנגשה פדגוגית.*
+* הספר נערך ונוסח בעזרת כלי בינה מלאכותית – ChatGPT (OpenAI) ו-Gemini (Google) – לצורך שיפור ניסוחים, תיאום מונחים והנגשה פדגוגית.
