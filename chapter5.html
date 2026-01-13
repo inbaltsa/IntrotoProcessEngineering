@@ -1301,6 +1301,153 @@ window.Quarto = {
 </div>
 </div>
 <p>משוואות מצב קוביות מובילות, לאחר סידור אלגברי, לפולינום ממעלה שלישית בנפח המולרי. כתוצאה מכך, עבור תנאים מסוימים עשויים להתקבל מספר פתרונות מתמטיים לנפח. מבין פתרונות אלו, רק הפתרונות המתאימים לפאזות יציבות (גז או נוזל) הם בעלי משמעות פיזיקלית, בעוד שהפתרון האמצעי חסר משמעות הנדסית.</p>
+<div class="callout callout-example example" title="דוגמה" data-collapse="false">
+<p>מיכל גלילי בנפח 0.150m<sup>3</sup> המכיל 22.7kg פרופן (C<sub>3</sub>H<sub>8</sub>) עומד בחצר המפעל. מד לחץ מראה כי הלחץ במיכל הוא 4790kPa gauge.<br>
+מה הטמפ' במיכל על פי מקדם הדחיסות?<br>
+מה היא הטמפ' במיכל בהנחה כי פרופן מתנהג כגז V.D.W?</p>
+<p><strong>פתרון:</strong> נתוני המערכת: פרופן (<span class="math inline">\(C_{3}H_{8}\)</span>), מסה <span class="math inline">\(m = 22.7kg = 22,700g\)</span></p>
+<p>נפח המיכל <span class="math inline">\(V = 0.150m^{3} = 150L\)</span> , לחץ <span class="math inline">\(P_{gauge} = 4790\ kPa\)</span></p>
+<p>נוציא נתונים מהטבלה <span class="math inline">\(Mw = 44.09\frac{g}{mol}\)</span>, <span class="math inline">\(T_{c} = 369.9K,\ P_{c} = 42atm\)</span></p>
+<p>לפני שנציב במשוואה, עלינו לוודא שכל היחידות תואמות.</p>
+<p>נעבוד עם יחידות של <strong>אטמוספירות</strong> <strong>(atm)</strong>, <strong>ליטרים (L)</strong> ו-<strong>מולים (mol)</strong>, ולכן נשתמש בקבוע הגזים:</p>
+<p><span class="math display">\[R = 0.08206\frac{L \cdot atm}{mol \cdot K}\]</span></p>
+<p>נחשב מולים</p>
+<p><span class="math display">\[n = \frac{m}{M_{w}} = \frac{22,700\, g}{44.09\, g\text{/}mol} = 514.86\, mol\]</span></p>
+<p>נחשב נפח מולרי</p>
+<p><span class="math display">\[\widehat{V} = \frac{V}{n} = \frac{150\, L}{514.86\, mol} = 0.2913\,\frac{L}{mol}\]</span></p>
+<p>נחשב לחץ אבסולוטי.</p>
+<p><span class="math display">\[P_{gauge} = 4790\, kPa*\frac{1atm}{101.325kPa} = 47.2736\, atm = 42.27\]</span></p>
+<p>נניח כי הלחץ הוא אטמוספירי ולכן</p>
+<p><span class="math display">\[P_{abs} = 47.27\, atm + 1\, atm = 48.27\, atm\]</span></p>
+<p>נחשב את קבוע ון דר ואלס באמצעות הנתונים הקריטיים</p>
+<p><span class="math display">\[a = \frac{27R^{2}T_{c}^{2}}{64P_{c}} = \frac{27 \cdot \left( 0.08206\frac{L \cdot atm}{mol \cdot K}\  \right)^{2} \cdot (369.9K)^{2}}{64 \cdot 42.0atm}\]</span></p>
+<p><span class="math display">\[a = 9.256\,\frac{L^{2} \cdot atm}{mol^{2}}\]</span></p>
+<p><span class="math display">\[b = \frac{RT_{c}}{8P_{c}} = \frac{0.08206\frac{L \cdot atm}{mol \cdot K} \cdot 369.9K}{8 \cdot 42.0atm} = 0.0903\ \frac{L}{mol}\]</span></p>
+<p>נזכר במשוואת ון דר ואלס</p>
+<p><span class="math display">\[P = \frac{RT}{\widehat{V} - b} - \frac{a}{{\widehat{V}}^{2}}\]</span></p>
+<p><span class="math display">\[P + \frac{a}{\overline{{\widehat{V}}^{2}}} = \frac{RT}{\widehat{V} - b}\]</span></p>
+<p><span class="math display">\[T = \frac{\left( \widehat{V} - b \right) \cdot \left( P + \frac{a}{\overline{{\widehat{V}}^{2}}} \right)}{R}\]</span></p>
+<p>ונציב</p>
+<p><span class="math display">\[P + \frac{a}{\overline{{\widehat{V}}^{2}}} = 48.27atm + \frac{9.256\frac{L^{2} \cdot atm}{mol^{2}}}{(0.2913\ L/mol)^{2}} = 48.27atm + 109.1atm = 157.37\, atm\]</span></p>
+<p><span class="math display">\[\widehat{V} - b = 0.2913\,\frac{L}{mol} - 0.0903\,\frac{L}{mol} = 0.201\,\frac{L}{mol}\]</span></p>
+<p><span class="math display">\[\boxed{T = \frac{0.201\frac{L}{mol} \cdot 157.37atm}{0.08206\frac{L \cdot atm}{mol \cdot K}} = 385.5K}\]</span></p>
+<p>כדי לחשב על פי מקדם הדחיסות נמצא את הערכים המופחתים</p>
+<p><span class="math display">\[T_{r} = \frac{T}{T_{c}} = \frac{T}{369.9K}\ \ \ \ ;\ \ \ \ P_{r} = \frac{P}{P_{c}} = \,\frac{48.27atm}{42atm} = 1.15\]</span></p>
+<p>אם גרף הדחיסות שלנו מכיל נפחים מולרים נזכר ש</p>
+<p><span class="math display">\[\widehat{V} = 0.2913\,\frac{L}{mol}\]</span></p>
+<p>נחשב נפח מולרי מופחת</p>
+<p><span class="math display">\[V_{r}' = \frac{0.2913\frac{L}{mol} \cdot 42.0atm}{0.08206\frac{L \cdot atm}{mol \cdot K} \cdot 369.9K} = \mathbf{0}.\mathbf{403}\]</span></p>
+<p>ונוציא מהגרף את <span class="math inline">\(T_{r}\)</span> ואת <em>Z</em></p>
+<p><span class="math display">\[Z = 0.45\ \ \ \ \ T_{r} = 1\  = &gt; T = T_{c} = 370K\]</span></p>
+<p>אם אין את הנפח, חייבים לעבוד איטרטיבית<br>
+איטרציה ראשונה</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 53%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ניחוש <em>Z</em></th>
+<th style="text-align: left;">מציאת <span class="math inline">\(T_{r}\)</span></th>
+<th style="text-align: left;">חישוב <em>T</em></th>
+<th style="text-align: left;">הצבה במשוואת הדחיסות</th>
+<th style="text-align: left;"><em>Z</em> הנובע מהמשוואה</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2.5</td>
+<td style="text-align: left;"><span class="math display">\[T = 2.5*370K = 925K\]</span></td>
+<td style="text-align: left;"><span class="math display">\[\frac{48.27atm*0.2913\,\frac{L}{mol}}{0.08206\frac{L \cdot atm}{mol \cdot K}*925K}\]</span></td>
+<td style="text-align: left;"><em>0.185</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>0.2</em></td>
+<td style="text-align: left;">הערכה 0.95</td>
+<td style="text-align: left;"><span class="math display">\[T = 0.95*370K = 351K\]</span></td>
+<td style="text-align: left;"><span class="math display">\[\frac{48.27atm*0.2913\,\frac{L}{mol}}{0.08206\frac{L \cdot atm}{mol \cdot K}*351K}\]</span></td>
+<td style="text-align: left;"><em>0.4882</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>0.5</em></td>
+<td style="text-align: left;"><em>1.01</em></td>
+<td style="text-align: left;"><span class="math display">\[T = 1.01*370K = 373K\]</span></td>
+<td style="text-align: left;"><span class="math display">\[\frac{48.27atm*0.2913\,\frac{L}{mol}}{0.08206\frac{L \cdot atm}{mol \cdot K}*373K}\]</span></td>
+<td style="text-align: left;"><em>0.46</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>0.46</em></td>
+<td style="text-align: left;"><em>1</em></td>
+<td style="text-align: left;"><span class="math display">\[T = 370K\]</span></td>
+<td style="text-align: left;"><span class="math display">\[\frac{48.27atm*0.2913\,\frac{L}{mol}}{0.08206\frac{L \cdot atm}{mol \cdot K}*370K}\]</span></td>
+<td style="text-align: left;"><em>0.46</em></td>
+</tr>
+</tbody>
+</table>
+<p>ורואים שהערך מתכנס ולכן** <span class="math display">\[T = 370K\]</span></p>
+<p>לשם השוואה אם היינו מחשבים עם משוואת הגזיםה אידיאלים</p>
+<p>עכשיו הטמפרטורה:</p>
+<p><span class="math display">\[T = \frac{0.2913\,\frac{L}{mol}*48.27\, atm}{\left( 0.08206\frac{L \cdot atm}{mol \cdot K} \right)} = 171K\]</span></p>
+<p>וזה בדיוק ה”דגל האדום” ההנדסי: בטמפרטורה כזו פרופן ממש לא יהיה גז אידיאלי בלחץ כזה (וגם לא בהכרח “גז” בכלל), ולכן קיבלנו טמפרטורה לא פיזיקלית לתיאור מצב המיכל - מה שמסביר למה כשמכניסים <span class="math inline">\(Z\)</span>או VdW מקבלים טמפרטורות גבוהות בהרבה.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">המודל (Model)</th>
+<th style="text-align: left;">הטמפרטורה שחישבנו (K)</th>
+<th style="text-align: left;">הטמפרטורה בצלזיוס (∘C)</th>
+<th style="text-align: left;">הערות</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">גז אידיאלי</td>
+<td style="text-align: left;">171.4K</td>
+<td style="text-align: left;">−101.7∘C</td>
+<td style="text-align: left;">קסטרופה הנדסית. סטייה של מעל 50%. (מוכיח שההנחה Z=1 שגויה לחלוטין כאן).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ואן דר ואלס (VDW)</td>
+<td style="text-align: left;">385.5K</td>
+<td style="text-align: left;">112.3∘C</td>
+<td style="text-align: left;">קירוב טוב. התיקון לנפח ולמשיכה עשה את רוב העבודה, אך יש סטייה קלה למעלה.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">רדליך-קוונג (RK)</td>
+<td style="text-align: left;">383.5K</td>
+<td style="text-align: left;">110.3∘C</td>
+<td style="text-align: left;">שיפור של VDW, נחשבת למשוואה מדויקת יותר עבור גזים בלחץ גבוה.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SRK (Soave-Redlich-Kwong)</td>
+<td style="text-align: left;">382.1K</td>
+<td style="text-align: left;">109.0∘C</td>
+<td style="text-align: left;">הסטנדרט בתעשייה לפחמימנים. לוקחת בחשבון גם את הפקטור האקסנטרי (ω).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Peng-Robinson (PR)</td>
+<td style="text-align: left;">381.8K</td>
+<td style="text-align: left;">108.6∘C</td>
+<td style="text-align: left;">בדומה ל-SRK, נחשבת ל"חוד החנית" עבור נפט וגז.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>האמת נמצאת ככל הנראה סביב <span class="math inline">\(382\, K\)</span></p></li>
+<li><p>למה VDW זייף ב-3 מעלות? משוואת ואן דר ואלס מניחה שהמולקולות הן כדורים קשיחים מושלמים. פרופן הוא לא כדור, אלא שרשרת קטנה. המשוואות המודרניות (PR, SRK) מכילות פרמטר נוסף שנקרא הפקטור האקסנטרי (<span class="math inline">\(\omega\)</span>), שהוא בעצם מדד ל"כמה המולקולה לא כדורית". הפרופן, עם <span class="math inline">\(\omega = \ 0.152\)</span>, דורש את התיקון הזה כדי להגיע לדיוק מושלם.</p></li>
+<li><p>סכנת הגז האידיאלי - אם מהנדס היה מתכנן את המיכל הזה לפי חוק הגזים האידיאליים, הוא היה חושב שהטמפרטורה היא מינוס 100 מעלות, בעוד שבפועל היא מעל 100 מעלות פלוס. פער של 200 מעלות שיכול לגרום לפיצוץ.</p></li>
+</ul>
+</div>
 </section>
 </section>
 </section>
