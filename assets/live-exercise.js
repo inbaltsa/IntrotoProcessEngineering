@@ -13,7 +13,25 @@
     return parseFloat(s);
   }
 
+  // נירמול לתשובה מדויקת (ספרות משמעותיות / עיגול / כתיב מדעי)
+  function normExact(s) {
+    return (s == null ? '' : s.toString()).trim().toLowerCase()
+      .replace(/,/g, '.')
+      .replace(/\s+/g, '')
+      .replace(/×/g, '*')
+      .replace(/\*?10\^?/g, 'e')   // 4.5*10^-3 / 4.5×10^-3 -> 4.5e-3
+      .replace(/\^/g, '');
+  }
+
   function checkField(inp) {
+    // מצב "מדויק": התשובה חייבת להתאים בדיוק (רלוונטי לספרות משמעותיות/עיגול)
+    if (inp.dataset.exact != null) {
+      var raw = (inp.value || '').trim();
+      if (raw === '') return { state: 'empty' };
+      var got = normExact(raw);
+      var accepted = (inp.dataset.answer || '').split('|').map(normExact);
+      return { state: accepted.indexOf(got) >= 0 ? 'ok' : 'bad' };
+    }
     var ans = parseFloat(inp.dataset.answer);
     var tol = inp.dataset.tol != null ? parseFloat(inp.dataset.tol)
                                       : Math.abs(ans) * 0.01; // 1% ברירת מחדל

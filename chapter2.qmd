@@ -659,7 +659,31 @@ $P(\text{Pa}) = 300 \times T(\text{K})$
 
 1. מהו $k$? רשמו את ערכו המלא, כולל יחידות.  
 2. הסבירו באופן מילולי מה משמעותו של הקבוע - איזה שינוי מתואר במערכת?  
-3. במקרים רבים נהוג למדוד לחץ ביחידות של אטמוספירה. ברצוננו לנסח את המשוואה כך שהתוצאה תתקבל באטמוספירות באופן ישיר. מה יהיה ערכו הנומרי החדש של $k$ במקרה זה? מה יהיו היחידות שלו?  
+3. במקרים רבים נהוג למדוד לחץ ביחידות של אטמוספירה. ברצוננו לנסח את המשוואה כך שהתוצאה תתקבל באטמוספירות באופן ישיר. מה יהיה ערכו הנומרי החדש של $k$ במקרה זה? מה יהיו היחידות שלו?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">k =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="300" data-tol="0" placeholder="ערך" aria-label="k ב-Pa/K">
+    <span class="le-unit">Pa/K</span></div>
+  <div class="le-row"><span class="le-prompt">k (atm) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.00296" data-tol="0.0001" placeholder="2.96e-3" aria-label="k ב-atm/K">
+    <span class="le-unit">atm/K</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מהומוגניות המשוואה, k הוא המקדם המחבר בין הלחץ לטמפרטורה: k = 300 Pa/K.</div>
+      <div>כדי לקבל את הלחץ ישירות באטמוספירות, ממירים Pa ל-atm (1 atm = 101325 Pa):</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">300 <span class="rc-cancel">Pa</span></div><div class="rc-den">1 K</div></div>
+        <div class="rc-term"><div class="rc-num">1 atm</div><div class="rc-den">101325 <span class="rc-cancel">Pa</span></div></div>
+        <div class="rc-eq">= 2.96×10⁻³ atm/K</div>
+      </div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### [מספרים חסרי מימד]{dir="rtl"}
@@ -802,11 +826,35 @@ $\mathbf{\mu}$ [- צמיגות הזורם]{dir="rtl"} $\left( \frac{Kg}{m\ s} \r
 ::: {.exercise}
 **כמה ספרות משמעותיות יש בכל אחד מהמספרים הבאים?**
 
-1. $0.0045$  
-2. $205$  
-3. $1.50 \times 10^{3}$  
-4. $1500$  
+1. $0.0045$
+2. $205$
+3. $1.50 \times 10^{3}$
+4. $1500$
 5. $0.000300$
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">1) 0.0045 →</span>
+    <input class="le-input" type="text" inputmode="numeric" data-answer="2" data-tol="0" placeholder="?" aria-label="ספרות 0.0045"><span class="le-unit">ספרות</span></div>
+  <div class="le-row"><span class="le-prompt">2) 205 →</span>
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="?" aria-label="ספרות 205"><span class="le-unit">ספרות</span></div>
+  <div class="le-row"><span class="le-prompt">3) 1.50×10³ →</span>
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="?" aria-label="ספרות 1.50e3"><span class="le-unit">ספרות</span></div>
+  <div class="le-row"><span class="le-prompt">5) 0.000300 →</span>
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="?" aria-label="ספרות 0.000300"><span class="le-unit">ספרות</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>1) 0.0045 → <b>2</b> (אפסים מובילים אינם משמעותיים).</div>
+      <div>2) 205 → <b>3</b> (אפס בין ספרות — משמעותי).</div>
+      <div>3) 1.50×10³ → <b>3</b> (בכתיב מדעי כל הספרות ב-a משמעותיות).</div>
+      <div>4) 1500 → <b>לא ניתן לקבוע</b> (2 עד 4). צריך כתיב מדעי כדי להבהיר — למשל 1.5×10³ (2) לעומת 1.500×10³ (4).</div>
+      <div>5) 0.000300 → <b>3</b> (האפסים שאחרי הנקודה, בסוף המספר, משמעותיים).</div>
+    </div>
+  </details>
+</div>
+```
 :::
 [כאשר אנו מבצעים חישובים המבוססים על נתונים מדודים, עלינו לזכור שכל אחד מהנתונים כולל רמת דיוק מוגבלת]{dir="rtl"}. [אין טעם להציג תוצאה ארוכה ומדויקת יותר מהמידע שנמדד בפועל - זו תהיה **אשליה של דיוק שאינו קיים**]{dir="rtl"}. [לכן נקבעו כללים ברורים כיצד לקבוע כמה ספרות משמעותיות מותר לשמור בתוצאה של חישוב]{dir="rtl"}.
 
@@ -850,12 +898,41 @@ $$2.3 \times 1.245 = \mathbf{2.9}$$
 ::: {.exercise}
 **כתבו כל תוצאה ברמת הדיוק המתאימה:**
 
-1. $2.3 \times 1.245 = \; ?$  
-2. $45.2 \div 1.2 = \; ?$  
-3. $0.056 \times 3.12 = \; ?$  
-4. $45.2 + 1.35 = \; ?$  
-5. $2.06 - 0.142 = \; ?$  
+1. $2.3 \times 1.245 = \; ?$
+2. $45.2 \div 1.2 = \; ?$
+3. $0.056 \times 3.12 = \; ?$
+4. $45.2 + 1.35 = \; ?$
+5. $2.06 - 0.142 = \; ?$
 6. $0.230 + 1.2 = \; ?$
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">1) 2.3 × 1.245 =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-exact="1" data-answer="2.9" placeholder="?" aria-label="1"></div>
+  <div class="le-row"><span class="le-prompt">2) 45.2 ÷ 1.2 =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-exact="1" data-answer="38" placeholder="?" aria-label="2"></div>
+  <div class="le-row"><span class="le-prompt">3) 0.056 × 3.12 =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-exact="1" data-answer="0.17" placeholder="?" aria-label="3"></div>
+  <div class="le-row"><span class="le-prompt">4) 45.2 + 1.35 =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-exact="1" data-answer="46.6" placeholder="?" aria-label="4"></div>
+  <div class="le-row"><span class="le-prompt">5) 2.06 − 0.142 =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-exact="1" data-answer="1.92" placeholder="?" aria-label="5"></div>
+  <div class="le-row"><span class="le-prompt">6) 0.230 + 1.2 =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-exact="1" data-answer="1.4" placeholder="?" aria-label="6"></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div class="le-eq">2.3 × 1.245 = 2.8635 → 2.9   (2 ספרות)</div>
+      <div class="le-eq">45.2 ÷ 1.2 = 37.67 → 38   (2 ספרות)</div>
+      <div class="le-eq">0.056 × 3.12 = 0.1747 → 0.17   (2 ספרות)</div>
+      <div class="le-eq">45.2 + 1.35 = 46.55 → 46.6   (מקום עשרוני אחד)</div>
+      <div class="le-eq">2.06 − 0.142 = 1.918 → 1.92   (שני מקומות עשרוניים)</div>
+      <div class="le-eq">0.230 + 1.2 = 1.43 → 1.4   (מקום עשרוני אחד)</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### [כתיבה מדעית של מספרים ]{dir="rtl"}(Scientific notation)[]{dir="rtl"}
@@ -950,10 +1027,34 @@ $$s^{2} = \frac{1}{N - 1}\sum_{i = 1}^{N}{(X_{i} - \overset{ˉ}{X})^{2}}\text{  
 תרגיל - צפיפות ביומסה במערכת תסיסה (fermenter):
 נמדדו ריכוזי תאים בשתי מערכות שונות.
 
-- **מערכת א׳:** נמדדו ריכוזי תאים [1.83, 1.81, 1.79, 1.85, 1.80] גרם/ליטר.  
-- **מערכת ב׳:** נמדדו ריכוזי תאים [1.90, 1.75, 1.84, 1.78, 1.87] גרם/ליטר.  
+- **מערכת א׳:** נמדדו ריכוזי תאים [1.83, 1.81, 1.79, 1.85, 1.80] גרם/ליטר.
+- **מערכת ב׳:** נמדדו ריכוזי תאים [1.90, 1.75, 1.84, 1.78, 1.87] גרם/ליטר.
 
 איזו מערכת יציבה יותר?
+
+```{=html}
+<div class="live-exercise">
+  <div style="margin-bottom:0.35rem">חשבו את סטיית התקן (s) של כל מערכת:</div>
+  <div>מערכת א׳:</div>
+  <div class="le-row"><span class="le-prompt">σ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.0241" data-tol="0.004" placeholder="?" aria-label="סטיית תקן מערכת א">
+    <span class="le-unit">g/L</span></div>
+  <div style="margin-top:0.4rem">מערכת ב׳:</div>
+  <div class="le-row"><span class="le-prompt">σ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.0622" data-tol="0.008" placeholder="?" aria-label="סטיית תקן מערכת ב">
+    <span class="le-unit">g/L</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מחשבים ממוצע וסטיית תקן s = √[Σ(xᵢ−x̄)² / (N−1)] לכל מערכת:</div>
+      <div class="le-eq">מערכת א׳:  x̄ = 1.816 ,  σ ≈ 0.024 g/L</div>
+      <div class="le-eq">מערכת ב׳:  x̄ = 1.828 ,  σ ≈ 0.062 g/L</div>
+      <div>סטיית התקן של מערכת א׳ קטנה יותר ⟵ <b>מערכת א׳ יציבה (הדירה) יותר</b>.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### [מדידה עקיפה וכיול נתונים]{dir="rtl"}
