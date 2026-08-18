@@ -143,24 +143,36 @@ $$1h = 3600s\  \rightarrow \ \ \ \ \frac{1h}{3600s}\ \ \ \ \ or \ \ \ \frac{3600
   - [מטר לפיט (]{dir="rtl"}m-\>ft[)]{dir="rtl"}
 
 ```{=html}
-<div class="live-exercise">
-  <div class="le-row"><span class="le-prompt">1 L =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="0.264" data-tol="0.005" placeholder="?" aria-label="ליטר לגלון">
-    <span class="le-unit">gal</span></div>
-  <div class="le-row"><span class="le-prompt">1 m =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="3.28" data-tol="0.02" placeholder="?" aria-label="מטר לפיט">
-    <span class="le-unit">ft</span></div>
+<div class="live-exercise le-fraction-ex" data-unit-a="L" data-unit-b="gal" data-a-per-b="3.785" data-reltol="0.02">
+  <div class="cf-hint">פקטור המעבר בין ליטר לגלון — הפכו את השוויון לקו שבר. מלאו ערך ויחידה במונה ובמכנה (כל אוריינטציה תקינה):</div>
+  <div class="cf-fraction">
+    <div class="cf-line"><input class="cf-v cf-num-v" type="text" inputmode="decimal" placeholder="ערך" aria-label="ערך מונה"><input class="cf-u cf-num-u" type="text" placeholder="יחידה" aria-label="יחידת מונה"></div>
+    <div class="cf-bar"></div>
+    <div class="cf-line"><input class="cf-v cf-den-v" type="text" inputmode="decimal" placeholder="ערך" aria-label="ערך מכנה"><input class="cf-u cf-den-u" type="text" placeholder="יחידה" aria-label="יחידת מכנה"></div>
+  </div>
   <div style="margin-top:0.5rem"><button class="le-check" type="button">בדיקה</button></div>
   <div class="le-feedback" role="status"></div>
   <details class="le-solution"><summary>הצגת פתרון</summary>
     <div class="le-steps">
-      <div>מהטבלה 1 gal = 3.785 L, ולכן:</div>
-      <div class="ruler-calc">
-        <div class="rc-term"><div class="rc-num">1 <span class="rc-cancel">L</span></div><div class="rc-den"></div></div>
-        <div class="rc-term"><div class="rc-num">1 gal</div><div class="rc-den">3.785 <span class="rc-cancel">L</span></div></div>
-        <div class="rc-eq">= 0.264 gal</div>
-      </div>
-      <div>ומהטבלה ישירות 1 m = 3.28 ft.</div>
+      <div>מהטבלה 1 gal = 3.785 L. הופכים את השוויון לקו שבר ששווה ל-1. שתי הצורות שקולות:</div>
+      <div class="ruler-calc"><div class="rc-term"><div class="rc-num">3.785 L</div><div class="rc-den">1 gal</div></div><div class="rc-eq">או</div><div class="rc-term" style="border-inline-end:none"><div class="rc-num">1 gal</div><div class="rc-den">3.785 L</div></div></div>
+    </div>
+  </details>
+</div>
+
+<div class="live-exercise le-fraction-ex" data-unit-a="m" data-unit-b="ft" data-a-per-b="0.3048" data-reltol="0.02">
+  <div class="cf-hint">פקטור המעבר בין מטר לפיט:</div>
+  <div class="cf-fraction">
+    <div class="cf-line"><input class="cf-v cf-num-v" type="text" inputmode="decimal" placeholder="ערך" aria-label="ערך מונה"><input class="cf-u cf-num-u" type="text" placeholder="יחידה" aria-label="יחידת מונה"></div>
+    <div class="cf-bar"></div>
+    <div class="cf-line"><input class="cf-v cf-den-v" type="text" inputmode="decimal" placeholder="ערך" aria-label="ערך מכנה"><input class="cf-u cf-den-u" type="text" placeholder="יחידה" aria-label="יחידת מכנה"></div>
+  </div>
+  <div style="margin-top:0.5rem"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מהטבלה 1 m = 3.28 ft. שתי הצורות שקולות:</div>
+      <div class="ruler-calc"><div class="rc-term"><div class="rc-num">3.28 ft</div><div class="rc-den">1 m</div></div><div class="rc-eq">או</div><div class="rc-term" style="border-inline-end:none"><div class="rc-num">1 m</div><div class="rc-den">3.28 ft</div></div></div>
     </div>
   </details>
 </div>

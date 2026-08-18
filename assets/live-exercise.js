@@ -49,12 +49,74 @@
     }
   }
 
+  /* ---------- תרגיל "פקטור מעבר": קו שבר עם ערכים ויחידות ----------
+     מקבל כל אוריינטציה תקינה (וגם ההופכי) כל עוד המונה = המכנה פיזיקלית,
+     כלומר הפקטור שווה ל-1. הקשר מוגדר ב-data: unit-a, unit-b, a-per-b
+     (כמות יחידות a בתוך יחידה אחת של b). */
+  var UNIT_SYNONYMS = {
+    'l': 'l', 'liter': 'l', 'litre': 'l', 'ליטר': 'l',
+    'gal': 'gal', 'gallon': 'gal', 'גלון': 'gal',
+    'm': 'm', 'meter': 'm', 'metre': 'm', 'מטר': 'm',
+    'ft': 'ft', 'feet': 'ft', 'foot': 'ft', 'פיט': 'ft', 'פוט': 'ft'
+  };
+  function normUnit(u) {
+    u = (u || '').toString().trim().toLowerCase();
+    return UNIT_SYNONYMS[u] || u;
+  }
+
+  function mark(inp, ok) {
+    inp.classList.remove('le-input-ok', 'le-input-bad');
+    if (ok === true) inp.classList.add('le-input-ok');
+    else if (ok === false) inp.classList.add('le-input-bad');
+  }
+
+  function checkFraction(box) {
+    var a = normUnit(box.dataset.unitA);
+    var b = normUnit(box.dataset.unitB);
+    var aPerB = parseFloat(box.dataset.aPerB);      // 1 b = aPerB · a
+    var reltol = parseFloat(box.dataset.reltol || '0.01');
+    var nv = toNum(box.querySelector('.cf-num-v').value);
+    var nu = normUnit(box.querySelector('.cf-num-u').value);
+    var dv = toNum(box.querySelector('.cf-den-v').value);
+    var du = normUnit(box.querySelector('.cf-den-u').value);
+    var fb = box.querySelector('.le-feedback');
+    var vs = box.querySelectorAll('.cf-v');
+
+    if (isNaN(nv) || isNaN(dv) || !nu || !du) {
+      fb.className = 'le-feedback le-warn';
+      fb.textContent = 'מלאו ערך ויחידה במונה ובמכנה';
+      return;
+    }
+    // היחידות חייבות להיות זוג {a,b} — אחת בכל חלק
+    var got = [nu, du].sort().join('|'), want = [a, b].sort().join('|');
+    if (got !== want) {
+      fb.className = 'le-feedback le-bad';
+      fb.textContent = '✗ היחידות צריכות להיות ' + box.dataset.unitA + ' ו-' + box.dataset.unitB + ' (אחת בכל חלק)';
+      vs.forEach(function (i) { mark(i, false); });
+      return;
+    }
+    function toA(v, u) { return u === a ? v : v * aPerB; }
+    var top = toA(nv, nu), bot = toA(dv, du);
+    var ok = Math.abs(top - bot) <= reltol * Math.max(Math.abs(top), Math.abs(bot));
+    vs.forEach(function (i) { mark(i, ok); });
+    if (ok) {
+      fb.className = 'le-feedback le-ok';
+      fb.textContent = '✓ נכון! זהו פקטור מעבר תקין (שווה ל-1)';
+      box.classList.add('le-solved');
+    } else {
+      fb.className = 'le-feedback le-bad';
+      fb.textContent = '✗ הפקטור אינו שווה ל-1 — המונה והמכנה חייבים לבטא אותה כמות';
+    }
+  }
+
   function wire(box) {
+    var isFraction = box.classList.contains('le-fraction-ex');
+    var run = isFraction ? function () { checkFraction(box); } : function () { check(box); };
     var btn = box.querySelector('.le-check');
-    if (btn) btn.addEventListener('click', function () { check(box); });
-    box.querySelectorAll('.le-input').forEach(function (inp) {
+    if (btn) btn.addEventListener('click', run);
+    box.querySelectorAll('.le-input, .cf-v, .cf-u').forEach(function (inp) {
       inp.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') { e.preventDefault(); check(box); }
+        if (e.key === 'Enter') { e.preventDefault(); run(); }
       });
     });
   }

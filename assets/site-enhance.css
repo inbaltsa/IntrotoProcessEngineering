@@ -498,3 +498,50 @@ body.cover-page .title-block {
   font-weight: 600;
   direction: ltr;
 }
+
+/* =========================================================
+   תרגיל "פקטור מעבר" — קו שבר להשלמת ערכים ויחידות
+   ========================================================= */
+.cf-fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  direction: ltr;
+  margin: 0.3rem 0;
+  vertical-align: middle;
+}
+.cf-line {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.4rem;
+}
+.cf-bar {
+  width: 100%;
+  min-width: 200px;
+  height: 2px;
+  background: var(--ink-700, #2b3e50);
+}
+.cf-v, .cf-u {
+  padding: 0.35rem 0.4rem;
+  font-size: 1rem;
+  border: 1.5px solid #c5d9f3;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.cf-v { width: 5.5rem; }
+.cf-u { width: 4.5rem; }
+.cf-v:focus, .cf-u:focus {
+  outline: none;
+  border-color: var(--brand-blue, #1e90ff);
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.15);
+}
+.cf-v.le-input-ok  { border-color: #2e9e5b; background: #f2fbf5; }
+.cf-v.le-input-bad { border-color: #d9534f; background: #fdf3f2; }
+.cf-hint {
+  font-size: 0.85rem;
+  color: var(--ink-500, #555);
+  margin-bottom: 0.3rem;
+}
