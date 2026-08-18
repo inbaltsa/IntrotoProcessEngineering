@@ -369,3 +369,132 @@ body.cover-page .title-block {
   color: var(--ink-500);
   white-space: nowrap;
 }
+
+/* =========================================================
+   תרגילים חיים (live-exercise) — בדיקה עצמית
+   ========================================================= */
+.live-exercise {
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed rgba(30, 144, 255, 0.35);
+  direction: rtl;
+}
+.le-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.le-input {
+  width: 9rem;
+  max-width: 60vw;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border: 1.5px solid #c5d9f3;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.le-input:focus {
+  outline: none;
+  border-color: var(--brand-blue, #1e90ff);
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.15);
+}
+.le-input-ok  { border-color: #2e9e5b; background: #f2fbf5; }
+.le-input-bad { border-color: #d9534f; background: #fdf3f2; }
+.le-unit {
+  font-size: 0.95rem;
+  color: var(--ink-500, #555);
+  direction: ltr;
+}
+.le-check {
+  padding: 0.42rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--brand-blue, #1e90ff);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+.le-check:hover  { background: #1b7fe0; }
+.le-check:active { transform: translateY(1px); }
+.le-feedback {
+  min-height: 1.4em;
+  margin-top: 0.55rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.le-feedback.le-ok    { color: #2e9e5b; }
+.le-feedback.le-bad   { color: #d9534f; }
+.le-feedback.le-close { color: #d98a1f; }
+.le-feedback.le-warn  { color: var(--ink-500, #555); font-weight: 500; }
+.le-solution {
+  margin-top: 0.6rem;
+  font-size: 0.93rem;
+}
+.le-solution summary {
+  cursor: pointer;
+  color: var(--brand-blue, #1e90ff);
+  font-weight: 600;
+  width: max-content;
+}
+.le-solution[open] summary { margin-bottom: 0.4rem; }
+.le-solution .le-steps {
+  background: #f7fafd;
+  border-inline-start: 3px solid rgba(30, 144, 255, 0.4);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  line-height: 1.9;
+  color: var(--ink-600, #445);
+}
+.le-solved { }
+
+/* =========================================================
+   שיטת הסרגל (factor-label / railroad) להצגת חישובים
+   ========================================================= */
+.ruler-calc {
+  display: inline-flex;
+  direction: ltr;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+  font-family: "Cambria Math", "Times New Roman", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: var(--ink-700, #2b3e50);
+}
+.rc-term {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0.7rem;
+  border-inline-end: 1.6px solid var(--ink-700, #2b3e50);
+}
+.rc-term:last-of-type { border-inline-end: none; }
+.rc-num, .rc-den { padding: 0.18rem 0.25rem; white-space: nowrap; text-align: center; }
+.rc-num { border-bottom: 1.6px solid var(--ink-700, #2b3e50); }
+.rc-den:empty { min-height: 1.1em; }
+.rc-eq {
+  display: flex;
+  align-items: center;
+  padding-inline-start: 0.7rem;
+  font-weight: 700;
+  color: var(--ink-900, #1e3a5f);
+}
+/* צמצום יחידות */
+.rc-cancel {
+  text-decoration: line-through;
+  text-decoration-color: #d9534f;
+  text-decoration-thickness: 1.5px;
+  color: #9aa3ad;
+}
+
+/* תווית קלט קצרה בתרגיל חי (למשל "1 L =") */
+.le-prompt {
+  color: var(--ink-600, #445);
+  font-weight: 600;
+  direction: ltr;
+}

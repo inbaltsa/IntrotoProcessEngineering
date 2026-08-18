@@ -141,6 +141,30 @@ $$1h = 3600s\  \rightarrow \ \ \ \ \frac{1h}{3600s}\ \ \ \ \ or \ \ \ \frac{3600
   - [ליטר לגלון (]{dir="rtl"}L-\>gal[)]{dir="rtl"}
 
   - [מטר לפיט (]{dir="rtl"}m-\>ft[)]{dir="rtl"}
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">1 L =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.264" data-tol="0.005" placeholder="?" aria-label="ליטר לגלון">
+    <span class="le-unit">gal</span></div>
+  <div class="le-row"><span class="le-prompt">1 m =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="3.28" data-tol="0.02" placeholder="?" aria-label="מטר לפיט">
+    <span class="le-unit">ft</span></div>
+  <div style="margin-top:0.5rem"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מהטבלה 1 gal = 3.785 L, ולכן:</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">1 <span class="rc-cancel">L</span></div><div class="rc-den"></div></div>
+        <div class="rc-term"><div class="rc-num">1 gal</div><div class="rc-den">3.785 <span class="rc-cancel">L</span></div></div>
+        <div class="rc-eq">= 0.264 gal</div>
+      </div>
+      <div>ומהטבלה ישירות 1 m = 3.28 ft.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ::: example
@@ -190,6 +214,29 @@ $$20ft\  \times \frac{1m}{3.028ft} = 6.1m$$
 
 ::: exercise
 [משאית נסעה מרחק של]{dir="rtl"} 25mile [במשך 20 דקות. מהי המהירות של המשאית במטר לשנייה?]{dir="rtl"}
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="33.5" data-tol="0.4" placeholder="התשובה שלך" aria-label="תשובה">
+    <span class="le-unit">m/s</span>
+    <button class="le-check" type="button">בדיקה</button>
+  </div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>משרשרים את הנתון עם פקטורי המעבר כך שהיחידות מצטמצמות:</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">25 <span class="rc-cancel">mile</span></div><div class="rc-den">20 <span class="rc-cancel">min</span></div></div>
+        <div class="rc-term"><div class="rc-num">1609.34 m</div><div class="rc-den">1 <span class="rc-cancel">mile</span></div></div>
+        <div class="rc-term"><div class="rc-num">1 <span class="rc-cancel">min</span></div><div class="rc-den">60 s</div></div>
+        <div class="rc-eq">= 33.5 m/s</div>
+      </div>
+      <div>היחידות mile ו-min מצטמצמות ונשארת m/s.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### [סיכום]{dir="rtl"}
@@ -269,6 +316,28 @@ $$\begin{matrix}
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_ & = & \mathbf{1.5*1}\mathbf{0}^{\mathbf{- 6}}\mathbf{s} \\
 \mathbf{1}\mathbf{nm} & & \_\_\_\_\_\_\_\_\_\_\_\_\_\mathbf{m}
 \end{matrix}$$
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">1 Mg =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1e6" data-tol="1" placeholder="אפשר 1e6" aria-label="Mg לגרם">
+    <span class="le-unit">g</span></div>
+  <div class="le-row"><span class="le-prompt">1.5×10⁻⁶ s =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1.5" data-tol="0.01" placeholder="?" aria-label="שניות למיקרו">
+    <span class="le-unit">µs</span></div>
+  <div class="le-row"><span class="le-prompt">1 nm =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1e-9" data-tol="1e-11" placeholder="אפשר 1e-9" aria-label="ננומטר למטר">
+    <span class="le-unit">m</span></div>
+  <div style="margin-top:0.5rem"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>כל קידומת היא פקטור מעבר של חזקת 10:</div>
+      <div dir="ltr">1 Mg = 1×10⁶ g &nbsp;•&nbsp; 1.5×10⁻⁶ s = 1.5 µs &nbsp;•&nbsp; 1 nm = 1×10⁻⁹ m</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### [יחידות נגזרות]{dir="rtl"}
@@ -313,6 +382,30 @@ $$\begin{matrix}
 ::: exercise
 [מה פקטור המעבר בין]{dir="rtl"} dyne [ל-]{dir="rtl"}N[? חשבו באמצעות יחידות הבסיס.]{dir="rtl"}
 [(רמז- התחילו בביטוי ביחידות הבסיס של אחד מהם, והשתמשו במעברי יחידות על מנת להמיר אותן כך שיתאימו ליחידות הבסיס של השני)]{dir="rtl"}
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row">
+    <span class="le-prompt">1 N =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="100000" data-tol="1" placeholder="אפשר גם 1e5" aria-label="תשובה">
+    <span class="le-unit">dyne</span>
+    <button class="le-check" type="button">בדיקה</button>
+  </div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>נבטא ניוטון ביחידות הבסיס שלו ונמיר ל-g·cm/s² (יחידות הבסיס של dyne):</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">1 <span class="rc-cancel">kg</span>·<span class="rc-cancel">m</span>/s²</div><div class="rc-den"></div></div>
+        <div class="rc-term"><div class="rc-num">1000 g</div><div class="rc-den">1 <span class="rc-cancel">kg</span></div></div>
+        <div class="rc-term"><div class="rc-num">100 cm</div><div class="rc-den">1 <span class="rc-cancel">m</span></div></div>
+        <div class="rc-eq">= 10⁵ g·cm/s² = 10⁵ dyne</div>
+      </div>
+      <div>מכאן 1 N = 10⁵ dyne = 100000 dyne.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### [כוח ומשקל]{dir="rtl"} 
@@ -448,6 +541,28 @@ $$
 ::: exercise
 [צפיפות המים היא]{dir="rtl"}$62.4\frac{lb_{m}}{ft^{3}}$\
 [מה יהיה המשקל של]{dir="rtl"} $500ft^{3}$ [מים?]{dir="rtl"}
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="31200" data-tol="50" placeholder="התשובה שלך" aria-label="תשובה">
+    <span class="le-unit">lb_f</span>
+    <button class="le-check" type="button">בדיקה</button>
+  </div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מוצאים את המסה על ידי הכפלת הצפיפות בנפח:</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">500 <span class="rc-cancel">ft³</span></div><div class="rc-den"></div></div>
+        <div class="rc-term"><div class="rc-num">62.4 lb<sub>m</sub></div><div class="rc-den">1 <span class="rc-cancel">ft³</span></div></div>
+        <div class="rc-eq">= 31,200 lb<sub>m</sub></div>
+      </div>
+      <div>במערכת האמריקאית g/g<sub>c</sub> ≈ 1, ולכן המשקל W ≈ 31,200 lb<sub>f</sub>.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### [סיכום - מערכות יחידות]{dir="rtl"}
