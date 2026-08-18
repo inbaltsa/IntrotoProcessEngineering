@@ -244,6 +244,15 @@ h2.page-subtitle::after {
   padding: 1.5rem 1rem;
   font-size: 0.95rem;
 }
+
+/* לוגו סיידבר קטן ומעודן (במקום לוגו כתום גדול בכל עמוד) */
+.sidebar-logo {
+  width: 60px !important;
+  max-width: 60px;
+  height: auto;
+  margin: 0 auto 0.4rem;
+  opacity: 0.9;
+}
 .sidebar-title {
   text-align: center;
   font-weight: 700;
