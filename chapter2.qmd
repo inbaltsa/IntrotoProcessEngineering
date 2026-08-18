@@ -345,7 +345,7 @@ $$\begin{matrix}
   <details class="le-solution"><summary>הצגת פתרון</summary>
     <div class="le-steps">
       <div>כל קידומת היא פקטור מעבר של חזקת 10:</div>
-      <div dir="ltr">1 Mg = 1×10⁶ g &nbsp;•&nbsp; 1.5×10⁻⁶ s = 1.5 µs &nbsp;•&nbsp; 1 nm = 1×10⁻⁹ m</div>
+      <div class="le-eq">1 Mg = 1×10⁶ g &nbsp;•&nbsp; 1.5×10⁻⁶ s = 1.5 µs &nbsp;•&nbsp; 1 nm = 1×10⁻⁹ m</div>
     </div>
   </details>
 </div>
@@ -401,8 +401,8 @@ $$\begin{matrix}
     <span class="le-prompt">1 N =</span>
     <input class="le-input" type="text" inputmode="decimal" data-answer="100000" data-tol="1" placeholder="אפשר גם 1e5" aria-label="תשובה">
     <span class="le-unit">dyne</span>
-    <button class="le-check" type="button">בדיקה</button>
   </div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
   <div class="le-feedback" role="status"></div>
   <details class="le-solution"><summary>הצגת פתרון</summary>
     <div class="le-steps">
@@ -413,7 +413,8 @@ $$\begin{matrix}
         <div class="rc-term"><div class="rc-num">100 cm</div><div class="rc-den">1 <span class="rc-cancel">m</span></div></div>
         <div class="rc-eq">= 10⁵ g·cm/s² = 10⁵ dyne</div>
       </div>
-      <div>מכאן 1 N = 10⁵ dyne = 100000 dyne.</div>
+      <div>מכאן:</div>
+      <div class="le-eq">1 N = 10⁵ dyne = 100000 dyne</div>
     </div>
   </details>
 </div>
@@ -558,9 +559,9 @@ $$
 <div class="live-exercise">
   <div class="le-row">
     <input class="le-input" type="text" inputmode="decimal" data-answer="31200" data-tol="50" placeholder="התשובה שלך" aria-label="תשובה">
-    <span class="le-unit">lb_f</span>
-    <button class="le-check" type="button">בדיקה</button>
+    <span class="le-unit">lb<sub>f</sub></span>
   </div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
   <div class="le-feedback" role="status"></div>
   <details class="le-solution"><summary>הצגת פתרון</summary>
     <div class="le-steps">
@@ -570,7 +571,9 @@ $$
         <div class="rc-term"><div class="rc-num">62.4 lb<sub>m</sub></div><div class="rc-den">1 <span class="rc-cancel">ft³</span></div></div>
         <div class="rc-eq">= 31,200 lb<sub>m</sub></div>
       </div>
-      <div>במערכת האמריקאית g/g<sub>c</sub> ≈ 1, ולכן המשקל W ≈ 31,200 lb<sub>f</sub>.</div>
+      <div>המשקל מתקבל מהמסה לפי המשוואה W = m · g / g<sub>c</sub>:</div>
+      <div class="le-eq">W = 31,200 lb<sub>m</sub> × 1 (lb<sub>f</sub> / lb<sub>m</sub>) = 31,200 lb<sub>f</sub></div>
+      <div>(במערכת האמריקאית g / g<sub>c</sub> = 1 lb<sub>f</sub>/lb<sub>m</sub>, ולכן המשקל שווה מספרית למסה.)</div>
     </div>
   </details>
 </div>
