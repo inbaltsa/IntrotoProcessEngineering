@@ -38,6 +38,7 @@ format:
       - assets/env-autocallouts.js
       - assets/univ-footer.html
       - assets/tracking.html
+      - assets/live-exercise.html
     include-in-header: _includes/head.html
 
 #  pdf:
