@@ -4,7 +4,7 @@
 ## ספרי קורס
 
 <span dir="ltr"> - **Felder, R.M., Rousseau, R.W., & Bullard, L.G.** (2016). *Elementary Principles of Chemical Processes* (4th ed., Global Edition). Wiley.  </span>  
-  גרסה דיגיטלית זמינה לשימוש. ניתן להיעזר גם במהדורות קודמות – עותקים זמינים בספריית האוניברסיטה.
+  גרסה דיגיטלית זמינה לשימוש. ניתן להיעזר גם במהדורות קודמות - עותקים זמינים בספריית האוניברסיטה.
 
 <span dir="ltr"> - **Himmelblau, D.M.** (2012). *Basic Principles and Calculations in Chemical Engineering*. Prentice Hall.  </span>  
   מומלץ לעיון נוסף. עותקים זמינים בספרייה.
@@ -18,10 +18,10 @@
 ## מקורות תמונות ואיורים
 
 - ספרי הלימוד לעיל  
-- Wikipedia – שימוש בתמונות תחת רישיון Creative Commons עם קרדיט מתאים  
-- **Freepik** – שימוש בתמונות ובאיורים תחת רישיון Premium (מנוי פעיל בתשלום)  
-- **Freepik AI Generator** – תמונות מקוריות שנוצרו באמצעות כלים מבוססי בינה מלאכותית של Freepik במסגרת מנוי Premium  
+- Wikipedia - שימוש בתמונות תחת רישיון Creative Commons עם קרדיט מתאים  
+- **Freepik** - שימוש בתמונות ובאיורים תחת רישיון Premium (מנוי פעיל בתשלום)  
+- **Freepik AI Generator** - תמונות מקוריות שנוצרו באמצעות כלים מבוססי בינה מלאכותית של Freepik במסגרת מנוי Premium  
 
 ---
 
-* הספר נערך ונוסח בעזרת כלי בינה מלאכותית – ChatGPT (OpenAI) ו-Gemini (Google) – לצורך שיפור ניסוחים, תיאום מונחים והנגשה פדגוגית.
+* הספר נערך ונוסח בעזרת כלי בינה מלאכותית - ChatGPT (OpenAI) ו-Gemini (Google) - לצורך שיפור ניסוחים, תיאום מונחים והנגשה פדגוגית.
