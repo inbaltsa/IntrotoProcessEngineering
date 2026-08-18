@@ -384,6 +384,9 @@ body.cover-page .title-block {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
+  /* נוסחה נקראת שמאל→ימין (1 N = ? dyne), אך נשארת צמודה לימין כמו העמוד */
+  direction: ltr;
+  justify-content: flex-end;
 }
 .le-input {
   width: 9rem;

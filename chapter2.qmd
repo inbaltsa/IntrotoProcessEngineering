@@ -332,13 +332,13 @@ $$\begin{matrix}
 ```{=html}
 <div class="live-exercise">
   <div class="le-row"><span class="le-prompt">1 Mg =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="1e6" data-tol="1" placeholder="אפשר 1e6" aria-label="Mg לגרם">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1e6" data-tol="1" placeholder="1e6" aria-label="Mg לגרם">
     <span class="le-unit">g</span></div>
   <div class="le-row"><span class="le-prompt">1.5×10⁻⁶ s =</span>
     <input class="le-input" type="text" inputmode="decimal" data-answer="1.5" data-tol="0.01" placeholder="?" aria-label="שניות למיקרו">
     <span class="le-unit">µs</span></div>
   <div class="le-row"><span class="le-prompt">1 nm =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="1e-9" data-tol="1e-11" placeholder="אפשר 1e-9" aria-label="ננומטר למטר">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1e-9" data-tol="1e-11" placeholder="1e-9" aria-label="ננומטר למטר">
     <span class="le-unit">m</span></div>
   <div style="margin-top:0.5rem"><button class="le-check" type="button">בדיקה</button></div>
   <div class="le-feedback" role="status"></div>
@@ -399,7 +399,7 @@ $$\begin{matrix}
 <div class="live-exercise">
   <div class="le-row">
     <span class="le-prompt">1 N =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="100000" data-tol="1" placeholder="אפשר גם 1e5" aria-label="תשובה">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="100000" data-tol="1" placeholder="1e5" aria-label="תשובה">
     <span class="le-unit">dyne</span>
   </div>
   <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
