@@ -1,8 +1,13 @@
+---
+toc: false
+---
+
+```{=html}
+<script>document.body.classList.add('cover-page');</script>
+```
 
 # מבוא להנדסת תהליכים {.unnumbered .page-title}
 ## ד"ר ענבל צרפתי-ברעד {.unnumbered .page-subtitle}
-
-<img src="assets/logo.png" class="page-logo">
 
 <p class="page-description">
 מיועד לסטודנטים וסטודנטיות בתחילת דרכם<br>
@@ -19,23 +24,15 @@
   </p>
 </div>
 
-<!-- Hide Quarto's default title block + the current-page label in sidebar (cover page only) -->
+<!-- הסתרת כותרת ברירת־המחדל של Quarto ותוויות הסיידבר בעמוד השער בלבד -->
 <style>
-/* 1) העלמת כותרת ברירת־מחדל של Quarto בעמוד הזה בלבד */
-header#title-block-header.quarto-title-block { 
-  display: none !important; 
+header#title-block-header.quarto-title-block {
+  display: none !important;
   visibility: hidden !important;
-  margin: 0 !important; 
-  padding: 0 !important; 
-  height: 0 !important; 
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
 }
-
-/* 2) העלמת התווית "index.html 1" בחלונית הימנית בעמוד השער */
-#quarto-sidebar .sidebar-title { 
-  display: none !important; 
-}
-/* וגם מחיקת המספר ליד הפרק ברשימה (בעמוד השער בלבד, כי הסגנון מוטמע בדף הזה) */
-#quarto-sidebar .chapter-number { 
-  display: none !important; 
-}
+#quarto-sidebar .sidebar-title { display: none !important; }
+#quarto-sidebar .chapter-number { display: none !important; }
 </style>

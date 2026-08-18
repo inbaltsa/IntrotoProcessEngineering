@@ -159,69 +159,81 @@ figure.quarto-figure figcaption,
 }
 
 /* =========================================================
-   עמוד פתיחה
+   עמוד פתיחה (שער) — עדין, זהות עצמאית שמתכתבת עם בן־גוריון
    ========================================================= */
 
-/* פס עליון כתום לפני הלוגו */
-.page-logo::before {
+/* הסתרת "תוכן עניינים" (המלל מצד שמאל למעלה) בעמוד השער בלבד */
+body.cover-page #TOC,
+body.cover-page #quarto-margin-sidebar {
+  display: none !important;
+}
+
+/* לוגו מרכזי גדול — הוסר מהשער. הנוכחות המוסדית עברה לפס תחתון עדין. */
+.page-logo { display: none !important; }
+
+/* כותרת הספר */
+h1.page-title {
+  text-align: center;
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
+  margin-top: 5rem;
+  margin-bottom: 0.6rem;
+}
+
+h2.page-subtitle {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--ink-500);
+  margin-bottom: 1.6rem;
+}
+
+/* פס אלכסוני עדין מתחת לשם המחברת — נגיעת מותג אחת, מרוסנת */
+h2.page-subtitle::after {
   content: "";
   display: block;
-  background-color: var(--brand-orange);
-  height: 14px;
-  width: 100%;
-  position: relative;
-  top: -2rem;
-  margin-bottom: 2rem;
-}
-
-.page-logo {
-  display: block;
-  margin: 2rem auto;
-  width: 180px;
-  filter: drop-shadow(0 0 8px rgba(0,0,0,0.1));
-}
-
-.page-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--ink-700);
-  margin-top: 4rem;
-  margin-bottom: 0.5rem;
-}
-
-.page-subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  color: var(--ink-500);
-  margin-bottom: 1.5rem;
+  width: 84px;
+  height: 4px;
+  margin: 1.3rem auto 0;
+  background: var(--brand-orange);
+  clip-path: polygon(16% 0, 100% 0, 84% 100%, 0 100%);
 }
 
 .page-description {
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  color: #444;
-  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto 3.5rem auto;
+  color: var(--ink-600);
+  line-height: 1.65;
+  font-size: 1.05rem;
 }
 
-/* תיבת תודות */
+/* תיבת תודות — עדינה ונקייה */
 .thanks-box {
-  background: #eef6ff; /* fallback */
-  background: color-mix(in srgb, var(--brand-blue) 8%, white);
-  border-inline-start: 4px solid var(--brand-blue);
-  padding: 1.2rem 1.5rem;
-  max-width: 650px;
+  background: #fafafa;
+  border: 1px solid rgba(43, 62, 80, 0.12);
+  padding: 1.6rem 1.8rem;
+  max-width: 620px;
   margin: 0 auto;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 12px;
+  color: var(--ink-600);
+  line-height: 1.8;
+  font-size: 0.98rem;
 }
 
 .thanks-box h3 {
   margin-top: 0;
+  margin-bottom: 0.8rem;
   color: var(--ink-900);
   font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
 }
+
+.thanks-box p { margin-bottom: 0; }
 
 /* =========================================================
    סיידבר
@@ -285,21 +297,10 @@ figure.quarto-figure figcaption,
   flex-wrap: wrap;
 }
 
-.univ-footer::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, var(--brand-orange) 0%, #ffbb33 100%);
-  margin-bottom: 0.7rem;
-  border-radius: 3px;
-}
-
 .univ-footer-logo {
-  width: 40px;
-  height: 40px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
-  filter: drop-shadow(0 0 4px rgba(0,0,0,0.1));
 }
 
 .univ-footer-text {
@@ -329,32 +330,33 @@ body.cover-page .title-block {
 .univ-footer {
   position: static !important;  /* לא צמוד למסך, לא סטיקי */
   width: 100%;
-  max-width: 1100px;            /* רוחב התוכן של Quarto (התאימי אם צריך) */
-  margin: 40px auto 0;          /* ריווח מלמעלה ומרכז */
-  padding: 8px 16px;
-  background: #fff;
-  border-top: 3px solid #f28c00; /* פס כתום דק */
+  max-width: 1100px;
+  margin: 56px auto 0;
+  padding: 14px 16px 0;
+  background: transparent;
+  border-top: 1px solid rgba(88, 89, 91, 0.18); /* קו הפרדה דק ועדין */
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   direction: rtl;
 }
 
-/* לא נסמכים על שם מחלקה ספציפי – כל תמונה בתוך הפוטר */
+/* לוגו קטן ומופרד — נגיעה מוסדית מרוסנת */
 .univ-footer img {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
+  opacity: 0.9;
 }
 
 /* טקסט קצר ונקי */
 .univ-footer .univ-footer-text,
 .univ-footer .univ-footer__text {
   font-family: "Assistant","Arimo",sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1f2937;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-500);
   white-space: nowrap;
 }
