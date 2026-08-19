@@ -91,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="assets/site-enhance.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -187,18 +187,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">תוכן עניינים</h2>
-   
-  <ul>
-  <li><a href="#מבוא-להנדסת-תהליכים" id="toc-מבוא-להנדסת-תהליכים" class="nav-link active" data-scroll-target="#מבוא-להנדסת-תהליכים">מבוא להנדסת תהליכים</a>
-  <ul class="collapse">
-  <li><a href="#דר-ענבל-צרפתי-ברעד" id="toc-דר-ענבל-צרפתי-ברעד" class="nav-link" data-scroll-target="#דר-ענבל-צרפתי-ברעד">ד”ר ענבל צרפתי-ברעד</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -227,11 +216,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<script>document.body.classList.add('cover-page');</script>
 <section id="מבוא-להנדסת-תהליכים" class="level1 unnumbered page-title">
 <h1 class="unnumbered page-title">מבוא להנדסת תהליכים</h1>
 <section id="דר-ענבל-צרפתי-ברעד" class="level2 unnumbered page-subtitle">
 <h2 class="unnumbered page-subtitle anchored" data-anchor-id="דר-ענבל-צרפתי-ברעד">ד”ר ענבל צרפתי-ברעד</h2>
-<p><img src="assets/logo.png" class="page-logo"></p>
 <p class="page-description">
 מיועד לסטודנטים וסטודנטיות בתחילת דרכם<br> בתחום הנדסת תהליכים
 </p>
@@ -243,25 +232,17 @@ ul.task-list li input[type="checkbox"] {
 ד״ר רחל ליכטנשטיין, המחלקה להנדסת ביוטכנולוגיה על שם אברם וסטלה גולדשטיין־גורן<br> פרופ׳ רונית ביטון, המחלקה להנדסה כימית<br> היחידה לקידום איכות ההוראה והלמידה<br> אוניברסיטת בן־גוריון בנגב
 </p>
 </div>
-<!-- Hide Quarto's default title block + the current-page label in sidebar (cover page only) -->
+<!-- הסתרת כותרת ברירת־המחדל של Quarto ותוויות הסיידבר בעמוד השער בלבד -->
 <style>
-/* 1) העלמת כותרת ברירת־מחדל של Quarto בעמוד הזה בלבד */
-header#title-block-header.quarto-title-block { 
-  display: none !important; 
+header#title-block-header.quarto-title-block {
+  display: none !important;
   visibility: hidden !important;
-  margin: 0 !important; 
-  padding: 0 !important; 
-  height: 0 !important; 
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
 }
-
-/* 2) העלמת התווית "index.html 1" בחלונית הימנית בעמוד השער */
-#quarto-sidebar .sidebar-title { 
-  display: none !important; 
-}
-/* וגם מחיקת המספר ליד הפרק ברשימה (בעמוד השער בלבד, כי הסגנון מוטמע בדף הזה) */
-#quarto-sidebar .chapter-number { 
-  display: none !important; 
-}
+#quarto-sidebar .sidebar-title { display: none !important; }
+#quarto-sidebar .chapter-number { display: none !important; }
 </style>
 
 
@@ -544,6 +525,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </div>
 <script src="assets/tracking.js"></script>
+<script src="assets/live-exercise.js"></script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

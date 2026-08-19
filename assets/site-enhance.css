@@ -159,69 +159,81 @@ figure.quarto-figure figcaption,
 }
 
 /* =========================================================
-   עמוד פתיחה
+   עמוד פתיחה (שער) — עדין, זהות עצמאית שמתכתבת עם בן־גוריון
    ========================================================= */
 
-/* פס עליון כתום לפני הלוגו */
-.page-logo::before {
+/* הסתרת "תוכן עניינים" (המלל מצד שמאל למעלה) בעמוד השער בלבד */
+body.cover-page #TOC,
+body.cover-page #quarto-margin-sidebar {
+  display: none !important;
+}
+
+/* לוגו מרכזי גדול — הוסר מהשער. הנוכחות המוסדית עברה לפס תחתון עדין. */
+.page-logo { display: none !important; }
+
+/* כותרת הספר */
+h1.page-title {
+  text-align: center;
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink-900);
+  margin-top: 5rem;
+  margin-bottom: 0.6rem;
+}
+
+h2.page-subtitle {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--ink-500);
+  margin-bottom: 1.6rem;
+}
+
+/* פס אלכסוני עדין מתחת לשם המחברת — נגיעת מותג אחת, מרוסנת */
+h2.page-subtitle::after {
   content: "";
   display: block;
-  background-color: var(--brand-orange);
-  height: 14px;
-  width: 100%;
-  position: relative;
-  top: -2rem;
-  margin-bottom: 2rem;
-}
-
-.page-logo {
-  display: block;
-  margin: 2rem auto;
-  width: 180px;
-  filter: drop-shadow(0 0 8px rgba(0,0,0,0.1));
-}
-
-.page-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--ink-700);
-  margin-top: 4rem;
-  margin-bottom: 0.5rem;
-}
-
-.page-subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  color: var(--ink-500);
-  margin-bottom: 1.5rem;
+  width: 84px;
+  height: 4px;
+  margin: 1.3rem auto 0;
+  background: var(--brand-orange);
+  clip-path: polygon(16% 0, 100% 0, 84% 100%, 0 100%);
 }
 
 .page-description {
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  color: #444;
-  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto 3.5rem auto;
+  color: var(--ink-600);
+  line-height: 1.65;
+  font-size: 1.05rem;
 }
 
-/* תיבת תודות */
+/* תיבת תודות — עדינה ונקייה */
 .thanks-box {
-  background: #eef6ff; /* fallback */
-  background: color-mix(in srgb, var(--brand-blue) 8%, white);
-  border-inline-start: 4px solid var(--brand-blue);
-  padding: 1.2rem 1.5rem;
-  max-width: 650px;
+  background: #fafafa;
+  border: 1px solid rgba(43, 62, 80, 0.12);
+  padding: 1.6rem 1.8rem;
+  max-width: 620px;
   margin: 0 auto;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 12px;
+  color: var(--ink-600);
+  line-height: 1.8;
+  font-size: 0.98rem;
 }
 
 .thanks-box h3 {
   margin-top: 0;
+  margin-bottom: 0.8rem;
   color: var(--ink-900);
   font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
 }
+
+.thanks-box p { margin-bottom: 0; }
 
 /* =========================================================
    סיידבר
@@ -231,6 +243,15 @@ figure.quarto-figure figcaption,
   border-left: 1px solid #c5d9f3;
   padding: 1.5rem 1rem;
   font-size: 0.95rem;
+}
+
+/* לוגו סיידבר קטן ומעודן (במקום לוגו כתום גדול בכל עמוד) */
+.sidebar-logo {
+  width: 60px !important;
+  max-width: 60px;
+  height: auto;
+  margin: 0 auto 0.4rem;
+  opacity: 0.9;
 }
 .sidebar-title {
   text-align: center;
@@ -285,21 +306,10 @@ figure.quarto-figure figcaption,
   flex-wrap: wrap;
 }
 
-.univ-footer::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, var(--brand-orange) 0%, #ffbb33 100%);
-  margin-bottom: 0.7rem;
-  border-radius: 3px;
-}
-
 .univ-footer-logo {
-  width: 40px;
-  height: 40px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
-  filter: drop-shadow(0 0 4px rgba(0,0,0,0.1));
 }
 
 .univ-footer-text {
@@ -329,32 +339,225 @@ body.cover-page .title-block {
 .univ-footer {
   position: static !important;  /* לא צמוד למסך, לא סטיקי */
   width: 100%;
-  max-width: 1100px;            /* רוחב התוכן של Quarto (התאימי אם צריך) */
-  margin: 40px auto 0;          /* ריווח מלמעלה ומרכז */
-  padding: 8px 16px;
-  background: #fff;
-  border-top: 3px solid #f28c00; /* פס כתום דק */
+  max-width: 1100px;
+  margin: 56px auto 0;
+  padding: 14px 16px 0;
+  background: transparent;
+  border-top: 1px solid rgba(88, 89, 91, 0.18); /* קו הפרדה דק ועדין */
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   direction: rtl;
 }
 
-/* לא נסמכים על שם מחלקה ספציפי – כל תמונה בתוך הפוטר */
+/* לוגו קטן ומופרד — נגיעה מוסדית מרוסנת */
 .univ-footer img {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
+  opacity: 0.9;
 }
 
 /* טקסט קצר ונקי */
 .univ-footer .univ-footer-text,
 .univ-footer .univ-footer__text {
   font-family: "Assistant","Arimo",sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1f2937;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-500);
   white-space: nowrap;
 }
+
+/* =========================================================
+   תרגילים חיים (live-exercise) — בדיקה עצמית
+   ========================================================= */
+.live-exercise {
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed rgba(30, 144, 255, 0.35);
+  direction: rtl;
+}
+.le-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  /* נוסחה נקראת שמאל→ימין (1 N = ? dyne), אך נשארת צמודה לימין כמו העמוד */
+  direction: ltr;
+  justify-content: flex-end;
+}
+.le-input {
+  width: 9rem;
+  max-width: 60vw;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border: 1.5px solid #c5d9f3;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.le-input:focus {
+  outline: none;
+  border-color: var(--brand-blue, #1e90ff);
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.15);
+}
+.le-input-ok  { border-color: #2e9e5b; background: #f2fbf5; }
+.le-input-bad { border-color: #d9534f; background: #fdf3f2; }
+.le-unit {
+  font-size: 0.95rem;
+  color: var(--ink-500, #555);
+  direction: ltr;
+}
+.le-check {
+  padding: 0.42rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--brand-blue, #1e90ff);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+.le-check:hover  { background: #1b7fe0; }
+.le-check:active { transform: translateY(1px); }
+.le-feedback {
+  min-height: 1.4em;
+  margin-top: 0.55rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.le-feedback.le-ok    { color: #2e9e5b; }
+.le-feedback.le-bad   { color: #d9534f; }
+.le-feedback.le-close { color: #d98a1f; }
+.le-feedback.le-warn  { color: var(--ink-500, #555); font-weight: 500; }
+.le-solution {
+  margin-top: 0.6rem;
+  font-size: 0.93rem;
+}
+.le-solution summary {
+  cursor: pointer;
+  color: var(--brand-blue, #1e90ff);
+  font-weight: 600;
+  width: max-content;
+}
+.le-solution[open] summary { margin-bottom: 0.4rem; }
+.le-solution .le-steps {
+  background: #f7fafd;
+  border-inline-start: 3px solid rgba(30, 144, 255, 0.4);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  line-height: 1.9;
+  color: var(--ink-600, #445);
+}
+.le-solved { }
+
+/* =========================================================
+   שיטת הסרגל (factor-label / railroad) להצגת חישובים
+   ========================================================= */
+.ruler-calc {
+  display: inline-flex;
+  direction: ltr;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+  font-family: "Cambria Math", "Times New Roman", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: var(--ink-700, #2b3e50);
+}
+.rc-term {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0.7rem;
+  border-inline-end: 1.6px solid var(--ink-700, #2b3e50);
+}
+.rc-term:last-of-type { border-inline-end: none; }
+.rc-num, .rc-den { padding: 0.18rem 0.25rem; white-space: nowrap; text-align: center; }
+.rc-num { border-bottom: 1.6px solid var(--ink-700, #2b3e50); }
+.rc-den:empty { min-height: 1.1em; }
+.rc-eq {
+  display: flex;
+  align-items: center;
+  padding-inline-start: 0.7rem;
+  font-weight: 700;
+  color: var(--ink-900, #1e3a5f);
+}
+/* צמצום יחידות */
+.rc-cancel {
+  text-decoration: line-through;
+  text-decoration-color: #d9534f;
+  text-decoration-thickness: 1.5px;
+  color: #9aa3ad;
+}
+
+/* תווית קלט קצרה בתרגיל חי (למשל "1 L =") */
+.le-prompt {
+  color: var(--ink-600, #445);
+  font-weight: 600;
+  direction: ltr;
+}
+
+/* =========================================================
+   תרגיל "פקטור מעבר" — קו שבר להשלמת ערכים ויחידות
+   ========================================================= */
+.cf-fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  direction: ltr;
+  margin: 0.3rem 0;
+  vertical-align: middle;
+}
+.cf-line {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.4rem;
+}
+.cf-bar {
+  width: 100%;
+  min-width: 200px;
+  height: 2px;
+  background: var(--ink-700, #2b3e50);
+}
+.cf-v, .cf-u {
+  padding: 0.35rem 0.4rem;
+  font-size: 1rem;
+  border: 1.5px solid #c5d9f3;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.cf-v { width: 5.5rem; }
+.cf-u { width: 4.5rem; }
+.cf-v:focus, .cf-u:focus {
+  outline: none;
+  border-color: var(--brand-blue, #1e90ff);
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.15);
+}
+.cf-v.le-input-ok  { border-color: #2e9e5b; background: #f2fbf5; }
+.cf-v.le-input-bad { border-color: #d9534f; background: #fdf3f2; }
+.cf-hint {
+  font-size: 0.85rem;
+  color: var(--ink-500, #555);
+  margin-bottom: 0.3rem;
+}
+
+/* שורות משוואה בתוך פתרון — LTR וממורכזות, כדי שלא יתבלבלו עם העברית */
+.le-steps > div { margin: 0.3rem 0; }
+.le-steps .le-eq {
+  direction: ltr;
+  text-align: center;
+  font-family: "Cambria Math", "Times New Roman", Georgia, serif;
+  font-size: 1.02rem;
+  color: var(--ink-900, #1e3a5f);
+  margin: 0.45rem 0;
+}
+/* כפתור בדיקה בשורה נפרדת */
+.le-actions { margin-top: 0.6rem; }
