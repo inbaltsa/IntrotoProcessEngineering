@@ -321,6 +321,10 @@ $1~\text{μm} = 10^{-6}~\text{m}$  $1~\text{μs} = 10^{-6}~\text{s}$  $1
 </div></figcaption>
 </figure>
 
+::: callout-tip
+[**טיפ לכתיבת מספרים בתרגילים החיים:** אפשר להקליד מספרים גדולים או קטנים בכתיב מדעי מקוצר — הצורה]{dir="rtl"} `XeY` [פירושה]{dir="rtl"} $X \times 10^{Y}$. [למשל]{dir="rtl"} `1e6` $= 1\times10^{6}$, [ו-]{dir="rtl"}`2.5e-3` $= 2.5\times10^{-3}$. [אפשר כמובן גם להקליד את המספר המלא (למשל 1000000).]{dir="rtl"}
+:::
+
 ::: exercise
 [השלימו באמצעות טבלת הקידומות]{dir="rtl"}
 $$\begin{matrix}
@@ -332,13 +336,13 @@ $$\begin{matrix}
 ```{=html}
 <div class="live-exercise">
   <div class="le-row"><span class="le-prompt">1 Mg =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="1e6" data-tol="1" placeholder="1e6" aria-label="Mg לגרם">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1e6" data-tol="1" placeholder="?" aria-label="Mg לגרם">
     <span class="le-unit">g</span></div>
   <div class="le-row"><span class="le-prompt">1.5×10⁻⁶ s =</span>
     <input class="le-input" type="text" inputmode="decimal" data-answer="1.5" data-tol="0.01" placeholder="?" aria-label="שניות למיקרו">
     <span class="le-unit">µs</span></div>
   <div class="le-row"><span class="le-prompt">1 nm =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="1e-9" data-tol="1e-11" placeholder="1e-9" aria-label="ננומטר למטר">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1e-9" data-tol="1e-11" placeholder="?" aria-label="ננומטר למטר">
     <span class="le-unit">m</span></div>
   <div style="margin-top:0.5rem"><button class="le-check" type="button">בדיקה</button></div>
   <div class="le-feedback" role="status"></div>
@@ -399,7 +403,7 @@ $$\begin{matrix}
 <div class="live-exercise">
   <div class="le-row">
     <span class="le-prompt">1 N =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="100000" data-tol="1" placeholder="1e5" aria-label="תשובה">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="100000" data-tol="1" placeholder="?" aria-label="תשובה">
     <span class="le-unit">dyne</span>
   </div>
   <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
@@ -664,11 +668,11 @@ $P(\text{Pa}) = 300 \times T(\text{K})$
 ```{=html}
 <div class="live-exercise">
   <div class="le-row"><span class="le-prompt">k =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="300" data-tol="0" placeholder="ערך" aria-label="k ב-Pa/K">
-    <span class="le-unit">Pa/K</span></div>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="300" data-tol="0" placeholder="ערך" aria-label="ערך k">
+    <input class="le-input le-unit-in" type="text" data-exact="1" data-answer="Pa/K" placeholder="יחידות" aria-label="יחידות k"></div>
   <div class="le-row"><span class="le-prompt">k (atm) =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="0.00296" data-tol="0.0001" placeholder="2.96e-3" aria-label="k ב-atm/K">
-    <span class="le-unit">atm/K</span></div>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.00296" data-tol="0.0001" placeholder="ערך" aria-label="ערך k באטמוספירות">
+    <input class="le-input le-unit-in" type="text" data-exact="1" data-answer="atm/K" placeholder="יחידות" aria-label="יחידות k באטמוספירות"></div>
   <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
   <div class="le-feedback" role="status"></div>
   <details class="le-solution"><summary>הצגת פתרון</summary>

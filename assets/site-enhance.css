@@ -561,3 +561,6 @@ body.cover-page .title-block {
 }
 /* כפתור בדיקה בשורה נפרדת */
 .le-actions { margin-top: 0.6rem; }
+
+/* שדה קלט ליחידות (כשהסטודנט מקליד גם את היחידות) */
+.le-unit-in { width: 6rem; text-align: center; }
