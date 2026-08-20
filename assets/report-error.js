@@ -1,0 +1,89 @@
+/* =========================================================
+   report-error.js — כפתור "מצאנו שגיאה לתיקון"
+   כפתור צף בכל עמוד שפותח חלונית עם הבהרה (רק להגהה!) ומפנה
+   לטופס Google לדיווח, עם כתובת העמוד (וטקסט מסומן) ממולאים מראש.
+   =========================================================
+
+   >>> להגדרה — למלא כאן פעם אחת אחרי יצירת טופס Google: <<< */
+var REPORT_CONFIG = {
+  // קישור ה-viewform של טופס ה-Google (לא קישור העריכה):
+  formUrl: "https://docs.google.com/forms/d/e/PASTE_FORM_ID/viewform",
+
+  // מזהה שדה ה"עמוד" בטופס — מתוך "קבל קישור עם מילוי מראש".
+  // אם ריק, הטופס ייפתח בלי מילוי אוטומטי של כתובת העמוד.
+  entryPage: "",       // למשל: "entry.123456789"
+
+  // אופציונלי: מזהה שדה ל"טקסט שסומן" (אם הוספת שדה כזה בטופס):
+  entrySelection: "",  // למשל: "entry.987654321"
+
+  // קישור/מייל לצוות ההוראה — לשאלות על התוכן (יופיע בהבהרה):
+  staffContactUrl: "mailto:REPLACE-WITH-STAFF-EMAIL",
+  staffContactLabel: "צוות ההוראה"
+};
+
+(function () {
+  function el(tag, cls, html) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+
+  function buildFormUrl() {
+    var url = REPORT_CONFIG.formUrl;
+    var params = [];
+    if (REPORT_CONFIG.entryPage) {
+      params.push("usp=pp_url");
+      params.push(REPORT_CONFIG.entryPage + "=" + encodeURIComponent(location.href));
+      var sel = (window.getSelection && window.getSelection().toString() || "").trim();
+      if (sel && REPORT_CONFIG.entrySelection) {
+        params.push(REPORT_CONFIG.entrySelection + "=" + encodeURIComponent(sel.slice(0, 300)));
+      }
+    }
+    return params.length ? url + "?" + params.join("&") : url;
+  }
+
+  function build() {
+    // כפתור צף
+    var btn = el("button", "report-error-btn", "✎ מצאנו שגיאה לתיקון");
+    btn.type = "button";
+    btn.setAttribute("aria-haspopup", "dialog");
+
+    // חלונית
+    var panel = el("div", "report-error-panel");
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", "דיווח על שגיאת הגהה");
+    panel.hidden = true;
+    panel.innerHTML =
+      '<button class="report-error-close" type="button" aria-label="סגירה">×</button>' +
+      '<h3 class="report-error-title">דיווח על שגיאת הגהה</h3>' +
+      '<div class="report-error-scope">הכפתור מיועד <b>לתיקוני הגהה בלבד</b>: שגיאות כתיב, ניסוח, פורמט, ' +
+      'או מספר שגוי בטקסט.</div>' +
+      '<div class="report-error-warn">⚠ לשאלות על <b>התוכן</b> — חובה לפנות ל' +
+      '<a href="' + REPORT_CONFIG.staffContactUrl + '">' + REPORT_CONFIG.staffContactLabel + '</a>.</div>' +
+      '<a class="report-error-go" target="_blank" rel="noopener">פתיחת טופס הדיווח ←</a>' +
+      '<div class="report-error-hint">כתובת העמוד הנוכחי תצורף אוטומטית לדיווח.</div>';
+
+    var go = panel.querySelector(".report-error-go");
+
+    function open() {
+      go.href = buildFormUrl();          // נבנה בעת הפתיחה כדי לתפוס טקסט מסומן
+      panel.hidden = false;
+      btn.setAttribute("aria-expanded", "true");
+    }
+    function close() {
+      panel.hidden = true;
+      btn.setAttribute("aria-expanded", "false");
+    }
+
+    btn.addEventListener("click", function () { panel.hidden ? open() : close(); });
+    panel.querySelector(".report-error-close").addEventListener("click", close);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+
+    document.body.appendChild(btn);
+    document.body.appendChild(panel);
+  }
+
+  if (document.readyState !== "loading") build();
+  else document.addEventListener("DOMContentLoaded", build);
+})();

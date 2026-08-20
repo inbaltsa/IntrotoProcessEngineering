@@ -39,6 +39,7 @@ format:
       - assets/univ-footer.html
       - assets/tracking.html
       - assets/live-exercise.html
+      - assets/report-error.html
     include-in-header: _includes/head.html
 
 #  pdf:

@@ -564,3 +564,81 @@ body.cover-page .title-block {
 
 /* שדה קלט ליחידות (כשהסטודנט מקליד גם את היחידות) */
 .le-unit-in { width: 6rem; text-align: center; }
+
+/* =========================================================
+   כפתור "מצאנו שגיאה לתיקון" — דיווח הגהה
+   ========================================================= */
+.report-error-btn {
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  z-index: 1050;
+  background: var(--brand-orange, #f28c00);
+  color: #fff;
+  border: none;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Assistant","Arimo",sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  direction: rtl;
+}
+.report-error-btn:hover { background: #e07f00; }
+
+.report-error-panel {
+  position: fixed;
+  bottom: 66px;
+  left: 18px;
+  z-index: 1050;
+  width: 310px;
+  max-width: calc(100vw - 36px);
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  padding: 1rem 1.1rem;
+  direction: rtl;
+  text-align: right;
+  font-family: "Assistant","Arimo",sans-serif;
+  color: var(--ink-700, #2b3e50);
+}
+.report-error-panel[hidden] { display: none; }
+.report-error-close {
+  position: absolute;
+  inset-inline-end: 0.5rem;
+  top: 0.35rem;
+  border: none;
+  background: none;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #999;
+}
+.report-error-title { margin: 0 0 0.5rem; font-size: 1.05rem; color: var(--ink-900, #1e3a5f); font-weight: 700; }
+.report-error-scope { font-size: 0.9rem; line-height: 1.55; margin-bottom: 0.55rem; }
+.report-error-warn {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  background: #fff6e6;
+  border-inline-start: 3px solid var(--brand-orange, #f28c00);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  margin-bottom: 0.75rem;
+}
+.report-error-warn a { color: #c47700; font-weight: 700; }
+.report-error-go {
+  display: block;
+  text-align: center;
+  background: var(--brand-blue, #1e90ff);
+  color: #fff;
+  padding: 0.55rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.report-error-go:hover { background: #1b7fe0; color: #fff; }
+.report-error-hint { font-size: 0.78rem; color: var(--ink-500, #555); margin-top: 0.55rem; text-align: center; }
+
+@media print { .report-error-btn, .report-error-panel { display: none !important; } }
