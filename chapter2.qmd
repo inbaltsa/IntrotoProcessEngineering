@@ -712,6 +712,28 @@ $$\frac{w}{w} = \frac{m(x)}{m(total)} = \frac{\lbrack M\rbrack}{\lbrack M\rbrack
 **השאלה:**  
 בלי להמיר את היחידות ל־ק"ג או לפאונדים - מי צודק?  
 באיזה משקה יש אחוז גבוה יותר של קפאין?
+
+```{=html}
+<div class="live-exercise">
+  <div style="margin-bottom:0.35rem">חשבו את השבר המסתי של הקפאין בכל משקה (w = מסת קפאין / מסת המשקה). שימו לב: בתוך כל שבר היחידות במונה ובמכנה חייבות להיות זהות.</div>
+  <div>משקה ישראלי:</div>
+  <div class="le-row"><span class="le-prompt">w =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.00032" data-tol="0.00003" placeholder="?" aria-label="שבר מסתי ישראל"></div>
+  <div style="margin-top:0.4rem">משקה אמריקאי:</div>
+  <div class="le-row"><span class="le-prompt">w =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.04" data-tol="0.003" placeholder="?" aria-label="שבר מסתי ארהב"></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>השבר המסתי חסר-מימד, אבל בתוך כל שבר היחידות חייבות להיות זהות:</div>
+      <div class="le-eq">ישראל:  80 mg / 250 g = 0.08 g / 250 g = 3.2×10⁻⁴   (0.032%)</div>
+      <div class="le-eq">ארה״ב:  0.02 lbₘ / 0.5 lbₘ = 0.04   (4%)</div>
+      <div>המשקה האמריקאי חזק בהרבה — אחוז הקפאין בו גבוה בערך פי 125. אין צורך להמיר בין המערכות, כי השבר המסתי חסר-מימד.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 [אחד היתרונות הגדולים של שימוש במספרים חסרי מימד הוא היכולת להשוות בין מערכות בעלות קני מידה שונים]{dir="rtl"}. [אם שתי מערכות שונות מתוארות על-ידי אותם מספרים חסרי מימד, נוכל לצפות שהן יתנהגו באופן דומה מבחינה פיזיקלית - גם אם אחת מהן קטנה פי אלף מהשנייה. עיקרון זה מאפשר למהנדסים ולחוקרים לבנות מודלים מוקטנים במעבדה כדי לבדוק תהליכים שיתרחשו במתקנים אמיתיים, יקרים או מסוכנים]{dir="rtl"}.
@@ -1303,6 +1325,35 @@ $[\ln y = \ln a + b x]$
 2. מצאו את משוואת הקו המתארת את הנתונים, בהנחה שהקשר ליניארי.  
 3. השתמשו במשוואה שמצאתם כדי למצוא את הריכוז עבור **y=2.85a.u.**  
 4. אילו היה מספר רב של נקודות מדידה, באיזו מן השיטות המוזכרות בפרק היה כדאי להשתמש?
+
+```{=html}
+<div class="live-exercise">
+  <div>1) הריכוז x עבור y = 1.70 (אינטרפולציה מקומית):</div>
+  <div class="le-row"><span class="le-prompt">x =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.35" data-tol="0.02" placeholder="?" aria-label="x עבור y=1.70">
+    <span class="le-unit">mol/L</span></div>
+  <div style="margin-top:0.4rem">2) שיפוע הישר (בהנחת קשר ליניארי y = m·x + b):</div>
+  <div class="le-row"><span class="le-prompt">m =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="4.9" data-tol="0.2" placeholder="?" aria-label="שיפוע">
+    <span class="le-unit">a.u.·L/mol</span></div>
+  <div style="margin-top:0.4rem">3) הריכוז x עבור y = 2.85 (מהמשוואה):</div>
+  <div class="le-row"><span class="le-prompt">x =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.58" data-tol="0.03" placeholder="?" aria-label="x עבור y=2.85">
+    <span class="le-unit">mol/L</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>1) אינטרפולציה בין הנקודות (0.30, 1.45) ו-(0.40, 1.94):</div>
+      <div class="le-eq">x = 0.30 + (1.70−1.45)/(1.94−1.45) × (0.40−0.30) ≈ 0.35 mol/L</div>
+      <div>2) שיפוע מקצות הטווח: m = (2.44−0.48)/(0.50−0.10) = 4.9 ; החיתוך b ≈ 0, ולכן y ≈ 4.9·x.</div>
+      <div>3) הצבה במשוואה:</div>
+      <div class="le-eq">x = 2.85 / 4.9 ≈ 0.58 mol/L</div>
+      <div>4) עבור מספר רב של נקודות — <b>רגרסיה לינארית</b> (שיטת הריבועים הפחותים).</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### סט תרגילים: בחירת שיטת הערכה מנתונים גרפיים
