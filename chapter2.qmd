@@ -575,9 +575,16 @@ $$
         <div class="rc-term"><div class="rc-num">62.4 lb<sub>m</sub></div><div class="rc-den">1 <span class="rc-cancel">ft³</span></div></div>
         <div class="rc-eq">= 31,200 lb<sub>m</sub></div>
       </div>
-      <div>המשקל מתקבל מהמסה לפי המשוואה W = m · g / g<sub>c</sub>:</div>
-      <div class="le-eq">W = 31,200 lb<sub>m</sub> × 1 (lb<sub>f</sub> / lb<sub>m</sub>) = 31,200 lb<sub>f</sub></div>
-      <div>(במערכת האמריקאית g / g<sub>c</sub> = 1 lb<sub>f</sub>/lb<sub>m</sub>, ולכן המשקל שווה מספרית למסה.)</div>
+      <div>המשקל מתקבל מהמסה באמצעות המשוואה הבאה:
+      $$W = \frac{m \cdot g}{g_c}$$
+      תאוצת הכובד התקנית ($g$) היא $32.174~\frac{ft}{s^2}$.<br>
+      קבוע ההמרה ($g_c$) הוא $32.174~\frac{lb_m \cdot ft}{lb_f \cdot s^2}$.<br>
+      ולכן
+      $$W = \frac{31,200~lb_m \cdot 32.174~\frac{ft}{s^2}}{32.174~\frac{lb_m \cdot ft}{lb_f \cdot s^2}}$$
+      <br>
+      התוצאה הסופית שמתקבלת לאחר כל הצמצומים היא:
+      $$W = 31,200~lb_f$$
+      </div>
     </div>
   </details>
 </div>
@@ -719,7 +726,7 @@ $$\frac{w}{w} = \frac{m(x)}{m(total)} = \frac{\lbrack M\rbrack}{\lbrack M\rbrack
 
 ```{=html}
 <div class="live-exercise">
-  <div style="margin-bottom:0.35rem">חשבו את השבר המסתי של הקפאין בכל משקה (w = מסת קפאין / מסת המשקה). שימו לב: בתוך כל שבר היחידות במונה ובמכנה חייבות להיות זהות.</div>
+  <div style="margin-bottom:0.35rem">חשבו את השבר המסתי של הקפאין בכל משקה (w = מסת קפאין / מסת המשקה). .</div>
   <div>משקה ישראלי:</div>
   <div class="le-row"><span class="le-prompt">w =</span>
     <input class="le-input" type="text" inputmode="decimal" data-answer="0.00032" data-tol="0.00003" placeholder="?" aria-label="שבר מסתי ישראל"></div>
@@ -733,7 +740,7 @@ $$\frac{w}{w} = \frac{m(x)}{m(total)} = \frac{\lbrack M\rbrack}{\lbrack M\rbrack
       <div>השבר המסתי חסר-מימד, אבל בתוך כל שבר היחידות חייבות להיות זהות:</div>
       <div class="le-eq">ישראל:  80 mg / 250 g = 0.08 g / 250 g = 3.2×10⁻⁴   (0.032%)</div>
       <div class="le-eq">ארה״ב:  0.02 lbₘ / 0.5 lbₘ = 0.04   (4%)</div>
-      <div>המשקה האמריקאי חזק בהרבה — אחוז הקפאין בו גבוה בערך פי 125. אין צורך להמיר בין המערכות, כי השבר המסתי חסר-מימד.</div>
+      <div>המשקה האמריקאי חזק בהרבה — אחוז הקפאין בו גבוה בערך פי 125. אין צורך להמיר בין המערכות, כי השבר המסתי חסר-מימד (אם תרצו אתם יכולים להוכיח מתמטית).</div>
     </div>
   </details>
 </div>
@@ -1008,7 +1015,7 @@ $${0.0045 = 4.5 \times 10^{- 3}
 
 ```{=html}
 <div class="live-exercise">
-  <div style="margin-bottom:0.4rem">לכל מספר כתבו את הכתיב המדעי (בצורה <code>XeY</code>) ואת מספר הספרות המשמעותיות:</div>
+  <div style="margin-bottom:0.4rem">לכל מספר כתבו את הכתיב המדעי (בצורה <code>AeN</code>) ואת מספר הספרות המשמעותיות:</div>
   <div class="le-row"><span class="le-prompt">0.00056 →</span>
     <input class="le-input" type="text" data-exact="1" data-answer="5.6e-4" placeholder="כתיב מדעי" aria-label="כתיב מדעי 0.00056" style="width:8rem">
     <input class="le-input" type="text" inputmode="numeric" data-answer="2" data-tol="0" placeholder="ספרות" aria-label="ספרות 0.00056" style="width:4.5rem"></div>
