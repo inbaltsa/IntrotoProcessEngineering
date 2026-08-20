@@ -6,15 +6,15 @@
 
    >>> להגדרה — למלא כאן פעם אחת אחרי יצירת טופס Google: <<< */
 var REPORT_CONFIG = {
-  // קישור ה-viewform של טופס ה-Google (לא קישור העריכה):
-  formUrl: "https://docs.google.com/forms/d/e/PASTE_FORM_ID/viewform",
+  // קישור ה-viewform של טופס ה-Google:
+  formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfFJsSRj5G_otjAzoAIwH9aVoMCA94HRGioKHrsBjJzalhs6Q/viewform",
 
-  // מזהה שדה ה"עמוד" בטופס — מתוך "קבל קישור עם מילוי מראש".
-  // אם ריק, הטופס ייפתח בלי מילוי אוטומטי של כתובת העמוד.
+  // מזהה שדה "קישור ישיר לפרק" (כתובת העמוד תמולא אוטומטית).
+  // מ"קבל קישור עם מילוי מראש". אם ריק — לא ימולא.
   entryPage: "",       // למשל: "entry.123456789"
 
-  // אופציונלי: מזהה שדה ל"טקסט שסומן" (אם הוספת שדה כזה בטופס):
-  entrySelection: "",  // למשל: "entry.987654321"
+  // מזהה שדה "תת-פרק" (הכותרת הקרובה תמולא אוטומטית):
+  entrySection: "",    // למשל: "entry.987654321"
 
   // קישור/מייל לצוות ההוראה — לשאלות על התוכן (יופיע בהבהרה):
   staffContactUrl: "mailto:REPLACE-WITH-STAFF-EMAIL",
@@ -29,18 +29,34 @@ var REPORT_CONFIG = {
     return e;
   }
 
+  // הכותרת הקרובה ביותר (לפי הבחירה או ראש המסך) — עבור שדה "תת-פרק"
+  function currentSection() {
+    var heads = document.querySelectorAll(
+      "#quarto-document-content h1, #quarto-document-content h2, #quarto-document-content h3, #quarto-document-content h4");
+    if (!heads.length) heads = document.querySelectorAll("main h1, main h2, main h3");
+    var refY = window.scrollY + 100;
+    var sel = window.getSelection && window.getSelection();
+    if (sel && sel.rangeCount && sel.toString().trim()) {
+      refY = sel.getRangeAt(0).getBoundingClientRect().top + window.scrollY;
+    }
+    var best = "";
+    heads.forEach(function (h) {
+      if (h.getBoundingClientRect().top + window.scrollY <= refY) best = (h.innerText || "").trim();
+    });
+    return best;
+  }
+
   function buildFormUrl() {
     var url = REPORT_CONFIG.formUrl;
     var params = [];
     if (REPORT_CONFIG.entryPage) {
-      params.push("usp=pp_url");
       params.push(REPORT_CONFIG.entryPage + "=" + encodeURIComponent(location.href));
-      var sel = (window.getSelection && window.getSelection().toString() || "").trim();
-      if (sel && REPORT_CONFIG.entrySelection) {
-        params.push(REPORT_CONFIG.entrySelection + "=" + encodeURIComponent(sel.slice(0, 300)));
-      }
     }
-    return params.length ? url + "?" + params.join("&") : url;
+    if (REPORT_CONFIG.entrySection) {
+      var sec = currentSection();
+      if (sec) params.push(REPORT_CONFIG.entrySection + "=" + encodeURIComponent(sec.slice(0, 200)));
+    }
+    return params.length ? url + "?usp=pp_url&" + params.join("&") : url;
   }
 
   function build() {

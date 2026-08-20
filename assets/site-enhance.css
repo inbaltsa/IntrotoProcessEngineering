@@ -570,22 +570,28 @@ body.cover-page .title-block {
    ========================================================= */
 .report-error-btn {
   position: fixed;
-  bottom: 18px;
-  left: 18px;
+  bottom: 16px;
+  left: 16px;
   z-index: 1050;
-  background: var(--brand-orange, #f28c00);
-  color: #fff;
-  border: none;
-  padding: 0.55rem 0.95rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink-600, #445);
+  border: 1px solid rgba(88, 89, 91, 0.28);
+  padding: 0.32rem 0.7rem;
   border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 500;
   font-family: "Assistant","Arimo",sans-serif;
   cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+  opacity: 0.82;
   direction: rtl;
+  transition: opacity 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
-.report-error-btn:hover { background: #e07f00; }
+.report-error-btn:hover {
+  opacity: 1;
+  color: var(--ink-900, #1e3a5f);
+  border-color: rgba(242, 140, 0, 0.6);
+}
 
 .report-error-panel {
   position: fixed;
