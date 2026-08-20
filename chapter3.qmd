@@ -259,6 +259,25 @@ $$
 
 חשבּו את ערך $SG$ על פי כל אחד מהנתונים בנפרד.  
 מה ניתן להסיק מהתוצאות?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">SG (לפי SI) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.80" data-tol="0.02" placeholder="?" aria-label="SG לפי SI"></div>
+  <div class="le-row"><span class="le-prompt">SG (לפי AES) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.80" data-tol="0.02" placeholder="?" aria-label="SG לפי AES"></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>המשקל הסגולי הוא יחס בין צפיפות החומר לצפיפות המים (חומר הייחוס):</div>
+      <div class="le-eq">SI:  SG = 800 / 1000 = 0.80</div>
+      <div class="le-eq">AES:  SG = 49.9 / 62.4 = 0.80</div>
+      <div>שתי התוצאות זהות — SG הוא גודל חסר-ממד ואינו תלוי במערכת היחידות.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 מכיוון שהמשקל הסגולי (*Specific Gravity*) מוגדר כיחס בין שתי צפיפויות - צפיפות החומר וצפיפות חומר הייחוס - הוא **אינו תלוי ביחידות המדידה**.  
@@ -312,6 +331,31 @@ $$
 [א. חשבו את **ספיקת המסה** של הזרימה.]{dir="rtl"}
 
 [ב. כמה זמן יידרש למלא מיכל בנפח של]{dir="rtl"} $0.5m^{3}$
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ṁ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1.99" data-tol="0.05" placeholder="?" aria-label="ספיקת מסה">
+    <span class="le-unit">kg/s</span></div>
+  <div class="le-row"><span class="le-prompt">ב) t =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="250" data-tol="5" placeholder="?" aria-label="זמן מילוי">
+    <span class="le-unit">s</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) ספיקת המסה = צפיפות × ספיקה נפחית:</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">997 kg</div><div class="rc-den">1 <span class="rc-cancel">m³</span></div></div>
+        <div class="rc-term"><div class="rc-num">2.0×10⁻³ <span class="rc-cancel">m³</span></div><div class="rc-den">1 s</div></div>
+        <div class="rc-eq">= 1.99 kg/s</div>
+      </div>
+      <div>ב) זמן מילוי = נפח / ספיקה נפחית:</div>
+      <div class="le-eq">t = 0.5 / (2.0×10⁻³) = 250 s</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ## [הרכב כימי]{dir="rtl"}
@@ -421,6 +465,23 @@ $$\overset{ˉ}{M} = (0.79)\left( 28\frac{g}{mol} \right) + (0.21)\left( 32\frac{
 
 ::: exercise
 [מה יהיה המשקל המולקולרי הממוצע של אויר ביחידות]{dir="rtl"} AES[?]{dir="rtl"}
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">M̄ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="28.9" data-tol="0.35" placeholder="?" aria-label="משקל מולקולרי ממוצע">
+    <span class="le-unit">lb/lb-mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מהרכב האוויר (בקירוב 21% O₂ ו-79% N₂ מולרי):</div>
+      <div class="le-eq">M̄ = 0.21×32 + 0.79×28 ≈ 28.8 g/mol</div>
+      <div>המשקל המולקולרי הוא אותו ערך נומרי בכל מערכת יחידות — ולכן ב-AES: ≈ 28.8–29.0 lb/lb-mol.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ::: {.callout-note}
@@ -636,6 +697,30 @@ $\Delta T(K) = \Delta T(^\circ C)$ , $\Delta T(^\circ R) = \Delta T(^\circ F)$.
 
 ::: {.exercise}
 נתונה טמפרטורה של $200^\circ R$. מה יהיה ערכה של הטמפרטורה בצלזיוס, בפרנהייט ובקלווין?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">K =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="111.11" data-tol="0.6" placeholder="?" aria-label="קלווין">
+    <span class="le-unit">K</span></div>
+  <div class="le-row"><span class="le-prompt">°C =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="-162.04" data-tol="0.6" placeholder="?" aria-label="צלזיוס">
+    <span class="le-unit">°C</span></div>
+  <div class="le-row"><span class="le-prompt">°F =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="-259.67" data-tol="0.6" placeholder="?" aria-label="פרנהייט">
+    <span class="le-unit">°F</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>ראנקין היא סקאלה אבסולוטית (כמו קלווין), ולכן ההמרה לקלווין היא יחס בלבד:</div>
+      <div class="le-eq">K = 200 × 5/9 = 111.11 K</div>
+      <div class="le-eq">°C = K − 273.15 = 111.11 − 273.15 = −162.04 °C</div>
+      <div class="le-eq">°F = °R − 459.67 = 200 − 459.67 = −259.67 °F</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### טמפרטורה בסרגל מעבר יחידות - מה מיוחד כאן?
@@ -985,6 +1070,28 @@ $$P_{abs} = P_{\text{gauge}} + P_{\text{barometer}}$$
 ידוע כי המכל מתוכנן לעמוד בלחץ אבסולוטי מרבי של $310\,kPa$.  
 
 האם המכל נמצא בתחום התקין או שקיים חשש לחריגה מהלחץ המותר?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">P (אבסולוטי) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="296" data-tol="3" placeholder="?" aria-label="לחץ אבסולוטי">
+    <span class="le-unit">kPa</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>לחץ אבסולוטי = לחץ gauge + לחץ אטמוספירי. נמיר תחילה את הברומטר ל-kPa:</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">720 <span class="rc-cancel">mmHg</span></div><div class="rc-den"></div></div>
+        <div class="rc-term"><div class="rc-num">101.325 kPa</div><div class="rc-den">760 <span class="rc-cancel">mmHg</span></div></div>
+        <div class="rc-eq">= 96.0 kPa</div>
+      </div>
+      <div class="le-eq">P_abs = 200 + 96.0 = 296 kPa</div>
+      <div>296 kPa &lt; 310 kPa ⟵ <b>המיכל תקין</b> (בתוך הטווח המותר).</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### . [מכשירים למדידת לחץ]{dir="rtl"}
