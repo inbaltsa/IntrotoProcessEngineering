@@ -631,6 +631,19 @@ Figure <span>4 - קידומות מוכרים ליחידות, מתוך<br> </span
 </div>
 </figcaption>
 </figure>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+עצה
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span><strong>טיפ לכתיבת מספרים בתרגילים החיים:</strong> אפשר להקליד מספרים גדולים או קטנים בכתיב מדעי מקוצר — הצורה</span> <code>XeY</code> <span>פירושה</span> <span class="math inline">\(X \times 10^{Y}\)</span>. <span>למשל</span> <code>1e6</code> <span class="math inline">\(= 1\times10^{6}\)</span>, <span>ו-</span><code>2.5e-3</code> <span class="math inline">\(= 2.5\times10^{-3}\)</span>. <span>אפשר כמובן גם להקליד את המספר המלא (למשל 1000000).</span></p>
+</div>
+</div>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p><span>השלימו באמצעות טבלת הקידומות</span> <span class="math display">\[\begin{matrix}
 \mathbf{1}\mathbf{Mg} &amp; = &amp; \_\_\_\_\_\_\_\_\_\_\mathbf{g}\_\_ \\
@@ -639,13 +652,13 @@ Figure <span>4 - קידומות מוכרים ליחידות, מתוך<br> </span
 \end{matrix}\]</span></p>
 <div class="live-exercise">
   <div class="le-row"><span class="le-prompt">1 Mg =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="1e6" data-tol="1" placeholder="1e6" aria-label="Mg לגרם">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1e6" data-tol="1" placeholder="?" aria-label="Mg לגרם">
     <span class="le-unit">g</span></div>
   <div class="le-row"><span class="le-prompt">1.5×10⁻⁶ s =</span>
     <input class="le-input" type="text" inputmode="decimal" data-answer="1.5" data-tol="0.01" placeholder="?" aria-label="שניות למיקרו">
     <span class="le-unit">µs</span></div>
   <div class="le-row"><span class="le-prompt">1 nm =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="1e-9" data-tol="1e-11" placeholder="1e-9" aria-label="ננומטר למטר">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1e-9" data-tol="1e-11" placeholder="?" aria-label="ננומטר למטר">
     <span class="le-unit">m</span></div>
   <div style="margin-top:0.5rem"><button class="le-check" type="button">בדיקה</button></div>
   <div class="le-feedback" role="status"></div>
@@ -805,7 +818,7 @@ Figure <span>4 - קידומות מוכרים ליחידות, מתוך<br> </span
 <div class="live-exercise">
   <div class="le-row">
     <span class="le-prompt">1 N =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="100000" data-tol="1" placeholder="1e5" aria-label="תשובה">
+    <input class="le-input" type="text" inputmode="decimal" data-answer="100000" data-tol="1" placeholder="?" aria-label="תשובה">
     <span class="le-unit">dyne</span>
   </div>
   <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
@@ -936,9 +949,16 @@ a = \frac{50 \cdot 32.2}{100} \frac{\text{ft}}{\text{s}^2} = \frac{1610}{100} \f
         <div class="rc-term"><div class="rc-num">62.4 lb<sub>m</sub></div><div class="rc-den">1 <span class="rc-cancel">ft³</span></div></div>
         <div class="rc-eq">= 31,200 lb<sub>m</sub></div>
       </div>
-      <div>המשקל מתקבל מהמסה לפי המשוואה W = m · g / g<sub>c</sub>:</div>
-      <div class="le-eq">W = 31,200 lb<sub>m</sub> × 1 (lb<sub>f</sub> / lb<sub>m</sub>) = 31,200 lb<sub>f</sub></div>
-      <div>(במערכת האמריקאית g / g<sub>c</sub> = 1 lb<sub>f</sub>/lb<sub>m</sub>, ולכן המשקל שווה מספרית למסה.)</div>
+      <div>המשקל מתקבל מהמסה באמצעות המשוואה הבאה:
+      $$W = \frac{m \cdot g}{g_c}$$
+      תאוצת הכובד התקנית ($g$) היא $32.174~\frac{ft}{s^2}$.<br>
+      קבוע ההמרה ($g_c$) הוא $32.174~\frac{lb_m \cdot ft}{lb_f \cdot s^2}$.<br>
+      ולכן
+      $$W = \frac{31,200~lb_m \cdot 32.174~\frac{ft}{s^2}}{32.174~\frac{lb_m \cdot ft}{lb_f \cdot s^2}}$$
+      <br>
+      התוצאה הסופית שמתקבלת לאחר כל הצמצומים היא:
+      $$W = 31,200~lb_f$$
+      </div>
     </div>
   </details>
 </div>
@@ -1016,11 +1036,11 @@ V \frac{[L]}{[T]} = V_{0} \frac{[L]}{[T]} + a \frac{[L]}{[T]^{2}} t [T]
 </ol>
 <div class="live-exercise">
   <div class="le-row"><span class="le-prompt">k =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="300" data-tol="0" placeholder="ערך" aria-label="k ב-Pa/K">
-    <span class="le-unit">Pa/K</span></div>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="300" data-tol="0" placeholder="ערך" aria-label="ערך k">
+    <input class="le-input le-unit-in" type="text" data-exact="1" data-answer="Pa/K" placeholder="יחידות" aria-label="יחידות k"></div>
   <div class="le-row"><span class="le-prompt">k (atm) =</span>
-    <input class="le-input" type="text" inputmode="decimal" data-answer="0.00296" data-tol="0.0001" placeholder="2.96e-3" aria-label="k ב-atm/K">
-    <span class="le-unit">atm/K</span></div>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.00296" data-tol="0.0001" placeholder="ערך" aria-label="ערך k באטמוספירות">
+    <input class="le-input le-unit-in" type="text" data-exact="1" data-answer="atm/K" placeholder="יחידות" aria-label="יחידות k באטמוספירות"></div>
   <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
   <div class="le-feedback" role="status"></div>
   <details class="le-solution"><summary>הצגת פתרון</summary>
@@ -1055,6 +1075,25 @@ V \frac{[L]}{[T]} = V_{0} \frac{[L]}{[T]} + a \frac{[L]}{[T]^{2}} t [T]
 <p><strong>השאלה:</strong><br>
 בלי להמיר את היחידות ל־ק”ג או לפאונדים - מי צודק?<br>
 באיזה משקה יש אחוז גבוה יותר של קפאין?</p>
+<div class="live-exercise">
+  <div style="margin-bottom:0.35rem">חשבו את השבר המסתי של הקפאין בכל משקה (w = מסת קפאין / מסת המשקה). .</div>
+  <div>משקה ישראלי:</div>
+  <div class="le-row"><span class="le-prompt">w =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.00032" data-tol="0.00003" placeholder="?" aria-label="שבר מסתי ישראל"></div>
+  <div style="margin-top:0.4rem">משקה אמריקאי:</div>
+  <div class="le-row"><span class="le-prompt">w =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.04" data-tol="0.003" placeholder="?" aria-label="שבר מסתי ארהב"></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>השבר המסתי חסר-מימד, אבל בתוך כל שבר היחידות חייבות להיות זהות:</div>
+      <div class="le-eq">ישראל:  80 mg / 250 g = 0.08 g / 250 g = 3.2×10⁻⁴   (0.032%)</div>
+      <div class="le-eq">ארה״ב:  0.02 lbₘ / 0.5 lbₘ = 0.04   (4%)</div>
+      <div>המשקה האמריקאי חזק בהרבה — אחוז הקפאין בו גבוה בערך פי 125. אין צורך להמיר בין המערכות, כי השבר המסתי חסר-מימד (אם תרצו אתם יכולים להוכיח מתמטית).</div>
+    </div>
+  </details>
+</div>
 </div>
 <p><span>אחד היתרונות הגדולים של שימוש במספרים חסרי מימד הוא היכולת להשוות בין מערכות בעלות קני מידה שונים</span>. <span>אם שתי מערכות שונות מתוארות על-ידי אותם מספרים חסרי מימד, נוכל לצפות שהן יתנהגו באופן דומה מבחינה פיזיקלית - גם אם אחת מהן קטנה פי אלף מהשנייה. עיקרון זה מאפשר למהנדסים ולחוקרים לבנות מודלים מוקטנים במעבדה כדי לבדוק תהליכים שיתרחשו במתקנים אמיתיים, יקרים או מסוכנים</span>.</p>
 <p><span>אחד המספרים חסרי המימד המפורסמים במיותר הוא מספר ריינולדס. מספר מאוד חשוב בהנדסת תהליכים המבטא את היחס בין כוחות האינרציה והצמיגות ומשמש לאפיון פרופיל הזרימה בצינור.</span></p>
@@ -1421,6 +1460,36 @@ Figure <span>6 - דיוק והדירות</span>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="live-exercise">
+  <div style="margin-bottom:0.4rem">לכל מספר כתבו את הכתיב המדעי (בצורה <code>AeN</code>) ואת מספר הספרות המשמעותיות:</div>
+  <div class="le-row"><span class="le-prompt">0.00056 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="5.6e-4" placeholder="כתיב מדעי" aria-label="כתיב מדעי 0.00056" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="2" data-tol="0" placeholder="ספרות" aria-label="ספרות 0.00056" style="width:4.5rem"></div>
+  <div class="le-row"><span class="le-prompt">82300 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="8.23e4" placeholder="כתיב מדעי" aria-label="כתיב מדעי 82300" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="ספרות" aria-label="ספרות 82300" style="width:4.5rem"></div>
+  <div class="le-row"><span class="le-prompt">0.0120 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="1.20e-2" placeholder="כתיב מדעי" aria-label="כתיב מדעי 0.0120" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="ספרות" aria-label="ספרות 0.0120" style="width:4.5rem"></div>
+  <div class="le-row"><span class="le-prompt">6,450,000 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="6.45e6" placeholder="כתיב מדעי" aria-label="כתיב מדעי 6450000" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="ספרות" aria-label="ספרות 6450000" style="width:4.5rem"></div>
+  <div class="le-row"><span class="le-prompt">0.00450 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="4.50e-3" placeholder="כתיב מדעי" aria-label="כתיב מדעי 0.00450" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="ספרות" aria-label="ספרות 0.00450" style="width:4.5rem"></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div class="le-eq">0.00056 = 5.6×10⁻⁴   (2 ספרות)</div>
+      <div class="le-eq">82300 = 8.23×10⁴   (3 ספרות)</div>
+      <div class="le-eq">0.0120 = 1.20×10⁻²   (3 ספרות — האפס הסופי משמעותי)</div>
+      <div class="le-eq">6,450,000 = 6.45×10⁶   (3 ספרות)</div>
+      <div class="le-eq">0.00450 = 4.50×10⁻³   (3 ספרות — האפס הסופי משמעותי)</div>
+      <div>בכתיב מדעי שומרים את כל הספרות המשמעותיות ורק אותן — כולל אפסים סופיים משמעותיים (1.20 ולא 1.2). ב-82300 ו-6,450,000 האפסים המובילים לסדר הגודל אינם נספרים.</div>
+    </div>
+  </details>
 </div>
 </div>
 </section>
@@ -1795,6 +1864,32 @@ Figure <span>15השוואה בין גרף ליניארי, סמי-לוגריתמ�
 </li>
 <li>אילו היה מספר רב של נקודות מדידה, באיזו מן השיטות המוזכרות בפרק היה כדאי להשתמש?</li>
 </ol>
+<div class="live-exercise">
+  <div>1) הריכוז x עבור y = 1.70 (אינטרפולציה מקומית):</div>
+  <div class="le-row"><span class="le-prompt">x =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.35" data-tol="0.02" placeholder="?" aria-label="x עבור y=1.70">
+    <span class="le-unit">mol/L</span></div>
+  <div style="margin-top:0.4rem">2) שיפוע הישר (בהנחת קשר ליניארי y = m·x + b):</div>
+  <div class="le-row"><span class="le-prompt">m =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="4.9" data-tol="0.2" placeholder="?" aria-label="שיפוע">
+    <span class="le-unit">a.u.·L/mol</span></div>
+  <div style="margin-top:0.4rem">3) הריכוז x עבור y = 2.85 (מהמשוואה):</div>
+  <div class="le-row"><span class="le-prompt">x =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.58" data-tol="0.03" placeholder="?" aria-label="x עבור y=2.85">
+    <span class="le-unit">mol/L</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>1) אינטרפולציה בין הנקודות (0.30, 1.45) ו-(0.40, 1.94):</div>
+      <div class="le-eq">x = 0.30 + (1.70−1.45)/(1.94−1.45) × (0.40−0.30) ≈ 0.35 mol/L</div>
+      <div>2) שיפוע מקצות הטווח: m = (2.44−0.48)/(0.50−0.10) = 4.9 ; החיתוך b ≈ 0, ולכן y ≈ 4.9·x.</div>
+      <div>3) הצבה במשוואה:</div>
+      <div class="le-eq">x = 2.85 / 4.9 ≈ 0.58 mol/L</div>
+      <div>4) עבור מספר רב של נקודות — <b>רגרסיה לינארית</b> (שיטת הריבועים הפחותים).</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section id="סט-תרגילים-בחירת-שיטת-הערכה-מנתונים-גרפיים" class="level3" data-number="2.6.10">
@@ -1816,7 +1911,7 @@ Figure <span>15השוואה בין גרף ליניארי, סמי-לוגריתמ�
 <p>באיזו שיטה כדאי להשתמש?</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1825,7 +1920,7 @@ Figure <span>15השוואה בין גרף ליניארי, סמי-לוגריתמ�
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>יש לנו נקודות שיוצרות קו שנראה ישר יחסית כשהנקודה נמצאת בתוך הטווח, אבל רחוקה מנקודות אחרות, ולכן כדאי להשתמש בשיטה של התאמה פשוטה של קו ישר.</p>
 </div>
@@ -1846,7 +1941,7 @@ Figure <span>15השוואה בין גרף ליניארי, סמי-לוגריתמ�
 <p>איזו שיטה מתאימה ביותר כדי להעריך את (y) בזמן (t=8)?</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1855,7 +1950,7 @@ Figure <span>15השוואה בין גרף ליניארי, סמי-לוגריתמ�
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>הגרף נראה יחסית לינארי, אבל עם סטיות למעלה ולמטה, כמו כן, באקסטרפולציה השגיאה גדלה ולכן נרצה ישר מדוייק ככל האפשר, ולכן נעשה רגרסיה לינארית</p>
 </div>
@@ -1876,7 +1971,7 @@ Figure <span>15השוואה בין גרף ליניארי, סמי-לוגריתמ�
 <p>כיצד נבנה את המשוואה ונמצא את הקבועים המתאימים למודל?</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1885,7 +1980,7 @@ Figure <span>15השוואה בין גרף ליניארי, סמי-לוגריתמ�
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>עבור מודל <span class="math inline">\(\(y = Ce^{kt}\)\)</span> נפעיל ln על שני האגפים, ונקבל קשר לינארי בין <span class="math inline">\(\(\ln y\)\)</span> לבין t, ואז נעשה רגרסיה לינארית על הנתונים. מאחר ומדובר במציאת קבועים לתיאור מערכת פיסיקלית נבחר בשיטה הכי מדוייקת שיש לנו. ברמה העקרונית ניתן להשתמש גם בשיטת הריבועים המינימלים עבור רגרסיה שאינה לינארית, אך במקרה זה החישוב הוא משמעותית יותר מסובך ולא ניתן לפתור אותו באופן ישיר אלא רק בצורה נומרית.</p>
 </div>
@@ -1905,7 +2000,7 @@ Figure <span>15השוואה בין גרף ליניארי, סמי-לוגריתמ�
 <p>בגרף מוצגת פונקציה כללית של (y) מול (x). נרצה להעריך את ערך (y) ב-(x=1.8),אך אין לנו מודל פיסיקלי המתאר את המערכת איזו שיטה עדיפה?</p>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1914,7 +2009,7 @@ Figure <span>15השוואה בין גרף ליניארי, סמי-לוגריתמ�
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>כאן מעניינת אותנו התנהגות מקומית באזור קטן, ולא מודל גלובלי לכל התחום. הנקודות קרובות יחסית, ורואים מגמה עקבית ולא רועשת, כך שסביר מאוד שהפונקציה עצמה פועלת באופן מאוד קרוב לנתונים, וכי המשתנים בין כל שתי נקודות סמוכות מתנהגים כקו ישר. לכן נבחר באינטרפולציה מקומית</p>
 </div>
