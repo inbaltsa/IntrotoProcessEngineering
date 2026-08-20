@@ -14,11 +14,7 @@ var REPORT_CONFIG = {
   entryPage: "entry.1917305355",       // "קישור ישיר לפרק"
 
   // מזהה שדה "תת-פרק" (הכותרת הקרובה תמולא אוטומטית):
-  entrySection: "entry.1642881501",    // "תת-פרק"
-
-  // קישור/מייל לצוות ההוראה — לשאלות על התוכן (יופיע בהבהרה):
-  staffContactUrl: "mailto:REPLACE-WITH-STAFF-EMAIL",
-  staffContactLabel: "צוות ההוראה"
+  entrySection: "entry.1642881501"     // "תת-פרק"
 };
 
 (function () {
@@ -75,8 +71,7 @@ var REPORT_CONFIG = {
       '<h3 class="report-error-title">דיווח על שגיאת הגהה</h3>' +
       '<div class="report-error-scope">הכפתור מיועד <b>לתיקוני הגהה בלבד</b>: שגיאות כתיב, ניסוח, פורמט, ' +
       'או מספר שגוי בטקסט.</div>' +
-      '<div class="report-error-warn">⚠ לשאלות על <b>התוכן</b> — חובה לפנות ל' +
-      '<a href="' + REPORT_CONFIG.staffContactUrl + '">' + REPORT_CONFIG.staffContactLabel + '</a>.</div>' +
+      '<div class="report-error-warn">⚠ לשאלות על <b>התוכן</b> — יש לפנות ל<b>צוות ההוראה</b> של הקורס.</div>' +
       '<a class="report-error-go" target="_blank" rel="noopener">פתיחת טופס הדיווח ←</a>' +
       '<div class="report-error-hint">כתובת העמוד הנוכחי תצורף אוטומטית לדיווח.</div>';
 
