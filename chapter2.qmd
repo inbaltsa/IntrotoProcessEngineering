@@ -1005,6 +1005,39 @@ $${0.0045 = 4.5 \times 10^{- 3}
 | 6,450,000 |  |  |
 | 0.00450 |  |  |
 :::
+
+```{=html}
+<div class="live-exercise">
+  <div style="margin-bottom:0.4rem">לכל מספר כתבו את הכתיב המדעי (בצורה <code>XeY</code>) ואת מספר הספרות המשמעותיות:</div>
+  <div class="le-row"><span class="le-prompt">0.00056 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="5.6e-4" placeholder="כתיב מדעי" aria-label="כתיב מדעי 0.00056" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="2" data-tol="0" placeholder="ספרות" aria-label="ספרות 0.00056" style="width:4.5rem"></div>
+  <div class="le-row"><span class="le-prompt">82300 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="8.23e4" placeholder="כתיב מדעי" aria-label="כתיב מדעי 82300" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="ספרות" aria-label="ספרות 82300" style="width:4.5rem"></div>
+  <div class="le-row"><span class="le-prompt">0.0120 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="1.20e-2" placeholder="כתיב מדעי" aria-label="כתיב מדעי 0.0120" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="ספרות" aria-label="ספרות 0.0120" style="width:4.5rem"></div>
+  <div class="le-row"><span class="le-prompt">6,450,000 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="6.45e6" placeholder="כתיב מדעי" aria-label="כתיב מדעי 6450000" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="ספרות" aria-label="ספרות 6450000" style="width:4.5rem"></div>
+  <div class="le-row"><span class="le-prompt">0.00450 →</span>
+    <input class="le-input" type="text" data-exact="1" data-answer="4.50e-3" placeholder="כתיב מדעי" aria-label="כתיב מדעי 0.00450" style="width:8rem">
+    <input class="le-input" type="text" inputmode="numeric" data-answer="3" data-tol="0" placeholder="ספרות" aria-label="ספרות 0.00450" style="width:4.5rem"></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div class="le-eq">0.00056 = 5.6×10⁻⁴   (2 ספרות)</div>
+      <div class="le-eq">82300 = 8.23×10⁴   (3 ספרות)</div>
+      <div class="le-eq">0.0120 = 1.20×10⁻²   (3 ספרות — האפס הסופי משמעותי)</div>
+      <div class="le-eq">6,450,000 = 6.45×10⁶   (3 ספרות)</div>
+      <div class="le-eq">0.00450 = 4.50×10⁻³   (3 ספרות — האפס הסופי משמעותי)</div>
+      <div>בכתיב מדעי שומרים את כל הספרות המשמעותיות ורק אותן — כולל אפסים סופיים משמעותיים (1.20 ולא 1.2). ב-82300 ו-6,450,000 האפסים המובילים לסדר הגודל אינם נספרים.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 ### [לסיכום]{dir="rtl"}
 
