@@ -451,6 +451,32 @@ $$\widehat{V} = \frac{RT}{P} = \frac{0.08314\frac{L \cdot bar}{mol \cdot K} \cdo
 
 ובתנאי SATP ניתן להמיר מיידית ${\widehat{V}}_{Ideal,SATP} = 24.8\text{ L/mol}$
 
+::: {.exercise}
+זרם של גז אידיאלי זורם בספיקה מולרית של $100\ \frac{mol}{h}$.
+
+חשבו את הספיקה הנפחית: א. בתנאי STP ($0^\circ C$, 1 atm). ב. בתנאי SATP ($25^\circ C$, 1 bar).
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) V̇ (STP) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2240" data-tol="25" placeholder="?" aria-label="ספיקה נפחית STP">
+    <span class="le-unit">L/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) V̇ (SATP) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2480" data-tol="25" placeholder="?" aria-label="ספיקה נפחית SATP">
+    <span class="le-unit">L/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>משתמשים בנפח המולרי הסטנדרטי הקבוע (מכפילים בספיקה):</div>
+      <div class="le-eq">א) STP: 100 · 22.4 = 2240 L/h</div>
+      <div class="le-eq">ב) SATP: 100 · 24.8 = 2480 L/h</div>
+    </div>
+  </details>
+</div>
+```
+:::
+
 - **חישוב כמות גז מנפח נתון**
 
 כאשר ידועים הלחץ, הטמפרטורה והנפח של גז, ניתן לחשב את כמות החומר שבו באמצעות:
@@ -618,6 +644,33 @@ $$\widehat{V} = \frac{V}{n} = \frac{500\, L}{1,250\, mol} = 0.4\,\frac{L}{mol}$$
 המשמעות היא שאנחנו נמצאים עמוק בתוך התחום הלא-אידיאלי. המולקולות צפופות מאוד. החישוב שעשינו בחלק א\' הוא בעל שגיאה גדולה מאוד (סביר להניח שהלחץ האמיתי יהיה אפילו גבוה יותר בגלל נפח המולקולות עצמן שתופס מקום). כך שלא רק שהמיכל מסוכן לפי החישוב, אלא שהמצב בפועל כנראה חמור יותר. אסור להשתמש במשוואת הגז האידיאלי לתכנון כאן.
 :::
 
+::: {.exercise}
+גז חנקן ($N_2$, גז פשוט) נמצא בטמפרטורה $T = 300\ K$. בדקו האם מותר להניח התנהגות אידיאלית בכל אחד מהמצבים, לפי קריטריון הנפח המולרי (לגז פשוט: $\widehat{V} \geq 5\ L/mol$).
+
+חשבו את הנפח המולרי האידיאלי $\widehat{V} = RT/P$: א. בלחץ $P = 2\ atm$. ב. בלחץ $P = 30\ atm$.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) V̂ (2 atm) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="12.3" data-tol="0.3" placeholder="?" aria-label="נפח מולרי ב-2 atm">
+    <span class="le-unit">L/mol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) V̂ (30 atm) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.82" data-tol="0.05" placeholder="?" aria-label="נפח מולרי ב-30 atm">
+    <span class="le-unit">L/mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מחשבים V̂ = RT/P (עם R = 0.08206 L·atm/mol·K) ומשווים לסף 5 L/mol:</div>
+      <div class="le-eq">א) V̂ = 0.08206 · 300 / 2 = 12.3 L/mol ≥ 5 → מותר להניח גז אידיאלי ✓</div>
+      <div class="le-eq">ב) V̂ = 0.08206 · 300 / 30 = 0.82 L/mol < 5 → אסור! צריך שיטות גז ריאלי (Z / EOS)</div>
+      <div>המסקנה: לחץ גבוה מקרב את המולקולות — ההנחה האידיאלית קורסת.</div>
+    </div>
+  </details>
+</div>
+```
+:::
+
 ### תערובות של גזים אידיאליים
 
 ברוב היישומים ההנדסיים אנו עוסקים בתערובות של גזים ולא בחומרים טהורים. האוויר שאנו נושמים, הגז הטבעי שאנו שורפים והעשן הנפלט מארובות - כולם תערובות. היתרון במודל הגז האידיאלי הוא שניתן להתייחס לתערובת כאל אוסף של חלקיקים עצמאיים. מכיוון שהמולקולות אינן משפיעות זו על זו, כל רכיב בתערובת מתנהג כאילו הוא נמצא שם לבד.
@@ -664,6 +717,37 @@ $$y_{i} = \frac{n_{i}}{n_{total}} = \frac{P_{i}}{P_{total}} = \frac{V_{i}}{V_{to
 
 זהות זו נכונה רק עבור גזים אידיאליים. בגזים ריאליים בלחצים גבוהים, אחוזי הנפח אינם זהים בהכרח לאחוזי המולים עקב כוחות דחייה ומשיכה שונים בין מולקולות שונות (נפח הערבוב אינו זניח).
 
+:::
+
+::: {.exercise}
+תערובת גזים אידיאלית נמצאת בלחץ כולל $P_{total} = 4\ atm$. ההרכב המולרי: 25% $O_2$, 60% $N_2$, 15% $CO_2$.
+
+חשבו את הלחץ החלקי של כל רכיב.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">P(O₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1.0" data-tol="0.05" placeholder="?" aria-label="לחץ חלקי חמצן">
+    <span class="le-unit">atm</span></div>
+  <div class="le-row"><span class="le-prompt">P(N₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2.4" data-tol="0.05" placeholder="?" aria-label="לחץ חלקי חנקן">
+    <span class="le-unit">atm</span></div>
+  <div class="le-row"><span class="le-prompt">P(CO₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.6" data-tol="0.05" placeholder="?" aria-label="לחץ חלקי פחמן דו-חמצני">
+    <span class="le-unit">atm</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>לפי חוק דלטון, הלחץ החלקי = השבר המולי × הלחץ הכולל:</div>
+      <div class="le-eq">P(O₂) = 0.25 · 4 = 1.0 atm</div>
+      <div class="le-eq">P(N₂) = 0.60 · 4 = 2.4 atm</div>
+      <div class="le-eq">P(CO₂) = 0.15 · 4 = 0.6 atm</div>
+      <div>בדיקה: 1.0 + 2.4 + 0.6 = 4.0 atm = P_total ✓</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### סיכום - גזים אידיאליים
