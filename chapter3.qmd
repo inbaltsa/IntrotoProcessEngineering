@@ -414,6 +414,44 @@ $$Mw\left( C_{6}H_{12}O_{6} \right) = 180.18\left\lbrack \frac{g}{gmol} \right\r
 ג. כמה מול אטומי אלומיניום יש ב־$100\,g$ של אלומיניום?  
 
 ד. כמה פאונד־מול ($lb\!-\!mol$) יש ב־$100\,g$ של אלומיניום?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) M<sub>w</sub> (SI) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="26.98" data-tol="0.05" placeholder="?" aria-label="מסה מולרית SI">
+    <span class="le-unit">kg/kmol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) M<sub>w</sub> (AES) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="26.98" data-tol="0.05" placeholder="?" aria-label="מסה מולרית AES">
+    <span class="le-unit">lb<sub>m</sub>/lbmol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) n =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="3.71" data-tol="0.05" placeholder="?" aria-label="מספר מולים">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ד) n =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="8.17e-3" data-tol="0.0002" placeholder="?" aria-label="מספר פאונד-מול">
+    <span class="le-unit">lb-mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>המסה המולרית (האטומית) של אלומיניום היא M<sub>w</sub> = 26.98. הערך המספרי זהה בכל מערכות היחידות — משתנה רק שם היחידה:</div>
+      <div class="le-eq">א) M<sub>w</sub> = 26.98 kg/kmol   (= 26.98 g/mol)</div>
+      <div class="le-eq">ב) M<sub>w</sub> = 26.98 lb<sub>m</sub>/lbmol</div>
+      <div>ג) מספר המולים = מסה / מסה מולרית:</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">100 <span class="rc-cancel">g</span></div><div class="rc-den">1</div></div>
+        <div class="rc-term"><div class="rc-num">1 mol</div><div class="rc-den">26.98 <span class="rc-cancel">g</span></div></div>
+        <div class="rc-eq">= 3.71 mol</div>
+      </div>
+      <div>ד) המרה לפאונד־מול (1 lb-mol = 453.6 mol):</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">3.71 <span class="rc-cancel">mol</span></div><div class="rc-den">1</div></div>
+        <div class="rc-term"><div class="rc-num">1 lb-mol</div><div class="rc-den">453.6 <span class="rc-cancel">mol</span></div></div>
+        <div class="rc-eq">= 8.17×10⁻³ lb-mol</div>
+      </div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### [תערובות והרכבן]{dir="rtl"}
@@ -987,6 +1025,20 @@ $$P = P_0 + \rho g h$$
 א. מהו הלחץ במרכז המיכל (בממשק שבין הגז לנוזל)?
 ב. מהו הלחץ בתחתית המיכל?
 ג. השוו את תוספת הלחץ שתרם עמוד הגז לעומת תוספת הלחץ שתרם עמוד הנוזל.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) P<sub>ממשק</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2.00" data-tol="0.01" placeholder="?" aria-label="לחץ בממשק">
+    <span class="le-unit">atm</span></div>
+  <div class="le-row"><span class="le-prompt">ב) P<sub>תחתית</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2.97" data-tol="0.03" placeholder="?" aria-label="לחץ בתחתית">
+    <span class="le-unit">atm</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">סעיף ג' (השוואה איכותית) — ראו הפתרון המלא למטה.</div>
+</div>
+```
 :::
 
 ::: {.callout-note collapse="true" title="פתרון"}
@@ -1285,6 +1337,20 @@ $$\Delta P = \rho gh$$
   2.  מהו העומד ביחידות של mMEK?  
   3.  באחד הימים ירד גשם ונכנסו מים למיכל. יש לנו מד לחץ בתחתית הכלי, כיצד ניתן לחשב כמה מים נכנסו למיכל?  
   4.  כיצד ניתן להחזיר את המיכל למצבו המקורי (ללא המים)?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">1) F<sub>תחתית</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="4.3e5" data-tol="20000" placeholder="?" aria-label="כוח על התחתית">
+    <span class="le-unit">N</span></div>
+  <div class="le-row"><span class="le-prompt">2) עומד =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="5.0" data-tol="0.1" placeholder="?" aria-label="עומד ביחידות mMEK">
+    <span class="le-unit">mMEK</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">סעיפים 3–4 (רעיוניים) — ראו הפתרונות המלאים למטה.</div>
+</div>
+```
 :::
 
 ::: {.callout-note title="פתרון סעיף א" collapse="true"}
