@@ -2048,6 +2048,39 @@ $${\dot{n}}_{H_{2},out} = 200\frac{kmol}{h} - 3*20\frac{kmol}{h} = 140\frac{kmol
                       קלה ליישום במחשב.                                                                                                                                          
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+::: {.exercise}
+בריאקטור נשרף מתאן לפי התגובה:
+$$CH_{4} + 2O_{2} \longrightarrow CO_{2} + 2H_{2}O$$
+ההזנה מכילה $100\ mol$ מתאן ו-$300\ mol$ חמצן. בזרם היציאה נמדדו $20\ mol$ מתאן שלא הגיב. פתרו **בעזרת מאזן אטומי**.
+
+חשבו: א. כמות ה-$CO_2$ שנוצרה. ב. כמות ה-$H_2O$ שנוצרה. ג. כמות ה-$O_2$ בזרם היציאה.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) n(CO₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="80" data-tol="1" placeholder="?" aria-label="CO2 שנוצר">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) n(H₂O) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="160" data-tol="1" placeholder="?" aria-label="מים שנוצרו">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) n(O₂) ביציאה =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="140" data-tol="1" placeholder="?" aria-label="חמצן ביציאה">
+    <span class="le-unit">mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>אטומים נשמרים: Input = Output לכל יסוד.</div>
+      <div><strong>פחמן (C):</strong> 100 = 20(CH₄) + n(CO₂) → n(CO₂) = 80 mol</div>
+      <div><strong>מימן (H):</strong> 100·4 = 20·4 + n(H₂O)·2 → 400 = 80 + 2·n(H₂O) → n(H₂O) = 160 mol</div>
+      <div><strong>חמצן (O):</strong> 300·2 = n(O₂)·2 + n(CO₂)·2 + n(H₂O)·1</div>
+      <div class="le-eq">600 = 2·n(O₂) + 160 + 160 → 2·n(O₂) = 280 → n(O₂) = 140 mol</div>
+    </div>
+  </details>
+</div>
+```
+:::
+
 ### חישוב דרגות חופש עבור מערכות עם ריאקציה
 
 עד כה, בחישוב דרגות חופש במערכות ללא תגובה כימית, הסתפקנו בעיקר בספירת המשתנים הלא ידועים מול מספר המשוואות הבלתי תלויות:
@@ -2347,6 +2380,38 @@ $$n_{Acon} = n_{Bgen} = 100kmol$$
 $${\dot{n}}_{A1} = 250\frac{kmol}{h}\ \ \ \ \ \ \ \ {\dot{n}}_{A2} = {\dot{n}}_{A,r} = 150\frac{kmol}{h}\ \ \ \ \ \ \ {\dot{n}}_{B2} = \ {\dot{n}}_{B,out} = 100\frac{kmol}{h}\ $$
 :::
 
+::: {.exercise}
+תהליך איזומריזציה $A \rightarrow B$ פועל עם תחזיר. ההזנה הטרייה היא ${\dot{n}}_{A,f} = 100\ \frac{kmol}{h}$. ההמרה במעבר יחיד בריאקטור היא $X_{sp} = 0.25$. אחרי הריאקטור יש מפריד מושלם: כל התוצר $B$ יוצא מהמערכת, וכל המגיב $A$ שלא הגיב חוזר לריאקטור. המערכת במצב עמיד.
+
+חשבו: א. ספיקת $A$ בכניסה לריאקטור. ב. ספיקת התחזיר. ג. ספיקת התוצר $B$ היוצא.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ṅ(A) לריאקטור =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="400" data-tol="5" placeholder="?" aria-label="A לריאקטור">
+    <span class="le-unit">kmol/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) תחזיר =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="300" data-tol="5" placeholder="?" aria-label="תחזיר">
+    <span class="le-unit">kmol/h</span></div>
+  <div class="le-row"><span class="le-prompt">ג) תוצר B =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="100" data-tol="2" placeholder="?" aria-label="תוצר B">
+    <span class="le-unit">kmol/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>המפריד מושלם, ולכן התחזיר = כל ה-A שיצא מהריאקטור = (1 − X_sp)·ṅ_A,1 = 0.75·ṅ_A,1.</div>
+      <div>מאזן A על נקודת הערבוב (טרי + תחזיר = כניסה לריאקטור):</div>
+      <div class="le-eq">100 + 0.75·ṅ_A,1 = ṅ_A,1 → 100 = 0.25·ṅ_A,1</div>
+      <div class="le-eq">א) ṅ_A,1 = 400 kmol/h</div>
+      <div>ב) תחזיר = 0.75·400 = 300 kmol/h</div>
+      <div>ג) B שנוצר = A שהגיב = 0.25·400 = 100 kmol/h (שווה להזנה הטרייה — ההמרה הכוללת 100%).</div>
+    </div>
+  </details>
+</div>
+```
+:::
+
 #### זרם סילוק/טיהור Purge
 
 כאשר מפעילים תהליך עם **תחזיר אנו מ**חזירים לריאקטור חלק מזרם היציאה כדי להעלות את הניצול הכולל של חומרי הגלם (במיוחד כש-$X_{sp}$ נמוך). אבל לרוב חומרי גלם כמעט אף פעם אינם טהורים: יש חומרים אינרטים (למשל $N_{2}$, $Ar$, $CO_{2}$שלא מגיב, אדי מים), ולעיתים יש גם **תוצרי לוואי** או מזהמים שנכנסים עם ההזנה או נוצרים בתהליך. אם נפריד רק את התוצר ונחזיר את כל שאר הזרם הלא-מגיב חזרה לריאקטור, אותם רכיבים לא רצויים ימשיכו להכנס למערכת אבל לא לצאת, ולכן הם ילכו ויצטברו במחזור. ההצטברות משנה את הרכב זרם הכניסה לריאקטור, עלולה להפריע לקינטיקה, להכביד על ההפרדה, ובמקרים מסוימים גם ליצור סיכוני בטיחות (למשל הצטברות רכיב דליק/רעיל).
@@ -2643,6 +2708,38 @@ $${\dot{n}}_{7} = 100\frac{mol}{h}$$
 
 
 
+::: {.exercise}
+תהליך במצב עמיד עם תחזיר וזרם סילוק (Purge). ההזנה הטרייה היא $100\ \frac{mol}{h}$ ומכילה 2% (מולי) אינרט ($N_2$) ו-98% מגיב. בזרם הסילוק ריכוז האינרט הוא 10% מולי. במצב עמיד, כל האינרט שנכנס למערכת חייב לצאת — והדרך היחידה שלו לצאת היא דרך הסילוק.
+
+חשבו: א. קצב האינרט הנכנס למערכת. ב. קצב זרם הסילוק. ג. כמה מגיב "מבוזבז" ויוצא עם הסילוק.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) אינרט נכנס =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2" data-tol="0.1" placeholder="?" aria-label="אינרט נכנס">
+    <span class="le-unit">mol/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) זרם סילוק =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="20" data-tol="0.5" placeholder="?" aria-label="זרם סילוק">
+    <span class="le-unit">mol/h</span></div>
+  <div class="le-row"><span class="le-prompt">ג) מגיב שאבד =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="18" data-tol="0.5" placeholder="?" aria-label="מגיב שאבד">
+    <span class="le-unit">mol/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) האינרט הנכנס עם ההזנה הטרייה:</div>
+      <div class="le-eq">ṅ_אינרט = 100 · 0.02 = 2 mol/h</div>
+      <div>ב) במצב עמיד: אינרט נכנס = אינרט יוצא בסילוק. אם ריכוז האינרט בסילוק 10%:</div>
+      <div class="le-eq">ṅ_P · 0.10 = 2 → ṅ_P = 2 / 0.10 = 20 mol/h</div>
+      <div>ג) שאר זרם הסילוק (90%) הוא מגיב שאבד:</div>
+      <div class="le-eq">20 · 0.90 = 18 mol/h — זהו מחיר הסילוק (פשרה מול הצטברות האינרט).</div>
+    </div>
+  </details>
+</div>
+```
+:::
+
 ### סיכום - מאזנים במערכות הכוללות תגובות
 
 במערכות ללא ריאקציה, הכלל המנחה הוא $Input\  = \ Output$ אך כאשר מתרחשת תגובה כימית, מולקולות נצרכות ונוצרות, ולכן כלל זה אינו תקף עוד עבור המולקולות (אך נותר תקף עבור האטומים). בפרק זה הוצגו שלוש גישות לפתרון בעיות ומערכת מושגים לניתוח תהליכים מורכבים.
@@ -2825,6 +2922,38 @@ $$y_{{CO}_{2},dry} = \frac{10molCO_{2}}{80mol} = 0.125\ \ \ ;\ \ \ \ y_{N_{2},dr
 במעבר מבסיס רטוב לבסיס יבש הוא פשוט יחסית. נבחר בסיס חישוב (לרוב 100 מול גז רטוב), נחסיר את כמות המים ונחשב את השברים מחדש ביחס לסכום היבש.
 
 המעבר מבסיס יבש לבסיס רטוב הוא מעט יותר מורכב מכיוון שאם ההרכב הוא יבש אנו לא יכולים לדעת כמה מים היו שם במקור. אנו נהיה חייבים למצוא נתון חיצוני היכול להצביע על כמות המים שהיתה בתוצר (כמו מאזן על המימן) ומשם נשחזר את ההרכב הרטוב.
+:::
+
+::: {.exercise}
+דגימה של גז פליטה מכילה סך הכל $100\ mol$: $20\ mol$ $H_2O$, $12\ mol$ $CO_2$, $8\ mol$ $O_2$ ו-$60\ mol$ $N_2$.
+
+חשבו: א. השבר המולי של $CO_2$ על **בסיס רטוב**. ב. השבר המולי של $CO_2$ על **בסיס יבש**. ג. השבר המולי של $O_2$ על בסיס יבש.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) y(CO₂) רטוב =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="12" data-tol="0.3" placeholder="?" aria-label="CO2 רטוב">
+    <span class="le-unit">%</span></div>
+  <div class="le-row"><span class="le-prompt">ב) y(CO₂) יבש =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="15" data-tol="0.3" placeholder="?" aria-label="CO2 יבש">
+    <span class="le-unit">%</span></div>
+  <div class="le-row"><span class="le-prompt">ג) y(O₂) יבש =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="10" data-tol="0.3" placeholder="?" aria-label="O2 יבש">
+    <span class="le-unit">%</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) בסיס רטוב — ביחס לכל הגז כולל המים (100 mol):</div>
+      <div class="le-eq">y(CO₂)_wet = 12 / 100 = 0.12 = 12%</div>
+      <div>ב) בסיס יבש — מסירים את המים: גז יבש = 100 − 20 = 80 mol.</div>
+      <div class="le-eq">y(CO₂)_dry = 12 / 80 = 0.15 = 15%</div>
+      <div>ג) אותו בסיס יבש (80 mol):</div>
+      <div class="le-eq">y(O₂)_dry = 8 / 80 = 0.10 = 10%</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### אוויר תיאורטי ואוויר עודף
@@ -3230,6 +3359,40 @@ $$16.2\% < 18\%$$
 2.  או להגדיל את עודף האוויר בכניסה (יותר מ-15%)*.*
 ::: 
 
+
+::: {.exercise}
+לתא שריפה מוזן מתאן ואוויר ב-20% אוויר עודף. תגובת השריפה המלאה:
+$$CH_{4} + 2O_{2} \longrightarrow CO_{2} + 2H_{2}O$$
+בסיס חישוב: $100\ mol$ מתאן. (באוויר 21% חמצן מולרי.)
+
+חשבו: א. כמות החמצן התיאורטית. ב. כמות האוויר התיאורטית. ג. כמות האוויר המוזנת בפועל.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) O₂ תיאורטי =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="200" data-tol="2" placeholder="?" aria-label="חמצן תיאורטי">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) אוויר תיאורטי =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="952" data-tol="5" placeholder="?" aria-label="אוויר תיאורטי">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) אוויר בפועל =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1143" data-tol="8" placeholder="?" aria-label="אוויר בפועל">
+    <span class="le-unit">mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) לפי הסטויכיומטריה, כל mol מתאן דורש 2 mol חמצן:</div>
+      <div class="le-eq">n(O₂)_theo = 100 · 2 = 200 mol</div>
+      <div>ב) האוויר מכיל 21% חמצן:</div>
+      <div class="le-eq">n(air)_theo = 200 / 0.21 = 952 mol</div>
+      <div>ג) עם 20% עודף:</div>
+      <div class="le-eq">n(air)_fed = 952 · (1 + 0.20) = 1143 mol</div>
+    </div>
+  </details>
+</div>
+```
+:::
 
 ### סיכום תגובות שריפה 
 
