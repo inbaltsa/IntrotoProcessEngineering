@@ -686,6 +686,30 @@ window.Quarto = {
 <p><em>מאזן על האתנול</em></p>
 <p><span class="math display">\[1000\frac{Kg_{solution}}{h}*\frac{40KgEtOH}{100Kg_{solution}} = 410\frac{Kg}{h}\frac{90KgEtOH}{100Kg_{solution}} + 590\frac{Kg}{h}\frac{5KgEtOH}{100Kg_{solution}}\]</span></p>
 </div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>עמוד זיקוק רציף במצב עמיד מפריד תמיסת <strong>מתנול-מים</strong>. ההזנה היא <span class="math inline">\(1000\ \frac{kg}{h}\)</span> בריכוז 40% מתנול (משקלי). ריכוז המתנול בתוצר העליון הוא 90%, ובזרם התחתון 10%. חשבו את ספיקות שני זרמי היציאה: התוצר העליון <span class="math inline">\(\dot{m}_D\)</span> והזרם התחתון <span class="math inline">\(\dot{m}_B\)</span>. (כל האחוזים משקליים.)</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">ṁ (עליון) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="375" data-tol="5" placeholder="?" aria-label="ספיקת תוצר עליון">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-row"><span class="le-prompt">ṁ (תחתון) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="625" data-tol="5" placeholder="?" aria-label="ספיקת זרם תחתון">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>במצב עמיד אין צבירה. כותבים מאזן מסה כללי ומאזן על המתנול:</div>
+      <div class="le-eq">כללי:  1000 = ṁ_D + ṁ_B</div>
+      <div class="le-eq">מתנול:  1000·0.40 = 0.90·ṁ_D + 0.10·ṁ_B</div>
+      <div>מציבים ṁ_B = 1000 − ṁ_D במאזן המתנול:</div>
+      <div class="le-eq">400 = 0.90 ṁ_D + 0.10(1000 − ṁ_D) = 0.80 ṁ_D + 100</div>
+      <div class="le-eq">ṁ_D = 300 / 0.80 = 375 kg/h  →  ṁ_B = 625 kg/h</div>
+      <div>בדיקה: 0.90·375 + 0.10·625 = 337.5 + 62.5 = 400 ✓</div>
+    </div>
+  </details>
+</div>
+</div>
 </section>
 <section id="מאזן-חומר-על-תהליך-מנתי" class="level4" data-number="4.4.5.2">
 <h4 data-number="4.4.5.2" class="anchored" data-anchor-id="מאזן-חומר-על-תהליך-מנתי"><span class="header-section-number">4.4.5.2</span> מאזן חומר על תהליך מנתי</h4>
@@ -714,6 +738,30 @@ window.Quarto = {
 <p>צריך יותר מהתמיסה השנייה כי הריכוז יותר קרוב לריכוז של התמיסה השנייה.<br>
 אם רוצים להיות בטוחים שלא היתה טעות חישוב, ניתן לעשות את החישוב פעם שנייה אך עם הצבה הפוכה <span class="math inline">\(0.05\left( 1000 - m_{2} \right) + 0.005m_{2} = 9kg\)</span></p>
 </div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>במפעל מזון מכינים מנה (Batch) של <span class="math inline">\(500\ kg\)</span> סירופ סוכר בריכוז 12% (משקלי). לרשותכם שני מקורות: סירופ מרוכז בריכוז 30% וסירופ מדולל בריכוז 5%. כמה קילוגרמים של כל אחד מהסירופים יש לערבב כדי לקבל את המנה המבוקשת?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">מרוכז (30%) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="140" data-tol="3" placeholder="?" aria-label="מסת סירופ מרוכז">
+    <span class="le-unit">kg</span></div>
+  <div class="le-row"><span class="le-prompt">מדולל (5%) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="360" data-tol="3" placeholder="?" aria-label="מסת סירופ מדולל">
+    <span class="le-unit">kg</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מאזן מסה כולל ומאזן על הסוכר (m₁ = מרוכז, m₂ = מדולל):</div>
+      <div class="le-eq">כללי:  m₁ + m₂ = 500</div>
+      <div class="le-eq">סוכר:  0.30 m₁ + 0.05 m₂ = 500·0.12 = 60</div>
+      <div>מציבים m₂ = 500 − m₁:</div>
+      <div class="le-eq">0.30 m₁ + 0.05(500 − m₁) = 60  →  0.25 m₁ + 25 = 60</div>
+      <div class="le-eq">m₁ = 35 / 0.25 = 140 kg  →  m₂ = 360 kg</div>
+      <div>הגיוני שצריך יותר מהסירופ המדולל, כי 12% קרוב יותר ל-5% מאשר ל-30%.</div>
+    </div>
+  </details>
+</div>
+</div>
 </section>
 <section id="מאזן-חומר-על-תהליך-חצי-מנתי" class="level4" data-number="4.4.5.3">
 <h4 data-number="4.4.5.3" class="anchored" data-anchor-id="מאזן-חומר-על-תהליך-חצי-מנתי"><span class="header-section-number">4.4.5.3</span> מאזן חומר על תהליך חצי מנתי</h4>
@@ -730,6 +778,30 @@ window.Quarto = {
 <p>ולכן כמות החמצן בסיום תהיה <span class="math inline">\(32g - 16g = 16g\)</span></p>
 <p><em>אנו רואים שהמספר שקיבלנו הוא בטווח הנכון.</em></p>
 <p>אנקדוטה - בפעם הראשונה שחישבתי את זה יצא לי שכמות החמצן שיצאה היא 160 גרם, מה שכמובן לא הגיוני, ואז בדקתי וראיתי שהעתקתי נתון לא נכון - קצב היציאה היה 0.8g/min ולא 8g/min. אלו בדיוק סוג הטעויות שאנחנו מקווים למצוא בשלב הזה.</p>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>מיכל תסיסה מכיל בתחילת התהליך <span class="math inline">\(m_{O_2,i} = 60\ g\)</span> חמצן חופשי. מזרימים לתוכו חנקן טהור (Purging) שדוחף את החמצן החוצה בקצב קבוע <span class="math inline">\(r = 1.5\ \frac{g}{min}\)</span>. אין תגובה כימית הצורכת או יוצרת חמצן.</p>
+<p>א. כמה חמצן יישאר במיכל לאחר 30 דקות?<br>
+ב. כעבור כמה זמן תרד כמות החמצן במיכל ל-<span class="math inline">\(6\ g\)</span>?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) m (O₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="15" data-tol="0.5" placeholder="?" aria-label="חמצן נותר">
+    <span class="le-unit">g</span></div>
+  <div class="le-row"><span class="le-prompt">ב) t =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="36" data-tol="0.5" placeholder="?" aria-label="זמן">
+    <span class="le-unit">min</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מספיק מאזן מסה על החמצן בלבד: מה שהיה בהתחלה פחות מה שיצא = מה שנשאר.</div>
+      <div>א) כמות שיצאה ב-30 דקות: m_out = r·t = 1.5·30 = 45 g</div>
+      <div class="le-eq">m_finish = 60 − 45 = 15 g</div>
+      <div>ב) כדי להגיע ל-6 g צריך לסלק 60 − 6 = 54 g:</div>
+      <div class="le-eq">t = 54 / 1.5 = 36 min</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 </section>
@@ -846,6 +918,30 @@ window.Quarto = {
 <p>בעת קביעת הרכב לא ידוע, אם הגדרנו כל אחד מהמשתנים בנפרד - תהיה לנו משוואת אילוץ אחת. לרוב נכתוב את זה בדרך חסכונית שבה נגדיר את אחד המשתנים על בסיס משתני ההרכב האחרים, ואז יהיה לנו נעלם אחד פחות ומשוואת אילוץ אחת פחות.</p>
 </div>
 <p>כאן לדוגמא במקום להגדיר את הרכב המים בזרם העליון כמשתנה נפרד היינו יכולים להגדיר אותו מראש (כבר בתרשים) כ-<span class="math inline">\(x_{water} = 1 - x_{acetone}\)</span>. במקרה זה היינו אומרים שיש לנו רק שני נעלמים (הרכב האצטון בזרם העליון ומסת ספיקת השפכים) ושתי משוואות בלתי תלויות (מאזני מסה הנובעים משני רכיבים המרכיבים את המערכת)</p>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>מפריד במצב עמיד מוזן בזרם של <strong>שני רכיבים</strong> (A ו-B) בספיקה ידועה ובהרכב ידוע. מהמפריד יוצאים שני זרמים — עליון ותחתון.</p>
+<p>א. נמדדת ספיקת הזרם העליון, <strong>ובנוסף</strong> נתון מפרט על הרכב הזרם התחתון. כמה דרגות חופש יש למערכת?<br>
+ב. כעת נניח שאין מדידת ספיקה בזרם העליון ואין מפרט על הרכב הזרם התחתון (רק ההזנה ידועה). כמה דרגות חופש?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) N<sub>DOF</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0" data-tol="0" placeholder="?" aria-label="דרגות חופש סעיף א">
+  </div>
+  <div class="le-row"><span class="le-prompt">ב) N<sub>DOF</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2" data-tol="0" placeholder="?" aria-label="דרגות חופש סעיף ב">
+  </div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מונים נעלמים ומשוואות בלתי-תלויות. ההזנה ידועה במלואה בשני הסעיפים.</div>
+      <div><strong>סעיף א:</strong> נעלמים — ספיקת הזרם התחתון והרכב הזרם העליון (ספיקת העליון נמדדה, הרכב התחתון נתון) = 2 נעלמים. משוואות — שני מאזני רכיב (A ו-B) = 2.</div>
+      <div class="le-eq">N_DOF = 2 − 2 = 0  →  המערכת מוגדרת היטב ופתירה.</div>
+      <div><strong>סעיף ב:</strong> נעלמים — ספיקת עליון, ספיקת תחתון, הרכב עליון, הרכב תחתון = 4. משוואות — שני מאזני רכיב = 2.</div>
+      <div class="le-eq">N_DOF = 4 − 2 = 2  →  חסר מידע: צריך שני נתונים נוספים כדי לפתור.</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section id="סיכום-שלבים-בניתוח-מערכות" class="level3" data-number="4.4.7">
@@ -965,6 +1061,35 @@ window.Quarto = {
 <li><p>צריכת אנרגיה: כמות האנרגיה שצריך להשקיע ביחידה השנייהתלויה ישירות בכמות החומר שנכנסת אליה. צריך לדעת את הספיקה כדי לחשב את עלויות החשמל והקיטור של המפעל.</p></li>
 <li><p>איתור תקלות (Troubleshooting): נניח שהתוצר הסופי בזרם 4 לא עומד בדרישות התהליך (לדוגמא - מכיל יותר מדי מים) איך נמצא את מקור הבעיה? אולי יחידה 2 לא עובדת טוב, או שאולי יחידה 1 שלחה לה זרם "מלוכלך" מדי שהיא לא אמורה להתמודד איתו. מדידה וחישוב של זרם הביניים הם שלבים הכרחיים לצורך זיהוי הבעיה ופתרונה.</p></li>
 </ul>
+</div>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>תערובת של שני רכיבים (A ו-B) מעובדת בשתי יחידות הפרדה בטור, במצב עמיד. ההזנה ליחידה 1 היא <span class="math inline">\(1000\ \frac{kg}{h}\)</span> בריכוז 58% A. יחידה 1 מוציאה זרם עליון <span class="math inline">\(\dot{m}_{T1} = 400\ \frac{kg}{h}\)</span> בריכוז 85% A, וזרם תחתון (זרם הביניים) שנכנס כולו ליחידה 2. יחידה 2 מוציאה זרם עליון <span class="math inline">\(\dot{m}_{T2} = 200\ \frac{kg}{h}\)</span> בריכוז 90% A, וזרם תחתון בריכוז 15% A.</p>
+<p>חשבו: א. ספיקת זרם הביניים. ב. ריכוז A בזרם הביניים. ג. ספיקת הזרם התחתון של יחידה 2.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ṁ (ביניים) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="600" data-tol="5" placeholder="?" aria-label="ספיקת ביניים">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) ריכוז A =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="40" data-tol="1" placeholder="?" aria-label="ריכוז A בביניים">
+    <span class="le-unit">%</span></div>
+  <div class="le-row"><span class="le-prompt">ג) ṁ (תחתון 2) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="400" data-tol="5" placeholder="?" aria-label="ספיקת תחתון יחידה 2">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) מאזן מסה כללי על יחידה 1:</div>
+      <div class="le-eq">1000 = 400 + ṁ_ביניים  →  ṁ_ביניים = 600 kg/h</div>
+      <div>ב) מאזן על רכיב A ביחידה 1:</div>
+      <div class="le-eq">1000·0.58 = 400·0.85 + 600·x  →  580 = 340 + 600 x</div>
+      <div class="le-eq">x = 240 / 600 = 0.40 = 40% A</div>
+      <div>ג) מאזן מסה כללי על יחידה 2:</div>
+      <div class="le-eq">600 = 200 + ṁ_תחתון  →  ṁ_תחתון = 400 kg/h</div>
+      <div>בדיקה (A ביחידה 2): 600·0.40 = 200·0.90 + 400·0.15 → 240 = 180 + 60 ✓</div>
+    </div>
+  </details>
 </div>
 </div>
 </section>
@@ -1188,6 +1313,34 @@ window.Quarto = {
 <p><span class="math display">\[Water\ flow\ rate\ \ \ \ \ \ \ \ {\dot{m}}_{3} = 8.0*10^{2}\frac{kgH_{2}O}{h}\]</span></p>
 <p><span class="math display">\[Recycle\ flow\ rate\ \ \ \ \ {\dot{m}}_{5} = 760\frac{kg}{h}\]</span></p>
 <p>בתהליכים רב־יחידתיים גם בעיות שנראות פשוטות על הנייר הופכות במהירות למבוכות של זרמים, הסתעפויות והפרדות. אין דרך אמיתית להתמודד עם מערכות כאלה בלי שיטה: להגדיר את המערכת, לזהות את הזרמים, לכתוב את המאזנים ולבדוק את דרגות החופש. הגישה השיטתית אינה כלי לימודי, אלא הכרח הנדסי - מפני שבעולם האמיתי המאזן כמעט אף פעם לא “נסגר” באופן מושלם. תמיד יש סטיות במדידות, הפסדים קטנים, ציוד שלא מתנהג בדיוק על פי המודל. המטרה אינה למצוא פתרון מושלם מתמטית, אלא פתרון שמספיק קרוב למציאות כדי שנוכל לקבל בעזרתו החלטות בטוחות ומושכלות</p>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>זרם הזנה של <span class="math inline">\(1000\ \frac{kg}{h}\)</span> תמיסת מלח בריכוז 30% (משקלי) מיועד להסמכה. חלק מהזרם עוקף (Bypass) מאייד, וחלקו נכנס למאייד המסלק <strong>מים טהורים בלבד</strong>. ביציאה מהמאייד הריכוז הוא 60% מלח. שני הזרמים מתאחדים בחזרה ונותנים תוצר סופי בריכוז 40% מלח. המערכת במצב עמיד.</p>
+<p>חשבו: א. ספיקת התוצר הסופי. ב. קצב המים המתאדים. ג. ספיקת ההזנה למאייד (הזרם שאינו עוקף).</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) תוצר סופי =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="750" data-tol="5" placeholder="?" aria-label="ספיקת תוצר סופי">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) מים מתאדים =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="250" data-tol="5" placeholder="?" aria-label="מים מתאדים">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-row"><span class="le-prompt">ג) הזנה למאייד =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="500" data-tol="5" placeholder="?" aria-label="הזנה למאייד">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) המלח נשמר בכל המערכת (רק מים מתאדים). מאזן מלח על המערכת כולה:</div>
+      <div class="le-eq">1000·0.30 = P·0.40  →  P = 300 / 0.40 = 750 kg/h</div>
+      <div>ב) מאזן מסה כולל על המערכת (יוצא: תוצר + מים מתאדים):</div>
+      <div class="le-eq">W = 1000 − 750 = 250 kg/h</div>
+      <div>ג) המים מתאדים רק במאייד. מאזן מלח על המאייד (הזנה E, יציאה E−W):</div>
+      <div class="le-eq">E·0.30 = (E − 250)·0.60  →  0.30 E = 0.60 E − 150</div>
+      <div class="le-eq">E = 150 / 0.30 = 500 kg/h  (והמעקף = 1000 − 500 = 500 kg/h)</div>
+    </div>
+  </details>
+</div>
+</div>
 </section>
 </section>
 <section id="גמלון" class="level3" data-number="4.5.3">
@@ -1301,6 +1454,33 @@ window.Quarto = {
 <li><p>עבור מים: <span class="math inline">\(n_{H_{2}O} = n_{H_{2}O,0} - 6\xi\)</span></p></li>
 </ul>
 <p>ללא <span class="math inline">\(\xi\)</span>, היינו צריכים להתמודד עם 4 משתני יציאה לא ידועים (כמות האמוניה שיצאה, כמות החמצן שיצאה, וכו'), אבל בעזרתו אנו יכולים לבטא את היציאה של כל ארבעת החומרים בעזרת משתנה נעלם אחד בלבד.</p>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>בריאקטור מתרחשת תגובת ייצור האמוניה: <span class="math display">\[N_{2} + 3H_{2} \longrightarrow 2NH_{3}\]</span> ההזנה מכילה <span class="math inline">\(50\ mol\)</span> חנקן ו-<span class="math inline">\(120\ mol\)</span> מימן. בסוף התהליך נוצרו <span class="math inline">\(30\ mol\)</span> אמוניה.</p>
+<p>חשבו: א. את התקדמות התגובה <span class="math inline">\(\xi\)</span>. ב. כמות החנקן שנותרה. ג. כמות המימן שנותרה.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ξ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="15" data-tol="0.3" placeholder="?" aria-label="התקדמות תגובה">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) n(N₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="35" data-tol="0.5" placeholder="?" aria-label="חנקן נותר">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) n(H₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="75" data-tol="0.5" placeholder="?" aria-label="מימן נותר">
+    <span class="le-unit">mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>המקדמים הסטויכיומטריים: ν(N₂) = −1, ν(H₂) = −3, ν(NH₃) = +2. משתמשים ב-n_out = n_in + ν·ξ.</div>
+      <div>א) מהאמוניה שנוצרה: n(NH₃) = 0 + 2ξ = 30 →</div>
+      <div class="le-eq">ξ = 30 / 2 = 15 mol</div>
+      <div>ב) n(N₂) = 50 − 1·ξ = 50 − 15 = 35 mol</div>
+      <div>ג) n(H₂) = 120 − 3·ξ = 120 − 45 = 75 mol</div>
+      <div>בדיקה: נצרכו 15 N₂ ו-45 H₂, נוצרו 30 NH₃ — היחס 1:3:2 נשמר ✓</div>
+    </div>
+  </details>
+</div>
+</div>
 </section>
 <section id="המרה-conversion-היפוך-הפער-בין-התיאוריה-למה-שקורה-בפועל." class="level3" data-number="4.6.2">
 <h3 data-number="4.6.2" class="anchored" data-anchor-id="המרה-conversion-היפוך-הפער-בין-התיאוריה-למה-שקורה-בפועל."><span class="header-section-number">4.6.2</span> המרה (Conversion, היפוך): הפער בין התיאוריה למה שקורה בפועל.</h3>
@@ -1324,6 +1504,29 @@ window.Quarto = {
 <p><span class="math inline">\(n_{fed}\)</span> הכמות שהוזנה בפועל למערכת.</p>
 <p><span class="math inline">\(n_{stoich}\)</span> הכמות התיאורטית שהיתה נדרשת אילו המגיב המגביל היה מגיב במלואו.</p>
 <p>באותו אופן ניתן להגדיר את אחוז העודף (Excess %) אם נכפיל את שבר העודף ב100%.</p>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>בתא שריפה נשרף פרופאן לפי התגובה: <span class="math display">\[C_{3}H_{8} + 5O_{2} \longrightarrow 3CO_{2} + 4H_{2}O\]</span> ההזנה מכילה <span class="math inline">\(20\ mol\)</span> פרופאן ו-<span class="math inline">\(120\ mol\)</span> חמצן.</p>
+<p>א. מהו המגיב המגביל? ב. כמה חמצן סטויכיומטרי נדרש כדי לשרוף את כל הפרופאן? ג. מהו אחוז העודף של החמצן?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">ב) O₂ סטויכיומטרי =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="100" data-tol="1" placeholder="?" aria-label="חמצן סטויכיומטרי">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) אחוז עודף O₂ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="20" data-tol="0.5" placeholder="?" aria-label="אחוז עודף חמצן">
+    <span class="le-unit">%</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) בודקים מי ייגמר ראשון. לפי היחס, ל-20 mol פרופאן נדרשים 20·5 = 100 mol חמצן. הוזנו 120 mol חמצן (יותר מ-100), ולכן <strong>הפרופאן הוא המגיב המגביל</strong> והחמצן בעודף.</div>
+      <div>ב) הכמות הסטויכיומטרית של חמצן:</div>
+      <div class="le-eq">n_stoich(O₂) = n(C₃H₈)·(ν_O₂/ν_C₃H₈) = 20·(5/1) = 100 mol</div>
+      <div>ג) אחוז העודף:</div>
+      <div class="le-eq">% עודף = (n_fed − n_stoich)/n_stoich × 100 = (120 − 100)/100 × 100 = 20%</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section id="שיווי-משקל-כימי" class="level4" data-number="4.6.2.2">
@@ -1404,6 +1607,33 @@ window.Quarto = {
 <p>במרבית המקרים <span class="math inline">\(0 &lt; \chi_{A} &lt; 1\)</span> - רק חלק מהמגיב הפך לתוצרים, ואנו נרצה למקסם את <span class="math inline">\(\chi_{A}\)</span> ככל האפשר.</p>
 <p><span class="math display">\[n_{A,out} = n_{A,in}\left( 1 - X_{A} \right)\]</span></p>
 <p>משוואה זו אומרת בפשטות: מה שיצא החוצה הוא מה שנכנס, מוכפל בחלק הנותר <span class="math inline">\(\left( 1 - X_{A} \right)\)</span>שלא הגיב.</p>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>בריאקטור לייצור גופרית תלת-חמצנית מתרחשת התגובה: <span class="math display">\[2SO_{2} + O_{2} \longrightarrow 2SO_{3}\]</span> לריאקטור מוזנים <span class="math inline">\(100\ mol\)</span> <span class="math inline">\(SO_{2}\)</span> (בנוסף לחמצן בעודף). בזרם היציאה נמדדו <span class="math inline">\(20\ mol\)</span> <span class="math inline">\(SO_{2}\)</span> שלא הגיבו.</p>
+<p>חשבו: א. את מקדם ההמרה <span class="math inline">\(\chi\)</span> של ה-<span class="math inline">\(SO_2\)</span>. ב. כמות ה-<span class="math inline">\(SO_3\)</span> שנוצרה. ג. כמות ה-<span class="math inline">\(O_2\)</span> שנצרכה.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) χ (SO₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="80" data-tol="1" placeholder="?" aria-label="מקדם המרה">
+    <span class="le-unit">%</span></div>
+  <div class="le-row"><span class="le-prompt">ב) n(SO₃) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="80" data-tol="1" placeholder="?" aria-label="SO3 שנוצר">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) O₂ שנצרך =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="40" data-tol="1" placeholder="?" aria-label="חמצן שנצרך">
+    <span class="le-unit">mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) מקדם ההמרה = חלק המגיב שהגיב מתוך מה שהוזן:</div>
+      <div class="le-eq">χ = (n_in − n_out)/n_in = (100 − 20)/100 = 0.80 = 80%</div>
+      <div>ב) נצרכו 100 − 20 = 80 mol SO₂. לפי היחס 2:2, נוצרים 80 mol SO₃.</div>
+      <div class="le-eq">n(SO₃) = 80 mol   (ξ = 80/2 = 40)</div>
+      <div>ג) לפי היחס, על כל 2 mol SO₂ נצרך 1 mol O₂:</div>
+      <div class="le-eq">n(O₂) נצרך = 80 × (1/2) = 40 mol</div>
+    </div>
+  </details>
+</div>
+</div>
 </section>
 </section>
 <section id="תגובות-מרובות-ניצולת-וסלקטיביות" class="level3" data-number="4.6.3">
@@ -1760,6 +1990,32 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>בריאקטור נשרף מתאן לפי התגובה: <span class="math display">\[CH_{4} + 2O_{2} \longrightarrow CO_{2} + 2H_{2}O\]</span> ההזנה מכילה <span class="math inline">\(100\ mol\)</span> מתאן ו-<span class="math inline">\(300\ mol\)</span> חמצן. בזרם היציאה נמדדו <span class="math inline">\(20\ mol\)</span> מתאן שלא הגיב. פתרו <strong>בעזרת מאזן אטומי</strong>.</p>
+<p>חשבו: א. כמות ה-<span class="math inline">\(CO_2\)</span> שנוצרה. ב. כמות ה-<span class="math inline">\(H_2O\)</span> שנוצרה. ג. כמות ה-<span class="math inline">\(O_2\)</span> בזרם היציאה.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) n(CO₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="80" data-tol="1" placeholder="?" aria-label="CO2 שנוצר">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) n(H₂O) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="160" data-tol="1" placeholder="?" aria-label="מים שנוצרו">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) n(O₂) ביציאה =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="140" data-tol="1" placeholder="?" aria-label="חמצן ביציאה">
+    <span class="le-unit">mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>אטומים נשמרים: Input = Output לכל יסוד.</div>
+      <div><strong>פחמן (C):</strong> 100 = 20(CH₄) + n(CO₂) → n(CO₂) = 80 mol</div>
+      <div><strong>מימן (H):</strong> 100·4 = 20·4 + n(H₂O)·2 → 400 = 80 + 2·n(H₂O) → n(H₂O) = 160 mol</div>
+      <div><strong>חמצן (O):</strong> 300·2 = n(O₂)·2 + n(CO₂)·2 + n(H₂O)·1</div>
+      <div class="le-eq">600 = 2·n(O₂) + 160 + 160 → 2·n(O₂) = 280 → n(O₂) = 140 mol</div>
+    </div>
+  </details>
+</div>
+</div>
 </section>
 <section id="חישוב-דרגות-חופש-עבור-מערכות-עם-ריאקציה" class="level3" data-number="4.7.2">
 <h3 data-number="4.7.2" class="anchored" data-anchor-id="חישוב-דרגות-חופש-עבור-מערכות-עם-ריאקציה"><span class="header-section-number">4.7.2</span> חישוב דרגות חופש עבור מערכות עם ריאקציה</h3>
@@ -1972,6 +2228,33 @@ window.Quarto = {
 <p><span class="math display">\[n_{Acon} = n_{Bgen} = 100kmol\]</span></p>
 <p>וכעת נחזור לבסיס החישוב של שעה אחת ונגדיר את הקצבים</p>
 <p><span class="math display">\[{\dot{n}}_{A1} = 250\frac{kmol}{h}\ \ \ \ \ \ \ \ {\dot{n}}_{A2} = {\dot{n}}_{A,r} = 150\frac{kmol}{h}\ \ \ \ \ \ \ {\dot{n}}_{B2} = \ {\dot{n}}_{B,out} = 100\frac{kmol}{h}\ \]</span></p>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>תהליך איזומריזציה <span class="math inline">\(A \rightarrow B\)</span> פועל עם תחזיר. ההזנה הטרייה היא <span class="math inline">\({\dot{n}}_{A,f} = 100\ \frac{kmol}{h}\)</span>. ההמרה במעבר יחיד בריאקטור היא <span class="math inline">\(X_{sp} = 0.25\)</span>. אחרי הריאקטור יש מפריד מושלם: כל התוצר <span class="math inline">\(B\)</span> יוצא מהמערכת, וכל המגיב <span class="math inline">\(A\)</span> שלא הגיב חוזר לריאקטור. המערכת במצב עמיד.</p>
+<p>חשבו: א. ספיקת <span class="math inline">\(A\)</span> בכניסה לריאקטור. ב. ספיקת התחזיר. ג. ספיקת התוצר <span class="math inline">\(B\)</span> היוצא.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ṅ(A) לריאקטור =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="400" data-tol="5" placeholder="?" aria-label="A לריאקטור">
+    <span class="le-unit">kmol/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) תחזיר =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="300" data-tol="5" placeholder="?" aria-label="תחזיר">
+    <span class="le-unit">kmol/h</span></div>
+  <div class="le-row"><span class="le-prompt">ג) תוצר B =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="100" data-tol="2" placeholder="?" aria-label="תוצר B">
+    <span class="le-unit">kmol/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>המפריד מושלם, ולכן התחזיר = כל ה-A שיצא מהריאקטור = (1 − X_sp)·ṅ_A,1 = 0.75·ṅ_A,1.</div>
+      <div>מאזן A על נקודת הערבוב (טרי + תחזיר = כניסה לריאקטור):</div>
+      <div class="le-eq">100 + 0.75·ṅ_A,1 = ṅ_A,1 → 100 = 0.25·ṅ_A,1</div>
+      <div class="le-eq">א) ṅ_A,1 = 400 kmol/h</div>
+      <div>ב) תחזיר = 0.75·400 = 300 kmol/h</div>
+      <div>ג) B שנוצר = A שהגיב = 0.25·400 = 100 kmol/h (שווה להזנה הטרייה — ההמרה הכוללת 100%).</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section id="זרם-סילוקטיהור-purge" class="level4" data-number="4.7.3.2">
@@ -2241,6 +2524,33 @@ window.Quarto = {
 <p>ורואים שהמאזן מתקיים.</p>
 <p>התחזיר הוא למעשה זרם 7 <span class="math display">\[{\dot{n}}_{7} = 100\frac{mol}{h}\]</span></p>
 </div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>תהליך במצב עמיד עם תחזיר וזרם סילוק (Purge). ההזנה הטרייה היא <span class="math inline">\(100\ \frac{mol}{h}\)</span> ומכילה 2% (מולי) אינרט (<span class="math inline">\(N_2\)</span>) ו-98% מגיב. בזרם הסילוק ריכוז האינרט הוא 10% מולי. במצב עמיד, כל האינרט שנכנס למערכת חייב לצאת — והדרך היחידה שלו לצאת היא דרך הסילוק.</p>
+<p>חשבו: א. קצב האינרט הנכנס למערכת. ב. קצב זרם הסילוק. ג. כמה מגיב “מבוזבז” ויוצא עם הסילוק.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) אינרט נכנס =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2" data-tol="0.1" placeholder="?" aria-label="אינרט נכנס">
+    <span class="le-unit">mol/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) זרם סילוק =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="20" data-tol="0.5" placeholder="?" aria-label="זרם סילוק">
+    <span class="le-unit">mol/h</span></div>
+  <div class="le-row"><span class="le-prompt">ג) מגיב שאבד =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="18" data-tol="0.5" placeholder="?" aria-label="מגיב שאבד">
+    <span class="le-unit">mol/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) האינרט הנכנס עם ההזנה הטרייה:</div>
+      <div class="le-eq">ṅ_אינרט = 100 · 0.02 = 2 mol/h</div>
+      <div>ב) במצב עמיד: אינרט נכנס = אינרט יוצא בסילוק. אם ריכוז האינרט בסילוק 10%:</div>
+      <div class="le-eq">ṅ_P · 0.10 = 2 → ṅ_P = 2 / 0.10 = 20 mol/h</div>
+      <div>ג) שאר זרם הסילוק (90%) הוא מגיב שאבד:</div>
+      <div class="le-eq">20 · 0.90 = 18 mol/h — זהו מחיר הסילוק (פשרה מול הצטברות האינרט).</div>
+    </div>
+  </details>
+</div>
+</div>
 </section>
 </section>
 <section id="סיכום---מאזנים-במערכות-הכוללות-תגובות" class="level3" data-number="4.7.4">
@@ -2386,6 +2696,33 @@ window.Quarto = {
 <p>בעת ניתוח מערכות מסוג זה, חשוב לדעת לעבור בקלות בין שתי דרכי ההצגה.</p>
 <p>במעבר מבסיס רטוב לבסיס יבש הוא פשוט יחסית. נבחר בסיס חישוב (לרוב 100 מול גז רטוב), נחסיר את כמות המים ונחשב את השברים מחדש ביחס לסכום היבש.</p>
 <p>המעבר מבסיס יבש לבסיס רטוב הוא מעט יותר מורכב מכיוון שאם ההרכב הוא יבש אנו לא יכולים לדעת כמה מים היו שם במקור. אנו נהיה חייבים למצוא נתון חיצוני היכול להצביע על כמות המים שהיתה בתוצר (כמו מאזן על המימן) ומשם נשחזר את ההרכב הרטוב.</p>
+</div>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>דגימה של גז פליטה מכילה סך הכל <span class="math inline">\(100\ mol\)</span>: <span class="math inline">\(20\ mol\)</span> <span class="math inline">\(H_2O\)</span>, <span class="math inline">\(12\ mol\)</span> <span class="math inline">\(CO_2\)</span>, <span class="math inline">\(8\ mol\)</span> <span class="math inline">\(O_2\)</span> ו-<span class="math inline">\(60\ mol\)</span> <span class="math inline">\(N_2\)</span>.</p>
+<p>חשבו: א. השבר המולי של <span class="math inline">\(CO_2\)</span> על <strong>בסיס רטוב</strong>. ב. השבר המולי של <span class="math inline">\(CO_2\)</span> על <strong>בסיס יבש</strong>. ג. השבר המולי של <span class="math inline">\(O_2\)</span> על בסיס יבש.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) y(CO₂) רטוב =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="12" data-tol="0.3" placeholder="?" aria-label="CO2 רטוב">
+    <span class="le-unit">%</span></div>
+  <div class="le-row"><span class="le-prompt">ב) y(CO₂) יבש =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="15" data-tol="0.3" placeholder="?" aria-label="CO2 יבש">
+    <span class="le-unit">%</span></div>
+  <div class="le-row"><span class="le-prompt">ג) y(O₂) יבש =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="10" data-tol="0.3" placeholder="?" aria-label="O2 יבש">
+    <span class="le-unit">%</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) בסיס רטוב — ביחס לכל הגז כולל המים (100 mol):</div>
+      <div class="le-eq">y(CO₂)_wet = 12 / 100 = 0.12 = 12%</div>
+      <div>ב) בסיס יבש — מסירים את המים: גז יבש = 100 − 20 = 80 mol.</div>
+      <div class="le-eq">y(CO₂)_dry = 12 / 80 = 0.15 = 15%</div>
+      <div>ג) אותו בסיס יבש (80 mol):</div>
+      <div class="le-eq">y(O₂)_dry = 8 / 80 = 0.10 = 10%</div>
+    </div>
+  </details>
 </div>
 </div>
 </section>
@@ -2678,6 +3015,33 @@ CH_{4} + 1.5O_{2} \rightarrow CO + 2H_{2}O &amp; \xi_{2}
 <li><p>להקטין את אחוז המחזור (פחות מ-40%)<em>.</em></p></li>
 <li><p>או להגדיל את עודף האוויר בכניסה (יותר מ-15%)<em>.</em></p></li>
 </ol>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>לתא שריפה מוזן מתאן ואוויר ב-20% אוויר עודף. תגובת השריפה המלאה: <span class="math display">\[CH_{4} + 2O_{2} \longrightarrow CO_{2} + 2H_{2}O\]</span> בסיס חישוב: <span class="math inline">\(100\ mol\)</span> מתאן. (באוויר 21% חמצן מולרי.)</p>
+<p>חשבו: א. כמות החמצן התיאורטית. ב. כמות האוויר התיאורטית. ג. כמות האוויר המוזנת בפועל.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) O₂ תיאורטי =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="200" data-tol="2" placeholder="?" aria-label="חמצן תיאורטי">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) אוויר תיאורטי =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="952" data-tol="5" placeholder="?" aria-label="אוויר תיאורטי">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) אוויר בפועל =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1143" data-tol="8" placeholder="?" aria-label="אוויר בפועל">
+    <span class="le-unit">mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) לפי הסטויכיומטריה, כל mol מתאן דורש 2 mol חמצן:</div>
+      <div class="le-eq">n(O₂)_theo = 100 · 2 = 200 mol</div>
+      <div>ב) האוויר מכיל 21% חמצן:</div>
+      <div class="le-eq">n(air)_theo = 200 / 0.21 = 952 mol</div>
+      <div>ג) עם 20% עודף:</div>
+      <div class="le-eq">n(air)_fed = 952 · (1 + 0.20) = 1143 mol</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section id="סיכום-תגובות-שריפה" class="level3" data-number="4.8.5">
