@@ -512,6 +512,22 @@ SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25
 \]</span></p>
 <p>חשבּו את ערך <span class="math inline">\(SG\)</span> על פי כל אחד מהנתונים בנפרד.<br>
 מה ניתן להסיק מהתוצאות?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">SG (לפי SI) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.80" data-tol="0.02" placeholder="?" aria-label="SG לפי SI"></div>
+  <div class="le-row"><span class="le-prompt">SG (לפי AES) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.80" data-tol="0.02" placeholder="?" aria-label="SG לפי AES"></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>המשקל הסגולי הוא יחס בין צפיפות החומר לצפיפות המים (חומר הייחוס):</div>
+      <div class="le-eq">SI:  SG = 800 / 1000 = 0.80</div>
+      <div class="le-eq">AES:  SG = 49.9 / 62.4 = 0.80</div>
+      <div>שתי התוצאות זהות — SG הוא גודל חסר-ממד ואינו תלוי במערכת היחידות.</div>
+    </div>
+  </details>
+</div>
 </div>
 <p>מכיוון שהמשקל הסגולי (<em>Specific Gravity</em>) מוגדר כיחס בין שתי צפיפויות - צפיפות החומר וצפיפות חומר הייחוס - הוא <strong>אינו תלוי ביחידות המדידה</strong>.<br>
 כל שינוי ביחידות ישפיע באותו יחס על המונה והמחנה, ולכן הערך הנומרי של <span class="math inline">\(SG\)</span> יישאר זהה בכל מערכת יחידות. במילים אחרות, מדובר בגודל <strong>חסר ממדים</strong> (<em>dimensionless</em>), המבטא השוואה טהורה בין צפיפויות, וניתן להשתמש באותו הערך ללא תלות במערכת היחידות שבה אנו עובדים.</p>
@@ -563,6 +579,28 @@ SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25
 <span>וצפיפות המים בטמפרטורה זו היא</span> <span class="math inline">\(\rho = 997\text{ kg/m³}\)</span><br>
 <span>א. חשבו את <strong>ספיקת המסה</strong> של הזרימה.</span></p>
 <p><span>ב. כמה זמן יידרש למלא מיכל בנפח של</span> <span class="math inline">\(0.5m^{3}\)</span></p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ṁ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1.99" data-tol="0.05" placeholder="?" aria-label="ספיקת מסה">
+    <span class="le-unit">kg/s</span></div>
+  <div class="le-row"><span class="le-prompt">ב) t =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="250" data-tol="5" placeholder="?" aria-label="זמן מילוי">
+    <span class="le-unit">s</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) ספיקת המסה = צפיפות × ספיקה נפחית:</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">997 kg</div><div class="rc-den">1 <span class="rc-cancel">m³</span></div></div>
+        <div class="rc-term"><div class="rc-num">2.0×10⁻³ <span class="rc-cancel">m³</span></div><div class="rc-den">1 s</div></div>
+        <div class="rc-eq">= 1.99 kg/s</div>
+      </div>
+      <div>ב) זמן מילוי = נפח / ספיקה נפחית:</div>
+      <div class="le-eq">t = 0.5 / (2.0×10⁻³) = 250 s</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 </section>
@@ -605,6 +643,41 @@ SG = \frac{78.0\ \frac{lb_{m}}{ft^{3}}}{62.43\ \frac{lb_{m}}{ft^{3}}} = 1.25
 <p>ב. מהי המסה המולרית של אלומיניום ביחידות AES?</p>
 <p>ג. כמה מול אטומי אלומיניום יש ב־<span class="math inline">\(100\,g\)</span> של אלומיניום?</p>
 <p>ד. כמה פאונד־מול (<span class="math inline">\(lb\!-\!mol\)</span>) יש ב־<span class="math inline">\(100\,g\)</span> של אלומיניום?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) M<sub>w</sub> (SI) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="26.98" data-tol="0.05" placeholder="?" aria-label="מסה מולרית SI">
+    <span class="le-unit">kg/kmol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) M<sub>w</sub> (AES) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="26.98" data-tol="0.05" placeholder="?" aria-label="מסה מולרית AES">
+    <span class="le-unit">lb<sub>m</sub>/lbmol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) n =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="3.71" data-tol="0.05" placeholder="?" aria-label="מספר מולים">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ד) n =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="8.17e-3" data-tol="0.0002" placeholder="?" aria-label="מספר פאונד-מול">
+    <span class="le-unit">lb-mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>המסה המולרית (האטומית) של אלומיניום היא M<sub>w</sub> = 26.98. הערך המספרי זהה בכל מערכות היחידות — משתנה רק שם היחידה:</div>
+      <div class="le-eq">א) M<sub>w</sub> = 26.98 kg/kmol   (= 26.98 g/mol)</div>
+      <div class="le-eq">ב) M<sub>w</sub> = 26.98 lb<sub>m</sub>/lbmol</div>
+      <div>ג) מספר המולים = מסה / מסה מולרית:</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">100 <span class="rc-cancel">g</span></div><div class="rc-den">1</div></div>
+        <div class="rc-term"><div class="rc-num">1 mol</div><div class="rc-den">26.98 <span class="rc-cancel">g</span></div></div>
+        <div class="rc-eq">= 3.71 mol</div>
+      </div>
+      <div>ד) המרה לפאונד־מול (1 lb-mol = 453.6 mol):</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">3.71 <span class="rc-cancel">mol</span></div><div class="rc-den">1</div></div>
+        <div class="rc-term"><div class="rc-num">1 lb-mol</div><div class="rc-den">453.6 <span class="rc-cancel">mol</span></div></div>
+        <div class="rc-eq">= 8.17×10⁻³ lb-mol</div>
+      </div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section id="תערובות-והרכבן" class="level3" data-number="3.5.2">
@@ -641,6 +714,20 @@ y_{A} = \frac{n_{A}}{\sum n_{i}}
 </div>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p><span>מה יהיה המשקל המולקולרי הממוצע של אויר ביחידות</span> AES<span>?</span></p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">M̄ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="28.9" data-tol="0.35" placeholder="?" aria-label="משקל מולקולרי ממוצע">
+    <span class="le-unit">lb/lb-mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מהרכב האוויר (בקירוב 21% O₂ ו-79% N₂ מולרי):</div>
+      <div class="le-eq">M̄ = 0.21×32 + 0.79×28 ≈ 28.8 g/mol</div>
+      <div>המשקל המולקולרי הוא אותו ערך נומרי בכל מערכת יחידות — ולכן ב-AES: ≈ 28.8–29.0 lb/lb-mol.</div>
+    </div>
+  </details>
+</div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -894,6 +981,27 @@ Figure <span>22</span>- <span>השוואה בין שלושת סרגלי טמפר
 </div>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p>נתונה טמפרטורה של <span class="math inline">\(200^\circ R\)</span>. מה יהיה ערכה של הטמפרטורה בצלזיוס, בפרנהייט ובקלווין?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">K =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="111.11" data-tol="0.6" placeholder="?" aria-label="קלווין">
+    <span class="le-unit">K</span></div>
+  <div class="le-row"><span class="le-prompt">°C =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="-162.04" data-tol="0.6" placeholder="?" aria-label="צלזיוס">
+    <span class="le-unit">°C</span></div>
+  <div class="le-row"><span class="le-prompt">°F =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="-259.67" data-tol="0.6" placeholder="?" aria-label="פרנהייט">
+    <span class="le-unit">°F</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>ראנקין היא סקאלה אבסולוטית (כמו קלווין), ולכן ההמרה לקלווין היא יחס בלבד:</div>
+      <div class="le-eq">K = 200 × 5/9 = 111.11 K</div>
+      <div class="le-eq">°C = K − 273.15 = 111.11 − 273.15 = −162.04 °C</div>
+      <div class="le-eq">°F = °R − 459.67 = 200 − 459.67 = −259.67 °F</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section id="טמפרטורה-בסרגל-מעבר-יחידות---מה-מיוחד-כאן" class="level3" data-number="3.6.4">
@@ -1173,6 +1281,17 @@ P = P_{0} + \frac{\rho g h}{g_{c}}
 <li>צפיפות החנקן (בתנאים אלו): <span class="math inline">\(\rho_{gas} \approx 1.2 \frac{kg}{m^3}\)</span></li>
 </ul>
 <p>חשבו: א. מהו הלחץ במרכז המיכל (בממשק שבין הגז לנוזל)? ב. מהו הלחץ בתחתית המיכל? ג. השוו את תוספת הלחץ שתרם עמוד הגז לעומת תוספת הלחץ שתרם עמוד הנוזל.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) P<sub>ממשק</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2.00" data-tol="0.01" placeholder="?" aria-label="לחץ בממשק">
+    <span class="le-unit">atm</span></div>
+  <div class="le-row"><span class="le-prompt">ב) P<sub>תחתית</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2.97" data-tol="0.03" placeholder="?" aria-label="לחץ בתחתית">
+    <span class="le-unit">atm</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">סעיף ג' (השוואה איכותית) — ראו הפתרון המלא למטה.</div>
+</div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -1258,6 +1377,25 @@ P = P_{0} + \frac{\rho g h}{g_{c}}
 הלחץ האטמוספירי באותו היום נמדד בברומטר כספית ועמד על <span class="math inline">\(720\,mmHg\)</span>.<br>
 ידוע כי המכל מתוכנן לעמוד בלחץ אבסולוטי מרבי של <span class="math inline">\(310\,kPa\)</span>.</p>
 <p>האם המכל נמצא בתחום התקין או שקיים חשש לחריגה מהלחץ המותר?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">P (אבסולוטי) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="296" data-tol="3" placeholder="?" aria-label="לחץ אבסולוטי">
+    <span class="le-unit">kPa</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>לחץ אבסולוטי = לחץ gauge + לחץ אטמוספירי. נמיר תחילה את הברומטר ל-kPa:</div>
+      <div class="ruler-calc">
+        <div class="rc-term"><div class="rc-num">720 <span class="rc-cancel">mmHg</span></div><div class="rc-den"></div></div>
+        <div class="rc-term"><div class="rc-num">101.325 kPa</div><div class="rc-den">760 <span class="rc-cancel">mmHg</span></div></div>
+        <div class="rc-eq">= 96.0 kPa</div>
+      </div>
+      <div class="le-eq">P_abs = 200 + 96.0 = 296 kPa</div>
+      <div>296 kPa &lt; 310 kPa ⟵ <b>המיכל תקין</b> (בתוך הטווח המותר).</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 </section>
@@ -1319,6 +1457,25 @@ P = P_{0} + \frac{\rho g h}{g_{c}}
 <p><span>נתונה המערכת הבאה:<br>
 <img src="media/media/image34.png" style="width:2.01046in;height:1.62134in"> 1. באיזה צד הלחץ יותר גבוה?<br>
 2. מהו</span> h<span>?</span></p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">2) h =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="-253" data-tol="3" placeholder="?" aria-label="גובה עמוד הכספית (עם סימן)">
+    <span class="le-unit">mm Hg</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">שימו לב לסימן! פתרו לפי הכיוון שהציור מרמז עליו.</div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>ראשית ממירים את שני הלחצים לאותן יחידות:</div>
+      <div class="le-eq">P (בועה) = 0.78 atm × 101.325 = 79.0 kPa</div>
+      <div class="le-eq">P (צד עליון) = 112.8 kPa</div>
+      <div>2) נכתוב את משוואת המנומטר לפי הכיוון שהציור מרמז עליו (כאילו הבועה בצד הלחץ הגבוה):</div>
+      <div class="le-eq">h = (P_בועה − P_עליון) / (ρ_Hg · g) = (79 000 − 112 800) / (13 600 · 9.81)</div>
+      <div class="le-eq">h = −33 766 / 133 416 = −0.253 m ≈ <strong>−253 mm Hg</strong></div>
+      <div>1) הסימן <strong>השלילי</strong> הוא המסקנה: המציאות הפוכה מהציור. הלחץ באמת גבוה יותר בצד של <strong>112.8 kPa</strong>, ולכן הכספית בפועל צריכה להיות גבוהה יותר דווקא בצד הבועה. <em>הציור שורטט בכוונה בצורה לא עקבית</em> — הסימן השלילי הוא הרמז שמגלה זאת.</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 <section id="סוגי-מנומטרים" class="level4" data-number="3.7.5.2">
@@ -1394,6 +1551,17 @@ P_{1} - P_{2} = \rho \frac{g}{g_{c}} h
 </li>
 <li>כיצד ניתן להחזיר את המיכל למצבו המקורי (ללא המים)?</li>
 </ol>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">1) F<sub>תחתית</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="4.3e5" data-tol="20000" placeholder="?" aria-label="כוח על התחתית">
+    <span class="le-unit">N</span></div>
+  <div class="le-row"><span class="le-prompt">2) עומד =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="5.0" data-tol="0.1" placeholder="?" aria-label="עומד ביחידות mMEK">
+    <span class="le-unit">mMEK</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">סעיפים 3–4 (רעיוניים) — ראו הפתרונות המלאים למטה.</div>
+</div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון סעיף א">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">

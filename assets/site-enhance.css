@@ -434,6 +434,11 @@ body.cover-page .title-block {
 .le-feedback.le-bad   { color: #d9534f; }
 .le-feedback.le-close { color: #d98a1f; }
 .le-feedback.le-warn  { color: var(--ink-500, #555); font-weight: 500; }
+.le-hint {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--ink-500, #555);
+}
 .le-solution {
   margin-top: 0.6rem;
   font-size: 0.93rem;
