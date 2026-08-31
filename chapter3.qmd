@@ -1228,6 +1228,28 @@ $$P_{1} - P_{2} = \rho\frac{g}{g_{c}}h$$
 ![](media/media/image34.png){width="2.010462598425197in" height="1.621340769903762in"}
 1. באיזה צד הלחץ יותר גבוה?\
 2. מהו]{dir="rtl"} h[?]{dir="rtl"}
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">2) h =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="-253" data-tol="3" placeholder="?" aria-label="גובה עמוד הכספית (עם סימן)">
+    <span class="le-unit">mm Hg</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">שימו לב לסימן! פתרו לפי הכיוון שהציור מרמז עליו.</div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>ראשית ממירים את שני הלחצים לאותן יחידות:</div>
+      <div class="le-eq">P (בועה) = 0.78 atm × 101.325 = 79.0 kPa</div>
+      <div class="le-eq">P (צד עליון) = 112.8 kPa</div>
+      <div>2) נכתוב את משוואת המנומטר לפי הכיוון שהציור מרמז עליו (כאילו הבועה בצד הלחץ הגבוה):</div>
+      <div class="le-eq">h = (P_בועה − P_עליון) / (ρ_Hg · g) = (79 000 − 112 800) / (13 600 · 9.81)</div>
+      <div class="le-eq">h = −33 766 / 133 416 = −0.253 m ≈ <strong>−253 mm Hg</strong></div>
+      <div>1) הסימן <strong>השלילי</strong> הוא המסקנה: המציאות הפוכה מהציור. הלחץ באמת גבוה יותר בצד של <strong>112.8 kPa</strong>, ולכן הכספית בפועל צריכה להיות גבוהה יותר דווקא בצד הבועה. <em>הציור שורטט בכוונה בצורה לא עקבית</em> — הסימן השלילי הוא הרמז שמגלה זאת.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 #### [סוגי מנומטרים]{dir="rtl"}
