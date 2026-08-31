@@ -1418,6 +1418,40 @@ $$4{NH}_{3} + 5O_{2} \longrightarrow 4NO + 6H_{2}O$$
 
 ללא $\xi$, היינו צריכים להתמודד עם 4 משתני יציאה לא ידועים (כמות האמוניה שיצאה, כמות החמצן שיצאה, וכו\'), אבל בעזרתו אנו יכולים לבטא את היציאה של כל ארבעת החומרים בעזרת משתנה נעלם אחד בלבד.
 
+::: {.exercise}
+בריאקטור מתרחשת תגובת ייצור האמוניה:
+$$N_{2} + 3H_{2} \longrightarrow 2NH_{3}$$
+ההזנה מכילה $50\ mol$ חנקן ו-$120\ mol$ מימן. בסוף התהליך נוצרו $30\ mol$ אמוניה.
+
+חשבו: א. את התקדמות התגובה $\xi$. ב. כמות החנקן שנותרה. ג. כמות המימן שנותרה.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ξ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="15" data-tol="0.3" placeholder="?" aria-label="התקדמות תגובה">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) n(N₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="35" data-tol="0.5" placeholder="?" aria-label="חנקן נותר">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) n(H₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="75" data-tol="0.5" placeholder="?" aria-label="מימן נותר">
+    <span class="le-unit">mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>המקדמים הסטויכיומטריים: ν(N₂) = −1, ν(H₂) = −3, ν(NH₃) = +2. משתמשים ב-n_out = n_in + ν·ξ.</div>
+      <div>א) מהאמוניה שנוצרה: n(NH₃) = 0 + 2ξ = 30 →</div>
+      <div class="le-eq">ξ = 30 / 2 = 15 mol</div>
+      <div>ב) n(N₂) = 50 − 1·ξ = 50 − 15 = 35 mol</div>
+      <div>ג) n(H₂) = 120 − 3·ξ = 120 − 45 = 75 mol</div>
+      <div>בדיקה: נצרכו 15 N₂ ו-45 H₂, נוצרו 30 NH₃ — היחס 1:3:2 נשמר ✓</div>
+    </div>
+  </details>
+</div>
+```
+:::
+
 ### המרה (Conversion, היפוך): הפער בין התיאוריה למה שקורה בפועל. 
 
 כאשר אנו מתכננים ריאקטור, אחת השאלות הראשונות שמעסיקות אותנו כמהנדסים היא: מהי כמות התוצר המקסימלית שניתן לייצר? התשובה לשאלה הזו תלויה גם בכימיה של התגובה וגם בתנאים המערכת שנקבעים על ידינו. כיצד נעריך את ונשפיע על כמות התוצר?
@@ -1451,6 +1485,36 @@ $n_{fed}$ הכמות שהוזנה בפועל למערכת.
 $n_{stoich}$ הכמות התיאורטית שהיתה נדרשת אילו המגיב המגביל היה מגיב במלואו.
 
 באותו אופן ניתן להגדיר את אחוז העודף (Excess %) אם נכפיל את שבר העודף ב100%.
+:::
+
+::: {.exercise}
+בתא שריפה נשרף פרופאן לפי התגובה:
+$$C_{3}H_{8} + 5O_{2} \longrightarrow 3CO_{2} + 4H_{2}O$$
+ההזנה מכילה $20\ mol$ פרופאן ו-$120\ mol$ חמצן.
+
+א. מהו המגיב המגביל? ב. כמה חמצן סטויכיומטרי נדרש כדי לשרוף את כל הפרופאן? ג. מהו אחוז העודף של החמצן?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">ב) O₂ סטויכיומטרי =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="100" data-tol="1" placeholder="?" aria-label="חמצן סטויכיומטרי">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) אחוז עודף O₂ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="20" data-tol="0.5" placeholder="?" aria-label="אחוז עודף חמצן">
+    <span class="le-unit">%</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) בודקים מי ייגמר ראשון. לפי היחס, ל-20 mol פרופאן נדרשים 20·5 = 100 mol חמצן. הוזנו 120 mol חמצן (יותר מ-100), ולכן <strong>הפרופאן הוא המגיב המגביל</strong> והחמצן בעודף.</div>
+      <div>ב) הכמות הסטויכיומטרית של חמצן:</div>
+      <div class="le-eq">n_stoich(O₂) = n(C₃H₈)·(ν_O₂/ν_C₃H₈) = 20·(5/1) = 100 mol</div>
+      <div>ג) אחוז העודף:</div>
+      <div class="le-eq">% עודף = (n_fed − n_stoich)/n_stoich × 100 = (120 − 100)/100 × 100 = 20%</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 #### שיווי משקל כימי
@@ -1564,6 +1628,40 @@ $\chi_{A} = 1$ המרה מלאה. המגיב נצרך כולו (המצב התי�
 $$n_{A,out} = n_{A,in}\left( 1 - X_{A} \right)$$
 
 משוואה זו אומרת בפשטות: מה שיצא החוצה הוא מה שנכנס, מוכפל בחלק הנותר $\left( 1 - X_{A} \right)$שלא הגיב.
+
+::: {.exercise}
+בריאקטור לייצור גופרית תלת-חמצנית מתרחשת התגובה:
+$$2SO_{2} + O_{2} \longrightarrow 2SO_{3}$$
+לריאקטור מוזנים $100\ mol$ $SO_{2}$ (בנוסף לחמצן בעודף). בזרם היציאה נמדדו $20\ mol$ $SO_{2}$ שלא הגיבו.
+
+חשבו: א. את מקדם ההמרה $\chi$ של ה-$SO_2$. ב. כמות ה-$SO_3$ שנוצרה. ג. כמות ה-$O_2$ שנצרכה.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) χ (SO₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="80" data-tol="1" placeholder="?" aria-label="מקדם המרה">
+    <span class="le-unit">%</span></div>
+  <div class="le-row"><span class="le-prompt">ב) n(SO₃) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="80" data-tol="1" placeholder="?" aria-label="SO3 שנוצר">
+    <span class="le-unit">mol</span></div>
+  <div class="le-row"><span class="le-prompt">ג) O₂ שנצרך =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="40" data-tol="1" placeholder="?" aria-label="חמצן שנצרך">
+    <span class="le-unit">mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) מקדם ההמרה = חלק המגיב שהגיב מתוך מה שהוזן:</div>
+      <div class="le-eq">χ = (n_in − n_out)/n_in = (100 − 20)/100 = 0.80 = 80%</div>
+      <div>ב) נצרכו 100 − 20 = 80 mol SO₂. לפי היחס 2:2, נוצרים 80 mol SO₃.</div>
+      <div class="le-eq">n(SO₃) = 80 mol   (ξ = 80/2 = 40)</div>
+      <div>ג) לפי היחס, על כל 2 mol SO₂ נצרך 1 mol O₂:</div>
+      <div class="le-eq">n(O₂) נצרך = 80 × (1/2) = 40 mol</div>
+    </div>
+  </details>
+</div>
+```
+:::
 
 ### תגובות מרובות, ניצולת וסלקטיביות
 
