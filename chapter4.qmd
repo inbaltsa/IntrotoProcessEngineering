@@ -451,6 +451,34 @@ $$\dot{m_{1}} = 410\frac{Kg}{h},\dot{m_{2}} = 590\frac{Kg}{h}$$
 $$1000\frac{Kg_{solution}}{h}*\frac{40KgEtOH}{100Kg_{solution}} = 410\frac{Kg}{h}\frac{90KgEtOH}{100Kg_{solution}} + 590\frac{Kg}{h}\frac{5KgEtOH}{100Kg_{solution}}$$
 :::
 
+::: {.exercise}
+עמוד זיקוק רציף במצב עמיד מפריד תמיסת **מתנול-מים**. ההזנה היא $1000\ \frac{kg}{h}$ בריכוז 40% מתנול (משקלי). ריכוז המתנול בתוצר העליון הוא 90%, ובזרם התחתון 10%. חשבו את ספיקות שני זרמי היציאה: התוצר העליון $\dot{m}_D$ והזרם התחתון $\dot{m}_B$. (כל האחוזים משקליים.)
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">ṁ (עליון) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="375" data-tol="5" placeholder="?" aria-label="ספיקת תוצר עליון">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-row"><span class="le-prompt">ṁ (תחתון) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="625" data-tol="5" placeholder="?" aria-label="ספיקת זרם תחתון">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>במצב עמיד אין צבירה. כותבים מאזן מסה כללי ומאזן על המתנול:</div>
+      <div class="le-eq">כללי:  1000 = ṁ_D + ṁ_B</div>
+      <div class="le-eq">מתנול:  1000·0.40 = 0.90·ṁ_D + 0.10·ṁ_B</div>
+      <div>מציבים ṁ_B = 1000 − ṁ_D במאזן המתנול:</div>
+      <div class="le-eq">400 = 0.90 ṁ_D + 0.10(1000 − ṁ_D) = 0.80 ṁ_D + 100</div>
+      <div class="le-eq">ṁ_D = 300 / 0.80 = 375 kg/h  →  ṁ_B = 625 kg/h</div>
+      <div>בדיקה: 0.90·375 + 0.10·625 = 337.5 + 62.5 = 400 ✓</div>
+    </div>
+  </details>
+</div>
+```
+:::
+
 #### מאזן חומר על תהליך מנתי
 
 ::: example
@@ -499,6 +527,34 @@ $$m_{2} = 1000kg - 90kg = 910kg$$
 אם רוצים להיות בטוחים שלא היתה טעות חישוב, ניתן לעשות את החישוב פעם שנייה אך עם הצבה הפוכה $0.05\left( 1000 - m_{2} \right) + 0.005m_{2} = 9kg$
 :::
 
+::: {.exercise}
+במפעל מזון מכינים מנה (Batch) של $500\ kg$ סירופ סוכר בריכוז 12% (משקלי). לרשותכם שני מקורות: סירופ מרוכז בריכוז 30% וסירופ מדולל בריכוז 5%. כמה קילוגרמים של כל אחד מהסירופים יש לערבב כדי לקבל את המנה המבוקשת?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">מרוכז (30%) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="140" data-tol="3" placeholder="?" aria-label="מסת סירופ מרוכז">
+    <span class="le-unit">kg</span></div>
+  <div class="le-row"><span class="le-prompt">מדולל (5%) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="360" data-tol="3" placeholder="?" aria-label="מסת סירופ מדולל">
+    <span class="le-unit">kg</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מאזן מסה כולל ומאזן על הסוכר (m₁ = מרוכז, m₂ = מדולל):</div>
+      <div class="le-eq">כללי:  m₁ + m₂ = 500</div>
+      <div class="le-eq">סוכר:  0.30 m₁ + 0.05 m₂ = 500·0.12 = 60</div>
+      <div>מציבים m₂ = 500 − m₁:</div>
+      <div class="le-eq">0.30 m₁ + 0.05(500 − m₁) = 60  →  0.25 m₁ + 25 = 60</div>
+      <div class="le-eq">m₁ = 35 / 0.25 = 140 kg  →  m₂ = 360 kg</div>
+      <div>הגיוני שצריך יותר מהסירופ המדולל, כי 12% קרוב יותר ל-5% מאשר ל-30%.</div>
+    </div>
+  </details>
+</div>
+```
+:::
+
 #### מאזן חומר על תהליך חצי מנתי
 
 ::: example
@@ -522,6 +578,35 @@ $$m_{2} = 1000kg - 90kg = 910kg$$
 *אנו רואים שהמספר שקיבלנו הוא בטווח הנכון.*
 
 אנקדוטה - בפעם הראשונה שחישבתי את זה יצא לי שכמות החמצן שיצאה היא 160 גרם, מה שכמובן לא הגיוני, ואז בדקתי וראיתי שהעתקתי נתון לא נכון - קצב היציאה היה 0.8g/min ולא 8g/min. אלו בדיוק סוג הטעויות שאנחנו מקווים למצוא בשלב הזה.
+:::
+
+::: {.exercise}
+מיכל תסיסה מכיל בתחילת התהליך $m_{O_2,i} = 60\ g$ חמצן חופשי. מזרימים לתוכו חנקן טהור (Purging) שדוחף את החמצן החוצה בקצב קבוע $r = 1.5\ \frac{g}{min}$. אין תגובה כימית הצורכת או יוצרת חמצן.
+
+א. כמה חמצן יישאר במיכל לאחר 30 דקות?\
+ב. כעבור כמה זמן תרד כמות החמצן במיכל ל-$6\ g$?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) m (O₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="15" data-tol="0.5" placeholder="?" aria-label="חמצן נותר">
+    <span class="le-unit">g</span></div>
+  <div class="le-row"><span class="le-prompt">ב) t =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="36" data-tol="0.5" placeholder="?" aria-label="זמן">
+    <span class="le-unit">min</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מספיק מאזן מסה על החמצן בלבד: מה שהיה בהתחלה פחות מה שיצא = מה שנשאר.</div>
+      <div>א) כמות שיצאה ב-30 דקות: m_out = r·t = 1.5·30 = 45 g</div>
+      <div class="le-eq">m_finish = 60 − 45 = 15 g</div>
+      <div>ב) כדי להגיע ל-6 g צריך לסלק 60 − 6 = 54 g:</div>
+      <div class="le-eq">t = 54 / 1.5 = 36 min</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### ניתוח דרגות חופש **(**Degrees of Freedom Analysis**)**
@@ -666,6 +751,35 @@ $$N_{DOF} = N_{unknowns} - N_{equations} = 3 - 3$$
 טיפ: בעת קביעת הרכב לא ידוע, אם הגדרנו כל אחד מהמשתנים בנפרד - תהיה לנו משוואת אילוץ אחת. לרוב נכתוב את זה בדרך חסכונית שבה נגדיר את אחד המשתנים על בסיס משתני ההרכב האחרים, ואז יהיה לנו נעלם אחד פחות ומשוואת אילוץ אחת פחות.
 
 כאן לדוגמא במקום להגדיר את הרכב המים בזרם העליון כמשתנה נפרד היינו יכולים להגדיר אותו מראש (כבר בתרשים) כ-$x_{water} = 1 - x_{acetone}$. במקרה זה היינו אומרים שיש לנו רק שני נעלמים (הרכב האצטון בזרם העליון ומסת ספיקת השפכים) ושתי משוואות בלתי תלויות (מאזני מסה הנובעים משני רכיבים המרכיבים את המערכת)
+:::
+
+::: {.exercise}
+מפריד במצב עמיד מוזן בזרם של **שני רכיבים** (A ו-B) בספיקה ידועה ובהרכב ידוע. מהמפריד יוצאים שני זרמים — עליון ותחתון.
+
+א. נמדדת ספיקת הזרם העליון, **ובנוסף** נתון מפרט על הרכב הזרם התחתון. כמה דרגות חופש יש למערכת?\
+ב. כעת נניח שאין מדידת ספיקה בזרם העליון ואין מפרט על הרכב הזרם התחתון (רק ההזנה ידועה). כמה דרגות חופש?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) N<sub>DOF</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0" data-tol="0" placeholder="?" aria-label="דרגות חופש סעיף א">
+  </div>
+  <div class="le-row"><span class="le-prompt">ב) N<sub>DOF</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2" data-tol="0" placeholder="?" aria-label="דרגות חופש סעיף ב">
+  </div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מונים נעלמים ומשוואות בלתי-תלויות. ההזנה ידועה במלואה בשני הסעיפים.</div>
+      <div><strong>סעיף א:</strong> נעלמים — ספיקת הזרם התחתון והרכב הזרם העליון (ספיקת העליון נמדדה, הרכב התחתון נתון) = 2 נעלמים. משוואות — שני מאזני רכיב (A ו-B) = 2.</div>
+      <div class="le-eq">N_DOF = 2 − 2 = 0  →  המערכת מוגדרת היטב ופתירה.</div>
+      <div><strong>סעיף ב:</strong> נעלמים — ספיקת עליון, ספיקת תחתון, הרכב עליון, הרכב תחתון = 4. משוואות — שני מאזני רכיב = 2.</div>
+      <div class="le-eq">N_DOF = 4 − 2 = 2  →  חסר מידע: צריך שני נתונים נוספים כדי לפתור.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### סיכום שלבים בניתוח מערכות
@@ -856,6 +970,40 @@ $$x_{A3} = 0.021,\ \ \ \ \ x_{M3} = 0.59$$
 - איתור תקלות (Troubleshooting): נניח שהתוצר הסופי בזרם 4 לא עומד בדרישות התהליך (לדוגמא - מכיל יותר מדי מים) איך נמצא את מקור הבעיה? אולי יחידה 2 לא עובדת טוב, או שאולי יחידה 1 שלחה לה זרם \"מלוכלך\" מדי שהיא לא אמורה להתמודד איתו. מדידה וחישוב של זרם הביניים הם שלבים הכרחיים לצורך זיהוי הבעיה ופתרונה.
 :::
 
+
+::: {.exercise}
+תערובת של שני רכיבים (A ו-B) מעובדת בשתי יחידות הפרדה בטור, במצב עמיד. ההזנה ליחידה 1 היא $1000\ \frac{kg}{h}$ בריכוז 58% A. יחידה 1 מוציאה זרם עליון $\dot{m}_{T1} = 400\ \frac{kg}{h}$ בריכוז 85% A, וזרם תחתון (זרם הביניים) שנכנס כולו ליחידה 2. יחידה 2 מוציאה זרם עליון $\dot{m}_{T2} = 200\ \frac{kg}{h}$ בריכוז 90% A, וזרם תחתון בריכוז 15% A.
+
+חשבו: א. ספיקת זרם הביניים. ב. ריכוז A בזרם הביניים. ג. ספיקת הזרם התחתון של יחידה 2.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ṁ (ביניים) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="600" data-tol="5" placeholder="?" aria-label="ספיקת ביניים">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) ריכוז A =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="40" data-tol="1" placeholder="?" aria-label="ריכוז A בביניים">
+    <span class="le-unit">%</span></div>
+  <div class="le-row"><span class="le-prompt">ג) ṁ (תחתון 2) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="400" data-tol="5" placeholder="?" aria-label="ספיקת תחתון יחידה 2">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) מאזן מסה כללי על יחידה 1:</div>
+      <div class="le-eq">1000 = 400 + ṁ_ביניים  →  ṁ_ביניים = 600 kg/h</div>
+      <div>ב) מאזן על רכיב A ביחידה 1:</div>
+      <div class="le-eq">1000·0.58 = 400·0.85 + 600·x  →  580 = 340 + 600 x</div>
+      <div class="le-eq">x = 240 / 600 = 0.40 = 40% A</div>
+      <div>ג) מאזן מסה כללי על יחידה 2:</div>
+      <div class="le-eq">600 = 200 + ṁ_תחתון  →  ṁ_תחתון = 400 kg/h</div>
+      <div>בדיקה (A ביחידה 2): 600·0.40 = 200·0.90 + 400·0.15 → 240 = 180 + 60 ✓</div>
+    </div>
+  </details>
+</div>
+```
+:::
 
 ### מפצל, מעקף ותחזיר
 
@@ -1066,6 +1214,39 @@ $$Recycle\ flow\ rate\ \ \ \ \ {\dot{m}}_{5} = 760\frac{kg}{h}$$
 
 בתהליכים רב־יחידתיים גם בעיות שנראות פשוטות על הנייר הופכות במהירות למבוכות של זרמים, הסתעפויות והפרדות. אין דרך אמיתית להתמודד עם מערכות כאלה בלי שיטה: להגדיר את המערכת, לזהות את הזרמים, לכתוב את המאזנים ולבדוק את דרגות החופש. הגישה השיטתית אינה כלי לימודי, אלא הכרח הנדסי - מפני שבעולם האמיתי המאזן כמעט אף פעם לא "נסגר" באופן מושלם. תמיד יש סטיות במדידות, הפסדים קטנים, ציוד שלא מתנהג בדיוק על פי המודל. המטרה אינה למצוא פתרון מושלם מתמטית, אלא פתרון שמספיק קרוב למציאות כדי שנוכל לקבל בעזרתו החלטות בטוחות ומושכלות
 
+
+::: {.exercise}
+זרם הזנה של $1000\ \frac{kg}{h}$ תמיסת מלח בריכוז 30% (משקלי) מיועד להסמכה. חלק מהזרם עוקף (Bypass) מאייד, וחלקו נכנס למאייד המסלק **מים טהורים בלבד**. ביציאה מהמאייד הריכוז הוא 60% מלח. שני הזרמים מתאחדים בחזרה ונותנים תוצר סופי בריכוז 40% מלח. המערכת במצב עמיד.
+
+חשבו: א. ספיקת התוצר הסופי. ב. קצב המים המתאדים. ג. ספיקת ההזנה למאייד (הזרם שאינו עוקף).
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) תוצר סופי =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="750" data-tol="5" placeholder="?" aria-label="ספיקת תוצר סופי">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) מים מתאדים =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="250" data-tol="5" placeholder="?" aria-label="מים מתאדים">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-row"><span class="le-prompt">ג) הזנה למאייד =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="500" data-tol="5" placeholder="?" aria-label="הזנה למאייד">
+    <span class="le-unit">kg/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>א) המלח נשמר בכל המערכת (רק מים מתאדים). מאזן מלח על המערכת כולה:</div>
+      <div class="le-eq">1000·0.30 = P·0.40  →  P = 300 / 0.40 = 750 kg/h</div>
+      <div>ב) מאזן מסה כולל על המערכת (יוצא: תוצר + מים מתאדים):</div>
+      <div class="le-eq">W = 1000 − 750 = 250 kg/h</div>
+      <div>ג) המים מתאדים רק במאייד. מאזן מלח על המאייד (הזנה E, יציאה E−W):</div>
+      <div class="le-eq">E·0.30 = (E − 250)·0.60  →  0.30 E = 0.60 E − 150</div>
+      <div class="le-eq">E = 150 / 0.30 = 500 kg/h  (והמעקף = 1000 − 500 = 500 kg/h)</div>
+    </div>
+  </details>
+</div>
+```
+:::
 
 ### גמלון
 
