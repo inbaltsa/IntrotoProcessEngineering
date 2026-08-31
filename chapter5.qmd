@@ -245,6 +245,20 @@ $$\rho_{A} = 800\text{ }kg/m^{3},\rho_{B} = 1200\text{ }kg/m^{3}$$
 א. חשבו את צפיפות התערובת בהנחת חיבור נפחים, כאשר שברי [המסה]{.underline} הם $x_{A} = 0.5$, $x_{B} = 0.5$.\
 ב. חשבו את צפיפות התערובת בהנחת חיבור נפחים, כאשר שברי [הנפח]{.underline} הם $\phi_{A} = 0.5$, $\phi_{B} = 0.5$.\
 ג. השוו בין התוצאות והסבירו בקצרה את מקור ההבדל.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ρ (שברי מסה) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="960" data-tol="10" placeholder="?" aria-label="צפיפות לפי שברי מסה">
+    <span class="le-unit">kg/m³</span></div>
+  <div class="le-row"><span class="le-prompt">ב) ρ (שברי נפח) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1000" data-tol="10" placeholder="?" aria-label="צפיפות לפי שברי נפח">
+    <span class="le-unit">kg/m³</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">סעיף ג' (הסבר ההבדל) — ראו הפתרון המלא למטה.</div>
+</div>
+```
 :::
 
 ::: {.callout-note collapse="true" title="פתרון"}
@@ -392,6 +406,23 @@ $$P \cdot V = \frac{F}{A} \cdot (A \cdot L) = F \cdot L$$
 ::: exercise
 
 השתמשו באחד מערכי R המופיעים בטבלה כאן על מנת למצוא את ערכו של R ביחידות של $\frac{J}{mol\ K}$
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">R =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="8.314" data-tol="0.02" placeholder="?" aria-label="קבוע הגזים">
+    <span class="le-unit">J/(mol·K)</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מכיוון ש-J = Pa·m³, אפשר לצאת מהערך במערכת SI:</div>
+      <div class="le-eq">R = 8.314 Pa·m³/(mol·K) = 8.314 J/(mol·K)</div>
+      <div>או להמיר מ-L·atm: 0.08206 L·atm/(mol·K) × 101.325 J/(L·atm) = 8.314 J/(mol·K).</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ### שימוש במשוואת הגז האידיאלי בחישובים תהליכיים
@@ -446,6 +477,17 @@ $$\frac{P_{1}V_{1}}{T_{1}} = \frac{P_{2}V_{2}}{T_{2}}$$
 
 חנקן מולקולרי כלוא במיכל בנפח $1.5\text{ }m^{3}$.הלחץ במיכל הוא $150\text{ }kPa$ והטמפרטורה היא $300\text{ }K$. מהי כמות הגז במיכל? אם היינו מחליפים את הגז למימן - האם הכמות היתה משתנה?
 
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">n =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.090" data-tol="0.003" placeholder="?" aria-label="כמות הגז">
+    <span class="le-unit">kmol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">החלק על המימן (רעיוני) — ראו הפתרון המלא למטה.</div>
+</div>
+```
+
 :::
 
 ::: {.callout-note collapse="true" title="פתרון"}
@@ -460,6 +502,24 @@ $$n = \frac{PV}{RT} = \frac{150\text{ }kPa*1.5\text{ }m^{3}}{300K*8.314\frac
 ::: exercise
 מיכל סגור ובעל נפח קבוע מכיל גז אידיאלי.\
 במצב ההתחלתי לחץ הגז הוא $100\text{ }kPa$ והטמפרטורה היא $300\text{ }K$. המיכל מחומם עד שטמפרטורת הגז עולה ל־$450\text{ }K$. מהו הלחץ במצב הסופי?
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">P₂ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="150" data-tol="3" placeholder="?" aria-label="לחץ סופי">
+    <span class="le-unit">kPa</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>הנפח וכמות הגז קבועים, ולכן P/T קבוע (חוק גה-ליסאק):</div>
+      <div class="le-eq">P₁/T₁ = P₂/T₂ → P₂ = P₁·(T₂/T₁)</div>
+      <div class="le-eq">P₂ = 100 · (450/300) = 150 kPa</div>
+      <div>הטמפרטורות כבר בקלווין — חובה תמיד להשתמש בטמפרטורה אבסולוטית.</div>
+    </div>
+  </details>
+</div>
+```
 :::
 
 ::: {.callout-note collapse="true" title="פתרון"}
@@ -917,6 +977,23 @@ $$T_{r} = \frac{T}{T_{c,\text{mix}}},P_{r} = \frac{P}{P_{c,\text{mix}}}$$
 
 ::: exercise
 תערובת גזים מכילה $80\%$ חנקן ($N_{2}$) ו- $20\%$ פחמן דו־חמצני ($CO_{2}$) (שברים מולריים). התערובת נמצאת בטמפרטורה $T = 300\,$ ובלחץ $P = 50\, atm$. חשבו את הנפח המולרי הריאלי של התערובת.
+
+```{=html}
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">T<sub>c,mix</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="162" data-tol="1.5" placeholder="?" aria-label="טמפרטורה פסאודו-קריטית">
+    <span class="le-unit">K</span></div>
+  <div class="le-row"><span class="le-prompt">P<sub>c,mix</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="41.6" data-tol="0.5" placeholder="?" aria-label="לחץ פסאודו-קריטי">
+    <span class="le-unit">atm</span></div>
+  <div class="le-row"><span class="le-prompt">V̂ (ריאלי) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.47" data-tol="0.04" placeholder="?" aria-label="נפח מולרי ריאלי">
+    <span class="le-unit">L/mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">V̂ תלוי בקריאת Z מהגרף (Z≈0.95) — ראו הפתרון המלא למטה.</div>
+</div>
+```
 :::
 
 ::: {.callout-note collapse="true" title="פתרון"}
