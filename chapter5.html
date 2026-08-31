@@ -499,6 +499,17 @@ window.Quarto = {
 <p>א. חשבו את צפיפות התערובת בהנחת חיבור נפחים, כאשר שברי <u>המסה</u> הם <span class="math inline">\(x_{A} = 0.5\)</span>, <span class="math inline">\(x_{B} = 0.5\)</span>.<br>
 ב. חשבו את צפיפות התערובת בהנחת חיבור נפחים, כאשר שברי <u>הנפח</u> הם <span class="math inline">\(\phi_{A} = 0.5\)</span>, <span class="math inline">\(\phi_{B} = 0.5\)</span>.<br>
 ג. השוו בין התוצאות והסבירו בקצרה את מקור ההבדל.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) ρ (שברי מסה) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="960" data-tol="10" placeholder="?" aria-label="צפיפות לפי שברי מסה">
+    <span class="le-unit">kg/m³</span></div>
+  <div class="le-row"><span class="le-prompt">ב) ρ (שברי נפח) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1000" data-tol="10" placeholder="?" aria-label="צפיפות לפי שברי נפח">
+    <span class="le-unit">kg/m³</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">סעיף ג' (הסבר ההבדל) — ראו הפתרון המלא למטה.</div>
+</div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -700,6 +711,20 @@ window.Quarto = {
 </div>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p>השתמשו באחד מערכי R המופיעים בטבלה כאן על מנת למצוא את ערכו של R ביחידות של <span class="math inline">\(\frac{J}{mol\ K}\)</span></p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">R =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="8.314" data-tol="0.02" placeholder="?" aria-label="קבוע הגזים">
+    <span class="le-unit">J/(mol·K)</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מכיוון ש-J = Pa·m³, אפשר לצאת מהערך במערכת SI:</div>
+      <div class="le-eq">R = 8.314 Pa·m³/(mol·K) = 8.314 J/(mol·K)</div>
+      <div>או להמיר מ-L·atm: 0.08206 L·atm/(mol·K) × 101.325 J/(L·atm) = 8.314 J/(mol·K).</div>
+    </div>
+  </details>
+</div>
 </div>
 </section>
 </section>
@@ -724,6 +749,27 @@ window.Quarto = {
 </div>
 <p>מאחר ואלו ותנאים אלו קבועים, במקום להציב בכל פעם במשוואת המצב המלאה, אם ידוע שהגז נמצא בתנאי STP, ניתן להמיר מיידית בין מולים לנפח באמצעות היחס הקבוע של <span class="math inline">\({\widehat{V}}_{Ideal,STP} = 22.4\text{ L/mol}\)</span>.</p>
 <p>ובתנאי SATP ניתן להמיר מיידית <span class="math inline">\({\widehat{V}}_{Ideal,SATP} = 24.8\text{ L/mol}\)</span></p>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>זרם של גז אידיאלי זורם בספיקה מולרית של <span class="math inline">\(100\ \frac{mol}{h}\)</span>.</p>
+<p>חשבו את הספיקה הנפחית: א. בתנאי STP (<span class="math inline">\(0^\circ C\)</span>, 1 atm). ב. בתנאי SATP (<span class="math inline">\(25^\circ C\)</span>, 1 bar).</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) V̇ (STP) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2240" data-tol="25" placeholder="?" aria-label="ספיקה נפחית STP">
+    <span class="le-unit">L/h</span></div>
+  <div class="le-row"><span class="le-prompt">ב) V̇ (SATP) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2480" data-tol="25" placeholder="?" aria-label="ספיקה נפחית SATP">
+    <span class="le-unit">L/h</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>משתמשים בנפח המולרי הסטנדרטי הקבוע (מכפילים בספיקה):</div>
+      <div class="le-eq">א) STP: 100 · 22.4 = 2240 L/h</div>
+      <div class="le-eq">ב) SATP: 100 · 24.8 = 2480 L/h</div>
+    </div>
+  </details>
+</div>
+</div>
 <ul>
 <li><strong>חישוב כמות גז מנפח נתון</strong></li>
 </ul>
@@ -742,6 +788,14 @@ window.Quarto = {
 <p>לפני כל הצבה במשוואת הגז האידיאלי, נשאל את עצמנו - מהי המערכת? מה ידוע ונמדד? מה קבוע ומה משתנה? האם מדובר במצב אחד או בהשוואה בין מצבים?</p>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p>חנקן מולקולרי כלוא במיכל בנפח <span class="math inline">\(1.5\text{ }m^{3}\)</span>.הלחץ במיכל הוא <span class="math inline">\(150\text{ }kPa\)</span> והטמפרטורה היא <span class="math inline">\(300\text{ }K\)</span>. מהי כמות הגז במיכל? אם היינו מחליפים את הגז למימן - האם הכמות היתה משתנה?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">n =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.090" data-tol="0.003" placeholder="?" aria-label="כמות הגז">
+    <span class="le-unit">kmol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">החלק על המימן (רעיוני) — ראו הפתרון המלא למטה.</div>
+</div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
@@ -765,6 +819,21 @@ window.Quarto = {
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p>מיכל סגור ובעל נפח קבוע מכיל גז אידיאלי.<br>
 במצב ההתחלתי לחץ הגז הוא <span class="math inline">\(100\text{ }kPa\)</span> והטמפרטורה היא <span class="math inline">\(300\text{ }K\)</span>. המיכל מחומם עד שטמפרטורת הגז עולה ל־<span class="math inline">\(450\text{ }K\)</span>. מהו הלחץ במצב הסופי?</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">P₂ =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="150" data-tol="3" placeholder="?" aria-label="לחץ סופי">
+    <span class="le-unit">kPa</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>הנפח וכמות הגז קבועים, ולכן P/T קבוע (חוק גה-ליסאק):</div>
+      <div class="le-eq">P₁/T₁ = P₂/T₂ → P₂ = P₁·(T₂/T₁)</div>
+      <div class="le-eq">P₂ = 100 · (450/300) = 150 kPa</div>
+      <div>הטמפרטורות כבר בקלווין — חובה תמיד להשתמש בטמפרטורה אבסולוטית.</div>
+    </div>
+  </details>
+</div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
@@ -837,6 +906,28 @@ window.Quarto = {
 <p>אבל הערך שקיבלנו נמוך משמעותית. מה זה אומר?</p>
 <p>המשמעות היא שאנחנו נמצאים עמוק בתוך התחום הלא-אידיאלי. המולקולות צפופות מאוד. החישוב שעשינו בחלק א' הוא בעל שגיאה גדולה מאוד (סביר להניח שהלחץ האמיתי יהיה אפילו גבוה יותר בגלל נפח המולקולות עצמן שתופס מקום). כך שלא רק שהמיכל מסוכן לפי החישוב, אלא שהמצב בפועל כנראה חמור יותר. אסור להשתמש במשוואת הגז האידיאלי לתכנון כאן.</p>
 </div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>גז חנקן (<span class="math inline">\(N_2\)</span>, גז פשוט) נמצא בטמפרטורה <span class="math inline">\(T = 300\ K\)</span>. בדקו האם מותר להניח התנהגות אידיאלית בכל אחד מהמצבים, לפי קריטריון הנפח המולרי (לגז פשוט: <span class="math inline">\(\widehat{V} \geq 5\ L/mol\)</span>).</p>
+<p>חשבו את הנפח המולרי האידיאלי <span class="math inline">\(\widehat{V} = RT/P\)</span>: א. בלחץ <span class="math inline">\(P = 2\ atm\)</span>. ב. בלחץ <span class="math inline">\(P = 30\ atm\)</span>.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">א) V̂ (2 atm) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="12.3" data-tol="0.3" placeholder="?" aria-label="נפח מולרי ב-2 atm">
+    <span class="le-unit">L/mol</span></div>
+  <div class="le-row"><span class="le-prompt">ב) V̂ (30 atm) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.82" data-tol="0.05" placeholder="?" aria-label="נפח מולרי ב-30 atm">
+    <span class="le-unit">L/mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>מחשבים V̂ = RT/P (עם R = 0.08206 L·atm/mol·K) ומשווים לסף 5 L/mol:</div>
+      <div class="le-eq">א) V̂ = 0.08206 · 300 / 2 = 12.3 L/mol ≥ 5 → מותר להניח גז אידיאלי ✓</div>
+      <div class="le-eq">ב) V̂ = 0.08206 · 300 / 30 = 0.82 L/mol &lt; 5 → אסור! צריך שיטות גז ריאלי (Z / EOS)</div>
+      <div>המסקנה: לחץ גבוה מקרב את המולקולות — ההנחה האידיאלית קורסת.</div>
+    </div>
+  </details>
+</div>
+</div>
 </section>
 <section id="תערובות-של-גזים-אידיאליים" class="level3" data-number="5.4.4">
 <h3 data-number="5.4.4" class="anchored" data-anchor-id="תערובות-של-גזים-אידיאליים"><span class="header-section-number">5.4.4</span> תערובות של גזים אידיאליים</h3>
@@ -872,6 +963,32 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>זהות זו נכונה רק עבור גזים אידיאליים. בגזים ריאליים בלחצים גבוהים, אחוזי הנפח אינם זהים בהכרח לאחוזי המולים עקב כוחות דחייה ומשיכה שונים בין מולקולות שונות (נפח הערבוב אינו זניח).</p>
+</div>
+</div>
+<div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
+<p>תערובת גזים אידיאלית נמצאת בלחץ כולל <span class="math inline">\(P_{total} = 4\ atm\)</span>. ההרכב המולרי: 25% <span class="math inline">\(O_2\)</span>, 60% <span class="math inline">\(N_2\)</span>, 15% <span class="math inline">\(CO_2\)</span>.</p>
+<p>חשבו את הלחץ החלקי של כל רכיב.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">P(O₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="1.0" data-tol="0.05" placeholder="?" aria-label="לחץ חלקי חמצן">
+    <span class="le-unit">atm</span></div>
+  <div class="le-row"><span class="le-prompt">P(N₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="2.4" data-tol="0.05" placeholder="?" aria-label="לחץ חלקי חנקן">
+    <span class="le-unit">atm</span></div>
+  <div class="le-row"><span class="le-prompt">P(CO₂) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.6" data-tol="0.05" placeholder="?" aria-label="לחץ חלקי פחמן דו-חמצני">
+    <span class="le-unit">atm</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <details class="le-solution"><summary>הצגת פתרון</summary>
+    <div class="le-steps">
+      <div>לפי חוק דלטון, הלחץ החלקי = השבר המולי × הלחץ הכולל:</div>
+      <div class="le-eq">P(O₂) = 0.25 · 4 = 1.0 atm</div>
+      <div class="le-eq">P(N₂) = 0.60 · 4 = 2.4 atm</div>
+      <div class="le-eq">P(CO₂) = 0.15 · 4 = 0.6 atm</div>
+      <div>בדיקה: 1.0 + 2.4 + 0.6 = 4.0 atm = P_total ✓</div>
+    </div>
+  </details>
 </div>
 </div>
 </section>
@@ -1183,6 +1300,20 @@ window.Quarto = {
 </div>
 <div class="callout callout-important exercise" title="תרגיל" data-collapse="false">
 <p>תערובת גזים מכילה <span class="math inline">\(80\%\)</span> חנקן (<span class="math inline">\(N_{2}\)</span>) ו- <span class="math inline">\(20\%\)</span> פחמן דו־חמצני (<span class="math inline">\(CO_{2}\)</span>) (שברים מולריים). התערובת נמצאת בטמפרטורה <span class="math inline">\(T = 300\,\)</span> ובלחץ <span class="math inline">\(P = 50\, atm\)</span>. חשבו את הנפח המולרי הריאלי של התערובת.</p>
+<div class="live-exercise">
+  <div class="le-row"><span class="le-prompt">T<sub>c,mix</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="162" data-tol="1.5" placeholder="?" aria-label="טמפרטורה פסאודו-קריטית">
+    <span class="le-unit">K</span></div>
+  <div class="le-row"><span class="le-prompt">P<sub>c,mix</sub> =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="41.6" data-tol="0.5" placeholder="?" aria-label="לחץ פסאודו-קריטי">
+    <span class="le-unit">atm</span></div>
+  <div class="le-row"><span class="le-prompt">V̂ (ריאלי) =</span>
+    <input class="le-input" type="text" inputmode="decimal" data-answer="0.47" data-tol="0.04" placeholder="?" aria-label="נפח מולרי ריאלי">
+    <span class="le-unit">L/mol</span></div>
+  <div class="le-actions"><button class="le-check" type="button">בדיקה</button></div>
+  <div class="le-feedback" role="status"></div>
+  <div class="le-hint">V̂ תלוי בקריאת Z מהגרף (Z≈0.95) — ראו הפתרון המלא למטה.</div>
+</div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="פתרון">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
