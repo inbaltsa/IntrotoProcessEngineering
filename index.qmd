@@ -24,6 +24,10 @@ toc: false
   </p>
 </div>
 
+<p class="page-copyright">
+© ד״ר ענבל צרפתי־ברעד. כל הזכויות שמורות.
+</p>
+
 <!-- הסתרת כותרת ברירת־המחדל של Quarto ותוויות הסיידבר בעמוד השער בלבד -->
 <style>
 header#title-block-header.quarto-title-block {
