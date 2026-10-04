@@ -370,6 +370,17 @@ body.cover-page .title-block {
   white-space: nowrap;
 }
 
+/* שורת זכויות יוצרים — למטה, אפור וקטן */
+.book-copyright {
+  text-align: center;
+  font-family: "Assistant","Arimo",sans-serif;
+  font-size: 0.72rem;
+  color: var(--ink-500, #8a8a8a);
+  margin: 6px auto 18px;
+  direction: rtl;
+  letter-spacing: 0.2px;
+}
+
 /* =========================================================
    תרגילים חיים (live-exercise) — בדיקה עצמית
    ========================================================= */
