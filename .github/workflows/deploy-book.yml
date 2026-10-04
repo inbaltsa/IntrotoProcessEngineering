@@ -1,0 +1,92 @@
+# Deploy a Quarto course book to the teaching-center server under /books/<BOOK_NAME>/
+#
+# HOW TO USE (per book repo, one-time):
+#   1. Copy this file to  .github/workflows/deploy-book.yml  in the book repo.
+#   2. Set BOOK_NAME below to the book's slug (lowercase, a-z 0-9 - _). It must match
+#      the IAM role Naor created for this repo:  teaching-center-books-<BOOK_NAME>-deploy
+#   3. Push to main. Done - every push to main re-renders and publishes.
+#
+# What it does: quarto render -> _book/  ->  s3://.../books/<BOOK_NAME>/  ->  server sync -> live.
+# The role can ONLY write to its own books/<BOOK_NAME>/ prefix and trigger the sync. Nothing else.
+# No secrets needed in the repo (OIDC). Rollback: re-run a previous successful run.
+
+name: Deploy book
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  id-token: write   # OIDC -> AWS
+  contents: read
+
+env:
+  BOOK_NAME: introtoprocessengineering      # <-- matches role teaching-center-books-introtoprocessengineering-deploy
+  AWS_REGION: il-central-1
+  AWS_ACCOUNT: "263011180932"
+  BUCKET: bgu-teaching-center-deploy-artifacts
+  INSTANCE_ID: i-067e3e32a26064b24
+
+concurrency:
+  group: deploy-book-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        # Book renders to HTML only (PDF is shipped in-repo as index.pdf) - no LaTeX needed in CI.
+
+      - name: Set up Python (only if the book has post-render scripts)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render book (HTML)
+        run: quarto render --to html
+
+      - name: Sanity - _book/index.html must exist
+        run: test -f _book/index.html || { echo "render produced no _book/index.html"; exit 1; }
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT }}:role/teaching-center-books-${{ env.BOOK_NAME }}-deploy
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Upload _book/ to S3 (own prefix only)
+        run: |
+          aws s3 sync _book/ "s3://$BUCKET/books/$BOOK_NAME/" --delete --only-show-errors
+          echo "uploaded to s3://$BUCKET/books/$BOOK_NAME/"
+
+      - name: Publish on server (sync S3 -> /opt/books/data/<name>)
+        run: |
+          CMD_ID=$(aws ssm send-command \
+            --instance-ids "$INSTANCE_ID" \
+            --document-name AWS-RunShellScript \
+            --comment "books: publish $BOOK_NAME @ ${GITHUB_SHA::7}" \
+            --parameters "commands=[\"/opt/books/sync-book.sh $BOOK_NAME\"]" \
+            --timeout-seconds 300 \
+            --query Command.CommandId --output text)
+          echo "SSM command: $CMD_ID"
+          for i in $(seq 1 60); do
+            sleep 5
+            STATUS=$(aws ssm get-command-invocation --command-id "$CMD_ID" --instance-id "$INSTANCE_ID" --query Status --output text 2>/dev/null || echo Pending)
+            case "$STATUS" in
+              Success) aws ssm get-command-invocation --command-id "$CMD_ID" --instance-id "$INSTANCE_ID" --query StandardOutputContent --output text; break;;
+              Failed|Cancelled|TimedOut) echo "publish FAILED ($STATUS)"; aws ssm get-command-invocation --command-id "$CMD_ID" --instance-id "$INSTANCE_ID" --query '[StandardOutputContent,StandardErrorContent]' --output text; exit 1;;
+            esac
+          done
+          [ "$STATUS" = "Success" ] || { echo "timed out waiting for publish"; exit 1; }
+
+      # NOTE: no external curl of the public URL here - CloudFront is geo-restricted to Israel
+      # and GitHub runners are abroad (-> 403 false negative). sync-book.sh already verifies
+      # the book is served locally on the server ("[books] serving check OK" above).
+      - name: Done
+        run: |
+          echo "published: https://d1k0jrp2uzj5vo.cloudfront.net/books/$BOOK_NAME/  (verify from Israel)"
