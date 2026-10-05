@@ -1,7 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap");
+
 /* =========================================================
    site-enhance.css — שכבת עיצוב מעודנת לספר "מבוא להנדסת תהליכים"
    RTL + עמוד פתיחה + תודות + סיידבר + פס עליון ותחתון אוניברסיטאי
    ========================================================= */
+
+/* ---------- פונט אחיד לכל האתר ---------- */
+:root {
+  /* Bootstrap מושך את פונט הגוף מהמשתנה הזה — מאחד הכל ל"Assistant" */
+  --bs-body-font-family: "Assistant", "Arimo", "Segoe UI", Arial, sans-serif;
+}
+html, body,
+h1, h2, h3, h4, h5, h6,
+.sidebar, .navbar, .quarto-title-block,
+input, button, select, textarea {
+  font-family: "Assistant", "Arimo", "Segoe UI", Arial, sans-serif;
+}
 
 /* ---------- צבעים כלליים ---------- */
 :root {
@@ -538,7 +552,7 @@ body.cover-page .title-block {
   align-items: stretch;
   flex-wrap: wrap;
   margin: 0.5rem 0;
-  font-family: "Cambria Math", "Times New Roman", Georgia, serif;
+  font-family: "Assistant", "Arimo", "Segoe UI", Arial, sans-serif;
   font-size: 1.05rem;
   line-height: 1.25;
   color: var(--ink-700, #2b3e50);
@@ -628,7 +642,7 @@ body.cover-page .title-block {
 .le-steps .le-eq {
   direction: ltr;
   text-align: center;
-  font-family: "Cambria Math", "Times New Roman", Georgia, serif;
+  font-family: "Assistant", "Arimo", "Segoe UI", Arial, sans-serif;
   font-size: 1.02rem;
   color: var(--ink-900, #1e3a5f);
   margin: 0.45rem 0;
