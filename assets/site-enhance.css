@@ -331,8 +331,8 @@ h1.cover-h1 {
    סיידבר
    ========================================================= */
 .sidebar {
-  background: linear-gradient(180deg, #ffffff 0%, #eaf4ff 100%);
-  border-left: 1px solid #c5d9f3;
+  background: #faf8f3;
+  border-left: 1px solid #e7ddc9;
   padding: 1.5rem 1rem;
   font-size: 0.95rem;
 }
@@ -367,13 +367,14 @@ h1.cover-h1 {
   transition: all 0.2s ease;
 }
 .sidebar nav a:hover {
-  background-color: rgba(30,144,255,0.15);
-  color: var(--brand-blue);
+  background-color: rgba(242,140,0,0.10);
+  color: var(--ink-900);
 }
 .sidebar nav a.active {
-  background-color: rgba(30,144,255,0.25);
-  color: #000;
-  font-weight: 600;
+  background-color: rgba(242,140,0,0.14);
+  color: var(--ink-900);
+  font-weight: 700;
+  box-shadow: inset -3px 0 0 0 var(--brand-orange); /* פס כתום בקצה הימני (RTL) */
 }
 
 /* =========================================================
