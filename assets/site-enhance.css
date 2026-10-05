@@ -194,14 +194,23 @@ body.cover-page #quarto-document-content > .cover-sheet { margin-top: 0; }
   max-width: 980px;
   margin: 0.5rem auto 0;
   color: var(--ink-900);
-  background:
-    linear-gradient(#efe9dc 1px, transparent 1px) 0 0 / 20px 20px,
-    linear-gradient(90deg, #efe9dc 1px, transparent 1px) 0 0 / 20px 20px,
-    #f8f6f1;
+  background: #f8f6f1;
   border: 1px solid #e2dac9;
   border-radius: 14px;
   box-shadow: 0 10px 40px rgba(30, 58, 95, 0.08);
   overflow: hidden;
+}
+
+/* רצועת "נייר משבצות הנדסי" — רק מאחורי התרשים, כדי שהטקסט יישב על נייר חלק */
+.cover-grid-band {
+  background:
+    linear-gradient(#efe9dc 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(90deg, #efe9dc 1px, transparent 1px) 0 0 / 20px 20px,
+    #f8f6f1;
+  border-top: 1px solid #ece3d2;
+  border-bottom: 1px solid #ece3d2;
+  padding: 1.8rem 0;
+  margin: 0.6rem 0 0;
 }
 
 .cover-hero {
@@ -254,7 +263,7 @@ h1.cover-h1 {
 .cover-scene {
   width: 100%;
   max-width: 700px;
-  margin: 1.6rem auto 1.4rem;
+  margin: 0 auto;
   display: block;
 }
 .cover-lbl {
