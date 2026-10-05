@@ -195,9 +195,9 @@ body.cover-page #quarto-document-content > .cover-sheet { margin-top: 0; }
   margin: 0.5rem auto 0;
   color: var(--ink-900);
   background:
-    linear-gradient(#e7e0d2 1px, transparent 1px) 0 0 / 34px 34px,
-    linear-gradient(90deg, #e7e0d2 1px, transparent 1px) 0 0 / 34px 34px,
-    #f7f5f0;
+    linear-gradient(#efe9dc 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(90deg, #efe9dc 1px, transparent 1px) 0 0 / 20px 20px,
+    #f8f6f1;
   border: 1px solid #e2dac9;
   border-radius: 14px;
   box-shadow: 0 10px 40px rgba(30, 58, 95, 0.08);
