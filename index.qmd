@@ -1,42 +1,70 @@
 ---
+title: "מבוא להנדסת תהליכים"
 toc: false
 ---
 
 ```{=html}
 <script>document.body.classList.add('cover-page');</script>
-```
 
-# מבוא להנדסת תהליכים {.unnumbered .page-title}
-## ד"ר ענבל צרפתי-ברעד {.unnumbered .page-subtitle}
+<div class="cover-sheet">
 
-<p class="page-description">
-מיועד לסטודנטים וסטודנטיות בתחילת דרכם<br>
-בתחום הנדסת תהליכים
-</p>
+  <div class="cover-hero">
+    <div class="cover-kicker">ספר קורס · BGU</div>
+    <h1 class="cover-h1">מבוא להנדסת תהליכים</h1>
+    <div class="cover-rule"></div>
+    <div class="cover-author">ד"ר ענבל צרפתי־ברעד</div>
+  </div>
 
-<div class="thanks-box">
-  <h3>תודות</h3>
-  <p>
-  ד״ר רחל ליכטנשטיין, המחלקה להנדסת ביוטכנולוגיה על שם אברם וסטלה גולדשטיין־גורן<br>
-  פרופ׳ רונית ביטון, המחלקה להנדסה כימית<br>
-  היחידה לקידום איכות ההוראה והלמידה<br>
-  אוניברסיטת בן־גוריון בנגב
-  </p>
+  <svg class="cover-scene" viewBox="0 0 720 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="תרשים זרימה: מיכל הזנה, כור מעורבל וטור זיקוק עם מעבה">
+    <line x1="30" y1="186" x2="690" y2="186" stroke="#cdc5b4" stroke-width="2"/>
+    <!-- מיכל הזנה (F) -->
+    <rect x="590" y="116" width="82" height="70" rx="9" fill="#fff" stroke="#1e3a5f" stroke-width="3"/>
+    <ellipse cx="631" cy="116" rx="41" ry="10" fill="#fff" stroke="#1e3a5f" stroke-width="3"/>
+    <rect x="590" y="146" width="82" height="40" fill="#f7941e" opacity="0.18"/>
+    <text class="cover-lbl" x="631" y="205" text-anchor="middle">F</text>
+    <path d="M590 158 H505" stroke="#1e3a5f" stroke-width="3"/>
+    <path d="M533 152 l-15 6 l15 6 z" fill="#f7941e"/>
+    <!-- כור מעורבל (R) -->
+    <rect x="392" y="92" width="100" height="94" rx="14" fill="#fff" stroke="#1e3a5f" stroke-width="3"/>
+    <path d="M392 144 q25 -16 50 0 q25 16 50 0 V186 H392 Z" fill="#f7941e" opacity="0.22"/>
+    <line x1="442" y1="74" x2="442" y2="144" stroke="#1e3a5f" stroke-width="3"/>
+    <path d="M425 144 h34 M430 154 h24" stroke="#1e3a5f" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="414" cy="122" r="4" fill="#1e3a5f" opacity=".5"/>
+    <circle cx="454" cy="112" r="5" fill="#1e3a5f" opacity=".4"/>
+    <circle cx="436" cy="104" r="3" fill="#1e3a5f" opacity=".5"/>
+    <text class="cover-lbl" x="442" y="205" text-anchor="middle">R</text>
+    <path d="M392 136 H292" stroke="#1e3a5f" stroke-width="3"/>
+    <path d="M320 130 l-15 6 l15 6 z" fill="#f7941e"/>
+    <!-- טור זיקוק (T) -->
+    <rect x="146" y="50" width="146" height="136" rx="22" fill="#fff" stroke="#1e3a5f" stroke-width="3"/>
+    <line x1="146" y1="88" x2="292" y2="88" stroke="#1e3a5f" stroke-width="2" opacity=".5"/>
+    <line x1="146" y1="116" x2="292" y2="116" stroke="#1e3a5f" stroke-width="2" opacity=".5"/>
+    <line x1="146" y1="144" x2="292" y2="144" stroke="#1e3a5f" stroke-width="2" opacity=".5"/>
+    <rect x="146" y="152" width="146" height="34" fill="#f7941e" opacity=".2"/>
+    <text class="cover-lbl" x="219" y="205" text-anchor="middle">T</text>
+    <!-- מעבה בראש הטור (D) -->
+    <path d="M219 50 V28 H92" stroke="#1e3a5f" stroke-width="3"/>
+    <circle cx="76" cy="28" r="15" fill="#fff" stroke="#1e3a5f" stroke-width="3"/>
+    <path d="M76 43 V66" stroke="#1e3a5f" stroke-width="3"/>
+    <path d="M70 52 l6 14 l6 -14 z" fill="#f7941e"/>
+    <text class="cover-lbl" x="76" y="86" text-anchor="middle">D</text>
+  </svg>
+
+  <div class="cover-tagwrap">
+    <p class="cover-tag">מיועד לסטודנטים וסטודנטיות בתחילת דרכם בתחום הנדסת תהליכים</p>
+  </div>
+
+  <div class="cover-thanks">
+    <h3>תודות</h3>
+    <p>
+    ד״ר רחל ליכטנשטיין, המחלקה להנדסת ביוטכנולוגיה על שם אברם וסטלה גולדשטיין־גורן<br>
+    פרופ׳ רונית ביטון, המחלקה להנדסה כימית<br>
+    היחידה לקידום איכות ההוראה והלמידה<br>
+    אוניברסיטת בן־גוריון בנגב
+    </p>
+  </div>
+
+  <div class="cover-copy">© ד״ר ענבל צרפתי־ברעד. כל הזכויות שמורות.</div>
+
 </div>
-
-<p class="page-copyright">
-© ד״ר ענבל צרפתי־ברעד. כל הזכויות שמורות.
-</p>
-
-<!-- הסתרת כותרת ברירת־המחדל של Quarto ותוויות הסיידבר בעמוד השער בלבד -->
-<style>
-header#title-block-header.quarto-title-block {
-  display: none !important;
-  visibility: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  height: 0 !important;
-}
-#quarto-sidebar .sidebar-title { display: none !important; }
-#quarto-sidebar .chapter-number { display: none !important; }
-</style>
+```
