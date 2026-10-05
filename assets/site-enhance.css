@@ -171,69 +171,138 @@ body.cover-page #quarto-margin-sidebar {
 /* לוגו מרכזי גדול — הוסר מהשער. הנוכחות המוסדית עברה לפס תחתון עדין. */
 .page-logo { display: none !important; }
 
-/* כותרת הספר */
-h1.page-title {
+/* ---------- כריכה מאוירת: תרשים זרימה על "נייר הנדסי" ---------- */
+
+/* ביטול מרווחי תוכן ברירת־המחדל כדי שהכריכה תשב מקצה לקצה */
+body.cover-page #quarto-document-content > .cover-sheet { margin-top: 0; }
+
+.cover-sheet {
+  max-width: 980px;
+  margin: 0.5rem auto 0;
+  color: var(--ink-900);
+  background:
+    linear-gradient(#e7e0d2 1px, transparent 1px) 0 0 / 34px 34px,
+    linear-gradient(90deg, #e7e0d2 1px, transparent 1px) 0 0 / 34px 34px,
+    #f7f5f0;
+  border: 1px solid #e2dac9;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(30, 58, 95, 0.08);
+  overflow: hidden;
+}
+
+.cover-hero {
   text-align: center;
-  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  padding: 3.2rem 2rem 1rem;
+}
+
+.cover-kicker {
+  letter-spacing: 0.42em;
+  font-size: 0.82rem;
+  color: #c0772a;
   font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--ink-900);
-  margin-top: 5rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
 }
-
-h2.page-subtitle {
-  text-align: center;
-  font-size: 1.15rem;
-  font-weight: 400;
-  color: var(--ink-500);
-  margin-bottom: 1.6rem;
-}
-
-/* פס אלכסוני עדין מתחת לשם המחברת — נגיעת מותג אחת, מרוסנת */
-h2.page-subtitle::after {
+.cover-kicker::before,
+.cover-kicker::after {
   content: "";
-  display: block;
-  width: 84px;
-  height: 4px;
-  margin: 1.3rem auto 0;
-  background: var(--brand-orange);
-  clip-path: polygon(16% 0, 100% 0, 84% 100%, 0 100%);
+  width: 34px;
+  height: 2px;
+  background: #d9b07a;
 }
 
-.page-description {
-  text-align: center;
-  max-width: 560px;
-  margin: 0 auto 3.5rem auto;
-  color: var(--ink-600);
-  line-height: 1.65;
-  font-size: 1.05rem;
-}
-
-/* תיבת תודות — עדינה ונקייה */
-.thanks-box {
-  background: #fafafa;
-  border: 1px solid rgba(43, 62, 80, 0.12);
-  padding: 1.6rem 1.8rem;
-  max-width: 620px;
-  margin: 0 auto;
-  text-align: center;
-  border-radius: 12px;
-  color: var(--ink-600);
-  line-height: 1.8;
-  font-size: 0.98rem;
-}
-
-.thanks-box h3 {
-  margin-top: 0;
-  margin-bottom: 0.8rem;
+h1.cover-h1 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -1px;
   color: var(--ink-900);
-  font-weight: 600;
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
 }
 
-.thanks-box p { margin-bottom: 0; }
+.cover-rule {
+  width: 64px;
+  height: 4px;
+  background: var(--brand-orange);
+  border-radius: 3px;
+  margin: 1.1rem auto 0.9rem;
+}
+
+.cover-author {
+  font-size: 1.25rem;
+  color: #4a5a6e;
+  font-weight: 500;
+}
+
+.cover-scene {
+  width: 100%;
+  max-width: 700px;
+  margin: 1.6rem auto 1.4rem;
+  display: block;
+}
+.cover-lbl {
+  font-size: 13px;
+  font-weight: 700;
+  fill: #c0772a;
+  letter-spacing: 0.05em;
+}
+
+/* פס כהה עם קהל היעד — מקצה לקצה בתוך הכריכה */
+.cover-tagwrap {
+  background: var(--ink-900);
+  color: #eaf0f7;
+  text-align: center;
+  padding: 1.3rem 2rem;
+}
+.cover-tag { margin: 0; font-size: 1.05rem; line-height: 1.6; }
+
+/* תודות — עדין, עם קווים דקים משני צדי הכותרת */
+.cover-thanks {
+  text-align: center;
+  padding: 2.2rem 2rem 2.4rem;
+}
+.cover-thanks h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.cover-thanks h3::before,
+.cover-thanks h3::after {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: #c9bea9;
+}
+.cover-thanks p {
+  margin: 0.5rem auto 0;
+  max-width: 600px;
+  color: #5a6b7d;
+  line-height: 1.85;
+  font-size: 0.95rem;
+}
+
+.cover-copy {
+  text-align: center;
+  color: #8a93a0;
+  font-size: 0.8rem;
+  padding: 0 2rem 1.8rem;
+}
+
+@media (max-width: 600px) {
+  .cover-hero { padding: 2.2rem 1.2rem 0.6rem; }
+  .cover-kicker::before, .cover-kicker::after { width: 20px; }
+  .cover-scene { margin: 1.1rem auto 1rem; }
+  .cover-tag { font-size: 0.98rem; }
+}
 
 /* =========================================================
    סיידבר
