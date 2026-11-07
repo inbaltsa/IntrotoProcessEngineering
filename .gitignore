@@ -1,2 +1,5 @@
 /.quarto/
 /_book/
+
+# Homework solutions (repo is public) - keep local only
+homework/**/*-reference-bank.tex
