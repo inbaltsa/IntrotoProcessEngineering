@@ -5,3 +5,4 @@
 homework/**/*-reference-bank.tex
 homework/**/*.xml
 homework/**/build_quiz.py
+homework/**/build_concepts.py
