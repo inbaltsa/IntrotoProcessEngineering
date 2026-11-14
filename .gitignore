@@ -3,3 +3,5 @@
 
 # Homework solutions (repo is public) - keep local only
 homework/**/*-reference-bank.tex
+homework/**/*.xml
+homework/**/build_quiz.py
