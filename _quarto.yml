@@ -21,6 +21,8 @@ book:
     logo: assets/logo.png
     logo-alt: "הלוגו של הספר"
     logo-href: "/"
+  # One tag only: _includes/head.html loaded the same ID a second time (double page views).
+  google-analytics: "G-9L4PW59LRK"
 
 format:
   html:
@@ -40,7 +42,6 @@ format:
       - assets/tracking.html
       - assets/live-exercise.html
       - assets/report-error.html
-    include-in-header: _includes/head.html
 
 #  pdf:
 #    pdf-engine: xelatex         # חשוב לעברית
@@ -57,8 +58,6 @@ format:
 lang: he
 dir: rtl
 
-website:
-  google-analytics: "G-9L4PW59LRK"
   
 # פילטרים ל-HTML
 filters:
