@@ -3,9 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>טמפרטורה בסרגל היחידות — מבוא להנדסת תהליכים לביוטכנולוגיה A</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<title>הגדרת היחס ומציאת הערך — טמפרטורה בסרגל היחידות</title>
 <script>
 /* ============================================================
    נוסח הלומדה — כל מה שהסטודנטים קוראים נמצא כאן, ורק כאן.
@@ -13,604 +11,506 @@
    איך עורכים:
    • שנו רק את הטקסט שבין הגרשיים. אל תמחקו את שם המפתח שלפני הנקודתיים,
      ואל תמחקו את הפסיק בסוף השורה.
-   • כוכביות מסמנות הדגשה:      *ככה* יופיע מודגש
-   • גרש הפוך מסמן יחידות וקוד: `ככה` יופיע בגופן טכני כתום
-   • גרש בודד בתוך הטקסט (למשל: אם') חייב להיכתב \' — עם לוכסן לפניו.
+   • כוכביות מסמנות הדגשה ירוקה:   *ככה*
+   • סימן ^ מסמן הדגשה אדומה:       ^ככה^
+   • גרש הפוך מסמן נוסחה/יחידות:     `1 m = 3.28 ft`  (יוצג בגופן מתמטי, משמאל לימין)
+   • גרש בודד בתוך הטקסט (למשל: א') חייב להיכתב \' — עם לוכסן לפניו.
    ============================================================ */
 window.LOMDA_TEXT = {
 
-  /* ——— כותרת ראשית ——— */
-  eyebrow:  "מבוא להנדסת תהליכים לביוטכנולוגיה A · פרק 2",
-  title:    "טמפרטורה בסרגל היחידות",
-  subtitle: "למה בסרגל כותבים `1 °C / 1.8 °F`, אבל בהמרה של טמפרטורה כופלים דווקא את הצלזיוס ב-1.8? חמישה שלבים קצרים שמתחילים במטרים ונגמרים במדחום.",
-
-  /* ——— סרגל הניווט וכפתורי המעבר ——— */
-  nav1: "מקל ומספר",
-  nav2: "מעלה היא מקל",
-  nav3: "נקודה מול מרווח",
-  nav4: "סרגל או משוואה?",
-  nav5: "תרגול",
+  chapter: "פרק 2ג · טמפרטורה — המקרה המיוחד",
+  footer:  "מבוא להנדסת תהליכים לביוטכנולוגיה א\' · פרק 2ג – מעבר יחידות בנוסחאות",
   btnPrev: "הקודם",
   btnNext: "הבא",
+  btnCheck: "בדיקה",
 
-  /* ——— פאנל ההתקדמות ——— */
-  progTitle: "מה נרשם עד כה",
-  prog1: "יחידה גדולה ← מספר קטן",
-  prog2: "מעלה היא מקל: `1 °C = 1.8 °F` כגודל מעלה",
-  prog3: "נקודה צריכה הזזה, מרווח לא",
-  prog4: "מתי סרגל ומתי משוואה",
-  prog5: "תרגול מסכם",
-  progFoot: "מצב תרגול חופשי · ההתקדמות לא נשמרת ולא מדווחת",
+  /* ——— מסך 1 ——— */
+  s1_title: "שתי שאלות על אותו שולחן",
+  s1_lead:  "כל מעבר יחידות מערב *שתי שאלות שונות*. נתחיל בשאלות על אורך, ורק אחר כך נגיע לטמפרטורה.",
+  s1_qA_tag:  "שאלה א\'",
+  s1_qA:      "כמה רגליים (ft) נכנסות ב*מטר אחד*?",
+  s1_qA_ok:   "נכון: `1 m = 3.28 ft`. רגל קטנה ממטר, ולכן נכנסות במטר יותר מרגל אחת.",
+  s1_qA_bad:  "הסתכלו בציור: כמה מקלות סגולים (רגל) מכסים את המקל הירוק (מטר)?",
+  s1_qB_tag:  "שאלה ב\'",
+  s1_qB:      "השולחן באורך `2 m`. מה *המספר* שנקבל כשנמדוד אותו ברגליים?",
+  s1_qB_ok:   "נכון: `6.56 ft`. אותו שולחן, מספר אחר.",
+  s1_qB_bad:  "בכל מטר יש 3.28 רגל, ובשולחן יש 2 מטרים.",
+  s1_names:   "לשתי השאלות יש שמות. *שאלה א\' היא הגדרת היחס*: כמה גדולה יחידה אחת ביחס לשנייה. *שאלה ב\' היא מציאת הערך הנומרי*: איזה מספר יוצא כשמודדים את אותו גודל ביחידה אחרת.",
 
-  /* ——— שלב 1: אורך — מקל ומספר ——— */
-  s1_title:   "שתי משוואות שנראות הפוכות",
-  s1_intro:   "שולחן באורך 2 מטרים. מודדים אותו פעמיים: פעם בסרגל של מטר, ופעם בסרגל של רגל. כמה פעמים נכנס כל סרגל?",
-  s1_btnM:    "מדדו בסרגל של מטר",
-  s1_btnFt:   "מדדו בסרגל של רגל",
-  s1_countM:  "סרגל המטר נכנס *2* פעמים",
-  s1_countFt: "סרגל הרגל נכנס *6.56* פעמים",
-  s1_q:       "באיזה סרגל יצא מספר גדול יותר, ולמה?",
-  s1_qA:      "ברגל, כי הרגל קצרה יותר ונכנסת יותר פעמים",
-  s1_qB:      "במטר, כי מטר היא יחידה גדולה יותר",
-  s1_qOk:     "נכון. *מקל קטן נכנס יותר פעמים.* אותו שולחן, אבל המספר תלוי בגודל המקל.",
-  s1_qBad:    "לא בדיוק. המטר אכן גדול יותר, ובגלל זה הוא נכנס *פחות* פעמים. בדקו שוב את שני המספרים למעלה.",
-  s1_eqIntro: "את מה שגילינו אפשר לכתוב בשתי משוואות. הסתכלו היכן נמצא המספר 3.28 בכל אחת:",
-  s1_eqUnit:  "משוואת יחידות: מה גודל המקל",
-  s1_eqNum:   "משוואת מספרים: כמה מקלות",
-  s1_flipQ:   "ליד מה כתוב 3.28 במשוואת המספרים?",
-  s1_flipA:   "ליד מספר המטרים",
-  s1_flipB:   "ליד מספר הרגליים",
-  s1_flipOk:  "בדיוק. *במשוואת היחידות 3.28 צמוד ל-ft, ובמשוואת המספרים הוא צמוד למספר המטרים.* זה נראה הפוך, אבל שתיהן אומרות אותו דבר: רגל קטנה פי 3.28, ולכן מספר הרגליים גדול פי 3.28.",
-  s1_flipBad: "הסתכלו שוב: `N(ft) = 3.28 · N(m)`. המספר 3.28 מכפיל את מספר *המטרים*.",
-  s1_note:    "*סרגל היחידות עובד עם משוואת היחידות* (גודל המקל). ההיפוך הזה היה שם תמיד, גם במטרים. פשוט לא נתקלתם בו, כי באורך לא כותבים את משוואת המספרים.",
+  /* ——— מסך 2 ——— */
+  s2_title: "שתי פעולות הפוכות",
+  s2_colA:  "הגדרת היחס",
+  s2_colA_q: "כמה גדולה יחידה אחת ביחס לשנייה?",
+  s2_colA_where: "3.28 צמוד ל*יחידה* ft",
+  s2_colA_use: "זה מה שנכנס ל*סרגל היחידות*:",
+  s2_colB:  "מציאת הערך הנומרי",
+  s2_colB_q: "איזה מספר נקבל ביחידה האחרת?",
+  s2_colB_where: "3.28 צמוד ל*מספר* המטרים",
+  s2_colB_use: "את זה כותבים כשממירים ערך:",
+  s2_alert: "^זה נראה הפוך^ — וזה באמת הפוך. אבל שתי השורות נכונות, ואומרות אותו דבר.",
+  s2_why:   "למה? כי *גודל פיזיקלי = מספר × יחידה*. השולחן לא משתנה, ולכן כשהיחידה קטנה פי 3.28, המספר חייב לגדול פי 3.28.",
+  s2_btnSteps: "הראו לי את זה שלב אחרי שלב",
+  s2_unitsLead: "בחרו יחידה ובדקו: מה קורה למספר כשהיחידה קטנה?",
+  s2_check:  "בדיקה קצרה: `1 in = 2.54 cm`. כמה סנטימטרים יש ב-`10 in`?",
+  s2_optA:   "`25.4 cm`",
+  s2_optB:   "`3.94 cm`",
+  s2_okA:    "נכון. סנטימטר קטן מאינץ\' פי 2.54, ולכן המספר גדל פי 2.54.",
+  s2_badB:   "חילקתם במקום לכפול. ‏2.54 שייך להגדרת היחס (`1 in = 2.54 cm`). במציאת הערך היחידה קטנה, ולכן המספר צריך לגדול.",
 
-  /* ——— שלב 2: מעלה היא מקל ——— */
-  s2_title:   "גם מעלה היא מקל",
-  s2_intro:   "מים התחממו מ-20 °C ל-30 °C. הקטע הצבעוני הוא העלייה בטמפרטורה. נמדוד אותו פעם במקלות של מעלת צלזיוס ופעם במקלות של מעלת פרנהייט.",
-  s2_btnC:    "מדדו במעלות צלזיוס",
-  s2_btnF:    "מדדו במעלות פרנהייט",
-  s2_countC:  "מעלת צלזיוס נכנסת *10* פעמים",
-  s2_countF:  "מעלת פרנהייט נכנסת *18* פעמים",
-  s2_ask:     "כמה מעלות פרנהייט נכנסות במעלת צלזיוס *אחת*?",
-  s2_ok:      "נכון: `1 °C = 1.8 °F` כגודל של מעלה. מעלת פרנהייט קטנה יותר, ולכן נכנסת יותר פעמים.",
-  s2_bad:     "נסו שוב: 18 מקלות פרנהייט נכנסו ב-10 מקלות צלזיוס. כמה נכנסים במקל אחד?",
-  s2_eqIntro: "ושוב אותן שתי משוואות, עם אותו היפוך בדיוק כמו במטרים:",
-  s2_eqUnit:  "משוואת יחידות: זה מה שנכנס לסרגל",
-  s2_eqNum:   "משוואת מספרים לשינוי בטמפרטורה",
-  s2_note:    "*עד כאן אין שום דבר חדש.* בסרגל כותבים `1 °C / 1.8 °F` מאותה סיבה שכותבים `1 m / 3.28 ft`: זה גודל המקל. ומספר מעלות הפרנהייט גדול פי 1.8, מאותה סיבה שמספר הרגליים גדול פי 3.28.",
+  /* ——— מסך 3 ——— */
+  s3_title: "מעלה היא יחידה",
+  s3_lead:  "מעלת צלזיוס ומעלת פרנהייט הן שתי יחידות בגדלים שונים, כמו מטר ורגל. מים התחממו מ-`20 °C` ל-`30 °C`: הנה ההתחממות, מכוסה פעם במעלות צלזיוס ופעם במעלות פרנהייט.",
+  s3_lblC:  "°C × 10",
+  s3_lblF:  "°F × 18",
+  s3_colA_where: "1.8 צמוד ל*יחידה* `°F`",
+  s3_colA_use: "בסרגל (לפי מה שצריך לצמצם):",
+  s3_colB_where: "1.8 צמוד ל*מספר* מעלות הצלזיוס",
+  s3_colB_use: "להפרש טמפרטורות (\"בכמה התחמם\"):",
+  s3_note:  "זה בדיוק מה שקרה במטרים. בסרגל כותבים `1 °C / 1.8 °F` כי זו *הגדרת היחס*. וכשממירים ערך כופלים את הצלזיוס ב-1.8, כי זו *מציאת הערך*: מעלת פרנהייט קטנה, ולכן המספר גדל.",
+  s3_ask:   "הריאקטור התחמם ב-`25 °C`. בכמה מעלות פרנהייט הוא התחמם?",
+  s3_ok:    "נכון: `ΔT(°F) = 1.8 · 25 = 45 °F`.",
+  s3_bad13: "חילקתם ב-1.8. זו הגדרת היחס הפוכה. במציאת הערך היחידה (`°F`) קטנה יותר, ולכן המספר צריך לגדול.",
+  s3_bad77: "הוספתם 32. ה-32 שייך רק לקריאה של מדחום (המסך הבא). כאן מדובר בהתחממות, בהפרש.",
+  s3_badX:  "כמה מעלות פרנהייט יש בכל מעלת צלזיוס? וכמה מעלות צלזיוס היו?",
 
-  /* ——— שלב 3: נקודה מול מרווח ——— */
-  s3_title:   "ההבדל היחיד: הסרגלים לא מתחילים באותו מקום",
-  s3_intro:   "שני מדחומים זה מעל זה. הזיזו את המחוון וקראו את שניהם. שימו לב איפה נמצא ה-0 של כל סולם.",
-  s3_tabPoint: "נקודה: כמה חם?",
-  s3_tabGap:   "מרווח: בכמה התחמם?",
-  s3_pointNote: "כדי לעבור מקריאה לקריאה צריך *גם יחס וגם הזזה*: ה-0 של צלזיוס נמצא ב-32 של פרנהייט. לכן `T(°F) = 1.8 · T(°C) + 32`.",
-  s3_gapNote:  "כשמודדים *מרווח* בין שתי נקודות, ההזזה מתבטלת: שתי הקריאות זזות באותם 32. נשאר רק היחס: `ΔT(°F) = 1.8 · ΔT(°C)`.",
-  s3_zeroC:   "0 °C",
-  s3_zeroF:   "0 °F",
-  s3_q:       "למה ב-`T(°F)` יש ‎+32, וב-`ΔT(°F)` אין?",
-  s3_qA:      "כי ב-ΔT שתי הקריאות מוזזות באותם 32, וההזזה מתבטלת בחיסור",
-  s3_qB:      "כי ב-ΔT כבר לא מדובר בטמפרטורה, ולכן אין לה יחידות",
-  s3_qOk:     "נכון. *נקודה* צריכה יחס + הזזה. *מרווח* צריך רק יחס, ובדיוק לכן הוא יכול להיכנס לסרגל.",
-  s3_qBad:    "ל-ΔT יש יחידות (`°C` או `°F`), הן רק יחידות של גודל מעלה. נסו להזיז את שני המחוונים ולראות מה קורה ל-32.",
+  /* ——— מסך 4 ——— */
+  s4_title: "קריאה של מדחום: עוד צעד אחד",
+  s4_lead:  "כשרוצים לדעת *כמה חם* (ולא בכמה התחמם), יש עוד בעיה: שני הסולמות לא מתחילים באותו מקום. הזיזו את המחוון.",
+  s4_alert: "^הגדרת היחס לא השתנתה^: עדיין `1 °C = 1.8 °F`. מה שהשתנה הוא מציאת הערך: צריך גם להזיז את נקודת האפס.",
+  s4_colB:  "מציאת הערך הנומרי של נקודה",
+  s4_why32: "ה-0 של צלזיוס נמצא ב-32 של פרנהייט. לכן אחרי הכפל ב-1.8 צריך להוסיף 32.",
+  s4_ruler: "בגלל ה-‎+32 זו כבר לא הכפלה ביחס, ולכן ^אי אפשר להכניס אותה לסרגל^. ממירים את הקריאה בצד, ורק את התוצאה מציבים בחישוב.",
+  s4_ask:   "המים בכוס הם `25 °C`. מה הטמפרטורה ב-`°F`?",
+  s4_ok:    "נכון: `1.8 · 25 + 32 = 77 °F`.",
+  s4_bad45: "זו התשובה להתחממות של 25 מעלות. כאן מדובר בקריאה של מדחום, ולכן צריך גם את ה-‎+32.",
+  s4_badX:  "קודם כופלים ב-1.8, ואז מוסיפים 32.",
 
-  /* ——— שלב 4: סרגל או משוואה ——— */
-  s4_title:  "סרגל או משוואה?",
-  s4_intro:  "השאלה המכריעה: האם מדובר ב*נקודה* (כמה חם?) או ב*מרווח* (בכמה השתנה? לכל מעלה?). לכל מקרה, בחרו איך ממירים.",
-  s4_btnRuler: "סרגל (יחס בלבד)",
-  s4_btnEq:    "משוואה (יחס + הזזה)",
-  s4_items: [
-    { q: "מים בטמפרטורה של 25 °C. מה הטמפרטורה ב-°F?", a: "eq",
-      ok: "נכון: זו קריאה של מדחום, נקודה, ולכן צריך גם הזזה: `1.8 · 25 + 32 = 77 °F`.",
-      bad: "זו קריאה של מדחום, כלומר נקודה. בסרגל היינו מקבלים 45, וזה לא נכון." },
-    { q: "הריאקטור התחמם ב-25 °C. בכמה הוא התחמם ב-°F?", a: "ruler",
-      ok: "נכון: זה מרווח. `25 · 1.8 = 45 °F`, בלי 32.",
-      bad: "\"התחמם ב-\" הוא שינוי, מרווח. אם נוסיף 32 נקבל 77, וזו טעות." },
-    { q: "קיבול חום `Cp = 1.00 Btu/(lb·°F)`. להמיר ל-`kJ/(kg·°C)`.", a: "ruler",
-      ok: "נכון: \"לכל מעלה\" הוא גודל של מקל, מרווח. הפקטור `1.8 °F / 1 °C` נכנס לסרגל כמו כל פקטור אחר.",
-      bad: "היחידה `1/°F` פירושה \"לכל מעלה\", כלומר גודל של מקל. אין כאן קריאה של מדחום, ולכן אין הזזה." },
-    { q: "להציב 70 °F במשוואת הגז האידיאלי `PV = nRT`.", a: "eq",
-      ok: "נכון: T במשוואה היא נקודה (ובסולם אבסולוטי). ממירים בנפרד, `70 °F → 294.3 K`, ורק אז מציבים.",
-      bad: "במשוואת הגז T היא הטמפרטורה עצמה, נקודה. את ההמרה עושים מחוץ לסרגל, ואז מציבים." },
-    { q: "מקדם העברת חום `h = 10 W/(m²·°C)`. להמיר ל-`W/(m²·K)`.", a: "ruler",
-      ok: "נכון: \"לכל מעלה\" הוא מרווח. מעלת צלזיוס ומעלת קלווין באותו גודל, ולכן הערך לא משתנה: `10 W/(m²·K)`.",
-      bad: "`1/°C` הוא \"לכל מעלה\", גודל של מקל. אילו היינו מוסיפים 273, היה יוצא מספר חסר משמעות." }
+  /* ——— מסך 5 ——— */
+  s5_title: "סיכום ובדיקה",
+  s5_rowHead: ["הפעולה", "השאלה", "בטמפרטורה"],
+  s5_rows: [
+    ["הגדרת היחס", "כמה גדולה יחידה אחת ביחס לשנייה?", "`1 °C = 1.8 °F`  ← נכנס לסרגל"],
+    ["מציאת הערך: הפרש", "בכמה השתנה? / \"לכל מעלה\"", "`ΔT(°F) = 1.8 · ΔT(°C)`"],
+    ["מציאת הערך: נקודה", "כמה חם?", "`T(°F) = 1.8 · T(°C) + 32`  ← בצד, לא בסרגל"]
   ],
-  s4_done:   "*הכלל:* סרגל היחידות יודע רק לכפול ביחס, ולכן הוא מתאים רק למרווחים ולגדלים \"לכל מעלה\". קריאה של מדחום ממירים במשוואה מחוץ לסרגל, ואז מציבים.",
-
-  /* ——— שלב 5: תרגול ——— */
-  s5_title:  "תרגול מסכם",
-  s5_intro:  "מים התחממו מ-20 °C ל-30 °C. סטודנט א\' כתב: \"עלייה של 18 °F\". סטודנט ב\' כתב: \"עלייה של 50 °F\". מי צדק?",
-  s5_optA:   "סטודנט א\'",
-  s5_optB:   "סטודנט ב\'",
-  s5_okA:    "נכון. סטודנט ב\' המיר את המרווח כאילו היה נקודה: `1.8 · 10 + 32 = 50`. הוסיף 32 שלא היה צריך.",
-  s5_badB:   "50 מתקבל מ-`1.8 · 10 + 32`, כלומר מהמרה של נקודה. אבל עלייה של 10 °C היא מרווח, ולכן אין ‎+32.",
-  s5_numIntro: "ועכשיו לבד (מספר בלבד):",
-  s5_n1:     "הטמפרטורה בחדר היא 25 °C. כמה זה ב-°F?",
-  s5_n2:     "הטמפרטורה בחדר עלתה ב-25 °C. בכמה היא עלתה ב-°F?",
-  s5_n3:     "מים ב-25 °C. כמה זה ב-K?",
-  s5_check:  "בדיקה",
-  s5_ok:     "נכון",
-  s5_bad:    "עוד לא. נקודה או מרווח?",
-  s5_allDone: "*סיימתם!* זכרו את השאלה המכריעה: *נקודה או מרווח?* נקודה: משוואה עם הזזה, מחוץ לסרגל. מרווח: יחס בלבד, ישר לתוך הסרגל."
+  s5_q:     "מים התחממו מ-`20 °C` ל-`30 °C`. סטודנט א\' כתב: \"עלייה של `18 °F`\". סטודנט ב\' כתב: \"עלייה של `50 °F`\". מי צדק?",
+  s5_optA:  "סטודנט א\'",
+  s5_optB:  "סטודנט ב\'",
+  s5_okA:   "נכון. סטודנט ב\' התייחס להתחממות כאילו הייתה קריאה של מדחום: `1.8 · 10 + 32 = 50`.",
+  s5_badB:  "50 מתקבל מ-`1.8 · 10 + 32`, כלומר ממציאת ערך של *נקודה*. אבל התחממות היא *הפרש*, ולכן אין ‎+32.",
+  s5_sortLead: "איזו פעולה נדרשת בכל מקרה?",
+  s5_opts: ["הגדרת היחס (בסרגל)", "מציאת ערך: הפרש", "מציאת ערך: נקודה"],
+  s5_items: [
+    { q: "להמיר `Cp = 1.00 Btu/(lb·°F)` ל-`kJ/(kg·°C)` בסרגל היחידות.", a: 0,
+      ok: "נכון: \"לכל מעלה\" הוא גודל של יחידה. כותבים בסרגל את היחס `1.8 °F / 1 °C`.",
+      bad: "כאן לא ממירים מספר מעלות, אלא את היחידה \"לכל °F\". זו הגדרת היחס, והיא נכנסת לסרגל." },
+    { q: "התנור התקרר ב-`40 °F`. בכמה מעלות צלזיוס הוא התקרר?", a: 1,
+      ok: "נכון: `ΔT(°C) = 40 / 1.8 = 22.2 °C`, בלי 32.",
+      bad: "\"התקרר ב-\" הוא שינוי, כלומר הפרש. לא קריאה של מדחום." },
+    { q: "להציב `70 °F` במשוואת הגז האידיאלי `PV = nRT`.", a: 2,
+      ok: "נכון: T במשוואה היא קריאה, נקודה. ממירים בצד (`70 °F → 294.3 K`) ורק אז מציבים.",
+      bad: "במשוואת הגז T היא הטמפרטורה עצמה, נקודה. ממירים אותה בצד, כולל ההזזה." }
+  ],
+  s5_done: "*סיימתם.* לפני כל המרה שאלו: *אני מגדיר יחס, או מוצא ערך?* ואם מוצאים ערך של טמפרטורה: *נקודה או הפרש?*"
 };
 </script>
 <style>
   :root {
-    --bg: #10141c; --card: #171d28; --card2: #1d2430; --line: #2f3949; --line2: #202836;
-    --text: #e9eef5; --text2: #cbd5e2; --muted: #8b99ae; --dim: #5d6779;
-    --amber: #e3ab45; --amber2: #f0bb57; --teal: #5ed3ae; --purple: #a08df2;
-    --ok-bg: #16281f; --ok-line: #2f5c47; --ok-text: #a8e6cd;
-    --bad-bg: #2a1a1a; --bad-line: #5c3230; --bad-text: #f0b8b3;
+    --ink: #1F2933; --ink2: #52606D; --line: #D9DEE4; --card: #F7F8FA;
+    --g1: #3A7525; --g2: #549E39; --gbg: #EEF5E2; --red: #C00000; --redbg: #FBECEC;
+    --math: 'Cambria Math', 'STIX Two Math', 'Latin Modern Math', 'Times New Roman', serif;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
-  body { font-family: 'Heebo', system-ui, sans-serif; font-weight: 300; line-height: 1.75; }
-  .wrap { max-width: 900px; margin: 0 auto; padding: 28px 16px 40px; }
-  .eyebrow { font-family: 'IBM Plex Mono', monospace; color: var(--amber); font-size: 13px; letter-spacing: 3px; }
-  h1 { font-family: 'Frank Ruhl Libre', serif; font-weight: 900; font-size: clamp(30px, 6vw, 42px); margin: 4px 0 6px; line-height: 1.2; }
-  .subtitle { color: var(--muted); font-size: 16px; max-width: 720px; margin: 0 0 22px; }
-  code { font-family: 'IBM Plex Mono', monospace; color: var(--amber2); font-size: 0.92em; direction: ltr; unicode-bidi: isolate; white-space: nowrap; }
-  b { font-weight: 700; color: var(--text); }
-  .u { direction: ltr; unicode-bidi: isolate; white-space: nowrap; }
+  html, body { margin: 0; background: #ffffff; color: var(--ink); }
+  body { font-family: Arial, 'Helvetica Neue', sans-serif; font-size: 17px; line-height: 1.6; }
+  .slide { max-width: 980px; margin: 0 auto; min-height: 100vh; padding: 22px 28px 16px 22px; border-right: 10px solid var(--g2);
+           display: flex; flex-direction: column; }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .chapter { color: var(--g1); font-weight: 700; font-size: 13px; }
+  .pills { display: flex; gap: 6px; direction: ltr; }
+  .pills button { all: unset; cursor: pointer; width: 34px; height: 6px; border-radius: 4px; background: var(--line); }
+  .pills button.on { background: var(--g1); width: 48px; }
+  .pills button.done { background: #9cc58a; }
+  .pills button:focus-visible { outline: 2px solid var(--g1); outline-offset: 3px; }
+  h1 { font-size: clamp(24px, 4.5vw, 32px); margin: 22px 0 0; font-weight: 700; }
+  .bar { width: 82px; height: 4px; background: var(--g2); border-radius: 2px; margin: 10px 0 20px; }
+  main { flex: 1; }
+  p { margin: 8px 0; }
+  b.g { color: var(--g1); } b.r { color: var(--red); }
+  .m { font-family: var(--math); font-style: italic; direction: ltr; unicode-bidi: isolate; white-space: nowrap; font-size: 1.05em; }
+  .m.up { font-style: normal; }
 
-  .nav { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 24px; }
-  .nav button { all: unset; cursor: pointer; border-top: 3px solid var(--line); padding: 8px 4px 0; text-align: right; }
-  .nav button .n { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--dim); display: block; }
-  .nav button .t { font-size: 14px; color: var(--muted); }
-  .nav button.on { border-top-color: var(--amber); }
-  .nav button.on .n, .nav button.on .t { color: var(--text); font-weight: 500; }
-  .nav button.done .n::after { content: " ✓"; color: var(--teal); }
-  .nav button:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+  .call { background: var(--gbg); border-right: 6px solid var(--g2); border-radius: 4px; padding: 12px 16px; margin: 14px 0;
+          box-shadow: 0 1px 3px rgba(0,0,0,.12); font-weight: 700; }
+  .call.red { border-right-color: var(--red); background: #fff; }
+  .call.plain { font-weight: 400; }
+  .box { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; margin: 12px 0;
+         box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .num { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--g2);
+         color: #fff; font-weight: 700; font-size: 14px; margin-left: 8px; flex: none; }
+  .qrow { display: flex; align-items: baseline; gap: 4px; }
+  .tag { color: var(--g1); font-weight: 700; margin-left: 6px; }
 
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 22px 24px; margin-bottom: 16px; }
-  .card h2 { font-family: 'Frank Ruhl Libre', serif; font-weight: 700; font-size: 24px; margin: 0 0 8px; }
-  .card p { margin: 8px 0; color: var(--text2); }
-  .stage { background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 14px 8px; margin: 14px 0; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+  .col { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--card); box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+  .col h3 { margin: 0; padding: 8px 12px; background: var(--g2); color: #fff; font-size: 17px; text-align: center; }
+  .col.b h3 { background: var(--g1); }
+  .col .in { padding: 10px 14px; text-align: center; }
+  .col .q { color: var(--ink2); font-size: 15px; }
+  .col .eq { font-size: clamp(19px, 3.6vw, 24px); margin: 10px 0 6px; }
+  .col .where { font-size: 15px; color: var(--ink2); }
+  .col .use { font-size: 14px; color: var(--ink2); margin-top: 10px; border-top: 1px dashed var(--line); padding-top: 8px; }
+  .hl { background: #fff2b3; border-radius: 3px; padding: 0 3px; font-style: normal; }
+
+  .stage { border: 1px solid var(--line); border-radius: 6px; padding: 10px; margin: 12px 0; background: #fff; }
   .stage svg { display: block; width: 100%; height: auto; direction: ltr; }
-  .row { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; align-items: center; }
-  .btn { font-family: 'Heebo', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; border-radius: 3px; padding: 9px 18px;
-         background: var(--card2); color: var(--text); border: 1px solid var(--line); }
-  .btn:hover { border-color: var(--muted); }
-  .btn.sel { border-color: var(--amber); color: var(--amber2); }
-  .btn.primary { background: var(--amber); color: #171208; border-color: var(--amber); font-weight: 700; }
+
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 10px 0; }
+  .btn { font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; padding: 8px 18px; border-radius: 4px;
+         border: 1.5px solid var(--g2); background: #fff; color: var(--g1); }
+  .btn:hover { background: var(--gbg); }
+  .btn.sel { background: var(--g2); color: #fff; }
+  .btn.solid { background: var(--g1); border-color: var(--g1); color: #fff; }
   .btn:disabled { opacity: .35; cursor: default; }
-  .btn:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
-  .count { font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: var(--text2); min-height: 1.6em; }
-  .count.m, .count.c { color: var(--teal); } .count.ft, .count.f { color: var(--purple); }
-
-  .eqs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0; }
-  .eq { border: 1px solid var(--line); border-radius: 4px; padding: 12px; background: var(--card2); text-align: center; }
-  .eq .lbl { font-size: 13px; color: var(--muted); display: block; margin-bottom: 6px; }
-  .eq .math { font-family: 'IBM Plex Mono', monospace; font-size: clamp(16px, 3.5vw, 21px); direction: ltr; unicode-bidi: isolate; color: var(--text); white-space: nowrap; }
-  .hl { color: var(--amber2); font-weight: 600; background: rgba(227,171,69,.13); padding: 0 4px; border-radius: 3px; }
-  .tm { color: var(--teal); } .tf { color: var(--purple); }
-
-  .fb { border-radius: 4px; padding: 10px 14px; margin: 10px 0; font-size: 15px; }
-  .fb.ok { background: var(--ok-bg); border: 1px solid var(--ok-line); color: var(--ok-text); }
-  .fb.bad { background: var(--bad-bg); border: 1px solid var(--bad-line); color: var(--bad-text); }
-  .fb b { color: inherit; }
-  .note { border-right: 3px solid var(--amber); padding: 6px 14px; margin: 14px 0 4px; color: var(--text2); background: rgba(227,171,69,.05); }
-  .q { margin-top: 16px; font-weight: 500; color: var(--text); }
+  .btn:focus-visible, input:focus-visible { outline: 2px solid var(--g1); outline-offset: 2px; }
+  input.ans { width: 110px; font: inherit; font-size: 17px; padding: 6px 10px; border: 1.5px solid var(--line); border-radius: 4px;
+              direction: ltr; text-align: center; }
+  .fb { border-radius: 4px; padding: 8px 12px; margin: 8px 0; font-size: 15px; }
+  .fb.ok { background: var(--gbg); color: #234a16; border: 1px solid #b9d6a8; }
+  .fb.bad { background: var(--redbg); color: #7a0d0d; border: 1px solid #efc1c1; }
   .hidden { display: none !important; }
 
-  .tabs { display: flex; gap: 8px; margin: 10px 0; flex-wrap: wrap; }
-  .slider { width: 100%; direction: ltr; accent-color: var(--amber); }
-  .readout { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 8px 0; }
-  .readout .eq .math { font-size: clamp(15px, 3.2vw, 19px); white-space: normal; }
+  .steps { font-family: var(--math); direction: ltr; font-size: clamp(17px, 3.4vw, 22px); line-height: 2.1; }
+  .steps div { opacity: 0; transition: opacity .35s; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .steps div.show { opacity: 1; }
+  .steps .why { font-family: Arial, sans-serif; font-size: 14px; color: var(--g1); direction: rtl; }
 
-  .items { display: grid; gap: 12px; }
-  .item { border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; background: var(--card2); }
-  .item .qq { color: var(--text); margin-bottom: 8px; }
-  .num { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 10px 0; }
-  .num span.lab { flex: 1 1 260px; color: var(--text2); }
-  .num input { width: 110px; font-family: 'IBM Plex Mono', monospace; font-size: 16px; padding: 7px 10px; border-radius: 3px;
-               background: var(--bg); color: var(--text); border: 1px solid var(--line); direction: ltr; text-align: center; }
-  .num input:focus { outline: 2px solid var(--amber); outline-offset: 1px; }
-  .num .res { font-size: 14px; min-width: 120px; }
-  .num .res.ok { color: var(--teal); } .num .res.bad { color: var(--bad-text); }
+  .units { display: grid; gap: 8px; margin: 10px 0; }
+  .urow { display: grid; grid-template-columns: 90px 1fr 80px; align-items: center; gap: 10px; direction: ltr; }
+  .urow .lab { font-family: var(--math); font-size: 21px; text-align: right; }
+  .urow .unit { height: 16px; background: var(--g2); border-radius: 3px; }
+  .urow .uname { font-family: var(--math); color: var(--ink2); }
 
-  .prog h3 { font-size: 16px; font-weight: 700; margin: 0 0 10px; }
-  .prog ul { list-style: none; margin: 0; padding: 0; }
-  .prog li { display: flex; gap: 10px; align-items: center; color: var(--dim); font-size: 15px; margin: 6px 0; }
-  .prog li .dot { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--line); flex: none; display: grid; place-items: center; font-size: 12px; }
-  .prog li.done { color: var(--text2); } .prog li.done .dot { border-color: var(--teal); background: var(--ok-bg); color: var(--teal); }
-  .prog .foot { border-top: 2px solid var(--line); margin-top: 12px; padding-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--dim); }
-  .pager { display: flex; justify-content: space-between; margin-top: 8px; }
+  table.sum { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+  table.sum th { background: var(--g1); color: #fff; padding: 8px; text-align: right; }
+  table.sum td { border-bottom: 1px solid var(--line); padding: 8px; vertical-align: top; background: var(--card); }
+  table.sum td:first-child { font-weight: 700; color: var(--g1); white-space: nowrap; }
+  .item { margin: 10px 0; }
 
-  @media (max-width: 640px) {
-    .card { padding: 18px 14px; }
-    .eqs, .readout { grid-template-columns: 1fr; }
-    .nav button .t { font-size: 12px; }
+  footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--line);
+           margin-top: 18px; padding-top: 10px; font-size: 12px; color: var(--ink2); }
+  .nav { display: flex; gap: 8px; }
+  .pg { font-variant-numeric: tabular-nums; }
+
+  @media (max-width: 680px) {
+    .slide { padding: 16px 16px 12px 14px; border-right-width: 6px; }
+    .cols { grid-template-columns: 1fr; }
+    .urow { grid-template-columns: 70px 1fr 64px; }
+    table.sum, table.sum tbody, table.sum tr, table.sum td { display: block; width: 100%; }
+    table.sum thead { display: none; }
+    table.sum tr { margin-bottom: 8px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+    table.sum td { border: none; }
+    footer .ft { display: none; }
   }
 </style>
 </head>
 <body>
-<div class="wrap" id="app"></div>
+<div class="slide">
+  <div class="top"><span class="chapter" id="chapter"></span><div class="pills" id="pills" aria-label="מסכים"></div></div>
+  <h1 id="title"></h1><div class="bar"></div>
+  <main id="screens"></main>
+  <footer><span class="ft" id="foot"></span><div class="nav">
+    <button type="button" class="btn" id="prev"></button>
+    <button type="button" class="btn solid" id="next"></button>
+  </div><span class="pg" id="pg"></span></footer>
+</div>
 
 <script>
 (function () {
   "use strict";
   const T = window.LOMDA_TEXT;
+  const N = 5;
 
-  // ---------- helpers ----------
-  function esc(s) {
-    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  }
-  // *bold* and `code` markup used in LOMDA_TEXT
+  // ---------- text helpers ----------
+  const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  // `math`, *green bold*, ^red bold^
   function fmt(s) {
-    return esc(s).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*([^*]+)\*/g, "<b>$1</b>")
-      // keep "25 °C" / "°F" in reading order inside Hebrew sentences
-      // (only "−" counts as a minus sign: the "-" in "מ-20" is a Hebrew prefix)
-      .replace(/(?:−?\d[\d.]*\s?)?°[CFR]/g, '<span class="u">$&</span>');
+    return esc(s)
+      .replace(/`([^`]+)`/g, '<span class="m">$1</span>')
+      .replace(/\*([^*]+)\*/g, '<b class="g">$1</b>')
+      .replace(/\^([^^]+)\^/g, '<b class="r">$1</b>');
   }
-  function el(html) {
-    const t = document.createElement("template");
-    t.innerHTML = html.trim();
-    return t.content.firstElementChild;
+  function el(html) { const t = document.createElement("template"); t.innerHTML = html.trim(); return t.content.firstElementChild; }
+  const num = (v) => { const x = parseFloat(String(v).replace(",", ".").replace("−", "-")); return isNaN(x) ? null : x; };
+  function setFb(box, ok, text) { box.className = "fb " + (ok ? "ok" : "bad"); box.innerHTML = fmt(text); }
+  const near = (a, tol) => (v) => Math.abs(v - a) <= tol;
+
+  // A number question. cases = [{test(v), ok, text}], first match wins; fallback otherwise.
+  function numQ(label, cases, fallback, onOk) {
+    const w = el(`<div class="box"><div>${label}</div>
+      <div class="row"><input class="ans" type="text" inputmode="decimal" aria-label="תשובה"><button type="button" class="btn">${esc(T.btnCheck)}</button></div>
+      <div class="fb hidden" role="status"></div></div>`);
+    const inp = w.querySelector("input"), out = w.querySelector(".fb");
+    function check() {
+      const v = num(inp.value);
+      const hit = v === null ? null : cases.find((c) => c.test(v));
+      if (hit) { setFb(out, hit.ok, hit.text); if (hit.ok && onOk) onOk(); }
+      else setFb(out, false, fallback);
+    }
+    w.querySelector(".btn").addEventListener("click", check);
+    inp.addEventListener("keydown", (e) => { if (e.key === "Enter") check(); });
+    return w;
   }
-  function fb(box, ok, text) {
-    box.className = "fb " + (ok ? "ok" : "bad");
-    box.innerHTML = fmt(text);
-  }
-  function parseNum(v) {
-    const x = parseFloat(String(v).replace(",", ".").replace("−", "-"));
-    return isNaN(x) ? null : x;
-  }
-  const r1 = (x) => (Math.round(x * 10) / 10).toFixed(1);
-
-  // ---------- state ----------
-  const state = { step: 0, done: [false, false, false, false, false] };
-  const app = document.getElementById("app");
-
-  app.appendChild(el(`
-    <header>
-      <div class="eyebrow">${fmt(T.eyebrow)}</div>
-      <h1>${fmt(T.title)}</h1>
-      <p class="subtitle">${fmt(T.subtitle)}</p>
-    </header>`));
-
-  const nav = el(`<nav class="nav" aria-label="שלבים"></nav>`);
-  [T.nav1, T.nav2, T.nav3, T.nav4, T.nav5].forEach((t, i) => {
-    const b = el(`<button type="button"><span class="n">0${i + 1}</span><span class="t">${fmt(t)}</span></button>`);
-    b.addEventListener("click", () => go(i));
-    nav.appendChild(b);
-  });
-  app.appendChild(nav);
-
-  const stepsBox = el(`<div></div>`);
-  app.appendChild(stepsBox);
-
-  const prog = el(`<section class="card prog"><h3>${fmt(T.progTitle)}</h3><ul></ul><div class="foot">${fmt(T.progFoot)}</div></section>`);
-  [T.prog1, T.prog2, T.prog3, T.prog4, T.prog5].forEach((t) => {
-    prog.querySelector("ul").appendChild(el(`<li><span class="dot"></span><span>${fmt(t)}</span></li>`));
-  });
-  app.appendChild(prog);
-
-  const pager = el(`<div class="pager">
-      <button type="button" class="btn primary" id="next">${fmt(T.btnNext)}</button>
-      <button type="button" class="btn" id="prev">${fmt(T.btnPrev)}</button>
-    </div>`);
-  app.appendChild(pager);
-  pager.querySelector("#next").addEventListener("click", () => go(state.step + 1));
-  pager.querySelector("#prev").addEventListener("click", () => go(state.step - 1));
-
-  function markDone(i) {
-    state.done[i] = true;
-    render();
-  }
-  function render() {
-    [...nav.children].forEach((b, i) => {
-      b.classList.toggle("on", i === state.step);
-      b.classList.toggle("done", state.done[i]);
-      b.setAttribute("aria-current", i === state.step ? "step" : "false");
-    });
-    [...stepsBox.children].forEach((s, i) => s.classList.toggle("hidden", i !== state.step));
-    [...prog.querySelectorAll("li")].forEach((li, i) => {
-      li.classList.toggle("done", state.done[i]);
-      li.querySelector(".dot").textContent = state.done[i] ? "✓" : "";
-    });
-    pager.querySelector("#prev").disabled = state.step === 0;
-    pager.querySelector("#next").disabled = state.step === 4;
-  }
-  function go(i) {
-    if (i < 0 || i > 4) return;
-    state.step = i;
-    render();
-    // let a step redraw once it is visible (its drawing depends on the width)
-    document.dispatchEvent(new CustomEvent("lomda:step", { detail: i }));
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  // A two-option question; onOk runs once the right option is picked.
-  function choice(container, question, options, onOk) {
-    const box = el(`<div><p class="q">${fmt(question)}</p><div class="row"></div><div class="fb hidden"></div></div>`);
-    const row = box.querySelector(".row"), out = box.querySelector(".fb");
-    options.forEach((o) => {
+  // A buttons question. opts = [{label, ok, text}]
+  function choiceQ(label, opts, onOk) {
+    const w = el(`<div class="box"><div>${label}</div><div class="row"></div><div class="fb hidden" role="status"></div></div>`);
+    const row = w.querySelector(".row"), out = w.querySelector(".fb");
+    opts.forEach((o) => {
       const b = el(`<button type="button" class="btn">${fmt(o.label)}</button>`);
       b.addEventListener("click", () => {
         row.querySelectorAll(".btn").forEach((x) => x.classList.remove("sel"));
         b.classList.add("sel");
-        fb(out, o.ok, o.fb);
+        setFb(out, o.ok, o.text);
         if (o.ok && onOk) onOk();
       });
       row.appendChild(b);
     });
-    container.appendChild(box);
-    return box;
+    return w;
   }
 
-  // Sticks of width `stick` px tiled over a bar of width `len` px, starting at x0.
-  function sticksSvg(len, stick, color, labelEvery, totalLabel) {
-    const H = 120, x0 = 40, y = 58, W = len + 80;
-    let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(totalLabel)}">`;
-    s += `<rect x="${x0}" y="${y - 22}" width="${len}" height="20" fill="#c99a3e" opacity=".9" rx="2"/>`;
-    let n = 0;
-    for (let x = 0; x < len - 0.5; x += stick, n++) {
-      const w = Math.min(stick, len - x);
-      const partial = w < stick - 0.5;
-      s += `<rect x="${x0 + x + 1}" y="${y + 4}" width="${w - 2}" height="14" rx="2" fill="${color}" opacity="${partial ? 0.35 : 0.85}"/>`;
-      if (!partial && ((n + 1) % labelEvery === 0)) {
-        s += `<text x="${x0 + x + w - 2}" y="${y + 36}" fill="${color}" font-family="IBM Plex Mono" font-size="12" text-anchor="end">${n + 1}</text>`;
+  const H = (s) => `<span class="hl">${s}</span>`;
+  // A fraction for the unit ruler, as inline HTML.
+  const frac = (top, bot) => `<span style="display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.25">
+      <span style="border-bottom:1.5px solid currentColor;padding:0 4px">${top}</span><span style="padding:0 4px">${bot}</span></span>`;
+  // Two green-header columns: "define the ratio" vs "find the value".
+  function twoCols(a, b) {
+    const col = (c, cls) => `<div class="col ${cls}"><h3>${fmt(c.head)}</h3><div class="in"><div class="q">${fmt(c.q)}</div>
+        <div class="eq m up">${c.eq}</div><div class="where">${fmt(c.where)}</div>
+        <div class="use">${fmt(c.use)}<div class="m up" style="font-size:19px;margin-top:4px">${c.useEq}</div></div></div></div>`;
+    return el(`<div class="cols">${col(a, "")}${col(b, "b")}</div>`);
+  }
+  // A reference bar covered by sticks; rows = [{len, stick, color, label}]. Returns SVG.
+  function sticks(rows, width) {
+    const W = width || 640, x0 = 20, rowH = 46;
+    let s = `<svg viewBox="0 0 ${W} ${rows.length * rowH + 14}">`;
+    rows.forEach((r, i) => {
+      const y = 10 + i * rowH;
+      for (let x = 0; x < r.len - 0.5; x += r.stick) {
+        const w = Math.min(r.stick, r.len - x), part = w < r.stick - 0.5;
+        s += `<rect x="${x0 + x + 1.5}" y="${y}" width="${w - 3}" height="22" rx="3" fill="${r.color}" opacity="${part ? .35 : 1}"/>`;
       }
-    }
-    s += `<text x="${x0}" y="${y - 30}" fill="#8b99ae" font-family="IBM Plex Mono" font-size="12">${esc(totalLabel)}</text>`;
-    s += `</svg>`;
-    return s;
+      s += `<text x="${x0 + r.len + 12}" y="${y + 17}" font-family="Arial" font-size="17" fill="#1F2933">${esc(r.label)}</text>`;
+    });
+    return s + `</svg>`;
   }
 
-  // ================= STEP 1 =================
+  // ---------- frame ----------
+  const state = { i: 0, done: Array(N).fill(false) };
+  document.getElementById("chapter").textContent = T.chapter;
+  document.getElementById("foot").textContent = T.footer;
+  const pills = document.getElementById("pills"), screens = document.getElementById("screens");
+  const titles = [T.s1_title, T.s2_title, T.s3_title, T.s4_title, T.s5_title];
+  titles.forEach((t, i) => {
+    const b = el(`<button type="button" aria-label="מסך ${i + 1}: ${esc(t)}"></button>`);
+    b.addEventListener("click", () => go(i));
+    pills.appendChild(b);
+  });
+  const prev = document.getElementById("prev"), next = document.getElementById("next");
+  prev.textContent = T.btnPrev; next.textContent = T.btnNext;
+  prev.addEventListener("click", () => go(state.i - 1));
+  next.addEventListener("click", () => go(state.i + 1));
+  const done = (i) => { state.done[i] = true; paint(); };
+  function paint() {
+    [...pills.children].forEach((b, i) => { b.classList.toggle("on", i === state.i); b.classList.toggle("done", state.done[i] && i !== state.i); });
+    [...screens.children].forEach((s, i) => s.classList.toggle("hidden", i !== state.i));
+    document.getElementById("title").innerHTML = fmt(titles[state.i]);
+    document.getElementById("pg").textContent = `${state.i + 1} / ${N}`;
+    prev.disabled = state.i === 0; next.disabled = state.i === N - 1;
+  }
+  function go(i) {
+    if (i < 0 || i >= N) return;
+    state.i = i; paint();
+    // a screen whose drawing depends on its width redraws once visible
+    document.dispatchEvent(new CustomEvent("screen", { detail: i }));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // ================= 1: two questions =================
   (function () {
-    const c = el(`<section class="card"></section>`);
-    c.innerHTML = `<h2>${fmt(T.s1_title)}</h2><p>${fmt(T.s1_intro)}</p>
-      <div class="row"><button type="button" class="btn" data-k="m">${fmt(T.s1_btnM)}</button>
-      <button type="button" class="btn" data-k="ft">${fmt(T.s1_btnFt)}</button></div>
-      <div class="stage"></div><div class="count"></div><div class="after hidden"></div>`;
-    const stage = c.querySelector(".stage"), count = c.querySelector(".count"), after = c.querySelector(".after");
-    const LEN = 560, PER_M = LEN / 2;
-    const seen = { m: false, ft: false };
-    function show(k) {
-      c.querySelectorAll("[data-k]").forEach((b) => b.classList.toggle("sel", b.dataset.k === k));
-      if (k === "m") stage.innerHTML = sticksSvg(LEN, PER_M, "#5ed3ae", 1, "2 m");
-      else stage.innerHTML = sticksSvg(LEN, PER_M / 3.28, "#a08df2", 1, "2 m");
-      count.className = "count " + k;
-      count.innerHTML = fmt(k === "m" ? T.s1_countM : T.s1_countFt);
-      seen[k] = true;
-      if (seen.m && seen.ft) after.classList.remove("hidden");
-    }
-    c.querySelectorAll("[data-k]").forEach((b) => b.addEventListener("click", () => show(b.dataset.k)));
-    stage.innerHTML = sticksSvg(LEN, LEN, "transparent", 99, "2 m");
-
-    choice(after, T.s1_q, [
-      { label: T.s1_qA, ok: true, fb: T.s1_qOk },
-      { label: T.s1_qB, ok: false, fb: T.s1_qBad }
-    ], () => eqBox.classList.remove("hidden"));
-
-    const eqBox = el(`<div class="hidden"><p>${fmt(T.s1_eqIntro)}</p>
-      <div class="eqs">
-        <div class="eq"><span class="lbl">${fmt(T.s1_eqUnit)}</span><span class="math"><span class="tm">1 m</span> = <span class="hl">3.28</span> <span class="tf">ft</span></span></div>
-        <div class="eq"><span class="lbl">${fmt(T.s1_eqNum)}</span><span class="math">N(<span class="tf">ft</span>) = <span class="hl">3.28</span> · N(<span class="tm">m</span>)</span></div>
-      </div></div>`);
-    after.appendChild(eqBox);
-    choice(eqBox, T.s1_flipQ, [
-      { label: T.s1_flipA, ok: true, fb: T.s1_flipOk },
-      { label: T.s1_flipB, ok: false, fb: T.s1_flipBad }
-    ], () => { note.classList.remove("hidden"); markDone(0); });
-    const note = el(`<div class="note hidden">${fmt(T.s1_note)}</div>`);
-    eqBox.appendChild(note);
-    stepsBox.appendChild(c);
+    const s = el(`<section></section>`);
+    s.appendChild(el(`<p>${fmt(T.s1_lead)}</p>`));
+    const M = 220, FT = M / 3.28;
+    s.appendChild(el(`<div class="stage">${sticks([
+      { len: M, stick: M, color: "#549E39", label: "1 m" },
+      { len: M, stick: FT, color: "#8E7CC3", label: "? ft" }])}</div>`));
+    const partB = el(`<div class="hidden"></div>`);
+    s.appendChild(numQ(`<div class="qrow"><span class="num">1</span><span><span class="tag">${fmt(T.s1_qA_tag)}</span>${fmt(T.s1_qA)}</span></div>`,
+      [{ test: near(3.28, 0.03), ok: true, text: T.s1_qA_ok }], T.s1_qA_bad, () => partB.classList.remove("hidden")));
+    partB.appendChild(el(`<div class="stage">${sticks([
+      { len: 2 * M, stick: M, color: "#549E39", label: "2 m" },
+      { len: 2 * M, stick: FT, color: "#8E7CC3", label: "? ft" }])}</div>`));
+    const names = el(`<div class="call plain hidden">${fmt(T.s1_names)}</div>`);
+    partB.appendChild(numQ(`<div class="qrow"><span class="num">2</span><span><span class="tag">${fmt(T.s1_qB_tag)}</span>${fmt(T.s1_qB)}</span></div>`,
+      [{ test: near(6.56, 0.06), ok: true, text: T.s1_qB_ok }], T.s1_qB_bad,
+      () => { names.classList.remove("hidden"); done(0); }));
+    partB.appendChild(names);
+    s.appendChild(partB);
+    screens.appendChild(s);
   })();
 
-  // ================= STEP 2 =================
+  // ================= 2: inverse operations =================
   (function () {
-    const c = el(`<section class="card hidden"></section>`);
-    c.innerHTML = `<h2>${fmt(T.s2_title)}</h2><p>${fmt(T.s2_intro)}</p>
-      <div class="row"><button type="button" class="btn" data-k="c">${fmt(T.s2_btnC)}</button>
-      <button type="button" class="btn" data-k="f">${fmt(T.s2_btnF)}</button></div>
-      <div class="stage"></div><div class="count"></div>
-      <div class="after hidden">
-        <div class="num"><span class="lab">${fmt(T.s2_ask)}</span><input type="text" inputmode="decimal" aria-label="מעלות פרנהייט במעלת צלזיוס"><button type="button" class="btn">${fmt(T.s5_check)}</button></div>
-        <div class="fb hidden"></div>
-        <div class="eqbox hidden"><p>${fmt(T.s2_eqIntro)}</p>
-          <div class="eqs">
-            <div class="eq"><span class="lbl">${fmt(T.s2_eqUnit)}</span><span class="math"><span class="tm">1 °C</span> = <span class="hl">1.8</span> <span class="tf">°F</span></span></div>
-            <div class="eq"><span class="lbl">${fmt(T.s2_eqNum)}</span><span class="math">ΔT(<span class="tf">°F</span>) = <span class="hl">1.8</span> · ΔT(<span class="tm">°C</span>)</span></div>
-          </div>
-          <div class="note">${fmt(T.s2_note)}</div>
-        </div>
-      </div>`;
-    const stage = c.querySelector(".stage"), count = c.querySelector(".count"), after = c.querySelector(".after");
-    const LEN = 560, PER_C = LEN / 10;
-    const seen = { c: false, f: false };
-    function show(k) {
-      c.querySelectorAll("[data-k]").forEach((b) => b.classList.toggle("sel", b.dataset.k === k));
-      stage.innerHTML = k === "c"
-        ? sticksSvg(LEN, PER_C, "#5ed3ae", 1, "20 °C → 30 °C")
-        : sticksSvg(LEN, PER_C / 1.8, "#a08df2", 2, "20 °C → 30 °C");
-      count.className = "count " + k;
-      count.innerHTML = fmt(k === "c" ? T.s2_countC : T.s2_countF);
-      seen[k] = true;
-      if (seen.c && seen.f) after.classList.remove("hidden");
-    }
-    c.querySelectorAll("[data-k]").forEach((b) => b.addEventListener("click", () => show(b.dataset.k)));
-    stage.innerHTML = sticksSvg(LEN, LEN, "transparent", 99, "20 °C → 30 °C");
+    const s = el(`<section class="hidden"></section>`);
+    s.appendChild(twoCols(
+      { head: T.s2_colA, q: T.s2_colA_q, eq: `1 m = ${H("3.28")} ft`, where: T.s2_colA_where, use: T.s2_colA_use,
+        useEq: `${frac("3.28 ft", "1 m")} &nbsp;או&nbsp; ${frac("1 m", "3.28 ft")}` },
+      { head: T.s2_colB, q: T.s2_colB_q, eq: `L(ft) = ${H("3.28")} · L(m)`, where: T.s2_colB_where, use: T.s2_colB_use,
+        useEq: `2 m &nbsp;→&nbsp; 3.28 · 2 = 6.56 ft` }));
+    s.appendChild(el(`<div class="call red">${fmt(T.s2_alert)}</div>`));
+    s.appendChild(el(`<p>${fmt(T.s2_why)}</p>`));
 
-    const input = after.querySelector("input"), out = after.querySelector(".fb");
-    function check() {
-      const v = parseNum(input.value);
-      const ok = v !== null && Math.abs(v - 1.8) < 0.01;
-      fb(out, ok, ok ? T.s2_ok : T.s2_bad);
-      if (ok) { after.querySelector(".eqbox").classList.remove("hidden"); markDone(1); }
+    const steps = el(`<div class="box"><div class="steps">
+        <div><span>2 m = 2 × (1 m)</span><span class="why">מספר × יחידה</span></div>
+        <div><span>&nbsp;&nbsp;&nbsp;&nbsp;= 2 × (3.28 ft)</span><span class="why">הגדרת היחס: מחליפים את היחידה</span></div>
+        <div><span>&nbsp;&nbsp;&nbsp;&nbsp;= (2 × 3.28) ft</span><span class="why">מקבצים את המספרים</span></div>
+        <div><span>&nbsp;&nbsp;&nbsp;&nbsp;= 6.56 ft</span><span class="why">זה הערך הנומרי</span></div>
+      </div><div class="row"><button type="button" class="btn">${esc(T.s2_btnSteps)}</button></div></div>`);
+    const lines = steps.querySelectorAll(".steps div");
+    let k = 0;
+    steps.querySelector(".btn").addEventListener("click", (e) => {
+      if (k < lines.length) lines[k++].classList.add("show");
+      if (k === lines.length) e.target.disabled = true;
+    });
+    s.appendChild(steps);
+
+    // unit size vs number: the product is always the same table
+    const U = [{ n: "m", per: 1 }, { n: "ft", per: 3.28 }, { n: "cm", per: 100 }];
+    const uBox = el(`<div class="box"><div>${fmt(T.s2_unitsLead)}</div><div class="row"></div><div class="units"></div></div>`);
+    const ubtns = uBox.querySelector(".row"), uview = uBox.querySelector(".units");
+    function showUnit(u) {
+      ubtns.querySelectorAll(".btn").forEach((b) => b.classList.toggle("sel", b.dataset.u === u.n));
+      const size = 100 / u.per, value = +(2 * u.per).toFixed(2);
+      uview.innerHTML = `
+        <div class="urow"><span class="lab" style="color:#3A7525;font-weight:700">${value}</span><span style="font-size:14px;color:#52606D;text-align:left">← המספר</span><span></span></div>
+        <div class="urow"><span class="lab">×</span><span class="unit" style="width:${Math.max(size / 2, 0.8)}%"></span><span class="uname">1 ${u.n}</span></div>
+        <div class="urow"><span class="lab">=</span><span class="unit" style="width:100%;background:#C9A227"></span><span class="uname">2 m</span></div>`;
     }
-    after.querySelector(".num .btn").addEventListener("click", check);
-    input.addEventListener("keydown", (e) => { if (e.key === "Enter") check(); });
-    stepsBox.appendChild(c);
+    U.forEach((u) => {
+      const b = el(`<button type="button" class="btn" data-u="${u.n}">${u.n}</button>`);
+      b.addEventListener("click", () => showUnit(u));
+      ubtns.appendChild(b);
+    });
+    showUnit(U[0]);
+    s.appendChild(uBox);
+
+    s.appendChild(choiceQ(fmt(T.s2_check), [
+      { label: T.s2_optA, ok: true, text: T.s2_okA },
+      { label: T.s2_optB, ok: false, text: T.s2_badB }], () => done(1)));
+    screens.appendChild(s);
   })();
 
-  // ================= STEP 3 =================
+  // ================= 3: a degree is a unit =================
   (function () {
-    const c = el(`<section class="card hidden"></section>`);
-    c.innerHTML = `<h2>${fmt(T.s3_title)}</h2><p>${fmt(T.s3_intro)}</p>
-      <div class="tabs"><button type="button" class="btn sel" data-m="point">${fmt(T.s3_tabPoint)}</button>
-      <button type="button" class="btn" data-m="gap">${fmt(T.s3_tabGap)}</button></div>
-      <div class="stage"></div>
-      <div class="sliders"></div>
-      <div class="readout"></div>
-      <div class="note"></div>
-      <div class="qbox"></div>`;
-    const stage = c.querySelector(".stage"), sl = c.querySelector(".sliders"),
-          ro = c.querySelector(".readout"), note = c.querySelector(".note");
-    const CMIN = -25, CMAX = 110, W = 640, X0 = 30, X1 = W - 30;
-    const xC = (tc) => X0 + (tc - CMIN) / (CMAX - CMIN) * (X1 - X0);
-    let mode = "point", a = 25, b = 60;
-    const seenGap = { moved: false };
+    const s = el(`<section class="hidden"></section>`);
+    s.appendChild(el(`<p>${fmt(T.s3_lead)}</p>`));
+    const L = 470;
+    s.appendChild(el(`<div class="stage">${sticks([
+      { len: L, stick: L / 10, color: "#549E39", label: T.s3_lblC },
+      { len: L, stick: L / 18, color: "#8E7CC3", label: T.s3_lblF }], 640)}</div>`));
+    s.appendChild(twoCols(
+      { head: T.s2_colA, q: T.s2_colA_q, eq: `1 °C = ${H("1.8")} °F`, where: T.s3_colA_where, use: T.s3_colA_use,
+        useEq: `${frac("1 °C", "1.8 °F")} &nbsp;או&nbsp; ${frac("1.8 °F", "1 °C")}` },
+      { head: T.s2_colB, q: T.s2_colB_q, eq: `ΔT(°F) = ${H("1.8")} · ΔT(°C)`, where: T.s3_colB_where, use: T.s3_colB_use,
+        useEq: `10 °C &nbsp;→&nbsp; 1.8 · 10 = 18 °F` }));
+    s.appendChild(el(`<div class="call plain">${fmt(T.s3_note)}</div>`));
+    s.appendChild(numQ(fmt(T.s3_ask), [
+      { test: near(45, 0.6), ok: true, text: T.s3_ok },
+      { test: near(13.9, 0.3), ok: false, text: T.s3_bad13 },
+      { test: near(77, 0.6), ok: false, text: T.s3_bad77 }], T.s3_badX, () => done(2)));
+    screens.appendChild(s);
+  })();
 
-    function svg() {
-      // On a phone the drawing shrinks, so labels are drawn larger and sparser.
-      const narrow = stage.clientWidth > 0 && stage.clientWidth < 560;
-      const fs = narrow ? 22 : 11, fsBig = narrow ? 24 : 13, cStep = narrow ? 20 : 10, fStep = narrow ? 40 : 20;
-      let s = `<svg viewBox="0 0 ${W} 210" role="img" aria-label="סולם צלזיוס מעל סולם פרנהייט">`;
-      const yC = 60, yF = 140;
-      s += `<line x1="${X0}" y1="${yC}" x2="${X1}" y2="${yC}" stroke="#5ed3ae" stroke-width="2"/>`;
-      s += `<line x1="${X0}" y1="${yF}" x2="${X1}" y2="${yF}" stroke="#a08df2" stroke-width="2"/>`;
-      s += `<text x="${X0}" y="${yC - 22 - fsBig}" fill="#5ed3ae" font-family="IBM Plex Mono" font-size="${fsBig}">°C</text>`;
-      s += `<text x="${X0}" y="${yF + 20 + 2 * fs}" fill="#a08df2" font-family="IBM Plex Mono" font-size="${fsBig}">°F</text>`;
-      for (let t = -20; t <= CMAX; t += 10) {
-        const x = xC(t), z = t === 0;
-        s += `<line x1="${x}" y1="${yC - (z ? 14 : 7)}" x2="${x}" y2="${yC}" stroke="#5ed3ae" stroke-width="${z ? 2.5 : 1}"/>`;
-        if (t % cStep === 0) s += `<text x="${x}" y="${yC - 18}" fill="${z ? "#e9eef5" : "#5ed3ae"}" font-family="IBM Plex Mono" font-size="${z ? fsBig : fs}" text-anchor="middle">${t}</text>`;
-      }
-      for (let f = -20; f <= 230; f += 20) {
-        const x = xC((f - 32) / 1.8);
-        if (x < X0 - 1 || x > X1 + 1) continue;
-        s += `<line x1="${x}" y1="${yF}" x2="${x}" y2="${yF + 7}" stroke="#a08df2" stroke-width="1"/>`;
-        if (f % fStep === 0) s += `<text x="${x}" y="${yF + 12 + fs}" fill="#a08df2" font-family="IBM Plex Mono" font-size="${fs}" text-anchor="middle">${f}</text>`;
-      }
-      // the two zeros
-      const x0c = xC(0), x0f = xC(-32 / 1.8);
-      s += `<line x1="${x0f}" y1="${yF - 14}" x2="${x0f}" y2="${yF}" stroke="#e9eef5" stroke-width="2.5"/>`;
-      if (!narrow) s += `<text x="${x0f}" y="${yF + 40}" fill="#e9eef5" font-family="IBM Plex Mono" font-size="12" text-anchor="middle">0 °F</text>`;
-      s += `<line x1="${x0c}" y1="${yC}" x2="${x0c}" y2="${yF}" stroke="#e9eef5" stroke-dasharray="3 4" opacity=".5"/>`;
-      s += `<text x="${x0c + 4}" y="${(yC + yF) / 2 + 4}" fill="#cbd5e2" font-family="IBM Plex Mono" font-size="${fs}">0 °C = 32 °F</text>`;
-      const marks = mode === "point" ? [a] : [a, b];
-      if (mode === "gap") {
-        const xa = xC(Math.min(a, b)), xb = xC(Math.max(a, b));
-        s += `<rect x="${xa}" y="${yC + 4}" width="${xb - xa}" height="${yF - yC - 8}" fill="#e3ab45" opacity=".12"/>`;
-      }
-      marks.forEach((t) => {
+  // ================= 4: a thermometer reading =================
+  (function () {
+    const s = el(`<section class="hidden"></section>`);
+    s.appendChild(el(`<p>${fmt(T.s4_lead)}</p>`));
+    const stage = el(`<div class="stage"></div>`);
+    const slider = el(`<input type="range" min="-20" max="100" step="1" value="25" style="width:100%;direction:ltr;accent-color:#3A7525" aria-label="טמפרטורה במעלות צלזיוס">`);
+    const read = el(`<div class="box" style="text-align:center"></div>`);
+    s.appendChild(stage); s.appendChild(slider); s.appendChild(read);
+    const W = 640, X0 = 30, X1 = W - 30, CMIN = -25, CMAX = 105;
+    const xC = (c) => X0 + (c - CMIN) / (CMAX - CMIN) * (X1 - X0);
+    function draw() {
+      const c = +slider.value, f = 1.8 * c + 32;
+      // on a phone the drawing shrinks, so labels are larger and sparser
+      const narrow = stage.clientWidth > 0 && stage.clientWidth < 520;
+      const fs = narrow ? 22 : 13, cs = narrow ? 20 : 10, fstep = narrow ? 40 : 20;
+      const yC = 46, yF = 130;
+      let g = `<svg viewBox="0 0 ${W} 190">`;
+      g += `<line x1="${X0}" y1="${yC}" x2="${X1}" y2="${yC}" stroke="#549E39" stroke-width="3"/>`;
+      g += `<line x1="${X0}" y1="${yF}" x2="${X1}" y2="${yF}" stroke="#8E7CC3" stroke-width="3"/>`;
+      for (let t = -20; t <= 100; t += 10) {
         const x = xC(t);
-        s += `<line x1="${x}" y1="${yC - 4}" x2="${x}" y2="${yF + 4}" stroke="#e3ab45" stroke-width="2.5"/>`;
-        s += `<circle cx="${x}" cy="${yC}" r="4.5" fill="#e3ab45"/><circle cx="${x}" cy="${yF}" r="4.5" fill="#e3ab45"/>`;
-      });
-      return s + `</svg>`;
-    }
-    function slider(val, label, onIn) {
-      const w = el(`<label style="display:block;margin:6px 0"><span style="font-size:13px;color:var(--muted)">${fmt(label)}</span>
-        <input class="slider" type="range" min="-20" max="105" step="1" value="${val}"></label>`);
-      w.querySelector("input").addEventListener("input", (e) => onIn(+e.target.value));
-      return w;
-    }
-    function update() {
-      stage.innerHTML = svg();
-      if (mode === "point") {
-        ro.innerHTML = `<div class="eq"><span class="lbl">צלזיוס</span><span class="math"><span class="tm">T = ${a} °C</span></span></div>
-          <div class="eq"><span class="lbl">פרנהייט</span><span class="math"><span class="tf">T</span> = 1.8 · ${a} <span class="hl">+ 32</span> = <span class="tf">${r1(1.8 * a + 32)} °F</span></span></div>`;
-        note.innerHTML = fmt(T.s3_pointNote);
-      } else {
-        const d = Math.abs(b - a), fa = 1.8 * a + 32, fbv = 1.8 * b + 32;
-        ro.innerHTML = `<div class="eq"><span class="lbl">צלזיוס</span><span class="math"><span class="tm">ΔT = |${b} − ${a}| = ${d} °C</span></span></div>
-          <div class="eq"><span class="lbl">פרנהייט</span><span class="math"><span class="tf">ΔT</span> = |${r1(fbv)} − ${r1(fa)}| = <span class="tf">${r1(1.8 * d)} °F</span> = <span class="hl">1.8</span> · ${d}</span></div>`;
-        note.innerHTML = fmt(T.s3_gapNote);
+        g += `<line x1="${x}" y1="${yC - 8}" x2="${x}" y2="${yC}" stroke="#549E39" stroke-width="${t === 0 ? 3 : 1.5}"/>`;
+        if (t % cs === 0) g += `<text x="${x}" y="${yC - 14}" text-anchor="middle" font-family="Arial" font-size="${fs}" fill="${t === 0 ? "#C00000" : "#3A7525"}" font-weight="${t === 0 ? 700 : 400}">${t}</text>`;
       }
-    }
-    function setMode(m) {
-      mode = m;
-      c.querySelectorAll("[data-m]").forEach((x) => x.classList.toggle("sel", x.dataset.m === m));
-      sl.innerHTML = "";
-      if (m === "point") sl.appendChild(slider(a, "טמפרטורה", (v) => { a = v; update(); }));
-      else {
-        sl.appendChild(slider(a, "קריאה ראשונה", (v) => { a = v; seenGap.moved = true; update(); }));
-        sl.appendChild(slider(b, "קריאה שנייה", (v) => { b = v; seenGap.moved = true; update(); }));
-        qbox.classList.remove("hidden");
+      for (let ff = -20; ff <= 220; ff += 20) {
+        const x = xC((ff - 32) / 1.8);
+        if (x < X0 - 1 || x > X1 + 1) continue;
+        g += `<line x1="${x}" y1="${yF}" x2="${x}" y2="${yF + 8}" stroke="#8E7CC3" stroke-width="${ff === 0 ? 3 : 1.5}"/>`;
+        if (ff % fstep === 0) g += `<text x="${x}" y="${yF + 12 + fs}" text-anchor="middle" font-family="Arial" font-size="${fs}" fill="${ff === 0 ? "#C00000" : "#6b5aa6"}" font-weight="${ff === 0 ? 700 : 400}">${ff}</text>`;
       }
-      update();
+      // where 0 °C sits on the F scale
+      g += `<line x1="${xC(0)}" y1="${yC}" x2="${xC(0)}" y2="${yF}" stroke="#C00000" stroke-dasharray="4 4"/>`;
+      g += `<text x="${xC(0) + 6}" y="${(yC + yF) / 2 + 5}" font-family="Arial" font-size="${fs}" fill="#C00000">0 °C = 32 °F</text>`;
+      const x = xC(c);
+      g += `<line x1="${x}" y1="${yC - 2}" x2="${x}" y2="${yF + 2}" stroke="#1F2933" stroke-width="2.5"/>`;
+      g += `<circle cx="${x}" cy="${yC}" r="6" fill="#1F2933"/><circle cx="${x}" cy="${yF}" r="6" fill="#1F2933"/>`;
+      g += `<text x="${X1}" y="${yC + 26}" text-anchor="end" font-family="Arial" font-size="${fs}" fill="#3A7525">°C</text>`;
+      g += `<text x="${X1}" y="${yF - 12}" text-anchor="end" font-family="Arial" font-size="${fs}" fill="#6b5aa6">°F</text>`;
+      stage.innerHTML = g + `</svg>`;
+      read.innerHTML = `<span class="m up" style="font-size:22px">T(°F) = ${H("1.8")} · ${c} <span style="color:#C00000;font-weight:700">+ 32</span> = ${Math.round(f * 10) / 10} °F</span>`;
     }
-    c.querySelectorAll("[data-m]").forEach((x) => x.addEventListener("click", () => setMode(x.dataset.m)));
-    const qbox = c.querySelector(".qbox");
-    qbox.classList.add("hidden");
-    choice(qbox, T.s3_q, [
-      { label: T.s3_qA, ok: true, fb: T.s3_qOk },
-      { label: T.s3_qB, ok: false, fb: T.s3_qBad }
-    ], () => markDone(2));
-    setMode("point");
-    document.addEventListener("lomda:step", (e) => { if (e.detail === 2) update(); });
-    window.addEventListener("resize", () => { if (state.step === 2) update(); });
-    stepsBox.appendChild(c);
+    slider.addEventListener("input", draw);
+    document.addEventListener("screen", (e) => { if (e.detail === 3) draw(); });
+    window.addEventListener("resize", () => { if (state.i === 3) draw(); });
+    draw();
+    s.appendChild(el(`<div class="call red">${fmt(T.s4_alert)}</div>`));
+    s.appendChild(el(`<div class="cols" style="grid-template-columns:1fr">
+      <div class="col b"><h3>${fmt(T.s4_colB)}</h3><div class="in">
+        <div class="eq m up">T(°F) = ${H("1.8")} · T(°C) <span style="color:#C00000">+ 32</span></div>
+        <div class="where">${fmt(T.s4_why32)}</div></div></div></div>`));
+    s.appendChild(el(`<p>${fmt(T.s4_ruler)}</p>`));
+    s.appendChild(numQ(fmt(T.s4_ask), [
+      { test: near(77, 0.6), ok: true, text: T.s4_ok },
+      { test: near(45, 0.6), ok: false, text: T.s4_bad45 }], T.s4_badX, () => done(3)));
+    screens.appendChild(s);
   })();
 
-  // ================= STEP 4 =================
+  // ================= 5: summary and check =================
   (function () {
-    const c = el(`<section class="card hidden"></section>`);
-    c.innerHTML = `<h2>${fmt(T.s4_title)}</h2><p>${fmt(T.s4_intro)}</p><div class="items"></div><div class="note hidden">${fmt(T.s4_done)}</div>`;
-    const items = c.querySelector(".items"), note = c.querySelector(".note");
-    const right = new Array(T.s4_items.length).fill(false);
-    T.s4_items.forEach((it, i) => {
-      const box = el(`<div class="item"><div class="qq">${fmt(it.q)}</div>
-        <div class="row"><button type="button" class="btn" data-a="ruler">${fmt(T.s4_btnRuler)}</button>
-        <button type="button" class="btn" data-a="eq">${fmt(T.s4_btnEq)}</button></div><div class="fb hidden"></div></div>`);
-      box.querySelectorAll("[data-a]").forEach((b) => b.addEventListener("click", () => {
-        box.querySelectorAll("[data-a]").forEach((x) => x.classList.remove("sel"));
-        b.classList.add("sel");
-        const ok = b.dataset.a === it.a;
-        fb(box.querySelector(".fb"), ok, ok ? it.ok : it.bad);
-        right[i] = ok;
-        if (right.every(Boolean)) { note.classList.remove("hidden"); markDone(3); }
-      }));
-      items.appendChild(box);
+    const s = el(`<section class="hidden"></section>`);
+    const h = T.s5_rowHead;
+    s.appendChild(el(`<table class="sum"><thead><tr><th>${esc(h[0])}</th><th>${esc(h[1])}</th><th>${esc(h[2])}</th></tr></thead>
+      <tbody>${T.s5_rows.map((r) => `<tr><td>${fmt(r[0])}</td><td>${fmt(r[1])}</td><td>${fmt(r[2])}</td></tr>`).join("")}</tbody></table>`));
+    const got = { mc: false, items: T.s5_items.map(() => false) };
+    const fin = el(`<div class="call hidden">${fmt(T.s5_done)}</div>`);
+    const check = () => { if (got.mc && got.items.every(Boolean)) { fin.classList.remove("hidden"); done(4); } };
+    s.appendChild(choiceQ(fmt(T.s5_q), [
+      { label: T.s5_optA, ok: true, text: T.s5_okA },
+      { label: T.s5_optB, ok: false, text: T.s5_badB }], () => { got.mc = true; check(); }));
+    s.appendChild(el(`<p style="font-weight:700;margin-top:16px">${fmt(T.s5_sortLead)}</p>`));
+    T.s5_items.forEach((it, i) => {
+      const q = choiceQ(fmt(it.q), T.s5_opts.map((o, j) => ({ label: o, ok: j === it.a, text: j === it.a ? it.ok : it.bad })),
+        () => { got.items[i] = true; check(); });
+      q.classList.add("item");
+      s.appendChild(q);
     });
-    stepsBox.appendChild(c);
+    s.appendChild(fin);
+    screens.appendChild(s);
   })();
 
-  // ================= STEP 5 =================
-  (function () {
-    const c = el(`<section class="card hidden"></section>`);
-    c.innerHTML = `<h2>${fmt(T.s5_title)}</h2><p>${fmt(T.s5_intro)}</p><div class="mc"></div>
-      <p class="q">${fmt(T.s5_numIntro)}</p><div class="nums"></div><div class="fb ok hidden"></div>`;
-    const done = { mc: false, n: [false, false, false] };
-    const fin = c.querySelector(".fb.ok");
-    function maybeFinish() {
-      if (done.mc && done.n.every(Boolean)) { fin.classList.remove("hidden"); fin.innerHTML = fmt(T.s5_allDone); markDone(4); }
-    }
-    choice(c.querySelector(".mc"), "", [
-      { label: T.s5_optA, ok: true, fb: T.s5_okA },
-      { label: T.s5_optB, ok: false, fb: T.s5_badB }
-    ], () => { done.mc = true; maybeFinish(); });
-    c.querySelector(".mc .q").remove();
-    const qs = [
-      { t: T.s5_n1, ans: 77, tol: 0.5 },
-      { t: T.s5_n2, ans: 45, tol: 0.5 },
-      { t: T.s5_n3, ans: 298.15, tol: 0.6 }
-    ];
-    qs.forEach((q, i) => {
-      const r = el(`<div class="num"><span class="lab">${fmt(q.t)}</span>
-        <input type="text" inputmode="decimal" aria-label="${esc(q.t)}">
-        <button type="button" class="btn">${fmt(T.s5_check)}</button><span class="res" role="status"></span></div>`);
-      const inp = r.querySelector("input"), res = r.querySelector(".res");
-      function check() {
-        const v = parseNum(inp.value);
-        const ok = v !== null && Math.abs(v - q.ans) <= q.tol;
-        res.className = "res " + (ok ? "ok" : "bad");
-        res.textContent = ok ? "✓ " + T.s5_ok : T.s5_bad;
-        if (ok) { done.n[i] = true; maybeFinish(); }
-      }
-      r.querySelector(".btn").addEventListener("click", check);
-      inp.addEventListener("keydown", (e) => { if (e.key === "Enter") check(); });
-      c.querySelector(".nums").appendChild(r);
-    });
-    stepsBox.appendChild(c);
-  })();
-
-  render();
+  paint();
 })();
 </script>
 </body>
