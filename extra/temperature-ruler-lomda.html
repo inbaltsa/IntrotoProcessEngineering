@@ -68,7 +68,7 @@ window.LOMDA_TEXT = {
   s3_colB_use: "להפרש טמפרטורות (\"בכמה התחמם\"):",
   s3_note:  "זה בדיוק מה שקרה במטרים. בסרגל כותבים `1 °C / 1.8 °F` כי זו *הגדרת היחס*. וכשממירים ערך כופלים את הצלזיוס ב-1.8, כי זו *מציאת הערך*: מעלת פרנהייט קטנה, ולכן המספר גדל.",
   s3_ask:   "הריאקטור התחמם ב-`25 °C`. בכמה מעלות פרנהייט הוא התחמם?",
-  s3_ok:    "נכון: `ΔT(°F) = 1.8 · 25 = 45 °F`.",
+  s3_ok:    "נכון: `ΔT(°F) = 1.8 °F/°C · 25 °C = 45 °F`.",
   s3_bad13: "חילקתם ב-1.8. זו הגדרת היחס הפוכה. במציאת הערך היחידה (`°F`) קטנה יותר, ולכן המספר צריך לגדול.",
   s3_bad77: "הוספתם 32. ה-32 שייך רק לקריאה של מדחום (המסך הבא). כאן מדובר בהתחממות, בהפרש.",
   s3_badX:  "כמה מעלות פרנהייט יש בכל מעלת צלזיוס? וכמה מעלות צלזיוס היו?",
@@ -78,40 +78,43 @@ window.LOMDA_TEXT = {
   s4_lead:  "כשרוצים לדעת *כמה חם* (ולא בכמה התחמם), יש עוד בעיה: שני הסולמות לא מתחילים באותו מקום. הזיזו את המחוון.",
   s4_alert: "^הגדרת היחס לא השתנתה^: עדיין `1 °C = 1.8 °F`. מה שהשתנה הוא מציאת הערך: צריך גם להזיז את נקודת האפס.",
   s4_colB:  "מציאת הערך הנומרי של נקודה",
-  s4_why32: "ה-0 של צלזיוס נמצא ב-32 של פרנהייט. לכן אחרי הכפל ב-1.8 צריך להוסיף 32.",
-  s4_ruler: "בגלל ה-‎+32 זו כבר לא הכפלה ביחס, ולכן ^אי אפשר להכניס אותה לסרגל^. ממירים את הקריאה בצד, ורק את התוצאה מציבים בחישוב.",
+  s4_why32: "ה-0 של צלזיוס נמצא ב-32 של פרנהייט. לכן אחרי הכפל ב-`1.8 °F/°C` צריך להוסיף `32 °F`.",
+  s4_ruler: "בגלל ה-`+32 °F` זו כבר לא הכפלה ביחס, ולכן ^אי אפשר להכניס אותה לסרגל^. ממירים את הקריאה בצד, ורק את התוצאה מציבים בחישוב.",
   s4_ask:   "המים בכוס הם `25 °C`. מה הטמפרטורה ב-`°F`?",
-  s4_ok:    "נכון: `1.8 · 25 + 32 = 77 °F`.",
+  s4_ok:    "נכון: `1.8 °F/°C · 25 °C + 32 °F = 77 °F`.",
   s4_bad45: "זו התשובה להתחממות של 25 מעלות. כאן מדובר בקריאה של מדחום, ולכן צריך גם את ה-‎+32.",
-  s4_badX:  "קודם כופלים ב-1.8, ואז מוסיפים 32.",
+  s4_badX:  "קודם כופלים ב-`1.8 °F/°C`, ואז מוסיפים `32 °F`.",
 
   /* ——— מסך 5 ——— */
   s5_title: "סיכום ובדיקה",
-  s5_rowHead: ["הפעולה", "השאלה", "בטמפרטורה"],
+  s5_lead: "לפני כל המרה של טמפרטורה, שאלו את עצמכם שתי שאלות, לפי הסדר:",
+  s5_ask1: "*מה אני ממיר: יחידה או מספר?* יחידה בתוך שבר (למשל `Btu/(lb·°F)`) היא הגדרת היחס. מספר מעלות שנמדד הוא מציאת ערך.",
+  s5_ask2: "*אם זה מספר: האם הוא קריאה של מדחום, או שינוי?* \"כמה חם?\" היא קריאה. \"בכמה התחמם או התקרר?\" הוא שינוי.",
+  s5_rowHead: ["מה ממירים?", "הפעולה", "איך כותבים"],
   s5_rows: [
-    ["הגדרת היחס", "כמה גדולה יחידה אחת ביחס לשנייה?", "`1 °C = 1.8 °F`  ← נכנס לסרגל"],
-    ["מציאת הערך: הפרש", "בכמה השתנה? / \"לכל מעלה\"", "`ΔT(°F) = 1.8 · ΔT(°C)`"],
-    ["מציאת הערך: נקודה", "כמה חם?", "`T(°F) = 1.8 · T(°C) + 32`  ← בצד, לא בסרגל"]
+    ["יחידה בתוך שבר: `Btu/(lb·°F)`, `W/(m²·°C)`", "הגדרת היחס", "`1.8 °F / 1 °C` בתוך הסרגל"],
+    ["מספר שמתאר שינוי: \"התחמם ב-10 מעלות\"", "מציאת ערך של שינוי", "`ΔT(°F) = 1.8 °F/°C · ΔT(°C)`"],
+    ["מספר שהוא קריאת מדחום: \"המים ב-25 מעלות\"", "מציאת ערך של קריאה", "`T(°F) = 1.8 °F/°C · T(°C) + 32 °F` בצד, לא בסרגל"]
   ],
   s5_q:     "מים התחממו מ-`20 °C` ל-`30 °C`. סטודנט א\' כתב: \"עלייה של `18 °F`\". סטודנט ב\' כתב: \"עלייה של `50 °F`\". מי צדק?",
   s5_optA:  "סטודנט א\'",
   s5_optB:  "סטודנט ב\'",
-  s5_okA:   "נכון. סטודנט ב\' התייחס להתחממות כאילו הייתה קריאה של מדחום: `1.8 · 10 + 32 = 50`.",
-  s5_badB:  "50 מתקבל מ-`1.8 · 10 + 32`, כלומר ממציאת ערך של *נקודה*. אבל התחממות היא *הפרש*, ולכן אין ‎+32.",
+  s5_okA:   "נכון: `1.8 °F/°C · 10 °C = 18 °F`. סטודנט ב\' התייחס להתחממות כאילו הייתה קריאה של מדחום: `1.8 °F/°C · 10 °C + 32 °F = 50 °F`.",
+  s5_badB:  "50 מתקבל מ-`1.8 °F/°C · 10 °C + 32 °F`, כלומר מהמרה של *קריאת מדחום*. אבל המספר 10 כאן מתאר *שינוי*, ולכן אין `+32 °F`.",
   s5_sortLead: "איזו פעולה נדרשת בכל מקרה?",
-  s5_opts: ["הגדרת היחס (בסרגל)", "מציאת ערך: הפרש", "מציאת ערך: נקודה"],
+  s5_opts: ["הגדרת היחס (בסרגל)", "מציאת ערך של שינוי", "מציאת ערך של קריאה"],
   s5_items: [
     { q: "להמיר `Cp = 1.00 Btu/(lb·°F)` ל-`kJ/(kg·°C)` בסרגל היחידות.", a: 0,
       ok: "נכון: \"לכל מעלה\" הוא גודל של יחידה. כותבים בסרגל את היחס `1.8 °F / 1 °C`.",
       bad: "כאן לא ממירים מספר מעלות, אלא את היחידה \"לכל °F\". זו הגדרת היחס, והיא נכנסת לסרגל." },
     { q: "התנור התקרר ב-`40 °F`. בכמה מעלות צלזיוס הוא התקרר?", a: 1,
-      ok: "נכון: `ΔT(°C) = 40 / 1.8 = 22.2 °C`, בלי 32.",
-      bad: "\"התקרר ב-\" הוא שינוי, כלומר הפרש. לא קריאה של מדחום." },
+      ok: "נכון: `ΔT(°C) = 40 °F ÷ 1.8 °F/°C = 22.2 °C`, בלי 32.",
+      bad: "המספר 40 מתאר בכמה התנור התקרר, כלומר שינוי. הוא לא קריאה של מדחום." },
     { q: "להציב `70 °F` במשוואת הגז האידיאלי `PV = nRT`.", a: 2,
-      ok: "נכון: T במשוואה היא קריאה, נקודה. ממירים בצד (`70 °F → 294.3 K`) ורק אז מציבים.",
-      bad: "במשוואת הגז T היא הטמפרטורה עצמה, נקודה. ממירים אותה בצד, כולל ההזזה." }
+      ok: "נכון: T במשוואה היא קריאה של מדחום. ממירים בצד (`70 °F → 294.3 K`) ורק אז מציבים.",
+      bad: "במשוואת הגז T היא הטמפרטורה עצמה, כלומר קריאה של מדחום. ממירים אותה בצד, כולל ההזזה." }
   ],
-  s5_done: "*סיימתם.* לפני כל המרה שאלו: *אני מגדיר יחס, או מוצא ערך?* ואם מוצאים ערך של טמפרטורה: *נקודה או הפרש?*"
+  s5_done: "*סיימתם.* זכרו את שתי השאלות: *יחידה או מספר?* ואם מספר: *קריאה או שינוי?*"
 };
 </script>
 <style>
@@ -194,7 +197,7 @@ window.LOMDA_TEXT = {
   table.sum { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
   table.sum th { background: var(--g1); color: #fff; padding: 8px; text-align: right; }
   table.sum td { border-bottom: 1px solid var(--line); padding: 8px; vertical-align: top; background: var(--card); }
-  table.sum td:first-child { font-weight: 700; color: var(--g1); white-space: nowrap; }
+  table.sum td:nth-child(2) { font-weight: 700; color: var(--g1); white-space: nowrap; }
   .item { margin: 10px 0; }
 
   footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--line);
@@ -364,8 +367,8 @@ window.LOMDA_TEXT = {
     s.appendChild(twoCols(
       { head: T.s2_colA, q: T.s2_colA_q, eq: `1 m = ${H("3.28")} ft`, where: T.s2_colA_where, use: T.s2_colA_use,
         useEq: `${frac("3.28 ft", "1 m")} &nbsp;או&nbsp; ${frac("1 m", "3.28 ft")}` },
-      { head: T.s2_colB, q: T.s2_colB_q, eq: `L(ft) = ${H("3.28")} · L(m)`, where: T.s2_colB_where, use: T.s2_colB_use,
-        useEq: `2 m &nbsp;→&nbsp; 3.28 · 2 = 6.56 ft` }));
+      { head: T.s2_colB, q: T.s2_colB_q, eq: `L(ft) = ${frac(H("3.28") + " ft", "1 m")} · L(m)`, where: T.s2_colB_where, use: T.s2_colB_use,
+        useEq: `3.28 ft/m · 2 m = 6.56 ft` }));
     s.appendChild(el(`<div class="call red">${fmt(T.s2_alert)}</div>`));
     s.appendChild(el(`<p>${fmt(T.s2_why)}</p>`));
 
@@ -420,8 +423,8 @@ window.LOMDA_TEXT = {
     s.appendChild(twoCols(
       { head: T.s2_colA, q: T.s2_colA_q, eq: `1 °C = ${H("1.8")} °F`, where: T.s3_colA_where, use: T.s3_colA_use,
         useEq: `${frac("1 °C", "1.8 °F")} &nbsp;או&nbsp; ${frac("1.8 °F", "1 °C")}` },
-      { head: T.s2_colB, q: T.s2_colB_q, eq: `ΔT(°F) = ${H("1.8")} · ΔT(°C)`, where: T.s3_colB_where, use: T.s3_colB_use,
-        useEq: `10 °C &nbsp;→&nbsp; 1.8 · 10 = 18 °F` }));
+      { head: T.s2_colB, q: T.s2_colB_q, eq: `ΔT(°F) = ${frac(H("1.8") + " °F", "1 °C")} · ΔT(°C)`, where: T.s3_colB_where, use: T.s3_colB_use,
+        useEq: `1.8 °F/°C · 10 °C = 18 °F` }));
     s.appendChild(el(`<div class="call plain">${fmt(T.s3_note)}</div>`));
     s.appendChild(numQ(fmt(T.s3_ask), [
       { test: near(45, 0.6), ok: true, text: T.s3_ok },
@@ -469,7 +472,7 @@ window.LOMDA_TEXT = {
       g += `<text x="${X1}" y="${yC + 26}" text-anchor="end" font-family="Arial" font-size="${fs}" fill="#3A7525">°C</text>`;
       g += `<text x="${X1}" y="${yF - 12}" text-anchor="end" font-family="Arial" font-size="${fs}" fill="#6b5aa6">°F</text>`;
       stage.innerHTML = g + `</svg>`;
-      read.innerHTML = `<span class="m up" style="font-size:22px">T(°F) = ${H("1.8")} · ${c} <span style="color:#C00000;font-weight:700">+ 32</span> = ${Math.round(f * 10) / 10} °F</span>`;
+      read.innerHTML = `<span class="m up" style="font-size:22px">T(°F) = ${frac(H("1.8") + " °F", "1 °C")} · ${c} °C <span style="color:#C00000;font-weight:700">+ 32 °F</span> = ${Math.round(f * 10) / 10} °F</span>`;
     }
     slider.addEventListener("input", draw);
     document.addEventListener("screen", (e) => { if (e.detail === 3) draw(); });
@@ -478,7 +481,7 @@ window.LOMDA_TEXT = {
     s.appendChild(el(`<div class="call red">${fmt(T.s4_alert)}</div>`));
     s.appendChild(el(`<div class="cols" style="grid-template-columns:1fr">
       <div class="col b"><h3>${fmt(T.s4_colB)}</h3><div class="in">
-        <div class="eq m up">T(°F) = ${H("1.8")} · T(°C) <span style="color:#C00000">+ 32</span></div>
+        <div class="eq m up">T(°F) = ${frac(H("1.8") + " °F", "1 °C")} · T(°C) <span style="color:#C00000">+ 32 °F</span></div>
         <div class="where">${fmt(T.s4_why32)}</div></div></div></div>`));
     s.appendChild(el(`<p>${fmt(T.s4_ruler)}</p>`));
     s.appendChild(numQ(fmt(T.s4_ask), [
@@ -491,6 +494,9 @@ window.LOMDA_TEXT = {
   (function () {
     const s = el(`<section class="hidden"></section>`);
     const h = T.s5_rowHead;
+    s.appendChild(el(`<p>${fmt(T.s5_lead)}</p>`));
+    s.appendChild(el(`<div class="box"><div class="qrow"><span class="num">1</span><span>${fmt(T.s5_ask1)}</span></div>
+      <div class="qrow" style="margin-top:8px"><span class="num">2</span><span>${fmt(T.s5_ask2)}</span></div></div>`));
     s.appendChild(el(`<table class="sum"><thead><tr><th>${esc(h[0])}</th><th>${esc(h[1])}</th><th>${esc(h[2])}</th></tr></thead>
       <tbody>${T.s5_rows.map((r) => `<tr><td>${fmt(r[0])}</td><td>${fmt(r[1])}</td><td>${fmt(r[2])}</td></tr>`).join("")}</tbody></table>`));
     const got = { mc: false, items: T.s5_items.map(() => false) };
